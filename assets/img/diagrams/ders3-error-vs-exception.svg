@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 280" width="1152" height="280" role="img" aria-labelledby="ders3-error-vs-exception-t ders3-error-vs-exception-d">
+  <title id="ders3-error-vs-exception-t">Error ve exception</title>
+  <desc id="ders3-error-vs-exception-d">İki sütunlu tablo. Sol başlık: Çalışmadan önce bulunur; altında SyntaxError ve IndentationError, en altta gri: hiçbir satır çalışmaz. Sağ başlık açık mavi, çivit mavisi çerçeveli, vurgulu: Çalışırken ortaya çıkar: exception; altında kırmızı NameError, TypeError, ValueError, IndexError ve ZeroDivisionError, en altta gri: önceki satırlar çalışmıştır; except yakalayabilir.</desc>
+  <!-- source: classification for ders3-B.md S73: SyntaxError and IndentationError are raised when the file is compiled, before line 1 runs; the five others are raised at run time (checked on Python 3.14.8, 2026-10-11). -->
+  <defs>
+
+    <style>
+/* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
+.dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
+.dg .bg{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF)}
+.dg .tx,.dg .lb,.dg .ti,.dg .cd,.dg .cd24{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .tx{font-size:24px;font-weight:400}
+.dg .lb{font-size:24px;font-weight:600}
+.dg .ti{font-size:28px;font-weight:700}
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-family:"JetBrains Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-weight:500}
+.dg .cd{font-size:28px}
+.dg .cd24{font-size:24px}
+.dg .ty{font-size:24px;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .nm{font-size:28px;font-weight:600;fill:#FFFFFF;fill:var(--d-on-name,#FFFFFF)}
+.dg .src{font-size:18px;font-weight:400;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .sub{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .okt{fill:#0D6385;fill:var(--d-ok,#0D6385);font-weight:600}
+.dg .errt{fill:#C21C20;fill:var(--d-err,#C21C20);font-weight:600}
+.dg .b7{font-weight:700}
+.dg .pre{white-space:pre}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .boxm{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .boxhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .blk{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2.5}
+.dg .frame{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .local{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .tmpl{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .cell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellh{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .name{fill:#181C3E;fill:var(--d-name,#181C3E)}
+.dg .soft{fill:#F3F4F8;fill:var(--d-surface,#F3F4F8)}
+.dg .outp{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .tint{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .hl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3)}
+.dg .emph{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .errbox{fill:#FCEDEE;fill:var(--d-err-bg,#FCEDEE);stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .errdash{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .okbox{fill:#E9F6FA;fill:var(--d-ok-bg,#E9F6FA);stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .key{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .dot{fill:#3B4595;fill:var(--d-brand,#3B4595)}
+.dg .dot0{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .ar,.dg .ld,.dg .axis{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E)}
+.dg .ar,.dg .axis{stroke-width:2.5}
+.dg .ld{stroke-width:2}
+.dg .ar-m{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .ar-old{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .ar-ok{fill:none;stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .ar-err{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .sep{fill:none;stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .dash{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2;stroke-dasharray:8 6}
+.dg .ah{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .ah-m{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .ah-ok{fill:#0D6385;fill:var(--d-ok,#0D6385)}
+.dg .ah-err{fill:#C21C20;fill:var(--d-err,#C21C20)}
+.dg .co{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .co-t{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF);font-size:24px;font-weight:700;text-anchor:middle}
+.dg .sec{stroke:#3B4595;stroke:var(--d-second,#3B4595)}
+    </style>
+  </defs>
+  <rect class="bg" width="1152" height="280"/>
+  <rect class="cellh" x="2" y="2" width="440" height="58"/>
+  <rect class="cell" x="2" y="60" width="440" height="218"/>
+  <rect class="cell" x="442" y="60" width="708" height="218"/>
+  <rect class="cellhl" x="442" y="2" width="708" height="58"/>
+  <text class="lb" x="22" y="39">Çalışmadan önce bulunur</text>
+  <text class="lb" x="462" y="39">Çalışırken ortaya çıkar: exception</text>
+  <text class="cd24" x="22" y="104">SyntaxError</text>
+  <text class="cd24" x="22" y="144">IndentationError</text>
+  <text class="cd24 errt" x="462" y="104">NameError</text>
+  <text class="cd24 errt" x="462" y="144">TypeError</text>
+  <text class="cd24 errt" x="462" y="184">ValueError</text>
+  <text class="cd24 errt" x="762" y="104">IndexError</text>
+  <text class="cd24 errt" x="762" y="144">ZeroDivisionError</text>
+  <text class="tx sub" x="22" y="254">hiçbir satır çalışmaz</text>
+  <text class="tx sub" x="462" y="254">önceki satırlar çalışmıştır; except yakalayabilir</text>
+</svg>

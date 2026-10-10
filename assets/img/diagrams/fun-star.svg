@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="dg tt-fun-star" viewBox="0 0 560 512" width="560" height="512" role="img" aria-labelledby="fun-star-t fun-star-d">
+  <title id="fun-star-t">turtle ile tek yıldız</title>
+  <desc id="fun-star-d">Lacivert zemin üzerinde camgöbeği beş köşeli bir yıldız. Kalem 200 birim ileri gidip 144 derece sağa dönüyor; bunu 5 kez yapınca kalem başladığı yere ve başladığı yöne geri geliyor. Kod: for side in range(5): pen.forward(200), pen.right(144).</desc>
+  <!-- source: d3_star.py run under tools/turtle_svg.py on Python 3.14.8; colours mapped to the course palette -->
+  <defs>
+    <style>
+/* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
+.dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
+.dg .bg{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF)}
+.dg .tx,.dg .lb,.dg .ti,.dg .cd,.dg .cd24{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .tx{font-size:24px;font-weight:400}
+.dg .lb{font-size:24px;font-weight:600}
+.dg .ti{font-size:28px;font-weight:700}
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-family:"JetBrains Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-weight:500}
+.dg .cd{font-size:28px}
+.dg .cd24{font-size:24px}
+.dg .ty{font-size:24px;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .nm{font-size:28px;font-weight:600;fill:#FFFFFF;fill:var(--d-on-name,#FFFFFF)}
+.dg .src{font-size:18px;font-weight:400;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .sub{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .okt{fill:#0D6385;fill:var(--d-ok,#0D6385);font-weight:600}
+.dg .errt{fill:#C21C20;fill:var(--d-err,#C21C20);font-weight:600}
+.dg .b7{font-weight:700}
+.dg .pre{white-space:pre}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .boxm{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .boxhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .blk{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2.5}
+.dg .frame{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .local{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .tmpl{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .cell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellh{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .name{fill:#181C3E;fill:var(--d-name,#181C3E)}
+.dg .soft{fill:#F3F4F8;fill:var(--d-surface,#F3F4F8)}
+.dg .outp{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .tint{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .hl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3)}
+.dg .emph{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .errbox{fill:#FCEDEE;fill:var(--d-err-bg,#FCEDEE);stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .errdash{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .okbox{fill:#E9F6FA;fill:var(--d-ok-bg,#E9F6FA);stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .key{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .dot{fill:#3B4595;fill:var(--d-brand,#3B4595)}
+.dg .dot0{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .ar,.dg .ld,.dg .axis{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E)}
+.dg .ar,.dg .axis{stroke-width:2.5}
+.dg .ld{stroke-width:2}
+.dg .ar-m{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .ar-old{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .ar-ok{fill:none;stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .ar-err{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .sep{fill:none;stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .dash{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2;stroke-dasharray:8 6}
+.dg .ah{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .ah-m{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .ah-ok{fill:#0D6385;fill:var(--d-ok,#0D6385)}
+.dg .ah-err{fill:#C21C20;fill:var(--d-err,#C21C20)}
+.dg .co{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .co-t{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF);font-size:24px;font-weight:700;text-anchor:middle}
+.dg .sec{stroke:#3B4595;stroke:var(--d-second,#3B4595)}
+/* turtle_svg: turtle art, file-specific classes (tt-), scoped to the root class tt-FILE (FILE = the file name).
+   Fixed colours, so the picture looks like a turtle window in light and dark mode. */
+.dg.tt-fun-star .tt-bg{fill:#181C3E}
+.dg.tt-fun-star .tt-ln{fill:none;stroke-linecap:round;stroke-linejoin:round}
+.dg.tt-fun-star .tt-sh{stroke-width:1.5;stroke-linejoin:round}
+.dg.tt-fun-star .tt-s0{stroke:#49B0D7}
+.dg.tt-fun-star .tt-w0{stroke-width:7.2}
+    </style>
+  </defs>
+  <rect class="tt-bg" width="560" height="512"/>
+  <polyline class="tt-ln tt-s0 tt-w0" points="40.27,202.18 519.73,202.18 131.84,484 280,28 428.16,484 40.27,202.18"/>
+</svg>

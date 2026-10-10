@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 300" width="1152" height="300" role="img" aria-labelledby="ders3-range-start-t ders3-range-start-d">
+  <title id="ders3-range-start-t">range(3, 6): yalnızca başla değişti</title>
+  <desc id="ders3-range-start-d">İki sayı doğrusu, aynı yerlerde. Üstteki soluk ve gri: range(1, 6), 1'den 5'e gri noktalar, 6'da gri içi boş daire. Alttaki: range(3, 6), 3, 4 ve 5'te dolu turuncu noktalar ve turuncu rakamlar (int), 6'da içi boş çivit mavisi daire. 3'ün üstünde başla = 3, açık mavi ve çivit mavisi çerçeveli bantta (değişen tek şey); 6'nın üstünde bitiş = 6, dahil değil. Sağda Çıktı: 3, 4, 5.</desc>
+  <!-- source: for i in range(3, 6): print(i) -&gt; 3 / 4 / 5 (Python 3.14.8, 2026-10-10) -->
+  <defs>
+    <style>
+/* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
+.dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
+.dg .bg{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF)}
+.dg .tx,.dg .lb,.dg .ti,.dg .cd,.dg .cd24{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .tx{font-size:24px;font-weight:400}
+.dg .lb{font-size:24px;font-weight:600}
+.dg .ti{font-size:28px;font-weight:700}
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-family:"JetBrains Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-weight:500}
+.dg .cd{font-size:28px}
+.dg .cd24{font-size:24px}
+.dg .ty{font-size:24px;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .nm{font-size:28px;font-weight:600;fill:#FFFFFF;fill:var(--d-on-name,#FFFFFF)}
+.dg .src{font-size:18px;font-weight:400;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .sub{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .okt{fill:#0D6385;fill:var(--d-ok,#0D6385);font-weight:600}
+.dg .errt{fill:#C21C20;fill:var(--d-err,#C21C20);font-weight:600}
+.dg .b7{font-weight:700}
+.dg .pre{white-space:pre}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .boxm{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .boxhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .blk{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2.5}
+.dg .frame{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .local{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .tmpl{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .cell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellh{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .name{fill:#181C3E;fill:var(--d-name,#181C3E)}
+.dg .soft{fill:#F3F4F8;fill:var(--d-surface,#F3F4F8)}
+.dg .outp{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .tint{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .hl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3)}
+.dg .emph{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .errbox{fill:#FCEDEE;fill:var(--d-err-bg,#FCEDEE);stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .errdash{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .okbox{fill:#E9F6FA;fill:var(--d-ok-bg,#E9F6FA);stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .key{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .dot{fill:#3B4595;fill:var(--d-brand,#3B4595)}
+.dg .dot0{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .ar,.dg .ld,.dg .axis{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E)}
+.dg .ar,.dg .axis{stroke-width:2.5}
+.dg .ld{stroke-width:2}
+.dg .ar-m{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .ar-old{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .ar-ok{fill:none;stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .ar-err{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .sep{fill:none;stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .dash{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2;stroke-dasharray:8 6}
+.dg .ah{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .ah-m{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .ah-ok{fill:#0D6385;fill:var(--d-ok,#0D6385)}
+.dg .ah-err{fill:#C21C20;fill:var(--d-err,#C21C20)}
+.dg .co{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .co-t{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF);font-size:24px;font-weight:700;text-anchor:middle}
+.dg .sec{stroke:#3B4595;stroke:var(--d-second,#3B4595)}
+/* dg v4 type renkleri · authoring/DIAGRAMS.md §10'dan aynen kopyalanır (dg v3 bloğundan sonra) */
+.dg rect.t-int,.dg path.t-int,.dg circle.t-int{fill:#F2CEB3;fill:var(--t-int-bg,#F2CEB3);stroke:#854B00;stroke:var(--t-int,#854B00)}
+.dg text.t-int,.dg tspan.t-int{fill:#613109;fill:var(--t-int-tx,#613109)}
+.dg rect.t-float,.dg path.t-float,.dg circle.t-float{fill:#FFF1C6;fill:var(--t-float-bg,#FFF1C6);stroke:#9F7000;stroke:var(--t-float,#9F7000)}
+.dg text.t-float,.dg tspan.t-float{fill:#5D420E;fill:var(--t-float-tx,#5D420E)}
+.dg rect.t-bool,.dg path.t-bool,.dg circle.t-bool{fill:#C4E9E1;fill:var(--t-bool-bg,#C4E9E1);stroke:#0E7A6D;stroke:var(--t-bool,#0E7A6D)}
+.dg text.t-bool,.dg tspan.t-bool{fill:#0A473F;fill:var(--t-bool-tx,#0A473F)}
+.dg rect.t-str,.dg path.t-str,.dg circle.t-str{fill:#D9F6DD;fill:var(--t-str-bg,#D9F6DD);stroke:#296A3B;stroke:var(--t-str,#296A3B)}
+.dg text.t-str,.dg tspan.t-str{fill:#1A4B28;fill:var(--t-str-tx,#1A4B28)}
+.dg rect.t-none,.dg path.t-none,.dg circle.t-none{fill:#F6F3EF;fill:var(--t-none-bg,#F6F3EF);stroke:#534C45;stroke:var(--t-none,#534C45)}
+.dg text.t-none,.dg tspan.t-none{fill:#413C38;fill:var(--t-none-tx,#413C38)}
+.dg rect.t-list,.dg path.t-list,.dg circle.t-list{fill:#F3C8DB;fill:var(--t-list-bg,#F3C8DB);stroke:#8A2B60;stroke:var(--t-list,#8A2B60)}
+.dg text.t-list,.dg tspan.t-list{fill:#651E45;fill:var(--t-list-tx,#651E45)}
+.dg rect.t-tuple,.dg path.t-tuple,.dg circle.t-tuple{fill:#E3EAF2;fill:var(--t-tuple-bg,#E3EAF2);stroke:#4A6378;stroke:var(--t-tuple,#4A6378)}
+.dg text.t-tuple,.dg tspan.t-tuple{fill:#2C3E4F;fill:var(--t-tuple-tx,#2C3E4F)}
+.dg rect.t-dict,.dg path.t-dict,.dg circle.t-dict{fill:#DBCEC4;fill:var(--t-dict-bg,#DBCEC4);stroke:#4F2611;stroke:var(--t-dict,#4F2611)}
+.dg text.t-dict,.dg tspan.t-dict{fill:#4C2817;fill:var(--t-dict-tx,#4C2817)}
+.dg rect.t-set,.dg path.t-set,.dg circle.t-set{fill:#F2F8D6;fill:var(--t-set-bg,#F2F8D6);stroke:#747C42;stroke:var(--t-set,#747C42)}
+.dg text.t-set,.dg tspan.t-set{fill:#3F4418;fill:var(--t-set-tx,#3F4418)}
+.dg rect.boxhl,.dg path.boxhl,.dg rect.cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595)}
+/* ders3-range-start: range'in ürettiği değerler int'tir; sayı doğrusundaki noktaları int renginde dolu */
+.dg circle.nl-v{fill:#854B00;fill:var(--t-int,#854B00)}
+/* ders3-range-start: soluk satırdaki noktalar gri */
+.dg circle.rs-fade{fill:#767C95;fill:var(--d-muted,#767C95)}
+    </style>
+  </defs>
+  <rect class="bg" width="1152" height="300"/>
+  <text class="cd sub" x="0" y="30">range(1, 6)</text>
+  <path class="ar-m" d="M30,70 H895"/>
+  <path class="ar-m" d="M60,60 V80"/>
+  <text class="cd24 sub mid" x="60" y="112">0</text>
+  <path class="ar-m" d="M175,60 V80"/>
+  <text class="cd24 sub mid sub" x="175" y="112">1</text>
+  <path class="ar-m" d="M290,60 V80"/>
+  <text class="cd24 sub mid sub" x="290" y="112">2</text>
+  <path class="ar-m" d="M405,60 V80"/>
+  <text class="cd24 sub mid sub" x="405" y="112">3</text>
+  <path class="ar-m" d="M520,60 V80"/>
+  <text class="cd24 sub mid sub" x="520" y="112">4</text>
+  <path class="ar-m" d="M635,60 V80"/>
+  <text class="cd24 sub mid sub" x="635" y="112">5</text>
+  <path class="ar-m" d="M750,60 V80"/>
+  <text class="cd24 sub mid" x="750" y="112">6</text>
+  <path class="ar-m" d="M865,60 V80"/>
+  <text class="cd24 sub mid" x="865" y="112">7</text>
+  <circle class="rs-fade" cx="175" cy="70" r="12"/>
+  <circle class="rs-fade" cx="290" cy="70" r="12"/>
+  <circle class="rs-fade" cx="405" cy="70" r="12"/>
+  <circle class="rs-fade" cx="520" cy="70" r="12"/>
+  <circle class="rs-fade" cx="635" cy="70" r="12"/>
+  <circle class="boxm" cx="750" cy="70" r="12"/>
+  <text class="cd" x="0" y="158">range(<tspan class="t-int">3</tspan>, <tspan class="t-int">6</tspan>)</text>
+  <rect class="boxhl" x="339" y="178" width="132" height="40" rx="4"/>
+  <text class="lb mid" x="405" y="206">başla = 3</text>
+  <text class="lb mid" x="750" y="206">bitiş = 6, dahil değil</text>
+  <path class="axis" d="M30,246 H895"/>
+  <path class="ld" d="M60,236 V256"/>
+  <text class="cd24 mid" x="60" y="290">0</text>
+  <path class="ld" d="M175,236 V256"/>
+  <text class="cd24 mid" x="175" y="290">1</text>
+  <path class="ld" d="M290,236 V256"/>
+  <text class="cd24 mid" x="290" y="290">2</text>
+  <path class="ld" d="M405,236 V256"/>
+  <text class="cd24 mid t-int" x="405" y="290">3</text>
+  <path class="ld" d="M520,236 V256"/>
+  <text class="cd24 mid t-int" x="520" y="290">4</text>
+  <path class="ld" d="M635,236 V256"/>
+  <text class="cd24 mid t-int" x="635" y="290">5</text>
+  <path class="ld" d="M750,236 V256"/>
+  <text class="cd24 mid" x="750" y="290">6</text>
+  <path class="ld" d="M865,236 V256"/>
+  <text class="cd24 mid" x="865" y="290">7</text>
+  <circle class="dot nl-v" cx="405" cy="246" r="12"/>
+  <circle class="dot nl-v" cx="520" cy="246" r="12"/>
+  <circle class="dot nl-v" cx="635" cy="246" r="12"/>
+  <circle class="dot0" cx="750" cy="246" r="12"/>
+  <text class="lb sub" x="950" y="138">Çıktı</text>
+  <rect class="outp" x="950" y="150" width="196" height="123.44" rx="4"/>
+  <text class="cd" x="966" y="186.72">3</text>
+  <text class="cd" x="966" y="220.72">4</text>
+  <text class="cd" x="966" y="254.72">5</text>
+</svg>

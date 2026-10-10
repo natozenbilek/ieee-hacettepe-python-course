@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 362" width="1152" height="362" role="img" aria-labelledby="w1a-python-timeline-t w1a-python-timeline-d">
+  <title id="w1a-python-timeline-t">Python'un zaman çizelgesi, 1989-2026</title>
+  <desc id="w1a-python-timeline-d">Ölçekli yatay zaman çizgisi, 1989'dan 2027'ye; 1990, 2000, 2010 ve 2020 işaretli. Aralık 1989'dan Şubat 1991'e: ilk sürüm 0.9.0. 3 Aralık 2008: Python 3.0, bugün kullandığımız Python 3. 7 Ekim 2025: Python 3.14.0. Çizgi şu satırla biter: 3.15.0 · 9 Ekim 2026, altında Bu slaytlar hazırlanırken çıktı. Kaynaklar: Python FAQ (docs.python.org); G. van Rossum, A Brief Timeline of Python (2009); PEP 790, Python 3.15 Release Schedule; python.org sürüm sayfaları (3.0, 3.14.0, 3.15.0).</desc>
+  <!-- source: authoring/research/media.md bölüm 4 ve credits.json fact_sources (2026-10-04); 3.15.0: python.org/downloads/release/python-3150/ sayfasında "This is the stable release of Python 3.15.0", tarih Oct. 9, 2026 (2026-10-09'da kontrol edildi); PEP 790 (Python 3.15 Release Schedule) Actual bölümünde "3.15.0 final: Friday, 2026-10-09" (2026-10-10'da kontrol edildi). DECISIONS.md: çizgi "3.15.0 · 9 Ekim 2026" ile ve altındaki "Bu slaytlar hazırlanırken çıktı." satırıyla biter. -->
+  <defs>
+    
+    <style>
+/* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
+.dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
+.dg .bg{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF)}
+.dg .tx,.dg .lb,.dg .ti,.dg .cd,.dg .cd24{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .tx{font-size:24px;font-weight:400}
+.dg .lb{font-size:24px;font-weight:600}
+.dg .ti{font-size:28px;font-weight:700}
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-family:"JetBrains Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-weight:500}
+.dg .cd{font-size:28px}
+.dg .cd24{font-size:24px}
+.dg .ty{font-size:24px;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .nm{font-size:28px;font-weight:600;fill:#FFFFFF;fill:var(--d-on-name,#FFFFFF)}
+.dg .src{font-size:18px;font-weight:400;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .sub{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .okt{fill:#0D6385;fill:var(--d-ok,#0D6385);font-weight:600}
+.dg .errt{fill:#C21C20;fill:var(--d-err,#C21C20);font-weight:600}
+.dg .b7{font-weight:700}
+.dg .pre{white-space:pre}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .boxm{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .boxhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .blk{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2.5}
+.dg .frame{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .local{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .tmpl{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .cell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellh{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .name{fill:#181C3E;fill:var(--d-name,#181C3E)}
+.dg .soft{fill:#F3F4F8;fill:var(--d-surface,#F3F4F8)}
+.dg .outp{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .tint{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .hl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3)}
+.dg .emph{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .errbox{fill:#FCEDEE;fill:var(--d-err-bg,#FCEDEE);stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .errdash{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .okbox{fill:#E9F6FA;fill:var(--d-ok-bg,#E9F6FA);stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .key{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .dot{fill:#3B4595;fill:var(--d-brand,#3B4595)}
+.dg .dot0{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .ar,.dg .ld,.dg .axis{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E)}
+.dg .ar,.dg .axis{stroke-width:2.5}
+.dg .ld{stroke-width:2}
+.dg .ar-m{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .ar-old{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .ar-ok{fill:none;stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .ar-err{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .sep{fill:none;stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .dash{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2;stroke-dasharray:8 6}
+.dg .ah{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .ah-m{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .ah-ok{fill:#0D6385;fill:var(--d-ok,#0D6385)}
+.dg .ah-err{fill:#C21C20;fill:var(--d-err,#C21C20)}
+.dg .co{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .co-t{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF);font-size:24px;font-weight:700;text-anchor:middle}
+.dg .sec{stroke:#3B4595;stroke:var(--d-second,#3B4595)}
+.dg .tl-span{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:8}
+    </style>
+  </defs>
+  <rect class="bg" width="1152" height="362"/>
+  <path class="axis" d="M40,140 H1112"/>
+  <path class="ld" d="M68.2,140 V154"/>
+  <text class="tx sub" x="74.2" y="174">1990</text>
+  <path class="ld" d="M350.2,140 V154"/>
+  <text class="tx sub" x="356.2" y="174">2000</text>
+  <path class="ld" d="M632.2,140 V154"/>
+  <text class="tx sub" x="638.2" y="174">2010</text>
+  <text class="tx sub" x="920.2" y="174">2020</text>
+  <path class="tl-span" d="M67.7,140 H100.3"/>
+  <circle class="dot" cx="67.7" cy="140" r="8"/>
+  <circle class="dot" cx="100.3" cy="140" r="8"/>
+  <circle class="dot" cx="601.8" cy="140" r="8"/>
+  <circle class="dot" cx="1076.8" cy="140" r="8"/>
+  <circle class="dot" cx="1105.1" cy="140" r="8"/>
+  <path class="ld" d="M84,130 V94"/>
+  <path class="ld" d="M601.8,150 V186"/>
+  <path class="ld" d="M1076.8,150 V186"/>
+  <path class="ld" d="M1105.1,150 V186"/>
+  <text class="lb" x="40" y="48">Aralık 1989'dan Şubat 1991'e</text>
+  <text class="tx" x="40" y="80">ilk sürüm 0.9.0</text>
+  <text class="lb mid" x="601.8" y="214">3 Aralık 2008</text>
+  <text class="tx mid" x="601.8" y="246">Python 3.0</text>
+  <text class="tx mid" x="601.8" y="278">Bugün kullandığımız Python 3</text>
+  <text class="tx end" x="1112" y="214">3.14.0 · 7 Ekim 2025</text>
+  <text class="lb end" x="1112" y="246">3.15.0 · 9 Ekim 2026</text>
+  <text class="tx end" x="1112" y="278">Bu slaytlar hazırlanırken çıktı.</text>
+  <g class="dg-small">
+  <text class="src" x="0" y="336">Kaynaklar: Python FAQ; G. van Rossum, “A Brief Timeline of Python” (2009); PEP 790, Python 3.15 Release Schedule;</text>
+  <text class="src" x="0" y="356">python.org: Python 3.0, 3.14.0 ve 3.15.0 sürüm sayfaları.</text>
+  </g>
+</svg>

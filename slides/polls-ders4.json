@@ -1,0 +1,6 @@
+{
+  "d4-giris-dilim": {"options": [{"code": "FIZ1 127 I"}, {"code": "FIZ 127 I"}, {"code": "FIZ 27 I"}, {"code": "FIZ 127 F"}], "answer": 2, "why": "[:3] ilk üç, [-3:] son üç karakter; code[1] ikinci karakter."},
+  "d4-alias-is": {"options": [{"code": "True True"}, {"code": "False True"}, {"code": "True False"}, {"code": "False False"}], "answer": 2, "why": "b ile a aynı list'tir; c ayrı bir list ve değeri artık farklı."},
+  "d4-try-abc": {"options": [{"code": "B"}, {"code": "A"}, {"code": "A\nB"}, {"text": "ValueError"}], "answer": 1, "why": "int(\"3.5\") hata verir; print(\"A\") atlanır, except çalışır."},
+  "d4-return-son": {"options": [{"code": "1\nA"}, {"code": "A\n1"}, {"code": "1"}, {"code": "A"}], "answer": 3, "why": "return 1 function'ı bitirir; print(\"A\") hiç çalışmaz."}
+}

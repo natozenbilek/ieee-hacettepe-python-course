@@ -1,0 +1,203 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 440" width="1152" height="440" role="img" aria-labelledby="ders5-attributes-t ders5-attributes-d" data-state="one">
+  <title id="ders5-attributes-t">Attribute: object'e bağlı isimler</title>
+  <desc id="ders5-attributes-d">Üç durumlu tek çizim. Üstte iki kod paneli: solda class tanımı, sağda onu kullanan satırlar; altta solda Çıktı paneli, sağda lacivert d ve e etiketlerinin gösterdiği Course object'leri. Object'in içinde her attribute adı kendi value'sunu bir okla gösterir. Birinci durum (attribute'u elle eklemek): kod class Course: pass, d = Course(), d.code = "MAT123", d.credits = 4, print(d.code, d.credits); d'nin object'inde code "MAT123"ü (str, yeşil), credits 4'ü (int, turuncu) gösteriyor; bu iki satır çivit mavisi çerçeveli açık mavi bantta; Çıktı MAT123 4. İkinci durum (iki object): kod d = Course(), d.code = "MAT123", e = Course(), e.code = "FIZ127", print(d.code, e.code); d'nin object'inde code "MAT123", e'nin ayrı object'inde code "FIZ127" (str, yeşil); e'nin satırı açık mavi bantta; Çıktı MAT123 FIZ127. Üçüncü durum (attribute'u değiştirmek): kod __init__ ile class Course, d = Course("MAT123", 4, "C1"), e = Course("FIZ127", 3, "B2"), d.credits = 5, print(d.credits, e.credits); d'nin object'inde code "MAT123", grade "C1"; d'nin credits oku artık yeni 5'i (int, turuncu) gösteriyor, 5 açık mavi bantta, 4'e giden eski ok gri ve kesikli; e'nin object'inde code "FIZ127", credits 3, grade "B2"; Çıktı 5 3.</desc>
+  <!-- source: ders5.md S130, S131, S140; runs attr_manual (MAT123 4), attr_two (MAT123 FIZ127), attr_change (5 3; d.code d.grade e.code e.grade -&gt; MAT123 C1 FIZ127 B2) (Python 3.14.8, 2026-10-11). Root data-state: one | two | change; a deck copy changes only this attribute. -->
+  <defs>
+    <marker id="ders5-attributes-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
+    <marker id="ders5-attributes-ahm" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-m" d="M0,0 L12,6 L0,12 z"/></marker>
+    <style>
+/* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
+.dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
+.dg .bg{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF)}
+.dg .tx,.dg .lb,.dg .ti,.dg .cd,.dg .cd24{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .tx{font-size:24px;font-weight:400}
+.dg .lb{font-size:24px;font-weight:600}
+.dg .ti{font-size:28px;font-weight:700}
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-family:"JetBrains Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-weight:500}
+.dg .cd{font-size:28px}
+.dg .cd24{font-size:24px}
+.dg .ty{font-size:24px;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .nm{font-size:28px;font-weight:600;fill:#FFFFFF;fill:var(--d-on-name,#FFFFFF)}
+.dg .src{font-size:18px;font-weight:400;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .sub{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .okt{fill:#0D6385;fill:var(--d-ok,#0D6385);font-weight:600}
+.dg .errt{fill:#C21C20;fill:var(--d-err,#C21C20);font-weight:600}
+.dg .b7{font-weight:700}
+.dg .pre{white-space:pre}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .boxm{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .boxhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .blk{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2.5}
+.dg .frame{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .local{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .tmpl{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .cell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellh{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .name{fill:#181C3E;fill:var(--d-name,#181C3E)}
+.dg .soft{fill:#F3F4F8;fill:var(--d-surface,#F3F4F8)}
+.dg .outp{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .tint{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .hl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3)}
+.dg .emph{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .errbox{fill:#FCEDEE;fill:var(--d-err-bg,#FCEDEE);stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .errdash{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .okbox{fill:#E9F6FA;fill:var(--d-ok-bg,#E9F6FA);stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .key{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .dot{fill:#3B4595;fill:var(--d-brand,#3B4595)}
+.dg .dot0{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .ar,.dg .ld,.dg .axis{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E)}
+.dg .ar,.dg .axis{stroke-width:2.5}
+.dg .ld{stroke-width:2}
+.dg .ar-m{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .ar-old{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .ar-ok{fill:none;stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .ar-err{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .sep{fill:none;stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .dash{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2;stroke-dasharray:8 6}
+.dg .ah{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .ah-m{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .ah-ok{fill:#0D6385;fill:var(--d-ok,#0D6385)}
+.dg .ah-err{fill:#C21C20;fill:var(--d-err,#C21C20)}
+.dg .co{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .co-t{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF);font-size:24px;font-weight:700;text-anchor:middle}
+.dg .sec{stroke:#3B4595;stroke:var(--d-second,#3B4595)}
+/* dg v4 type renkleri · authoring/DIAGRAMS.md §10'dan aynen kopyalanır (dg v3 bloğundan sonra) */
+.dg rect.t-int,.dg path.t-int,.dg circle.t-int{fill:#F2CEB3;fill:var(--t-int-bg,#F2CEB3);stroke:#854B00;stroke:var(--t-int,#854B00)}
+.dg text.t-int,.dg tspan.t-int{fill:#613109;fill:var(--t-int-tx,#613109)}
+.dg rect.t-float,.dg path.t-float,.dg circle.t-float{fill:#FFF1C6;fill:var(--t-float-bg,#FFF1C6);stroke:#9F7000;stroke:var(--t-float,#9F7000)}
+.dg text.t-float,.dg tspan.t-float{fill:#5D420E;fill:var(--t-float-tx,#5D420E)}
+.dg rect.t-bool,.dg path.t-bool,.dg circle.t-bool{fill:#C4E9E1;fill:var(--t-bool-bg,#C4E9E1);stroke:#0E7A6D;stroke:var(--t-bool,#0E7A6D)}
+.dg text.t-bool,.dg tspan.t-bool{fill:#0A473F;fill:var(--t-bool-tx,#0A473F)}
+.dg rect.t-str,.dg path.t-str,.dg circle.t-str{fill:#D9F6DD;fill:var(--t-str-bg,#D9F6DD);stroke:#296A3B;stroke:var(--t-str,#296A3B)}
+.dg text.t-str,.dg tspan.t-str{fill:#1A4B28;fill:var(--t-str-tx,#1A4B28)}
+.dg rect.t-none,.dg path.t-none,.dg circle.t-none{fill:#F6F3EF;fill:var(--t-none-bg,#F6F3EF);stroke:#534C45;stroke:var(--t-none,#534C45)}
+.dg text.t-none,.dg tspan.t-none{fill:#413C38;fill:var(--t-none-tx,#413C38)}
+.dg rect.t-list,.dg path.t-list,.dg circle.t-list{fill:#F3C8DB;fill:var(--t-list-bg,#F3C8DB);stroke:#8A2B60;stroke:var(--t-list,#8A2B60)}
+.dg text.t-list,.dg tspan.t-list{fill:#651E45;fill:var(--t-list-tx,#651E45)}
+.dg rect.t-tuple,.dg path.t-tuple,.dg circle.t-tuple{fill:#E3EAF2;fill:var(--t-tuple-bg,#E3EAF2);stroke:#4A6378;stroke:var(--t-tuple,#4A6378)}
+.dg text.t-tuple,.dg tspan.t-tuple{fill:#2C3E4F;fill:var(--t-tuple-tx,#2C3E4F)}
+.dg rect.t-dict,.dg path.t-dict,.dg circle.t-dict{fill:#DBCEC4;fill:var(--t-dict-bg,#DBCEC4);stroke:#4F2611;stroke:var(--t-dict,#4F2611)}
+.dg text.t-dict,.dg tspan.t-dict{fill:#4C2817;fill:var(--t-dict-tx,#4C2817)}
+.dg rect.t-set,.dg path.t-set,.dg circle.t-set{fill:#F2F8D6;fill:var(--t-set-bg,#F2F8D6);stroke:#747C42;stroke:var(--t-set,#747C42)}
+.dg text.t-set,.dg tspan.t-set{fill:#3F4418;fill:var(--t-set-tx,#3F4418)}
+.dg rect.boxhl,.dg path.boxhl,.dg rect.cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595)}
+/* ders5-attributes: root data-state="one" (S130, also the look with no attribute) | "two" (S131) | "change" (S140) */
+.dg .at-two,.dg .at-change,.dg .at-tc{display:none}
+.dg[data-state="two"] .at-one,.dg[data-state="two"] .at-oc,.dg[data-state="change"] .at-one{display:none}
+.dg[data-state="two"] .at-two,.dg[data-state="two"] .at-tc,.dg[data-state="change"] .at-change,.dg[data-state="change"] .at-tc{display:inline}
+    </style>
+  </defs>
+  <rect class="bg" width="1152" height="440"/>
+  <g class="at-one">
+  <rect class="soft" x="2" y="2" width="680" height="176" rx="4"/>
+  <text class="cd24" x="18" y="36">class Course:</text>
+  <text class="cd24 pre" x="18" y="68" xml:space="preserve">    pass</text>
+  </g>
+  <g class="at-two">
+  <rect class="soft" x="2" y="2" width="680" height="176" rx="4"/>
+  <text class="cd24" x="18" y="36">class Course:</text>
+  <text class="cd24 pre" x="18" y="68" xml:space="preserve">    pass</text>
+  </g>
+  <g class="at-change">
+  <rect class="soft" x="2" y="2" width="680" height="176" rx="4"/>
+  <text class="cd24" x="18" y="36">class Course:</text>
+  <text class="cd24 pre" x="18" y="68" xml:space="preserve">    def __init__(self, code, credits, grade):</text>
+  <text class="cd24 pre" x="18" y="100" xml:space="preserve">        self.code = code</text>
+  <text class="cd24 pre" x="18" y="132" xml:space="preserve">        self.credits = credits</text>
+  <text class="cd24 pre" x="18" y="164" xml:space="preserve">        self.grade = grade</text>
+  </g>
+  <g class="at-one">
+  <rect class="soft" x="700" y="2" width="450" height="176" rx="4"/>
+  <text class="cd24" x="716" y="36">d = Course()</text>
+  <text class="cd24" x="716" y="68">d.code = "MAT123"</text>
+  <text class="cd24" x="716" y="100">d.credits = 4</text>
+  <text class="cd24" x="716" y="132">print(d.code, d.credits)</text>
+  </g>
+  <g class="at-two">
+  <rect class="soft" x="700" y="2" width="450" height="176" rx="4"/>
+  <text class="cd24" x="716" y="36">d = Course()</text>
+  <text class="cd24" x="716" y="68">d.code = "MAT123"</text>
+  <text class="cd24" x="716" y="100">e = Course()</text>
+  <text class="cd24" x="716" y="132">e.code = "FIZ127"</text>
+  <text class="cd24" x="716" y="164">print(d.code, e.code)</text>
+  </g>
+  <g class="at-change">
+  <rect class="soft" x="700" y="2" width="450" height="176" rx="4"/>
+  <text class="cd24" x="716" y="36">d = Course("MAT123", 4, "C1")</text>
+  <text class="cd24" x="716" y="68">e = Course("FIZ127", 3, "B2")</text>
+  <text class="cd24" x="716" y="100">d.credits = 5</text>
+  <text class="cd24" x="716" y="132">print(d.credits, e.credits)</text>
+  </g>
+  <text class="lb sub" x="2" y="226">Çıktı</text>
+  <rect class="outp" x="2" y="240" width="230" height="56" rx="4"/>
+  <g class="at-one">
+  <text class="cd24" x="18" y="278">MAT123 4</text>
+  </g>
+  <g class="at-two">
+  <text class="cd24" x="18" y="278">MAT123 FIZ127</text>
+  </g>
+  <g class="at-change">
+  <text class="cd24" x="18" y="278">5 3</text>
+  </g>
+  <rect class="name" x="254" y="252" width="64" height="56" rx="6"/>
+  <text class="nm mid" x="286" y="290">d</text>
+  <path class="ar" d="M318,280 H357" marker-end="url(#ders5-attributes-ah)"/>
+  <rect class="box" x="360" y="200" width="330" height="236" rx="6"/>
+  <text class="lb sub" x="376" y="234">Course object</text>
+  <g class="at-one">
+  <rect class="boxhl" x="368" y="246" width="314" height="100" rx="10"/>
+  </g>
+  <g class="at-change">
+  <rect class="boxhl" x="584" y="338" width="84" height="48" rx="10"/>
+  </g>
+  <text class="cd24" x="382" y="282">code</text>
+  <path class="ar" d="M449.6,274 H523" marker-end="url(#ders5-attributes-ah)"/>
+  <rect class="box t-str" x="526" y="256" width="139.2" height="36" rx="6"/>
+  <text class="cd24 mid t-str" x="595.6" y="282">"MAT123"</text>
+  <g class="at-one">
+  <text class="cd24" x="382" y="326">credits</text>
+  <path class="ar" d="M492.8,318 H523" marker-end="url(#ders5-attributes-ah)"/>
+  <rect class="box t-int" x="526" y="300" width="72" height="36" rx="6"/>
+  <text class="cd24 mid t-int" x="562" y="326">4</text>
+  </g>
+  <g class="at-change">
+  <text class="cd24" x="382" y="326">credits</text>
+  <path class="ar-old" d="M492.8,318 H523" marker-end="url(#ders5-attributes-ahm)"/>
+  <rect class="box t-int" x="526" y="300" width="72" height="36" rx="6"/>
+  <text class="cd24 mid t-int" x="562" y="326">4</text>
+  <path class="ar" d="M493,324 L587,362" marker-end="url(#ders5-attributes-ah)"/>
+  <rect class="box t-int" x="590" y="344" width="72" height="36" rx="6"/>
+  <text class="cd24 mid t-int" x="626" y="370">5</text>
+  <text class="cd24" x="382" y="414">grade</text>
+  <path class="ar" d="M464,406 H523" marker-end="url(#ders5-attributes-ah)"/>
+  <rect class="box t-str" x="526" y="388" width="81.6" height="36" rx="6"/>
+  <text class="cd24 mid t-str" x="566.8" y="414">"C1"</text>
+  </g>
+  <g class="at-tc">
+  <rect class="name" x="716" y="252" width="64" height="56" rx="6"/>
+  <text class="nm mid" x="748" y="290">e</text>
+  <path class="ar" d="M780,280 H817" marker-end="url(#ders5-attributes-ah)"/>
+  <rect class="box" x="820" y="200" width="330" height="236" rx="6"/>
+  <text class="lb sub" x="836" y="234">Course object</text>
+  <g class="at-two">
+  <rect class="boxhl" x="828" y="246" width="314" height="56" rx="10"/>
+  </g>
+  <text class="cd24" x="842" y="282">code</text>
+  <path class="ar" d="M909.6,274 H983" marker-end="url(#ders5-attributes-ah)"/>
+  <rect class="box t-str" x="986" y="256" width="139.2" height="36" rx="6"/>
+  <text class="cd24 mid t-str" x="1055.6" y="282">"FIZ127"</text>
+  </g>
+  <g class="at-change">
+  <text class="cd24" x="842" y="326">credits</text>
+  <path class="ar" d="M952.8,318 H983" marker-end="url(#ders5-attributes-ah)"/>
+  <rect class="box t-int" x="986" y="300" width="72" height="36" rx="6"/>
+  <text class="cd24 mid t-int" x="1022" y="326">3</text>
+  <text class="cd24" x="842" y="414">grade</text>
+  <path class="ar" d="M924,406 H983" marker-end="url(#ders5-attributes-ah)"/>
+  <rect class="box t-str" x="986" y="388" width="81.6" height="36" rx="6"/>
+  <text class="cd24 mid t-str" x="1026.8" y="414">"B2"</text>
+  </g>
+</svg>

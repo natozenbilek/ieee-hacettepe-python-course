@@ -1,0 +1,6 @@
+qrcode-generator 1.4.4 by Kazuhiko Arase (npm package "qrcode-generator", MIT licence; repository
+github.com/kazuhikoarase/qrcode-generator). Packed with "npm pack qrcode-generator@1.4.4" on 2026-10-10.
+Copied file: qrcode.js, unchanged (sha256 below). The npm package ships no licence file; the MIT
+text in LICENSE is the upstream repository's, and qrcode.js states the same licence in its header.
+Used by assets/js/poll.js to draw the poll QR codes in the browser, with no network access.
+sha256 qrcode.js: 18ae399f81182bc9de916e9c77b195df20cc58d6f2d55a62b085a299f1bf1780

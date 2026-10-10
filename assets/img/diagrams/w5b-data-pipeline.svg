@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-labelledby="t d">
+  <title id="t">Veriden sonuca dört adım: bu kursun araçlarıyla ve pandas ile</title>
+  <desc id="d">Topla, temizle, analiz et ve görselleştir adımları alt alta. Her adımın yanında önce bu kursta yazılan Python kodundan satırlar, sonra aynı işin pandas karşılığı. Örnek veri notlar.csv (ad,ders,puan başlıklı, dört satır). Kursun kodunda başlık satırını atlayan if ve sonuçları yazdıran for loop'u şekilde gösterilmedi. İki yolun sonucu da Ayşe 85.0, Mehmet 80.0.</desc>
+  <!-- Stil: çizgi #3B4595 (indigo), 2 px, rx=4, Atkinson Hyperlegible Next ve JetBrains Mono, 24-28 px, ortak ok ucu (W1A bilgisayar modeli diyagramıyla aynı). -->
+  <!-- Doğrulama: kursun kodu Python 3.13.15 ile, pandas kodu /usr/bin/python3 3.9.6 + pandas 2.3.3 + matplotlib 3.9.4 ile çalıştırıldı; iki çıktı da Ayşe 85.0, Mehmet 80.0. read_csv sonrası puan sütununun tipi int64. -->
+  <defs>
+    <marker id="ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#3B4595"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+
+  <g font-family="'Atkinson Hyperlegible Next', 'Segoe UI', Arial, sans-serif" font-size="24" fill="#50566F" font-weight="600">
+    <text x="40" y="44">Adım</text>
+    <text x="290" y="44">Bu kursun araçlarıyla</text>
+    <text x="860" y="44">pandas ile (önizleme)</text>
+  </g>
+  <line x1="40" y1="62" x2="1240" y2="62" stroke="#D3D7E2" stroke-width="2"/>
+
+  <g fill="#FFFFFF" stroke="#3B4595" stroke-width="2">
+    <rect x="40" y="84" width="220" height="112" rx="4"/>
+    <rect x="40" y="236" width="220" height="112" rx="4"/>
+    <rect x="40" y="388" width="220" height="112" rx="4"/>
+    <rect x="40" y="540" width="220" height="112" rx="4"/>
+  </g>
+  <g stroke="#3B4595" stroke-width="2" marker-end="url(#ok)">
+    <line x1="150" y1="198" x2="150" y2="232"/>
+    <line x1="150" y1="350" x2="150" y2="384"/>
+    <line x1="150" y1="502" x2="150" y2="536"/>
+  </g>
+  <g font-family="'Atkinson Hyperlegible Next', 'Segoe UI', Arial, sans-serif" font-size="28" font-weight="700" fill="#14172E" text-anchor="middle">
+    <text x="150" y="150">1. Topla</text>
+    <text x="150" y="302">2. Temizle</text>
+    <text x="150" y="454">3. Analiz et</text>
+    <text x="150" y="606">4. Görselleştir</text>
+  </g>
+
+  <g font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="24" fill="#14172E">
+    <text x="290" y="118">with open("notlar.csv",</text>
+    <text x="348" y="152">encoding="utf-8") as f:</text>
+    <text x="348" y="186">for satir in f:</text>
+
+    <text x="290" y="270">parcalar = satir.strip().split(",")</text>
+    <text x="290" y="304">ad = parcalar[0]</text>
+    <text x="290" y="338">puan = int(parcalar[2])</text>
+
+    <text x="290" y="438">toplam[ad] = toplam.get(ad, 0) + puan</text>
+    <text x="290" y="472">adet[ad] = adet.get(ad, 0) + 1</text>
+
+    <text x="290" y="590">print(ad, toplam[ad] / adet[ad])</text>
+
+    <text x="860" y="118">tablo = pd.read_csv(</text>
+    <text x="918" y="152">"notlar.csv")</text>
+    <text x="860" y="438">tablo.groupby("ad")</text>
+    <text x="918" y="472">["puan"].mean()</text>
+    <text x="860" y="590">.plot(kind="bar")</text>
+  </g>
+  <g font-family="'Atkinson Hyperlegible Next', 'Segoe UI', Arial, sans-serif" font-size="24" fill="#50566F">
+    <text x="860" y="186">file'ı DataFrame tablosuna okur</text>
+    <text x="860" y="270">read_csv bu adımı da yapar:</text>
+    <text x="860" y="304">satırları sütunlara ayırır,</text>
+    <text x="860" y="338">puan'ı sayıya (int64) çevirir</text>
+    <text x="290" y="624">bu kursta grafik yok, sonuç yazdırıldı</text>
+    <text x="860" y="624">3. adımın sonucuna eklenir;</text>
+    <text x="860" y="652">grafiği matplotlib çizer</text>
+  </g>
+
+  <line x1="40" y1="672" x2="1240" y2="672" stroke="#D3D7E2" stroke-width="2"/>
+  <text x="40" y="706" font-family="'Atkinson Hyperlegible Next', 'Segoe UI', Arial, sans-serif" font-size="24" fill="#14172E">Aynı notlar.csv ile iki yolun sonucu aynı: Ayşe 85.0, Mehmet 80.0</text>
+</svg>

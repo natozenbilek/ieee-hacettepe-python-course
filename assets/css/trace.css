@@ -1,0 +1,72 @@
+/* trace.css · in-slide trace player (assets/js/trace-player.js, authoring/TRACE.md)
+   Link after slides.css (or site.css) and dg-types.css. The diagram itself uses the dg classes from
+   slides.css / site.css and the type colours from dg-types.css; this file only lays out the player.
+   Size: the whole 1152x548 content zone of a slide (div.content.l-full > div.trace). All space is reserved
+   before the data arrives, so nothing moves when the trace loads or when the step changes.
+   Columns: code and output on the left (width set by the player from the longest line, 400-620 px),
+   the picture (İsimler or Frame'ler, Value'lar or Object'ler, by data-labels) and the step bar on the right.
+   Text is never under 24 px: the player picks the code size and the spacing of the picture so that it fits at
+   1:1. A focal line under the player: typeset.py writes data-h and the same height inline (548 minus the line). */
+
+.trace{
+  --tr-left:480px;
+  display:grid;grid-template-columns:var(--tr-left) minmax(0,1fr);column-gap:32px;
+  width:100%;height:548px;box-sizing:border-box;
+  font-family:var(--font-sans,"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif);
+  color:var(--s-fg,#14172E);text-align:left;
+}
+.reveal .content > .trace{height:100%;flex:none}
+.trace.is-failed{display:block;font-size:24px;color:var(--s-err,#C21C20)}
+
+/* ---------- left: code and output ---------- */
+.trace-left{display:flex;flex-direction:column;row-gap:16px;min-width:0;min-height:0}
+.trace-codebox{flex:1 1 auto;min-height:0;display:flex;flex-direction:column}
+.trace-codebox > .trace-code{flex:1 1 auto}
+.trace-code{flex:1 1 auto;min-height:0;overflow:hidden;box-sizing:border-box;margin:0;padding:14px 0;
+  background:var(--s-surface,#F3F4F8);border:1px solid var(--s-rule,#C9CDDA);border-radius:4px;
+  font:500 26px/1.4 var(--font-mono,"JetBrains Mono",Menlo,Consolas,monospace);
+  font-variant-ligatures:none;font-feature-settings:"liga" 0,"calt" 0;white-space:pre;tab-size:4}
+.trace-code.is-tight{font-size:24px;line-height:1.35}
+.trace-line{display:flex;margin:0 6px;padding:0 10px 0 0;border-radius:4px;outline:3px solid transparent;outline-offset:-3px}
+.trace-ln{flex:none;min-width:2ch;padding:0 16px 0 8px;text-align:right;color:var(--s-lineno,#565C75);font-weight:400;user-select:none}
+.trace-src{flex:1 1 auto;min-width:0}
+/* the line that just ran: the cyan highlight with the 3 px indigo outline (DIAGRAMS.md §3, §8.1) */
+.trace-line.is-ran{background:var(--s-hl,#C8E7F3);outline-color:var(--s-brand,#3B4595)}
+.trace-line.is-err{background:var(--s-err-bg,#FCEDEE);outline-color:var(--s-err,#C21C20)}
+.trace-line.is-err .trace-ln{color:var(--s-err,#C21C20);font-weight:700}
+.trace .tr-k{color:var(--s-brand,#3B4595);font-weight:700}
+.trace .tr-s{color:var(--s-ok,#0D6385)}
+.trace .tr-c{color:var(--s-lineno,#565C75)}
+
+.trace-out{flex:none;display:flex;flex-direction:column}
+.trace-label{font:600 24px/1.2 var(--font-sans,"Atkinson Hyperlegible Next",Arial,sans-serif);color:var(--s-muted,#474D66);margin:0 0 8px}
+.reveal pre.trace-out-pre,.trace-out-pre{box-sizing:border-box;margin:0;padding:12px 20px;overflow:hidden;
+  font:500 24px/1.35 var(--font-mono,"JetBrains Mono",Menlo,Consolas,monospace);color:var(--s-fg,#14172E);
+  background:#FFFFFF;border:1px solid var(--s-rule,#C9CDDA);border-radius:4px;white-space:pre;box-shadow:none}
+.trace .tr-err{color:var(--s-err,#C21C20);font-weight:600}
+/* one printed line: a line longer than the panel wraps with a hanging indent instead of being cut off (Python
+   prints it on one line; the indent shows where its line goes on), as pre.wrap on the slides (deck.css) */
+.trace-out-pre .tr-ol{display:block;white-space:pre-wrap;overflow-wrap:anywhere;padding-left:2ch;text-indent:-2ch}
+
+/* ---------- right: picture and step bar ---------- */
+.trace-right{display:flex;flex-direction:column;row-gap:12px;min-width:0;min-height:0}
+.trace-fig{flex:1 1 auto;min-height:0;overflow:hidden}
+.trace-svg{display:block;max-width:100%;height:auto}
+.trace-bar{flex:none;height:52px;display:flex;align-items:center;column-gap:16px}
+.trace-btn{flex:none;width:52px;height:48px;margin:0;padding:0;display:grid;place-items:center;cursor:pointer;
+  background:#FFFFFF;border:2px solid var(--s-brand,#3B4595);border-radius:6px}
+.trace-btn svg{display:block}
+.trace-btn path{fill:var(--s-brand,#3B4595)}
+.trace-btn:disabled{cursor:default;border-color:var(--s-rule,#C9CDDA)}
+.trace-btn:disabled path{fill:var(--s-rule,#C9CDDA)}
+.trace-btn:focus-visible{outline:3px solid var(--s-cyan,#49B0D7);outline-offset:2px}
+.trace-count{flex:none;min-width:8.2em;text-align:center;font:600 24px/1 var(--font-sans,"Atkinson Hyperlegible Next",Arial,sans-serif);
+  color:var(--s-navy,#181C3E);font-variant-numeric:tabular-nums;white-space:nowrap}
+.trace-key{margin-left:auto;display:flex;align-items:center;column-gap:10px;white-space:nowrap;
+  font:400 24px/1 var(--font-sans,"Atkinson Hyperlegible Next",Arial,sans-serif);color:var(--s-muted,#474D66)}
+.trace-swatch{display:inline-block;width:30px;height:22px;box-sizing:border-box;border-radius:4px;
+  background:var(--s-hl,#C8E7F3);border:3px solid var(--s-brand,#3B4595)}
+
+/* print (?print-pdf): the chosen step is shown; the buttons keep their place but are not printed */
+html.reveal-print .trace-btn,.trace-print .trace-btn{visibility:hidden}
+.trace,.trace *{-webkit-print-color-adjust:exact;print-color-adjust:exact}

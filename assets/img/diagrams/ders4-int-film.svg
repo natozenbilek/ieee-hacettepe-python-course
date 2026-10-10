@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 400" width="1152" height="400" role="img" aria-labelledby="ders4-int-film-t ders4-int-film-d">
+  <title id="ders4-int-film-t">int ile reassignment: film şeridi</title>
+  <desc id="ders4-int-film-d">Üç karelik film şeridi. Solda kod: x = 5 (# 1), y = x (# 2), x = x + 1 (# 3), print(x, y); altında çıktı: 6 5. 5 ve 6 int olduğu için kutuları her karede turuncu. Kare 1, x = 5 satırından sonra: lacivert x etiketinden çıkan ok 5'i gösteriyor; 5 çivit mavisi çerçeveli açık mavi şeridin içinde (yeni object). Kare 2, y = x satırından sonra: y de aynı 5'i gösteriyor; y'den 5'e giden yeni ok açık mavi şeridin üzerinde. Kare 3, x = x + 1 satırından sonra: yeni bir 6 oluşuyor, açık mavi şeridin içinde; x'in oku 6'ya geçiyor; x'ten 5'e giden eski ok gri ve kesikli; y hala 5'i gösteriyor. Değerler kareler boyunca yerini değiştirmez; yalnızca oklar değişir. Alttaki açıklama: kare n, # n satırı çalıştıktan sonraki durumdur; düz ok şu anki bağ, kesikli gri ok eski bağ, çivit mavisi çerçeveli açık mavi şerit bu adımda değişen.</desc>
+  <!-- source: x = 5  # 1 / y = x  # 2 / x = x + 1  # 3 / print(x, y) -> "6 5"; x is y: True after # 2, False after # 3 (Python 3.14.8, 2026-10-11) -->
+  <defs>
+    <marker id="ders4-int-film-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
+    <marker id="ders4-int-film-ahm" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-m" d="M0,0 L12,6 L0,12 z"/></marker>
+    <style>
+/* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
+.dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
+.dg .bg{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF)}
+.dg .tx,.dg .lb,.dg .ti,.dg .cd,.dg .cd24{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .tx{font-size:24px;font-weight:400}
+.dg .lb{font-size:24px;font-weight:600}
+.dg .ti{font-size:28px;font-weight:700}
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-family:"JetBrains Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-weight:500}
+.dg .cd{font-size:28px}
+.dg .cd24{font-size:24px}
+.dg .ty{font-size:24px;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .nm{font-size:28px;font-weight:600;fill:#FFFFFF;fill:var(--d-on-name,#FFFFFF)}
+.dg .src{font-size:18px;font-weight:400;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .sub{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .okt{fill:#0D6385;fill:var(--d-ok,#0D6385);font-weight:600}
+.dg .errt{fill:#C21C20;fill:var(--d-err,#C21C20);font-weight:600}
+.dg .b7{font-weight:700}
+.dg .pre{white-space:pre}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .boxm{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .boxhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .blk{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2.5}
+.dg .frame{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .local{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .tmpl{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .cell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellh{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .name{fill:#181C3E;fill:var(--d-name,#181C3E)}
+.dg .soft{fill:#F3F4F8;fill:var(--d-surface,#F3F4F8)}
+.dg .outp{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .tint{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .hl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3)}
+.dg .emph{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .errbox{fill:#FCEDEE;fill:var(--d-err-bg,#FCEDEE);stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .errdash{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .okbox{fill:#E9F6FA;fill:var(--d-ok-bg,#E9F6FA);stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .key{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .dot{fill:#3B4595;fill:var(--d-brand,#3B4595)}
+.dg .dot0{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .ar,.dg .ld,.dg .axis{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E)}
+.dg .ar,.dg .axis{stroke-width:2.5}
+.dg .ld{stroke-width:2}
+.dg .ar-m{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .ar-old{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .ar-ok{fill:none;stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .ar-err{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .sep{fill:none;stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .dash{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2;stroke-dasharray:8 6}
+.dg .ah{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .ah-m{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .ah-ok{fill:#0D6385;fill:var(--d-ok,#0D6385)}
+.dg .ah-err{fill:#C21C20;fill:var(--d-err,#C21C20)}
+.dg .co{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .co-t{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF);font-size:24px;font-weight:700;text-anchor:middle}
+.dg .sec{stroke:#3B4595;stroke:var(--d-second,#3B4595)}
+/* dg v4 type renkleri · authoring/DIAGRAMS.md §10'dan aynen kopyalanır (dg v3 bloğundan sonra) */
+.dg rect.t-int,.dg path.t-int,.dg circle.t-int{fill:#F2CEB3;fill:var(--t-int-bg,#F2CEB3);stroke:#854B00;stroke:var(--t-int,#854B00)}
+.dg text.t-int,.dg tspan.t-int{fill:#613109;fill:var(--t-int-tx,#613109)}
+.dg rect.t-float,.dg path.t-float,.dg circle.t-float{fill:#FFF1C6;fill:var(--t-float-bg,#FFF1C6);stroke:#9F7000;stroke:var(--t-float,#9F7000)}
+.dg text.t-float,.dg tspan.t-float{fill:#5D420E;fill:var(--t-float-tx,#5D420E)}
+.dg rect.t-bool,.dg path.t-bool,.dg circle.t-bool{fill:#C4E9E1;fill:var(--t-bool-bg,#C4E9E1);stroke:#0E7A6D;stroke:var(--t-bool,#0E7A6D)}
+.dg text.t-bool,.dg tspan.t-bool{fill:#0A473F;fill:var(--t-bool-tx,#0A473F)}
+.dg rect.t-str,.dg path.t-str,.dg circle.t-str{fill:#D9F6DD;fill:var(--t-str-bg,#D9F6DD);stroke:#296A3B;stroke:var(--t-str,#296A3B)}
+.dg text.t-str,.dg tspan.t-str{fill:#1A4B28;fill:var(--t-str-tx,#1A4B28)}
+.dg rect.t-none,.dg path.t-none,.dg circle.t-none{fill:#F6F3EF;fill:var(--t-none-bg,#F6F3EF);stroke:#534C45;stroke:var(--t-none,#534C45)}
+.dg text.t-none,.dg tspan.t-none{fill:#413C38;fill:var(--t-none-tx,#413C38)}
+.dg rect.t-list,.dg path.t-list,.dg circle.t-list{fill:#F3C8DB;fill:var(--t-list-bg,#F3C8DB);stroke:#8A2B60;stroke:var(--t-list,#8A2B60)}
+.dg text.t-list,.dg tspan.t-list{fill:#651E45;fill:var(--t-list-tx,#651E45)}
+.dg rect.t-tuple,.dg path.t-tuple,.dg circle.t-tuple{fill:#E3EAF2;fill:var(--t-tuple-bg,#E3EAF2);stroke:#4A6378;stroke:var(--t-tuple,#4A6378)}
+.dg text.t-tuple,.dg tspan.t-tuple{fill:#2C3E4F;fill:var(--t-tuple-tx,#2C3E4F)}
+.dg rect.t-dict,.dg path.t-dict,.dg circle.t-dict{fill:#DBCEC4;fill:var(--t-dict-bg,#DBCEC4);stroke:#4F2611;stroke:var(--t-dict,#4F2611)}
+.dg text.t-dict,.dg tspan.t-dict{fill:#4C2817;fill:var(--t-dict-tx,#4C2817)}
+.dg rect.t-set,.dg path.t-set,.dg circle.t-set{fill:#F2F8D6;fill:var(--t-set-bg,#F2F8D6);stroke:#747C42;stroke:var(--t-set,#747C42)}
+.dg text.t-set,.dg tspan.t-set{fill:#3F4418;fill:var(--t-set-tx,#3F4418)}
+.dg rect.boxhl,.dg path.boxhl,.dg rect.cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595)}
+/* code shows the characters students type: no programming ligatures (== stays two characters) */
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-variant-ligatures:none}
+    </style>
+  </defs>
+  <rect class="bg" width="1152" height="400"/>
+  <g transform="translate(2,0)">
+  <rect class="soft" x="0" y="48" width="280" height="208" rx="4"/>
+  <text class="cd" x="20" y="92">x = 5</text>
+  <text class="cd sub" x="200" y="92"># 1</text>
+  <text class="cd" x="20" y="140">y = x</text>
+  <text class="cd sub" x="200" y="140"># 2</text>
+  <text class="cd" x="20" y="188">x = x + 1</text>
+  <text class="cd sub" x="200" y="188"># 3</text>
+  <text class="cd" x="20" y="236">print(x, y)</text>
+  <text class="lb sub" x="0" y="300">Çıktı</text>
+  <rect class="outp" x="0" y="316" width="280" height="64" rx="4"/>
+  <text class="cd" x="20" y="358">6 5</text>
+  <path class="sep" d="M590,4 V268"/>
+  <path class="sep" d="M870,4 V268"/>
+  <!-- kare 1: x = 5 -->
+  <circle class="co" cx="340" cy="24" r="18"/>
+  <text class="co-t" x="340" y="32">1</text>
+  <rect class="name" x="334" y="64" width="64" height="56" rx="6"/>
+  <text class="nm mid" x="366" y="102">x</text>
+  <rect class="boxhl" x="488" y="178" width="84" height="68" rx="10"/>
+  <rect class="box t-int" x="494" y="184" width="72" height="56" rx="6"/>
+  <text class="cd mid t-int" x="530" y="222">5</text>
+  <path class="ar" d="M398,108 L491,196" marker-end="url(#ders4-int-film-ah)"/>
+  <!-- kare 2: y = x -->
+  <circle class="co" cx="620" cy="24" r="18"/>
+  <text class="co-t" x="620" y="32">2</text>
+  <rect class="boxhl" x="684" y="199" width="74" height="26" rx="4"/>
+  <rect class="name" x="614" y="64" width="64" height="56" rx="6"/>
+  <text class="nm mid" x="646" y="102">x</text>
+  <rect class="name" x="614" y="184" width="64" height="56" rx="6"/>
+  <text class="nm mid" x="646" y="222">y</text>
+  <rect class="box t-int" x="774" y="184" width="72" height="56" rx="6"/>
+  <text class="cd mid t-int" x="810" y="222">5</text>
+  <path class="ar" d="M678,108 L771,196" marker-end="url(#ders4-int-film-ah)"/>
+  <path class="ar" d="M678,212 H771" marker-end="url(#ders4-int-film-ah)"/>
+  <!-- kare 3: x = x + 1 -->
+  <circle class="co" cx="900" cy="24" r="18"/>
+  <text class="co-t" x="900" y="32">3</text>
+  <rect class="name" x="894" y="64" width="64" height="56" rx="6"/>
+  <text class="nm mid" x="926" y="102">x</text>
+  <rect class="name" x="894" y="184" width="64" height="56" rx="6"/>
+  <text class="nm mid" x="926" y="222">y</text>
+  <rect class="boxhl" x="1048" y="58" width="84" height="68" rx="10"/>
+  <rect class="box t-int" x="1054" y="64" width="72" height="56" rx="6"/>
+  <text class="cd mid t-int" x="1090" y="102">6</text>
+  <rect class="box t-int" x="1054" y="184" width="72" height="56" rx="6"/>
+  <text class="cd mid t-int" x="1090" y="222">5</text>
+  <path class="ar" d="M958,92 H1051" marker-end="url(#ders4-int-film-ah)"/>
+  <path class="ar-old" d="M958,108 L1051,196" marker-end="url(#ders4-int-film-ahm)"/>
+  <path class="ar" d="M958,212 H1051" marker-end="url(#ders4-int-film-ah)"/>
+  <text class="tx sub" x="310" y="300">Kare n: # n satırı çalıştıktan sonra</text>
+  <path class="ar" d="M310,350 H355" marker-end="url(#ders4-int-film-ah)"/>
+  <text class="tx" x="372" y="358">şu anki bağ</text>
+  <path class="ar-old" d="M560,350 H605" marker-end="url(#ders4-int-film-ahm)"/>
+  <text class="tx" x="622" y="358">eski bağ</text>
+  <rect class="boxhl" x="790" y="333" width="44" height="34" rx="4"/>
+  <text class="tx" x="850" y="358">bu adımda değişen</text>
+  </g>
+</svg>

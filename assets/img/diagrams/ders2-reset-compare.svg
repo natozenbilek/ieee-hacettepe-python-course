@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 340" width="1152" height="340" role="img" aria-labelledby="ders2-reset-compare-t ders2-reset-compare-d">
+  <title id="ders2-reset-compare-t">total = 0'ın yeri: loop'tan önce ve loop'un içinde</title>
+  <desc id="ders2-reset-compare-d">İki sütun. Solda petrol mavisi Doğru sonuç: kod total = 0, i = 1, while i &lt;= 5:, içeride total = total + i ve i = i + 1, en sonda print(total); total = 0 satırı loop'tan önce, açık mavi bant üstünde. Tablosu tur 1-5 için total (sonra): 1, 3, 6, 10, 15; çıktı 15. Sağda kırmızı Yanlış sonuç: kod i = 1, while i &lt;= 5:, içeride total = 0, total = total + i ve i = i + 1, en sonda print(total); total = 0 satırı loop'un içinde, açık mavi bant üstünde. Tablosunda her satırın önünde 0'dan yazar: total her turda sıfırlanır ve 1, 2, 3, 4, 5 olur; çıktı 5, açık mavi ve çivit mavisi çerçeveli. Sayılar int (turuncu). Altta: Accumulator loop'tan önce bir kez sıfırlanır.</desc>
+  <!-- source: ders2-B.md S83 and S77; total = 0 before the loop: totals 1 3 6 10 15, output 15; total = 0 inside the loop: totals 1 2 3 4 5, output 5 (Python 3.14.8, 2026-10-11) -->
+  <defs>
+    <style>
+/* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
+.dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
+.dg .bg{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF)}
+.dg .tx,.dg .lb,.dg .ti,.dg .cd,.dg .cd24{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .tx{font-size:24px;font-weight:400}
+.dg .lb{font-size:24px;font-weight:600}
+.dg .ti{font-size:28px;font-weight:700}
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-family:"JetBrains Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-weight:500}
+.dg .cd{font-size:28px}
+.dg .cd24{font-size:24px}
+.dg .ty{font-size:24px;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .nm{font-size:28px;font-weight:600;fill:#FFFFFF;fill:var(--d-on-name,#FFFFFF)}
+.dg .src{font-size:18px;font-weight:400;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .sub{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .okt{fill:#0D6385;fill:var(--d-ok,#0D6385);font-weight:600}
+.dg .errt{fill:#C21C20;fill:var(--d-err,#C21C20);font-weight:600}
+.dg .b7{font-weight:700}
+.dg .pre{white-space:pre}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .boxm{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .boxhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .blk{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2.5}
+.dg .frame{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .local{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .tmpl{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .cell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellh{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .name{fill:#181C3E;fill:var(--d-name,#181C3E)}
+.dg .soft{fill:#F3F4F8;fill:var(--d-surface,#F3F4F8)}
+.dg .outp{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .tint{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .hl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3)}
+.dg .emph{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .errbox{fill:#FCEDEE;fill:var(--d-err-bg,#FCEDEE);stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .errdash{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .okbox{fill:#E9F6FA;fill:var(--d-ok-bg,#E9F6FA);stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .key{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .dot{fill:#3B4595;fill:var(--d-brand,#3B4595)}
+.dg .dot0{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .ar,.dg .ld,.dg .axis{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E)}
+.dg .ar,.dg .axis{stroke-width:2.5}
+.dg .ld{stroke-width:2}
+.dg .ar-m{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .ar-old{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .ar-ok{fill:none;stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .ar-err{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .sep{fill:none;stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .dash{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2;stroke-dasharray:8 6}
+.dg .ah{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .ah-m{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .ah-ok{fill:#0D6385;fill:var(--d-ok,#0D6385)}
+.dg .ah-err{fill:#C21C20;fill:var(--d-err,#C21C20)}
+.dg .co{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .co-t{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF);font-size:24px;font-weight:700;text-anchor:middle}
+.dg .sec{stroke:#3B4595;stroke:var(--d-second,#3B4595)}
+/* dg v4 type renkleri · authoring/DIAGRAMS.md §10'dan aynen kopyalanır (dg v3 bloğundan sonra) */
+.dg rect.t-int,.dg path.t-int,.dg circle.t-int{fill:#F2CEB3;fill:var(--t-int-bg,#F2CEB3);stroke:#854B00;stroke:var(--t-int,#854B00)}
+.dg text.t-int,.dg tspan.t-int{fill:#613109;fill:var(--t-int-tx,#613109)}
+.dg rect.t-float,.dg path.t-float,.dg circle.t-float{fill:#FFF1C6;fill:var(--t-float-bg,#FFF1C6);stroke:#9F7000;stroke:var(--t-float,#9F7000)}
+.dg text.t-float,.dg tspan.t-float{fill:#5D420E;fill:var(--t-float-tx,#5D420E)}
+.dg rect.t-bool,.dg path.t-bool,.dg circle.t-bool{fill:#C4E9E1;fill:var(--t-bool-bg,#C4E9E1);stroke:#0E7A6D;stroke:var(--t-bool,#0E7A6D)}
+.dg text.t-bool,.dg tspan.t-bool{fill:#0A473F;fill:var(--t-bool-tx,#0A473F)}
+.dg rect.t-str,.dg path.t-str,.dg circle.t-str{fill:#D9F6DD;fill:var(--t-str-bg,#D9F6DD);stroke:#296A3B;stroke:var(--t-str,#296A3B)}
+.dg text.t-str,.dg tspan.t-str{fill:#1A4B28;fill:var(--t-str-tx,#1A4B28)}
+.dg rect.t-none,.dg path.t-none,.dg circle.t-none{fill:#F6F3EF;fill:var(--t-none-bg,#F6F3EF);stroke:#534C45;stroke:var(--t-none,#534C45)}
+.dg text.t-none,.dg tspan.t-none{fill:#413C38;fill:var(--t-none-tx,#413C38)}
+.dg rect.t-list,.dg path.t-list,.dg circle.t-list{fill:#F3C8DB;fill:var(--t-list-bg,#F3C8DB);stroke:#8A2B60;stroke:var(--t-list,#8A2B60)}
+.dg text.t-list,.dg tspan.t-list{fill:#651E45;fill:var(--t-list-tx,#651E45)}
+.dg rect.t-tuple,.dg path.t-tuple,.dg circle.t-tuple{fill:#E3EAF2;fill:var(--t-tuple-bg,#E3EAF2);stroke:#4A6378;stroke:var(--t-tuple,#4A6378)}
+.dg text.t-tuple,.dg tspan.t-tuple{fill:#2C3E4F;fill:var(--t-tuple-tx,#2C3E4F)}
+.dg rect.t-dict,.dg path.t-dict,.dg circle.t-dict{fill:#DBCEC4;fill:var(--t-dict-bg,#DBCEC4);stroke:#4F2611;stroke:var(--t-dict,#4F2611)}
+.dg text.t-dict,.dg tspan.t-dict{fill:#4C2817;fill:var(--t-dict-tx,#4C2817)}
+.dg rect.t-set,.dg path.t-set,.dg circle.t-set{fill:#F2F8D6;fill:var(--t-set-bg,#F2F8D6);stroke:#747C42;stroke:var(--t-set,#747C42)}
+.dg text.t-set,.dg tspan.t-set{fill:#3F4418;fill:var(--t-set-tx,#3F4418)}
+.dg rect.boxhl,.dg path.boxhl,.dg rect.cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595)}
+/* kod PyCharm gibi: ligature yok */
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-variant-ligatures:none;font-feature-settings:"liga" 0,"calt" 0}
+    </style>
+  </defs>
+  <rect class="bg" width="1152" height="340"/>
+  <path class="sep" d="M576,4 V312"/>
+  <text class="lb okt" x="2" y="26">Doğru sonuç</text>
+  <rect class="soft" x="2" y="40" width="326" height="222" rx="4"/>
+  <rect class="hl" x="10" y="47" width="145.6" height="34" rx="4"/>
+  <text class="cd24" x="18" y="72">total = <tspan class="t-int">0</tspan></text>
+  <text class="cd24" x="18" y="108">i = <tspan class="t-int">1</tspan></text>
+  <text class="cd24" x="18" y="144">while i &lt;= <tspan class="t-int">5</tspan>:</text>
+  <text class="cd24 pre" x="18" y="180" xml:space="preserve">    total = total + i</text>
+  <text class="cd24 pre" x="18" y="216" xml:space="preserve">    i = i + <tspan class="t-int">1</tspan></text>
+  <text class="cd24" x="18" y="252">print(total)</text>
+  <rect class="cellh" x="344" y="40" width="56" height="40"/>
+  <text class="lb mid" x="372.0" y="68">tur</text>
+  <rect class="cellh" x="400" y="40" width="156" height="40"/>
+  <text class="lb mid" x="478.0" y="68">total (sonra)</text>
+  <rect class="cellh" x="344" y="80" width="56" height="36"/>
+  <text class="cd mid" x="372.0" y="108">1</text>
+  <rect class="cell" x="400" y="80" width="156" height="36"/>
+  <text class="cd mid t-int" x="478.0" y="108">1</text>
+  <rect class="cellh" x="344" y="116" width="56" height="36"/>
+  <text class="cd mid" x="372.0" y="144">2</text>
+  <rect class="cell" x="400" y="116" width="156" height="36"/>
+  <text class="cd mid t-int" x="478.0" y="144">3</text>
+  <rect class="cellh" x="344" y="152" width="56" height="36"/>
+  <text class="cd mid" x="372.0" y="180">3</text>
+  <rect class="cell" x="400" y="152" width="156" height="36"/>
+  <text class="cd mid t-int" x="478.0" y="180">6</text>
+  <rect class="cellh" x="344" y="188" width="56" height="36"/>
+  <text class="cd mid" x="372.0" y="216">4</text>
+  <rect class="cell" x="400" y="188" width="156" height="36"/>
+  <text class="cd mid t-int" x="478.0" y="216">10</text>
+  <rect class="cellh" x="344" y="224" width="56" height="36"/>
+  <text class="cd mid" x="372.0" y="252">5</text>
+  <rect class="cell" x="400" y="224" width="156" height="36"/>
+  <text class="cd mid t-int" x="478.0" y="252">15</text>
+  <text class="lb sub" x="344" y="299">Çıktı</text>
+  <rect class="outp" x="424" y="268" width="132" height="44" rx="4"/>
+  <text class="cd mid" x="490" y="300">15</text>
+  <text class="lb errt" x="596" y="26">Yanlış sonuç</text>
+  <rect class="soft" x="596" y="40" width="326" height="222" rx="4"/>
+  <rect class="hl" x="604" y="119" width="203.20000000000002" height="34" rx="4"/>
+  <text class="cd24" x="612" y="72">i = <tspan class="t-int">1</tspan></text>
+  <text class="cd24" x="612" y="108">while i &lt;= <tspan class="t-int">5</tspan>:</text>
+  <text class="cd24 pre" x="612" y="144" xml:space="preserve">    total = <tspan class="t-int">0</tspan></text>
+  <text class="cd24 pre" x="612" y="180" xml:space="preserve">    total = total + i</text>
+  <text class="cd24 pre" x="612" y="216" xml:space="preserve">    i = i + <tspan class="t-int">1</tspan></text>
+  <text class="cd24" x="612" y="252">print(total)</text>
+  <rect class="cellh" x="938" y="40" width="56" height="40"/>
+  <text class="lb mid" x="966.0" y="68">tur</text>
+  <rect class="cellh" x="994" y="40" width="156" height="40"/>
+  <text class="lb mid" x="1072.0" y="68">total (sonra)</text>
+  <rect class="cellh" x="938" y="80" width="56" height="36"/>
+  <text class="cd mid" x="966.0" y="108">1</text>
+  <rect class="cell" x="994" y="80" width="156" height="36"/>
+  <text class="tx sub" x="1008" y="106">0'dan</text>
+  <text class="cd mid t-int" x="1110" y="108">1</text>
+  <rect class="cellh" x="938" y="116" width="56" height="36"/>
+  <text class="cd mid" x="966.0" y="144">2</text>
+  <rect class="cell" x="994" y="116" width="156" height="36"/>
+  <text class="tx sub" x="1008" y="142">0'dan</text>
+  <text class="cd mid t-int" x="1110" y="144">2</text>
+  <rect class="cellh" x="938" y="152" width="56" height="36"/>
+  <text class="cd mid" x="966.0" y="180">3</text>
+  <rect class="cell" x="994" y="152" width="156" height="36"/>
+  <text class="tx sub" x="1008" y="178">0'dan</text>
+  <text class="cd mid t-int" x="1110" y="180">3</text>
+  <rect class="cellh" x="938" y="188" width="56" height="36"/>
+  <text class="cd mid" x="966.0" y="216">4</text>
+  <rect class="cell" x="994" y="188" width="156" height="36"/>
+  <text class="tx sub" x="1008" y="214">0'dan</text>
+  <text class="cd mid t-int" x="1110" y="216">4</text>
+  <rect class="cellh" x="938" y="224" width="56" height="36"/>
+  <text class="cd mid" x="966.0" y="252">5</text>
+  <rect class="cell" x="994" y="224" width="156" height="36"/>
+  <text class="tx sub" x="1008" y="250">0'dan</text>
+  <text class="cd mid t-int" x="1110" y="252">5</text>
+  <text class="lb sub" x="938" y="299">Çıktı</text>
+  <rect class="boxhl" x="1018" y="268" width="132" height="44" rx="4"/>
+  <text class="cd mid" x="1084" y="300">5</text>
+  <text class="tx mid" x="576" y="334">Accumulator loop'tan önce bir kez sıfırlanır.</text>
+</svg>

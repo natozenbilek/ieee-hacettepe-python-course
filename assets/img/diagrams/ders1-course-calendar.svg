@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 512" width="1152" height="512" role="img" aria-labelledby="ders1-course-calendar-t ders1-course-calendar-d">
+  <title id="ders1-course-calendar-t">Ders programı: beş Salı ve beş Ödev</title>
+  <desc id="ders1-course-calendar-d">Beş sütunlu ders programı, soldan sağa. İlk sütunun üstünde Salı, 18.00, D4. Ders 1, 20 Ekim (bugün, açık mavi ve çivit mavisi çerçeveyle vurgulu): bilgisayar, print(), error messages, int (turuncu), float (hardal sarısı), variable; Ödev 1, 25 Ekim Pazar 23.59. Ders 2, 27 Ekim: str (yeşil), input(), f-string, bool (deniz yeşili), if / elif; Ödev 2, 1 Kasım Pazar 23.59. Ders 3, 3 Kasım: while, for, range, slicing, break; Ödev 3, 8 Kasım Pazar 23.59. Ders 4, 10 Kasım: list (vişneçürüğü), tuple (mavi gri), import, def, try / except; Ödev 4, 15 Kasım Pazar 23.59. Ders 5, 17 Kasım: dict (kahverengi), set (zeytin yeşili), file, None (bej); Ödev 5, 22 Kasım Pazar 23.59. Alt satır: Her Ödev, dersten sonraki Pazar 23.59'a kadar teslim edilir.</desc>
+  <!-- source: DECISIONS.md Dates and assignment submission, Hero and meeting time confirmed (18.00, D4); authoring/data/forms.json; topics from ders1-A.md S38 -->
+  <defs>
+
+    <style>
+/* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
+.dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
+.dg .bg{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF)}
+.dg .tx,.dg .lb,.dg .ti,.dg .cd,.dg .cd24{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .tx{font-size:24px;font-weight:400}
+.dg .lb{font-size:24px;font-weight:600}
+.dg .ti{font-size:28px;font-weight:700}
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-family:"JetBrains Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-weight:500}
+.dg .cd{font-size:28px}
+.dg .cd24{font-size:24px}
+.dg .ty{font-size:24px;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .nm{font-size:28px;font-weight:600;fill:#FFFFFF;fill:var(--d-on-name,#FFFFFF)}
+.dg .src{font-size:18px;font-weight:400;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .sub{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .okt{fill:#0D6385;fill:var(--d-ok,#0D6385);font-weight:600}
+.dg .errt{fill:#C21C20;fill:var(--d-err,#C21C20);font-weight:600}
+.dg .b7{font-weight:700}
+.dg .pre{white-space:pre}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .boxm{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .boxhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .blk{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2.5}
+.dg .frame{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .local{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .tmpl{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .cell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellh{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .name{fill:#181C3E;fill:var(--d-name,#181C3E)}
+.dg .soft{fill:#F3F4F8;fill:var(--d-surface,#F3F4F8)}
+.dg .outp{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .tint{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .hl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3)}
+.dg .emph{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .errbox{fill:#FCEDEE;fill:var(--d-err-bg,#FCEDEE);stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .errdash{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .okbox{fill:#E9F6FA;fill:var(--d-ok-bg,#E9F6FA);stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .key{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .dot{fill:#3B4595;fill:var(--d-brand,#3B4595)}
+.dg .dot0{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .ar,.dg .ld,.dg .axis{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E)}
+.dg .ar,.dg .axis{stroke-width:2.5}
+.dg .ld{stroke-width:2}
+.dg .ar-m{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .ar-old{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .ar-ok{fill:none;stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .ar-err{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .sep{fill:none;stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .dash{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2;stroke-dasharray:8 6}
+.dg .ah{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .ah-m{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .ah-ok{fill:#0D6385;fill:var(--d-ok,#0D6385)}
+.dg .ah-err{fill:#C21C20;fill:var(--d-err,#C21C20)}
+.dg .co{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .co-t{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF);font-size:24px;font-weight:700;text-anchor:middle}
+.dg .sec{stroke:#3B4595;stroke:var(--d-second,#3B4595)}
+/* dg v4 type renkleri · authoring/DIAGRAMS.md §10'dan aynen kopyalanır (dg v3 bloğundan sonra) */
+.dg rect.t-int,.dg path.t-int,.dg circle.t-int{fill:#F2CEB3;fill:var(--t-int-bg,#F2CEB3);stroke:#854B00;stroke:var(--t-int,#854B00)}
+.dg text.t-int,.dg tspan.t-int{fill:#613109;fill:var(--t-int-tx,#613109)}
+.dg rect.t-float,.dg path.t-float,.dg circle.t-float{fill:#FFF1C6;fill:var(--t-float-bg,#FFF1C6);stroke:#9F7000;stroke:var(--t-float,#9F7000)}
+.dg text.t-float,.dg tspan.t-float{fill:#5D420E;fill:var(--t-float-tx,#5D420E)}
+.dg rect.t-bool,.dg path.t-bool,.dg circle.t-bool{fill:#C4E9E1;fill:var(--t-bool-bg,#C4E9E1);stroke:#0E7A6D;stroke:var(--t-bool,#0E7A6D)}
+.dg text.t-bool,.dg tspan.t-bool{fill:#0A473F;fill:var(--t-bool-tx,#0A473F)}
+.dg rect.t-str,.dg path.t-str,.dg circle.t-str{fill:#D9F6DD;fill:var(--t-str-bg,#D9F6DD);stroke:#296A3B;stroke:var(--t-str,#296A3B)}
+.dg text.t-str,.dg tspan.t-str{fill:#1A4B28;fill:var(--t-str-tx,#1A4B28)}
+.dg rect.t-none,.dg path.t-none,.dg circle.t-none{fill:#F6F3EF;fill:var(--t-none-bg,#F6F3EF);stroke:#534C45;stroke:var(--t-none,#534C45)}
+.dg text.t-none,.dg tspan.t-none{fill:#413C38;fill:var(--t-none-tx,#413C38)}
+.dg rect.t-list,.dg path.t-list,.dg circle.t-list{fill:#F3C8DB;fill:var(--t-list-bg,#F3C8DB);stroke:#8A2B60;stroke:var(--t-list,#8A2B60)}
+.dg text.t-list,.dg tspan.t-list{fill:#651E45;fill:var(--t-list-tx,#651E45)}
+.dg rect.t-tuple,.dg path.t-tuple,.dg circle.t-tuple{fill:#E3EAF2;fill:var(--t-tuple-bg,#E3EAF2);stroke:#4A6378;stroke:var(--t-tuple,#4A6378)}
+.dg text.t-tuple,.dg tspan.t-tuple{fill:#2C3E4F;fill:var(--t-tuple-tx,#2C3E4F)}
+.dg rect.t-dict,.dg path.t-dict,.dg circle.t-dict{fill:#DBCEC4;fill:var(--t-dict-bg,#DBCEC4);stroke:#4F2611;stroke:var(--t-dict,#4F2611)}
+.dg text.t-dict,.dg tspan.t-dict{fill:#4C2817;fill:var(--t-dict-tx,#4C2817)}
+.dg rect.t-set,.dg path.t-set,.dg circle.t-set{fill:#F2F8D6;fill:var(--t-set-bg,#F2F8D6);stroke:#747C42;stroke:var(--t-set,#747C42)}
+.dg text.t-set,.dg tspan.t-set{fill:#3F4418;fill:var(--t-set-tx,#3F4418)}
+.dg rect.boxhl,.dg path.boxhl,.dg rect.cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595)}
+    </style>
+  </defs>
+  <rect class="bg" width="1152" height="512"/>
+  <text class="tx sub" x="5" y="26">Salı, 18.00, D4</text>
+  <rect class="boxhl" x="5" y="38" width="214" height="76" rx="6"/>
+  <text class="ti mid" x="112" y="70">Ders 1</text>
+  <text class="lb mid" x="112" y="102">20 Ekim</text>
+  <rect class="box" x="15" y="126" width="194" height="36" rx="4"/>
+  <text class="tx mid" x="112" y="152">bilgisayar</text>
+  <rect class="box" x="15" y="168" width="194" height="36" rx="4"/>
+  <text class="cd24 mid" x="112" y="194">print()</text>
+  <rect class="box" x="15" y="210" width="194" height="36" rx="4"/>
+  <text class="tx mid" x="112" y="236">error messages</text>
+  <rect class="box t-int" x="15" y="252" width="194" height="36" rx="4"/>
+  <text class="cd24 mid t-int" x="112" y="278">int</text>
+  <rect class="box t-float" x="15" y="294" width="194" height="36" rx="4"/>
+  <text class="cd24 mid t-float" x="112" y="320">float</text>
+  <rect class="box" x="15" y="336" width="194" height="36" rx="4"/>
+  <text class="tx mid" x="112" y="362">variable</text>
+  <path class="sep" d="M5,384 H219"/>
+  <text class="lb" x="9" y="410">Ödev 1</text>
+  <text class="tx" x="9" y="438">25 Ekim Pazar</text>
+  <text class="tx" x="9" y="466">23.59</text>
+  <rect class="box" x="237" y="38" width="214" height="76" rx="6"/>
+  <text class="ti mid" x="344" y="70">Ders 2</text>
+  <text class="lb mid" x="344" y="102">27 Ekim</text>
+  <rect class="box t-str" x="247" y="126" width="194" height="36" rx="4"/>
+  <text class="cd24 mid t-str" x="344" y="152">str</text>
+  <rect class="box" x="247" y="168" width="194" height="36" rx="4"/>
+  <text class="cd24 mid" x="344" y="194">input()</text>
+  <rect class="box" x="247" y="210" width="194" height="36" rx="4"/>
+  <text class="tx mid" x="344" y="236">f-string</text>
+  <rect class="box t-bool" x="247" y="252" width="194" height="36" rx="4"/>
+  <text class="cd24 mid t-bool" x="344" y="278">bool</text>
+  <rect class="box" x="247" y="294" width="194" height="36" rx="4"/>
+  <text class="cd24 mid" x="344" y="320">if / elif</text>
+  <path class="sep" d="M237,384 H451"/>
+  <text class="lb" x="241" y="410">Ödev 2</text>
+  <text class="tx" x="241" y="438">1 Kasım Pazar</text>
+  <text class="tx" x="241" y="466">23.59</text>
+  <rect class="box" x="469" y="38" width="214" height="76" rx="6"/>
+  <text class="ti mid" x="576" y="70">Ders 3</text>
+  <text class="lb mid" x="576" y="102">3 Kasım</text>
+  <rect class="box" x="479" y="126" width="194" height="36" rx="4"/>
+  <text class="cd24 mid" x="576" y="152">while</text>
+  <rect class="box" x="479" y="168" width="194" height="36" rx="4"/>
+  <text class="cd24 mid" x="576" y="194">for</text>
+  <rect class="box" x="479" y="210" width="194" height="36" rx="4"/>
+  <text class="cd24 mid" x="576" y="236">range</text>
+  <rect class="box" x="479" y="252" width="194" height="36" rx="4"/>
+  <text class="tx mid" x="576" y="278">slicing</text>
+  <rect class="box" x="479" y="294" width="194" height="36" rx="4"/>
+  <text class="cd24 mid" x="576" y="320">break</text>
+  <path class="sep" d="M469,384 H683"/>
+  <text class="lb" x="473" y="410">Ödev 3</text>
+  <text class="tx" x="473" y="438">8 Kasım Pazar</text>
+  <text class="tx" x="473" y="466">23.59</text>
+  <rect class="box" x="701" y="38" width="214" height="76" rx="6"/>
+  <text class="ti mid" x="808" y="70">Ders 4</text>
+  <text class="lb mid" x="808" y="102">10 Kasım</text>
+  <rect class="box t-list" x="711" y="126" width="194" height="36" rx="4"/>
+  <text class="cd24 mid t-list" x="808" y="152">list</text>
+  <rect class="box t-tuple" x="711" y="168" width="194" height="36" rx="4"/>
+  <text class="cd24 mid t-tuple" x="808" y="194">tuple</text>
+  <rect class="box" x="711" y="210" width="194" height="36" rx="4"/>
+  <text class="cd24 mid" x="808" y="236">import</text>
+  <rect class="box" x="711" y="252" width="194" height="36" rx="4"/>
+  <text class="cd24 mid" x="808" y="278">def</text>
+  <rect class="box" x="711" y="294" width="194" height="36" rx="4"/>
+  <text class="cd24 mid" x="808" y="320">try / except</text>
+  <path class="sep" d="M701,384 H915"/>
+  <text class="lb" x="705" y="410">Ödev 4</text>
+  <text class="tx" x="705" y="438">15 Kasım Pazar</text>
+  <text class="tx" x="705" y="466">23.59</text>
+  <rect class="box" x="933" y="38" width="214" height="76" rx="6"/>
+  <text class="ti mid" x="1040" y="70">Ders 5</text>
+  <text class="lb mid" x="1040" y="102">17 Kasım</text>
+  <rect class="box t-dict" x="943" y="126" width="194" height="36" rx="4"/>
+  <text class="cd24 mid t-dict" x="1040" y="152">dict</text>
+  <rect class="box t-set" x="943" y="168" width="194" height="36" rx="4"/>
+  <text class="cd24 mid t-set" x="1040" y="194">set</text>
+  <rect class="box" x="943" y="210" width="194" height="36" rx="4"/>
+  <text class="tx mid" x="1040" y="236">file</text>
+  <rect class="box t-none" x="943" y="252" width="194" height="36" rx="4"/>
+  <text class="cd24 mid t-none" x="1040" y="278">None</text>
+  <path class="sep" d="M933,384 H1147"/>
+  <text class="lb" x="937" y="410">Ödev 5</text>
+  <text class="tx" x="937" y="438">22 Kasım Pazar</text>
+  <text class="tx" x="937" y="466">23.59</text>
+  <text class="tx mid" x="576" y="498">Her Ödev, dersten sonraki Pazar 23.59'a kadar teslim edilir.</text>
+</svg>

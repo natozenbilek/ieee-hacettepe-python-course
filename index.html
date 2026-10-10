@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Introduction to Python · IEEE Hacettepe</title>
+<meta name="description" content="IEEE Hacettepe University Student Branch, Güz 2026. Introduction to Python dersinin programı, ödevleri, kurulum adımları ve ek kaynakları.">
+<link rel="preload" href="assets/fonts/atkinson-hyperlegible-next-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/atkinson-hyperlegible-next-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/jetbrains-mono-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/latin-modern-roman-10-bold.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<!-- shell:header (tools/build_pages.py) -->
+<a class="skip" href="#icerik">İçeriğe geç</a>
+<header class="site-head">
+  <div class="masthead" style="--mast-sky:#2097C3">
+    <picture class="mast-art">
+      <source media="(max-width: 699px)" srcset="assets/img/site/hero-paint-900.svg">
+      <img src="assets/img/site/hero-paint-1920.svg" width="1920" height="640" alt="Elle çizilmiş bir piton yılanı, ekranında print(&quot;Merhaba&quot;) ve çıktısı yazan bir dizüstü bilgisayara sarılmış." fetchpriority="high">
+    </picture>
+    <nav class="site-nav" aria-label="Ana menü">
+      <div class="wrap">
+        <ul>
+          <li><a href="index.html" aria-current="page" aria-label="Ana sayfa">ANA SAYFA</a></li>
+          <li><a href="kurulum.html" aria-label="Kurulum">KURULUM</a></li>
+          <li><a href="kaynaklar.html" aria-label="Ek kaynaklar">EK KAYNAKLAR</a></li>
+          <li><a href="tarihce.html" aria-label="Tarihçe">TARİHÇE</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="mast-title wrap">
+      <h1 lang="en">Introduction to Python</h1>
+      <p class="mast-term">Güz 2026</p>
+    </div>
+  </div>
+  <div class="brand-strip">
+    <div class="wrap">
+      <a class="lockup" href="index.html"><img src="assets/brand/ieee-hacettepe-lockup-renkli.png" alt="IEEE Hacettepe University Student Branch" width="413" height="48"></a>
+    </div>
+  </div>
+</header>
+<!-- /shell:header -->
+
+<main id="icerik" class="wrap">
+
+  <div class="intro">
+    <div>
+    <p class="lead">Beş haftanın sonunda ekrana kahve fincanı çizen, içine telve serpip falınıza bakan programı kendiniz yazabileceksiniz.</p>
+
+    <dl class="facts">
+      <dt>Saat ve yer</dt><dd>Her salı, 18.00, E4 (Elektrik-Elektronik Mühendisliği, Beytepe; <a href="https://www.google.com/maps/search/?api=1&amp;query=Hacettepe+%C3%9Cniversitesi+Elektrik+ve+Elektronik+M%C3%BChendisli%C4%9Fi+B%C3%B6l%C3%BCm%C3%BC">haritada aç</a>)</dd>
+      <dt>Tarih</dt><dd>20 Ekim-17 Kasım 2026</dd>
+      <dt>Ön bilgi</dt><dd>Gerekmez, sıfırdan başlıyoruz. İlk dersten önce, derste kullanacağınız dizüstü bilgisayarda <a href="kurulum.html">Kurulum</a> sayfasındaki adımları tamamlayın.</dd>
+      <dt>Etkinlik</dt><dd>IEEE Hacettepe'nin ProgrammixV eğitimlerinden biri, Elektrik-Elektronik Mühendisliği Bölümü'nün koordinasyonunda (<a href="https://www.instagram.com/p/DeguAL8goEH/">IEEE duyurusu</a>, <a href="https://www.instagram.com/p/DejCSdxkVJB/">bölümün paylaşımı</a>, <a href="https://www.ee.hacettepe.edu.tr/?link=news&amp;sublink=862&amp;lang=t">bölümün haberi</a>)</dd>
+    </dl>
+    </div>
+    <img class="intro-art" src="assets/img/site/home-kahve-fali.svg" alt="Elle çizilmiş Python yılanı, ekranında telveli bir fincan çizili laptopun yanında kahve falına bakıyor." width="560" height="480">
+  </div>
+
+  <h2 id="program">Program</h2>
+  <p class="table-note" id="program-not">Her dersin iki yarısı var, tabloda 1A ve 1B diye geçiyor.</p>
+  <!-- TODO: kurs başlayınca o haftanın satırına class="is-current" ekleyin. -->
+  <table class="schedule" aria-describedby="program-not">
+    <thead><tr><th scope="col">Ders</th><th scope="col">Konular</th><th scope="col">Slaytlar</th></tr></thead>
+    <tbody>
+      <!-- schedule:start -->
+      <tr id="ders1">
+        <th scope="row" class="sch-ders"><span class="chip">Ders 1</span><span class="sch-date">20 Ekim Salı</span></th>
+        <td class="sch-topics">
+          <p><span class="half">1A</span><span>Bilgisayar ve Python, ilk program, <span lang="en">comment</span> ve <span lang="en">error&nbsp;messages</span></span></p>
+          <p><span class="half">1B</span><span><span lang="en">Value</span> ve <span lang="en">type</span>, <code>int</code> ve <code>float</code>, aritmetik, <span lang="en">variable</span> ve&nbsp;<span lang="en">assignment</span></span></p>
+        </td>
+        <td class="sch-slides"><a class="sch-link" href="slides/ders1.html">Slaytlar</a></td>
+      </tr>
+      <tr id="ders2">
+        <th scope="row" class="sch-ders"><span class="chip">Ders 2</span><span class="sch-date">27 Ekim Salı</span></th>
+        <td class="sch-topics">
+          <p><span class="half">2A</span><span><span lang="en">Reassignment</span>, <code>str</code>, <code>input()</code>, <span lang="en">type conversion</span>, <span lang="en" class="nowrap">f-string</span> ve <span lang="en">string&nbsp;methods</span></span></p>
+          <p><span class="half">2B</span><span><span lang="en">Comparison</span> ve <span lang="en">logical operators</span>, <code>bool</code>, <code>if</code>, <code>else</code> ve&nbsp;<code>elif</code></span></p>
+        </td>
+        <td class="sch-slides"><a class="sch-link" href="slides/ders2.html">Slaytlar</a></td>
+      </tr>
+      <tr id="ders3">
+        <th scope="row" class="sch-ders"><span class="chip">Ders 3</span><span class="sch-date">3 Kasım Salı</span></th>
+        <td class="sch-topics">
+          <p><span class="half">3A</span><span><code>while</code> <span lang="en">loop</span>, <span lang="en">counter</span> ve <span lang="en">accumulator</span>, <code>for</code> <span lang="en">loop</span> ve&nbsp;<code>range()</code></span></p>
+          <p><span class="half">3B</span><span><span lang="en">Nested loops</span>, <code>break</code>, <code>continue</code>, <span lang="en">index</span> ve&nbsp;<span lang="en">slicing</span></span></p>
+        </td>
+        <td class="sch-slides"><a class="sch-link" href="slides/ders3.html">Slaytlar</a></td>
+      </tr>
+      <tr id="ders4">
+        <th scope="row" class="sch-ders"><span class="chip">Ders 4</span><span class="sch-date">10 Kasım Salı</span></th>
+        <td class="sch-topics">
+          <p><span class="half">4A</span><span><span lang="en">List</span>, <span lang="en">tuple</span>, <span lang="en">mutable</span> ve <span lang="en">immutable</span>,&nbsp;<span lang="en">aliasing</span></span></p>
+          <p><span class="half">4B</span><span><code>try</code> ve <code>except</code>, <code>import</code>, <span lang="en">function</span>, <span lang="en">parameter</span> ve <span lang="en">return&nbsp;value</span></span></p>
+        </td>
+        <td class="sch-slides"><a class="sch-link" href="slides/ders4.html">Slaytlar</a></td>
+      </tr>
+      <tr id="ders5">
+        <th scope="row" class="sch-ders"><span class="chip">Ders 5</span><span class="sch-date">17 Kasım Salı</span></th>
+        <td class="sch-topics">
+          <p><span class="half">5A</span><span><span lang="en">Scope</span> ve <code>None</code>, <code>dict</code> ve&nbsp;<code>set</code></span></p>
+          <p><span class="half">5B</span><span><span lang="en">File</span> okuma ve yazma, Python'dan&nbsp;ilerisi</span></p>
+        </td>
+        <td class="sch-slides"><a class="sch-link" href="slides/ders5.html">Slaytlar</a></td>
+      </tr>
+      <!-- schedule:end -->
+    </tbody>
+  </table>
+  <p>Slaytlarda <kbd>O</kbd> tuşuna basınca bütün slaytlar bir ızgarada açılıyor, istediğinize tıklayıp gidebilirsiniz. Belli bir slayda gitmek için <kbd>G</kbd>'ye basıp sağ alttaki slayt numarasını yazın ve <kbd>Enter</kbd>'a basın.</p>
+
+  <h2 id="odevler">Ödevler</h2>
+  <div class="hw-wrap">
+    <div>
+      <p class="table-note" id="odev-not">Ödev bağlantısı GitHub'daki ödev reposunu açıyor: <code>.py</code> dosyası, konu özeti ve <code>kontrol.py</code>&nbsp;orada.</p>
+      <ol class="hw-row" aria-describedby="odev-not">
+      <!-- homework:start -->
+      <li id="odev1" class="is-open"><a class="hw-main" href="https://github.com/natozenbilek/a-million-seconds-python-hw">Ödev 1</a><time class="hw-due" datetime="2026-10-25T23:59">25 Ekim Pazar<br>23.59'a kadar</time><a class="hw-form" href="https://forms.gle/61hSuP7zyptmGsedA">teslim formu</a></li>
+      <li id="odev2" class="is-open"><a class="hw-main" href="https://github.com/natozenbilek/student-card-python-hw">Ödev 2</a><time class="hw-due" datetime="2026-11-01T23:59">1 Kasım Pazar<br>23.59'a kadar</time><a class="hw-form" href="https://forms.gle/85GMMkxWLvinDtiW6">teslim formu</a></li>
+      <li id="odev3" class="is-open"><a class="hw-main" href="https://github.com/natozenbilek/folding-to-everest-python-hw">Ödev 3</a><time class="hw-due" datetime="2026-11-08T23:59">8 Kasım Pazar<br>23.59'a kadar</time><a class="hw-form" href="https://forms.gle/2Ei4AbGpuuJNtN5w7">teslim formu</a></li>
+      <li id="odev4" class="is-open"><a class="hw-main" href="https://github.com/natozenbilek/transcript-lines-python-hw">Ödev 4</a><time class="hw-due" datetime="2026-11-15T23:59">15 Kasım Pazar<br>23.59'a kadar</time><a class="hw-form" href="https://forms.gle/eMHjvPfSRP9cp1JH7">teslim formu</a></li>
+      <li id="odev5" class="is-open"><a class="hw-main" href="https://github.com/natozenbilek/word-counter-python-hw">Ödev 5</a><time class="hw-due" datetime="2026-11-22T23:59">22 Kasım Pazar<br>23.59'a kadar</time><a class="hw-form" href="https://forms.gle/GoDQP1oTpEdeC2RD6">teslim formu</a></li>
+      <!-- homework:end -->
+    </ol>
+    </div>
+  </div>
+
+  <h2 id="isleyis">Derslerin işleyişi</h2>
+  <div class="sec-row">
+    <div>
+    <p>Derslere dizüstü bilgisayarınızla gelin, kodu derste birlikte PyCharm'da yazacağız.</p>
+    <p>Bir konuyu öğrendikten sonra slaytta “Python ne yazdırır?” soruları gelecek. Telefonunuzla QR kodu okutup cevabınızı seçiyorsunuz, sonuçları da ekranda birlikte konuşuyoruz.</p>
+    </div>
+    <img class="sec-art" src="assets/img/site/home-ders-isleyisi.svg" alt="Elle çizilmiş bir öğrenci, perdedeki “Python ne yazdırır?” sorusunun karekodunu telefonuyla okutuyor; Python yılanı soruya bakıyor." width="560" height="480">
+  </div>
+
+  <h2 id="degerlendirme">Değerlendirme</h2>
+  <div class="sec-row">
+    <div>
+    <p>Her dersten sonra, o derse kadar gördüklerimizle yapabileceğiniz bir ödev var. Final sınavıyla ilgili ayrıntılar daha sonra paylaşılacak.</p>
+    <p>Ödev bir <code>.py</code> dosyası. Görevler ve beklenen çıktılar dosyanın içinde, siz TODO satırlarını dolduruyorsunuz.</p>
+    <p>Dosyayı dersten sonraki pazar 23.59'a kadar o ödevin teslim formuna yükleyin. Son güne kadar dosyanızı değiştirebilirsiniz. Geri bildirimi formdaki <span class="nowrap">e-posta</span> adresinize göndereceğim.</p>
+    </div>
+    <img class="sec-art" src="assets/img/site/home-odev-pazar.svg" alt="Elle çizilmiş bir öğrenci gece Pazar 23.58'de ödevini yüklüyor; Python yılanı seviniyor." width="560" height="480">
+  </div>
+  <!-- TODO: geçme ölçütü belli olunca ekleyin. -->
+
+
+  <h2 id="iletisim">İletişim</h2>
+  <div class="sec-row">
+    <div>
+    <p>Sorularınızı dersin WhatsApp grubuna yazabilirsiniz.</p>
+    </div>
+    <img class="sec-art" src="assets/img/site/home-iletisim.svg" alt="Elle çizilmiş bir sohbet: “IndentationError ne demek?” sorusuna Python yılanı “Girintiye bak.” diye cevap yazıyor." width="560" height="480">
+  </div>
+  <!-- TODO: WhatsApp grubuna katılma yolu (bağlantı ya da duyuru) belli olunca ekleyin. -->
+  <!-- TODO: e-posta adresi (Nezih karar verecek): <p>E-posta: <a href="mailto:...">...</a></p> -->
+
+</main>
+
+<!-- shell:footer (tools/build_pages.py) -->
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="foot-course" lang="en">Introduction to Python</p>
+    <p>IEEE Hacettepe University Student Branch, Güz 2026</p>
+    <ul class="foot-links">
+      <li><a href="https://www.ee.hacettepe.edu.tr/">Hacettepe Üniversitesi Elektrik ve Elektronik Mühendisliği Bölümü</a></li>
+      <li><a href="https://www.ieeehacettepe.com/">IEEE Hacettepe</a></li>
+    </ul>
+    <p>Python adı ve logosu Python Software Foundation'ın ticari markasıdır, bu kursun vakıfla resmi bir bağı yok.</p>
+    <p>Görsellerin kaynakları ve lisansları <a href="gorseller.html">Görseller</a> sayfasında. Sitedeki yazı tipleri Atkinson Hyperlegible Next ve JetBrains Mono (SIL Open Font License 1.1) ile Latin Modern Roman (GUST Font License).</p>
+    <p>Ödev teslim formlarının aydınlatma ve açık rıza metni <a href="kvkk.html">Kişisel verileriniz</a> sayfasında.</p>
+    <p>Son güncelleme: 17 Ekim 2026</p>
+    <!-- TODO: ders materyalinin lisansı (Nezih karar verecek) -->
+  </div>
+</footer>
+<!-- /shell:footer -->
+</body>
+</html>

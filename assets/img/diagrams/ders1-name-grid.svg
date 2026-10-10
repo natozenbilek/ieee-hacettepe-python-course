@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 432" width="1152" height="432" role="img" aria-labelledby="ders1-name-grid-t ders1-name-grid-d" data-state="rules">
+  <title id="ders1-name-grid-t">İsim kuralları, PEP 8 ve büyük harfli isimler</title>
+  <desc id="ders1-name-grid-d">Çizilmiş isim kartları, üç durum. Durum rules: üstte kod paneli: course_code = "BBM101", midterm2 = 85, print(course_code, midterm2); Çıktı: BBM101 85. Altta solda petrol mavisi çerçeveli geçerli kartlar: course_code, midterm2, _total, credits ve Credits; Credits'in altında credits'ten farklı bir isim yazar. Sağda kırmızı çerçeveli geçersiz kartlar, her birinin altında bozduğu kural: course code, boşluk var; 2course, rakamla başlıyor; not, Python'un kendi kelimesi. Durum pep8: kod paneli: total_credits = 9, print(total_credits); Çıktı: 9. Geçerli kartların altına bir satır eklenir: course_code, midterm2, _total ve credits için snake_case; Credits için büyük harfle başlamaz. Sol grubun altındaki üçüncü yer boş kalır. Geçersiz grup gri ve sönük çizilir. Durum const: pep8 durumunun aynısı, kod paneli: MAX_GPA = 4.0, print("En yüksek AGNO:", MAX_GPA); Çıktı: En yüksek AGNO: 4.0. Boş kalan yere petrol mavisi çerçeveli yeni bir geçerli kart gelir: MAX_GPA, altında hiç değişmeyecek value; kart açık mavi zeminli, çivit mavisi çerçeveli bir bantla vurgulanır. Kartlar isimdir, value değil; bu yüzden type renkleri yok.</desc>
+  <!-- source: lessons/ders1.md S181 (rules), S184 (pep8), S186 (const). course_code = "BBM101" / midterm2 = 85 / print(course_code, midterm2) -&gt; BBM101 85; total_credits = 9 / print(total_credits) -&gt; 9; MAX_GPA = 4.0 / print("En yüksek AGNO:", MAX_GPA) -&gt; En yüksek AGNO: 4.0; course code = 1 -&gt; SyntaxError: invalid syntax; 2course = 1 -&gt; SyntaxError: invalid decimal literal; not = 85 -&gt; SyntaxError: invalid syntax; credits = 4 / Credits = 5 / print(credits, Credits) -&gt; 4 5 (Python 3.14.8, 2026-10-11) -->
+  <defs>
+    <style>
+/* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
+.dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
+.dg .bg{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF)}
+.dg .tx,.dg .lb,.dg .ti,.dg .cd,.dg .cd24{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .tx{font-size:24px;font-weight:400}
+.dg .lb{font-size:24px;font-weight:600}
+.dg .ti{font-size:28px;font-weight:700}
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-family:"JetBrains Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-weight:500}
+.dg .cd{font-size:28px}
+.dg .cd24{font-size:24px}
+.dg .ty{font-size:24px;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .nm{font-size:28px;font-weight:600;fill:#FFFFFF;fill:var(--d-on-name,#FFFFFF)}
+.dg .src{font-size:18px;font-weight:400;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .sub{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .okt{fill:#0D6385;fill:var(--d-ok,#0D6385);font-weight:600}
+.dg .errt{fill:#C21C20;fill:var(--d-err,#C21C20);font-weight:600}
+.dg .b7{font-weight:700}
+.dg .pre{white-space:pre}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .boxm{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .boxhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .blk{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2.5}
+.dg .frame{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .local{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .tmpl{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .cell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellh{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .name{fill:#181C3E;fill:var(--d-name,#181C3E)}
+.dg .soft{fill:#F3F4F8;fill:var(--d-surface,#F3F4F8)}
+.dg .outp{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .tint{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .hl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3)}
+.dg .emph{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .errbox{fill:#FCEDEE;fill:var(--d-err-bg,#FCEDEE);stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .errdash{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .okbox{fill:#E9F6FA;fill:var(--d-ok-bg,#E9F6FA);stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .key{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .dot{fill:#3B4595;fill:var(--d-brand,#3B4595)}
+.dg .dot0{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .ar,.dg .ld,.dg .axis{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E)}
+.dg .ar,.dg .axis{stroke-width:2.5}
+.dg .ld{stroke-width:2}
+.dg .ar-m{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .ar-old{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .ar-ok{fill:none;stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .ar-err{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .sep{fill:none;stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .dash{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2;stroke-dasharray:8 6}
+.dg .ah{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .ah-m{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .ah-ok{fill:#0D6385;fill:var(--d-ok,#0D6385)}
+.dg .ah-err{fill:#C21C20;fill:var(--d-err,#C21C20)}
+.dg .co{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .co-t{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF);font-size:24px;font-weight:700;text-anchor:middle}
+.dg .sec{stroke:#3B4595;stroke:var(--d-second,#3B4595)}
+/* dg v4 type renkleri · authoring/DIAGRAMS.md §10'dan aynen kopyalanır (dg v3 bloğundan sonra) */
+.dg rect.t-int,.dg path.t-int,.dg circle.t-int{fill:#F2CEB3;fill:var(--t-int-bg,#F2CEB3);stroke:#854B00;stroke:var(--t-int,#854B00)}
+.dg text.t-int,.dg tspan.t-int{fill:#613109;fill:var(--t-int-tx,#613109)}
+.dg rect.t-float,.dg path.t-float,.dg circle.t-float{fill:#FFF1C6;fill:var(--t-float-bg,#FFF1C6);stroke:#9F7000;stroke:var(--t-float,#9F7000)}
+.dg text.t-float,.dg tspan.t-float{fill:#5D420E;fill:var(--t-float-tx,#5D420E)}
+.dg rect.t-bool,.dg path.t-bool,.dg circle.t-bool{fill:#C4E9E1;fill:var(--t-bool-bg,#C4E9E1);stroke:#0E7A6D;stroke:var(--t-bool,#0E7A6D)}
+.dg text.t-bool,.dg tspan.t-bool{fill:#0A473F;fill:var(--t-bool-tx,#0A473F)}
+.dg rect.t-str,.dg path.t-str,.dg circle.t-str{fill:#D9F6DD;fill:var(--t-str-bg,#D9F6DD);stroke:#296A3B;stroke:var(--t-str,#296A3B)}
+.dg text.t-str,.dg tspan.t-str{fill:#1A4B28;fill:var(--t-str-tx,#1A4B28)}
+.dg rect.t-none,.dg path.t-none,.dg circle.t-none{fill:#F6F3EF;fill:var(--t-none-bg,#F6F3EF);stroke:#534C45;stroke:var(--t-none,#534C45)}
+.dg text.t-none,.dg tspan.t-none{fill:#413C38;fill:var(--t-none-tx,#413C38)}
+.dg rect.t-list,.dg path.t-list,.dg circle.t-list{fill:#F3C8DB;fill:var(--t-list-bg,#F3C8DB);stroke:#8A2B60;stroke:var(--t-list,#8A2B60)}
+.dg text.t-list,.dg tspan.t-list{fill:#651E45;fill:var(--t-list-tx,#651E45)}
+.dg rect.t-tuple,.dg path.t-tuple,.dg circle.t-tuple{fill:#E3EAF2;fill:var(--t-tuple-bg,#E3EAF2);stroke:#4A6378;stroke:var(--t-tuple,#4A6378)}
+.dg text.t-tuple,.dg tspan.t-tuple{fill:#2C3E4F;fill:var(--t-tuple-tx,#2C3E4F)}
+.dg rect.t-dict,.dg path.t-dict,.dg circle.t-dict{fill:#DBCEC4;fill:var(--t-dict-bg,#DBCEC4);stroke:#4F2611;stroke:var(--t-dict,#4F2611)}
+.dg text.t-dict,.dg tspan.t-dict{fill:#4C2817;fill:var(--t-dict-tx,#4C2817)}
+.dg rect.t-set,.dg path.t-set,.dg circle.t-set{fill:#F2F8D6;fill:var(--t-set-bg,#F2F8D6);stroke:#747C42;stroke:var(--t-set,#747C42)}
+.dg text.t-set,.dg tspan.t-set{fill:#3F4418;fill:var(--t-set-tx,#3F4418)}
+.dg rect.boxhl,.dg path.boxhl,.dg rect.cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595)}
+/* kod PyCharm gibi: ligature yok */
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-variant-ligatures:none}
+/* ders1-name-grid: data-state="rules" (S181, varsayılan), "pep8" (S184) ya da "const" (S186: pep8 ve MAX_GPA kartı); yalnızca kök özniteliği değişir */
+.dg .ng-pep,.dg .ng-pepcode,.dg .ng-const{display:none}
+.dg[data-state="pep8"] .ng-pep,.dg[data-state="const"] .ng-pep{display:inline}
+.dg[data-state="pep8"] .ng-pepcode{display:inline}
+.dg[data-state="const"] .ng-const{display:inline}
+.dg[data-state="pep8"] .ng-rules,.dg[data-state="const"] .ng-rules{display:none}
+.dg[data-state="pep8"] .ng-bad rect,.dg[data-state="const"] .ng-bad rect{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg[data-state="pep8"] .ng-bad text,.dg[data-state="const"] .ng-bad text{fill:#50566F;fill:var(--d-type,#50566F)}
+    </style>
+  </defs>
+  <rect class="bg" width="1152" height="432"/>
+  <rect class="soft" x="2" y="2" width="514" height="114" rx="4"/>
+  <rect class="outp" x="544" y="2" width="320" height="114" rx="4"/>
+  <text class="lb sub" x="560" y="34">Çıktı</text>
+  <g class="ng-rules">
+  <text class="cd24" x="18" y="36">course_code = "BBM101"</text>
+  <text class="cd24" x="18" y="70">midterm2 = 85</text>
+  <text class="cd24" x="18" y="104">print(course_code, midterm2)</text>
+  <text class="cd24" x="560" y="84">BBM101 85</text>
+  </g>
+  <g class="ng-pepcode">
+  <text class="cd24" x="18" y="36">total_credits = 9</text>
+  <text class="cd24" x="18" y="70">print(total_credits)</text>
+  <text class="cd24" x="560" y="84">9</text>
+  </g>
+  <g class="ng-const">
+  <text class="cd24" x="18" y="36">MAX_GPA = 4.0</text>
+  <text class="cd24" x="18" y="70">print("En yüksek AGNO:", MAX_GPA)</text>
+  <text class="cd24" x="560" y="84">En yüksek AGNO: 4.0</text>
+  </g>
+  <path class="sep" d="M660,122 V428"/>
+  <text class="lb okt" x="8" y="148">geçerli</text>
+  <rect class="okbox" x="8" y="162" width="219" height="64" rx="6"/>
+  <text class="cd mid" x="117.5" y="204">course_code</text>
+  <rect class="okbox" x="256" y="162" width="166" height="64" rx="6"/>
+  <text class="cd mid" x="339" y="204">midterm2</text>
+  <rect class="okbox" x="456" y="162" width="133" height="64" rx="6"/>
+  <text class="cd mid" x="522.5" y="204">_total</text>
+  <rect class="okbox" x="8" y="274" width="150" height="64" rx="6"/>
+  <text class="cd mid" x="83" y="316">credits</text>
+  <rect class="okbox" x="256" y="274" width="150" height="64" rx="6"/>
+  <text class="cd mid" x="331" y="316">Credits</text>
+  <text class="tx sub" x="256" y="362">credits'ten farklı</text>
+  <text class="tx sub" x="256" y="392">bir isim</text>
+  <g class="ng-pep">
+  <text class="tx sub" x="8" y="250">snake_case</text>
+  <text class="tx sub" x="256" y="250">snake_case</text>
+  <text class="tx sub" x="456" y="250">snake_case</text>
+  <text class="tx sub" x="8" y="362">snake_case</text>
+  <text class="tx sub" x="256" y="422">PEP 8: küçük harf</text>
+  </g>
+  <g class="ng-const">
+  <rect class="boxhl" x="450" y="268" width="162" height="76" rx="10"/>
+  <rect class="okbox" x="456" y="274" width="150" height="64" rx="6"/>
+  <text class="cd mid" x="531" y="316">MAX_GPA</text>
+  <text class="tx sub" x="456" y="362">hiç değişmeyecek</text>
+  <text class="tx sub" x="456" y="392">value</text>
+  </g>
+  <g class="ng-bad">
+  <text class="lb errt" x="686" y="148">geçersiz</text>
+  <rect class="errbox" x="686" y="162" width="219" height="64" rx="6"/>
+  <text class="cd mid" x="795.5" y="204" xml:space="preserve">course code</text>
+  <text class="tx sub" x="686" y="250">boşluk var</text>
+  <rect class="errbox" x="940" y="162" width="150" height="64" rx="6"/>
+  <text class="cd mid" x="1015" y="204" xml:space="preserve">2course</text>
+  <text class="tx sub" x="940" y="250">rakamla başlıyor</text>
+  <rect class="errbox" x="686" y="274" width="82" height="64" rx="6"/>
+  <text class="cd mid" x="727" y="316" xml:space="preserve">not</text>
+  <text class="tx sub" x="686" y="362">Python'un kendi kelimesi</text>
+  </g>
+</svg>

@@ -1,0 +1,155 @@
+/* dg-types.css · dg v4 type renkleri (authoring/DIAGRAMS.md §10)
+   Her type bir renk: kutu dolgusu (--t-X-bg), çerçeve (--t-X), kutu içi yazı ve type etiketi (--t-X-tx).
+   Sınıflar: .t-int .t-float .t-bool .t-str .t-none (NoneType) .t-list .t-tuple .t-dict .t-set
+   Şekle (rect/path/circle) dolgu ve çerçeve, text/tspan'a yazı rengi verir. Vurgu (boxhl, cellhl) her zaman
+   type renginin önündedir. Koyu değerler yalnızca ekranda ve prefers-color-scheme: dark iken geçerli;
+   reveal.js destesi (.reveal) her zaman açık renk kalır, bunun için :has() gerekmez.
+   Bir diyagramı satır içine alan her sayfa bu dosyayı site.css'ten sonra bağlar: site.css'te --t-* yok
+   (tools/inline_svg.py, --t-* kullanan bir diyagramı bu bağlantı olmayan sayfaya almaz). */
+
+:root{
+  --t-int:#854B00;
+  --t-int-bg:#F2CEB3;
+  --t-int-tx:#613109;
+  --t-float:#9F7000;
+  --t-float-bg:#FFF1C6;
+  --t-float-tx:#5D420E;
+  --t-bool:#0E7A6D;
+  --t-bool-bg:#C4E9E1;
+  --t-bool-tx:#0A473F;
+  --t-str:#296A3B;
+  --t-str-bg:#D9F6DD;
+  --t-str-tx:#1A4B28;
+  --t-none:#534C45;
+  --t-none-bg:#F6F3EF;
+  --t-none-tx:#413C38;
+  --t-list:#8A2B60;
+  --t-list-bg:#F3C8DB;
+  --t-list-tx:#651E45;
+  --t-tuple:#4A6378;
+  --t-tuple-bg:#E3EAF2;
+  --t-tuple-tx:#2C3E4F;
+  --t-dict:#4F2611;
+  --t-dict-bg:#DBCEC4;
+  --t-dict-tx:#4C2817;
+  --t-set:#747C42;
+  --t-set-bg:#F2F8D6;
+  --t-set-tx:#3F4418;
+}
+
+/* dg v4 type renkleri · authoring/DIAGRAMS.md §10'dan aynen kopyalanır (dg v3 bloğundan sonra) */
+.dg rect.t-int,.dg path.t-int,.dg circle.t-int{fill:#F2CEB3;fill:var(--t-int-bg,#F2CEB3);stroke:#854B00;stroke:var(--t-int,#854B00)}
+.dg text.t-int,.dg tspan.t-int{fill:#613109;fill:var(--t-int-tx,#613109)}
+.dg rect.t-float,.dg path.t-float,.dg circle.t-float{fill:#FFF1C6;fill:var(--t-float-bg,#FFF1C6);stroke:#9F7000;stroke:var(--t-float,#9F7000)}
+.dg text.t-float,.dg tspan.t-float{fill:#5D420E;fill:var(--t-float-tx,#5D420E)}
+.dg rect.t-bool,.dg path.t-bool,.dg circle.t-bool{fill:#C4E9E1;fill:var(--t-bool-bg,#C4E9E1);stroke:#0E7A6D;stroke:var(--t-bool,#0E7A6D)}
+.dg text.t-bool,.dg tspan.t-bool{fill:#0A473F;fill:var(--t-bool-tx,#0A473F)}
+.dg rect.t-str,.dg path.t-str,.dg circle.t-str{fill:#D9F6DD;fill:var(--t-str-bg,#D9F6DD);stroke:#296A3B;stroke:var(--t-str,#296A3B)}
+.dg text.t-str,.dg tspan.t-str{fill:#1A4B28;fill:var(--t-str-tx,#1A4B28)}
+.dg rect.t-none,.dg path.t-none,.dg circle.t-none{fill:#F6F3EF;fill:var(--t-none-bg,#F6F3EF);stroke:#534C45;stroke:var(--t-none,#534C45)}
+.dg text.t-none,.dg tspan.t-none{fill:#413C38;fill:var(--t-none-tx,#413C38)}
+.dg rect.t-list,.dg path.t-list,.dg circle.t-list{fill:#F3C8DB;fill:var(--t-list-bg,#F3C8DB);stroke:#8A2B60;stroke:var(--t-list,#8A2B60)}
+.dg text.t-list,.dg tspan.t-list{fill:#651E45;fill:var(--t-list-tx,#651E45)}
+.dg rect.t-tuple,.dg path.t-tuple,.dg circle.t-tuple{fill:#E3EAF2;fill:var(--t-tuple-bg,#E3EAF2);stroke:#4A6378;stroke:var(--t-tuple,#4A6378)}
+.dg text.t-tuple,.dg tspan.t-tuple{fill:#2C3E4F;fill:var(--t-tuple-tx,#2C3E4F)}
+.dg rect.t-dict,.dg path.t-dict,.dg circle.t-dict{fill:#DBCEC4;fill:var(--t-dict-bg,#DBCEC4);stroke:#4F2611;stroke:var(--t-dict,#4F2611)}
+.dg text.t-dict,.dg tspan.t-dict{fill:#4C2817;fill:var(--t-dict-tx,#4C2817)}
+.dg rect.t-set,.dg path.t-set,.dg circle.t-set{fill:#F2F8D6;fill:var(--t-set-bg,#F2F8D6);stroke:#747C42;stroke:var(--t-set,#747C42)}
+.dg text.t-set,.dg tspan.t-set{fill:#3F4418;fill:var(--t-set-tx,#3F4418)}
+.dg rect.boxhl,.dg path.boxhl,.dg rect.cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595)}
+
+@media (prefers-color-scheme:dark){
+  :root{
+    --t-int:#D29557;
+    --t-int-bg:#53331D;
+    --t-int-tx:#F8D7BE;
+    --t-float:#EBBD57;
+    --t-float-bg:#33270A;
+    --t-float-tx:#F9E6BB;
+    --t-bool:#53A59E;
+    --t-bool-bg:#093832;
+    --t-bool-tx:#BAE9E0;
+    --t-str:#8DDA9D;
+    --t-str-bg:#1A3520;
+    --t-str-tx:#C6EDCD;
+    --t-none:#B5ACA4;
+    --t-none-bg:#312D2A;
+    --t-none-tx:#E2DDD9;
+    --t-list:#DB87B7;
+    --t-list-bg:#4D2238;
+    --t-list-tx:#F9D1E3;
+    --t-tuple:#A9BCCD;
+    --t-tuple-bg:#24313C;
+    --t-tuple-tx:#DCE6EF;
+    --t-dict:#B98D76;
+    --t-dict-bg:#3F271D;
+    --t-dict-tx:#F0D4C8;
+    --t-set:#B5BF7B;
+    --t-set-bg:#333512;
+    --t-set-tx:#E3EABD;
+  }
+}
+
+/* reveal.js desteleri her zaman açık renk (DIAGRAMS.md §3): koyu değerler slayta inmez */
+.reveal{
+  --t-int:#854B00;
+  --t-int-bg:#F2CEB3;
+  --t-int-tx:#613109;
+  --t-float:#9F7000;
+  --t-float-bg:#FFF1C6;
+  --t-float-tx:#5D420E;
+  --t-bool:#0E7A6D;
+  --t-bool-bg:#C4E9E1;
+  --t-bool-tx:#0A473F;
+  --t-str:#296A3B;
+  --t-str-bg:#D9F6DD;
+  --t-str-tx:#1A4B28;
+  --t-none:#534C45;
+  --t-none-bg:#F6F3EF;
+  --t-none-tx:#413C38;
+  --t-list:#8A2B60;
+  --t-list-bg:#F3C8DB;
+  --t-list-tx:#651E45;
+  --t-tuple:#4A6378;
+  --t-tuple-bg:#E3EAF2;
+  --t-tuple-tx:#2C3E4F;
+  --t-dict:#4F2611;
+  --t-dict-bg:#DBCEC4;
+  --t-dict-tx:#4C2817;
+  --t-set:#747C42;
+  --t-set-bg:#F2F8D6;
+  --t-set-tx:#3F4418;
+}
+
+@media print{
+  :root{
+    --t-int:#854B00;
+    --t-int-bg:#F2CEB3;
+    --t-int-tx:#613109;
+    --t-float:#9F7000;
+    --t-float-bg:#FFF1C6;
+    --t-float-tx:#5D420E;
+    --t-bool:#0E7A6D;
+    --t-bool-bg:#C4E9E1;
+    --t-bool-tx:#0A473F;
+    --t-str:#296A3B;
+    --t-str-bg:#D9F6DD;
+    --t-str-tx:#1A4B28;
+    --t-none:#534C45;
+    --t-none-bg:#F6F3EF;
+    --t-none-tx:#413C38;
+    --t-list:#8A2B60;
+    --t-list-bg:#F3C8DB;
+    --t-list-tx:#651E45;
+    --t-tuple:#4A6378;
+    --t-tuple-bg:#E3EAF2;
+    --t-tuple-tx:#2C3E4F;
+    --t-dict:#4F2611;
+    --t-dict-bg:#DBCEC4;
+    --t-dict-tx:#4C2817;
+    --t-set:#747C42;
+    --t-set-bg:#F2F8D6;
+    --t-set-tx:#3F4418;
+  }
+}
+/* No purple (DECISIONS.md 2026-10-11): tuple is blue-grey in every deck since 2026-10-13. */

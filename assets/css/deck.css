@@ -1,0 +1,262 @@
+/* Introduction to Python, IEEE Hacettepe, Güz 2026
+   deck.css: overrides for the typeset lesson decks (site/slides/dersN.html, written by tools/typeset.py).
+   Load after slides.css, dg-types.css and trace.css. Only overrides live here; the type scale, the five
+   layouts and the poll contract stay in slides.css (authoring/SPEC.md). */
+
+/* ---------- Fonts (DECISIONS.md, 2026-10-10): Atkinson Hyperlegible Next for all text, JetBrains Mono for code.
+   Self-hosted, SIL OFL 1.1 (licences in ../fonts/). font-display: swap, so a slow disk never shows blank text. ---------- */
+@font-face{font-family:"Atkinson Hyperlegible Next";font-style:normal;font-weight:200 800;font-display:swap;
+  src:url(../fonts/atkinson-hyperlegible-next-latin-wght-normal.woff2) format("woff2-variations"),url(../fonts/atkinson-hyperlegible-next-latin-wght-normal.woff2) format("woff2");
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Atkinson Hyperlegible Next";font-style:normal;font-weight:200 800;font-display:swap;
+  src:url(../fonts/atkinson-hyperlegible-next-latin-ext-wght-normal.woff2) format("woff2-variations"),url(../fonts/atkinson-hyperlegible-next-latin-ext-wght-normal.woff2) format("woff2");
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Atkinson Hyperlegible Next";font-style:italic;font-weight:200 800;font-display:swap;
+  src:url(../fonts/atkinson-hyperlegible-next-latin-wght-italic.woff2) format("woff2-variations"),url(../fonts/atkinson-hyperlegible-next-latin-wght-italic.woff2) format("woff2");
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Atkinson Hyperlegible Next";font-style:italic;font-weight:200 800;font-display:swap;
+  src:url(../fonts/atkinson-hyperlegible-next-latin-ext-wght-italic.woff2) format("woff2-variations"),url(../fonts/atkinson-hyperlegible-next-latin-ext-wght-italic.woff2) format("woff2");
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"JetBrains Mono";font-style:normal;font-weight:100 800;font-display:swap;
+  src:url(../fonts/jetbrains-mono-latin-wght-normal.woff2) format("woff2-variations"),url(../fonts/jetbrains-mono-latin-wght-normal.woff2) format("woff2");
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"JetBrains Mono";font-style:normal;font-weight:100 800;font-display:swap;
+  src:url(../fonts/jetbrains-mono-latin-ext-wght-normal.woff2) format("woff2-variations"),url(../fonts/jetbrains-mono-latin-ext-wght-normal.woff2) format("woff2");
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+
+/* every slide text, code and inlined SVG text uses the two course fonts (slides.css sets them on the slide text;
+   these rules cover inlined SVG text and the line-number tables of stepped code). A doodle (svg.doodle, also
+   class dg) sets the same two fonts itself on its dd-hand and dd-mono texts, so it is left alone here. */
+.reveal svg.dg:not(.doodle),.reveal svg.dg:not(.doodle) text{font-family:var(--font-sans)}
+/* code text in a diagram (dg classes cd, cd24, ty, nm) is JetBrains Mono; this selector must outrank the line above */
+.reveal svg.dg:not(.doodle) text:is(.cd,.cd24,.ty,.nm),.reveal svg.dg:not(.doodle) :is(.cd,.cd24,.ty,.nm) text,
+.reveal svg.dg:not(.doodle) text :is(.cd,.cd24,.ty,.nm){font-family:var(--font-mono)}
+.reveal .slides pre,.reveal .slides pre code,.reveal .slides pre td,.reveal .slides code{font-family:var(--font-mono)}
+/* code shows the characters students type: no programming ligatures (<= stays two characters, != never becomes ≠).
+   The font shorthand in slides.css resets font-variant-ligatures, so it is set again here, after it. */
+.reveal .slides pre,.reveal .slides pre *,.reveal .slides code,.reveal .slides code *,.reveal svg.dg text{font-variant-ligatures:none;font-feature-settings:"liga" 0,"calt" 0}
+
+/* ---------- Title slide (DECISIONS.md "Title slide spec"): slides.css sets it out as in _template.html (template v3):
+   the lockup on white, "Introduction to Python" as the largest text, "Ders N: <title>", the date line, and the navy
+   band (#181C3E, never with the lockup) with the instructor, the department and the branch. Only the date line is
+   set here: it is a fact students need, so it is ink, not muted. ---------- */
+.reveal .s-title .t-date{color:var(--s-fg)}
+
+/* ---------- Agenda (s-agenda, l-table): one row per section, the title left and its terms right ---------- */
+.reveal ol.rows.agenda > li{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);column-gap:32px;padding:16px 0}
+.reveal ol.rows.agenda .a-title{font-weight:700}
+.reveal ol.rows.agenda .a-n{display:inline-block;min-width:1.6em;color:var(--s-brand);font-variant-numeric:tabular-nums}
+.reveal ol.rows.agenda .r-ref{font-size:var(--fs-label);line-height:1.35}
+
+/* ---------- A short slide (only a focal sentence and a line or two, no figure): the focal sentence takes the display
+   step of the type scale (56 px, the size of a section slide's line) and the block sits centred in its zone, so it
+   reads as a statement slide, never as a half-empty one ---------- */
+.reveal .content.is-short{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;row-gap:28px;padding:0 48px;box-sizing:border-box}
+.reveal .content.is-short > .col{justify-content:center;height:100%}
+.reveal .content.is-short .focal{font-size:var(--fs-display);line-height:1.15;max-width:1040px}
+.reveal .content.is-short > p:not(.focal),.reveal .content.is-short > .col > p:not(.focal){max-width:1000px}
+.reveal .l-split.is-short{display:flex;padding:0 48px}
+
+/* ---------- l-full: the figure and its caption sit centred in the zone, top to bottom ---------- */
+.reveal .l-full{justify-content:safe center}
+/* a drawing's own caption line (text.dg-cap) repeats the slide's focal line in smaller type: when the focal line is set
+   under the drawing, only the focal line is shown (ders1.md S10 "the typesetter drops one of them", 2026-10-14) */
+.reveal figure.fig:has(> figcaption.focal) svg.dg .dg-cap{display:none}
+.reveal .l-full > figure.fig,.reveal .l-full > figure.photo{align-self:center}
+.reveal .l-full > figure.fig > figcaption.focal{max-width:1152px}
+.reveal .l-full > figure.photo img{max-height:420px;max-width:1152px}
+
+/* ---------- A figure that is not drawn yet (drafts only): a neutral dashed box of the reserved size that reads only
+   "Görsel hazırlanıyor" (DECISIONS.md "No authoring text on slides": never a file name or a spec). Written by
+   tools/typeset.py and replaced by the real drawing on the next run. A PyCharm shot not captured yet gets the same
+   words in the template's .shot-missing box, set in the text font, not as a file name in mono. ---------- */
+.reveal svg.fig-missing .fm-box{fill:#F3F4F8;stroke:#767C95;stroke-width:2;stroke-dasharray:10 8}
+.reveal svg.fig-missing .fm-name{fill:#474D66;font-weight:600}
+.reveal .shot-missing{font-family:var(--font-sans);font-weight:600}
+
+/* ---------- Poll option grids chosen by tools/typeset.py so the code, the options and the reason fit the zone:
+   .one is a single column for long options; .compact sets option code at the 26 px code size for options of
+   several output lines; .four puts four narrow options in one row ---------- */
+.reveal ol.poll-opts.one{grid-template-columns:minmax(0,1fr)}
+.reveal ol.poll-opts.compact{gap:10px}
+.reveal ol.poll-opts.compact > li{min-height:56px;padding:6px 12px;align-items:center}
+.reveal ol.poll-opts.compact > li > code{font-size:var(--fs-code);line-height:1.2}
+.reveal ol.poll-opts.compact > li > span{line-height:1.2}
+.reveal ol.poll-opts.four{grid-template-columns:repeat(4,minmax(0,1fr))}
+.reveal ol.poll-opts.four > li{grid-template-columns:32px minmax(0,1fr);column-gap:8px;padding:6px 8px}
+.reveal ol.poll-opts.four > li::before{width:32px;height:32px;font-size:24px}
+.reveal .l-poll .col:has(> ol.poll-opts.compact){row-gap:14px}
+/* poll code with a line longer than the column at 32 px: set at the 26 px code size (reported by typeset.py) */
+.reveal pre.focal-code.long{font-size:var(--fs-code);line-height:1.4}
+.reveal ol.poll-opts > li > span{white-space:normal}
+
+/* ---------- Code and output panels: the content sits centred in the zone, top to bottom (l-code, l-split); an output
+   line longer than its panel wraps inside the panel instead of being cut off (Python prints it on one line) ---------- */
+.reveal .l-code,.reveal .l-split{align-content:safe center}
+.reveal .output pre,.reveal pre.tb{white-space:pre-wrap;overflow-wrap:anywhere}
+
+/* ---------- l-split with a wide text column (a code line longer than the 560 px column): the text column takes one of
+   five fixed widths (600 to 760, chosen by tools/typeset.py from the longest line), the picture takes the rest and keeps
+   its proportions. typeset.py warns when a drawing would get text under 24 px this way. ---------- */
+.reveal .l-split.l-wide-text.tw600{grid-template-columns:520px minmax(0,1fr)}
+.reveal .l-split.l-wide-text.tw640{grid-template-columns:480px minmax(0,1fr)}
+.reveal .l-split.l-wide-text.tw680{grid-template-columns:440px minmax(0,1fr)}
+.reveal .l-split.l-wide-text.tw720{grid-template-columns:400px minmax(0,1fr)}
+.reveal .l-split.l-wide-text.tw760{grid-template-columns:360px minmax(0,1fr)}
+.reveal .l-split.l-wide-text figure.photo img,.reveal .l-split.l-wide-text img.shot{max-width:100%;height:auto}
+.reveal .l-split.l-wide-text .shot-missing{width:100%}
+.reveal .l-split.l-wide-text > figure.fig > svg{max-width:100%;height:auto}
+
+/* ---------- An output line longer than its panel (typeset.py writes each line as span.ol in pre.wrap): it wraps with
+   a hanging indent, so the reader still sees where the line Python printed ends ---------- */
+.reveal pre.wrap > .ol{display:block;padding-left:2ch;text-indent:-2ch}
+/* a read-order square inside a wrapped line keeps its number centred (text-indent is inherited by inline-flex) */
+.reveal pre.wrap .co{text-indent:0}
+
+/* ---------- l-full with the code above the figure, or l-code stacked over a drawing: a short output sits beside the code
+   (typeset.py .code-out) instead of under it. The output
+   column (its "Çıktı" label and its panel) is exactly as tall as the code column, so the pair takes no more height than
+   the code alone ---------- */
+.reveal .content > .code-out{display:grid;grid-template-columns:auto auto;column-gap:20px;justify-content:start;align-items:stretch;align-self:stretch}
+.reveal .code-out > figure{display:flex;flex-direction:column;margin:0;min-width:0}
+.reveal .code-out > figure > pre{flex:1 1 auto}
+
+/* ---------- A raster picture with "crop `x y w h`" in its Figure field (an xkcd strip whose one line is the point):
+   typeset.py writes the shown size of the part on span.crop and the enlarged, shifted file inside it ---------- */
+.reveal .crop{display:block;position:relative;overflow:hidden;flex:none}
+.reveal .crop > img{position:absolute;display:block;margin:0;border:0;box-shadow:none}
+
+/* ---------- Logos and other small vector media on a photo slide are shown at a readable size ---------- */
+.reveal figure.photo img[src$=".svg"]{width:360px;height:auto}
+
+/* ---------- Tables: the last line of an error may wrap inside its cell instead of running past the zone ---------- */
+.reveal table.tbl td.err code{white-space:normal;overflow-wrap:anywhere}
+.reveal table.tbl td{overflow-wrap:anywhere}
+
+/* ---------- The type map with a run under it (code and output side by side) ---------- */
+.reveal .tm-slide{justify-content:flex-start;row-gap:14px}
+.reveal .tm-run{display:flex;column-gap:20px;align-items:stretch}
+.reveal .tm-run pre{font-size:var(--fs-code)}
+.reveal .tm-run pre.tm-out{background:#FFFFFF;padding:14px 20px}
+/* a map with a run and a focal line under it: the same tree, drawn with tighter vertical spacing */
+.reveal .tm-tight .typemap{--tm-drop:9px}
+.reveal .tm-tight .tm-name{min-height:58px;padding:2px 4px}
+.reveal .tm-tight .tm-type{padding:1px 4px;line-height:1.15}
+.reveal .tm-tight .tm-type > code,.reveal .tm-tight .tm-ex,.reveal .tm-tight .tm-ex code,.reveal .tm-tight .tm-when{line-height:1.15}
+.reveal .tm-tight .tm-sub-name{margin-bottom:2px}
+.reveal .tm-tight .tm-legend{margin-top:6px}
+.reveal .tm-slide.tm-tight{row-gap:10px}
+.reveal .tm-tight .tm-root{padding:3px 20px}
+.reveal .tm-tight .tm-run pre > code,.reveal .tm-tight .tm-run pre.tm-out{padding-top:8px;padding-bottom:8px}
+
+/* ---------- l-split text column: the source line sits under the text, at the credit size ---------- */
+.reveal .l-split .col > .source{margin-top:-4px}
+
+/* ---------- Fit levels: tools/typeset.py measures every deck with tools/audit_slides.py and, when a slide overflows,
+   rebuilds it with data-fit="1" to "4". The type scale never changes; only photos, screenshots and placeholders of
+   figures not drawn yet get smaller (diagrams are never scaled). ---------- */
+.reveal section[data-fit="1"] figure.photo img{max-height:380px}
+.reveal section[data-fit="2"] figure.photo img{max-height:320px}
+.reveal section[data-fit="3"] figure.photo img,.reveal section[data-fit="4"] figure.photo img{max-height:260px}
+.reveal section[data-fit="1"] .l-portrait figure.photo img{height:360px}
+.reveal section[data-fit="2"] .l-portrait figure.photo img{height:320px}
+.reveal section[data-fit="3"] .l-portrait figure.photo img,.reveal section[data-fit="4"] .l-portrait figure.photo img{height:280px}
+.reveal section[data-fit] img.shot,.reveal section[data-fit] .shot-missing{width:480px}
+.reveal section[data-fit="3"] img.shot,.reveal section[data-fit="3"] .shot-missing,
+.reveal section[data-fit="4"] img.shot,.reveal section[data-fit="4"] .shot-missing{width:400px}
+/* a poll that still overflowed: the same sizes with tighter gaps between the code, the options and the reason */
+.reveal .s-poll[data-fit] .l-poll > .col{row-gap:12px}
+.reveal .s-poll[data-fit] ol.poll-opts{gap:8px}
+.reveal .s-poll[data-fit] ol.poll-opts > li{padding-top:6px;padding-bottom:6px;min-height:60px}
+.reveal .s-poll[data-fit] pre.focal-code > code{padding-top:10px;padding-bottom:10px}
+.reveal .s-poll[data-fit] .poll-why{min-height:78px;line-height:1.38}
+/* a poll that still overflowed (fit level 2 and up): the reason takes the label step (24 px, two lines in 60 px) and
+   the option boxes lose their spare padding; the code and the options keep their size (they are the focal element) */
+.reveal .s-poll:is([data-fit="2"],[data-fit="3"],[data-fit="4"]) .poll-why{min-height:60px;font-size:var(--fs-label);line-height:1.25}
+.reveal .s-poll:is([data-fit="2"],[data-fit="3"],[data-fit="4"]) ol.poll-opts > li{min-height:52px;padding-top:3px;padding-bottom:3px}
+.reveal .s-poll:is([data-fit="3"],[data-fit="4"]) .l-poll > .col{row-gap:8px}
+/* .narrow: two columns of options whose code is too wide for the usual number square: a 36 px square, tighter padding */
+.reveal ol.poll-opts.narrow{gap:8px}
+.reveal ol.poll-opts.narrow > li{grid-template-columns:36px minmax(0,1fr);column-gap:10px;padding:6px 8px}
+.reveal ol.poll-opts.narrow > li::before{width:36px;height:36px;font-size:24px}
+
+/* a portrait photo with a long credit: the credit may be wider than the photo, so it does not run down the slide */
+.reveal .l-portrait figure.photo > .credit{min-width:320px}
+
+/* ---------- Break slide (DECISIONS.md "No durations anywhere"): "Ara" at the display size, the two halves as rows,
+   and "Sırada 1B" one step below it, at the focal size, in navy ---------- */
+.reveal .s-break .b-next{font:600 var(--fs-focal)/1.25 var(--font-sans);color:var(--s-navy)}
+
+/* ---------- A row of two or three figures on l-full (one Figure field with an item per figure, e.g. the three
+   project doodles of "Yaptıklarım"): equal columns, 24 px apart, each picture centred with its label under it at the
+   supporting-text size ---------- */
+.reveal .fig-row{display:grid;column-gap:24px;align-items:start;justify-items:center}
+.reveal .fig-row.n2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.reveal .fig-row.n3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.reveal .fig-row > figure.fig{display:flex;flex-direction:column;align-items:center;row-gap:8px;margin:0}
+.reveal .fig-row > figure.fig > svg{max-width:100%;height:auto}
+.reveal .fig-row > figure.fig > figcaption{font:400 var(--fs-text)/1.4 var(--font-sans);color:var(--s-fg);text-align:center}
+
+/* ---------- l-split whose text column is the tall one (code of 10 or more lines): typeset.py puts the focal line
+   above the picture, and a photo or screenshot in that column is capped so the two still fit the zone ---------- */
+.reveal .l-split > .col.m-focal figure.photo img{max-height:340px;width:auto;max-width:100%}
+.reveal .l-split > .col.m-focal img.shot,.reveal .l-split > .col.m-focal .shot-missing{width:480px}
+.reveal .l-split > .col.m-focal figure.fig > svg:not(:has(text)){max-height:340px;width:auto;max-width:100%}
+
+/* ---------- l-code with a code line too long for the 7/12 column and a narrow output: the output column takes one of
+   one of six fixed widths (280 to 420 px) and the code the rest (typeset.py "wide" arrangement); the focal line runs across below ---------- */
+.reveal .l-code.ow280{grid-template-columns:minmax(0,1fr) 280px}
+.reveal .l-code.ow300{grid-template-columns:minmax(0,1fr) 300px}
+.reveal .l-code.ow320{grid-template-columns:minmax(0,1fr) 320px}
+.reveal .l-code.ow340{grid-template-columns:minmax(0,1fr) 340px}
+.reveal .l-code.ow368{grid-template-columns:minmax(0,1fr) 368px}
+.reveal .l-code.ow420{grid-template-columns:minmax(0,1fr) 420px}
+/* an output line too wide for the 5/12 column (it would wrap there) gets a column of its own width (2026-10-14) */
+.reveal .l-code.ow468{grid-template-columns:minmax(0,1fr) 468px}
+.reveal .l-code.ow520{grid-template-columns:minmax(0,1fr) 520px}
+
+/* ---------- l-code "top" (typeset.py): a narrow code and the focal line side by side, the output (a traceback) across
+   the whole width under them; the code needs no spacer for an output label beside it (2026-10-14, ders5 S10) ---------- */
+.reveal .l-code.l-top:not(.stacked):has(> figure.output > figcaption.label) > figure:not(.output)::before{content:none;display:none}
+.reveal .l-code.l-top > .focal,.reveal .l-code.l-top > .col{align-self:center}
+
+/* ---------- A code-and-output slide with one to three short lines on each side: the code and the output take the focal
+   code size (32 px), so the slide never looks half empty. The focal line keeps the deck's one focal size (40 px):
+   at the display step it stood out of the type scale (2026-10-14 review, Ders 1 S76 and S86) ---------- */
+.reveal .l-code.is-short-code pre,.reveal .l-code.is-short-code pre code{font-size:var(--fs-focal-code);line-height:1.35}
+.reveal .l-code.is-short-code pre > code{padding-top:22px;padding-bottom:22px}
+.reveal .l-code.is-short-code{row-gap:40px}
+
+/* ---------- l-split whose text column holds narrow code and narrow output: the two panels sit side by side in the
+   column (typeset.py "pair"), each as wide as its longest line ---------- */
+.reveal .l-split .col > .pair{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:20px;align-items:start}
+.reveal .l-split .col > .pair > figure{margin:0;min-width:0}
+
+/* ---------- l-split with only a short task and a sample run of at most four lines (an Uygulama): the task takes the
+   display step and the run the focal code size, so the slide is never half empty ---------- */
+.reveal .l-split.is-short-split .focal{font-size:var(--fs-display);line-height:1.15}
+.reveal .l-split.is-short-split pre{font-size:var(--fs-focal-code);line-height:1.35;padding-top:22px;padding-bottom:22px}
+
+/* ---------- An xkcd strip beside text is shown at the full 560 px column (a line drawing stays sharp at 1.4x), capped
+   at 440 px high like every photo in l-split ---------- */
+.reveal .l-split figure.photo img[src*="/xkcd/"]{width:560px;max-width:100%;height:auto;max-height:440px;object-fit:contain}
+
+/* ---------- End card, the last slide of Ders 1 (DECISIONS.md "Ben 10 closes Ders 1"): a real, openly licensed
+   1280×720 image with its credit printed on it, full bleed, no title and no footer ---------- */
+.reveal .slides section.s-endcard{--pad:0;background:#000000}
+.reveal .s-endcard img.endcard{position:absolute;left:0;top:0;width:1280px;height:720px;max-width:none;max-height:none;margin:0;object-fit:cover}
+.reveal .s-endcard .endcard-missing{position:absolute;left:64px;top:86px}
+
+/* ---------- A raster picture beside code (l-code side column, e.g. a matplotlib chart): typeset.py writes its shown
+   size; it never grows past its column ---------- */
+.reveal .l-code figure.photo img{max-width:100%;height:auto;max-height:440px}
+
+/* ---------- "Bugün neler yapabiliyorsunuz" with a few lines: the abilities take the focal step and sit centred in the
+   zone, so the last content slide reads as a statement, not as a half-empty list ---------- */
+.reveal .l-table.ab-short{justify-content:center}
+.reveal .l-table.ab-short ol.steps{row-gap:28px}
+.reveal .l-table.ab-short ol.steps > li{grid-template-columns:52px minmax(0,1fr);column-gap:20px;font:600 var(--fs-focal)/1.25 var(--font-sans);align-items:center}
+.reveal .l-table.ab-short ol.steps .n-sq{width:52px;height:52px;font-size:28px}
+.reveal .l-table.ab-short.ab-4 ol.steps{row-gap:36px}
+.reveal .l-table.ab-short.ab-4 ol.steps > li{grid-template-columns:64px minmax(0,1fr);column-gap:24px;font-size:var(--fs-display);line-height:1.15}
+.reveal .l-table.ab-short.ab-4 ol.steps .n-sq{width:64px;height:64px;font-size:34px}

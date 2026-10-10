@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="dg ib" viewBox="0 0 1152 300" width="1152" height="300" role="img" aria-labelledby="ders2-indent-block-t ders2-indent-block-d" data-state="block">
+  <title id="ders2-indent-block-t">Indentation ve block</title>
+  <desc id="ders2-indent-block-d">Numaralı satırlarla bir kod paneli, dört durum. Durum block: 1 grade_point = 2.5, 2 if grade_point &gt;= 1.75:, 3 print("geçti"), 4 print("tebrikler"), 5 print("bitti") (2.5 ve 1.75 float, hardal sarısı; "geçti", "tebrikler" ve "bitti" str, yeşil). 3. ve 4. satırların başındaki dört boşluk dört çivit mavisi noktayla gösterilmiş; bu iki satır açık mavi ve çivit mavisi çerçeveli bir şeritte. 2. satırın sonundaki iki nokta çivit mavisi bir halkayla işaretli: iki nokta: block başlıyor. 3. ve 4. satırların sağında bir köşeli ayraç: block (4 boşluk). 5. satırın yanında: indentation yok: block'un dışında. Altta: Indentation Python'da süs değil, kuraldır. Durum colon: aynı beş satır, ama 2. satır 1.75'te biter, iki nokta yok; boş yer kırmızı kesik çizgili bir halkada, altında kırmızı bir şapka (^); üstte kırmızı: iki nokta yok; sağda kırmızı SyntaxError: expected ':' ve ondan halkaya kırmızı bir ok. Durum pycharm: aynı kod PyCharm editörü gibi, noktalar yok; 3. ve 4. satırlar seçili (açık mavi), solda bu iki satır boyunca ince gri dikey indentation çizgisi, 1 numaralı not: indentation çizgisi. Sağda iki tuş: Tab, sağa bir ok ve içeri; Shift+Tab, sola bir ok ve dışarı. Durum error: yalnızca üç satır: grade_point = 2.5, if grade_point &gt;= 1.75: ve indentation olmadan print("geçti"); 3. satırın yanında küçük kırmızı bir işaret; iki nokta yine çivit mavisi halkada. Panelin altında kırmızı: IndentationError: expected an indented block after 'if' statement on line 2.</desc>
+  <!-- source: ders2.md S159 (block), S173 (colon), S177 (pycharm), S180 (error); redrawn 2026-10-13 for the if swap (DECISIONS.md "if before while"). grade_point = 2.5 / if grade_point >= 1.75: / print("geçti") / print("tebrikler") / print("bitti") -> geçti / tebrikler / bitti. Without the colon: line 2, caret one column after 1.75, SyntaxError: expected ':'. grade_point = 2.5 / if grade_point >= 1.75: / print("geçti") -> line 3, IndentationError: expected an indented block after 'if' statement on line 2 (Python 3.14.8, 2026-10-13). State through data-state on the root svg. -->
+  <defs>
+    <marker id="ders2-indent-block-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
+    <marker id="ders2-indent-block-aherr" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-err" d="M0,0 L12,6 L0,12 z"/></marker>
+    <style>
+/* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
+.dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
+.dg .bg{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF)}
+.dg .tx,.dg .lb,.dg .ti,.dg .cd,.dg .cd24{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .tx{font-size:24px;font-weight:400}
+.dg .lb{font-size:24px;font-weight:600}
+.dg .ti{font-size:28px;font-weight:700}
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-family:"JetBrains Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-weight:500}
+.dg .cd{font-size:28px}
+.dg .cd24{font-size:24px}
+.dg .ty{font-size:24px;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .nm{font-size:28px;font-weight:600;fill:#FFFFFF;fill:var(--d-on-name,#FFFFFF)}
+.dg .src{font-size:18px;font-weight:400;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .sub{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .okt{fill:#0D6385;fill:var(--d-ok,#0D6385);font-weight:600}
+.dg .errt{fill:#C21C20;fill:var(--d-err,#C21C20);font-weight:600}
+.dg .b7{font-weight:700}
+.dg .pre{white-space:pre}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .boxm{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .boxhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .blk{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2.5}
+.dg .frame{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .local{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .tmpl{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .cell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellh{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .name{fill:#181C3E;fill:var(--d-name,#181C3E)}
+.dg .soft{fill:#F3F4F8;fill:var(--d-surface,#F3F4F8)}
+.dg .outp{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .tint{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .hl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3)}
+.dg .emph{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .errbox{fill:#FCEDEE;fill:var(--d-err-bg,#FCEDEE);stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .errdash{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .okbox{fill:#E9F6FA;fill:var(--d-ok-bg,#E9F6FA);stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .key{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .dot{fill:#3B4595;fill:var(--d-brand,#3B4595)}
+.dg .dot0{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .ar,.dg .ld,.dg .axis{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E)}
+.dg .ar,.dg .axis{stroke-width:2.5}
+.dg .ld{stroke-width:2}
+.dg .ar-m{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .ar-old{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .ar-ok{fill:none;stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .ar-err{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .sep{fill:none;stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .dash{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2;stroke-dasharray:8 6}
+.dg .ah{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .ah-m{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .ah-ok{fill:#0D6385;fill:var(--d-ok,#0D6385)}
+.dg .ah-err{fill:#C21C20;fill:var(--d-err,#C21C20)}
+.dg .co{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .co-t{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF);font-size:24px;font-weight:700;text-anchor:middle}
+.dg .sec{stroke:#3B4595;stroke:var(--d-second,#3B4595)}
+/* dg v4 type renkleri · authoring/DIAGRAMS.md §10'dan aynen kopyalanır (dg v3 bloğundan sonra) */
+.dg rect.t-int,.dg path.t-int,.dg circle.t-int{fill:#F2CEB3;fill:var(--t-int-bg,#F2CEB3);stroke:#854B00;stroke:var(--t-int,#854B00)}
+.dg text.t-int,.dg tspan.t-int{fill:#613109;fill:var(--t-int-tx,#613109)}
+.dg rect.t-float,.dg path.t-float,.dg circle.t-float{fill:#FFF1C6;fill:var(--t-float-bg,#FFF1C6);stroke:#9F7000;stroke:var(--t-float,#9F7000)}
+.dg text.t-float,.dg tspan.t-float{fill:#5D420E;fill:var(--t-float-tx,#5D420E)}
+.dg rect.t-bool,.dg path.t-bool,.dg circle.t-bool{fill:#C4E9E1;fill:var(--t-bool-bg,#C4E9E1);stroke:#0E7A6D;stroke:var(--t-bool,#0E7A6D)}
+.dg text.t-bool,.dg tspan.t-bool{fill:#0A473F;fill:var(--t-bool-tx,#0A473F)}
+.dg rect.t-str,.dg path.t-str,.dg circle.t-str{fill:#D9F6DD;fill:var(--t-str-bg,#D9F6DD);stroke:#296A3B;stroke:var(--t-str,#296A3B)}
+.dg text.t-str,.dg tspan.t-str{fill:#1A4B28;fill:var(--t-str-tx,#1A4B28)}
+.dg rect.t-none,.dg path.t-none,.dg circle.t-none{fill:#F6F3EF;fill:var(--t-none-bg,#F6F3EF);stroke:#534C45;stroke:var(--t-none,#534C45)}
+.dg text.t-none,.dg tspan.t-none{fill:#413C38;fill:var(--t-none-tx,#413C38)}
+.dg rect.t-list,.dg path.t-list,.dg circle.t-list{fill:#F3C8DB;fill:var(--t-list-bg,#F3C8DB);stroke:#8A2B60;stroke:var(--t-list,#8A2B60)}
+.dg text.t-list,.dg tspan.t-list{fill:#651E45;fill:var(--t-list-tx,#651E45)}
+.dg rect.t-tuple,.dg path.t-tuple,.dg circle.t-tuple{fill:#E3EAF2;fill:var(--t-tuple-bg,#E3EAF2);stroke:#4A6378;stroke:var(--t-tuple,#4A6378)}
+.dg text.t-tuple,.dg tspan.t-tuple{fill:#2C3E4F;fill:var(--t-tuple-tx,#2C3E4F)}
+.dg rect.t-dict,.dg path.t-dict,.dg circle.t-dict{fill:#DBCEC4;fill:var(--t-dict-bg,#DBCEC4);stroke:#4F2611;stroke:var(--t-dict,#4F2611)}
+.dg text.t-dict,.dg tspan.t-dict{fill:#4C2817;fill:var(--t-dict-tx,#4C2817)}
+.dg rect.t-set,.dg path.t-set,.dg circle.t-set{fill:#F2F8D6;fill:var(--t-set-bg,#F2F8D6);stroke:#747C42;stroke:var(--t-set,#747C42)}
+.dg text.t-set,.dg tspan.t-set{fill:#3F4418;fill:var(--t-set-tx,#3F4418)}
+.dg rect.boxhl,.dg path.boxhl,.dg rect.cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595)}
+/* kod PyCharm gibi: ligature yok */
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-variant-ligatures:none}
+/* ders2-indent-block: data-state="block" (varsayılan, S47), "colon" (S61), "pycharm" (S65), "error" (S68) */
+.ib .ib-short,.ib .ib-l2n,.ib .ib-l3e,.ib .ib-col,.ib .ib-pyc,.ib .ib-err{display:none}
+.ib[data-state="colon"] .ib-l2c,.ib[data-state="colon"] .ib-emph,.ib[data-state="colon"] .ib-blk,.ib[data-state="colon"] .ib-cap{display:none}
+.ib[data-state="colon"] .ib-l2n,.ib[data-state="colon"] .ib-col{display:inline}
+.ib[data-state="pycharm"] .ib-dots,.ib[data-state="pycharm"] .ib-emph,.ib[data-state="pycharm"] .ib-blk,.ib[data-state="pycharm"] .ib-cap{display:none}
+.ib[data-state="pycharm"] .ib-pyc{display:inline}
+.ib[data-state="error"] .ib-full,.ib[data-state="error"] .ib-l3i,.ib[data-state="error"] .ib-l45,.ib[data-state="error"] .ib-dots,.ib[data-state="error"] .ib-blk{display:none}
+.ib[data-state="error"] .ib-short,.ib[data-state="error"] .ib-l3e,.ib[data-state="error"] .ib-err{display:inline}
+.dg .ib-guide{stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+    </style>
+  </defs>
+  <rect class="bg" width="1152" height="300"/>
+  <rect class="soft ib-full" x="2" y="2" width="760" height="260" rx="4"/>
+  <rect class="soft ib-short" x="2" y="2" width="760" height="164" rx="4"/>
+  <rect class="boxhl ib-blk" x="56" y="114" width="393.6" height="92" rx="4"/>
+  <g class="ib-pyc">
+  <rect class="hl" x="64" y="114" width="383.6" height="92" rx="4"/>
+  <path class="sep" d="M48,10 V254"/>
+  </g>
+  <text class="cd sub" x="22" y="48">1</text>
+  <text class="cd sub" x="22" y="96">2</text>
+  <text class="cd sub" x="22" y="144">3</text>
+  <g class="ib-l45">
+  <text class="cd sub" x="22" y="192">4</text>
+  <text class="cd sub" x="22" y="240">5</text>
+  </g>
+  <text class="cd" x="68" y="48">grade_point = <tspan class="t-float">2.5</tspan></text>
+  <text class="cd ib-l2c" x="68" y="96">if grade_point &gt;= <tspan class="t-float">1.75</tspan>:</text>
+  <text class="cd ib-l2n" x="68" y="96">if grade_point &gt;= <tspan class="t-float">1.75</tspan></text>
+  <text class="cd ib-l3i" x="135.2" y="144">print(<tspan class="t-str">"geçti"</tspan>)</text>
+  <text class="cd ib-l3e" x="68" y="144">print(<tspan class="t-str">"geçti"</tspan>)</text>
+  <g class="ib-l45">
+  <text class="cd" x="135.2" y="192">print(<tspan class="t-str">"tebrikler"</tspan>)</text>
+  <text class="cd" x="68" y="240">print(<tspan class="t-str">"bitti"</tspan>)</text>
+  </g>
+  <g class="ib-dots">
+  <circle class="dot" cx="76.4" cy="134" r="4"/>
+  <circle class="dot" cx="93.2" cy="134" r="4"/>
+  <circle class="dot" cx="110" cy="134" r="4"/>
+  <circle class="dot" cx="126.8" cy="134" r="4"/>
+  <circle class="dot ib-l45" cx="76.4" cy="182" r="4"/>
+  <circle class="dot ib-l45" cx="93.2" cy="182" r="4"/>
+  <circle class="dot ib-l45" cx="110" cy="182" r="4"/>
+  <circle class="dot ib-l45" cx="126.8" cy="182" r="4"/>
+  </g>
+  <g class="ib-emph">
+  <ellipse class="emph" cx="446.0" cy="86" rx="10" ry="16"/>
+  <path class="ld" d="M456.0,74 L473.0,65"/>
+  <text class="lb" x="477.0" y="58">iki nokta: block başlıyor</text>
+  </g>
+  <g class="ib-blk">
+  <path class="ld" d="M451.6,118 H465.6 V202 H451.6"/>
+  <path class="ld" d="M465.6,160 H477.6"/>
+  <text class="lb" x="485.6" y="168">block (4 boşluk)</text>
+  <text class="tx sub" x="342" y="240">indentation yok: block'un dışında</text>
+  </g>
+  <g class="ib-col">
+  <ellipse class="errdash" cx="447.0" cy="84" rx="11" ry="14"/>
+  <path class="ld" d="M456.0,74 L473.0,65"/>
+  <text class="lb errt" x="477.0" y="58">iki nokta yok</text>
+  <text class="cd24 errt" x="438.6" y="118">^</text>
+  <path class="ar-err" d="M790,84 H464.0" marker-end="url(#ders2-indent-block-aherr)"/>
+  <text class="cd24 errt" x="800" y="92">SyntaxError:</text>
+  <text class="cd24 errt" x="800" y="124">expected ':'</text>
+  </g>
+  <g class="ib-pyc">
+  <path class="ld ib-guide" d="M72,108 V206"/>
+  <path class="ld" d="M72,161 H457.6"/>
+  <circle class="co" cx="475.6" cy="161" r="18"/>
+  <text class="co-t" x="475.6" y="169">1</text>
+  <text class="lb" x="501.6" y="146">indentation</text>
+  <text class="lb" x="501.6" y="176">çizgisi</text>
+  <rect class="key" x="800" y="60" width="140" height="52" rx="4"/>
+  <text class="tx mid" x="870" y="94">Tab</text>
+  <path class="ar" d="M952,86 H1057" marker-end="url(#ders2-indent-block-ah)"/>
+  <text class="tx mid" x="1006" y="74">içeri</text>
+  <rect class="key" x="800" y="160" width="140" height="52" rx="4"/>
+  <text class="tx mid" x="870" y="194">Shift+Tab</text>
+  <path class="ar" d="M1060,186 H955" marker-end="url(#ders2-indent-block-ah)"/>
+  <text class="tx mid" x="1006" y="174">dışarı</text>
+  </g>
+  <g class="ib-err">
+  <rect class="errbox" x="46" y="127" width="14" height="14" rx="3"/>
+  <text class="cd24 errt" x="2" y="206">IndentationError: expected an indented block</text>
+  <text class="cd24 errt" x="2" y="238">after 'if' statement on line 2</text>
+  </g>
+  <text class="tx mid ib-cap" x="576" y="292">Indentation Python'da süs değil, kuraldır.</text>
+</svg>

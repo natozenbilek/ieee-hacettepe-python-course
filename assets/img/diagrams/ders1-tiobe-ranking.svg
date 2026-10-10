@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 400" width="1152" height="400" role="img" aria-labelledby="ders1-tiobe-ranking-t ders1-tiobe-ranking-d">
+  <title id="ders1-tiobe-ranking-t">TIOBE endeksi, Eylül 2026: ilk 10 dil</title>
+  <desc id="ders1-tiobe-ranking-d">Yatay çubuk grafik, TIOBE endeksi, Eylül 2026, ilk 10 dil, puan yüzde olarak: Python yüzde 17.76 ile birinci (çivit mavisi); ardından C 10.28, C++ 8.67, Java 7.54, C# 4.22, JavaScript 2.76, Visual Basic 2.55, SQL 2.16, R 1.69 ve Rust 1.34 (gri). Kaynak: TIOBE Index, Eylül 2026 (tiobe.com); TechRepublic, Eylül 2026.</desc>
+  <!-- source: tiobe.com/tiobe-index, September 2026 table, read 2026-10-11 (Python 17.76, C 10.28, C++ 8.67, Java 7.54, C# 4.22, JavaScript 2.76, Visual Basic 2.55, SQL 2.16, R 1.69, Rust 1.34); bar length = rating x 45 px; style of w1a-ieee-spectrum-ranking.svg -->
+  <defs>
+    <style>
+/* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
+.dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
+.dg .bg{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF)}
+.dg .tx,.dg .lb,.dg .ti,.dg .cd,.dg .cd24{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .tx{font-size:24px;font-weight:400}
+.dg .lb{font-size:24px;font-weight:600}
+.dg .ti{font-size:28px;font-weight:700}
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-family:"JetBrains Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-weight:500}
+.dg .cd{font-size:28px}
+.dg .cd24{font-size:24px}
+.dg .ty{font-size:24px;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .nm{font-size:28px;font-weight:600;fill:#FFFFFF;fill:var(--d-on-name,#FFFFFF)}
+.dg .src{font-size:18px;font-weight:400;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .sub{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .okt{fill:#0D6385;fill:var(--d-ok,#0D6385);font-weight:600}
+.dg .errt{fill:#C21C20;fill:var(--d-err,#C21C20);font-weight:600}
+.dg .b7{font-weight:700}
+.dg .pre{white-space:pre}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .boxm{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .boxhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .blk{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2.5}
+.dg .frame{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .local{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .tmpl{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .cell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellh{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .name{fill:#181C3E;fill:var(--d-name,#181C3E)}
+.dg .soft{fill:#F3F4F8;fill:var(--d-surface,#F3F4F8)}
+.dg .outp{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .tint{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .hl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3)}
+.dg .emph{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .errbox{fill:#FCEDEE;fill:var(--d-err-bg,#FCEDEE);stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .errdash{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .okbox{fill:#E9F6FA;fill:var(--d-ok-bg,#E9F6FA);stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .key{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .dot{fill:#3B4595;fill:var(--d-brand,#3B4595)}
+.dg .dot0{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .ar,.dg .ld,.dg .axis{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E)}
+.dg .ar,.dg .axis{stroke-width:2.5}
+.dg .ld{stroke-width:2}
+.dg .ar-m{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .ar-old{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .ar-ok{fill:none;stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .ar-err{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .sep{fill:none;stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .dash{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2;stroke-dasharray:8 6}
+.dg .ah{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .ah-m{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .ah-ok{fill:#0D6385;fill:var(--d-ok,#0D6385)}
+.dg .ah-err{fill:#C21C20;fill:var(--d-err,#C21C20)}
+.dg .co{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .co-t{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF);font-size:24px;font-weight:700;text-anchor:middle}
+.dg .sec{stroke:#3B4595;stroke:var(--d-second,#3B4595)}
+.dg .sp-py{fill:#0D6385}
+.dg .sp-bar{fill:#767C95;fill:var(--d-bar,#767C95)}
+    </style>
+  </defs>
+  <rect class="bg" width="1152" height="400"/>
+  <text class="lb sub" x="0" y="26">Puan (%)</text>
+  <path class="sep" d="M190,36 V346"/>
+  <path class="sp-py" d="M190,44 H985.2 A4,4 0 0 1 989.2,48 V64 A4,4 0 0 1 985.2,68 H190 Z"/>
+  <text class="lb end b7" x="174" y="65">Python</text>
+  <text class="cd24" x="1001.2" y="64">17.76</text>
+  <path class="sp-bar" d="M190,74 H648.6 A4,4 0 0 1 652.6,78 V94 A4,4 0 0 1 648.6,98 H190 Z"/>
+  <text class="lb end" x="174" y="95">C</text>
+  <text class="cd24" x="664.6" y="94">10.28</text>
+  <path class="sp-bar" d="M190,104 H576.1 A4,4 0 0 1 580.1,108 V124 A4,4 0 0 1 576.1,128 H190 Z"/>
+  <text class="lb end" x="174" y="125">C++</text>
+  <text class="cd24" x="592.1" y="124">8.67</text>
+  <path class="sp-bar" d="M190,134 H525.3 A4,4 0 0 1 529.3,138 V154 A4,4 0 0 1 525.3,158 H190 Z"/>
+  <text class="lb end" x="174" y="155">Java</text>
+  <text class="cd24" x="541.3" y="154">7.54</text>
+  <path class="sp-bar" d="M190,164 H375.9 A4,4 0 0 1 379.9,168 V184 A4,4 0 0 1 375.9,188 H190 Z"/>
+  <text class="lb end" x="174" y="185">C#</text>
+  <text class="cd24" x="391.9" y="184">4.22</text>
+  <path class="sp-bar" d="M190,194 H310.2 A4,4 0 0 1 314.2,198 V214 A4,4 0 0 1 310.2,218 H190 Z"/>
+  <text class="lb end" x="174" y="215">JavaScript</text>
+  <text class="cd24" x="326.2" y="214">2.76</text>
+  <path class="sp-bar" d="M190,224 H300.7 A4,4 0 0 1 304.7,228 V244 A4,4 0 0 1 300.7,248 H190 Z"/>
+  <text class="lb end" x="174" y="245">Visual Basic</text>
+  <text class="cd24" x="316.7" y="244">2.55</text>
+  <path class="sp-bar" d="M190,254 H283.2 A4,4 0 0 1 287.2,258 V274 A4,4 0 0 1 283.2,278 H190 Z"/>
+  <text class="lb end" x="174" y="275">SQL</text>
+  <text class="cd24" x="299.2" y="274">2.16</text>
+  <path class="sp-bar" d="M190,284 H262 A4,4 0 0 1 266,288 V304 A4,4 0 0 1 262,308 H190 Z"/>
+  <text class="lb end" x="174" y="305">R</text>
+  <text class="cd24" x="278" y="304">1.69</text>
+  <path class="sp-bar" d="M190,314 H246.3 A4,4 0 0 1 250.3,318 V334 A4,4 0 0 1 246.3,338 H190 Z"/>
+  <text class="lb end" x="174" y="335">Rust</text>
+  <text class="cd24" x="262.3" y="334">1.34</text>
+  <g class="dg-small">
+  <text class="src" x="0" y="374">Veri: TIOBE Index, Eylül 2026 (tiobe.com, 11 Ekim 2026'da okundu); TechRepublic, Eylül 2026.</text>
+  <text class="src" x="0" y="394">Puan, arama motorlarında bir dilden ne kadar söz edildiğine göre hesaplanır. Grafik bu kurs için yeniden çizildi.</text>
+  </g>
+</svg>

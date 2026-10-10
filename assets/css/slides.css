@@ -1,0 +1,487 @@
+/* Introduction to Python, IEEE Hacettepe, Güz 2026
+   reveal.js 5.2.1 theme for projection at 1280×720. Load after ../assets/vendor/reveal/dist/reset.css and
+   ../assets/vendor/reveal/dist/reveal.css. The rules are in authoring/SPEC.md (type scale, layouts, poll
+   contract, checks); tokens and markup are in authoring/DESIGN.md; site/slides/_template.html shows every
+   slide type.
+   Always light (IEEE Hacettepe): white canvas, navy-black text, the branch navy #181C3E for titles, the
+   navy band of the title slide and the section slide; indigo #3B4595 for keywords, numerals and outlines; the branch
+   cyan family (#C8E7F3 highlight, #0D6385 correct, typed input and strings, #49B0D7 progress bar) and
+   Hacettepe red #C21C20 for errors. Flat colours, no gradients, no shadows.
+   Fonts (DECISIONS.md, 2026-10-10): Atkinson Hyperlegible Next for all text and titles, JetBrains Mono for code.
+   A slide is its title, one content zone with one of five layouts, and the footer. There is no kicker line,
+   no role label and no instruction line. Size follows importance (SPEC.md §2): the focal element is the
+   largest text on a slide, then the title, the supporting text, code, labels, and credits are smallest.
+   Nothing in the content zone is smaller than 24px. */
+
+/* ---------- Fonts (vendored, SIL OFL 1.1; licences in ../fonts/) ---------- */
+@font-face{font-family:"Atkinson Hyperlegible Next";font-style:normal;font-weight:200 800;font-display:block;
+  src:url(../fonts/atkinson-hyperlegible-next-latin-wght-normal.woff2) format("woff2-variations"),url(../fonts/atkinson-hyperlegible-next-latin-wght-normal.woff2) format("woff2");
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Atkinson Hyperlegible Next";font-style:normal;font-weight:200 800;font-display:block;
+  src:url(../fonts/atkinson-hyperlegible-next-latin-ext-wght-normal.woff2) format("woff2-variations"),url(../fonts/atkinson-hyperlegible-next-latin-ext-wght-normal.woff2) format("woff2");
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Atkinson Hyperlegible Next";font-style:italic;font-weight:200 800;font-display:block;
+  src:url(../fonts/atkinson-hyperlegible-next-latin-wght-italic.woff2) format("woff2-variations"),url(../fonts/atkinson-hyperlegible-next-latin-wght-italic.woff2) format("woff2");
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Atkinson Hyperlegible Next";font-style:italic;font-weight:200 800;font-display:block;
+  src:url(../fonts/atkinson-hyperlegible-next-latin-ext-wght-italic.woff2) format("woff2-variations"),url(../fonts/atkinson-hyperlegible-next-latin-ext-wght-italic.woff2) format("woff2");
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"JetBrains Mono";font-style:normal;font-weight:100 800;font-display:block;
+  src:url(../fonts/jetbrains-mono-latin-wght-normal.woff2) format("woff2-variations"),url(../fonts/jetbrains-mono-latin-wght-normal.woff2) format("woff2");
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"JetBrains Mono";font-style:normal;font-weight:100 800;font-display:block;
+  src:url(../fonts/jetbrains-mono-latin-ext-wght-normal.woff2) format("woff2-variations"),url(../fonts/jetbrains-mono-latin-ext-wght-normal.woff2) format("woff2");
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+
+/* ---------- Tokens (projection) ---------- */
+:root{
+  --font-sans:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif;
+  --font-mono:"JetBrains Mono",Menlo,Consolas,monospace;
+  --s-bg:#FFFFFF;
+  --s-fg:#14172E;        /* navy-black text, 17.6:1 */
+  --s-muted:#474D66;     /* 8.3:1: labels, footer, credits */
+  --s-surface:#F3F4F8;   /* code panels */
+  --s-rule:#C9CDDA;
+  --s-navy:#181C3E;      /* branch navy: titles, title-band rule, section slide, 16.5:1 */
+  --s-brand:#3B4595;     /* branch indigo: keywords, numerals, links, outlines, 8.5:1 */
+  --s-cyan:#49B0D7;      /* branch cyan: progress bar only, never text */
+  --s-tint:#EFF0F7;      /* indigo 8% */
+  --s-hl:#C8E7F3;        /* cyan 30%: "what changed", 13.6:1 under text */
+  --s-ok:#0D6385; --s-ok-bg:#E9F6FA;   /* branch dark cyan, 6.7:1 */
+  --s-err:#C21C20; --s-err-bg:#FCEDEE; /* Hacettepe red, 6.0:1 */
+  --s-stroke:#767C95;    /* navy grey: dashed strokes only */
+  --s-lineno:#565C75;    /* 6.0:1 on surface: line numbers, comments, code out of focus */
+  /* diagram roles (authoring/DIAGRAMS.md §3); slides are always light */
+  --d-bg:#FFFFFF; --d-paper:#FFFFFF; --d-ink:#14172E; --d-type:#474D66; --d-muted:#767C95; --d-rule:#D3D7E2;
+  --d-name:#181C3E; --d-on-name:#FFFFFF; --d-brand:#3B4595; --d-surface:#F3F4F8; --d-tint:#EFF0F7; --d-hl:#C8E7F3;
+  --d-ok:#0D6385; --d-ok-bg:#E9F6FA; --d-err:#C21C20; --d-err-bg:#FCEDEE; --d-second:#3B4595; --d-bar:#767C95;
+
+  /* Type scale (SPEC.md §2): one size per importance level, applied the same way on every slide */
+  --fs-display:56px;     /* the one big line of a title, section or break slide */
+  --fs-focal:40px;       /* focal: the key term, rule, result or figure caption; the largest text on a content slide */
+  --fs-title:36px;       /* slide title, one line, navy */
+  --fs-focal-code:32px;  /* poll code and poll options (the focal element of a poll) */
+  --fs-text:28px;        /* supporting text, list rows, table cells */
+  --fs-code:26px;        /* code and output panels */
+  --fs-label:24px;       /* panel labels, table heads, diagram text: the smallest size in the content zone */
+  --fs-footer:18px;      /* footer */
+  --fs-credit:16px;      /* credits and sources */
+
+  /* Geometry (SPEC.md §3): canvas 1280×720 */
+  --g-side:64px;         /* side margins: content is 1152 wide, x 64-1216 */
+  --g-top:36px;          /* title top */
+  --g-title-h:44px;      /* title box, one line */
+  --g-title-gap:24px;    /* title to content: the content zone starts at y 104 */
+  --g-zone-h:548px;      /* content zone y 104-652; the footer is at y 668-702 */
+  --g-gap:20px;          /* gap between stacked blocks */
+}
+
+/* ---------- Canvas ---------- */
+html,body{background:#FFFFFF}
+.reveal-viewport{background:#FFFFFF}
+.reveal{font:400 var(--fs-text)/1.4 var(--font-sans);color:var(--s-fg);font-kerning:normal}
+.reveal .slides{text-align:left}
+/* a slide is .slides > section, or .slides > .pdf-page > section in the print view (?print-pdf) */
+.reveal .slides > section,.reveal .slides > .pdf-page > section{height:720px;padding:var(--pad,36px 64px 0);box-sizing:border-box;transition:none}
+html.reveal-print .reveal .slides > section,html.reveal-print .reveal .slides > .pdf-page > section{height:720px;padding:var(--pad,36px 64px 0)!important}
+.reveal .fragment,.reveal .hljs.has-highlights.fragment,.reveal .controls *,.reveal .progress span{transition:none}
+.reveal .controls{color:var(--s-brand)}
+.reveal .progress{height:4px;color:var(--s-cyan);background:transparent}
+.reveal .slide-number,html.reveal-print .reveal .slide-number-pdf{display:none}
+
+/* ---------- Footer: lockup (292×34, the brand minimum), "Ders N", slide number ----------
+   A real element (div.s-foot) that the deck script appends to every slide except .no-footer, so it prints
+   and can be measured. It sits at y 668-702: 16px under the content zone and 18px above the canvas edge,
+   so reveal's 4px progress bar stays outside the lockup's clear space. */
+.reveal .s-foot{position:absolute;left:64px;right:64px;bottom:18px;height:34px;display:flex;align-items:center;column-gap:24px;
+  font:400 var(--fs-footer)/34px var(--font-sans);color:var(--s-muted);white-space:nowrap;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.reveal .s-foot img{display:block;width:292px;height:34px;margin:0;flex:none}
+.reveal .s-foot .s-num{margin-left:auto;font-variant-numeric:tabular-nums}
+/* left: half label and topic; right: the number, then the instructor's name (Nezih, 2026-10-13) */
+.reveal .s-foot .s-deck{overflow:hidden;text-overflow:ellipsis;min-width:0}
+
+/* ---------- Type ---------- */
+.reveal h1,.reveal h2,.reveal h3,.reveal p,.reveal ul,.reveal ol,.reveal dl,.reveal dd,.reveal figure,.reveal pre,.reveal table,.reveal blockquote{margin:0}
+.reveal h1,.reveal h2,.reveal h3{font-family:var(--font-sans);text-transform:none;letter-spacing:0}
+/* the slide title: one line, the same box on every content slide */
+.reveal .slides > section > h2,.reveal .slides > .pdf-page > section > h2{height:var(--g-title-h);margin:0 0 var(--g-title-gap);font:700 var(--fs-title)/var(--g-title-h) var(--font-sans);color:var(--s-navy);white-space:nowrap}
+.reveal h1 .tr,.reveal h2 .tr{font-weight:400;color:var(--s-muted)}
+.reveal p,.reveal li,.reveal dd,.reveal dt,.reveal td,.reveal th{font-size:var(--fs-text);line-height:1.4}
+/* focal: the one element a slide is about */
+.reveal .focal{font:600 var(--fs-focal)/1.25 var(--font-sans);color:var(--s-fg)}
+.reveal .focal b{font-weight:700;color:var(--s-navy)}
+.reveal .focal code{font-size:.9em;font-weight:600}
+.reveal .label,.reveal figure > figcaption.label{display:block;font:600 var(--fs-label)/1.2 var(--font-sans);color:var(--s-muted);margin:0 0 8px}
+.reveal .label.file{font-family:var(--font-mono);font-weight:500}
+.reveal .credit,.reveal .source{display:block;font-size:var(--fs-credit);line-height:1.35;color:var(--s-muted)}
+.reveal .credit{margin-top:8px}
+.reveal .credit a,.reveal .source a{color:inherit}
+.reveal a{color:var(--s-brand);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.14em}
+.reveal b,.reveal strong{font-weight:700}
+.reveal .ui{font-weight:700}
+.reveal kbd{font:600 max(24px,.85em)/1 var(--font-sans);padding:2px 8px;border:2px solid var(--s-rule);border-bottom-width:4px;border-radius:4px;background:var(--s-surface);white-space:nowrap}
+.reveal :not(pre) > code{font-family:var(--font-mono);font-size:max(24px,.92em);font-weight:500}
+.reveal .credit code,.reveal .source code{font-size:.92em}
+
+/* ---------- Content zone and the five layouts (SPEC.md §3) ----------
+   div.content is the zone under the title: 1152×548 at x 64, y 104. Its layout class is exactly one of
+   l-full, l-split, l-code, l-poll, l-table. Blocks inside a column (.col) are stacked with a 20px gap. */
+.reveal .content{position:relative;height:var(--g-zone-h)}
+.reveal .col{display:flex;flex-direction:column;align-items:stretch;row-gap:var(--g-gap);min-width:0}
+.reveal .col > *{margin:0}
+/* 1. full figure: a 1152-wide diagram at 1:1 (H ≤ 512), or H ≤ 470 with a focal caption under it */
+.reveal .l-full{display:flex;flex-direction:column;align-items:flex-start;row-gap:16px}
+/* 2. figure + text at the fixed 6:6 ratio: two 560px columns, centred on each other */
+.reveal .l-split{display:grid;grid-template-columns:560px 560px;column-gap:32px;row-gap:var(--g-gap);align-items:center;align-content:start}
+/* 3. code + output at 7:5 (653 | 467); .stacked puts the output under the code at full width */
+/* 2b. l-split.l-portrait: a portrait photo (400 high) in a column exactly as wide as the photo, the text takes the rest,
+   so there is no empty band between them; the credit wraps under the photo */
+.reveal .l-split.l-portrait{grid-template-columns:auto minmax(0,1fr)}
+.reveal .l-portrait figure.photo{width:min-content}
+.reveal .l-portrait figure.photo img{height:400px;width:auto;max-height:none;max-width:none}
+.reveal .l-code{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);column-gap:32px;row-gap:var(--g-gap);align-items:start;align-content:start}
+.reveal .l-code.stacked{grid-template-columns:minmax(0,1fr)}
+/* code and output side by side line up (Nezih, 2026-10-13: "bu hiza problemi değil mi?"): when the output carries
+   its "Çıktı" label, the code panel gets the same space above it, and both panels stretch to the taller one */
+.reveal .l-code:not(.stacked){align-items:stretch}
+.reveal .l-code:not(.stacked) > figure{display:flex;flex-direction:column}
+.reveal .l-code:not(.stacked) > figure > pre{flex:1 1 auto}
+.reveal .l-code:not(.stacked):has(> figure.output > figcaption.label) > figure:not(.output)::before{content:"";display:block;flex:none;height:calc(var(--fs-label) * 1.2 + 8px)}
+.reveal .l-code > .span,.reveal .l-split > .span{grid-column:1 / -1}
+/* 4. poll: code and options left, QR, count and bars right (SPEC.md §6) */
+.reveal .l-poll{display:grid;grid-template-columns:minmax(0,1fr) 320px;column-gap:40px;align-items:start}
+/* 5. table: one full-width table or row list, optionally a focal line under it */
+.reveal .l-table{display:flex;flex-direction:column;align-items:stretch;row-gap:24px}
+
+/* ---------- Figures ---------- */
+.reveal figure.fig{margin:0}
+.reveal figure.fig > svg,.reveal figure.fig > img{display:block}
+.reveal figure.fig > figcaption.focal{margin-top:16px}
+.reveal .diagram-full{display:block;width:1152px;max-width:none;height:auto}
+.reveal svg.dg{display:block;max-width:none;overflow:visible;font-family:var(--font-sans)}
+.reveal figure.photo{display:flex;flex-direction:column;align-items:flex-start;margin:0}
+.reveal figure.photo img{display:block;max-height:440px;max-width:560px;width:auto;height:auto}
+.reveal .shot{display:block;width:560px;height:auto;border:1px solid var(--s-rule);box-sizing:border-box}
+.reveal svg text{font-family:var(--font-sans)}
+
+/* ---------- Code and output panels ----------
+   The pre carries no padding: its <code> does. The highlight plugin's step copies of <code> are laid exactly
+   over the first copy (reveal.css: position:absolute; top:0; left:0 inside the positioned pre) and are painted
+   on the panel colour, so a step never shows two copies of the code. */
+.reveal pre,.reveal code,.reveal kbd,.reveal samp{font-variant-ligatures:none;font-feature-settings:"liga" 0,"calt" 0}
+.reveal pre{position:relative;width:auto;margin:0;padding:0;font:500 var(--fs-code)/1.4 var(--font-mono);color:var(--s-fg);background:var(--s-surface);border:1px solid var(--s-rule);border-radius:4px;text-align:left;white-space:pre;overflow:hidden;tab-size:4;box-shadow:none;word-wrap:normal}
+.reveal pre > code,.reveal .hljs{display:block;box-sizing:border-box;padding:14px 20px;margin:0;max-height:none;overflow:visible;background:var(--s-surface);color:inherit;font:inherit;white-space:pre;word-wrap:normal;word-break:normal}
+.reveal pre.focal-code{font-size:var(--fs-focal-code);line-height:1.35}
+.reveal .output pre{background:#FFFFFF;padding:14px 20px}
+.reveal .output pre > code{background:#FFFFFF;padding:0}
+.reveal .hljs-ln{border-collapse:collapse;width:100%}
+.reveal .hljs-ln td{padding:0;border:0;font-size:inherit!important;line-height:inherit}
+.reveal .hljs-ln-numbers{width:1%;white-space:nowrap;color:var(--s-lineno)!important;opacity:1;padding-right:24px!important;text-align:right;vertical-align:top;user-select:none;font-weight:400}
+.reveal .hljs-keyword,.reveal .hljs-literal{color:var(--s-brand);font-weight:700}
+.reveal .hljs-string{color:var(--s-ok)}
+.reveal .hljs-comment{color:var(--s-lineno);font-style:normal}
+.reveal .hljs-number,.reveal .hljs-built_in,.reveal .hljs-title,.reveal .hljs-params,.reveal .hljs-subst,.reveal .hljs-meta,.reveal .hljs-variable,.reveal .hljs-operator,.reveal .hljs-punctuation{color:inherit;font-weight:inherit;font-style:normal}
+/* a stepped or marked line (data-line-numbers="|1|2" or "2"): the line in focus gets the highlight band; the
+   other lines turn grey by colour, not by opacity, so they keep 6.0:1 */
+.reveal .hljs.has-highlights tr:not(.highlight-line){opacity:1}
+.reveal .hljs.has-highlights tr:not(.highlight-line) .hljs-ln-code,.reveal .hljs.has-highlights tr:not(.highlight-line) .hljs-ln-code *{color:var(--s-lineno)!important;font-weight:500!important}
+.reveal .hljs.has-highlights tr.highlight-line .hljs-ln-code{background:var(--s-hl);box-shadow:none}
+.reveal .typed{color:var(--s-ok);font-weight:700}
+.reveal .tb-last{color:var(--s-err);font-weight:700}
+.reveal pre.tb{padding:14px 20px;background:#FFFFFF}
+/* the token that changed since the previous slide (a worked example changes one thing) */
+.reveal .chg{background:var(--s-hl);outline:2px solid var(--s-brand);outline-offset:0;border-radius:2px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+/* the general form of a statement, before its instances: dashed frame, Turkish placeholders */
+.reveal .tpl pre{background:#FFFFFF;border:2px dashed var(--s-fg);padding:14px 20px}
+.reveal .tpl .ph{color:var(--d-type);font-weight:400}
+.reveal .tpl .kw{color:var(--s-brand);font-weight:700}
+
+/* ---------- Fragments: they only appear or disappear (opacity and visibility); their space is always reserved ---------- */
+.reveal .fragment.hl{opacity:1;visibility:inherit}
+.reveal .fragment.hl.visible{background:var(--s-hl);outline:2px solid var(--s-brand);outline-offset:0}
+
+/* ---------- Numbered squares (steps, read order of a traceback) ---------- */
+.reveal .n-sq,.reveal .co{display:inline-flex;align-items:center;justify-content:center;flex:none;box-sizing:border-box;border-radius:4px;background:var(--s-fg);color:#FFFFFF;font:700 var(--fs-label)/1 var(--font-sans);font-variant-numeric:tabular-nums}
+.reveal .n-sq{width:44px;height:44px}
+.reveal .co{width:32px;height:32px;margin-left:14px;vertical-align:-4px}
+.reveal ol.steps{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;row-gap:18px}
+.reveal ol.steps > li{display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:16px;align-items:start}
+.reveal ol.steps > li > .n-sq{margin-top:-2px}
+
+/* ---------- Title slide (DECISIONS.md "Title slide spec"; no footer) ----------
+   Top to bottom: the lockup on white with its clear space; "Introduction to Python" (h1), the largest text on the
+   slide; "Ders N: <title>" (.t-ders, second level); the date (.t-date); a navy #181C3E band (.t-navy) that never
+   carries the lockup, with the instructor, the department and the branch in white. */
+.reveal .s-title{--pad:0 64px 0}
+.reveal .s-title .t-band{margin:0 -64px;padding:28px 64px 26px;line-height:0}
+.reveal .s-title .t-band img{display:block;height:46px;width:396px;margin:0}
+.reveal .s-title h1{margin:72px 0 0;max-width:1152px;font:700 var(--fs-display)/1.15 var(--font-sans);color:var(--s-navy)}
+.reveal .s-title .t-ders{margin:24px 0 0;max-width:1152px;font:600 var(--fs-title)/1.25 var(--font-sans);color:var(--s-fg)}
+.reveal .s-title .t-date{margin:20px 0 0;font-size:var(--fs-text);line-height:1.4;color:var(--s-muted)}
+.reveal .s-title .t-navy{position:absolute;left:0;right:0;bottom:0;height:232px;box-sizing:border-box;padding:44px 64px 0;background:var(--s-navy);color:#FFFFFF;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.reveal .s-title .t-navy p{font-size:var(--fs-label);line-height:1.45;color:#FFFFFF}
+.reveal .s-title .t-navy .t-name{margin:0 0 8px;font:700 var(--fs-text)/1.3 var(--font-sans)}
+
+/* ---------- Section slide (navy). Its footer (half label, number, name) is light grey on the navy, 10:1 (2026-10-14) ---------- */
+.reveal .s-section{--pad:220px 64px 0;background:#181C3E;color:#FFFFFF}
+.reveal .s-section .s-foot{color:#C9CDDA}
+.reveal .slides section.s-section > h2{height:auto;margin:0 0 28px;font:700 var(--fs-display)/1.15 var(--font-sans);color:#FFFFFF;white-space:normal}
+.reveal .s-section h2 .tr{color:#A5D8EC}
+.reveal .s-section p{max-width:1000px;color:#FFFFFF;font-size:var(--fs-text)}
+.reveal .s-section code{color:#FFFFFF}
+
+/* ---------- Break slide ---------- */
+.reveal .s-break{--pad:150px 64px 0}
+.reveal .slides section.s-break > h2{height:auto;margin:0 0 48px;font:700 var(--fs-display)/1.15 var(--font-sans)}
+.reveal .s-break dl.rows{max-width:1000px}
+.reveal .s-break dl.rows .done{color:var(--s-muted)}
+.reveal .s-break .b-next{margin-top:32px;max-width:1000px}
+
+/* ---------- Row lists: dl.rows (next steps, info, break), ol.rows (appendix list), ol.vlist (videos) ---------- */
+.reveal dl.rows{display:grid;grid-template-columns:240px minmax(0,1fr);border-top:2px solid var(--s-fg)}
+.reveal dl.rows > dt,.reveal dl.rows > dd{padding:16px 0;border-bottom:1px solid var(--s-rule)}
+.reveal dl.rows > dt{font-weight:700;padding-right:24px}
+.reveal ol.rows{list-style:none;margin:0;padding:0;border-top:2px solid var(--s-fg)}
+.reveal ol.rows > li{display:grid;grid-template-columns:320px minmax(0,1fr);column-gap:24px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--s-rule)}
+.reveal ol.rows .r-ref{font-size:var(--fs-label);font-weight:600;color:var(--s-muted)}
+.reveal ol.vlist{list-style:none;margin:0;padding:0;border-top:2px solid var(--s-fg)}
+.reveal ol.vlist > li{padding:12px 0;border-bottom:1px solid var(--s-rule)}
+.reveal .v-title{font-weight:700;line-height:1.3}
+.reveal .v-why{line-height:1.35}
+.reveal .v-meta{font-size:var(--fs-label);line-height:1.35;color:var(--s-muted)}
+.reveal .v-meta a{color:var(--s-brand)}
+
+/* ---------- Tables (a comparison inside a section) ---------- */
+.reveal table.tbl{border-collapse:collapse;width:100%;font-size:var(--fs-text);line-height:1.3}
+.reveal table.tbl th,.reveal table.tbl td{text-align:left;vertical-align:top;padding:12px 24px 12px 0;border:0;border-bottom:1px solid var(--s-rule)}
+.reveal table.tbl thead th{font:600 var(--fs-label)/1.2 var(--font-sans);color:var(--s-muted);border-bottom:2px solid var(--s-fg);padding-top:0}
+.reveal table.tbl tbody th{font-weight:700}
+.reveal table.tbl code{font-size:var(--fs-code);white-space:nowrap}
+.reveal table.tbl .err{color:var(--s-err)}
+.reveal table.tbl .ok{color:var(--s-ok)}
+
+/* ---------- Error slide: the marked line of the code ---------- */
+.reveal .s-error .hljs-ln tr.highlight-line .hljs-ln-numbers{color:var(--s-err)!important;font-weight:700}
+
+/* ---------- Poll ("Python ne yazdırır?", SPEC.md §6) ----------
+   Markup: section.s-poll[data-poll-id][data-answer] > h2, div.content.l-poll > div.col (pre, ol.poll-opts,
+   p.poll-why) + div.poll-side (div.poll-qr, div.poll-count, div.poll-bars). poll.js fills the QR, the count
+   and the bars, and toggles the hidden attribute: key D on .poll-bars, key C on .poll-why. Every box keeps
+   its space while hidden, so nothing moves when a key is pressed. */
+.reveal ol.poll-opts{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.reveal ol.poll-opts > li{display:grid;grid-template-columns:48px minmax(0,1fr);column-gap:14px;align-items:center;min-height:76px;box-sizing:border-box;padding:10px 14px;border:2px solid var(--s-rule);border-radius:6px;font-size:var(--fs-text);line-height:1.25}
+.reveal ol.poll-opts > li::before{content:attr(data-n);display:flex;align-items:center;justify-content:center;width:48px;height:48px;box-sizing:border-box;border:2px solid var(--s-brand);border-radius:4px;color:var(--s-brand);font:700 30px/1 var(--font-sans)}
+.reveal ol.poll-opts > li > code{font-size:var(--fs-focal-code);font-weight:500;white-space:pre}
+/* options read A, B, C, D, never 1-4 (Nezih, 2026-10-13: "soru şıkları abcd olsun"); data-n stays 1-4 inside */
+.reveal ol.poll-opts > li[data-n="1"]::before,.reveal .poll-bars .pb[data-n="1"]::before{content:"A"}
+.reveal ol.poll-opts > li[data-n="2"]::before,.reveal .poll-bars .pb[data-n="2"]::before{content:"B"}
+.reveal ol.poll-opts > li[data-n="3"]::before,.reveal .poll-bars .pb[data-n="3"]::before{content:"C"}
+.reveal ol.poll-opts > li[data-n="4"]::before,.reveal .poll-bars .pb[data-n="4"]::before{content:"D"}
+
+.reveal .poll-why{min-height:80px;font-size:var(--fs-text);line-height:1.4}
+.reveal .poll-side{display:flex;flex-direction:column;align-items:center;row-gap:12px}
+/* QR: 320×320, about 7 px per module for the published answer URL (37 modules plus the 2-module margin), so a
+   phone in the back row of a 40-seat room can read it from the projected image */
+.reveal .poll-qr{width:320px;height:320px;box-sizing:border-box;border:1px solid var(--s-rule);background:#FFFFFF;padding:8px}
+.reveal .poll-qr-none{display:flex;align-items:center;justify-content:center;height:100%;text-align:center;font-size:var(--fs-label);line-height:1.3;color:var(--s-muted)}
+.reveal .poll-qr > svg,.reveal .poll-qr > img,.reveal .poll-qr > canvas{display:block;width:100%;height:100%}
+/* the count in three fixed slots written by poll.js: b.pc-n (right-aligned, three digits wide), span.pc-word
+   " cevap" and span.pc-state ", kapalı", which keeps its space while the poll is open, so nothing moves when the
+   poll closes or the number gains a digit (the line is centred as a whole, and its width never changes);
+   span.pc-msg replaces them offline */
+.reveal .poll-count{width:100%;height:40px;text-align:center;white-space:pre;font:400 var(--fs-text)/40px var(--font-sans);color:var(--s-fg);font-variant-numeric:tabular-nums}
+.reveal .poll-count .pc-n{display:inline-block;min-width:1.8em;text-align:right}
+.reveal .poll-count .pc-state{visibility:hidden}
+.reveal .poll-count.is-closed .pc-state{visibility:visible;color:var(--s-muted)}
+.reveal .poll-bars{width:100%;height:144px;overflow:hidden;font-size:var(--fs-label)}
+.reveal .s-poll .poll-bars[hidden],.reveal .s-poll .poll-why[hidden]{display:block;visibility:hidden}
+/* bar markup written by poll.js: <div class="pb" data-n="1"><span class="pb-fill" style="width:40%"></span><span class="pb-v">12</span></div> */
+.reveal .poll-bars .pb{position:relative;display:grid;grid-template-columns:32px minmax(0,1fr) 52px;column-gap:10px;align-items:center;height:30px;margin:0 0 6px;border-bottom:1px solid var(--s-rule)}
+.reveal .poll-bars .pb::before{content:attr(data-n);font:700 var(--fs-label)/1 var(--font-sans);color:var(--s-brand);text-align:center}
+.reveal .poll-bars .pb-fill{display:block;height:22px;background:var(--d-bar);border-radius:2px;max-width:100%}
+.reveal .poll-bars .pb-v{text-align:right;font:600 var(--fs-label)/1.25 var(--font-sans);font-variant-numeric:tabular-nums}
+/* the answer: shown once .poll-why is no longer hidden (key C), also with ?final and in the PDF */
+.reveal .s-poll:is(.show-answer,:has(.poll-why:not([hidden]):not(.fragment)),:has(.poll-why.fragment.visible)) ol.poll-opts > li{color:var(--s-lineno);border-color:var(--s-rule)}
+.reveal .s-poll:is(.show-answer,:has(.poll-why:not([hidden]):not(.fragment)),:has(.poll-why.fragment.visible))[data-answer="1"] ol.poll-opts > li[data-n="1"],
+.reveal .s-poll:is(.show-answer,:has(.poll-why:not([hidden]):not(.fragment)),:has(.poll-why.fragment.visible))[data-answer="2"] ol.poll-opts > li[data-n="2"],
+.reveal .s-poll:is(.show-answer,:has(.poll-why:not([hidden]):not(.fragment)),:has(.poll-why.fragment.visible))[data-answer="3"] ol.poll-opts > li[data-n="3"],
+.reveal .s-poll:is(.show-answer,:has(.poll-why:not([hidden]):not(.fragment)),:has(.poll-why.fragment.visible))[data-answer="4"] ol.poll-opts > li[data-n="4"]{color:var(--s-fg);background:var(--s-ok-bg);border-color:var(--s-ok);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.reveal .s-poll:is(.show-answer,:has(.poll-why:not([hidden]):not(.fragment)),:has(.poll-why.fragment.visible))[data-answer="1"] ol.poll-opts > li[data-n="1"]::before,
+.reveal .s-poll:is(.show-answer,:has(.poll-why:not([hidden]):not(.fragment)),:has(.poll-why.fragment.visible))[data-answer="2"] ol.poll-opts > li[data-n="2"]::before,
+.reveal .s-poll:is(.show-answer,:has(.poll-why:not([hidden]):not(.fragment)),:has(.poll-why.fragment.visible))[data-answer="3"] ol.poll-opts > li[data-n="3"]::before,
+.reveal .s-poll:is(.show-answer,:has(.poll-why:not([hidden]):not(.fragment)),:has(.poll-why.fragment.visible))[data-answer="4"] ol.poll-opts > li[data-n="4"]::before{background:var(--s-ok);border-color:var(--s-ok);color:#FFFFFF}
+.reveal .s-poll:is(.show-answer,:has(.poll-why:not([hidden]):not(.fragment)),:has(.poll-why.fragment.visible)) ol.poll-opts > li::before{border-color:var(--s-rule);color:var(--s-lineno)}
+/* poll.js states: the live count "N cevap" (the number in branch navy) and the offline count */
+.reveal .poll-count b{font-weight:700;color:var(--s-navy)}
+.reveal .poll-count.is-offline{color:var(--s-muted)}
+.reveal .poll-bars .pb-fill{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.reveal .s-poll:is(.show-answer,:has(.poll-why:not([hidden]):not(.fragment)),:has(.poll-why.fragment.visible))[data-answer="1"] .poll-bars .pb[data-n="1"] .pb-fill,
+.reveal .s-poll:is(.show-answer,:has(.poll-why:not([hidden]):not(.fragment)),:has(.poll-why.fragment.visible))[data-answer="2"] .poll-bars .pb[data-n="2"] .pb-fill,
+.reveal .s-poll:is(.show-answer,:has(.poll-why:not([hidden]):not(.fragment)),:has(.poll-why.fragment.visible))[data-answer="3"] .poll-bars .pb[data-n="3"] .pb-fill,
+.reveal .s-poll:is(.show-answer,:has(.poll-why:not([hidden]):not(.fragment)),:has(.poll-why.fragment.visible))[data-answer="4"] .poll-bars .pb[data-n="4"] .pb-fill{background:var(--s-ok)}
+
+/* ---------- type map (Python's classified type hierarchy, DESIGN.md §8): a full-figure slide ---------- */
+.reveal .typemap{--tm-line:#474D66;--tm-gap:16px;--tm-drop:14px;width:1152px;font-size:24px;line-height:1.25}
+.reveal .typemap ol,.reveal .typemap ul{list-style:none;margin:0;padding:0}
+.reveal .tm-root{position:relative;display:table;margin:0 auto var(--tm-drop);padding:6px 20px;border:2px solid var(--s-fg);border-radius:6px;background:#FFFFFF;font-size:var(--fs-text);font-weight:700;text-align:center}
+.reveal .tm-root code{font-weight:600;font-size:24px}
+.reveal .tm-root::after{content:"";position:absolute;left:50%;top:100%;margin-left:-1px;height:calc(var(--tm-drop) + 2px);border-left:2px solid var(--tm-line)}
+.reveal .typemap .tm-groups{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));column-gap:var(--tm-gap);padding-top:var(--tm-drop)}
+.reveal .tm-group,.reveal .tm-sub{position:relative}
+.reveal .tm-group[data-span="2"]{grid-column:span 2}
+.reveal .tm-group::before,.reveal .tm-sub::before{content:"";position:absolute;left:50%;margin-left:-1px;top:calc(-1 * var(--tm-drop));height:var(--tm-drop);border-left:2px solid var(--tm-line)}
+.reveal .tm-group::after,.reveal .tm-sub::after{content:"";position:absolute;top:calc(-1 * var(--tm-drop));left:calc(-1 * var(--tm-gap) / 2);right:calc(-1 * var(--tm-gap) / 2);border-top:2px solid var(--tm-line)}
+.reveal .tm-group:first-child::after,.reveal .tm-sub:first-child::after{left:50%}
+.reveal .tm-group:last-child::after,.reveal .tm-sub:last-child::after{right:50%}
+.reveal .tm-group:only-child::after,.reveal .tm-sub:only-child::after{display:none}
+.reveal .tm-name{position:relative;display:flex;flex-direction:column;justify-content:center;min-height:74px;box-sizing:border-box;padding:5px 4px;border:2px solid var(--s-fg);border-radius:6px;background:#FFFFFF;text-align:center;font-size:24px;font-weight:700;line-height:1.25}
+.reveal .tm-name::after{content:"";position:absolute;left:50%;margin-left:-1px;top:100%;height:calc(var(--tm-drop) + 2px);border-left:2px solid var(--tm-line)}
+.reveal .tm-tr{display:block;font-weight:400;color:var(--s-muted)}
+.reveal .tm-tr-in{font-weight:400;color:var(--s-muted);margin-left:.3em}
+.reveal .typemap .tm-subs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--tm-gap);margin-top:var(--tm-drop);padding-top:var(--tm-drop)}
+.reveal .typemap .tm-group > .tm-types{padding-top:var(--tm-drop)}
+.reveal .tm-sub-name{font-size:24px;font-weight:600;color:var(--s-muted);text-align:center;margin:0 0 6px;line-height:1.25}
+.reveal .tm-sub-name.is-hidden{visibility:hidden}
+.reveal .tm-sub:has(> .tm-sub-name.is-hidden)::before{height:calc(var(--tm-drop) + 36px)}
+.reveal .tm-types{display:grid;gap:6px}
+.reveal .tm-type{position:relative;padding:4px 4px;border:2px solid var(--s-fg);border-radius:6px;background:#FFFFFF;text-align:center;line-height:1.25}
+.reveal .tm-type > code{display:block;font:700 24px/1.25 var(--font-mono)}
+.reveal .tm-ex,.reveal .tm-ex code{display:block;font:500 24px/1.25 var(--font-mono);color:var(--s-muted)}
+.reveal .tm-when{display:block;font-size:24px;line-height:1.25;color:var(--s-muted)}
+.reveal .tm-type.is-now{background:var(--s-tint);border:3px solid var(--s-brand);padding:3px 3px}
+.reveal .tm-type.is-now > code{color:var(--s-brand)}
+.reveal .tm-type.is-now .tm-ex,.reveal .tm-type.is-now .tm-ex code{color:var(--s-fg)}
+.reveal .tm-type.is-later{border-style:dashed;border-color:var(--s-stroke)}
+.reveal .tm-type.is-later > code{color:var(--s-muted);font-weight:600}
+.reveal .tm-group:has(.is-now) > .tm-name{border-color:var(--s-brand);color:var(--s-brand)}
+.reveal .tm-group:not(:has(.is-now,.is-known)) > .tm-name{border-style:dashed;border-color:var(--s-stroke);color:var(--s-muted)}
+.reveal .tm-legend{display:flex;gap:32px;margin-top:14px;font-size:24px;color:var(--s-muted)}
+.reveal .tm-legend > span{display:inline-flex;align-items:center;gap:10px}
+.reveal .tm-key{display:inline-block;width:40px;height:24px;box-sizing:border-box;border:2px solid var(--s-fg);border-radius:4px;background:#FFFFFF}
+.reveal .tm-key.is-now{border:3px solid var(--s-brand);background:var(--s-tint)}
+.reveal .tm-key.is-later{border-style:dashed;border-color:var(--s-stroke)}
+
+
+/* ---------- Diagram classes: the dg v3 block of authoring/DIAGRAMS.md §5, with the course sans font of DECISIONS.md (2026-10-10) ---------- */
+/* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
+.dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
+.dg .bg{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF)}
+.dg .tx,.dg .lb,.dg .ti,.dg .cd,.dg .cd24{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .tx{font-size:24px;font-weight:400}
+.dg .lb{font-size:24px;font-weight:600}
+.dg .ti{font-size:28px;font-weight:700}
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-family:"JetBrains Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-weight:500}
+.dg .cd{font-size:28px}
+.dg .cd24{font-size:24px}
+.dg .ty{font-size:24px;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .nm{font-size:28px;font-weight:600;fill:#FFFFFF;fill:var(--d-on-name,#FFFFFF)}
+.dg .src{font-size:18px;font-weight:400;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .sub{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .okt{fill:#0D6385;fill:var(--d-ok,#0D6385);font-weight:600}
+.dg .errt{fill:#C21C20;fill:var(--d-err,#C21C20);font-weight:600}
+.dg .b7{font-weight:700}
+.dg .pre{white-space:pre}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .boxm{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .boxhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .blk{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2.5}
+.dg .frame{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .local{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .tmpl{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .cell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellh{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .name{fill:#181C3E;fill:var(--d-name,#181C3E)}
+.dg .soft{fill:#F3F4F8;fill:var(--d-surface,#F3F4F8)}
+.dg .outp{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .tint{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .hl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3)}
+.dg .emph{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .errbox{fill:#FCEDEE;fill:var(--d-err-bg,#FCEDEE);stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .errdash{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .okbox{fill:#E9F6FA;fill:var(--d-ok-bg,#E9F6FA);stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .key{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .dot{fill:#3B4595;fill:var(--d-brand,#3B4595)}
+.dg .dot0{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .ar,.dg .ld,.dg .axis{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E)}
+.dg .ar,.dg .axis{stroke-width:2.5}
+.dg .ld{stroke-width:2}
+.dg .ar-m{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .ar-old{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .ar-ok{fill:none;stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .ar-err{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .sep{fill:none;stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .dash{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2;stroke-dasharray:8 6}
+.dg .ah{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .ah-m{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .ah-ok{fill:#0D6385;fill:var(--d-ok,#0D6385)}
+.dg .ah-err{fill:#C21C20;fill:var(--d-err,#C21C20)}
+.dg .co{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .co-t{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF);font-size:24px;font-weight:700;text-anchor:middle}
+.dg .sec{stroke:#3B4595;stroke:var(--d-second,#3B4595)}
+
+/* ---------- Simplification and Later markers (LESSON-FORMAT "Simplification:", "Later:") ----------
+   One supporting sentence under a 1px rule, written as a full sentence ("Şimdilik ... varsayıyoruz."), never a
+   "Şimdilik:" label. data-id carries the ledger id (SIMP-1.1, LATER-1.1); it is not shown. */
+.reveal .mark-line{font-size:var(--fs-label);line-height:1.35;color:var(--s-muted);padding-top:12px;border-top:1px solid var(--s-rule)}
+
+/* ---------- PyCharm screenshot not captured yet (shot list in RULES.md): the deck script swaps a failed img.shot for this box (SPEC.md §5) ---------- */
+.reveal .shot-missing{display:flex;align-items:center;justify-content:center;aspect-ratio:16/10;width:560px;box-sizing:border-box;border:1px dashed var(--s-stroke);background:var(--s-surface);font:500 var(--fs-label)/1.3 var(--font-mono);color:var(--s-muted);text-align:center;padding:16px}
+
+/* ---------- PDF: stepped code (data-line-numbers="|1|2") prints in its plain first state, never as two copies ---------- */
+html.reveal-print .reveal pre code.hljs.fragment:not(:first-child){display:none}
+
+/* ---------- Speaker notes are never drawn on a slide ---------- */
+.reveal aside.notes{display:none}
+/* photo rows (Ders 1 S41): three equal cells, photos cropped to one height (DECISIONS.md 2026-10-11) */
+.reveal[data-deck="Ders 1"] .fig-row{display:flex;gap:24px;justify-content:center;align-items:flex-start}
+.reveal[data-deck="Ders 1"] .fig-row > .fig{flex:1 1 0;min-width:0;margin:0}
+.reveal[data-deck="Ders 1"] .fig-row > .fig > img{display:block;width:100%;height:250px;object-fit:cover}
+
+/* Option colours (Nezih, 2026-10-15): four colours as in Kahoot, on the slide, the bars and the phone page (oy.css).
+   The letter stays in every box for colour-blind viewers and the black-and-white print. */
+.reveal{--opt1:#C62F2B;--opt2:#1F5FB8;--opt3:#E2A004;--opt4:#2E7D3A}
+.reveal ol.poll-opts > li[data-n="1"]{border-color:var(--opt1)}
+.reveal ol.poll-opts > li[data-n="2"]{border-color:var(--opt2)}
+.reveal ol.poll-opts > li[data-n="3"]{border-color:var(--opt3)}
+.reveal ol.poll-opts > li[data-n="4"]{border-color:var(--opt4)}
+.reveal ol.poll-opts > li[data-n="1"]::before{background:var(--opt1);border-color:var(--opt1);color:#FFFFFF}
+.reveal ol.poll-opts > li[data-n="2"]::before{background:var(--opt2);border-color:var(--opt2);color:#FFFFFF}
+.reveal ol.poll-opts > li[data-n="3"]::before{background:var(--opt3);border-color:var(--opt3);color:#1A1A1A}
+.reveal ol.poll-opts > li[data-n="4"]::before{background:var(--opt4);border-color:var(--opt4);color:#FFFFFF}
+.reveal ol.poll-opts > li::before{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.reveal .poll-bars .pb[data-n="1"] .pb-fill{background:var(--opt1)}
+.reveal .poll-bars .pb[data-n="2"] .pb-fill{background:var(--opt2)}
+.reveal .poll-bars .pb[data-n="3"] .pb-fill{background:var(--opt3)}
+.reveal .poll-bars .pb[data-n="4"] .pb-fill{background:var(--opt4)}
+.reveal .poll-bars .pb[data-n="1"]::before{color:var(--opt1)}
+.reveal .poll-bars .pb[data-n="2"]::before{color:var(--opt2)}
+.reveal .poll-bars .pb[data-n="3"]::before{color:#9A6B00}
+.reveal .poll-bars .pb[data-n="4"]::before{color:var(--opt4)}
+/* at the answer the wrong options lose their colour (the answer rules above colour the right one) and their bars fade */
+.reveal .s-poll:is(.show-answer,:has(.poll-why:not([hidden]):not(.fragment)),:has(.poll-why.fragment.visible)) ol.poll-opts > li::before{background:transparent}
+.reveal .s-poll:is(.show-answer,:has(.poll-why:not([hidden]):not(.fragment)),:has(.poll-why.fragment.visible)) .poll-bars .pb .pb-fill{opacity:.35}
+.reveal .s-poll:is(.show-answer,:has(.poll-why:not([hidden]):not(.fragment)),:has(.poll-why.fragment.visible)):is([data-answer="1"]) .poll-bars .pb[data-n="1"] .pb-fill,.reveal .s-poll:is(.show-answer,:has(.poll-why:not([hidden]):not(.fragment)),:has(.poll-why.fragment.visible)):is([data-answer="2"]) .poll-bars .pb[data-n="2"] .pb-fill,.reveal .s-poll:is(.show-answer,:has(.poll-why:not([hidden]):not(.fragment)),:has(.poll-why.fragment.visible)):is([data-answer="3"]) .poll-bars .pb[data-n="3"] .pb-fill,.reveal .s-poll:is(.show-answer,:has(.poll-why:not([hidden]):not(.fragment)),:has(.poll-why.fragment.visible)):is([data-answer="4"]) .poll-bars .pb[data-n="4"] .pb-fill{opacity:1}
+/* a study question (Çalışma soruları): no QR column; the reason is a fragment, one click shows it and the answer */
+.reveal .s-study .l-poll{grid-template-columns:minmax(0,1fr)}
+/* Results readable from the back row (Nezih, 2026-10-15: "sınıfın en arkasından nasıl görünecek"): once the
+   distribution is shown the poll is closed, so the QR leaves and the four bars take the whole side column,
+   with 40 px letters and counts and 60 px thick colour bars. */
+.reveal .s-poll.show-dist .poll-qr{display:none}
+.reveal .s-poll.show-dist .poll-bars{height:auto;overflow:visible}
+.reveal .s-poll.show-dist .poll-bars .pb{grid-template-columns:44px minmax(0,1fr) 64px;column-gap:12px;height:96px;margin:0 0 8px}
+.reveal .s-poll.show-dist .poll-bars .pb::before{font-size:40px}
+.reveal .s-poll.show-dist .poll-bars .pb-fill{height:60px;border-radius:4px}
+.reveal .s-poll.show-dist .poll-bars .pb-v{font-size:40px;font-weight:700;line-height:1}
+.reveal .s-poll.show-dist .poll-count{font-size:32px}
+/* the right bar keeps its option colour at full strength (the other bars fade, above) */
+.reveal .s-poll:is(.show-answer,
+:has(.poll-why:not([hidden]):not(.fragment)),
+:has(.poll-why.fragment.visible))[data-answer="1"] .poll-bars .pb[data-n="1"] .pb-fill,
+.reveal .s-poll:is(.show-answer,:has(.poll-why:not([hidden]):not(.fragment)),:has(.poll-why.fragment.visible))[data-answer="2"] .poll-bars .pb[data-n="2"] .pb-fill,.reveal .s-poll:is(.show-answer,:has(.poll-why:not([hidden]):not(.fragment)),:has(.poll-why.fragment.visible))[data-answer="3"] .poll-bars .pb[data-n="3"] .pb-fill,.reveal .s-poll:is(.show-answer,:has(.poll-why:not([hidden]):not(.fragment)),:has(.poll-why.fragment.visible))[data-answer="4"] .poll-bars .pb[data-n="4"] .pb-fill{background:var(--c-right)}
+.reveal .s-poll[data-answer="1"]{--c-right:var(--opt1)}
+.reveal .s-poll[data-answer="2"]{--c-right:var(--opt2)}
+.reveal .s-poll[data-answer="3"]{--c-right:var(--opt3)}
+.reveal .s-poll[data-answer="4"]{--c-right:var(--opt4)}

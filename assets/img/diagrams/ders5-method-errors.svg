@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 426" width="1152" height="426" role="img" aria-labelledby="ders5-method-errors-t ders5-method-errors-d">
+  <title id="ders5-method-errors-t">self ve TypeError</title>
+  <desc id="ders5-method-errors-d">İki satır. Üst satır: kod class Greeting:, def say(): (boş parantezler çivit mavisi halkayla işaretli), print("Selam") ve Greeting().say(). Çağrıdan çıkan ok bir Greeting object'ini say çerçevesine taşıyor; çerçevede onu alacak parameter yok, yerinde kırmızı çerçeveli bir soru işareti ve yer yok yazısı. Kırmızı hata satırı: TypeError: Greeting.say() takes 0 positional arguments but 1 was given. Alt satır: kod k = PiggyBank() ve k.deposit(k, 100); parantez içindeki k çivit mavisi halkayla işaretli. deposit çerçevesinde iki lacivert yer var: self ve amount. PiggyBank object'i self'e bir kez Python verir okuyla, amount'a bir kez de elle yazılan k olarak kırmızı okla gidiyor; 100 (int, turuncu) için üçüncü yer yok, kırmızı kesikli soru işareti. Kırmızı hata satırı: TypeError: PiggyBank.deposit() takes 2 positional arguments but 3 were given.</desc>
+  <!-- source: ders5-B S69; runs noself_method (line 5: TypeError: Greeting.say() takes 0 positional arguments but 1 was given) and extra_self (PiggyBank with __init__ and deposit above, line 9: TypeError: PiggyBank.deposit() takes 2 positional arguments but 3 were given) (Python 3.14.8, 2026-10-11) -->
+  <defs>
+    <marker id="ders5-method-errors-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
+    <marker id="ders5-method-errors-aherr" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-err" d="M0,0 L12,6 L0,12 z"/></marker>
+    <style>
+/* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
+.dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
+.dg .bg{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF)}
+.dg .tx,.dg .lb,.dg .ti,.dg .cd,.dg .cd24{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .tx{font-size:24px;font-weight:400}
+.dg .lb{font-size:24px;font-weight:600}
+.dg .ti{font-size:28px;font-weight:700}
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-family:"JetBrains Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-weight:500}
+.dg .cd{font-size:28px}
+.dg .cd24{font-size:24px}
+.dg .ty{font-size:24px;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .nm{font-size:28px;font-weight:600;fill:#FFFFFF;fill:var(--d-on-name,#FFFFFF)}
+.dg .src{font-size:18px;font-weight:400;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .sub{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .okt{fill:#0D6385;fill:var(--d-ok,#0D6385);font-weight:600}
+.dg .errt{fill:#C21C20;fill:var(--d-err,#C21C20);font-weight:600}
+.dg .b7{font-weight:700}
+.dg .pre{white-space:pre}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .boxm{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .boxhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .blk{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2.5}
+.dg .frame{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .local{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .tmpl{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .cell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellh{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .name{fill:#181C3E;fill:var(--d-name,#181C3E)}
+.dg .soft{fill:#F3F4F8;fill:var(--d-surface,#F3F4F8)}
+.dg .outp{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .tint{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .hl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3)}
+.dg .emph{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .errbox{fill:#FCEDEE;fill:var(--d-err-bg,#FCEDEE);stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .errdash{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .okbox{fill:#E9F6FA;fill:var(--d-ok-bg,#E9F6FA);stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .key{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .dot{fill:#3B4595;fill:var(--d-brand,#3B4595)}
+.dg .dot0{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .ar,.dg .ld,.dg .axis{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E)}
+.dg .ar,.dg .axis{stroke-width:2.5}
+.dg .ld{stroke-width:2}
+.dg .ar-m{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .ar-old{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .ar-ok{fill:none;stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .ar-err{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .sep{fill:none;stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .dash{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2;stroke-dasharray:8 6}
+.dg .ah{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .ah-m{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .ah-ok{fill:#0D6385;fill:var(--d-ok,#0D6385)}
+.dg .ah-err{fill:#C21C20;fill:var(--d-err,#C21C20)}
+.dg .co{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .co-t{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF);font-size:24px;font-weight:700;text-anchor:middle}
+.dg .sec{stroke:#3B4595;stroke:var(--d-second,#3B4595)}
+/* dg v4 type renkleri · authoring/DIAGRAMS.md §10'dan aynen kopyalanır (dg v3 bloğundan sonra) */
+.dg rect.t-int,.dg path.t-int,.dg circle.t-int{fill:#F2CEB3;fill:var(--t-int-bg,#F2CEB3);stroke:#854B00;stroke:var(--t-int,#854B00)}
+.dg text.t-int,.dg tspan.t-int{fill:#613109;fill:var(--t-int-tx,#613109)}
+.dg rect.t-float,.dg path.t-float,.dg circle.t-float{fill:#FFF1C6;fill:var(--t-float-bg,#FFF1C6);stroke:#9F7000;stroke:var(--t-float,#9F7000)}
+.dg text.t-float,.dg tspan.t-float{fill:#5D420E;fill:var(--t-float-tx,#5D420E)}
+.dg rect.t-bool,.dg path.t-bool,.dg circle.t-bool{fill:#C4E9E1;fill:var(--t-bool-bg,#C4E9E1);stroke:#0E7A6D;stroke:var(--t-bool,#0E7A6D)}
+.dg text.t-bool,.dg tspan.t-bool{fill:#0A473F;fill:var(--t-bool-tx,#0A473F)}
+.dg rect.t-str,.dg path.t-str,.dg circle.t-str{fill:#D9F6DD;fill:var(--t-str-bg,#D9F6DD);stroke:#296A3B;stroke:var(--t-str,#296A3B)}
+.dg text.t-str,.dg tspan.t-str{fill:#1A4B28;fill:var(--t-str-tx,#1A4B28)}
+.dg rect.t-none,.dg path.t-none,.dg circle.t-none{fill:#F6F3EF;fill:var(--t-none-bg,#F6F3EF);stroke:#534C45;stroke:var(--t-none,#534C45)}
+.dg text.t-none,.dg tspan.t-none{fill:#413C38;fill:var(--t-none-tx,#413C38)}
+.dg rect.t-list,.dg path.t-list,.dg circle.t-list{fill:#F3C8DB;fill:var(--t-list-bg,#F3C8DB);stroke:#8A2B60;stroke:var(--t-list,#8A2B60)}
+.dg text.t-list,.dg tspan.t-list{fill:#651E45;fill:var(--t-list-tx,#651E45)}
+.dg rect.t-tuple,.dg path.t-tuple,.dg circle.t-tuple{fill:#E3EAF2;fill:var(--t-tuple-bg,#E3EAF2);stroke:#4A6378;stroke:var(--t-tuple,#4A6378)}
+.dg text.t-tuple,.dg tspan.t-tuple{fill:#2C3E4F;fill:var(--t-tuple-tx,#2C3E4F)}
+.dg rect.t-dict,.dg path.t-dict,.dg circle.t-dict{fill:#DBCEC4;fill:var(--t-dict-bg,#DBCEC4);stroke:#4F2611;stroke:var(--t-dict,#4F2611)}
+.dg text.t-dict,.dg tspan.t-dict{fill:#4C2817;fill:var(--t-dict-tx,#4C2817)}
+.dg rect.t-set,.dg path.t-set,.dg circle.t-set{fill:#F2F8D6;fill:var(--t-set-bg,#F2F8D6);stroke:#747C42;stroke:var(--t-set,#747C42)}
+.dg text.t-set,.dg tspan.t-set{fill:#3F4418;fill:var(--t-set-tx,#3F4418)}
+.dg rect.boxhl,.dg path.boxhl,.dg rect.cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595)}
+/* kod PyCharm gibi: ligature yok */
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-variant-ligatures:none;font-feature-settings:"liga" 0,"calt" 0}
+    </style>
+  </defs>
+  <rect class="bg" width="1152" height="426"/>
+  <rect class="soft" x="2" y="4" width="352" height="128" rx="4"/>
+  <text class="cd24" x="18" y="32">class Greeting:</text>
+  <text class="cd24 pre" x="18" y="58" xml:space="preserve">    def say():</text>
+  <text class="cd24 pre" x="18" y="84" xml:space="preserve">        print(<tspan class="t-str">"Selam"</tspan>)</text>
+  <text class="cd24" x="18" y="120">Greeting().say()</text>
+  <ellipse class="emph" cx="190.8" cy="50" rx="20" ry="16"/>
+  <path class="ar" d="M258,112 H397" marker-end="url(#ders5-method-errors-ah)"/>
+  <rect class="box" x="400" y="90" width="210" height="44" rx="6"/>
+  <text class="lb sub mid" x="505" y="120">Greeting object</text>
+  <rect class="local" x="700" y="4" width="220" height="136"/>
+  <text class="cd24 b7" x="716" y="36">say</text>
+  <path class="sep" d="M700,50 H920"/>
+  <path class="ar" d="M610,112 H713" marker-end="url(#ders5-method-errors-ah)"/>
+  <rect class="errbox" x="716" y="92" width="60" height="40" rx="4"/>
+  <text class="cd24 errt mid" x="746" y="120">?</text>
+  <text class="tx sub" x="792" y="120">yer yok</text>
+  <text class="cd24 errt" x="2" y="168">TypeError: Greeting.say() takes 0 positional arguments but 1 was given</text>
+  <path class="sep" d="M2,188 H1150"/>
+  <rect class="soft" x="2" y="210" width="290" height="72" rx="4"/>
+  <text class="cd24" x="18" y="238">k = PiggyBank()</text>
+  <text class="cd24" x="18" y="268">k.deposit(k, <tspan class="t-int">100</tspan>)</text>
+  <ellipse class="emph" cx="169.2" cy="260" rx="18" ry="17"/>
+  <rect class="box" x="330" y="236" width="230" height="98" rx="6"/>
+  <text class="lb sub mid" x="445" y="293">PiggyBank object</text>
+  <rect class="box t-int" x="488" y="342" width="72" height="36" rx="6"/>
+  <text class="cd24 mid t-int" x="524" y="368">100</text>
+  <rect class="local" x="840" y="196" width="306" height="190"/>
+  <text class="cd24 b7" x="856" y="226">deposit</text>
+  <path class="sep" d="M840,238 H1146"/>
+  <rect class="name" x="856" y="240" width="99" height="40" rx="6"/>
+  <text class="nm mid" x="905.5" y="270">self</text>
+  <rect class="name" x="856" y="290" width="133" height="40" rx="6"/>
+  <text class="nm mid" x="922.5" y="320">amount</text>
+  <rect class="errdash" x="856" y="342" width="60" height="36" rx="4"/>
+  <text class="cd24 errt mid" x="886" y="368">?</text>
+  <text class="tx sub" x="932" y="368">yer yok</text>
+  <text class="tx sub mid" x="700" y="248">Python verir</text>
+  <path class="ar" d="M560,260 H853" marker-end="url(#ders5-method-errors-ah)"/>
+  <text class="tx sub mid" x="700" y="298">elle yazılan k</text>
+  <path class="ar-err" d="M560,310 H853" marker-end="url(#ders5-method-errors-aherr)"/>
+  <path class="ar" d="M560,360 H853" marker-end="url(#ders5-method-errors-ah)"/>
+  <text class="cd24 errt" x="2" y="414">TypeError: PiggyBank.deposit() takes 2 positional arguments but 3 were given</text>
+</svg>

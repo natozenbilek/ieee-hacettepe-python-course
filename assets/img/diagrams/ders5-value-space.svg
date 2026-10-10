@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 428" width="1152" height="428" role="img" aria-labelledby="ders5-value-space-t ders5-value-space-d">
+  <title id="ders5-value-space-t">coefficient() function'ı ve aynı bilginin tablosu</title>
+  <desc id="ders5-value-space-d">Solda Ders 4'teki coefficient() function'ı, kod paneli içinde: def coefficient(letter):, sonra if letter == "A1": return 4.00, elif letter == "A2": return 3.75, elif letter == "A3": return 3.50, üç nokta ile atlanan satırlar, elif letter == "D": return 1.75, else: return 0.00. Harfler str (yeşil), katsayılar float (hardal sarısı). Sağ kenarda bir köşeli ayraç: 11 dal, 23 satır. Sağda aynı bilgi on dört satırlık bir tablo, yan yana iki yarıda yedişer satır, başlıklar harf notu ve katsayı: A1 4.00; A2 3.75; A3 3.50; B1 3.25; B2 3.00; B3 2.75; C1 2.50; C2 2.25; C3 2.00; D 1.75; F1 0.00; F2 0.00; F3 0.00; F6 0.00. Harf notları str (yeşil), katsayılar float (hardal sarısı); tablo çivit mavisi çerçeveli. Kaynak: Hacettepe Ön Lisans ve Lisans Eğitim-Öğretim ve Sınav Yönetmeliği, Madde 24.</desc>
+  <!-- source: ders4 coefficient(letter): 1 if + 9 elif + else = 11 dal, 23 satır; tablo GRADE_POINTS ile aynı 14 değer (Python 3.14.8, 2026-10-11); 2026-10-15 review: katsayılar kodla aynı yazılışta, ondalık noktayla -->
+  <defs>
+    <marker id="ders5-value-space-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
+    <style>
+/* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
+.dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
+.dg .bg{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF)}
+.dg .tx,.dg .lb,.dg .ti,.dg .cd,.dg .cd24{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .tx{font-size:24px;font-weight:400}
+.dg .lb{font-size:24px;font-weight:600}
+.dg .ti{font-size:28px;font-weight:700}
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-family:"JetBrains Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-weight:500}
+.dg .cd{font-size:28px}
+.dg .cd24{font-size:24px}
+.dg .ty{font-size:24px;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .nm{font-size:28px;font-weight:600;fill:#FFFFFF;fill:var(--d-on-name,#FFFFFF)}
+.dg .src{font-size:18px;font-weight:400;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .sub{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .okt{fill:#0D6385;fill:var(--d-ok,#0D6385);font-weight:600}
+.dg .errt{fill:#C21C20;fill:var(--d-err,#C21C20);font-weight:600}
+.dg .b7{font-weight:700}
+.dg .pre{white-space:pre}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .boxm{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .boxhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .blk{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2.5}
+.dg .frame{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .local{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .tmpl{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .cell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellh{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .name{fill:#181C3E;fill:var(--d-name,#181C3E)}
+.dg .soft{fill:#F3F4F8;fill:var(--d-surface,#F3F4F8)}
+.dg .outp{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .tint{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .hl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3)}
+.dg .emph{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .errbox{fill:#FCEDEE;fill:var(--d-err-bg,#FCEDEE);stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .errdash{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .okbox{fill:#E9F6FA;fill:var(--d-ok-bg,#E9F6FA);stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .key{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .dot{fill:#3B4595;fill:var(--d-brand,#3B4595)}
+.dg .dot0{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .ar,.dg .ld,.dg .axis{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E)}
+.dg .ar,.dg .axis{stroke-width:2.5}
+.dg .ld{stroke-width:2}
+.dg .ar-m{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .ar-old{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .ar-ok{fill:none;stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .ar-err{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .sep{fill:none;stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .dash{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2;stroke-dasharray:8 6}
+.dg .ah{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .ah-m{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .ah-ok{fill:#0D6385;fill:var(--d-ok,#0D6385)}
+.dg .ah-err{fill:#C21C20;fill:var(--d-err,#C21C20)}
+.dg .co{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .co-t{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF);font-size:24px;font-weight:700;text-anchor:middle}
+.dg .sec{stroke:#3B4595;stroke:var(--d-second,#3B4595)}
+/* dg v4 type renkleri · authoring/DIAGRAMS.md §10'dan aynen kopyalanır (dg v3 bloğundan sonra) */
+.dg rect.t-int,.dg path.t-int,.dg circle.t-int{fill:#F2CEB3;fill:var(--t-int-bg,#F2CEB3);stroke:#854B00;stroke:var(--t-int,#854B00)}
+.dg text.t-int,.dg tspan.t-int{fill:#613109;fill:var(--t-int-tx,#613109)}
+.dg rect.t-float,.dg path.t-float,.dg circle.t-float{fill:#FFF1C6;fill:var(--t-float-bg,#FFF1C6);stroke:#9F7000;stroke:var(--t-float,#9F7000)}
+.dg text.t-float,.dg tspan.t-float{fill:#5D420E;fill:var(--t-float-tx,#5D420E)}
+.dg rect.t-bool,.dg path.t-bool,.dg circle.t-bool{fill:#C4E9E1;fill:var(--t-bool-bg,#C4E9E1);stroke:#0E7A6D;stroke:var(--t-bool,#0E7A6D)}
+.dg text.t-bool,.dg tspan.t-bool{fill:#0A473F;fill:var(--t-bool-tx,#0A473F)}
+.dg rect.t-str,.dg path.t-str,.dg circle.t-str{fill:#D9F6DD;fill:var(--t-str-bg,#D9F6DD);stroke:#296A3B;stroke:var(--t-str,#296A3B)}
+.dg text.t-str,.dg tspan.t-str{fill:#1A4B28;fill:var(--t-str-tx,#1A4B28)}
+.dg rect.t-none,.dg path.t-none,.dg circle.t-none{fill:#F6F3EF;fill:var(--t-none-bg,#F6F3EF);stroke:#534C45;stroke:var(--t-none,#534C45)}
+.dg text.t-none,.dg tspan.t-none{fill:#413C38;fill:var(--t-none-tx,#413C38)}
+.dg rect.t-list,.dg path.t-list,.dg circle.t-list{fill:#F3C8DB;fill:var(--t-list-bg,#F3C8DB);stroke:#8A2B60;stroke:var(--t-list,#8A2B60)}
+.dg text.t-list,.dg tspan.t-list{fill:#651E45;fill:var(--t-list-tx,#651E45)}
+.dg rect.t-tuple,.dg path.t-tuple,.dg circle.t-tuple{fill:#E3EAF2;fill:var(--t-tuple-bg,#E3EAF2);stroke:#4A6378;stroke:var(--t-tuple,#4A6378)}
+.dg text.t-tuple,.dg tspan.t-tuple{fill:#2C3E4F;fill:var(--t-tuple-tx,#2C3E4F)}
+.dg rect.t-dict,.dg path.t-dict,.dg circle.t-dict{fill:#DBCEC4;fill:var(--t-dict-bg,#DBCEC4);stroke:#4F2611;stroke:var(--t-dict,#4F2611)}
+.dg text.t-dict,.dg tspan.t-dict{fill:#4C2817;fill:var(--t-dict-tx,#4C2817)}
+.dg rect.t-set,.dg path.t-set,.dg circle.t-set{fill:#F2F8D6;fill:var(--t-set-bg,#F2F8D6);stroke:#747C42;stroke:var(--t-set,#747C42)}
+.dg text.t-set,.dg tspan.t-set{fill:#3F4418;fill:var(--t-set-tx,#3F4418)}
+.dg rect.boxhl,.dg path.boxhl,.dg rect.cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595)}
+/* kod PyCharm gibi: JetBrains Mono ligature'ları kapalı (>= iki karakter kalır) */
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-variant-ligatures:none;font-feature-settings:"liga" 0,"calt" 0}
+    </style>
+  </defs>
+  <rect class="bg" width="1152" height="428"/>
+  <rect class="soft" x="2" y="6" width="576" height="420" rx="4"/>
+  <text class="cd24" x="20" y="42">def coefficient(letter):</text>
+  <text class="cd24 pre" x="20" y="72" xml:space="preserve">    if letter == <tspan class="t-str">"A1"</tspan>:</text>
+  <text class="cd24 pre" x="20" y="102" xml:space="preserve">        return <tspan class="t-float">4.00</tspan></text>
+  <text class="cd24 pre" x="20" y="132" xml:space="preserve">    elif letter == <tspan class="t-str">"A2"</tspan>:</text>
+  <text class="cd24 pre" x="20" y="162" xml:space="preserve">        return <tspan class="t-float">3.75</tspan></text>
+  <text class="cd24 pre" x="20" y="192" xml:space="preserve">    elif letter == <tspan class="t-str">"A3"</tspan>:</text>
+  <text class="cd24 pre" x="20" y="222" xml:space="preserve">        return <tspan class="t-float">3.50</tspan></text>
+  <circle class="dot" cx="80" cy="244" r="4"/>
+  <circle class="dot" cx="96" cy="244" r="4"/>
+  <circle class="dot" cx="112" cy="244" r="4"/>
+  <text class="cd24 pre" x="20" y="282" xml:space="preserve">    elif letter == <tspan class="t-str">"D"</tspan>:</text>
+  <text class="cd24 pre" x="20" y="312" xml:space="preserve">        return <tspan class="t-float">1.75</tspan></text>
+  <text class="cd24 pre" x="20" y="342" xml:space="preserve">    else:</text>
+  <text class="cd24 pre" x="20" y="372" xml:space="preserve">        return <tspan class="t-float">0.00</tspan></text>
+  <path class="ld" d="M548,20 H560 V412 H548"/>
+  <text class="lb sub end" x="540" y="400">11 dal, 23 satır</text>
+  <path class="sep" d="M600,6 V426"/>
+  <rect class="cellh" x="628" y="12" width="130" height="44"/>
+  <rect class="cellh" x="758" y="12" width="120" height="44"/>
+  <text class="lb mid" x="693" y="42">harf notu</text>
+  <text class="lb mid" x="818" y="42">katsayı</text>
+  <rect class="cell" x="628" y="56" width="130" height="44"/>
+  <rect class="cell" x="758" y="56" width="120" height="44"/>
+  <text class="cd24 mid t-str" x="693" y="86">A1</text>
+  <text class="cd24 mid t-float" x="818" y="86">4.00</text>
+  <rect class="cell" x="628" y="100" width="130" height="44"/>
+  <rect class="cell" x="758" y="100" width="120" height="44"/>
+  <text class="cd24 mid t-str" x="693" y="130">A2</text>
+  <text class="cd24 mid t-float" x="818" y="130">3.75</text>
+  <rect class="cell" x="628" y="144" width="130" height="44"/>
+  <rect class="cell" x="758" y="144" width="120" height="44"/>
+  <text class="cd24 mid t-str" x="693" y="174">A3</text>
+  <text class="cd24 mid t-float" x="818" y="174">3.50</text>
+  <rect class="cell" x="628" y="188" width="130" height="44"/>
+  <rect class="cell" x="758" y="188" width="120" height="44"/>
+  <text class="cd24 mid t-str" x="693" y="218">B1</text>
+  <text class="cd24 mid t-float" x="818" y="218">3.25</text>
+  <rect class="cell" x="628" y="232" width="130" height="44"/>
+  <rect class="cell" x="758" y="232" width="120" height="44"/>
+  <text class="cd24 mid t-str" x="693" y="262">B2</text>
+  <text class="cd24 mid t-float" x="818" y="262">3.00</text>
+  <rect class="cell" x="628" y="276" width="130" height="44"/>
+  <rect class="cell" x="758" y="276" width="120" height="44"/>
+  <text class="cd24 mid t-str" x="693" y="306">B3</text>
+  <text class="cd24 mid t-float" x="818" y="306">2.75</text>
+  <rect class="cell" x="628" y="320" width="130" height="44"/>
+  <rect class="cell" x="758" y="320" width="120" height="44"/>
+  <text class="cd24 mid t-str" x="693" y="350">C1</text>
+  <text class="cd24 mid t-float" x="818" y="350">2.50</text>
+  <rect class="cellh" x="896" y="12" width="130" height="44"/>
+  <rect class="cellh" x="1026" y="12" width="120" height="44"/>
+  <text class="lb mid" x="961" y="42">harf notu</text>
+  <text class="lb mid" x="1086" y="42">katsayı</text>
+  <rect class="cell" x="896" y="56" width="130" height="44"/>
+  <rect class="cell" x="1026" y="56" width="120" height="44"/>
+  <text class="cd24 mid t-str" x="961" y="86">C2</text>
+  <text class="cd24 mid t-float" x="1086" y="86">2.25</text>
+  <rect class="cell" x="896" y="100" width="130" height="44"/>
+  <rect class="cell" x="1026" y="100" width="120" height="44"/>
+  <text class="cd24 mid t-str" x="961" y="130">C3</text>
+  <text class="cd24 mid t-float" x="1086" y="130">2.00</text>
+  <rect class="cell" x="896" y="144" width="130" height="44"/>
+  <rect class="cell" x="1026" y="144" width="120" height="44"/>
+  <text class="cd24 mid t-str" x="961" y="174">D</text>
+  <text class="cd24 mid t-float" x="1086" y="174">1.75</text>
+  <rect class="cell" x="896" y="188" width="130" height="44"/>
+  <rect class="cell" x="1026" y="188" width="120" height="44"/>
+  <text class="cd24 mid t-str" x="961" y="218">F1</text>
+  <text class="cd24 mid t-float" x="1086" y="218">0.00</text>
+  <rect class="cell" x="896" y="232" width="130" height="44"/>
+  <rect class="cell" x="1026" y="232" width="120" height="44"/>
+  <text class="cd24 mid t-str" x="961" y="262">F2</text>
+  <text class="cd24 mid t-float" x="1086" y="262">0.00</text>
+  <rect class="cell" x="896" y="276" width="130" height="44"/>
+  <rect class="cell" x="1026" y="276" width="120" height="44"/>
+  <text class="cd24 mid t-str" x="961" y="306">F3</text>
+  <text class="cd24 mid t-float" x="1086" y="306">0.00</text>
+  <rect class="cell" x="896" y="320" width="130" height="44"/>
+  <rect class="cell" x="1026" y="320" width="120" height="44"/>
+  <text class="cd24 mid t-str" x="961" y="350">F6</text>
+  <text class="cd24 mid t-float" x="1086" y="350">0.00</text>
+  <rect class="emph" x="620" y="4" width="530" height="368"/>
+  <g class="dg-small">
+  <text class="src" x="628" y="398">Hacettepe Ön Lisans ve Lisans Eğitim-Öğretim</text>
+  <text class="src" x="628" y="420">ve Sınav Yönetmeliği, Madde 24</text>
+  </g>
+</svg>

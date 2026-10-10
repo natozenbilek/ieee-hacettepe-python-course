@@ -1,0 +1,6 @@
+{
+  "d1-print-satir": {"options": [{"code": "A B C D"}, {"code": "A\nB C\nD"}, {"code": "A\nBC\nD"}, {"code": "A\nB\nC\nD"}], "answer": 2, "why": "Her print() bir satır yazar; virgülle ayrılan argument'lar arasına bir boşluk konur."},
+  "d1-hata-sira": {"options": [{"code": "A\nB\nC\nD"}, {"text": "A\nB, ardından NameError"}, {"text": "Hiçbir şey, yalnızca NameError"}, {"text": "A\nB\nD ve NameError"}], "answer": 2, "why": "NameError 3. satır çalışınca bulunur; ilk iki satır çoktan yazılmıştır, 4. satır çalışmaz."},
+  "d1-tekrar-parantez": {"options": [{"code": "Hacettepe"}, {"code": "Hacettepe\nAnkara"}, {"text": "Hacettepe, ardından SyntaxError"}, {"text": "Hiçbir şey, yalnızca SyntaxError"}], "answer": 4, "why": "SyntaxError dosya çalışmadan önce bulunur; ilk satır da çalışmaz."},
+  "d1-bolme": {"options": [{"code": "5 3 2"}, {"code": "5.75 3 2.0"}, {"code": "5 3 2.0"}, {"code": "5 5.75 2.0"}], "answer": 3, "why": "// tam kısmı, % kalanı verir; / her zaman float verir."}
+}

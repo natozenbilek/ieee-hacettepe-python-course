@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="dg cct" viewBox="0 0 1152 330" width="1152" height="330" role="img" aria-labelledby="course-collections-table-t course-collections-table-d" data-state="w4a">
+  <title id="course-collections-table-t">str, range, list, tuple, dict ve set</title>
+  <desc id="course-collections-table-d">Collection tablosu; sütunlar sırası korunur mu?, değiştirilebilir mi?, index var mı?, tekrar olur mu?. str (yeşil): evet, hayır, evet, evet. range: evet, hayır, evet, hayır. list (vişneçürüğü): evet, evet, evet, evet. tuple (mavi-gri): evet, hayır, evet, evet. evet'ler petrol mavisi. w4a durumunda list'in değiştirilebilir mi? hücresi açık mavi, çivit mavisi çerçeveyle vurgulu; dict ve set satırları gri kesikli, Ders 5'te dolacak. w5a durumunda dict (kahverengi): evet (eklenme sırası), evet, hayır (key ile okunur), key hayır, value evet; set (zeytin yeşili): hayır, evet, hayır, hayır; dict ve set adları vurgulu.</desc>
+  <!-- source: w4a: list(range(0, 10, 3)) -> [0, 3, 6, 9]; "aa".count("a"), (1, 1).count(1), [1, 1].count(1) -> 2 2 2. w5a: {"b": 1, "a": 2} -> {'b': 1, 'a': 2}; {"MAT123": "C1", "MAT123": "A3"} -> {'MAT123': 'A3'}; {"A": 1, "B": 1} keeps both; len({"C1", "B2", "C1"}) -> 2; a set index is a TypeError (Python 3.14.8, 2026-10-10). States: w4a (ders4-A S57), w5a (ders5-A S49). -->
+  <defs>
+    <marker id="course-collections-table-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
+    <marker id="course-collections-table-ahm" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-m" d="M0,0 L12,6 L0,12 z"/></marker>
+    <marker id="course-collections-table-aherr" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-err" d="M0,0 L12,6 L0,12 z"/></marker>
+    <style>
+/* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
+.dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
+.dg .bg{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF)}
+.dg .tx,.dg .lb,.dg .ti,.dg .cd,.dg .cd24{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .tx{font-size:24px;font-weight:400}
+.dg .lb{font-size:24px;font-weight:600}
+.dg .ti{font-size:28px;font-weight:700}
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-family:"JetBrains Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-weight:500}
+.dg .cd{font-size:28px}
+.dg .cd24{font-size:24px}
+.dg .ty{font-size:24px;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .nm{font-size:28px;font-weight:600;fill:#FFFFFF;fill:var(--d-on-name,#FFFFFF)}
+.dg .src{font-size:18px;font-weight:400;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .sub{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .okt{fill:#0D6385;fill:var(--d-ok,#0D6385);font-weight:600}
+.dg .errt{fill:#C21C20;fill:var(--d-err,#C21C20);font-weight:600}
+.dg .b7{font-weight:700}
+.dg .pre{white-space:pre}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .boxm{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .boxhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .blk{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2.5}
+.dg .frame{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .local{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .tmpl{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .cell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellh{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .name{fill:#181C3E;fill:var(--d-name,#181C3E)}
+.dg .soft{fill:#F3F4F8;fill:var(--d-surface,#F3F4F8)}
+.dg .outp{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .tint{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .hl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3)}
+.dg .emph{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .errbox{fill:#FCEDEE;fill:var(--d-err-bg,#FCEDEE);stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .errdash{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .okbox{fill:#E9F6FA;fill:var(--d-ok-bg,#E9F6FA);stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .key{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .dot{fill:#3B4595;fill:var(--d-brand,#3B4595)}
+.dg .dot0{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .ar,.dg .ld,.dg .axis{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E)}
+.dg .ar,.dg .axis{stroke-width:2.5}
+.dg .ld{stroke-width:2}
+.dg .ar-m{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .ar-old{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .ar-ok{fill:none;stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .ar-err{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .sep{fill:none;stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .dash{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2;stroke-dasharray:8 6}
+.dg .ah{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .ah-m{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .ah-ok{fill:#0D6385;fill:var(--d-ok,#0D6385)}
+.dg .ah-err{fill:#C21C20;fill:var(--d-err,#C21C20)}
+.dg .co{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .co-t{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF);font-size:24px;font-weight:700;text-anchor:middle}
+.dg .sec{stroke:#3B4595;stroke:var(--d-second,#3B4595)}
+/* dg v4 type renkleri · authoring/DIAGRAMS.md §10'dan aynen kopyalanır (dg v3 bloğundan sonra) */
+.dg rect.t-int,.dg path.t-int,.dg circle.t-int{fill:#F2CEB3;fill:var(--t-int-bg,#F2CEB3);stroke:#854B00;stroke:var(--t-int,#854B00)}
+.dg text.t-int,.dg tspan.t-int{fill:#613109;fill:var(--t-int-tx,#613109)}
+.dg rect.t-float,.dg path.t-float,.dg circle.t-float{fill:#FFF1C6;fill:var(--t-float-bg,#FFF1C6);stroke:#9F7000;stroke:var(--t-float,#9F7000)}
+.dg text.t-float,.dg tspan.t-float{fill:#5D420E;fill:var(--t-float-tx,#5D420E)}
+.dg rect.t-bool,.dg path.t-bool,.dg circle.t-bool{fill:#C4E9E1;fill:var(--t-bool-bg,#C4E9E1);stroke:#0E7A6D;stroke:var(--t-bool,#0E7A6D)}
+.dg text.t-bool,.dg tspan.t-bool{fill:#0A473F;fill:var(--t-bool-tx,#0A473F)}
+.dg rect.t-str,.dg path.t-str,.dg circle.t-str{fill:#D9F6DD;fill:var(--t-str-bg,#D9F6DD);stroke:#296A3B;stroke:var(--t-str,#296A3B)}
+.dg text.t-str,.dg tspan.t-str{fill:#1A4B28;fill:var(--t-str-tx,#1A4B28)}
+.dg rect.t-none,.dg path.t-none,.dg circle.t-none{fill:#F6F3EF;fill:var(--t-none-bg,#F6F3EF);stroke:#534C45;stroke:var(--t-none,#534C45)}
+.dg text.t-none,.dg tspan.t-none{fill:#413C38;fill:var(--t-none-tx,#413C38)}
+.dg rect.t-list,.dg path.t-list,.dg circle.t-list{fill:#F3C8DB;fill:var(--t-list-bg,#F3C8DB);stroke:#8A2B60;stroke:var(--t-list,#8A2B60)}
+.dg text.t-list,.dg tspan.t-list{fill:#651E45;fill:var(--t-list-tx,#651E45)}
+.dg rect.t-tuple,.dg path.t-tuple,.dg circle.t-tuple{fill:#E3EAF2;fill:var(--t-tuple-bg,#E3EAF2);stroke:#4A6378;stroke:var(--t-tuple,#4A6378)}
+.dg text.t-tuple,.dg tspan.t-tuple{fill:#2C3E4F;fill:var(--t-tuple-tx,#2C3E4F)}
+.dg rect.t-dict,.dg path.t-dict,.dg circle.t-dict{fill:#DBCEC4;fill:var(--t-dict-bg,#DBCEC4);stroke:#4F2611;stroke:var(--t-dict,#4F2611)}
+.dg text.t-dict,.dg tspan.t-dict{fill:#4C2817;fill:var(--t-dict-tx,#4C2817)}
+.dg rect.t-set,.dg path.t-set,.dg circle.t-set{fill:#F2F8D6;fill:var(--t-set-bg,#F2F8D6);stroke:#747C42;stroke:var(--t-set,#747C42)}
+.dg text.t-set,.dg tspan.t-set{fill:#3F4418;fill:var(--t-set-tx,#3F4418)}
+.dg rect.boxhl,.dg path.boxhl,.dg rect.cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595)}
+.dg .mcell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .mbox{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .mname{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .dash86{stroke-dasharray:8 6}
+/* cct: data-state on the root svg element selects one state; parts of other states are hidden (DIAGRAMS.md §8.16) */
+.cct .s-w4a,.cct .s-w5a{display:none}
+.cct[data-state="w4a"] .s-w4a{display:inline}
+.cct[data-state="w5a"] .s-w5a{display:inline}
+    </style>
+  </defs>
+  <rect class="bg" width="1152" height="330"/>
+<rect class="cellh" x="16" y="2" width="200" height="50"/>
+<rect class="cellh" x="216" y="2" width="230" height="50"/>
+<text class="lb mid" x="331" y="35">sırası korunur mu?</text>
+<rect class="cellh" x="446" y="2" width="230" height="50"/>
+<text class="lb mid" x="561" y="35">değiştirilebilir mi?</text>
+<rect class="cellh" x="676" y="2" width="230" height="50"/>
+<text class="lb mid" x="791" y="35">index var mı?</text>
+<rect class="cellh" x="906" y="2" width="230" height="50"/>
+<text class="lb mid" x="1021" y="35">tekrar olur mu?</text>
+<rect class="cell" x="16" y="52" width="200" height="44"/>
+<rect class="cell" x="216" y="52" width="230" height="44"/>
+<rect class="cell" x="446" y="52" width="230" height="44"/>
+<rect class="cell" x="676" y="52" width="230" height="44"/>
+<rect class="cell" x="906" y="52" width="230" height="44"/>
+<rect class="cell" x="16" y="96" width="200" height="44"/>
+<rect class="cell" x="216" y="96" width="230" height="44"/>
+<rect class="cell" x="446" y="96" width="230" height="44"/>
+<rect class="cell" x="676" y="96" width="230" height="44"/>
+<rect class="cell" x="906" y="96" width="230" height="44"/>
+<rect class="cell" x="16" y="140" width="200" height="44"/>
+<rect class="cell" x="216" y="140" width="230" height="44"/>
+<rect class="cell" x="676" y="140" width="230" height="44"/>
+<rect class="cell" x="906" y="140" width="230" height="44"/>
+<rect class="cell" x="16" y="184" width="200" height="44"/>
+<rect class="cell" x="216" y="184" width="230" height="44"/>
+<rect class="cell" x="446" y="184" width="230" height="44"/>
+<rect class="cell" x="676" y="184" width="230" height="44"/>
+<rect class="cell" x="906" y="184" width="230" height="44"/>
+<g class="s-w4a">
+<rect class="cellhl" x="446" y="140" width="230" height="44"/>
+</g>
+<g class="s-w5a">
+<rect class="cell" x="446" y="140" width="230" height="44"/>
+</g>
+<text class="cd mid t-str" x="116" y="84">str</text>
+<text class="tx mid okt" x="331" y="82">evet</text>
+<text class="tx mid" x="561" y="82">hayır</text>
+<text class="tx mid okt" x="791" y="82">evet</text>
+<text class="tx mid okt" x="1021" y="82">evet</text>
+<text class="cd mid" x="116" y="128">range</text>
+<text class="tx mid okt" x="331" y="126">evet</text>
+<text class="tx mid" x="561" y="126">hayır</text>
+<text class="tx mid okt" x="791" y="126">evet</text>
+<text class="tx mid" x="1021" y="126">hayır</text>
+<text class="cd mid t-list" x="116" y="172">list</text>
+<text class="tx mid okt" x="331" y="170">evet</text>
+<text class="tx mid okt" x="561" y="170">evet</text>
+<text class="tx mid okt" x="791" y="170">evet</text>
+<text class="tx mid okt" x="1021" y="170">evet</text>
+<text class="cd mid t-tuple" x="116" y="216">tuple</text>
+<text class="tx mid okt" x="331" y="214">evet</text>
+<text class="tx mid" x="561" y="214">hayır</text>
+<text class="tx mid okt" x="791" y="214">evet</text>
+<text class="tx mid okt" x="1021" y="214">evet</text>
+<g class="s-w4a">
+<rect class="mcell dash86" x="16" y="228" width="200" height="44"/>
+<rect class="mcell dash86" x="216" y="228" width="230" height="44"/>
+<rect class="mcell dash86" x="446" y="228" width="230" height="44"/>
+<rect class="mcell dash86" x="676" y="228" width="230" height="44"/>
+<rect class="mcell dash86" x="906" y="228" width="230" height="44"/>
+<text class="cd mid sub" x="116" y="260">dict</text>
+<text class="tx sub mid" x="331" y="258">Ders 5</text>
+<rect class="mcell dash86" x="16" y="272" width="200" height="44"/>
+<rect class="mcell dash86" x="216" y="272" width="230" height="44"/>
+<rect class="mcell dash86" x="446" y="272" width="230" height="44"/>
+<rect class="mcell dash86" x="676" y="272" width="230" height="44"/>
+<rect class="mcell dash86" x="906" y="272" width="230" height="44"/>
+<text class="cd mid sub" x="116" y="304">set</text>
+<text class="tx sub mid" x="331" y="302">Ders 5</text>
+</g>
+<g class="s-w5a">
+<rect class="cell" x="216" y="228" width="230" height="44"/>
+<rect class="cell" x="446" y="228" width="230" height="44"/>
+<rect class="cell" x="676" y="228" width="230" height="44"/>
+<rect class="cell" x="906" y="228" width="230" height="44"/>
+<text class="tx mid" x="331" y="258"><tspan class="okt">evet</tspan> (eklenme sırası)</text>
+<text class="tx mid okt" x="561" y="258">evet</text>
+<text class="tx mid" x="791" y="258">hayır (key ile okunur)</text>
+<text class="tx mid" x="1021" y="258">key hayır, value <tspan class="okt">evet</tspan></text>
+<rect class="cell" x="216" y="272" width="230" height="44"/>
+<rect class="cell" x="446" y="272" width="230" height="44"/>
+<rect class="cell" x="676" y="272" width="230" height="44"/>
+<rect class="cell" x="906" y="272" width="230" height="44"/>
+<text class="tx mid" x="331" y="302">hayır</text>
+<text class="tx mid okt" x="561" y="302">evet</text>
+<text class="tx mid" x="791" y="302">hayır</text>
+<text class="tx mid" x="1021" y="302">hayır</text>
+<rect class="cellhl" x="16" y="228" width="200" height="44"/>
+<text class="cd mid t-dict" x="116" y="260">dict</text>
+<rect class="cellhl" x="16" y="272" width="200" height="44"/>
+<text class="cd mid t-set" x="116" y="304">set</text>
+</g>
+</svg>

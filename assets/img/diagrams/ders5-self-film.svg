@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 466" width="1152" height="466" role="img" aria-labelledby="ders5-self-film-t ders5-self-film-d">
+  <title id="ders5-self-film-t">Film şeridi: her çağrıda yeni bir self</title>
+  <desc id="ders5-self-film-d">İki karelik film şeridi. Üstte solda class Course ve __init__ kodu: self.code = code, self.credits = credits, self.grade = grade. Kare 1, d = Course(&quot;MAT123&quot;, 4, &quot;C1&quot;) satırı (# 1) çalışırken: __init__ çerçevesindeki lacivert self etiketi yeni bir Course object'ini gösteriyor; object'te code &quot;MAT123&quot; (str, yeşil), credits 4 (int, turuncu), grade &quot;C1&quot; (str, yeşil); self'in oku çivit mavisi çerçeveli açık mavi bantta; gri d etiketinin yanında kesikli kısa bir çizgi ve henüz bağlanmadı yazısı. Kare 2, e = Course(&quot;FIZ127&quot;, 3, &quot;B2&quot;) satırı (# 2) çalışırken: lacivert d etiketi ilk object'i gösteriyor; yeni __init__ çerçevesindeki self bu kez ikinci, yeni bir object'i gösteriyor: code &quot;FIZ127&quot;, credits 3, grade &quot;B2&quot;; self'in oku açık mavi bantta; e etiketi henüz gri. İlk object iki karede de aynı yerde. Altta print(d.code, d.credits, e.code, e.credits) satırı ve Çıktı: MAT123 4 FIZ127 3. Açıklama: kare n, # n satırı çalışırken; düz ok şu anki bağ, açık mavi bant bu adımda değişen.</desc>
+  <!-- source: run init_two; d = Course("MAT123", 4, "C1")  # 1 / e = Course("FIZ127", 3, "B2")  # 2 -> MAT123 4 FIZ127 3; Python 3.14.8, 2026-10-11 -->
+  <defs>
+    <marker id="ders5-self-film-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
+    <marker id="ders5-self-film-ahm" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-m" d="M0,0 L12,6 L0,12 z"/></marker>
+    <style>
+/* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
+.dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
+.dg .bg{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF)}
+.dg .tx,.dg .lb,.dg .ti,.dg .cd,.dg .cd24{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .tx{font-size:24px;font-weight:400}
+.dg .lb{font-size:24px;font-weight:600}
+.dg .ti{font-size:28px;font-weight:700}
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-family:"JetBrains Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-weight:500}
+.dg .cd{font-size:28px}
+.dg .cd24{font-size:24px}
+.dg .ty{font-size:24px;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .nm{font-size:28px;font-weight:600;fill:#FFFFFF;fill:var(--d-on-name,#FFFFFF)}
+.dg .src{font-size:18px;font-weight:400;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .sub{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .okt{fill:#0D6385;fill:var(--d-ok,#0D6385);font-weight:600}
+.dg .errt{fill:#C21C20;fill:var(--d-err,#C21C20);font-weight:600}
+.dg .b7{font-weight:700}
+.dg .pre{white-space:pre}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .boxm{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .boxhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .blk{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2.5}
+.dg .frame{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .local{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .tmpl{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .cell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellh{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .name{fill:#181C3E;fill:var(--d-name,#181C3E)}
+.dg .soft{fill:#F3F4F8;fill:var(--d-surface,#F3F4F8)}
+.dg .outp{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .tint{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .hl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3)}
+.dg .emph{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .errbox{fill:#FCEDEE;fill:var(--d-err-bg,#FCEDEE);stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .errdash{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .okbox{fill:#E9F6FA;fill:var(--d-ok-bg,#E9F6FA);stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .key{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .dot{fill:#3B4595;fill:var(--d-brand,#3B4595)}
+.dg .dot0{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .ar,.dg .ld,.dg .axis{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E)}
+.dg .ar,.dg .axis{stroke-width:2.5}
+.dg .ld{stroke-width:2}
+.dg .ar-m{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .ar-old{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .ar-ok{fill:none;stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .ar-err{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .sep{fill:none;stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .dash{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2;stroke-dasharray:8 6}
+.dg .ah{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .ah-m{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .ah-ok{fill:#0D6385;fill:var(--d-ok,#0D6385)}
+.dg .ah-err{fill:#C21C20;fill:var(--d-err,#C21C20)}
+.dg .co{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .co-t{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF);font-size:24px;font-weight:700;text-anchor:middle}
+.dg .sec{stroke:#3B4595;stroke:var(--d-second,#3B4595)}
+/* dg v4 type renkleri · authoring/DIAGRAMS.md §10'dan aynen kopyalanır (dg v3 bloğundan sonra) */
+.dg rect.t-int,.dg path.t-int,.dg circle.t-int{fill:#F2CEB3;fill:var(--t-int-bg,#F2CEB3);stroke:#854B00;stroke:var(--t-int,#854B00)}
+.dg text.t-int,.dg tspan.t-int{fill:#613109;fill:var(--t-int-tx,#613109)}
+.dg rect.t-float,.dg path.t-float,.dg circle.t-float{fill:#FFF1C6;fill:var(--t-float-bg,#FFF1C6);stroke:#9F7000;stroke:var(--t-float,#9F7000)}
+.dg text.t-float,.dg tspan.t-float{fill:#5D420E;fill:var(--t-float-tx,#5D420E)}
+.dg rect.t-bool,.dg path.t-bool,.dg circle.t-bool{fill:#C4E9E1;fill:var(--t-bool-bg,#C4E9E1);stroke:#0E7A6D;stroke:var(--t-bool,#0E7A6D)}
+.dg text.t-bool,.dg tspan.t-bool{fill:#0A473F;fill:var(--t-bool-tx,#0A473F)}
+.dg rect.t-str,.dg path.t-str,.dg circle.t-str{fill:#D9F6DD;fill:var(--t-str-bg,#D9F6DD);stroke:#296A3B;stroke:var(--t-str,#296A3B)}
+.dg text.t-str,.dg tspan.t-str{fill:#1A4B28;fill:var(--t-str-tx,#1A4B28)}
+.dg rect.t-none,.dg path.t-none,.dg circle.t-none{fill:#F6F3EF;fill:var(--t-none-bg,#F6F3EF);stroke:#534C45;stroke:var(--t-none,#534C45)}
+.dg text.t-none,.dg tspan.t-none{fill:#413C38;fill:var(--t-none-tx,#413C38)}
+.dg rect.t-list,.dg path.t-list,.dg circle.t-list{fill:#F3C8DB;fill:var(--t-list-bg,#F3C8DB);stroke:#8A2B60;stroke:var(--t-list,#8A2B60)}
+.dg text.t-list,.dg tspan.t-list{fill:#651E45;fill:var(--t-list-tx,#651E45)}
+.dg rect.t-tuple,.dg path.t-tuple,.dg circle.t-tuple{fill:#E3EAF2;fill:var(--t-tuple-bg,#E3EAF2);stroke:#4A6378;stroke:var(--t-tuple,#4A6378)}
+.dg text.t-tuple,.dg tspan.t-tuple{fill:#2C3E4F;fill:var(--t-tuple-tx,#2C3E4F)}
+.dg rect.t-dict,.dg path.t-dict,.dg circle.t-dict{fill:#DBCEC4;fill:var(--t-dict-bg,#DBCEC4);stroke:#4F2611;stroke:var(--t-dict,#4F2611)}
+.dg text.t-dict,.dg tspan.t-dict{fill:#4C2817;fill:var(--t-dict-tx,#4C2817)}
+.dg rect.t-set,.dg path.t-set,.dg circle.t-set{fill:#F2F8D6;fill:var(--t-set-bg,#F2F8D6);stroke:#747C42;stroke:var(--t-set,#747C42)}
+.dg text.t-set,.dg tspan.t-set{fill:#3F4418;fill:var(--t-set-tx,#3F4418)}
+.dg rect.boxhl,.dg path.boxhl,.dg rect.cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595)}
+/* kod PyCharm gibi: JetBrains Mono ligature'ları kapalı (>= iki karakter kalır) */
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-variant-ligatures:none;font-feature-settings:"liga" 0,"calt" 0}
+/* ders5-self-film: name tags not yet bound are muted */
+.dg rect.sf-m{fill:#767C95;fill:var(--d-muted,#767C95)}
+    </style>
+  </defs>
+  <rect class="bg" width="1152" height="466"/>
+  <rect class="soft" x="2" y="2" width="676" height="148" rx="4"/>
+  <text class="cd24" x="16" y="28">class Course:</text>
+  <text class="cd24 pre" x="16" y="56" xml:space="preserve">    def __init__(self, code, credits, grade):</text>
+  <text class="cd24 pre" x="16" y="84" xml:space="preserve">        self.code = code</text>
+  <text class="cd24 pre" x="16" y="112" xml:space="preserve">        self.credits = credits</text>
+  <text class="cd24 pre" x="16" y="140" xml:space="preserve">        self.grade = grade</text>
+  <text class="tx sub" x="704" y="34">Kare n: # n satırı çalışırken</text>
+  <path class="ar" d="M704,76 H749" marker-end="url(#ders5-self-film-ah)"/>
+  <text class="tx" x="766" y="84">şu anki bağ</text>
+  <rect class="boxhl" x="704" y="105" width="44" height="34" rx="4"/>
+  <text class="tx" x="766" y="130">bu adımda değişen</text>
+  <path class="sep" d="M574,158 V404"/>
+  <circle class="co" cx="20" cy="180" r="18"/>
+  <text class="co-t" x="20" y="188">1</text>
+  <rect class="soft" x="40" y="162" width="530" height="36" rx="4"/>
+  <text class="cd24" x="46" y="188">d = Course(&quot;MAT123&quot;, 4, &quot;C1&quot;)</text>
+  <text class="cd24 sub" x="521.2" y="188"># 1</text>
+  <rect class="box" x="180" y="210" width="382" height="92" rx="6"/>
+  <text class="cd24 mid" x="261.5" y="234">code</text>
+  <path class="ar" d="M261.5,240 V257" marker-end="url(#ders5-self-film-ah)"/>
+  <rect class="box t-str" x="192.0" y="260" width="139" height="36" rx="6"/>
+  <text class="cd24 mid t-str" x="261.5" y="286">&quot;MAT123&quot;</text>
+  <text class="cd24 mid" x="399.5" y="234">credits</text>
+  <path class="ar" d="M399.5,240 V257" marker-end="url(#ders5-self-film-ah)"/>
+  <rect class="box t-int" x="375.5" y="260" width="48" height="36" rx="6"/>
+  <text class="cd24 mid t-int" x="399.5" y="286">4</text>
+  <text class="cd24 mid" x="509" y="234">grade</text>
+  <path class="ar" d="M509,240 V257" marker-end="url(#ders5-self-film-ah)"/>
+  <rect class="box t-str" x="468.0" y="260" width="82" height="36" rx="6"/>
+  <text class="cd24 mid t-str" x="509" y="286">&quot;C1&quot;</text>
+  <rect class="local" x="6" y="210" width="156" height="92"/>
+  <text class="cd24" x="16" y="236">__init__</text>
+  <rect class="boxhl" x="118" y="259" width="44" height="26" rx="4"/>
+  <rect class="name" x="16" y="250" width="99" height="44" rx="6"/>
+  <text class="nm mid" x="65.5" y="281">self</text>
+  <path class="ar" d="M115,272 H177" marker-end="url(#ders5-self-film-ah)"/>
+  <rect class="name sf-m" x="16" y="336" width="64" height="44" rx="6"/>
+  <text class="nm mid" x="48" y="367">d</text>
+  <path class="ar-old" d="M80,358 H126"/>
+  <text class="tx sub" x="142" y="366">henüz bağlanmadı</text>
+  <circle class="co" cx="598" cy="180" r="18"/>
+  <text class="co-t" x="598" y="188">2</text>
+  <rect class="soft" x="618" y="162" width="530" height="36" rx="4"/>
+  <text class="cd24" x="624" y="188">e = Course(&quot;FIZ127&quot;, 3, &quot;B2&quot;)</text>
+  <text class="cd24 sub" x="1099.2" y="188"># 2</text>
+  <rect class="box" x="758" y="210" width="382" height="92" rx="6"/>
+  <text class="cd24 mid" x="839.5" y="234">code</text>
+  <path class="ar" d="M839.5,240 V257" marker-end="url(#ders5-self-film-ah)"/>
+  <rect class="box t-str" x="770.0" y="260" width="139" height="36" rx="6"/>
+  <text class="cd24 mid t-str" x="839.5" y="286">&quot;MAT123&quot;</text>
+  <text class="cd24 mid" x="977.5" y="234">credits</text>
+  <path class="ar" d="M977.5,240 V257" marker-end="url(#ders5-self-film-ah)"/>
+  <rect class="box t-int" x="953.5" y="260" width="48" height="36" rx="6"/>
+  <text class="cd24 mid t-int" x="977.5" y="286">4</text>
+  <text class="cd24 mid" x="1087" y="234">grade</text>
+  <path class="ar" d="M1087,240 V257" marker-end="url(#ders5-self-film-ah)"/>
+  <rect class="box t-str" x="1046.0" y="260" width="82" height="36" rx="6"/>
+  <text class="cd24 mid t-str" x="1087" y="286">&quot;C1&quot;</text>
+  <rect class="box" x="758" y="312" width="382" height="92" rx="6"/>
+  <text class="cd24 mid" x="839.5" y="336">code</text>
+  <path class="ar" d="M839.5,342 V359" marker-end="url(#ders5-self-film-ah)"/>
+  <rect class="box t-str" x="770.0" y="362" width="139" height="36" rx="6"/>
+  <text class="cd24 mid t-str" x="839.5" y="388">&quot;FIZ127&quot;</text>
+  <text class="cd24 mid" x="977.5" y="336">credits</text>
+  <path class="ar" d="M977.5,342 V359" marker-end="url(#ders5-self-film-ah)"/>
+  <rect class="box t-int" x="953.5" y="362" width="48" height="36" rx="6"/>
+  <text class="cd24 mid t-int" x="977.5" y="388">3</text>
+  <text class="cd24 mid" x="1087" y="336">grade</text>
+  <path class="ar" d="M1087,342 V359" marker-end="url(#ders5-self-film-ah)"/>
+  <rect class="box t-str" x="1046.0" y="362" width="82" height="36" rx="6"/>
+  <text class="cd24 mid t-str" x="1087" y="388">&quot;B2&quot;</text>
+  <rect class="name sf-m" x="584" y="234" width="64" height="44" rx="6"/>
+  <text class="nm mid" x="616" y="265">e</text>
+  <rect class="name" x="670" y="234" width="64" height="44" rx="6"/>
+  <text class="nm mid" x="702" y="265">d</text>
+  <path class="ar" d="M734,256 H755" marker-end="url(#ders5-self-film-ah)"/>
+  <rect class="local" x="584" y="312" width="156" height="92"/>
+  <text class="cd24" x="594" y="338">__init__</text>
+  <rect class="boxhl" x="696" y="361" width="44" height="26" rx="4"/>
+  <rect class="name" x="594" y="352" width="99" height="44" rx="6"/>
+  <text class="nm mid" x="643.5" y="383">self</text>
+  <path class="ar" d="M693,374 H755" marker-end="url(#ders5-self-film-ah)"/>
+  <rect class="soft" x="2" y="418" width="646" height="42" rx="4"/>
+  <text class="cd24" x="16" y="447">print(d.code, d.credits, e.code, e.credits)</text>
+  <text class="lb sub" x="668" y="447">Çıktı</text>
+  <rect class="outp" x="744" y="416" width="276" height="46" rx="4"/>
+  <text class="cd24" x="758" y="447">MAT123 4 FIZ127 3</text>
+</svg>

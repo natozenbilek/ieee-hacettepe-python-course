@@ -1,0 +1,224 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="dg dm" viewBox="0 0 1152 512" width="1152" height="512" role="img" aria-labelledby="course-disk-memory-t course-disk-memory-d" data-focus="run">
+  <title id="course-disk-memory-t">Disk ve memory</title>
+  <desc id="course-disk-memory-d">Disk ve memory. Altta Disk (SSD) bloğunda iki dosya: hello.py ve Python interpreter'ının kendisi olan python. Üstte Memory (RAM) bloğu kesikli bir çizgiyle Code ve Data diye ikiye bölünmüş. İki Run oku diskten memory'ye çıkar: python'dan Code bölümündeki Python interpreter şeridine, hello.py'den iki satır koda: name = input("Adınız: ") ve print("Merhaba", name); run durumunda bu iki Run okunun arkasında çivit mavisi çerçeveli açık mavi şeritler var. Data bölümünde lacivert name ismi "Mehmet" değerini gösteriyor; bu değer str olduğu için kutusu yeşil; diskte yok, yalnızca memory'de. Alt satır: Program bitince memory boşalır; dosyalar diskte kalır. Ders 1'de iki durum daha var. memory durumu: Memory bloğu açık mavi, çivit mavisi çerçeveli; Disk bloğu, dosyaları ve Run okları gri; alt satır: Memory şu an çalışan programı ve değerlerini tutar. disk durumu: Disk bloğu açık mavi, çivit mavisi çerçeveli, iki dosyası düz; Memory bölümünün içeriği ve Run okları gri; alt satır: Disk dosyaları tutar; bilgisayar kapanınca da silinmez. Ders 5'te aynı şekil iki durumla kullanılır ve Ders 1 parçaları gri olur. read durumu: diskteki transcript.txt dosyasından (satırlar MAT123;4;C1, FIZ127;3;B2 ve devamını gösteren üç nokta; dosyadaki satırlar str olduğu için yeşil) for line in f oku Data bölümüne çıkar; latest_grade ismi kahverengi kutudaki {'MAT123': 'C1', ve devamı} değerini (dict) gösterir; bu kutu çivit mavisi çerçeveli açık mavi bir şeridin içinde, çünkü bu durumda yeni gelen o; alt satır: transcript.txt diskte kalır; okunan satırlar memory'de data olur. write durumu: transcript.txt kısmı da gri; gpa ismi hardal sarısı kutudaki 3.0833333333333335 değerini (float) gösterir, Data bölümünden report.write(...) oku diskteki açık mavi report.txt dosyasına iner (yeşil str satırlar MAT123 4 C1 True, üç nokta, AGNO: 3.08); alt satır: report.txt program bitince de diskte kalır; gpa gibi variable'lar silinir.</desc>
+  <!-- source: run, memory, disk (Ders 1, authoring/lessons/ders1.md S13 and S16): hello.py name = input("Adınız: "); print("Merhaba", name), Mehmet typed: 'Adınız: Mehmet' / 'Merhaba Mehmet'; the file itself does not change (Python 3.14.8, pty, 2026-10-11). read (Ders 5 S66, Uygulama 4 in authoring/lessons/ders5.py): site/code/transcript.txt read with code, credits, grade = line.strip().split(";") gives latest_grade == {'MAT123': 'C1', 'FIZ127': 'B2', 'BBM101': 'A3', 'TKD103': 'A2'} (3.14.8, 2026-10-11). write (Ders 5 S98, target program): gpa == 37 / 12 == 3.0833333333333335; report.txt first line 'MAT123 4 C1 True', last line 'AGNO: 3.08'. English code labels per DECISIONS.md "Code is in English" and ders5.md S66/S98; the trailing parts are three dot circles, not an ellipsis character. Name tags start at x 552 and value boxes at x 806 so that latest_grade (218 px) fits; the read arrow at x 1100 clears the gpa box (ends 1081). Code column starts at x 146 so the first code line does not cross the right Run arrow (x 505). States by data-focus on the root <svg>: run (default), memory, disk (Ders 1), read, write (Ders 5). -->
+  <defs>
+    <marker id="course-disk-memory-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
+    <marker id="course-disk-memory-ahm" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-m" d="M0,0 L12,6 L0,12 z"/></marker>
+    <style>
+/* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
+.dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
+.dg .bg{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF)}
+.dg .tx,.dg .lb,.dg .ti,.dg .cd,.dg .cd24{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .tx{font-size:24px;font-weight:400}
+.dg .lb{font-size:24px;font-weight:600}
+.dg .ti{font-size:28px;font-weight:700}
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-family:"JetBrains Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-weight:500}
+.dg .cd{font-size:28px}
+.dg .cd24{font-size:24px}
+.dg .ty{font-size:24px;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .nm{font-size:28px;font-weight:600;fill:#FFFFFF;fill:var(--d-on-name,#FFFFFF)}
+.dg .src{font-size:18px;font-weight:400;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .sub{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .okt{fill:#0D6385;fill:var(--d-ok,#0D6385);font-weight:600}
+.dg .errt{fill:#C21C20;fill:var(--d-err,#C21C20);font-weight:600}
+.dg .b7{font-weight:700}
+.dg .pre{white-space:pre}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .boxm{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .boxhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .blk{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2.5}
+.dg .frame{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .local{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .tmpl{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .cell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellh{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .name{fill:#181C3E;fill:var(--d-name,#181C3E)}
+.dg .soft{fill:#F3F4F8;fill:var(--d-surface,#F3F4F8)}
+.dg .outp{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .tint{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .hl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3)}
+.dg .emph{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .errbox{fill:#FCEDEE;fill:var(--d-err-bg,#FCEDEE);stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .errdash{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .okbox{fill:#E9F6FA;fill:var(--d-ok-bg,#E9F6FA);stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .key{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .dot{fill:#3B4595;fill:var(--d-brand,#3B4595)}
+.dg .dot0{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .ar,.dg .ld,.dg .axis{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E)}
+.dg .ar,.dg .axis{stroke-width:2.5}
+.dg .ld{stroke-width:2}
+.dg .ar-m{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .ar-old{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .ar-ok{fill:none;stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .ar-err{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .sep{fill:none;stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .dash{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2;stroke-dasharray:8 6}
+.dg .ah{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .ah-m{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .ah-ok{fill:#0D6385;fill:var(--d-ok,#0D6385)}
+.dg .ah-err{fill:#C21C20;fill:var(--d-err,#C21C20)}
+.dg .co{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .co-t{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF);font-size:24px;font-weight:700;text-anchor:middle}
+.dg .sec{stroke:#3B4595;stroke:var(--d-second,#3B4595)}
+/* dg v4 type renkleri · authoring/DIAGRAMS.md §10'dan aynen kopyalanır (dg v3 bloğundan sonra) */
+.dg rect.t-int,.dg path.t-int,.dg circle.t-int{fill:#F2CEB3;fill:var(--t-int-bg,#F2CEB3);stroke:#854B00;stroke:var(--t-int,#854B00)}
+.dg text.t-int,.dg tspan.t-int{fill:#613109;fill:var(--t-int-tx,#613109)}
+.dg rect.t-float,.dg path.t-float,.dg circle.t-float{fill:#FFF1C6;fill:var(--t-float-bg,#FFF1C6);stroke:#9F7000;stroke:var(--t-float,#9F7000)}
+.dg text.t-float,.dg tspan.t-float{fill:#5D420E;fill:var(--t-float-tx,#5D420E)}
+.dg rect.t-bool,.dg path.t-bool,.dg circle.t-bool{fill:#C4E9E1;fill:var(--t-bool-bg,#C4E9E1);stroke:#0E7A6D;stroke:var(--t-bool,#0E7A6D)}
+.dg text.t-bool,.dg tspan.t-bool{fill:#0A473F;fill:var(--t-bool-tx,#0A473F)}
+.dg rect.t-str,.dg path.t-str,.dg circle.t-str{fill:#D9F6DD;fill:var(--t-str-bg,#D9F6DD);stroke:#296A3B;stroke:var(--t-str,#296A3B)}
+.dg text.t-str,.dg tspan.t-str{fill:#1A4B28;fill:var(--t-str-tx,#1A4B28)}
+.dg rect.t-none,.dg path.t-none,.dg circle.t-none{fill:#F6F3EF;fill:var(--t-none-bg,#F6F3EF);stroke:#534C45;stroke:var(--t-none,#534C45)}
+.dg text.t-none,.dg tspan.t-none{fill:#413C38;fill:var(--t-none-tx,#413C38)}
+.dg rect.t-list,.dg path.t-list,.dg circle.t-list{fill:#F3C8DB;fill:var(--t-list-bg,#F3C8DB);stroke:#8A2B60;stroke:var(--t-list,#8A2B60)}
+.dg text.t-list,.dg tspan.t-list{fill:#651E45;fill:var(--t-list-tx,#651E45)}
+.dg rect.t-tuple,.dg path.t-tuple,.dg circle.t-tuple{fill:#E3EAF2;fill:var(--t-tuple-bg,#E3EAF2);stroke:#4A6378;stroke:var(--t-tuple,#4A6378)}
+.dg text.t-tuple,.dg tspan.t-tuple{fill:#2C3E4F;fill:var(--t-tuple-tx,#2C3E4F)}
+.dg rect.t-dict,.dg path.t-dict,.dg circle.t-dict{fill:#DBCEC4;fill:var(--t-dict-bg,#DBCEC4);stroke:#4F2611;stroke:var(--t-dict,#4F2611)}
+.dg text.t-dict,.dg tspan.t-dict{fill:#4C2817;fill:var(--t-dict-tx,#4C2817)}
+.dg rect.t-set,.dg path.t-set,.dg circle.t-set{fill:#F2F8D6;fill:var(--t-set-bg,#F2F8D6);stroke:#747C42;stroke:var(--t-set,#747C42)}
+.dg text.t-set,.dg tspan.t-set{fill:#3F4418;fill:var(--t-set-tx,#3F4418)}
+.dg rect.boxhl,.dg path.boxhl,.dg rect.cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595)}
+/* course-disk-memory: data-focus="run" (varsayılan, Ders 1), "read" (Ders 5, file okuma), "write" (Ders 5, file'a yazma). Ders 5 parçaları yerlerini Ders 1'den korur; Ders 1 parçaları read ve write'ta gri olur (DIAGRAMS.md §8.16) */
+.dm .dm-read,.dm .dm-write,.dm .dm-cap-read,.dm .dm-cap-write{display:none}
+.dm[data-focus="read"] .dm-read,.dm[data-focus="read"] .dm-cap-read{display:inline}
+.dm[data-focus="write"] .dm-read,.dm[data-focus="write"] .dm-write,.dm[data-focus="write"] .dm-cap-write{display:inline}
+.dm[data-focus="read"] .dm-cap-run,.dm[data-focus="write"] .dm-cap-run{display:none}
+.dm[data-focus="read"] .dm-d1 .box,
+.dm[data-focus="write"] .dm-d1 .box,
+.dm[data-focus="write"] .dm-read .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dm[data-focus="read"] .dm-d1 .name,
+.dm[data-focus="write"] .dm-d1 .name,
+.dm[data-focus="write"] .dm-read .name,
+.dm[data-focus="write"] .dm-read .dot{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dm[data-focus="read"] .dm-d1 .tx,
+.dm[data-focus="read"] .dm-d1 .lb,
+.dm[data-focus="read"] .dm-d1 .cd,
+.dm[data-focus="read"] .dm-d1 .cd24,
+.dm[data-focus="write"] .dm-d1 .tx,
+.dm[data-focus="write"] .dm-d1 .lb,
+.dm[data-focus="write"] .dm-d1 .cd,
+.dm[data-focus="write"] .dm-d1 .cd24,
+.dm[data-focus="write"] .dm-read .tx,
+.dm[data-focus="write"] .dm-read .lb,
+.dm[data-focus="write"] .dm-read .cd,
+.dm[data-focus="write"] .dm-read .cd24{fill:#50566F;fill:var(--d-type,#50566F)}
+.dm[data-focus="read"] .dm-d1 .ld,
+.dm[data-focus="write"] .dm-d1 .ld,
+.dm[data-focus="write"] .dm-read .ld{stroke:#767C95;stroke:var(--d-muted,#767C95)}
+.dm[data-focus="read"] .dm-d1 .ar,
+.dm[data-focus="write"] .dm-d1 .ar,
+.dm[data-focus="write"] .dm-read .ar{stroke:#767C95;stroke:var(--d-muted,#767C95);marker-end:url(#course-disk-memory-ahm)}
+/* dg v4: der getirilen değer kendi type renginde kalır; vurgusu etrafındaki açık mavi şerittir (dm-band, yalnız read) */
+.dm .dm-band{display:none}
+.dm[data-focus="read"] .dm-band{display:inline}
+.dm[data-focus="read"] .dm-band,.dm[data-focus="write"] .dm-hlw{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+/* Ders 1 durumları memory (S10) ve disk (S12): bloklardan biri vurgulu, öteki ve Run okları gri. run'da (S13) iki Run okunun arkasında vurgu şeridi */
+.dm .dm-cap-memory,.dm .dm-cap-disk,.dm .dm-runhl{display:none}
+.dm[data-focus="run"] .dm-runhl{display:inline}
+.dm[data-focus="memory"] .dm-cap-memory,.dm[data-focus="disk"] .dm-cap-disk{display:inline}
+.dm[data-focus="memory"] .dm-cap-run,.dm[data-focus="disk"] .dm-cap-run{display:none}
+.dm[data-focus="memory"] .dm-memblk,.dm[data-focus="disk"] .dm-diskblk{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dm[data-focus="memory"] .dm-diskblk,.dm[data-focus="disk"] .dm-memblk{stroke:#767C95;stroke:var(--d-muted,#767C95)}
+.dm[data-focus="memory"] .dm-disklab text,.dm[data-focus="disk"] .dm-memlab text{fill:#50566F;fill:var(--d-type,#50566F)}
+.dm[data-focus="memory"] .dm-disk .box,.dm[data-focus="disk"] .dm-mem .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95)}
+.dm[data-focus="memory"] .dm-disk text,.dm[data-focus="disk"] .dm-mem text,
+.dm[data-focus="memory"] .dm-run text,.dm[data-focus="disk"] .dm-run text{fill:#50566F;fill:var(--d-type,#50566F)}
+.dm[data-focus="disk"] .dm-mem .name{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dm[data-focus="disk"] .dm-mem text.nm{fill:#FFFFFF;fill:var(--d-on-name,#FFFFFF)}
+.dm[data-focus="memory"] .dm-disk .ld{stroke:#767C95;stroke:var(--d-muted,#767C95)}
+.dm[data-focus="memory"] .dm-run .ar,.dm[data-focus="disk"] .dm-run .ar,.dm[data-focus="disk"] .dm-mem .ar{stroke:#767C95;stroke:var(--d-muted,#767C95);marker-end:url(#course-disk-memory-ahm)}
+    </style>
+  </defs>
+  <rect class="bg" width="1152" height="512"/>
+  <rect class="blk dm-memblk" x="2" y="2" width="1148" height="254" rx="6"/>
+  <g class="dm-memlab">
+  <text class="ti" x="18" y="40">Memory</text>
+  <text class="tx sub" x="18" y="72">RAM</text>
+  <text class="lb" x="146" y="40">Code</text>
+  <rect class="soft" x="146" y="52" width="374" height="40" rx="4"/>
+  <text class="tx" x="162" y="80">Python interpreter</text>
+  <path class="dash" d="M536,18 V240"/>
+  <text class="lb" x="552" y="40">Data</text>
+  </g>
+  <rect class="blk dm-diskblk" x="2" y="320" width="1148" height="156" rx="6"/>
+  <g class="dm-disklab">
+  <text class="ti" x="18" y="358">Disk</text>
+  <text class="tx sub" x="18" y="390">SSD</text>
+  </g>
+  <g class="dm-d1">
+  <g class="dm-mem">
+  <text class="cd24" x="146" y="130">name = input("Adınız: ")</text>
+  <text class="cd24" x="146" y="162">print("Merhaba", name)</text>
+  <rect class="name" x="552" y="52" width="100" height="56" rx="6"/>
+  <text class="nm mid" x="602" y="90">name</text>
+  <rect class="box t-str" x="806" y="52" width="150" height="56" rx="6"/>
+  <text class="cd24 mid t-str" x="881" y="88">"Mehmet"</text>
+  <path class="ar" d="M652,80 H803" marker-end="url(#course-disk-memory-ah)"/>
+  </g>
+  <g class="dm-disk">
+  <path class="box dm-file" d="M172,334 H344 L372,362 V390 H172 Z"/>
+  <path class="ld" d="M344,334 V362 H372"/>
+  <text class="cd24 b7" x="188" y="368">hello.py</text>
+  <path class="box dm-file" d="M440,334 H552 L580,362 V390 H440 Z"/>
+  <path class="ld" d="M552,334 V362 H580"/>
+  <text class="cd24 b7" x="456" y="368">python</text>
+  </g>
+  <g class="dm-run">
+  <rect class="boxhl dm-runhl" x="292" y="174" width="16" height="146" rx="4"/>
+  <rect class="boxhl dm-runhl" x="497" y="96" width="16" height="224" rx="4"/>
+  <path class="ar" d="M300,334 V173" marker-end="url(#course-disk-memory-ah)"/>
+  <path class="ar" d="M505,334 V95" marker-end="url(#course-disk-memory-ah)"/>
+  <text class="lb mid" x="402" y="296">Run</text>
+  </g>
+  </g>
+  <g class="dm-read">
+  <path class="box dm-file" d="M878,334 H1110 L1138,362 V466 H878 Z"/>
+  <path class="ld" d="M1110,334 V362 H1138"/>
+  <text class="cd24 b7" x="894" y="368">transcript.txt</text>
+  <text class="cd24 t-str" x="894" y="396">MAT123;4;C1</text>
+  <text class="cd24 t-str" x="894" y="424">FIZ127;3;B2</text>
+  <circle class="dot" cx="902" cy="446" r="4"/>
+  <circle class="dot" cx="916" cy="446" r="4"/>
+  <circle class="dot" cx="930" cy="446" r="4"/>
+  <rect class="name" x="552" y="120" width="218" height="56" rx="6"/>
+  <text class="nm mid" x="661" y="158">latest_grade</text>
+  <rect class="dm-band" x="800" y="114" width="329" height="68" rx="10"/>
+  <rect class="box t-dict" x="806" y="120" width="317" height="56" rx="6"/>
+  <text class="cd24 t-dict" x="818" y="156">{'MAT123': 'C1',</text>
+  <circle class="dot" cx="1062" cy="152" r="4"/>
+  <circle class="dot" cx="1076" cy="152" r="4"/>
+  <circle class="dot" cx="1090" cy="152" r="4"/>
+  <text class="cd24 t-dict" x="1100" y="156">}</text>
+  <path class="ar" d="M770,148 H803" marker-end="url(#course-disk-memory-ah)"/>
+  <path class="ar" d="M1100,334 V185" marker-end="url(#course-disk-memory-ah)"/>
+  <text class="cd24 end" x="1086" y="296">for line in f</text>
+  </g>
+  <g class="dm-write">
+  <path class="box dm-file dm-hlw" d="M600,334 H834 L862,362 V466 H600 Z"/>
+  <path class="ld" d="M834,334 V362 H862"/>
+  <text class="cd24 b7" x="616" y="368">report.txt</text>
+  <text class="cd24 t-str" x="616" y="396">MAT123 4 C1 True</text>
+  <circle class="dot" cx="624" cy="418" r="4"/>
+  <circle class="dot" cx="638" cy="418" r="4"/>
+  <circle class="dot" cx="652" cy="418" r="4"/>
+  <text class="cd24 t-str" x="616" y="452">AGNO: 3.08</text>
+  <rect class="name" x="552" y="188" width="80" height="56" rx="6"/>
+  <text class="nm mid" x="592" y="226">gpa</text>
+  <rect class="box t-float" x="806" y="188" width="275" height="56" rx="6"/>
+  <text class="cd24 mid t-float" x="943.5" y="224">3.0833333333333335</text>
+  <path class="ar" d="M632,216 H803" marker-end="url(#course-disk-memory-ah)"/>
+  <path class="ar" d="M820,244 V331" marker-end="url(#course-disk-memory-ah)"/>
+  <text class="cd24 end" x="806" y="296">report.write(...)</text>
+  </g>
+  <text class="tx mid dm-cap-run" x="576" y="504">Program bitince memory boşalır; dosyalar diskte kalır.</text>
+  <text class="tx mid dm-cap-memory" x="576" y="504">Memory şu an çalışan programı ve değerlerini tutar.</text>
+  <text class="tx mid dm-cap-disk" x="576" y="504">Disk dosyaları tutar; bilgisayar kapanınca da silinmez.</text>
+  <text class="tx mid dm-cap-read" x="576" y="504">transcript.txt diskte kalır; okunan satırlar memory'de data olur.</text>
+  <text class="tx mid dm-cap-write" x="576" y="504">report.txt program bitince de diskte kalır; gpa gibi variable'lar silinir.</text>
+</svg>

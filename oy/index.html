@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Python ne yazdırır? · IEEE Hacettepe</title>
+<meta name="robots" content="noindex">
+<!-- Cevap sayfası: slayttaki QR kodu buraya ?p=<soru kimliği> ile gelir (authoring/POLLS.md).
+     Seçenek metinleri ../slides/polls-dersN.json dosyasından okunur; dosya yoksa düğmelerde yalnızca 1-4 yazar.
+     Soru kapanınca doğru cevap kendi renginde işaretlenir, nedeni altta görünür; oy veren telefon
+     "Tebrikler, doğru bildin!" ya da "Yanlış" mesajını görür ve titrer (Android).
+     Dosyalar ?v= ile sürümlenir: GitHub Pages 10 dakika önbellekte tutar, eski bir oy.js yeni sayfayla karışmasın. -->
+<link rel="preload" href="../assets/fonts/atkinson-hyperlegible-next-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/atkinson-hyperlegible-next-latin-ext-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/jetbrains-mono-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/site.css?v=20261015c">
+<link rel="stylesheet" href="oy.css?v=20261015c">
+</head>
+<body class="oy">
+<header class="site-header brand-strip">
+  <div class="wrap"><span class="lockup"><img src="../assets/brand/ieee-hacettepe-lockup-renkli.png" alt="IEEE Hacettepe University Student Branch" width="413" height="48"></span></div>
+</header>
+
+<main id="icerik" class="wrap">
+  <h1 id="baslik">Python ne yazdırır?</h1>
+  <p class="meta" id="ders">&nbsp;</p>
+  <p class="oy-sonuc" id="sonuc" role="alert" hidden></p>
+  <div class="oy-opts" role="group" aria-labelledby="baslik">
+    <button type="button" class="oy-btn is-bare" data-n="1" aria-pressed="false"><span class="oy-n">A</span><span class="oy-t"></span></button>
+    <button type="button" class="oy-btn is-bare" data-n="2" aria-pressed="false"><span class="oy-n">B</span><span class="oy-t"></span></button>
+    <button type="button" class="oy-btn is-bare" data-n="3" aria-pressed="false"><span class="oy-n">C</span><span class="oy-t"></span></button>
+    <button type="button" class="oy-btn is-bare" data-n="4" aria-pressed="false"><span class="oy-n">D</span><span class="oy-t"></span></button>
+  </div>
+  <p class="oy-durum" id="durum" role="status" aria-live="polite">&nbsp;</p>
+  <p class="oy-not" id="not">Soru açık kaldıkça cevabınızı değiştirebilirsiniz.</p>
+  <div class="oy-cevap" id="cevap" hidden><p class="oy-cevap-b" id="cevap-b"></p><p class="oy-cevap-n" id="cevap-n"></p></div>
+</main>
+
+<footer class="oy-foot">
+  <div class="wrap"><p>Ad, e-posta ya da giriş istenmez. Telefonunuzda yalnızca rastgele üretilmiş bir numara saklanır; her soruda tek oy sayılması bu numarayla sağlanır.</p></div>
+</footer>
+
+<script src="../assets/js/poll-config.js?v=20261015c"></script>
+<script src="../assets/js/poll-backend.js?v=20261015c"></script>
+<script src="oy.js?v=20261015c"></script>
+</body>
+</html>

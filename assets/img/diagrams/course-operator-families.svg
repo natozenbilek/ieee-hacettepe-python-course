@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 380" width="1152" height="380" role="img" aria-labelledby="course-operator-families-t course-operator-families-d" data-now="arithmetic">
+  <title id="course-operator-families-t">Operator aileleri</title>
+  <desc id="course-operator-families-d">Kursta görülecek dört operator ailesi, dört sütun. Arithmetic, 7 operator: + - * / // % **; bu derste başlığı açık mavi ve çivit mavisi çerçeveyle vurgulu. Comparison, 6 operator: == != &lt; &gt; &lt;= &gt;=. Logical, 3 operator: and or not. Membership, 1 operator: in. Bu üç ailenin hücreleri gri kesikli, yazıları gri, başlıklarının sağında hangi derste görüleceği yazıyor: Ders 1'de Ders 2, Ders 2'de 2B. + ve * hücrelerinde Ders 2A için boş bir ikinci satır yeri var (str ile).</desc>
+  <!-- source: course master; states data-now="arithmetic" (Ders 1), "str-ops" (W2A), "comparison" with data-known="arithmetic", "logical" with data-known="arithmetic comparison membership" (W2B); no code run (2026-10-10); the later label reads "Ders 2" in the arithmetic state and "2B" in the Ders 2 states (2026-10-14) -->
+  <defs>
+    <style>
+/* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
+.dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
+.dg .bg{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF)}
+.dg .tx,.dg .lb,.dg .ti,.dg .cd,.dg .cd24{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .tx{font-size:24px;font-weight:400}
+.dg .lb{font-size:24px;font-weight:600}
+.dg .ti{font-size:28px;font-weight:700}
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-family:"JetBrains Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-weight:500}
+.dg .cd{font-size:28px}
+.dg .cd24{font-size:24px}
+.dg .ty{font-size:24px;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .nm{font-size:28px;font-weight:600;fill:#FFFFFF;fill:var(--d-on-name,#FFFFFF)}
+.dg .src{font-size:18px;font-weight:400;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .sub{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .okt{fill:#0D6385;fill:var(--d-ok,#0D6385);font-weight:600}
+.dg .errt{fill:#C21C20;fill:var(--d-err,#C21C20);font-weight:600}
+.dg .b7{font-weight:700}
+.dg .pre{white-space:pre}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .boxm{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .boxhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .blk{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2.5}
+.dg .frame{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .local{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .tmpl{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .cell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellh{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .name{fill:#181C3E;fill:var(--d-name,#181C3E)}
+.dg .soft{fill:#F3F4F8;fill:var(--d-surface,#F3F4F8)}
+.dg .outp{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .tint{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .hl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3)}
+.dg .emph{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .errbox{fill:#FCEDEE;fill:var(--d-err-bg,#FCEDEE);stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .errdash{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .okbox{fill:#E9F6FA;fill:var(--d-ok-bg,#E9F6FA);stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .key{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .dot{fill:#3B4595;fill:var(--d-brand,#3B4595)}
+.dg .dot0{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .ar,.dg .ld,.dg .axis{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E)}
+.dg .ar,.dg .axis{stroke-width:2.5}
+.dg .ld{stroke-width:2}
+.dg .ar-m{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .ar-old{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .ar-ok{fill:none;stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .ar-err{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .sep{fill:none;stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .dash{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2;stroke-dasharray:8 6}
+.dg .ah{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .ah-m{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .ah-ok{fill:#0D6385;fill:var(--d-ok,#0D6385)}
+.dg .ah-err{fill:#C21C20;fill:var(--d-err,#C21C20)}
+.dg .co{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .co-t{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF);font-size:24px;font-weight:700;text-anchor:middle}
+.dg .sec{stroke:#3B4595;stroke:var(--d-second,#3B4595)}
+/* dg v4 type renkleri · authoring/DIAGRAMS.md §10'dan aynen kopyalanır (dg v3 bloğundan sonra) */
+.dg rect.t-int,.dg path.t-int,.dg circle.t-int{fill:#F2CEB3;fill:var(--t-int-bg,#F2CEB3);stroke:#854B00;stroke:var(--t-int,#854B00)}
+.dg text.t-int,.dg tspan.t-int{fill:#613109;fill:var(--t-int-tx,#613109)}
+.dg rect.t-float,.dg path.t-float,.dg circle.t-float{fill:#FFF1C6;fill:var(--t-float-bg,#FFF1C6);stroke:#9F7000;stroke:var(--t-float,#9F7000)}
+.dg text.t-float,.dg tspan.t-float{fill:#5D420E;fill:var(--t-float-tx,#5D420E)}
+.dg rect.t-bool,.dg path.t-bool,.dg circle.t-bool{fill:#C4E9E1;fill:var(--t-bool-bg,#C4E9E1);stroke:#0E7A6D;stroke:var(--t-bool,#0E7A6D)}
+.dg text.t-bool,.dg tspan.t-bool{fill:#0A473F;fill:var(--t-bool-tx,#0A473F)}
+.dg rect.t-str,.dg path.t-str,.dg circle.t-str{fill:#D9F6DD;fill:var(--t-str-bg,#D9F6DD);stroke:#296A3B;stroke:var(--t-str,#296A3B)}
+.dg text.t-str,.dg tspan.t-str{fill:#1A4B28;fill:var(--t-str-tx,#1A4B28)}
+.dg rect.t-none,.dg path.t-none,.dg circle.t-none{fill:#F6F3EF;fill:var(--t-none-bg,#F6F3EF);stroke:#534C45;stroke:var(--t-none,#534C45)}
+.dg text.t-none,.dg tspan.t-none{fill:#413C38;fill:var(--t-none-tx,#413C38)}
+.dg rect.t-list,.dg path.t-list,.dg circle.t-list{fill:#F3C8DB;fill:var(--t-list-bg,#F3C8DB);stroke:#8A2B60;stroke:var(--t-list,#8A2B60)}
+.dg text.t-list,.dg tspan.t-list{fill:#651E45;fill:var(--t-list-tx,#651E45)}
+.dg rect.t-tuple,.dg path.t-tuple,.dg circle.t-tuple{fill:#E3EAF2;fill:var(--t-tuple-bg,#E3EAF2);stroke:#4A6378;stroke:var(--t-tuple,#4A6378)}
+.dg text.t-tuple,.dg tspan.t-tuple{fill:#2C3E4F;fill:var(--t-tuple-tx,#2C3E4F)}
+.dg rect.t-dict,.dg path.t-dict,.dg circle.t-dict{fill:#DBCEC4;fill:var(--t-dict-bg,#DBCEC4);stroke:#4F2611;stroke:var(--t-dict,#4F2611)}
+.dg text.t-dict,.dg tspan.t-dict{fill:#4C2817;fill:var(--t-dict-tx,#4C2817)}
+.dg rect.t-set,.dg path.t-set,.dg circle.t-set{fill:#F2F8D6;fill:var(--t-set-bg,#F2F8D6);stroke:#747C42;stroke:var(--t-set,#747C42)}
+.dg text.t-set,.dg tspan.t-set{fill:#3F4418;fill:var(--t-set-tx,#3F4418)}
+.dg rect.boxhl,.dg path.boxhl,.dg rect.cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595)}
+/* kod PyCharm gibi: ligature yok */
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-variant-ligatures:none}
+.dg .of-str{display:inline}
+.dg[data-now="arithmetic"] .of-str{display:none}
+.dg .of-later{display:none}
+/* a family taught later: "Ders 2" on Ders 1's map, "2B" on Ders 2's own maps (2026-10-14 review) */
+.dg[data-now~="arithmetic"] .of-later-h,.dg[data-now]:not([data-now~="arithmetic"]) .of-later-d{display:none!important}
+.dg[data-now]:not([data-now~="arithmetic"]):not([data-known~="arithmetic"]):not([data-now~="str-ops"]):not([data-known~="str-ops"]) .of-arithmetic rect.of-cell,.dg[data-now]:not([data-now~="arithmetic"]):not([data-known~="arithmetic"]):not([data-now~="str-ops"]):not([data-known~="str-ops"]) .of-arithmetic rect.of-head{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-dasharray:8 6}
+.dg[data-now]:not([data-now~="arithmetic"]):not([data-known~="arithmetic"]):not([data-now~="str-ops"]):not([data-known~="str-ops"]) .of-arithmetic text{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg[data-now]:not([data-now~="arithmetic"]):not([data-known~="arithmetic"]):not([data-now~="str-ops"]):not([data-known~="str-ops"]) .of-arithmetic .of-later{display:inline}
+.dg[data-now~="arithmetic"] .of-arithmetic rect.of-head,.dg[data-now~="str-ops"] .of-arithmetic rect.of-head{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg[data-now]:not([data-now~="comparison"]):not([data-known~="comparison"]) .of-comparison rect.of-cell,.dg[data-now]:not([data-now~="comparison"]):not([data-known~="comparison"]) .of-comparison rect.of-head{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-dasharray:8 6}
+.dg[data-now]:not([data-now~="comparison"]):not([data-known~="comparison"]) .of-comparison text{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg[data-now]:not([data-now~="comparison"]):not([data-known~="comparison"]) .of-comparison .of-later{display:inline}
+.dg[data-now~="comparison"] .of-comparison rect.of-head{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg[data-now]:not([data-now~="logical"]):not([data-known~="logical"]) .of-logical rect.of-cell,.dg[data-now]:not([data-now~="logical"]):not([data-known~="logical"]) .of-logical rect.of-head{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-dasharray:8 6}
+.dg[data-now]:not([data-now~="logical"]):not([data-known~="logical"]) .of-logical text{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg[data-now]:not([data-now~="logical"]):not([data-known~="logical"]) .of-logical .of-later{display:inline}
+.dg[data-now~="logical"] .of-logical rect.of-head{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg[data-now]:not([data-now~="membership"]):not([data-known~="membership"]) .of-membership rect.of-cell,.dg[data-now]:not([data-now~="membership"]):not([data-known~="membership"]) .of-membership rect.of-head{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-dasharray:8 6}
+.dg[data-now]:not([data-now~="membership"]):not([data-known~="membership"]) .of-membership text{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg[data-now]:not([data-now~="membership"]):not([data-known~="membership"]) .of-membership .of-later{display:inline}
+.dg[data-now~="membership"] .of-membership rect.of-head{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+    </style>
+  </defs>
+  <rect class="bg" width="1152" height="380"/>
+  <g class="of-arithmetic">
+  <rect class="cell of-cell" x="4" y="82" width="90" height="88"/>
+  <text class="cd mid" x="49" y="122">+</text>
+  <text class="tx sub mid of-str" x="49" y="156">str ile</text>
+  <rect class="cell of-cell" x="94" y="82" width="90" height="88"/>
+  <text class="cd mid" x="139" y="122">-</text>
+  <rect class="cell of-cell" x="184" y="82" width="90" height="88"/>
+  <text class="cd mid" x="229" y="122">*</text>
+  <text class="tx sub mid of-str" x="229" y="156">str ile</text>
+  <rect class="cell of-cell" x="4" y="170" width="90" height="88"/>
+  <text class="cd mid" x="49" y="210">/</text>
+  <rect class="cell of-cell" x="94" y="170" width="90" height="88"/>
+  <text class="cd mid" x="139" y="210">//</text>
+  <rect class="cell of-cell" x="184" y="170" width="90" height="88"/>
+  <text class="cd mid" x="229" y="210">%</text>
+  <rect class="cell of-cell" x="4" y="258" width="90" height="88"/>
+  <text class="cd mid" x="49" y="298">**</text>
+  <rect class="cellh of-head" x="2" y="2" width="274" height="72"/>
+  <text class="lb" x="18" y="48">Arithmetic <tspan class="ti">7</tspan></text>
+  <text class="tx sub end of-later of-later-d" x="262" y="48">Ders 2</text><text class="tx sub end of-later of-later-h" x="262" y="48">2B</text>
+  </g>
+  <g class="of-comparison">
+  <rect class="cell of-cell" x="295" y="82" width="90" height="88"/>
+  <text class="cd mid" x="340" y="122">==</text>
+  <rect class="cell of-cell" x="385" y="82" width="90" height="88"/>
+  <text class="cd mid" x="430" y="122">!=</text>
+  <rect class="cell of-cell" x="475" y="82" width="90" height="88"/>
+  <text class="cd mid" x="520" y="122">&lt;</text>
+  <rect class="cell of-cell" x="295" y="170" width="90" height="88"/>
+  <text class="cd mid" x="340" y="210">&gt;</text>
+  <rect class="cell of-cell" x="385" y="170" width="90" height="88"/>
+  <text class="cd mid" x="430" y="210">&lt;=</text>
+  <rect class="cell of-cell" x="475" y="170" width="90" height="88"/>
+  <text class="cd mid" x="520" y="210">&gt;=</text>
+  <rect class="cellh of-head" x="293" y="2" width="274" height="72"/>
+  <text class="lb" x="309" y="48">Comparison <tspan class="ti">6</tspan></text>
+  <text class="tx sub end of-later of-later-d" x="553" y="48">Ders 2</text><text class="tx sub end of-later of-later-h" x="553" y="48">2B</text>
+  </g>
+  <g class="of-logical">
+  <rect class="cell of-cell" x="586" y="82" width="90" height="88"/>
+  <text class="cd mid" x="631" y="122">and</text>
+  <rect class="cell of-cell" x="676" y="82" width="90" height="88"/>
+  <text class="cd mid" x="721" y="122">or</text>
+  <rect class="cell of-cell" x="766" y="82" width="90" height="88"/>
+  <text class="cd mid" x="811" y="122">not</text>
+  <rect class="cellh of-head" x="584" y="2" width="274" height="72"/>
+  <text class="lb" x="600" y="48">Logical <tspan class="ti">3</tspan></text>
+  <text class="tx sub end of-later of-later-d" x="844" y="48">Ders 2</text><text class="tx sub end of-later of-later-h" x="844" y="48">2B</text>
+  </g>
+  <g class="of-membership">
+  <rect class="cell of-cell" x="877" y="82" width="90" height="88"/>
+  <text class="cd mid" x="922" y="122">in</text>
+  <rect class="cellh of-head" x="875" y="2" width="274" height="72"/>
+  <text class="lb" x="891" y="48">Membership <tspan class="ti">1</tspan></text>
+  <text class="tx sub end of-later of-later-d" x="1135" y="48">Ders 2</text><text class="tx sub end of-later of-later-h" x="1135" y="48">2B</text>
+  </g>
+</svg>

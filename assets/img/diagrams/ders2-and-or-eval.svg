@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 320" width="1152" height="320" role="img" aria-labelledby="ders2-and-or-eval-t ders2-and-or-eval-d" data-now="and">
+  <title id="ders2-and-or-eval-t">and ve or: credits &gt;= 3 ile coefficient &gt;= 1.75</title>
+  <desc id="ders2-and-or-eval-d">credits 3'ü (int, turuncu), coefficient 1.5'i (float, hardal sarısı) gösterir; kıyaslamalar True ve False (bool, deniz yeşili); and sonucu False. Solda iki lacivert isim etiketi: credits oktan 3'e, coefficient oktan 1.5'e. Sağda iki kıyaslama kutusu: credits &gt;= 3 aşağı okla True'ya, coefficient &gt;= 1.75 aşağı okla False'a. İki değerden birer ok ortadaki and kutusuna gider; sonucu belirleyen False'tan gelen ok koyu, True'dan gelen gri. and kutusundan bir ok sonuç kutusuna: False, açık mavi zeminli çivit mavisi çerçeve içinde. Altındaki çıktı panelinde False. (data-now="or": kutuda or, sonuç True, True'dan gelen ok koyu, False'tan gelen gri, çıktı True.)</desc>
+  <!-- source: ders2-B.md S26, S28; credits = 3; coefficient = 1.5; credits >= 3 -> True; coefficient >= 1.75 -> False; print(credits >= 3 and coefficient >= 1.75) -> False; print(credits >= 3 or coefficient >= 1.75) -> True (Python 3.14.8, 2026-10-11). States: data-now="and" (S26), "or" (S28) -->
+  <defs>
+    <marker id="ders2-and-or-eval-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
+    <marker id="ders2-and-or-eval-ahm" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-m" d="M0,0 L12,6 L0,12 z"/></marker>
+    <style>
+/* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
+.dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
+.dg .bg{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF)}
+.dg .tx,.dg .lb,.dg .ti,.dg .cd,.dg .cd24{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .tx{font-size:24px;font-weight:400}
+.dg .lb{font-size:24px;font-weight:600}
+.dg .ti{font-size:28px;font-weight:700}
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-family:"JetBrains Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-weight:500}
+.dg .cd{font-size:28px}
+.dg .cd24{font-size:24px}
+.dg .ty{font-size:24px;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .nm{font-size:28px;font-weight:600;fill:#FFFFFF;fill:var(--d-on-name,#FFFFFF)}
+.dg .src{font-size:18px;font-weight:400;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .sub{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .okt{fill:#0D6385;fill:var(--d-ok,#0D6385);font-weight:600}
+.dg .errt{fill:#C21C20;fill:var(--d-err,#C21C20);font-weight:600}
+.dg .b7{font-weight:700}
+.dg .pre{white-space:pre}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .boxm{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .boxhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .blk{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2.5}
+.dg .frame{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .local{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .tmpl{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .cell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellh{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .name{fill:#181C3E;fill:var(--d-name,#181C3E)}
+.dg .soft{fill:#F3F4F8;fill:var(--d-surface,#F3F4F8)}
+.dg .outp{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .tint{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .hl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3)}
+.dg .emph{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .errbox{fill:#FCEDEE;fill:var(--d-err-bg,#FCEDEE);stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .errdash{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .okbox{fill:#E9F6FA;fill:var(--d-ok-bg,#E9F6FA);stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .key{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .dot{fill:#3B4595;fill:var(--d-brand,#3B4595)}
+.dg .dot0{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .ar,.dg .ld,.dg .axis{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E)}
+.dg .ar,.dg .axis{stroke-width:2.5}
+.dg .ld{stroke-width:2}
+.dg .ar-m{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .ar-old{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .ar-ok{fill:none;stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .ar-err{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .sep{fill:none;stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .dash{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2;stroke-dasharray:8 6}
+.dg .ah{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .ah-m{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .ah-ok{fill:#0D6385;fill:var(--d-ok,#0D6385)}
+.dg .ah-err{fill:#C21C20;fill:var(--d-err,#C21C20)}
+.dg .co{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .co-t{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF);font-size:24px;font-weight:700;text-anchor:middle}
+.dg .sec{stroke:#3B4595;stroke:var(--d-second,#3B4595)}
+/* dg v4 type renkleri · authoring/DIAGRAMS.md §10'dan aynen kopyalanır (dg v3 bloğundan sonra) */
+.dg rect.t-int,.dg path.t-int,.dg circle.t-int{fill:#F2CEB3;fill:var(--t-int-bg,#F2CEB3);stroke:#854B00;stroke:var(--t-int,#854B00)}
+.dg text.t-int,.dg tspan.t-int{fill:#613109;fill:var(--t-int-tx,#613109)}
+.dg rect.t-float,.dg path.t-float,.dg circle.t-float{fill:#FFF1C6;fill:var(--t-float-bg,#FFF1C6);stroke:#9F7000;stroke:var(--t-float,#9F7000)}
+.dg text.t-float,.dg tspan.t-float{fill:#5D420E;fill:var(--t-float-tx,#5D420E)}
+.dg rect.t-bool,.dg path.t-bool,.dg circle.t-bool{fill:#C4E9E1;fill:var(--t-bool-bg,#C4E9E1);stroke:#0E7A6D;stroke:var(--t-bool,#0E7A6D)}
+.dg text.t-bool,.dg tspan.t-bool{fill:#0A473F;fill:var(--t-bool-tx,#0A473F)}
+.dg rect.t-str,.dg path.t-str,.dg circle.t-str{fill:#D9F6DD;fill:var(--t-str-bg,#D9F6DD);stroke:#296A3B;stroke:var(--t-str,#296A3B)}
+.dg text.t-str,.dg tspan.t-str{fill:#1A4B28;fill:var(--t-str-tx,#1A4B28)}
+.dg rect.t-none,.dg path.t-none,.dg circle.t-none{fill:#F6F3EF;fill:var(--t-none-bg,#F6F3EF);stroke:#534C45;stroke:var(--t-none,#534C45)}
+.dg text.t-none,.dg tspan.t-none{fill:#413C38;fill:var(--t-none-tx,#413C38)}
+.dg rect.t-list,.dg path.t-list,.dg circle.t-list{fill:#F3C8DB;fill:var(--t-list-bg,#F3C8DB);stroke:#8A2B60;stroke:var(--t-list,#8A2B60)}
+.dg text.t-list,.dg tspan.t-list{fill:#651E45;fill:var(--t-list-tx,#651E45)}
+.dg rect.t-tuple,.dg path.t-tuple,.dg circle.t-tuple{fill:#E3EAF2;fill:var(--t-tuple-bg,#E3EAF2);stroke:#4A6378;stroke:var(--t-tuple,#4A6378)}
+.dg text.t-tuple,.dg tspan.t-tuple{fill:#2C3E4F;fill:var(--t-tuple-tx,#2C3E4F)}
+.dg rect.t-dict,.dg path.t-dict,.dg circle.t-dict{fill:#DBCEC4;fill:var(--t-dict-bg,#DBCEC4);stroke:#4F2611;stroke:var(--t-dict,#4F2611)}
+.dg text.t-dict,.dg tspan.t-dict{fill:#4C2817;fill:var(--t-dict-tx,#4C2817)}
+.dg rect.t-set,.dg path.t-set,.dg circle.t-set{fill:#F2F8D6;fill:var(--t-set-bg,#F2F8D6);stroke:#747C42;stroke:var(--t-set,#747C42)}
+.dg text.t-set,.dg tspan.t-set{fill:#3F4418;fill:var(--t-set-tx,#3F4418)}
+.dg rect.boxhl,.dg path.boxhl,.dg rect.cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595)}
+/* code shows the characters students type: no programming ligatures, every sign stays its typed characters */
+.dg .cd,.dg .cd24,.dg .nm,.dg .ty{font-variant-ligatures:none;font-feature-settings:"liga" 0,"calt" 0}
+/* ders2-and-or-eval: data-now="and" (varsayılan) ya da "or"; sonucu belirleyen ok koyu, öbürü soluk */
+.dg .ae-or{display:none}
+.dg[data-now="or"] .ae-or{display:inline}
+.dg[data-now="or"] .ae-and{display:none}
+    </style>
+  </defs>
+  <rect class="bg" width="1152" height="320"/>
+  <rect class="name" x="2" y="12" width="150" height="56" rx="6"/>
+  <text class="nm mid" x="77" y="50">credits</text>
+  <path class="ar" d="M152,40 H263" marker-end="url(#ders2-and-or-eval-ah)"/>
+  <rect class="box t-int" x="266" y="12" width="72" height="56" rx="6"/>
+  <text class="cd mid t-int" x="302" y="50">3</text>
+  <text class="ty mid t-int" x="302" y="98">int</text>
+  <rect class="name" x="2" y="120" width="218" height="56" rx="6"/>
+  <text class="nm mid" x="111" y="158">coefficient</text>
+  <path class="ar" d="M220,148 H263" marker-end="url(#ders2-and-or-eval-ah)"/>
+  <rect class="box t-float" x="266" y="120" width="84" height="56" rx="6"/>
+  <text class="cd mid t-float" x="308" y="158">1.5</text>
+  <text class="ty mid t-float" x="308" y="206">float</text>
+  <rect class="box" x="425" y="12" width="320" height="56" rx="6"/>
+  <text class="cd24 mid" x="585" y="48">credits &gt;= <tspan class="t-int">3</tspan></text>
+  <rect class="box" x="785" y="12" width="320" height="56" rx="6"/>
+  <text class="cd24 mid" x="945" y="48">coefficient &gt;= <tspan class="t-float">1.75</tspan></text>
+  <path class="ar" d="M585,68 V97" marker-end="url(#ders2-and-or-eval-ah)"/>
+  <path class="ar" d="M945,68 V97" marker-end="url(#ders2-and-or-eval-ah)"/>
+  <rect class="box t-bool" x="530" y="100" width="110" height="56" rx="6"/>
+  <text class="cd mid t-bool" x="585" y="138">True</text>
+  <text class="ty t-bool" x="652" y="136">bool</text>
+  <rect class="box t-bool" x="887" y="100" width="116" height="56" rx="6"/>
+  <text class="cd mid t-bool" x="945" y="138">False</text>
+  <text class="ty t-bool" x="1015" y="136">bool</text>
+  <rect class="tint" x="695" y="196" width="140" height="56" rx="6"/>
+  <text class="cd mid ae-and" x="765" y="234">and</text>
+  <text class="cd mid ae-or" x="765" y="234">or</text>
+  <path class="ar-m ae-and" d="M585,156 L723,193" marker-end="url(#ders2-and-or-eval-ahm)"/>
+  <path class="ar ae-and" d="M945,156 L807,193" marker-end="url(#ders2-and-or-eval-ah)"/>
+  <path class="ar ae-or" d="M585,156 L723,193" marker-end="url(#ders2-and-or-eval-ah)"/>
+  <path class="ar-m ae-or" d="M945,156 L807,193" marker-end="url(#ders2-and-or-eval-ahm)"/>
+  <rect class="boxhl" x="904" y="190" width="128" height="68" rx="10"/>
+  <path class="ar" d="M835,224 H907" marker-end="url(#ders2-and-or-eval-ah)"/>
+  <rect class="box t-bool" x="910" y="196" width="116" height="56" rx="6"/>
+  <text class="cd mid t-bool ae-and" x="968" y="234">False</text>
+  <text class="cd mid t-bool ae-or" x="968" y="234">True</text>
+  <text class="ty t-bool" x="1038" y="232">bool</text>
+  <text class="lb sub end" x="894" y="302">Çıktı</text>
+  <rect class="outp" x="910" y="268" width="116" height="46" rx="4"/>
+  <text class="cd ae-and" x="924" y="301">False</text>
+  <text class="cd ae-or" x="924" y="301">True</text>
+</svg>

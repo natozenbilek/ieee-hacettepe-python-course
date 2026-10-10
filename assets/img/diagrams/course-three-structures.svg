@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 300" width="1152" height="300" role="img" aria-labelledby="course-three-structures-t course-three-structures-d" data-now="repetition" data-known="sequence">
+  <title id="course-three-structures-t">Üç control structure</title>
+  <desc id="course-three-structures-d">Üç küçük akış şeması yan yana. Sequence (art arda çalıştırma): 1. satır, 2. satır, 3. satır kutuları oklarla alt alta. Repetition (tekrarlama): devam şartı baklavası; petrol mavisi True oku block kutusuna iner, block'tan bir ok geri dönüp baklavanın sol köşesine girer; kırmızı False oku sağ köşeden çıkar. Decision (karar): şart baklavası; petrol mavisi True oku block A'ya, kırmızı False oku block B'ye gider, iki yol aşağıda bir noktada birleşir. Ders 2'de (data-now decision): karar çerçevesi çivit mavisi, başlığı açık mavi bantta vurgulu; art arda çalıştırma düz; tekrarlama gri, kesik çizgili, sağ üstünde Ders 3 yazıyor. Ders 3'te (data-now repetition): tekrarlama vurgulu, öteki ikisi düz.</desc>
+  <!-- source: course master (DIAGRAMS.md §8.16), spec ders2-B.md S41 and ders3-A S32; no code run; root states data-now="decision" data-known="sequence" (2B), data-now="repetition" data-known="sequence decision" (3A), since the if-before-while swap of 2026-10-13 (desc updated then; the panels keep their order, which the midfield collage on ders2 S153 follows); 2026-10-11 -->
+  <defs>
+    <marker id="course-three-structures-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
+    <marker id="course-three-structures-ahm" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-m" d="M0,0 L12,6 L0,12 z"/></marker>
+    <marker id="course-three-structures-ahok" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-ok" d="M0,0 L12,6 L0,12 z"/></marker>
+    <marker id="course-three-structures-aherr" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-err" d="M0,0 L12,6 L0,12 z"/></marker>
+    <style>
+/* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
+.dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
+.dg .bg{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF)}
+.dg .tx,.dg .lb,.dg .ti,.dg .cd,.dg .cd24{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .tx{font-size:24px;font-weight:400}
+.dg .lb{font-size:24px;font-weight:600}
+.dg .ti{font-size:28px;font-weight:700}
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-family:"JetBrains Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-weight:500}
+.dg .cd{font-size:28px}
+.dg .cd24{font-size:24px}
+.dg .ty{font-size:24px;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .nm{font-size:28px;font-weight:600;fill:#FFFFFF;fill:var(--d-on-name,#FFFFFF)}
+.dg .src{font-size:18px;font-weight:400;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .sub{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .okt{fill:#0D6385;fill:var(--d-ok,#0D6385);font-weight:600}
+.dg .errt{fill:#C21C20;fill:var(--d-err,#C21C20);font-weight:600}
+.dg .b7{font-weight:700}
+.dg .pre{white-space:pre}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .boxm{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .boxhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .blk{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2.5}
+.dg .frame{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .local{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .tmpl{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .cell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellh{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .name{fill:#181C3E;fill:var(--d-name,#181C3E)}
+.dg .soft{fill:#F3F4F8;fill:var(--d-surface,#F3F4F8)}
+.dg .outp{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .tint{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .hl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3)}
+.dg .emph{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .errbox{fill:#FCEDEE;fill:var(--d-err-bg,#FCEDEE);stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .errdash{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .okbox{fill:#E9F6FA;fill:var(--d-ok-bg,#E9F6FA);stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .key{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .dot{fill:#3B4595;fill:var(--d-brand,#3B4595)}
+.dg .dot0{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .ar,.dg .ld,.dg .axis{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E)}
+.dg .ar,.dg .axis{stroke-width:2.5}
+.dg .ld{stroke-width:2}
+.dg .ar-m{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .ar-old{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .ar-ok{fill:none;stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .ar-err{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .sep{fill:none;stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .dash{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2;stroke-dasharray:8 6}
+.dg .ah{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .ah-m{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .ah-ok{fill:#0D6385;fill:var(--d-ok,#0D6385)}
+.dg .ah-err{fill:#C21C20;fill:var(--d-err,#C21C20)}
+.dg .co{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .co-t{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF);font-size:24px;font-weight:700;text-anchor:middle}
+.dg .sec{stroke:#3B4595;stroke:var(--d-second,#3B4595)}
+/* kod PyCharm gibi: ligature yok */
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-variant-ligatures:none}
+.dg .ts-head{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7)}
+/* course-three-structures: data-now names the panel in focus (head band açık mavi, 3 px çivit mavisi çerçeve);
+   data-known lists the panels already taught (plain); any other panel is later (gri, kesik çizgili, Ders 3).
+   2B: data-now="decision" data-known="sequence"; 3A: data-now="repetition" data-known="sequence decision" (since 2026-10-13).
+   No attribute: all three plain. */
+.dg .ts-later{display:none}
+.dg[data-now]:not([data-now~="sequence"]):not([data-known~="sequence"]) .ts-sequence rect.ts-frame{stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-dasharray:8 6}
+.dg[data-now]:not([data-now~="sequence"]):not([data-known~="sequence"]) .ts-sequence rect.ts-head{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF)}
+.dg[data-now]:not([data-now~="sequence"]):not([data-known~="sequence"]) .ts-sequence rect.box,.dg[data-now]:not([data-now~="sequence"]):not([data-known~="sequence"]) .ts-sequence polygon.tint{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95)}
+.dg[data-now]:not([data-now~="sequence"]):not([data-known~="sequence"]) .ts-sequence text{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg[data-now]:not([data-now~="sequence"]):not([data-known~="sequence"]) .ts-sequence path.ar,.dg[data-now]:not([data-now~="sequence"]):not([data-known~="sequence"]) .ts-sequence path.ar-ok,.dg[data-now]:not([data-now~="sequence"]):not([data-known~="sequence"]) .ts-sequence path.ar-err{stroke:#767C95;stroke:var(--d-muted,#767C95);marker-end:url(#course-three-structures-ahm)}
+.dg[data-now]:not([data-now~="sequence"]):not([data-known~="sequence"]) .ts-sequence path.ts-join{marker-end:none}
+.dg[data-now]:not([data-now~="sequence"]):not([data-known~="sequence"]) .ts-sequence circle.dot{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg[data-now]:not([data-now~="sequence"]):not([data-known~="sequence"]) .ts-sequence .ts-later{display:inline}
+.dg[data-now~="sequence"] .ts-sequence rect.ts-head{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg[data-now~="sequence"] .ts-sequence rect.ts-frame{stroke-width:3}
+.dg[data-now]:not([data-now~="repetition"]):not([data-known~="repetition"]) .ts-repetition rect.ts-frame{stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-dasharray:8 6}
+.dg[data-now]:not([data-now~="repetition"]):not([data-known~="repetition"]) .ts-repetition rect.ts-head{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF)}
+.dg[data-now]:not([data-now~="repetition"]):not([data-known~="repetition"]) .ts-repetition rect.box,.dg[data-now]:not([data-now~="repetition"]):not([data-known~="repetition"]) .ts-repetition polygon.tint{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95)}
+.dg[data-now]:not([data-now~="repetition"]):not([data-known~="repetition"]) .ts-repetition text{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg[data-now]:not([data-now~="repetition"]):not([data-known~="repetition"]) .ts-repetition path.ar,.dg[data-now]:not([data-now~="repetition"]):not([data-known~="repetition"]) .ts-repetition path.ar-ok,.dg[data-now]:not([data-now~="repetition"]):not([data-known~="repetition"]) .ts-repetition path.ar-err{stroke:#767C95;stroke:var(--d-muted,#767C95);marker-end:url(#course-three-structures-ahm)}
+.dg[data-now]:not([data-now~="repetition"]):not([data-known~="repetition"]) .ts-repetition path.ts-join{marker-end:none}
+.dg[data-now]:not([data-now~="repetition"]):not([data-known~="repetition"]) .ts-repetition circle.dot{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg[data-now]:not([data-now~="repetition"]):not([data-known~="repetition"]) .ts-repetition .ts-later{display:inline}
+.dg[data-now~="repetition"] .ts-repetition rect.ts-head{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg[data-now~="repetition"] .ts-repetition rect.ts-frame{stroke-width:3}
+.dg[data-now]:not([data-now~="decision"]):not([data-known~="decision"]) .ts-decision rect.ts-frame{stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-dasharray:8 6}
+.dg[data-now]:not([data-now~="decision"]):not([data-known~="decision"]) .ts-decision rect.ts-head{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF)}
+.dg[data-now]:not([data-now~="decision"]):not([data-known~="decision"]) .ts-decision rect.box,.dg[data-now]:not([data-now~="decision"]):not([data-known~="decision"]) .ts-decision polygon.tint{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95)}
+.dg[data-now]:not([data-now~="decision"]):not([data-known~="decision"]) .ts-decision text{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg[data-now]:not([data-now~="decision"]):not([data-known~="decision"]) .ts-decision path.ar,.dg[data-now]:not([data-now~="decision"]):not([data-known~="decision"]) .ts-decision path.ar-ok,.dg[data-now]:not([data-now~="decision"]):not([data-known~="decision"]) .ts-decision path.ar-err{stroke:#767C95;stroke:var(--d-muted,#767C95);marker-end:url(#course-three-structures-ahm)}
+.dg[data-now]:not([data-now~="decision"]):not([data-known~="decision"]) .ts-decision path.ts-join{marker-end:none}
+.dg[data-now]:not([data-now~="decision"]):not([data-known~="decision"]) .ts-decision circle.dot{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg[data-now]:not([data-now~="decision"]):not([data-known~="decision"]) .ts-decision .ts-later{display:inline}
+.dg[data-now~="decision"] .ts-decision rect.ts-head{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg[data-now~="decision"] .ts-decision rect.ts-frame{stroke-width:3}
+    </style>
+  </defs>
+  <rect class="bg" width="1152" height="300"/>
+  <g class="ts-sequence">
+  <rect class="blk ts-frame" x="2" y="4" width="360" height="292" rx="6"/>
+  <rect class="ts-head" x="8" y="10" width="348" height="74" rx="4"/>
+  <text class="ti" x="24" y="44">Sequence</text>
+  <text class="tx" x="24" y="74">(art arda çalıştırma)</text>
+  <text class="tx sub end ts-later" x="342" y="44">Ders 3</text>
+  <rect class="box" x="82" y="104" width="200" height="40" rx="6"/>
+  <text class="tx mid" x="182" y="132">1. satır</text>
+  <rect class="box" x="82" y="170" width="200" height="40" rx="6"/>
+  <text class="tx mid" x="182" y="198">2. satır</text>
+  <rect class="box" x="82" y="236" width="200" height="40" rx="6"/>
+  <text class="tx mid" x="182" y="264">3. satır</text>
+  <path class="ar" d="M182,144 V167" marker-end="url(#course-three-structures-ah)"/>
+  <path class="ar" d="M182,210 V233" marker-end="url(#course-three-structures-ah)"/>
+  </g>
+  <g class="ts-repetition">
+  <rect class="blk ts-frame" x="396" y="4" width="360" height="292" rx="6"/>
+  <rect class="ts-head" x="402" y="10" width="348" height="74" rx="4"/>
+  <text class="ti" x="418" y="44">Repetition</text>
+  <text class="tx" x="418" y="74">(tekrarlama)</text>
+  <text class="tx sub end ts-later" x="736" y="44">Ders 3</text>
+  <polygon class="tint" points="466,150 566,108 666,150 566,192"/>
+  <text class="tx mid" x="566" y="158">devam şartı</text>
+  <path class="ar-ok" d="M566,192 V223" marker-end="url(#course-three-structures-ahok)"/>
+  <text class="lb okt" x="576" y="218">True</text>
+  <rect class="box" x="506" y="226" width="120" height="40" rx="6"/>
+  <text class="tx mid" x="566" y="254">block</text>
+  <path class="ar" d="M506,246 H422 V150 H463" marker-end="url(#course-three-structures-ah)"/>
+  <path class="ar-err" d="M666,150 H730 V284" marker-end="url(#course-three-structures-aherr)"/>
+  <text class="lb errt end" x="722" y="180">False</text>
+  </g>
+  <g class="ts-decision">
+  <rect class="blk ts-frame" x="790" y="4" width="360" height="292" rx="6"/>
+  <rect class="ts-head" x="796" y="10" width="348" height="74" rx="4"/>
+  <text class="ti" x="812" y="44">Decision</text>
+  <text class="tx" x="812" y="74">(karar)</text>
+  <text class="tx sub end ts-later" x="1130" y="44">Ders 3</text>
+  <polygon class="tint" points="900,140 970,104 1040,140 970,176"/>
+  <text class="tx mid" x="970" y="148">şart</text>
+  <path class="ar-ok" d="M900,140 H870 V197" marker-end="url(#course-three-structures-ahok)"/>
+  <text class="lb okt end" x="860" y="180">True</text>
+  <path class="ar-err" d="M1040,140 H1070 V197" marker-end="url(#course-three-structures-aherr)"/>
+  <text class="lb errt" x="1080" y="180">False</text>
+  <rect class="box" x="806" y="200" width="128" height="40" rx="6"/>
+  <text class="tx mid" x="870" y="228">block A</text>
+  <rect class="box" x="1006" y="200" width="128" height="40" rx="6"/>
+  <text class="tx mid" x="1070" y="228">block B</text>
+  <path class="ar ts-join" d="M870,240 V264 H963"/>
+  <path class="ar ts-join" d="M1070,240 V264 H977"/>
+  <circle class="dot" cx="970" cy="264" r="7"/>
+  <path class="ar" d="M970,271 V284" marker-end="url(#course-three-structures-ah)"/>
+  </g>
+</svg>

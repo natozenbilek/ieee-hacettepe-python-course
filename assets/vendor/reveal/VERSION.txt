@@ -1,0 +1,3 @@
+reveal.js 5.2.1 (npm, MIT). Copied files: dist/reset.css, dist/reveal.css, dist/reveal.js, plugin/highlight/highlight.js, plugin/notes/notes.js. No theme CSS: assets/css/slides.css does the theming.
+Note: the banner inside dist/reveal.js of the 5.2.1 npm package reads "5.2.0"; this is how upstream published it.
+Bundled third-party code (highlight.js 11.9.0 in plugin/highlight, marked 4.x in plugin/notes): THIRD-PARTY-LICENSES.txt.

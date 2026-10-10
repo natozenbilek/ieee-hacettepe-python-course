@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 340" width="1152" height="340" role="img" aria-labelledby="ders1-f1-lap-split-t ders1-f1-lap-split-d">
+  <title id="ders1-f1-lap-split-t">78792 milisaniye // ve % ile dakika, saniye ve milisaniyeye ayrılıyor</title>
+  <desc id="ders1-f1-lap-split-d">İki adımda bir tur süresi. 1. adım, dakika: 78792 // 60000 sonucu 1 (int, turuncu), 78792 % 60000 sonucu 18792 (int, turuncu). Altında 78792 milisaniyelik turuncu bir çubuk iki parçaya bölünmüş: solda 60000, yani 1 tam dakika, sağda artan 18792; sağdaki parça çivit mavisi çerçeveli açık mavi bir bantla vurgulu. İki ince çizgi bu 18792'lik parçayı alttaki çubuğa büyütüyor. 2. adım, saniye: 18792'lik çubuk her biri 1000 milisaniye olan 18 eşit turuncu kutuya ve sonda 792'lik dar bir kutuya bölünmüş; dar kutu çivit mavisi çerçeveli açık mavi bantla vurgulu. 18 kutunun altındaki parantezde 18 tam saniye ve 18792 // 1000, dar kutunun altında artan 792 ms ve 18792 % 1000 yazıyor. Sağda sonuç: 1:18.792; 1, 18 ve 792 turuncu.</desc>
+  <!-- source: print(78792 // 60000, 78792 % 60000) -> 1 18792; print(18792 // 1000, 18792 % 1000) -> 18 792 (Python 3.14.8, 2026-10-11). Bar 1000 px: 60000/78792 of it is 761.5 px, 18792 is 238.5 px; row 2: 18 cells of 1000/18792 * 1000 = 53.21 px and 792 ms = 42.15 px -->
+  <defs>
+    <marker id="ders1-f1-lap-split-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
+    <style>
+/* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
+.dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
+.dg .bg{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF)}
+.dg .tx,.dg .lb,.dg .ti,.dg .cd,.dg .cd24{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .tx{font-size:24px;font-weight:400}
+.dg .lb{font-size:24px;font-weight:600}
+.dg .ti{font-size:28px;font-weight:700}
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-family:"JetBrains Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-weight:500}
+.dg .cd{font-size:28px}
+.dg .cd24{font-size:24px}
+.dg .ty{font-size:24px;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .nm{font-size:28px;font-weight:600;fill:#FFFFFF;fill:var(--d-on-name,#FFFFFF)}
+.dg .src{font-size:18px;font-weight:400;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .sub{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .okt{fill:#0D6385;fill:var(--d-ok,#0D6385);font-weight:600}
+.dg .errt{fill:#C21C20;fill:var(--d-err,#C21C20);font-weight:600}
+.dg .b7{font-weight:700}
+.dg .pre{white-space:pre}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .boxm{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .boxhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .blk{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2.5}
+.dg .frame{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .local{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .tmpl{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .cell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellh{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .name{fill:#181C3E;fill:var(--d-name,#181C3E)}
+.dg .soft{fill:#F3F4F8;fill:var(--d-surface,#F3F4F8)}
+.dg .outp{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .tint{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .hl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3)}
+.dg .emph{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .errbox{fill:#FCEDEE;fill:var(--d-err-bg,#FCEDEE);stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .errdash{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .okbox{fill:#E9F6FA;fill:var(--d-ok-bg,#E9F6FA);stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .key{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .dot{fill:#3B4595;fill:var(--d-brand,#3B4595)}
+.dg .dot0{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .ar,.dg .ld,.dg .axis{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E)}
+.dg .ar,.dg .axis{stroke-width:2.5}
+.dg .ld{stroke-width:2}
+.dg .ar-m{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .ar-old{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .ar-ok{fill:none;stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .ar-err{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .sep{fill:none;stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .dash{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2;stroke-dasharray:8 6}
+.dg .ah{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .ah-m{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .ah-ok{fill:#0D6385;fill:var(--d-ok,#0D6385)}
+.dg .ah-err{fill:#C21C20;fill:var(--d-err,#C21C20)}
+.dg .co{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .co-t{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF);font-size:24px;font-weight:700;text-anchor:middle}
+.dg .sec{stroke:#3B4595;stroke:var(--d-second,#3B4595)}
+/* dg v4 type renkleri · authoring/DIAGRAMS.md §10'dan aynen kopyalanır (dg v3 bloğundan sonra) */
+.dg rect.t-int,.dg path.t-int,.dg circle.t-int{fill:#F2CEB3;fill:var(--t-int-bg,#F2CEB3);stroke:#854B00;stroke:var(--t-int,#854B00)}
+.dg text.t-int,.dg tspan.t-int{fill:#613109;fill:var(--t-int-tx,#613109)}
+.dg rect.t-float,.dg path.t-float,.dg circle.t-float{fill:#FFF1C6;fill:var(--t-float-bg,#FFF1C6);stroke:#9F7000;stroke:var(--t-float,#9F7000)}
+.dg text.t-float,.dg tspan.t-float{fill:#5D420E;fill:var(--t-float-tx,#5D420E)}
+.dg rect.t-bool,.dg path.t-bool,.dg circle.t-bool{fill:#C4E9E1;fill:var(--t-bool-bg,#C4E9E1);stroke:#0E7A6D;stroke:var(--t-bool,#0E7A6D)}
+.dg text.t-bool,.dg tspan.t-bool{fill:#0A473F;fill:var(--t-bool-tx,#0A473F)}
+.dg rect.t-str,.dg path.t-str,.dg circle.t-str{fill:#D9F6DD;fill:var(--t-str-bg,#D9F6DD);stroke:#296A3B;stroke:var(--t-str,#296A3B)}
+.dg text.t-str,.dg tspan.t-str{fill:#1A4B28;fill:var(--t-str-tx,#1A4B28)}
+.dg rect.t-none,.dg path.t-none,.dg circle.t-none{fill:#F6F3EF;fill:var(--t-none-bg,#F6F3EF);stroke:#534C45;stroke:var(--t-none,#534C45)}
+.dg text.t-none,.dg tspan.t-none{fill:#413C38;fill:var(--t-none-tx,#413C38)}
+.dg rect.t-list,.dg path.t-list,.dg circle.t-list{fill:#F3C8DB;fill:var(--t-list-bg,#F3C8DB);stroke:#8A2B60;stroke:var(--t-list,#8A2B60)}
+.dg text.t-list,.dg tspan.t-list{fill:#651E45;fill:var(--t-list-tx,#651E45)}
+.dg rect.t-tuple,.dg path.t-tuple,.dg circle.t-tuple{fill:#E3EAF2;fill:var(--t-tuple-bg,#E3EAF2);stroke:#4A6378;stroke:var(--t-tuple,#4A6378)}
+.dg text.t-tuple,.dg tspan.t-tuple{fill:#2C3E4F;fill:var(--t-tuple-tx,#2C3E4F)}
+.dg rect.t-dict,.dg path.t-dict,.dg circle.t-dict{fill:#DBCEC4;fill:var(--t-dict-bg,#DBCEC4);stroke:#4F2611;stroke:var(--t-dict,#4F2611)}
+.dg text.t-dict,.dg tspan.t-dict{fill:#4C2817;fill:var(--t-dict-tx,#4C2817)}
+.dg rect.t-set,.dg path.t-set,.dg circle.t-set{fill:#F2F8D6;fill:var(--t-set-bg,#F2F8D6);stroke:#747C42;stroke:var(--t-set,#747C42)}
+.dg text.t-set,.dg tspan.t-set{fill:#3F4418;fill:var(--t-set-tx,#3F4418)}
+.dg rect.boxhl,.dg path.boxhl,.dg rect.cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595)}
+    </style>
+  </defs>
+  <rect class="bg" width="1152" height="340"/>
+  <text class="lb" x="2" y="40">1. adım: dakika</text>
+  <text class="cd24" x="214" y="40">78792 // 60000</text>
+  <path class="ar" d="M424,32 H467" marker-end="url(#ders1-f1-lap-split-ah)"/>
+  <rect class="box t-int" x="470" y="8" width="56" height="48" rx="6"/>
+  <text class="cd24 mid t-int" x="498" y="40">1</text>
+  <text class="ty t-int" x="538" y="40">int</text>
+  <text class="cd24" x="752" y="40">78792 % 60000</text>
+  <path class="ar" d="M947,32 H994" marker-end="url(#ders1-f1-lap-split-ah)"/>
+  <rect class="box t-int" x="997" y="8" width="96" height="48" rx="6"/>
+  <text class="cd24 mid t-int" x="1045" y="40">18792</text>
+  <text class="ty t-int" x="1105" y="40">int</text>
+  <path class="boxhl" d="M763.5,66 H998 A10,10 0 0 1 1008,76 V132 A10,10 0 0 1 998,142 H763.5 Z"/>
+  <rect class="box t-int" x="2" y="72" width="1000" height="64" rx="6"/>
+  <path class="box t-int" d="M763.5,72 V136"/>
+  <text class="cd24 t-int" x="276" y="112">60000</text>
+  <text class="lb" x="364" y="112">1 tam dakika</text>
+  <text class="cd24 t-int" x="810" y="112">18792</text>
+  <text class="lb" x="898" y="112">artan</text>
+  <path class="ld" d="M763.5,145 L4,203"/>
+  <path class="ld" d="M1002,145 V197"/>
+  <text class="lb" x="2" y="172">2. adım: saniye</text>
+  <path class="boxhl" d="M959.85,200 H998 A10,10 0 0 1 1008,210 V266 A10,10 0 0 1 998,276 H959.85 Z"/>
+  <rect class="cell t-int" x="2" y="206" width="53.21" height="64"/>
+  <rect class="cell t-int" x="55.21" y="206" width="53.21" height="64"/>
+  <rect class="cell t-int" x="108.43" y="206" width="53.21" height="64"/>
+  <rect class="cell t-int" x="161.64" y="206" width="53.21" height="64"/>
+  <rect class="cell t-int" x="214.86" y="206" width="53.21" height="64"/>
+  <rect class="cell t-int" x="268.07" y="206" width="53.21" height="64"/>
+  <rect class="cell t-int" x="321.28" y="206" width="53.21" height="64"/>
+  <rect class="cell t-int" x="374.5" y="206" width="53.21" height="64"/>
+  <rect class="cell t-int" x="427.71" y="206" width="53.21" height="64"/>
+  <rect class="cell t-int" x="480.93" y="206" width="53.21" height="64"/>
+  <rect class="cell t-int" x="534.14" y="206" width="53.21" height="64"/>
+  <rect class="cell t-int" x="587.36" y="206" width="53.21" height="64"/>
+  <rect class="cell t-int" x="640.57" y="206" width="53.21" height="64"/>
+  <rect class="cell t-int" x="693.78" y="206" width="53.21" height="64"/>
+  <rect class="cell t-int" x="747" y="206" width="53.21" height="64"/>
+  <rect class="cell t-int" x="800.21" y="206" width="53.21" height="64"/>
+  <rect class="cell t-int" x="853.43" y="206" width="53.21" height="64"/>
+  <rect class="cell t-int" x="906.64" y="206" width="53.21" height="64"/>
+  <rect class="cell t-int" x="959.85" y="206" width="42.15" height="64"/>
+  <text class="cd" x="1150" y="248" text-anchor="end"><tspan class="t-int">1</tspan>:<tspan class="t-int">18</tspan>.<tspan class="t-int">792</tspan></text>
+  <path class="ld" d="M4,282 V292 H956.85 V282"/>
+  <path class="ld" d="M480,292 V300"/>
+  <text class="lb end" x="472" y="324">18 tam saniye</text>
+  <text class="cd24" x="488" y="324">18792 // 1000</text>
+  <path class="ld" d="M980.93,279 V300"/>
+  <text class="lb end" x="963" y="324">artan 792 ms</text>
+  <text class="cd24 end" x="1150" y="324">18792 % 1000</text>
+</svg>

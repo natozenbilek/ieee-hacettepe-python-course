@@ -1,0 +1,6 @@
+{
+  "d5-tekrar-return": {"options": [{"code": "4.5"}, {"code": "4"}, {"code": "3.5\n4.5"}, {"code": "TypeError"}], "answer": 1, "why": "average() 3.5'i return eder; x 3.5'i gösterir, x + 1 de 4.5 verir."},
+  "d5-print-return": {"options": [{"code": "16\nNone"}, {"code": "16\n16"}, {"code": "None"}, {"text": "Hata verir"}], "answer": 1, "why": "calc 16'yı yazdırır ama bir şey döndürmez; result None'ı gösterir."},
+  "d5-set-bos": {"options": [{"code": "2 False"}, {"code": "3 True"}, {"code": "2 True"}, {"code": "3 False"}], "answer": 1, "why": "set BBM'yi bir kez tutar; {} boş bir dict'tir, boş set'e eşit değildir."},
+  "d5-yazma": {"options": [{"code": "birikiüç"}, {"code": "bir\niki\nüç"}, {"code": "iki"}, {"text": "Hiçbir şey"}], "answer": 3, "why": "Ekrana yalnızca print yazar; iki write test.txt'ye gider."}
+}

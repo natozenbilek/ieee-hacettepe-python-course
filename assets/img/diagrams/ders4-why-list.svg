@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 420" width="1152" height="420" role="img" aria-labelledby="ders4-why-list-t ders4-why-list-d">
+  <title id="ders4-why-list-t">Ayrı isimler ve tek list</title>
+  <desc id="ders4-why-list-d">Solda kod: mat_grade = "C1", fiz_grade = "B2", tkd_grade = "A2", print(mat_grade, fiz_grade, tkd_grade). Altında Ayrı isimler: üç ayrı isim (lacivert) üç ayrı str değerini (yeşil) gösteriyor, C1, B2, A2; çıktı C1 B2 A2. Dördüncü satır soluk ve kesikli: 40 ders için 40 isim. Sağda kod: grades = ["C1", "B2", "A2"], print(grades, len(grades)). Altında Tek list: tek bir grades ismi tek bir list'i (vişneçürüğü) gösteriyor; list açık mavi, çivit mavisi çerçeveli şeridin içinde vurgulu; altında 40 ders için de tek isim; çıktı ['C1', 'B2', 'A2'] 3.</desc>
+  <!-- source: left -> C1 B2 A2; right -> ['C1', 'B2', 'A2'] 3 (Python 3.14.8, 2026-10-10) -->
+  <defs>
+    <marker id="ders4-why-list-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
+    <marker id="ders4-why-list-ahm" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-m" d="M0,0 L12,6 L0,12 z"/></marker>
+    <marker id="ders4-why-list-aherr" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-err" d="M0,0 L12,6 L0,12 z"/></marker>
+    <style>
+/* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
+.dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
+.dg .bg{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF)}
+.dg .tx,.dg .lb,.dg .ti,.dg .cd,.dg .cd24{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .tx{font-size:24px;font-weight:400}
+.dg .lb{font-size:24px;font-weight:600}
+.dg .ti{font-size:28px;font-weight:700}
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-family:"JetBrains Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-weight:500}
+.dg .cd{font-size:28px}
+.dg .cd24{font-size:24px}
+.dg .ty{font-size:24px;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .nm{font-size:28px;font-weight:600;fill:#FFFFFF;fill:var(--d-on-name,#FFFFFF)}
+.dg .src{font-size:18px;font-weight:400;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .sub{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .okt{fill:#0D6385;fill:var(--d-ok,#0D6385);font-weight:600}
+.dg .errt{fill:#C21C20;fill:var(--d-err,#C21C20);font-weight:600}
+.dg .b7{font-weight:700}
+.dg .pre{white-space:pre}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .boxm{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .boxhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .blk{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2.5}
+.dg .frame{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .local{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .tmpl{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .cell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellh{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .name{fill:#181C3E;fill:var(--d-name,#181C3E)}
+.dg .soft{fill:#F3F4F8;fill:var(--d-surface,#F3F4F8)}
+.dg .outp{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .tint{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .hl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3)}
+.dg .emph{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .errbox{fill:#FCEDEE;fill:var(--d-err-bg,#FCEDEE);stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .errdash{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .okbox{fill:#E9F6FA;fill:var(--d-ok-bg,#E9F6FA);stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .key{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .dot{fill:#3B4595;fill:var(--d-brand,#3B4595)}
+.dg .dot0{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .ar,.dg .ld,.dg .axis{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E)}
+.dg .ar,.dg .axis{stroke-width:2.5}
+.dg .ld{stroke-width:2}
+.dg .ar-m{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .ar-old{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .ar-ok{fill:none;stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .ar-err{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .sep{fill:none;stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .dash{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2;stroke-dasharray:8 6}
+.dg .ah{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .ah-m{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .ah-ok{fill:#0D6385;fill:var(--d-ok,#0D6385)}
+.dg .ah-err{fill:#C21C20;fill:var(--d-err,#C21C20)}
+.dg .co{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .co-t{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF);font-size:24px;font-weight:700;text-anchor:middle}
+.dg .sec{stroke:#3B4595;stroke:var(--d-second,#3B4595)}
+/* dg v4 type renkleri · authoring/DIAGRAMS.md §10'dan aynen kopyalanır (dg v3 bloğundan sonra) */
+.dg rect.t-int,.dg path.t-int,.dg circle.t-int{fill:#F2CEB3;fill:var(--t-int-bg,#F2CEB3);stroke:#854B00;stroke:var(--t-int,#854B00)}
+.dg text.t-int,.dg tspan.t-int{fill:#613109;fill:var(--t-int-tx,#613109)}
+.dg rect.t-float,.dg path.t-float,.dg circle.t-float{fill:#FFF1C6;fill:var(--t-float-bg,#FFF1C6);stroke:#9F7000;stroke:var(--t-float,#9F7000)}
+.dg text.t-float,.dg tspan.t-float{fill:#5D420E;fill:var(--t-float-tx,#5D420E)}
+.dg rect.t-bool,.dg path.t-bool,.dg circle.t-bool{fill:#C4E9E1;fill:var(--t-bool-bg,#C4E9E1);stroke:#0E7A6D;stroke:var(--t-bool,#0E7A6D)}
+.dg text.t-bool,.dg tspan.t-bool{fill:#0A473F;fill:var(--t-bool-tx,#0A473F)}
+.dg rect.t-str,.dg path.t-str,.dg circle.t-str{fill:#D9F6DD;fill:var(--t-str-bg,#D9F6DD);stroke:#296A3B;stroke:var(--t-str,#296A3B)}
+.dg text.t-str,.dg tspan.t-str{fill:#1A4B28;fill:var(--t-str-tx,#1A4B28)}
+.dg rect.t-none,.dg path.t-none,.dg circle.t-none{fill:#F6F3EF;fill:var(--t-none-bg,#F6F3EF);stroke:#534C45;stroke:var(--t-none,#534C45)}
+.dg text.t-none,.dg tspan.t-none{fill:#413C38;fill:var(--t-none-tx,#413C38)}
+.dg rect.t-list,.dg path.t-list,.dg circle.t-list{fill:#F3C8DB;fill:var(--t-list-bg,#F3C8DB);stroke:#8A2B60;stroke:var(--t-list,#8A2B60)}
+.dg text.t-list,.dg tspan.t-list{fill:#651E45;fill:var(--t-list-tx,#651E45)}
+.dg rect.t-tuple,.dg path.t-tuple,.dg circle.t-tuple{fill:#E3EAF2;fill:var(--t-tuple-bg,#E3EAF2);stroke:#4A6378;stroke:var(--t-tuple,#4A6378)}
+.dg text.t-tuple,.dg tspan.t-tuple{fill:#2C3E4F;fill:var(--t-tuple-tx,#2C3E4F)}
+.dg rect.t-dict,.dg path.t-dict,.dg circle.t-dict{fill:#DBCEC4;fill:var(--t-dict-bg,#DBCEC4);stroke:#4F2611;stroke:var(--t-dict,#4F2611)}
+.dg text.t-dict,.dg tspan.t-dict{fill:#4C2817;fill:var(--t-dict-tx,#4C2817)}
+.dg rect.t-set,.dg path.t-set,.dg circle.t-set{fill:#F2F8D6;fill:var(--t-set-bg,#F2F8D6);stroke:#747C42;stroke:var(--t-set,#747C42)}
+.dg text.t-set,.dg tspan.t-set{fill:#3F4418;fill:var(--t-set-tx,#3F4418)}
+.dg rect.boxhl,.dg path.boxhl,.dg rect.cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595)}
+.dg .mcell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .mbox{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .mname{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .dash86{stroke-dasharray:8 6}
+    </style>
+  </defs>
+  <rect class="bg" width="1152" height="420"/>
+<path class="sep" d="M576,0 V420"/>
+<rect class="soft" x="2" y="2" width="566" height="148" rx="4"/>
+<text class="cd24" x="12" y="32">mat_grade = "C1"</text>
+<text class="cd24" x="12" y="66">fiz_grade = "B2"</text>
+<text class="cd24" x="12" y="100">tkd_grade = "A2"</text>
+<text class="cd24" x="12" y="134">print(mat_grade, fiz_grade, tkd_grade)</text>
+<rect class="soft" x="600" y="2" width="550" height="80" rx="4"/>
+<text class="cd24" x="616" y="32">grades = ["C1", "B2", "A2"]</text>
+<text class="cd24" x="616" y="66">print(grades, len(grades))</text>
+<text class="ti" x="16" y="192">Ayrı isimler</text>
+<rect class="name" x="16" y="206" width="184" height="48" rx="6"/>
+<text class="nm mid" x="108" y="240">mat_grade</text>
+<path class="ar" d="M200,230 H257" marker-end="url(#ders4-why-list-ah)"/>
+<rect class="box t-str" x="260" y="206" width="96" height="48" rx="6"/>
+<text class="cd mid t-str" x="308" y="240">"C1"</text>
+<rect class="name" x="16" y="262" width="184" height="48" rx="6"/>
+<text class="nm mid" x="108" y="296">fiz_grade</text>
+<path class="ar" d="M200,286 H257" marker-end="url(#ders4-why-list-ah)"/>
+<rect class="box t-str" x="260" y="262" width="96" height="48" rx="6"/>
+<text class="cd mid t-str" x="308" y="296">"B2"</text>
+<rect class="name" x="16" y="318" width="184" height="48" rx="6"/>
+<text class="nm mid" x="108" y="352">tkd_grade</text>
+<path class="ar" d="M200,342 H257" marker-end="url(#ders4-why-list-ah)"/>
+<rect class="box t-str" x="260" y="318" width="96" height="48" rx="6"/>
+<text class="cd mid t-str" x="308" y="352">"A2"</text>
+<rect class="boxm dash86" x="16" y="374" width="184" height="44" rx="6"/>
+<text class="cd sub mid" x="108" y="406">...</text>
+<text class="tx sub" x="260" y="404">40 ders için 40 isim</text>
+<text class="lb sub" x="386" y="196">Çıktı</text>
+<rect class="outp" x="386" y="206" width="176" height="48" rx="4"/>
+<text class="cd24" x="402" y="238">C1 B2 A2</text>
+<text class="ti" x="616" y="192">Tek list</text>
+<rect class="name" x="616" y="226" width="133" height="52" rx="6"/>
+<text class="nm mid" x="682.5" y="262">grades</text>
+<rect class="boxhl" x="774" y="204" width="364" height="96" rx="10"/>
+<path class="ar" d="M749,252 H777" marker-end="url(#ders4-why-list-ah)"/>
+<rect class="box t-list" x="780" y="210" width="352" height="84" rx="6"/>
+<rect class="cell t-str" x="792" y="222" width="104" height="60"/>
+<text class="cd mid t-str" x="844" y="262">"C1"</text>
+<rect class="cell t-str" x="904" y="222" width="104" height="60"/>
+<text class="cd mid t-str" x="956" y="262">"B2"</text>
+<rect class="cell t-str" x="1016" y="222" width="104" height="60"/>
+<text class="cd mid t-str" x="1068" y="262">"A2"</text>
+<text class="tx sub" x="780" y="330">40 ders için de tek isim</text>
+<text class="lb sub" x="700" y="386">Çıktı</text>
+<rect class="outp" x="780" y="354" width="360" height="48" rx="4"/>
+<text class="cd24" x="796" y="386">['C1', 'B2', 'A2'] 3</text>
+</svg>

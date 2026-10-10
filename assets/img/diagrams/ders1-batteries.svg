@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 560 440" width="560" height="440" role="img" aria-labelledby="ders1-batteries-t ders1-batteries-d">
+  <title id="ders1-batteries-t">Python 3.14: pilleri içinde</title>
+  <desc id="ders1-batteries-d">Üstü açık bir kutu, çivit mavisi çerçeveli; kutunun önünde Python 3.14 yazıyor. Kutunun içinde Python'la gelen sekiz hazır araç küçük kutucuklar halinde duruyor: üst sırada math, random ve turtle, ortada datetime, json ve csv, altta statistics ve sys. Üst sıra açık mavi, çivit mavisi çerçeveli bir bandın içinde; üstteki kursta kullanacaklarımız yazısından bu banda bir ok iniyor. Kutunun altında Python'la gelen hazır araç: 194 yazıyor. Sağ üst köşede 0 TL yazan bir fiyat etiketi, altında açık kaynak. En altta kaynak satırı: python.org/about; Python 3.14 Tutorial 10.12; sys.stdlib_module_names, 3.14.8.</desc>
+  <!-- source: python.org/about (OSI approved open source licence, free to use and distribute); The Python Tutorial 10.12 Batteries Included; on 3.14.8: len([m for m in sys.stdlib_module_names if not m.startswith('_')]) is 194 of 297; math, random, turtle, datetime, json, csv, statistics and sys are all in sys.stdlib_module_names (Python 3.14.8, 2026-10-11) -->
+  <defs>
+    <marker id="ders1-batteries-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
+    <style>
+/* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
+.dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
+.dg .bg{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF)}
+.dg .tx,.dg .lb,.dg .ti,.dg .cd,.dg .cd24{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .tx{font-size:24px;font-weight:400}
+.dg .lb{font-size:24px;font-weight:600}
+.dg .ti{font-size:28px;font-weight:700}
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-family:"JetBrains Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-weight:500}
+.dg .cd{font-size:28px}
+.dg .cd24{font-size:24px}
+.dg .ty{font-size:24px;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .nm{font-size:28px;font-weight:600;fill:#FFFFFF;fill:var(--d-on-name,#FFFFFF)}
+.dg .src{font-size:18px;font-weight:400;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .sub{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .okt{fill:#0D6385;fill:var(--d-ok,#0D6385);font-weight:600}
+.dg .errt{fill:#C21C20;fill:var(--d-err,#C21C20);font-weight:600}
+.dg .b7{font-weight:700}
+.dg .pre{white-space:pre}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .boxm{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .boxhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .blk{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2.5}
+.dg .frame{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .local{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .tmpl{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .cell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellh{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .name{fill:#181C3E;fill:var(--d-name,#181C3E)}
+.dg .soft{fill:#F3F4F8;fill:var(--d-surface,#F3F4F8)}
+.dg .outp{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .tint{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .hl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3)}
+.dg .emph{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .errbox{fill:#FCEDEE;fill:var(--d-err-bg,#FCEDEE);stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .errdash{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .okbox{fill:#E9F6FA;fill:var(--d-ok-bg,#E9F6FA);stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .key{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .dot{fill:#3B4595;fill:var(--d-brand,#3B4595)}
+.dg .dot0{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .ar,.dg .ld,.dg .axis{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E)}
+.dg .ar,.dg .axis{stroke-width:2.5}
+.dg .ld{stroke-width:2}
+.dg .ar-m{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .ar-old{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .ar-ok{fill:none;stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .ar-err{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .sep{fill:none;stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .dash{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2;stroke-dasharray:8 6}
+.dg .ah{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .ah-m{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .ah-ok{fill:#0D6385;fill:var(--d-ok,#0D6385)}
+.dg .ah-err{fill:#C21C20;fill:var(--d-err,#C21C20)}
+.dg .co{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .co-t{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF);font-size:24px;font-weight:700;text-anchor:middle}
+.dg .sec{stroke:#3B4595;stroke:var(--d-second,#3B4595)}
+    </style>
+  </defs>
+  <rect class="bg" width="560" height="440"/>
+  <text class="lb" x="40" y="30">kursta kullanacaklarımız</text>
+  <rect class="box" x="376" y="6" width="150" height="64" rx="6"/>
+  <circle class="dot" cx="396" cy="38" r="6"/>
+  <text class="ti mid" x="468" y="48">0 TL</text>
+  <text class="tx sub mid" x="451" y="94">açık kaynak</text>
+  <path class="ld" d="M30,100 L8,56"/>
+  <path class="ld" d="M530,100 L552,56"/>
+  <path class="blk" d="M30,100 V360 H530 V100"/>
+  <rect class="boxhl" x="48" y="110" width="464" height="60" rx="10"/>
+  <path class="ar" d="M122,40 V107" marker-end="url(#ders1-batteries-ah)"/>
+  <rect class="box" x="54" y="116" width="140" height="48" rx="4"/>
+  <text class="cd24 mid" x="124" y="148">math</text>
+  <rect class="box" x="210" y="116" width="140" height="48" rx="4"/>
+  <text class="cd24 mid" x="280" y="148">random</text>
+  <rect class="box" x="366" y="116" width="140" height="48" rx="4"/>
+  <text class="cd24 mid" x="436" y="148">turtle</text>
+  <rect class="box" x="54" y="184" width="140" height="48" rx="4"/>
+  <text class="cd24 mid" x="124" y="216">datetime</text>
+  <rect class="box" x="210" y="184" width="140" height="48" rx="4"/>
+  <text class="cd24 mid" x="280" y="216">json</text>
+  <rect class="box" x="366" y="184" width="140" height="48" rx="4"/>
+  <text class="cd24 mid" x="436" y="216">csv</text>
+  <rect class="box" x="114" y="248" width="176" height="48" rx="4"/>
+  <text class="cd24 mid" x="202" y="280">statistics</text>
+  <rect class="box" x="306" y="248" width="140" height="48" rx="4"/>
+  <text class="cd24 mid" x="376" y="280">sys</text>
+  <text class="ti mid" x="280" y="340">Python 3.14</text>
+  <text class="tx mid" x="280" y="392">Python'la gelen hazır araç: 194</text>
+  <g class="dg-small">
+    <text class="src" x="2" y="414">Kaynaklar: python.org/about; Python 3.14 Tutorial 10.12;</text>
+    <text class="src" x="2" y="434">sys.stdlib_module_names, 3.14.8</text>
+  </g>
+</svg>

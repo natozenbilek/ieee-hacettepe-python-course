@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 440" width="1152" height="440" role="img" aria-labelledby="ders3-exception-names-t ders3-exception-names-d">
+  <title id="ders3-exception-names-t">Exception'ların adları</title>
+  <desc id="ders3-exception-names-d">Beş satır; her satırda solda gri bir panelde kod, bir ok ve sağda traceback'in gerçek son satırı, exception'ın adı kırmızı. int("abc"): ValueError: invalid literal for int() with base 10: 'abc' (Ders 2); bu satır açık mavi, çivit mavisi çerçeveli bir şeritle vurgulu. "BBM101"[6]: IndexError: string index out of range (Ders 3). prnt("A"): NameError: name 'prnt' is not defined. Did you mean: 'print'? (Ders 1). "A" - "B": TypeError: unsupported operand type(s) for -: 'str' and 'str' (Ders 2). 7 / 0: ZeroDivisionError: division by zero (Ders 1).</desc>
+  <!-- source: each code line run as a one-line script, last traceback line (Python 3.14.8, 2026-10-11): exc_value, exc_index, exc_name, exc_type, exc_zero; ders3-B.md S74. -->
+  <defs>
+    <marker id="ders3-exception-names-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
+    <style>
+/* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
+.dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
+.dg .bg{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF)}
+.dg .tx,.dg .lb,.dg .ti,.dg .cd,.dg .cd24{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .tx{font-size:24px;font-weight:400}
+.dg .lb{font-size:24px;font-weight:600}
+.dg .ti{font-size:28px;font-weight:700}
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-family:"JetBrains Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-weight:500}
+.dg .cd{font-size:28px}
+.dg .cd24{font-size:24px}
+.dg .ty{font-size:24px;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .nm{font-size:28px;font-weight:600;fill:#FFFFFF;fill:var(--d-on-name,#FFFFFF)}
+.dg .src{font-size:18px;font-weight:400;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .sub{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .okt{fill:#0D6385;fill:var(--d-ok,#0D6385);font-weight:600}
+.dg .errt{fill:#C21C20;fill:var(--d-err,#C21C20);font-weight:600}
+.dg .b7{font-weight:700}
+.dg .pre{white-space:pre}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .boxm{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .boxhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .blk{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2.5}
+.dg .frame{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .local{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .tmpl{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .cell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellh{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .name{fill:#181C3E;fill:var(--d-name,#181C3E)}
+.dg .soft{fill:#F3F4F8;fill:var(--d-surface,#F3F4F8)}
+.dg .outp{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .tint{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .hl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3)}
+.dg .emph{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .errbox{fill:#FCEDEE;fill:var(--d-err-bg,#FCEDEE);stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .errdash{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .okbox{fill:#E9F6FA;fill:var(--d-ok-bg,#E9F6FA);stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .key{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .dot{fill:#3B4595;fill:var(--d-brand,#3B4595)}
+.dg .dot0{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .ar,.dg .ld,.dg .axis{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E)}
+.dg .ar,.dg .axis{stroke-width:2.5}
+.dg .ld{stroke-width:2}
+.dg .ar-m{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .ar-old{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .ar-ok{fill:none;stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .ar-err{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .sep{fill:none;stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .dash{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2;stroke-dasharray:8 6}
+.dg .ah{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .ah-m{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .ah-ok{fill:#0D6385;fill:var(--d-ok,#0D6385)}
+.dg .ah-err{fill:#C21C20;fill:var(--d-err,#C21C20)}
+.dg .co{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .co-t{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF);font-size:24px;font-weight:700;text-anchor:middle}
+.dg .sec{stroke:#3B4595;stroke:var(--d-second,#3B4595)}
+    </style>
+  </defs>
+  <rect class="bg" width="1152" height="440"/>
+  <rect class="boxhl" x="2" y="2" width="1148" height="86" rx="4"/>
+  <rect class="soft" x="12" y="8" width="200" height="44" rx="4"/>
+  <text class="cd24 pre" x="26" y="38" xml:space="preserve">int("abc")</text>
+  <text class="tx sub" x="26" y="80">Ders 2</text>
+  <path class="ar" d="M222,30 H285" marker-end="url(#ders3-exception-names-ah)"/>
+  <text class="cd24 pre" x="300" y="38" xml:space="preserve"><tspan class="errt">ValueError</tspan>: invalid literal for int() with base 10: 'abc'</text>
+  <rect class="soft" x="12" y="94" width="200" height="44" rx="4"/>
+  <text class="cd24 pre" x="26" y="124" xml:space="preserve">"BBM101"[6]</text>
+  <text class="tx sub" x="26" y="166">Ders 3</text>
+  <path class="ar" d="M222,116 H285" marker-end="url(#ders3-exception-names-ah)"/>
+  <text class="cd24 pre" x="300" y="124" xml:space="preserve"><tspan class="errt">IndexError</tspan>: string index out of range</text>
+  <rect class="soft" x="12" y="180" width="200" height="44" rx="4"/>
+  <text class="cd24 pre" x="26" y="210" xml:space="preserve">prnt("A")</text>
+  <text class="tx sub" x="26" y="252">Ders 1</text>
+  <path class="ar" d="M222,202 H285" marker-end="url(#ders3-exception-names-ah)"/>
+  <text class="cd24 pre" x="300" y="210" xml:space="preserve"><tspan class="errt">NameError</tspan>: name 'prnt' is not defined.</text>
+  <text class="cd24 pre" x="300" y="244" xml:space="preserve">Did you mean: 'print'?</text>
+  <rect class="soft" x="12" y="266" width="200" height="44" rx="4"/>
+  <text class="cd24 pre" x="26" y="296" xml:space="preserve">"A" - "B"</text>
+  <text class="tx sub" x="26" y="338">Ders 2</text>
+  <path class="ar" d="M222,288 H285" marker-end="url(#ders3-exception-names-ah)"/>
+  <text class="cd24 pre" x="300" y="296" xml:space="preserve"><tspan class="errt">TypeError</tspan>: unsupported operand type(s) for -:</text>
+  <text class="cd24 pre" x="300" y="330" xml:space="preserve">'str' and 'str'</text>
+  <rect class="soft" x="12" y="352" width="200" height="44" rx="4"/>
+  <text class="cd24 pre" x="26" y="382" xml:space="preserve">7 / 0</text>
+  <text class="tx sub" x="26" y="424">Ders 1</text>
+  <path class="ar" d="M222,374 H285" marker-end="url(#ders3-exception-names-ah)"/>
+  <text class="cd24 pre" x="300" y="382" xml:space="preserve"><tspan class="errt">ZeroDivisionError</tspan>: division by zero</text>
+</svg>

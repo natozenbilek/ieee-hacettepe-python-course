@@ -1,0 +1,69 @@
+/* Cevap sayfası (site/oy/index.html). Loaded after ../assets/css/site.css and uses its tokens:
+   the white header band with the lockup, branch navy headings, the heading and body fonts.
+   Four full-width buttons, at least 76 px tall; the chosen one is outlined in indigo with a filled numeral.
+   The status lines keep their height, so nothing moves when a vote is confirmed. */
+.oy main{padding-top:28px;padding-bottom:8px}
+.oy h1{font-size:1.75rem;line-height:1.2;margin:0}
+.oy .meta{margin:6px 0 0}
+.oy-opts{display:grid;gap:12px;margin:20px 0 0;max-width:40rem}
+.oy-btn{display:grid;grid-template-columns:56px minmax(0,1fr);align-items:center;column-gap:16px;width:100%;min-height:76px;margin:0;padding:10px 16px 10px 10px;box-sizing:border-box;border:2px solid var(--rule);border-radius:6px;background:var(--bg);color:var(--fg);font:500 1.25rem/1.35 var(--font-sans);text-align:left;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+@media (hover:hover){.oy-btn:not(:disabled):hover{border-color:var(--brand)}}
+.oy-btn:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+.oy-n{display:flex;align-items:center;justify-content:center;width:56px;height:56px;box-sizing:border-box;border:2px solid var(--brand);border-radius:4px;color:var(--brand);font:700 1.75rem/1 var(--font-head)}
+.oy-t{min-width:0;overflow-wrap:anywhere}
+.oy-t code{font:500 1.1875rem/1.35 var(--font-mono);white-space:pre-wrap;overflow-wrap:anywhere;font-variant-ligatures:none;background:none;padding:0;border-radius:0}
+.oy-btn.is-bare{grid-template-columns:56px}
+.oy-btn.is-bare .oy-t{display:none}
+.oy-btn[aria-pressed="true"]{border-color:var(--brand);background:var(--tint)}
+.oy-btn[aria-pressed="true"] .oy-n{background:var(--brand);color:var(--bg)}
+.oy-btn[aria-busy="true"]{cursor:progress}
+.oy-btn:disabled{cursor:default;color:var(--muted);border-style:dashed}
+.oy-btn:disabled .oy-n{border-color:var(--rule);color:var(--muted)}
+.oy-btn:disabled[aria-pressed="true"] .oy-n{background:var(--muted);color:var(--bg)}
+.oy-durum{min-height:1.65em;margin:20px 0 2px;font-weight:600;font-size:1.0625rem}
+.oy-durum.is-ok{color:var(--ok)}
+.oy-durum.is-err{color:var(--err)}
+.oy-not{min-height:1.45em;margin:0;color:var(--muted);font-size:.9375rem;line-height:1.45;visibility:hidden}
+.oy-not.is-on{visibility:visible}
+.oy-foot{margin-top:40px;padding:16px 0 32px;border-top:1px solid var(--rule);color:var(--muted);font-size:.875rem;line-height:1.5}
+.oy-foot p{margin:0;max-width:40rem}
+/* Four colours as on the slide (slides.css, Nezih 2026-10-15): each button is a coloured tile with its letter;
+   the chosen one gets a thick ink outline and a filled letter; a closed poll turns the other tiles to dashed outlines. */
+.oy-btn[data-n="1"]{--c:#C62F2B;--on:#FFFFFF}
+.oy-btn[data-n="2"]{--c:#1F5FB8;--on:#FFFFFF}
+.oy-btn[data-n="3"]{--c:#E2A004;--on:#1A1A1A}
+.oy-btn[data-n="4"]{--c:#2E7D3A;--on:#FFFFFF}
+.oy-btn[data-n]{background:var(--c);border-color:var(--c);color:var(--on)}
+.oy-btn[data-n] .oy-n{border-color:var(--on);color:var(--on)}
+.oy-btn[data-n] .oy-t code{color:var(--on)}
+@media (hover:hover){.oy-btn[data-n]:not(:disabled):hover{border-color:var(--fg);filter:brightness(1.06)}}
+.oy-btn[data-n][aria-pressed="true"]{background:var(--c);border-color:var(--fg);box-shadow:0 0 0 3px var(--fg)}
+.oy-btn[data-n][aria-pressed="true"] .oy-n{background:var(--on);color:var(--c)}
+.oy-btn[data-n]:disabled{background:var(--surface);border-style:dashed;border-color:var(--c);color:var(--muted)}
+.oy-btn[data-n]:disabled .oy-n{border-color:var(--c);color:var(--fg);background:transparent}
+.oy-btn[data-n]:disabled .oy-t code{color:var(--muted)}
+.oy-btn[data-n]:disabled[aria-pressed="true"]{background:var(--c);border-style:solid;color:var(--on)}
+.oy-btn[data-n]:disabled[aria-pressed="true"] .oy-n{background:var(--on);color:var(--c)}
+.oy-btn[data-n]:disabled[aria-pressed="true"] .oy-t code{color:var(--on)}
+/* The answer after the poll closes (oy.js reveal): the right tile in full colour with a tick, this phone's wrong pick
+   in its colour with a cross, the others faded; the reason in a box with the right option's colour on its left. */
+.oy-btn[data-n].is-right:disabled,.oy-btn[data-n].is-wrong:disabled{grid-template-columns:56px minmax(0,1fr) auto;background:var(--c);border:2px solid var(--c);color:var(--on)}
+.oy-btn[data-n].is-right:disabled .oy-n,.oy-btn[data-n].is-wrong:disabled .oy-n{background:var(--on);color:var(--c);border-color:var(--on)}
+.oy-btn[data-n].is-right:disabled .oy-t,.oy-btn[data-n].is-wrong:disabled .oy-t{display:block}
+.oy-btn[data-n].is-right:disabled .oy-t code,.oy-btn[data-n].is-wrong:disabled .oy-t code{color:var(--on)}
+.oy-btn.is-right::after,.oy-btn.is-wrong::after{font:700 2rem/1 var(--font-head);color:var(--on);padding-left:8px}
+.oy-btn.is-right::after{content:"\2713"}
+.oy-btn.is-wrong::after{content:"\2717"}
+.oy-btn[data-n].is-wrong:disabled{opacity:.7}
+.oy-btn[data-n].is-dim:disabled{opacity:.35}
+.oy-cevap{margin:16px 0 0;max-width:40rem;padding:14px 16px;box-sizing:border-box;border-left:8px solid var(--c);border-radius:4px;background:var(--surface)}
+.oy-cevap[data-n="1"]{--c:#C62F2B}
+.oy-cevap[data-n="2"]{--c:#1F5FB8}
+.oy-cevap[data-n="3"]{--c:#E2A004}
+.oy-cevap[data-n="4"]{--c:#2E7D3A}
+.oy-cevap-b{margin:0 0 6px;font:700 1.25rem/1.3 var(--font-head);color:var(--fg)}
+.oy-cevap-n{margin:0;font-size:1.0625rem;line-height:1.5;color:var(--fg)}
+.oy-t{white-space:pre-line}
+.oy-sonuc{margin:16px 0 0;max-width:40rem;padding:14px 16px;box-sizing:border-box;border-radius:6px;background:var(--surface);color:var(--fg);font:700 1.75rem/1.25 var(--font-head)}
+.oy-sonuc.is-ok{background:#2E7D3A;color:#FFFFFF}
+.oy-sonuc.is-err{background:#C21C20;color:#FFFFFF}

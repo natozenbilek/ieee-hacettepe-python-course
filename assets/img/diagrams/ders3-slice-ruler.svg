@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="dg sr" viewBox="0 0 1152 270" width="1152" height="270" role="img" aria-labelledby="ders3-slice-ruler-t ders3-slice-ruler-d" data-focus="first">
+  <title id="ders3-slice-ruler-t">Slicing: sınırlar 0'dan 6'ya</title>
+  <desc id="ders3-slice-ruler-d">BBM101'in altı karakteri yeşil hücrelerde (str): B, B, M, 1, 0, 1. Numaralar hücrelerin değil, aralarındaki sınırların üstünde: 0'dan 6'ya yedi sınır, solda sınır etiketi. data-focus first durumu: BBM101'in sınırları 0'dan 6'ya numaralı; [0:3] parantezi ilk üç karakteri kapsıyor, sonuç "BBM" (str, yeşil). 0 ile 3 numaralı sınırlar arasındaki hücrelerin arkasında açık mavi bant, üstte çivit mavisi [0:3] parantezi; sağda code[0:3] okla "BBM" değer kutusuna gider, altında str. Cetvelin altında: bitiş dahil değil, range gibi. data-focus both durumu: [0:3] "BBM" ve [3:6] "101" parantezleri 3 numaralı sınırda buluşuyor (str, yeşil). Açık mavi bant 3, 4 ve 5 numaralı hücrelerin arkasına geçer; 3 numaralı sınırın çentiğinde çivit mavisi nokta ve üstte birinin bitişi, ötekinin başı notu; sağda ikinci satır code[3:6] okla "101" değer kutusuna gider. data-focus open durumu: Üç parantez: [:3] baştan 3'e "BBM", [3:] 3'ten sona "101", [:] hepsi "BBM101" (str, yeşil). [:3] parantezinin sol ucu 0'ın dışına açık, yanında baştan; [3:] parantezinin sağ ucu 6'nın dışına açık, yanında sona kadar; [:] iki ucu da açık. Vurgulu olan [3:]: çivit mavisi parantez ve 3, 4, 5 numaralı hücrelerin arkasında açık mavi bant. Sağda her parantezin satırında code[:3] okla "BBM", code[3:] okla "101", code[:] okla "BBM101".</desc>
+  <!-- source: code = "BBM101"; code[0:3] is BBM, code[3:6] is 101, code[:3] BBM, code[3:] 101, code[:] BBM101 (Python 3.14.8, 2026-10-11). States by data-focus on the root: first (default), both, open. Height 270 instead of 260: the open state stacks three brackets above the border numbers. -->
+  <defs>
+    <marker id="ders3-slice-ruler-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
+    <style>
+/* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
+.dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
+.dg .bg{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF)}
+.dg .tx,.dg .lb,.dg .ti,.dg .cd,.dg .cd24{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .tx{font-size:24px;font-weight:400}
+.dg .lb{font-size:24px;font-weight:600}
+.dg .ti{font-size:28px;font-weight:700}
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-family:"JetBrains Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-weight:500}
+.dg .cd{font-size:28px}
+.dg .cd24{font-size:24px}
+.dg .ty{font-size:24px;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .nm{font-size:28px;font-weight:600;fill:#FFFFFF;fill:var(--d-on-name,#FFFFFF)}
+.dg .src{font-size:18px;font-weight:400;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .sub{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .okt{fill:#0D6385;fill:var(--d-ok,#0D6385);font-weight:600}
+.dg .errt{fill:#C21C20;fill:var(--d-err,#C21C20);font-weight:600}
+.dg .b7{font-weight:700}
+.dg .pre{white-space:pre}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .boxm{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .boxhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .blk{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2.5}
+.dg .frame{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .local{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .tmpl{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .cell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellh{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .name{fill:#181C3E;fill:var(--d-name,#181C3E)}
+.dg .soft{fill:#F3F4F8;fill:var(--d-surface,#F3F4F8)}
+.dg .outp{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .tint{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .hl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3)}
+.dg .emph{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .errbox{fill:#FCEDEE;fill:var(--d-err-bg,#FCEDEE);stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .errdash{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .okbox{fill:#E9F6FA;fill:var(--d-ok-bg,#E9F6FA);stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .key{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .dot{fill:#3B4595;fill:var(--d-brand,#3B4595)}
+.dg .dot0{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .ar,.dg .ld,.dg .axis{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E)}
+.dg .ar,.dg .axis{stroke-width:2.5}
+.dg .ld{stroke-width:2}
+.dg .ar-m{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .ar-old{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .ar-ok{fill:none;stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .ar-err{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .sep{fill:none;stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .dash{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2;stroke-dasharray:8 6}
+.dg .ah{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .ah-m{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .ah-ok{fill:#0D6385;fill:var(--d-ok,#0D6385)}
+.dg .ah-err{fill:#C21C20;fill:var(--d-err,#C21C20)}
+.dg .co{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .co-t{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF);font-size:24px;font-weight:700;text-anchor:middle}
+.dg .sec{stroke:#3B4595;stroke:var(--d-second,#3B4595)}
+/* dg v4 type renkleri · authoring/DIAGRAMS.md §10'dan aynen kopyalanır (dg v3 bloğundan sonra) */
+.dg rect.t-int,.dg path.t-int,.dg circle.t-int{fill:#F2CEB3;fill:var(--t-int-bg,#F2CEB3);stroke:#854B00;stroke:var(--t-int,#854B00)}
+.dg text.t-int,.dg tspan.t-int{fill:#613109;fill:var(--t-int-tx,#613109)}
+.dg rect.t-float,.dg path.t-float,.dg circle.t-float{fill:#FFF1C6;fill:var(--t-float-bg,#FFF1C6);stroke:#9F7000;stroke:var(--t-float,#9F7000)}
+.dg text.t-float,.dg tspan.t-float{fill:#5D420E;fill:var(--t-float-tx,#5D420E)}
+.dg rect.t-bool,.dg path.t-bool,.dg circle.t-bool{fill:#C4E9E1;fill:var(--t-bool-bg,#C4E9E1);stroke:#0E7A6D;stroke:var(--t-bool,#0E7A6D)}
+.dg text.t-bool,.dg tspan.t-bool{fill:#0A473F;fill:var(--t-bool-tx,#0A473F)}
+.dg rect.t-str,.dg path.t-str,.dg circle.t-str{fill:#D9F6DD;fill:var(--t-str-bg,#D9F6DD);stroke:#296A3B;stroke:var(--t-str,#296A3B)}
+.dg text.t-str,.dg tspan.t-str{fill:#1A4B28;fill:var(--t-str-tx,#1A4B28)}
+.dg rect.t-none,.dg path.t-none,.dg circle.t-none{fill:#F6F3EF;fill:var(--t-none-bg,#F6F3EF);stroke:#534C45;stroke:var(--t-none,#534C45)}
+.dg text.t-none,.dg tspan.t-none{fill:#413C38;fill:var(--t-none-tx,#413C38)}
+.dg rect.t-list,.dg path.t-list,.dg circle.t-list{fill:#F3C8DB;fill:var(--t-list-bg,#F3C8DB);stroke:#8A2B60;stroke:var(--t-list,#8A2B60)}
+.dg text.t-list,.dg tspan.t-list{fill:#651E45;fill:var(--t-list-tx,#651E45)}
+.dg rect.t-tuple,.dg path.t-tuple,.dg circle.t-tuple{fill:#E3EAF2;fill:var(--t-tuple-bg,#E3EAF2);stroke:#4A6378;stroke:var(--t-tuple,#4A6378)}
+.dg text.t-tuple,.dg tspan.t-tuple{fill:#2C3E4F;fill:var(--t-tuple-tx,#2C3E4F)}
+.dg rect.t-dict,.dg path.t-dict,.dg circle.t-dict{fill:#DBCEC4;fill:var(--t-dict-bg,#DBCEC4);stroke:#4F2611;stroke:var(--t-dict,#4F2611)}
+.dg text.t-dict,.dg tspan.t-dict{fill:#4C2817;fill:var(--t-dict-tx,#4C2817)}
+.dg rect.t-set,.dg path.t-set,.dg circle.t-set{fill:#F2F8D6;fill:var(--t-set-bg,#F2F8D6);stroke:#747C42;stroke:var(--t-set,#747C42)}
+.dg text.t-set,.dg tspan.t-set{fill:#3F4418;fill:var(--t-set-tx,#3F4418)}
+.dg rect.boxhl,.dg path.boxhl,.dg rect.cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595)}
+/* kod PyCharm gibi: JetBrains Mono ligature'ları kapalı (>= iki karakter kalır) */
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-variant-ligatures:none;font-feature-settings:"liga" 0,"calt" 0}
+/* ders3-slice-ruler: data-focus="first" (S55, varsayılan), "both" (S56), "open" (S58) */
+.sr .sr-b,.sr .sr-o,.sr .sr-h35{display:none}
+.sr[data-focus="both"] .sr-b,.sr[data-focus="both"] .sr-h35{display:inline}
+.sr[data-focus="both"] .sr-h03{display:none}
+.sr[data-focus="open"] .sr-o,.sr[data-focus="open"] .sr-h35{display:inline}
+.sr[data-focus="open"] .sr-fb,.sr[data-focus="open"] .sr-h03{display:none}
+    </style>
+  </defs>
+  <rect class="bg" width="1152" height="270"/>
+  <g class="sr-h03">
+  <rect class="hl " x="120" y="144" width="264" height="84"/>
+  </g>
+  <g class="sr-h35">
+  <rect class="hl " x="384" y="144" width="264" height="84"/>
+  </g>
+  <rect class="cell t-str" x="120" y="154" width="88" height="64"/>
+  <rect class="cell t-str" x="208" y="154" width="88" height="64"/>
+  <rect class="cell t-str" x="296" y="154" width="88" height="64"/>
+  <rect class="cell t-str" x="384" y="154" width="88" height="64"/>
+  <rect class="cell t-str" x="472" y="154" width="88" height="64"/>
+  <rect class="cell t-str" x="560" y="154" width="88" height="64"/>
+  <text class="cd mid t-str" x="164" y="196">B</text>
+  <text class="cd mid t-str" x="252" y="196">B</text>
+  <text class="cd mid t-str" x="340" y="196">M</text>
+  <text class="cd mid t-str" x="428" y="196">1</text>
+  <text class="cd mid t-str" x="516" y="196">0</text>
+  <text class="cd mid t-str" x="604" y="196">1</text>
+  <path class="ld" d="M120,144 V154"/>
+  <text class="cd24 mid" x="120" y="136">0</text>
+  <path class="ld" d="M208,144 V154"/>
+  <text class="cd24 mid" x="208" y="136">1</text>
+  <path class="ld" d="M296,144 V154"/>
+  <text class="cd24 mid" x="296" y="136">2</text>
+  <path class="ld" d="M384,144 V154"/>
+  <text class="cd24 mid" x="384" y="136">3</text>
+  <path class="ld" d="M472,144 V154"/>
+  <text class="cd24 mid" x="472" y="136">4</text>
+  <path class="ld" d="M560,144 V154"/>
+  <text class="cd24 mid" x="560" y="136">5</text>
+  <path class="ld" d="M648,144 V154"/>
+  <text class="cd24 mid" x="648" y="136">6</text>
+  <text class="lb sub end" x="98" y="136">sınır</text>
+  <g class="sr-fb">
+  <path class="emph" d="M120,110 V98 H206.0"/>
+  <path class="emph" d="M298.0,98 H384 V110"/>
+  <text class="cd24 mid" x="252.0" y="106">[0:3]</text>
+  <text class="cd24" x="820" y="80">code[0:3]</text>
+  <path class="ar" d="M960,72 H997" marker-end="url(#ders3-slice-ruler-ah)"/>
+  <rect class="box t-str" x="1000" y="44" width="116" height="56" rx="6"/>
+  <text class="cd mid t-str" x="1058" y="82">"BBM"</text>
+  <text class="ty mid t-str" x="1058" y="130">str</text>
+  <text class="tx" x="120" y="258">bitiş dahil değil, range gibi</text>
+  </g>
+  <g class="sr-b">
+  <path class="emph" d="M384,110 V98 H470.0"/>
+  <path class="emph" d="M562.0,98 H648 V110"/>
+  <text class="cd24 mid" x="516.0" y="106">[3:6]</text>
+  <circle class="dot" cx="384" cy="149" r="6"/>
+  <text class="tx mid" x="384" y="66">birinin bitişi, ötekinin başı</text>
+  <path class="ld" d="M384,74 V94"/>
+  <text class="cd24" x="820" y="186">code[3:6]</text>
+  <path class="ar" d="M960,178 H997" marker-end="url(#ders3-slice-ruler-ah)"/>
+  <rect class="box t-str" x="1000" y="150" width="116" height="56" rx="6"/>
+  <text class="cd mid t-str" x="1058" y="188">"101"</text>
+  <text class="ty mid t-str" x="1058" y="236">str</text>
+  </g>
+  <g class="sr-o">
+  <path class="ld" d="M86,98 H120"/>
+  <path class="ld" d="M120,98 H213.2"/>
+  <path class="ld" d="M290.8,98 H384 V110"/>
+  <text class="cd24 mid" x="252.0" y="106">[:3]</text>
+  <text class="tx sub end" x="78" y="106">baştan</text>
+  <path class="emph" d="M384,70 V58 H477.2"/>
+  <path class="emph" d="M554.8,58 H648"/>
+  <path class="ld" d="M648,58 H682"/>
+  <text class="cd24 mid" x="516.0" y="66">[3:]</text>
+  <text class="tx sub" x="690" y="66">sona kadar</text>
+  <path class="ld" d="M86,18 H120"/>
+  <path class="ld" d="M120,18 H352.4"/>
+  <path class="ld" d="M415.6,18 H648"/>
+  <path class="ld" d="M648,18 H682"/>
+  <text class="cd24 mid" x="384.0" y="26">[:]</text>
+  <text class="cd24" x="840" y="106">code[:3]</text>
+  <path class="ar" d="M965,98 H992" marker-end="url(#ders3-slice-ruler-ah)"/>
+  <text class="cd t-str" x="1004" y="108">"BBM"</text>
+  <text class="cd24" x="840" y="66">code[3:]</text>
+  <path class="ar" d="M965,58 H992" marker-end="url(#ders3-slice-ruler-ah)"/>
+  <text class="cd t-str" x="1004" y="68">"101"</text>
+  <text class="cd24" x="840" y="26">code[:]</text>
+  <path class="ar" d="M965,18 H992" marker-end="url(#ders3-slice-ruler-ah)"/>
+  <text class="cd t-str" x="1004" y="28">"BBM101"</text>
+  </g>
+</svg>

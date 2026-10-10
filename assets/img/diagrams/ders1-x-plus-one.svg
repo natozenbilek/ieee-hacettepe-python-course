@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 260" width="1152" height="260" role="img" aria-labelledby="ders1-x-plus-one-t ders1-x-plus-one-d">
+  <title id="ders1-x-plus-one-t">x = x + 1 üç adımda</title>
+  <desc id="ders1-x-plus-one-d">Üç numaralı kare. Kare 1, x'i oku: lacivert x etiketinden 5 değerine (int, turuncu) giden ok, çivit mavisi çerçeveli açık mavi şeridin üzerinde; okunan bağ bu. Kare 2, hesapla: x hala 5'i gösteriyor; 5 + 1 ifadesinden çıkan ok yeni 6 değerini (int, turuncu) gösteriyor; 6'nın kutusu açık mavi şeridin içinde. Kare 3, oku taşı: x'ten 6'ya giden yeni ok açık mavi şeridin üzerinde; x'ten 5'e giden eski ok gri ve kesikli. 5 ve 6 her karede aynı yerde duruyor. Altta x = x + 1 satırı: sağdaki x + 1 parçasının altında önce, soldaki x'in altında sonra yazıyor. Özet: 1: x'in gösterdiği 5 okunur. 2: 5 + 1 hesaplanır, 6. 3: x'in oku 6'ya taşınır, 5'e giden ok gri ve kesikli. Değerler int (turuncu). Kodun çıktısı 6.</desc>
+  <!-- source: x = 5 / x = x + 1 / print(x) -> 6 (Python 3.14.8, 2026-10-11) -->
+  <defs>
+    <marker id="ders1-x-plus-one-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
+    <marker id="ders1-x-plus-one-ahm" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-m" d="M0,0 L12,6 L0,12 z"/></marker>
+    <style>
+/* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
+.dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
+.dg .bg{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF)}
+.dg .tx,.dg .lb,.dg .ti,.dg .cd,.dg .cd24{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .tx{font-size:24px;font-weight:400}
+.dg .lb{font-size:24px;font-weight:600}
+.dg .ti{font-size:28px;font-weight:700}
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-family:"JetBrains Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-weight:500}
+.dg .cd{font-size:28px}
+.dg .cd24{font-size:24px}
+.dg .ty{font-size:24px;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .nm{font-size:28px;font-weight:600;fill:#FFFFFF;fill:var(--d-on-name,#FFFFFF)}
+.dg .src{font-size:18px;font-weight:400;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .sub{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .okt{fill:#0D6385;fill:var(--d-ok,#0D6385);font-weight:600}
+.dg .errt{fill:#C21C20;fill:var(--d-err,#C21C20);font-weight:600}
+.dg .b7{font-weight:700}
+.dg .pre{white-space:pre}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .boxm{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .boxhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .blk{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2.5}
+.dg .frame{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .local{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .tmpl{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .cell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellh{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .name{fill:#181C3E;fill:var(--d-name,#181C3E)}
+.dg .soft{fill:#F3F4F8;fill:var(--d-surface,#F3F4F8)}
+.dg .outp{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .tint{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .hl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3)}
+.dg .emph{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .errbox{fill:#FCEDEE;fill:var(--d-err-bg,#FCEDEE);stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .errdash{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .okbox{fill:#E9F6FA;fill:var(--d-ok-bg,#E9F6FA);stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .key{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .dot{fill:#3B4595;fill:var(--d-brand,#3B4595)}
+.dg .dot0{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .ar,.dg .ld,.dg .axis{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E)}
+.dg .ar,.dg .axis{stroke-width:2.5}
+.dg .ld{stroke-width:2}
+.dg .ar-m{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .ar-old{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .ar-ok{fill:none;stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .ar-err{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .sep{fill:none;stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .dash{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2;stroke-dasharray:8 6}
+.dg .ah{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .ah-m{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .ah-ok{fill:#0D6385;fill:var(--d-ok,#0D6385)}
+.dg .ah-err{fill:#C21C20;fill:var(--d-err,#C21C20)}
+.dg .co{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .co-t{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF);font-size:24px;font-weight:700;text-anchor:middle}
+.dg .sec{stroke:#3B4595;stroke:var(--d-second,#3B4595)}
+/* dg v4 type renkleri · authoring/DIAGRAMS.md §10'dan aynen kopyalanır (dg v3 bloğundan sonra) */
+.dg rect.t-int,.dg path.t-int,.dg circle.t-int{fill:#F2CEB3;fill:var(--t-int-bg,#F2CEB3);stroke:#854B00;stroke:var(--t-int,#854B00)}
+.dg text.t-int,.dg tspan.t-int{fill:#613109;fill:var(--t-int-tx,#613109)}
+.dg rect.t-float,.dg path.t-float,.dg circle.t-float{fill:#FFF1C6;fill:var(--t-float-bg,#FFF1C6);stroke:#9F7000;stroke:var(--t-float,#9F7000)}
+.dg text.t-float,.dg tspan.t-float{fill:#5D420E;fill:var(--t-float-tx,#5D420E)}
+.dg rect.t-bool,.dg path.t-bool,.dg circle.t-bool{fill:#C4E9E1;fill:var(--t-bool-bg,#C4E9E1);stroke:#0E7A6D;stroke:var(--t-bool,#0E7A6D)}
+.dg text.t-bool,.dg tspan.t-bool{fill:#0A473F;fill:var(--t-bool-tx,#0A473F)}
+.dg rect.t-str,.dg path.t-str,.dg circle.t-str{fill:#D9F6DD;fill:var(--t-str-bg,#D9F6DD);stroke:#296A3B;stroke:var(--t-str,#296A3B)}
+.dg text.t-str,.dg tspan.t-str{fill:#1A4B28;fill:var(--t-str-tx,#1A4B28)}
+.dg rect.t-none,.dg path.t-none,.dg circle.t-none{fill:#F6F3EF;fill:var(--t-none-bg,#F6F3EF);stroke:#534C45;stroke:var(--t-none,#534C45)}
+.dg text.t-none,.dg tspan.t-none{fill:#413C38;fill:var(--t-none-tx,#413C38)}
+.dg rect.t-list,.dg path.t-list,.dg circle.t-list{fill:#F3C8DB;fill:var(--t-list-bg,#F3C8DB);stroke:#8A2B60;stroke:var(--t-list,#8A2B60)}
+.dg text.t-list,.dg tspan.t-list{fill:#651E45;fill:var(--t-list-tx,#651E45)}
+.dg rect.t-tuple,.dg path.t-tuple,.dg circle.t-tuple{fill:#E3EAF2;fill:var(--t-tuple-bg,#E3EAF2);stroke:#4A6378;stroke:var(--t-tuple,#4A6378)}
+.dg text.t-tuple,.dg tspan.t-tuple{fill:#2C3E4F;fill:var(--t-tuple-tx,#2C3E4F)}
+.dg rect.t-dict,.dg path.t-dict,.dg circle.t-dict{fill:#DBCEC4;fill:var(--t-dict-bg,#DBCEC4);stroke:#4F2611;stroke:var(--t-dict,#4F2611)}
+.dg text.t-dict,.dg tspan.t-dict{fill:#4C2817;fill:var(--t-dict-tx,#4C2817)}
+.dg rect.t-set,.dg path.t-set,.dg circle.t-set{fill:#F2F8D6;fill:var(--t-set-bg,#F2F8D6);stroke:#747C42;stroke:var(--t-set,#747C42)}
+.dg text.t-set,.dg tspan.t-set{fill:#3F4418;fill:var(--t-set-tx,#3F4418)}
+.dg rect.boxhl,.dg path.boxhl,.dg rect.cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595)}
+    </style>
+  </defs>
+  <rect class="bg" width="1152" height="260"/>
+  <path class="sep" d="M384,4 V182"/>
+  <path class="sep" d="M768,4 V182"/>
+  <!-- panel 1 -->
+  <circle class="co" cx="30" cy="22" r="18"/>
+  <text class="co-t" x="30" y="30">1</text>
+  <text class="lb" x="60" y="30">x'i oku</text>
+  <!-- panel 2 -->
+  <circle class="co" cx="414" cy="22" r="18"/>
+  <text class="co-t" x="414" y="30">2</text>
+  <text class="lb" x="444" y="30">hesapla</text>
+  <!-- panel 3 -->
+  <circle class="co" cx="798" cy="22" r="18"/>
+  <text class="co-t" x="798" y="30">3</text>
+  <text class="lb" x="828" y="30">oku taşı</text>
+  <rect class="boxhl" x="96" y="63" width="137" height="26" rx="4"/>
+  <rect class="name" x="26" y="48" width="64" height="56" rx="6"/>
+  <text class="nm mid" x="58" y="86">x</text>
+  <rect class="box t-int" x="252" y="48" width="72" height="56" rx="6"/>
+  <text class="cd mid t-int" x="288" y="86">5</text>
+  <path class="ar" d="M90,76 H249" marker-end="url(#ders1-x-plus-one-ah)"/>
+  <rect class="name" x="410" y="48" width="64" height="56" rx="6"/>
+  <text class="nm mid" x="442" y="86">x</text>
+  <rect class="box t-int" x="636" y="48" width="72" height="56" rx="6"/>
+  <text class="cd mid t-int" x="672" y="86">5</text>
+  <path class="ar" d="M474,76 H633" marker-end="url(#ders1-x-plus-one-ah)"/>
+  <text class="cd24" x="410" y="156">5 + 1</text>
+  <rect class="boxhl" x="630" y="114" width="84" height="68" rx="10"/>
+  <rect class="box t-int" x="636" y="120" width="72" height="56" rx="6"/>
+  <text class="cd mid t-int" x="672" y="158">6</text>
+  <path class="ar" d="M490,148 H633" marker-end="url(#ders1-x-plus-one-ah)"/>
+  <path class="boxhl" d="M860.0,106.2 L997.9,147.8 L1005.4,122.9 L867.5,81.3 Z"/>
+  <rect class="name" x="794" y="48" width="64" height="56" rx="6"/>
+  <text class="nm mid" x="826" y="86">x</text>
+  <rect class="box t-int" x="1020" y="48" width="72" height="56" rx="6"/>
+  <text class="cd mid t-int" x="1056" y="86">5</text>
+  <rect class="box t-int" x="1020" y="120" width="72" height="56" rx="6"/>
+  <text class="cd mid t-int" x="1056" y="158">6</text>
+  <path class="ar-old" d="M858,68 H1017" marker-end="url(#ders1-x-plus-one-ahm)"/>
+  <path class="ar" d="M858,92 L1017,140" marker-end="url(#ders1-x-plus-one-ah)"/>
+  <text class="cd mid" x="576" y="214">x = x + 1</text>
+  <path class="ld" d="M500.4,222 V230 H517.2 V222"/>
+  <path class="ld" d="M567.6,222 V230 H651.6 V222"/>
+  <text class="tx sub end" x="529.2" y="252">sonra</text>
+  <text class="tx sub mid" x="609.6" y="252">önce</text>
+</svg>

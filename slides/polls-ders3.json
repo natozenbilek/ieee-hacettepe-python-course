@@ -1,0 +1,6 @@
+{
+  "d3-ders2-tekrar": {"options": [{"code": "geçti\nTrue"}, {"code": "kaldı\nTrue"}, {"code": "kaldı\nFalse"}, {"code": "geçti\nFalse"}], "answer": 2, "why": "50 > 50 False olduğu için else çalışır; 50 >= 50 ise True'dur."},
+  "d3-while": {"options": [{"code": "1\n2\n3"}, {"code": "2\n3"}, {"code": "2\n3\n4"}, {"code": "1\n2\n3\n4"}], "answer": 3, "why": "Şart yalnızca turun başında sorulur; i'yi 4 yapan tur da print'e kadar gider."},
+  "d3-break-son": {"options": [{"code": "1\n2\n3\nson 3"}, {"code": "1\n2\nson 9"}, {"code": "1\n2\nson 3"}, {"code": "1\n2\nson 2"}], "answer": 3, "why": "i 3 olunca break print'ten önce çalışır; akış loop'tan sonra devam eder, i 3'te kalır."},
+  "d3-slice-hacettepe": {"options": [{"code": "Hacet\ntepe\nepettecaH"}, {"code": "Hace\nttepe\nepettecaH"}, {"code": "Hace\nttepe\nHacettepe"}, {"code": "Hac\nettepe\nepettecaH"}], "answer": 2, "why": "Bitiş 4 dahil değildir, [4:] sona kadar gider, -1 adımı ters çevirir."}
+}

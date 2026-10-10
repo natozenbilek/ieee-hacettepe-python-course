@@ -1,0 +1,256 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 420" width="1152" height="420" role="img" aria-labelledby="ders3-elif-template-t ders3-elif-template-d" data-score="77">
+  <title id="ders3-elif-template-t">elif zinciri: score = 77</title>
+  <desc id="ders3-elif-template-d">Solda yedi satırlık kod: score = 77, if score &gt;= 85:, print("A3 ve üstü"), elif score &gt;= 50:, print("geçti"), else:, print("kaldı"); sayılar turuncu (int), metinler yeşil (str). Sağda üstte score = 77 ve alt alta üç satır: score &gt;= 85 baklavası, True ile print("A3 ve üstü"); score &gt;= 50 baklavası, True ile print("geçti"); else kutusu ile print("kaldı"). False okları bir alttaki satıra iner; üç kutu sağda birleşip Bitir'e gider. score = 77 için: ilk baklavanın False oku koyu, kırmızı False etiketli; ikinci baklavanın petrol mavisi True oku print("geçti") kutusuna gider, kutu açık mavi ve çivit mavisi çerçeveli. print("A3 ve üstü") ve else satırı gri; print("kaldı") kutusunun altında atlandı yazıyor.</desc>
+  <!-- source: elif_77 -&gt; geçti; elif_92 -&gt; A3 ve üstü; elif_40 -&gt; kaldı; elif_noelse (score = 40, no else, print("son")) -&gt; son (Python 3.14.8, 2026-10-10) -->
+  <defs>
+    <marker id="ders3-elif-template-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
+    <marker id="ders3-elif-template-ahm" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-m" d="M0,0 L12,6 L0,12 z"/></marker>
+    <marker id="ders3-elif-template-ahok" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-ok" d="M0,0 L12,6 L0,12 z"/></marker>
+    <style>
+/* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
+.dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
+.dg .bg{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF)}
+.dg .tx,.dg .lb,.dg .ti,.dg .cd,.dg .cd24{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .tx{font-size:24px;font-weight:400}
+.dg .lb{font-size:24px;font-weight:600}
+.dg .ti{font-size:28px;font-weight:700}
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-family:"JetBrains Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-weight:500}
+.dg .cd{font-size:28px}
+.dg .cd24{font-size:24px}
+.dg .ty{font-size:24px;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .nm{font-size:28px;font-weight:600;fill:#FFFFFF;fill:var(--d-on-name,#FFFFFF)}
+.dg .src{font-size:18px;font-weight:400;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .sub{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .okt{fill:#0D6385;fill:var(--d-ok,#0D6385);font-weight:600}
+.dg .errt{fill:#C21C20;fill:var(--d-err,#C21C20);font-weight:600}
+.dg .b7{font-weight:700}
+.dg .pre{white-space:pre}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .boxm{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .boxhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .blk{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2.5}
+.dg .frame{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .local{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .tmpl{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .cell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellh{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .name{fill:#181C3E;fill:var(--d-name,#181C3E)}
+.dg .soft{fill:#F3F4F8;fill:var(--d-surface,#F3F4F8)}
+.dg .outp{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .tint{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .hl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3)}
+.dg .emph{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .errbox{fill:#FCEDEE;fill:var(--d-err-bg,#FCEDEE);stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .errdash{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .okbox{fill:#E9F6FA;fill:var(--d-ok-bg,#E9F6FA);stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .key{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .dot{fill:#3B4595;fill:var(--d-brand,#3B4595)}
+.dg .dot0{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .ar,.dg .ld,.dg .axis{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E)}
+.dg .ar,.dg .axis{stroke-width:2.5}
+.dg .ld{stroke-width:2}
+.dg .ar-m{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .ar-old{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .ar-ok{fill:none;stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .ar-err{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .sep{fill:none;stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .dash{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2;stroke-dasharray:8 6}
+.dg .ah{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .ah-m{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .ah-ok{fill:#0D6385;fill:var(--d-ok,#0D6385)}
+.dg .ah-err{fill:#C21C20;fill:var(--d-err,#C21C20)}
+.dg .co{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .co-t{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF);font-size:24px;font-weight:700;text-anchor:middle}
+.dg .sec{stroke:#3B4595;stroke:var(--d-second,#3B4595)}
+/* dg v4 type renkleri · authoring/DIAGRAMS.md §10'dan aynen kopyalanır (dg v3 bloğundan sonra) */
+.dg rect.t-int,.dg path.t-int,.dg circle.t-int{fill:#F2CEB3;fill:var(--t-int-bg,#F2CEB3);stroke:#854B00;stroke:var(--t-int,#854B00)}
+.dg text.t-int,.dg tspan.t-int{fill:#613109;fill:var(--t-int-tx,#613109)}
+.dg rect.t-float,.dg path.t-float,.dg circle.t-float{fill:#FFF1C6;fill:var(--t-float-bg,#FFF1C6);stroke:#9F7000;stroke:var(--t-float,#9F7000)}
+.dg text.t-float,.dg tspan.t-float{fill:#5D420E;fill:var(--t-float-tx,#5D420E)}
+.dg rect.t-bool,.dg path.t-bool,.dg circle.t-bool{fill:#C4E9E1;fill:var(--t-bool-bg,#C4E9E1);stroke:#0E7A6D;stroke:var(--t-bool,#0E7A6D)}
+.dg text.t-bool,.dg tspan.t-bool{fill:#0A473F;fill:var(--t-bool-tx,#0A473F)}
+.dg rect.t-str,.dg path.t-str,.dg circle.t-str{fill:#D9F6DD;fill:var(--t-str-bg,#D9F6DD);stroke:#296A3B;stroke:var(--t-str,#296A3B)}
+.dg text.t-str,.dg tspan.t-str{fill:#1A4B28;fill:var(--t-str-tx,#1A4B28)}
+.dg rect.t-none,.dg path.t-none,.dg circle.t-none{fill:#F6F3EF;fill:var(--t-none-bg,#F6F3EF);stroke:#534C45;stroke:var(--t-none,#534C45)}
+.dg text.t-none,.dg tspan.t-none{fill:#413C38;fill:var(--t-none-tx,#413C38)}
+.dg rect.t-list,.dg path.t-list,.dg circle.t-list{fill:#F3C8DB;fill:var(--t-list-bg,#F3C8DB);stroke:#8A2B60;stroke:var(--t-list,#8A2B60)}
+.dg text.t-list,.dg tspan.t-list{fill:#651E45;fill:var(--t-list-tx,#651E45)}
+.dg rect.t-tuple,.dg path.t-tuple,.dg circle.t-tuple{fill:#E3EAF2;fill:var(--t-tuple-bg,#E3EAF2);stroke:#4A6378;stroke:var(--t-tuple,#4A6378)}
+.dg text.t-tuple,.dg tspan.t-tuple{fill:#2C3E4F;fill:var(--t-tuple-tx,#2C3E4F)}
+.dg rect.t-dict,.dg path.t-dict,.dg circle.t-dict{fill:#DBCEC4;fill:var(--t-dict-bg,#DBCEC4);stroke:#4F2611;stroke:var(--t-dict,#4F2611)}
+.dg text.t-dict,.dg tspan.t-dict{fill:#4C2817;fill:var(--t-dict-tx,#4C2817)}
+.dg rect.t-set,.dg path.t-set,.dg circle.t-set{fill:#F2F8D6;fill:var(--t-set-bg,#F2F8D6);stroke:#747C42;stroke:var(--t-set,#747C42)}
+.dg text.t-set,.dg tspan.t-set{fill:#3F4418;fill:var(--t-set-tx,#3F4418)}
+.dg rect.boxhl,.dg path.boxhl,.dg rect.cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595)}
+/* ders3-elif-template: kök data-score="77" (varsayılan), "92" ya da "40"; data-score="40" data-else="off" S60'taki else'siz sürüm. Her durumun parçaları et-sNN sınıfıyla işaretli, gerisi gizli. */
+.dg .et{display:none}
+.dg:not([data-score]) .et-s77,.dg[data-score="77"] .et-s77,.dg[data-score="92"] .et-s92,.dg[data-score="40"]:not([data-else="off"]) .et-s40,.dg[data-score="40"][data-else="off"] .et-sno{display:inline}
+    </style>
+  </defs>
+  <rect class="bg" width="1152" height="420"/>
+  <g class="et et-s77">
+  <rect class="soft" x="2" y="2" width="380" height="261.52" rx="4"/>
+  <text class="cd24" x="18" y="39.76">score = <tspan class="t-int">77</tspan></text>
+  <text class="cd24" x="18" y="73.76">if score &gt;= <tspan class="t-int">85</tspan>:</text>
+  <text class="cd24 pre" x="18" y="107.76" xml:space="preserve">    print(<tspan class="t-str">"A3 ve üstü"</tspan>)</text>
+  <text class="cd24" x="18" y="141.76">elif score &gt;= <tspan class="t-int">50</tspan>:</text>
+  <text class="cd24 pre" x="18" y="175.76" xml:space="preserve">    print(<tspan class="t-str">"geçti"</tspan>)</text>
+  <text class="cd24" x="18" y="209.76">else:</text>
+  <text class="cd24 pre" x="18" y="243.76" xml:space="preserve">    print(<tspan class="t-str">"kaldı"</tspan>)</text>
+  </g>
+  <g class="et et-s92">
+  <rect class="soft" x="2" y="2" width="380" height="261.52" rx="4"/>
+  <text class="cd24" x="18" y="39.76">score = <tspan class="t-int">92</tspan></text>
+  <text class="cd24" x="18" y="73.76">if score &gt;= <tspan class="t-int">85</tspan>:</text>
+  <text class="cd24 pre" x="18" y="107.76" xml:space="preserve">    print(<tspan class="t-str">"A3 ve üstü"</tspan>)</text>
+  <text class="cd24" x="18" y="141.76">elif score &gt;= <tspan class="t-int">50</tspan>:</text>
+  <text class="cd24 pre" x="18" y="175.76" xml:space="preserve">    print(<tspan class="t-str">"geçti"</tspan>)</text>
+  <text class="cd24" x="18" y="209.76">else:</text>
+  <text class="cd24 pre" x="18" y="243.76" xml:space="preserve">    print(<tspan class="t-str">"kaldı"</tspan>)</text>
+  </g>
+  <g class="et et-s40">
+  <rect class="soft" x="2" y="2" width="380" height="261.52" rx="4"/>
+  <text class="cd24" x="18" y="39.76">score = <tspan class="t-int">40</tspan></text>
+  <text class="cd24" x="18" y="73.76">if score &gt;= <tspan class="t-int">85</tspan>:</text>
+  <text class="cd24 pre" x="18" y="107.76" xml:space="preserve">    print(<tspan class="t-str">"A3 ve üstü"</tspan>)</text>
+  <text class="cd24" x="18" y="141.76">elif score &gt;= <tspan class="t-int">50</tspan>:</text>
+  <text class="cd24 pre" x="18" y="175.76" xml:space="preserve">    print(<tspan class="t-str">"geçti"</tspan>)</text>
+  <text class="cd24" x="18" y="209.76">else:</text>
+  <text class="cd24 pre" x="18" y="243.76" xml:space="preserve">    print(<tspan class="t-str">"kaldı"</tspan>)</text>
+  </g>
+  <g class="et et-sno">
+  <rect class="soft" x="2" y="2" width="380" height="227.52" rx="4"/>
+  <text class="cd24" x="18" y="39.76">score = <tspan class="t-int">40</tspan></text>
+  <text class="cd24" x="18" y="73.76">if score &gt;= <tspan class="t-int">85</tspan>:</text>
+  <text class="cd24 pre" x="18" y="107.76" xml:space="preserve">    print(<tspan class="t-str">"A3 ve üstü"</tspan>)</text>
+  <text class="cd24" x="18" y="141.76">elif score &gt;= <tspan class="t-int">50</tspan>:</text>
+  <text class="cd24 pre" x="18" y="175.76" xml:space="preserve">    print(<tspan class="t-str">"geçti"</tspan>)</text>
+  <text class="cd24" x="18" y="209.76">print(<tspan class="t-str">"son"</tspan>)</text>
+  </g>
+  <g class="et et-s77">
+  <text class="cd" x="430" y="34">score = <tspan class="t-int">77</tspan></text>
+  </g>
+  <g class="et et-s92">
+  <text class="cd" x="430" y="34">score = <tspan class="t-int">92</tspan></text>
+  </g>
+  <g class="et et-s40 et-sno">
+  <text class="cd" x="430" y="34">score = <tspan class="t-int">40</tspan></text>
+  </g>
+  <polygon class="tint" points="430,100 550,55 670,100 550,145"/>
+  <text class="cd24 mid" x="550" y="108">score &gt;= 85</text>
+  <g class="et et-s92">
+  <path class="ar-ok" d="M670,100 H727" marker-end="url(#ders3-elif-template-ahok)"/>
+  <text class="lb okt mid" x="698" y="88">True</text>
+  <rect class="boxhl" x="730" y="74" width="300" height="52" rx="6"/>
+  <text class="cd24 mid" x="880" y="108">print("A3 ve üstü")</text>
+  </g>
+  <g class="et et-s77 et-s40 et-sno">
+  <path class="ar-m" d="M670,100 H727" marker-end="url(#ders3-elif-template-ahm)"/>
+  <text class="lb sub mid" x="698" y="88">True</text>
+  <rect class="boxm" x="730" y="74" width="300" height="52" rx="6"/>
+  <text class="cd24 mid sub" x="880" y="108">print("A3 ve üstü")</text>
+  </g>
+  <g class="et et-s92">
+  <path class="ar-m" d="M550,145 V162" marker-end="url(#ders3-elif-template-ahm)"/>
+  <text class="lb sub" x="562" y="163">False</text>
+  </g>
+  <g class="et et-s77 et-s40 et-sno">
+  <path class="ar" d="M550,145 V162" marker-end="url(#ders3-elif-template-ah)"/>
+  <text class="lb errt" x="562" y="163">False</text>
+  </g>
+  <g class="et et-s92">
+  <polygon class="boxm" points="430,210 550,165 670,210 550,255"/>
+  <text class="cd24 mid sub" x="550" y="218">score &gt;= 50</text>
+  </g>
+  <g class="et et-s77 et-s40 et-sno">
+  <polygon class="tint" points="430,210 550,165 670,210 550,255"/>
+  <text class="cd24 mid" x="550" y="218">score &gt;= 50</text>
+  </g>
+  <g class="et et-s77">
+  <path class="ar-ok" d="M670,210 H727" marker-end="url(#ders3-elif-template-ahok)"/>
+  <text class="lb okt mid" x="698" y="198">True</text>
+  <rect class="boxhl" x="730" y="184" width="300" height="52" rx="6"/>
+  <text class="cd24 mid" x="880" y="218">print("geçti")</text>
+  </g>
+  <g class="et et-s92 et-s40 et-sno">
+  <path class="ar-m" d="M670,210 H727" marker-end="url(#ders3-elif-template-ahm)"/>
+  <text class="lb sub mid" x="698" y="198">True</text>
+  <rect class="boxm" x="730" y="184" width="300" height="52" rx="6"/>
+  <text class="cd24 mid sub" x="880" y="218">print("geçti")</text>
+  </g>
+  <g class="et et-s92">
+  <text class="tx sub mid" x="880" y="262">atlandı</text>
+  </g>
+  <g class="et et-s40">
+  <path class="ar" d="M550,255 V293" marker-end="url(#ders3-elif-template-ah)"/>
+  <text class="lb errt" x="562" y="282">False</text>
+  </g>
+  <g class="et et-s77 et-s92">
+  <path class="ar-m" d="M550,255 V293" marker-end="url(#ders3-elif-template-ahm)"/>
+  <text class="lb sub" x="562" y="282">False</text>
+  </g>
+  <g class="et et-sno">
+  <path class="ar" d="M550,255 V320 H952" marker-end="url(#ders3-elif-template-ah)"/>
+  <text class="lb errt" x="562" y="282">False</text>
+  </g>
+  <g class="et et-s40">
+  <rect class="box" x="490" y="296" width="120" height="48" rx="6"/>
+  <text class="cd24 mid" x="550" y="328">else</text>
+  <path class="ar" d="M610,320 H727" marker-end="url(#ders3-elif-template-ah)"/>
+  <rect class="boxhl" x="730" y="294" width="300" height="52" rx="6"/>
+  <text class="cd24 mid" x="880" y="328">print("kaldı")</text>
+  </g>
+  <g class="et et-s77 et-s92">
+  <rect class="boxm" x="490" y="296" width="120" height="48" rx="6"/>
+  <text class="cd24 mid sub" x="550" y="328">else</text>
+  <path class="ar-m" d="M610,320 H727" marker-end="url(#ders3-elif-template-ahm)"/>
+  <rect class="boxm" x="730" y="294" width="300" height="52" rx="6"/>
+  <text class="cd24 mid sub" x="880" y="328">print("kaldı")</text>
+  <text class="tx sub mid" x="880" y="372">atlandı</text>
+  </g>
+  <g class="et et-s92">
+  <path class="ar" d="M1030,100 H1050"/>
+  </g>
+  <g class="et et-s40 et-s77 et-sno">
+  <path class="ar-m" d="M1030,100 H1050"/>
+  </g>
+  <g class="et et-s77">
+  <path class="ar" d="M1030,210 H1050"/>
+  </g>
+  <g class="et et-s40 et-s92 et-sno">
+  <path class="ar-m" d="M1030,210 H1050"/>
+  </g>
+  <g class="et et-s40">
+  <path class="ar" d="M1030,320 H1050"/>
+  </g>
+  <g class="et et-s77 et-s92">
+  <path class="ar-m" d="M1030,320 H1050"/>
+  </g>
+  <g class="et et-s92">
+  <path class="ar" d="M1050,100 V210"/>
+  </g>
+  <g class="et et-s77 et-s40 et-sno">
+  <path class="ar-m" d="M1050,100 V210"/>
+  </g>
+  <g class="et et-s92 et-s77">
+  <path class="ar" d="M1050,210 V320"/>
+  </g>
+  <g class="et et-s40">
+  <path class="ar-m" d="M1050,210 V320"/>
+  </g>
+  <g class="et et-s92 et-s77 et-s40">
+  <path class="ar" d="M1050,320 V363" marker-end="url(#ders3-elif-template-ah)"/>
+  </g>
+  <g class="et et-sno">
+  <path class="ar-m" d="M1050,210 V291" marker-end="url(#ders3-elif-template-ahm)"/>
+  <rect class="boxhl" x="955" y="294" width="190" height="52" rx="6"/>
+  <text class="cd24 mid" x="1050" y="328">print("son")</text>
+  <path class="ar" d="M1050,346 V363" marker-end="url(#ders3-elif-template-ah)"/>
+  </g>
+  <rect class="box" x="990" y="366" width="120" height="48" rx="24"/>
+  <text class="lb mid" x="1050" y="398">Bitir</text>
+  <!-- alt metinler: 92: "score = 92 için ilk baklavanın petrol mavisi True oku print(\"A3 ve üstü\") kutusuna gider (açık mavi, çivit mavisi çerçeveli); ikinci baklava ve else satırı gri, atlandı." 40: "score = 40 için iki baklavanın False okları koyu; else kutusundan print(\"kaldı\") kutusuna gidilir (açık mavi, çivit mavisi çerçeveli); üstteki iki kutu gri." 40 ve data-else="off": "Kodda else yok, son satır print(\"son\"). İki baklavanın False okları koyu; ikinci baklavanın False oku doğrudan print(\"son\") kutusuna gider (açık mavi, çivit mavisi çerçeveli), sonra Bitir; else satırının yeri boş." -->
+</svg>

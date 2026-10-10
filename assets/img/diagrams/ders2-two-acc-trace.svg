@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 340" width="1152" height="340" role="img" aria-labelledby="ders2-two-acc-trace-t ders2-two-acc-trace-d">
+  <title id="ders2-two-acc-trace-t">İki accumulator: kredi ve katsayı klavyeden</title>
+  <desc id="ders2-two-acc-trace-d">Solda kod: i = 1, total_credits = 0, total_points = 0, while i &lt;= 2:, içeride credits = int(input(&quot;Kredi: &quot;)), coefficient = float(input(&quot;Katsayı: &quot;)), total_credits += credits, total_points += credits * coefficient ve i += 1, en sonda print(total_credits, total_points). Sağda tablo, sütunlar tur, credits, coefficient, total_credits, total_points. Tur 1: credits 4, coefficient 2.5, total_credits 4, total_points 10.0. Tur 2: credits 3, coefficient 3.0, total_credits 7, total_points 19.0. credits ve total_credits int (turuncu), coefficient ve total_points float (hardal sarısı). Son satır açık mavi ve çivit mavisi çerçeveli. Altta Run penceresi: Kredi: 4, Katsayı: 2.5, Kredi: 3, Katsayı: 3 ve 7 19.0; klavyeden yazılan 4, 2.5, 3 ve 3 petrol mavisi. İki turda kredi ve katsayı klavyeden gelir; total_credits 4 ve 7, total_points 10.0 ve 19.0.</desc>
+  <!-- source: ders2-B.md S82; stdin 4, 2.5, 3, 3; passes (credits, coefficient, total_credits, total_points): 4 2.5 4 10.0, 3 3.0 7 19.0; output 7 19.0 (Python 3.14.8, 2026-10-11) -->
+  <defs>
+    <style>
+/* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
+.dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
+.dg .bg{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF)}
+.dg .tx,.dg .lb,.dg .ti,.dg .cd,.dg .cd24{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .tx{font-size:24px;font-weight:400}
+.dg .lb{font-size:24px;font-weight:600}
+.dg .ti{font-size:28px;font-weight:700}
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-family:"JetBrains Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-weight:500}
+.dg .cd{font-size:28px}
+.dg .cd24{font-size:24px}
+.dg .ty{font-size:24px;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .nm{font-size:28px;font-weight:600;fill:#FFFFFF;fill:var(--d-on-name,#FFFFFF)}
+.dg .src{font-size:18px;font-weight:400;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .sub{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .okt{fill:#0D6385;fill:var(--d-ok,#0D6385);font-weight:600}
+.dg .errt{fill:#C21C20;fill:var(--d-err,#C21C20);font-weight:600}
+.dg .b7{font-weight:700}
+.dg .pre{white-space:pre}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .boxm{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .boxhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .blk{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2.5}
+.dg .frame{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .local{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .tmpl{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .cell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellh{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .name{fill:#181C3E;fill:var(--d-name,#181C3E)}
+.dg .soft{fill:#F3F4F8;fill:var(--d-surface,#F3F4F8)}
+.dg .outp{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .tint{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .hl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3)}
+.dg .emph{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .errbox{fill:#FCEDEE;fill:var(--d-err-bg,#FCEDEE);stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .errdash{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .okbox{fill:#E9F6FA;fill:var(--d-ok-bg,#E9F6FA);stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .key{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .dot{fill:#3B4595;fill:var(--d-brand,#3B4595)}
+.dg .dot0{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .ar,.dg .ld,.dg .axis{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E)}
+.dg .ar,.dg .axis{stroke-width:2.5}
+.dg .ld{stroke-width:2}
+.dg .ar-m{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .ar-old{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .ar-ok{fill:none;stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .ar-err{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .sep{fill:none;stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .dash{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2;stroke-dasharray:8 6}
+.dg .ah{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .ah-m{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .ah-ok{fill:#0D6385;fill:var(--d-ok,#0D6385)}
+.dg .ah-err{fill:#C21C20;fill:var(--d-err,#C21C20)}
+.dg .co{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .co-t{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF);font-size:24px;font-weight:700;text-anchor:middle}
+.dg .sec{stroke:#3B4595;stroke:var(--d-second,#3B4595)}
+/* dg v4 type renkleri · authoring/DIAGRAMS.md §10'dan aynen kopyalanır (dg v3 bloğundan sonra) */
+.dg rect.t-int,.dg path.t-int,.dg circle.t-int{fill:#F2CEB3;fill:var(--t-int-bg,#F2CEB3);stroke:#854B00;stroke:var(--t-int,#854B00)}
+.dg text.t-int,.dg tspan.t-int{fill:#613109;fill:var(--t-int-tx,#613109)}
+.dg rect.t-float,.dg path.t-float,.dg circle.t-float{fill:#FFF1C6;fill:var(--t-float-bg,#FFF1C6);stroke:#9F7000;stroke:var(--t-float,#9F7000)}
+.dg text.t-float,.dg tspan.t-float{fill:#5D420E;fill:var(--t-float-tx,#5D420E)}
+.dg rect.t-bool,.dg path.t-bool,.dg circle.t-bool{fill:#C4E9E1;fill:var(--t-bool-bg,#C4E9E1);stroke:#0E7A6D;stroke:var(--t-bool,#0E7A6D)}
+.dg text.t-bool,.dg tspan.t-bool{fill:#0A473F;fill:var(--t-bool-tx,#0A473F)}
+.dg rect.t-str,.dg path.t-str,.dg circle.t-str{fill:#D9F6DD;fill:var(--t-str-bg,#D9F6DD);stroke:#296A3B;stroke:var(--t-str,#296A3B)}
+.dg text.t-str,.dg tspan.t-str{fill:#1A4B28;fill:var(--t-str-tx,#1A4B28)}
+.dg rect.t-none,.dg path.t-none,.dg circle.t-none{fill:#F6F3EF;fill:var(--t-none-bg,#F6F3EF);stroke:#534C45;stroke:var(--t-none,#534C45)}
+.dg text.t-none,.dg tspan.t-none{fill:#413C38;fill:var(--t-none-tx,#413C38)}
+.dg rect.t-list,.dg path.t-list,.dg circle.t-list{fill:#F3C8DB;fill:var(--t-list-bg,#F3C8DB);stroke:#8A2B60;stroke:var(--t-list,#8A2B60)}
+.dg text.t-list,.dg tspan.t-list{fill:#651E45;fill:var(--t-list-tx,#651E45)}
+.dg rect.t-tuple,.dg path.t-tuple,.dg circle.t-tuple{fill:#E3EAF2;fill:var(--t-tuple-bg,#E3EAF2);stroke:#4A6378;stroke:var(--t-tuple,#4A6378)}
+.dg text.t-tuple,.dg tspan.t-tuple{fill:#2C3E4F;fill:var(--t-tuple-tx,#2C3E4F)}
+.dg rect.t-dict,.dg path.t-dict,.dg circle.t-dict{fill:#DBCEC4;fill:var(--t-dict-bg,#DBCEC4);stroke:#4F2611;stroke:var(--t-dict,#4F2611)}
+.dg text.t-dict,.dg tspan.t-dict{fill:#4C2817;fill:var(--t-dict-tx,#4C2817)}
+.dg rect.t-set,.dg path.t-set,.dg circle.t-set{fill:#F2F8D6;fill:var(--t-set-bg,#F2F8D6);stroke:#747C42;stroke:var(--t-set,#747C42)}
+.dg text.t-set,.dg tspan.t-set{fill:#3F4418;fill:var(--t-set-tx,#3F4418)}
+.dg rect.boxhl,.dg path.boxhl,.dg rect.cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595)}
+/* kod PyCharm gibi: ligature yok */
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-variant-ligatures:none;font-feature-settings:"liga" 0,"calt" 0}
+    </style>
+  </defs>
+  <rect class="bg" width="1152" height="340"/>
+  <rect class="soft" x="2" y="2" width="652" height="336" rx="4"/>
+  <text class="cd24" x="18" y="36">i = <tspan class="t-int">1</tspan></text>
+  <text class="cd24" x="18" y="68">total_credits = <tspan class="t-int">0</tspan></text>
+  <text class="cd24" x="18" y="100">total_points = <tspan class="t-int">0</tspan></text>
+  <text class="cd24" x="18" y="132">while i &lt;= <tspan class="t-int">2</tspan>:</text>
+  <text class="cd24 pre" x="18" y="164" xml:space="preserve">    credits = int(input(<tspan class="t-str">&quot;Kredi: &quot;</tspan>))</text>
+  <text class="cd24 pre" x="18" y="196" xml:space="preserve">    coefficient = float(input(<tspan class="t-str">&quot;Katsayı: &quot;</tspan>))</text>
+  <text class="cd24 pre" x="18" y="228" xml:space="preserve">    total_credits += credits</text>
+  <text class="cd24 pre" x="18" y="260" xml:space="preserve">    total_points += credits * coefficient</text>
+  <text class="cd24 pre" x="18" y="292" xml:space="preserve">    i += <tspan class="t-int">1</tspan></text>
+  <text class="cd24" x="18" y="324">print(total_credits, total_points)</text>
+  <rect class="cellh" x="672" y="2" width="54" height="64"/>
+  <text class="lb mid" x="699.0" y="42.0">tur</text>
+  <rect class="cellh" x="726" y="2" width="96" height="64"/>
+  <text class="lb mid" x="774.0" y="42.0">credits</text>
+  <rect class="cellh" x="822" y="2" width="136" height="64"/>
+  <text class="lb mid" x="890.0" y="42.0">coefficient</text>
+  <rect class="cellh" x="958" y="2" width="96" height="64"/>
+  <text class="lb mid" x="1006.0" y="30">total_</text>
+  <text class="lb mid" x="1006.0" y="58">credits</text>
+  <rect class="cellh" x="1054" y="2" width="96" height="64"/>
+  <text class="lb mid" x="1102.0" y="30">total_</text>
+  <text class="lb mid" x="1102.0" y="58">points</text>
+  <rect class="cellh" x="672" y="66" width="54" height="46"/>
+  <rect class="cell" x="726" y="66" width="96" height="46"/>
+  <rect class="cell" x="822" y="66" width="136" height="46"/>
+  <rect class="cell" x="958" y="66" width="96" height="46"/>
+  <rect class="cell" x="1054" y="66" width="96" height="46"/>
+  <text class="cd mid" x="699.0" y="99.0">1</text>
+  <text class="cd mid t-int" x="774.0" y="99.0">4</text>
+  <text class="cd mid t-float" x="890.0" y="99.0">2.5</text>
+  <text class="cd mid t-int" x="1006.0" y="99.0">4</text>
+  <text class="cd mid t-float" x="1102.0" y="99.0">10.0</text>
+  <rect class="cellhl" x="672" y="112" width="54" height="46"/>
+  <rect class="cellhl" x="726" y="112" width="96" height="46"/>
+  <rect class="cellhl" x="822" y="112" width="136" height="46"/>
+  <rect class="cellhl" x="958" y="112" width="96" height="46"/>
+  <rect class="cellhl" x="1054" y="112" width="96" height="46"/>
+  <text class="cd mid" x="699.0" y="145.0">2</text>
+  <text class="cd mid t-int" x="774.0" y="145.0">3</text>
+  <text class="cd mid t-float" x="890.0" y="145.0">3.0</text>
+  <text class="cd mid t-int" x="1006.0" y="145.0">7</text>
+  <text class="cd mid t-float" x="1102.0" y="145.0">19.0</text>
+  <rect class="outp" x="672" y="176" width="478" height="162" rx="4"/>
+  <text class="lb sub end" x="1134" y="206">Run</text>
+  <text class="cd24" x="690" y="206">Kredi: <tspan class="okt">4</tspan></text>
+  <text class="cd24" x="690" y="236">Katsayı: <tspan class="okt">2.5</tspan></text>
+  <text class="cd24" x="690" y="266">Kredi: <tspan class="okt">3</tspan></text>
+  <text class="cd24" x="690" y="296">Katsayı: <tspan class="okt">3</tspan></text>
+  <text class="cd24" x="690" y="326">7 19.0</text>
+</svg>

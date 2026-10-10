@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 512" width="1152" height="512" role="img" aria-labelledby="w1a-ieee-spectrum-ranking-t w1a-ieee-spectrum-ranking-d">
+  <title id="w1a-ieee-spectrum-ranking-t">IEEE Spectrum 2025: en popüler 10 programlama dili</title>
+  <desc id="w1a-ieee-spectrum-ranking-d">Yatay çubuk grafik, IEEE Spectrum 2025 Spectrum sıralaması, göreli puan (birinci dil 1,00): Python 1,00 · Java 0,50 · C++ 0,37 · SQL 0,33 · C# 0,29 · JavaScript 0,29 · TypeScript 0,28 · C 0,28 · Shell 0,21 · Go 0,19. Python'un çubuğu çivit mavisi, diğerleri gri. Kaynak: IEEE Spectrum, The Top Programming Languages 2025, Stephen Cass, 23 Eylül 2025.</desc>
+  <!-- source: site/assets/img/media/credits.json data_sources[ieee-spectrum-tpl-2025].rankings.Spectrum (veri 2025-08-25); çubuk uzunluğu = puan × 800 px; etiketler iki basamağa yuvarlandı -->
+  <defs>
+    
+    <style>
+/* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
+.dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
+.dg .bg{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF)}
+.dg .tx,.dg .lb,.dg .ti,.dg .cd,.dg .cd24{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .tx{font-size:24px;font-weight:400}
+.dg .lb{font-size:24px;font-weight:600}
+.dg .ti{font-size:28px;font-weight:700}
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-family:"JetBrains Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-weight:500}
+.dg .cd{font-size:28px}
+.dg .cd24{font-size:24px}
+.dg .ty{font-size:24px;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .nm{font-size:28px;font-weight:600;fill:#FFFFFF;fill:var(--d-on-name,#FFFFFF)}
+.dg .src{font-size:18px;font-weight:400;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .sub{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .okt{fill:#0D6385;fill:var(--d-ok,#0D6385);font-weight:600}
+.dg .errt{fill:#C21C20;fill:var(--d-err,#C21C20);font-weight:600}
+.dg .b7{font-weight:700}
+.dg .pre{white-space:pre}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .boxm{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .boxhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .blk{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2.5}
+.dg .frame{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .local{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .tmpl{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .cell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellh{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .name{fill:#181C3E;fill:var(--d-name,#181C3E)}
+.dg .soft{fill:#F3F4F8;fill:var(--d-surface,#F3F4F8)}
+.dg .outp{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .tint{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .hl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3)}
+.dg .emph{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .errbox{fill:#FCEDEE;fill:var(--d-err-bg,#FCEDEE);stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .errdash{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .okbox{fill:#E9F6FA;fill:var(--d-ok-bg,#E9F6FA);stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .key{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .dot{fill:#3B4595;fill:var(--d-brand,#3B4595)}
+.dg .dot0{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .ar,.dg .ld,.dg .axis{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E)}
+.dg .ar,.dg .axis{stroke-width:2.5}
+.dg .ld{stroke-width:2}
+.dg .ar-m{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .ar-old{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .ar-ok{fill:none;stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .ar-err{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .sep{fill:none;stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .dash{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2;stroke-dasharray:8 6}
+.dg .ah{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .ah-m{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .ah-ok{fill:#0D6385;fill:var(--d-ok,#0D6385)}
+.dg .ah-err{fill:#C21C20;fill:var(--d-err,#C21C20)}
+.dg .co{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .co-t{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF);font-size:24px;font-weight:700;text-anchor:middle}
+.dg .sec{stroke:#3B4595;stroke:var(--d-second,#3B4595)}
+.dg .sp-py{fill:#0D6385}
+.dg .sp-bar{fill:#767C95;fill:var(--d-bar,#767C95)}
+    </style>
+  </defs>
+  <rect class="bg" width="1152" height="512"/>
+  <text class="tx sub" x="0" y="26">Göreli puan: her sıralamada birinci dil 1,00. Temmuz-Ağustos 2025 verisi.</text>
+  <path class="sep" d="M190,48 V452"/>
+  <path class="sp-py" d="M190,60 H986 A4,4 0 0 1 990,64 V80 A4,4 0 0 1 986,84 H190 Z"/>
+  <text class="lb end b7" x="174" y="81">Python</text>
+  <text class="cd24" x="1002" y="80">1,00</text>
+  <path class="sp-bar" d="M190,100 H584.9 A4,4 0 0 1 588.9,104 V120 A4,4 0 0 1 584.9,124 H190 Z"/>
+  <text class="lb end" x="174" y="121">Java</text>
+  <text class="cd24" x="600.9" y="120">0,50</text>
+  <path class="sp-bar" d="M190,140 H479.5 A4,4 0 0 1 483.5,144 V160 A4,4 0 0 1 479.5,164 H190 Z"/>
+  <text class="lb end" x="174" y="161">C++</text>
+  <text class="cd24" x="495.5" y="160">0,37</text>
+  <path class="sp-bar" d="M190,180 H449.4 A4,4 0 0 1 453.4,184 V200 A4,4 0 0 1 449.4,204 H190 Z"/>
+  <text class="lb end" x="174" y="201">SQL</text>
+  <text class="cd24" x="465.4" y="200">0,33</text>
+  <path class="sp-bar" d="M190,220 H417 A4,4 0 0 1 421,224 V240 A4,4 0 0 1 417,244 H190 Z"/>
+  <text class="lb end" x="174" y="241">C#</text>
+  <text class="cd24" x="433" y="240">0,29</text>
+  <path class="sp-bar" d="M190,260 H415.8 A4,4 0 0 1 419.8,264 V280 A4,4 0 0 1 415.8,284 H190 Z"/>
+  <text class="lb end" x="174" y="281">JavaScript</text>
+  <text class="cd24" x="431.8" y="280">0,29</text>
+  <path class="sp-bar" d="M190,300 H410.5 A4,4 0 0 1 414.5,304 V320 A4,4 0 0 1 410.5,324 H190 Z"/>
+  <text class="lb end" x="174" y="321">TypeScript</text>
+  <text class="cd24" x="426.5" y="320">0,28</text>
+  <path class="sp-bar" d="M190,340 H407.3 A4,4 0 0 1 411.3,344 V360 A4,4 0 0 1 407.3,364 H190 Z"/>
+  <text class="lb end" x="174" y="361">C</text>
+  <text class="cd24" x="423.3" y="360">0,28</text>
+  <path class="sp-bar" d="M190,380 H353.7 A4,4 0 0 1 357.7,384 V400 A4,4 0 0 1 353.7,404 H190 Z"/>
+  <text class="lb end" x="174" y="401">Shell</text>
+  <text class="cd24" x="369.7" y="400">0,21</text>
+  <path class="sp-bar" d="M190,420 H335.2 A4,4 0 0 1 339.2,424 V440 A4,4 0 0 1 335.2,444 H190 Z"/>
+  <text class="lb end" x="174" y="441">Go</text>
+  <text class="cd24" x="351.2" y="440">0,19</text>
+  <g class="dg-small">
+  <text class="src" x="0" y="486">Veri: IEEE Spectrum, “The Top Programming Languages 2025” (Stephen Cass, 23 Eylül 2025), Spectrum sıralaması.</text>
+  <text class="src" x="0" y="506">Yedi ölçüt, sekiz kaynak (Google, Stack Overflow, IEEE Xplore, GitHub ve diğerleri). Grafik bu kurs için yeniden çizildi.</text>
+  </g>
+</svg>

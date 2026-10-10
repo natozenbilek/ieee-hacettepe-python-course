@@ -1,0 +1,605 @@
+/* Introduction to Python · IEEE Hacettepe · Güz 2026
+   Site stylesheet v4 (2026-10-10, DECISIONS.md "The site follows the slide rules"). Every token and component is
+   documented in authoring/DESIGN.md §3 and §4, and tools/audit_pages.py checks the rules at 1440, 1280, 768 and
+   390 px in both colour schemes.
+   - One type scale with five levels: hero title (h1, every page), section title (h2), sub-section title (h3),
+     body, small print. The same values on every page.
+   - One content column (--content): every block of <main>, the hero title, the nav, the lockup and the footer
+     start at the same left edge and share one width.
+   - Branch cyan #49B0D7 is the main accent: the hero band, the rule over every h2, the active nav, the Ders and
+     half chips and the Slaytlar button. Links are dark cyan #0D6385 on light and light cyan #7FD0EE on dark.
+     Navy #181C3E carries headings and depth (the footer band on light). The dark scheme is a cyan-leaning dark
+     (hue about 200, DECISIONS.md "No purple background"). No purple, no gradients, no shadows.
+   - Fonts: Atkinson Hyperlegible Next for all text, JetBrains Mono for code, Latin Modern Roman (Computer
+     Modern) for the hero title and the Tarihçe stories. No JavaScript on the site. */
+
+/* ---------- Fonts (vendored; SIL OFL 1.1 and the GUST Font License; licences in ../fonts/) ---------- */
+/* Atkinson Hyperlegible Next and JetBrains Mono for the site: one static file per weight that holds both the latin
+   and the latin-ext glyphs (made from the vendored fontsource variable files with fontTools: instanced at the
+   weight, the two subsets merged). With one file per weight, Turkish letters such as ğ and ş never arrive in a
+   second file after the rest of the line, so a line cannot rewrap mid-load. Weights 200-549 use the 400 file,
+   550-800 the 700 file. The slides keep the variable split files. */
+@font-face{font-family:"Atkinson Hyperlegible Next";font-style:normal;font-weight:200 549;font-display:swap;
+  src:url(../fonts/atkinson-hyperlegible-next-400.woff2) format("woff2")}
+@font-face{font-family:"Atkinson Hyperlegible Next";font-style:normal;font-weight:550 800;font-display:swap;
+  src:url(../fonts/atkinson-hyperlegible-next-700.woff2) format("woff2")}
+@font-face{font-family:"Atkinson Hyperlegible Next";font-style:italic;font-weight:200 800;font-display:swap;
+  src:url(../fonts/atkinson-hyperlegible-next-latin-wght-italic.woff2) format("woff2-variations"),url(../fonts/atkinson-hyperlegible-next-latin-wght-italic.woff2) format("woff2");
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Atkinson Hyperlegible Next";font-style:italic;font-weight:200 800;font-display:swap;
+  src:url(../fonts/atkinson-hyperlegible-next-latin-ext-wght-italic.woff2) format("woff2-variations"),url(../fonts/atkinson-hyperlegible-next-latin-ext-wght-italic.woff2) format("woff2");
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"JetBrains Mono";font-style:normal;font-weight:100 549;font-display:swap;
+  src:url(../fonts/jetbrains-mono-400.woff2) format("woff2")}
+@font-face{font-family:"JetBrains Mono";font-style:normal;font-weight:550 800;font-display:swap;
+  src:url(../fonts/jetbrains-mono-700.woff2) format("woff2")}
+@font-face{font-family:"Latin Modern Roman";font-style:normal;font-weight:400;font-display:swap;
+  ascent-override:91.7%;descent-override:21.9%;line-gap-override:0%;
+  src:url(../fonts/latin-modern-roman-10-regular.woff) format("woff")}
+@font-face{font-family:"Latin Modern Roman";font-style:normal;font-weight:700;font-display:swap;
+  ascent-override:91.7%;descent-override:21.9%;line-gap-override:0%;
+  src:url(../fonts/latin-modern-roman-10-bold.woff) format("woff")}
+@font-face{font-family:"Latin Modern Roman";font-style:italic;font-weight:400;font-display:swap;
+  ascent-override:91.7%;descent-override:21.9%;line-gap-override:0%;
+  src:url(../fonts/latin-modern-roman-10-italic.woff) format("woff")}
+
+/* Metric-matched fallback for Atkinson Hyperlegible Next: Arial scaled to Atkinson's widths and vertical metrics
+   (measured in Chrome on 2026-10-11: widths 98.3 % regular, 98.9 % bold; ascent 0.98, descent 0.32), so text
+   does not rewrap or move when the webfont arrives. */
+@font-face{font-family:"Atkinson Fallback";font-weight:100 599;src:local("Arial"),local("Helvetica"),local("Liberation Sans");
+  size-adjust:98.3%;ascent-override:98%;descent-override:32%;line-gap-override:0%}
+@font-face{font-family:"Atkinson Fallback";font-weight:600 900;src:local("Arial Bold"),local("Arial-BoldMT"),local("Helvetica Bold"),local("Liberation Sans Bold");
+  size-adjust:98.9%;ascent-override:98%;descent-override:32%;line-gap-override:0%}
+
+/* Metric-matched fallbacks for JetBrains Mono (advance 0.600 em, ascent 1.02, descent 0.30): Menlo and DejaVu Sans
+   Mono advance 0.602 em, Consolas 0.550 em, so each is scaled to JetBrains' advance. A code line then keeps its length
+   and its wrap points when the webfont arrives (no layout shift in a wrapped pre). */
+@font-face{font-family:"JetBrains Fallback";src:local("Menlo"),local("Menlo-Regular"),local("DejaVu Sans Mono"),local("DejaVuSansMono");
+  size-adjust:99.7%;ascent-override:102.3%;descent-override:30.1%;line-gap-override:0%}
+@font-face{font-family:"JetBrains Fallback Consolas";src:local("Consolas");
+  size-adjust:109.1%;ascent-override:93.5%;descent-override:27.5%;line-gap-override:0%}
+
+/* The Latin Modern faces take Georgia's vertical metrics (ascent 0.917, descent 0.219; their widths are within
+   1 % of Georgia's), so the swap from the Georgia fallback to Computer Modern moves nothing (no layout shift). */
+
+/* ---------- Tokens ---------- */
+:root{
+  color-scheme:light dark;
+  --font-sans:"Atkinson Hyperlegible Next","Atkinson Fallback","Atkinson Fallback Roboto","Segoe UI",Arial,sans-serif;
+  --font-head:var(--font-sans);
+  --font-mono:"JetBrains Mono","JetBrains Fallback","JetBrains Fallback Consolas",Menlo,Consolas,monospace;
+  --font-cm:"Latin Modern Roman",Georgia,serif;
+
+  /* the hero band behind the drawing: the drawing's sky after its filter (see Masthead). tools/build_pages.py
+     writes the same value inline on every page from its HERO, MAST_SAT and MAST_DIM settings. */
+  --mast-sky:#2097C3;
+
+  /* fixed brand colours (the same in both schemes) */
+  --cyan:#49B0D7;        /* branch cyan: hero band, section rules, active nav, chips, the Slaytlar button */
+  --cyan-ink:#181C3E;    /* text on cyan: navy, 6.8:1 */
+  --navy:#181C3E;        /* branch navy: headings on light, the footer band on light */
+  --footer-bg:var(--navy);
+
+  /* light scheme */
+  --bg:#FFFFFF;
+  --surface:#F3F4F8;     /* code, quiet fills */
+  --fg:#14172E;          /* text 17.6:1 */
+  --muted:#50566F;       /* meta, captions, small print 7.2:1 */
+  --rule:#D3D7E2;
+  --heading:#181C3E;     /* h2, h3 16.5:1 */
+  --link:#0D6385;        /* dark cyan links 6.7:1 on white, 6.1:1 on surface and tint */
+  --link-hover:#181C3E;
+  --tint:#E9F6FA;        /* cyan 12%: the current schedule row, quiet cyan fills */
+  --ok:#0D6385; --ok-bg:#E9F6FA;
+  --err:#C21C20; --err-bg:#FCEDEE;
+  --stroke:#767C95;      /* dashed strokes only, never text */
+  --brand:var(--link);   /* older rules (type map, os filter) still read --brand */
+  --brand-strong:var(--link-hover);
+
+  /* diagram roles (authoring/DIAGRAMS.md §3) */
+  --d-bg:#FFFFFF; --d-paper:#FFFFFF; --d-ink:#14172E; --d-type:#50566F; --d-muted:#767C95; --d-rule:#D3D7E2;
+  --d-name:#181C3E; --d-on-name:#FFFFFF; --d-brand:#0D6385; --d-surface:#F3F4F8; --d-tint:#EFF0F7; --d-hl:#C8E7F3;
+  --d-ok:#0D6385; --d-ok-bg:#E9F6FA; --d-err:#C21C20; --d-err-bg:#FCEDEE; --d-second:#0D6385; --d-bar:#767C95;
+
+  /* one type scale, five levels (authoring/DESIGN.md §3.4) */
+  --fs-title:clamp(2.25rem,1.35rem + 3.6vw,4.25rem);   /* 1. h1: the hero title on every page */
+  --fs-h2:clamp(1.5rem,1.25rem + .8vw,1.875rem);       /* 2. section title */
+  --fs-h3:1.25rem;                                     /* 3. sub-section title */
+  --fs-lead:1.25rem;                                   /*    the gain line under the hero */
+  --fs-body:1.0625rem;                                 /* 4. body */
+  --fs-small:.9375rem;                                 /* 5. small print: meta, captions, footer */
+  --fs-fine:.875rem;                                   /*    the floor: credits, deadlines (14 px) */
+
+  /* one content column for main, the hero title, the nav, the lockup and the footer */
+  --content:50rem;
+  --gutter:16px;
+  /* one label column: the info table, the announcements, the schedule's Ders column and the Ek kaynaklar docs list
+     all start their second column at the same x (--label-col + --label-gap from the content edge) */
+  --label-col:8rem;
+  --label-gap:16px;
+}
+@media (min-width:600px){:root{--gutter:24px}}
+@media (min-width:1024px){:root{--gutter:32px}}
+@media (max-width:479px){:root{--fs-body:1rem;--fs-lead:1.125rem;--fs-h3:1.1875rem}}
+
+/* dark scheme: a cyan-leaning dark (hue about 200), never the old indigo #0E1127/#181C3E (DECISIONS.md "No purple
+   background"). Text on bg: fg 14.6:1, link 10.2:1, muted 8.5:1, err 7.4:1; on surface: fg 12.6:1, link 8.8:1. */
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0F1A1F; --surface:#162830; --fg:#E7E9F2; --muted:#A9B6BD; --rule:#2A3F49;
+    --heading:#F1F3FA;
+    --link:#7FD0EE;        /* light cyan 10.2:1 on bg, 8.8:1 on surface */
+    --link-hover:#FFFFFF;
+    --tint:#10293A;
+    --ok:#7FD0EE; --ok-bg:#10293A;
+    --err:#F2898C; --err-bg:#3B1520;
+    --stroke:#7C8D96;
+    --footer-bg:#0E2A38;   /* footer text #D9DCEA 10.9:1, links #7FD0EE 8.6:1 */
+    --d-bg:#0F1A1F; --d-paper:#13232A; --d-ink:#E7E9F2; --d-type:#A9B6BD; --d-muted:#7C8D96; --d-rule:#2A3F49;
+    --d-name:#0D6385; --d-on-name:#FFFFFF; --d-brand:#7FD0EE; --d-surface:#1C313B; --d-tint:#18323F; --d-hl:#153B52;
+    --d-ok:#49B0D7; --d-ok-bg:#10293A; --d-err:#F2898C; --d-err-bg:#3B1520; --d-second:#7FD0EE; --d-bar:#56707C;
+  }
+}
+
+/* ---------- Base ---------- */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 var(--fs-body)/1.65 var(--font-sans);hyphens:manual;font-kerning:normal}
+img,svg{max-width:100%}
+.wrap{width:100%;max-width:calc(var(--content) + 2 * var(--gutter));margin:0 auto;padding:0 var(--gutter)}
+main{display:block;padding-top:8px;padding-bottom:24px}
+p{margin:0 0 16px}
+ul,ol{margin:0 0 16px;padding-left:1.5rem}
+li{margin:4px 0}
+li::marker{color:var(--muted)}
+a{color:var(--link);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.16em}
+a:hover{color:var(--link-hover);text-decoration-thickness:2px}
+strong,b{font-weight:700}
+h1,h2,h3{margin:0;font-weight:700}
+/* no word left alone on the last line of a heading or of a short opening line */
+h2,h3,main p.lead,p.jump,ul.news p{text-wrap:pretty}
+h2,h3{color:var(--heading);font-family:var(--font-sans)}
+/* section title: every h2 opens its section with a cyan rule */
+h2{font-size:var(--fs-h2);line-height:1.25;margin:56px 0 16px;padding-top:14px;border-top:3px solid var(--cyan);scroll-margin-top:16px}
+h3{font-size:var(--fs-h3);line-height:1.35;margin:32px 0 8px;scroll-margin-top:16px}
+.tr{font-weight:400;color:var(--muted)}
+.meta,.small{color:var(--muted);font-size:var(--fs-small);line-height:1.5}
+.meta{margin:0 0 12px}
+main p.lead{font-size:var(--fs-lead);line-height:1.5;margin:32px 0 20px;color:var(--fg)}
+p.jump{color:var(--muted);font-size:var(--fs-small);line-height:1.8}
+p.jump a{white-space:nowrap}
+cite{font-style:normal}
+.vh{position:absolute!important;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip{position:absolute;left:8px;top:-60px;background:#FFFFFF;color:#0D6385;padding:8px 12px;border:2px solid #0D6385;z-index:10;font-weight:700}
+.skip:focus{top:8px}
+:focus-visible{outline:3px solid var(--link);outline-offset:2px}
+.url,.break-anywhere{overflow-wrap:anywhere}
+.nowrap{white-space:nowrap}
+
+/* ---------- Masthead (C1), the hero band: the image fills it, the title sits on it, the nav runs across its top ----------
+   The drawing is anchored bottom right and scaled to fit; the rest of the band is the same flat sky
+   (--mast-sky), so the title always sits on plain sky. The drawing is shown through saturate(1.4) brightness(.82):
+   its cyan sky #49B0D7 becomes #2097C3, a deeper branch cyan rather than a greyed steel blue, and the band takes
+   the same colour (tools/build_pages.py writes it), flat, with no gradient. White large text on it is 3.35:1, AA
+   for large text; the title, the term line and the course line are all large (24 px, or 18.66 px bold, and up). */
+/* one continuous height for every width (no jump where the phone drawing takes over at 700 px): 330 px at 390,
+   about 375 at 700, 480 at 1440; subpages 262, 274 and 304 */
+.masthead{position:relative;overflow:hidden;background:var(--mast-sky);color:#FFFFFF;display:flex;flex-direction:column;
+  height:clamp(262px,4vw + 246px,320px)}
+/* every page has the same masthead height, so nothing jumps when moving between pages (Nezih, 2026-10-13:
+   "hepsi aynı, kısa"); the home page used to be taller */
+.masthead.is-sub{height:clamp(262px,4vw + 246px,320px)}
+.mast-art{position:absolute;inset:0;display:block;margin:0}
+.mast-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:right bottom;display:block;filter:saturate(1.4) brightness(.82)}
+.site-nav{position:relative;background:rgba(6,30,48,.62)}
+.site-nav ul{display:flex;flex-wrap:wrap;gap:0 32px;list-style:none;margin:0;padding:0}
+.site-nav li{margin:0}
+.site-nav a{display:block;padding:12px 0 9px;border-bottom:3px solid transparent;color:#FFFFFF;text-decoration:none;
+  font:700 var(--fs-fine)/1.5 var(--font-sans);letter-spacing:.12em}
+.site-nav a:hover{border-bottom-color:rgba(255,255,255,.7)}
+.site-nav a[aria-current="page"]{border-bottom-color:var(--cyan)}
+.site-nav a:focus-visible{outline:3px solid #FFFFFF;outline-offset:2px}
+.mast-title{position:relative;flex:1;display:flex;flex-direction:column;justify-content:center;padding-top:12px;padding-bottom:28px}
+.masthead h1{font-family:var(--font-cm);font-size:var(--fs-title);line-height:1.08;letter-spacing:-.005em;color:#FFFFFF;max-width:7.4em}
+.mast-term{width:fit-content;margin:.8em 0 0;font:700 1.5rem/1.2 var(--font-sans);letter-spacing:.02em}
+.mast-course{width:fit-content;margin:0 0 14px;font:700 1.25rem/1.25 var(--font-cm)}
+.mast-course a{color:#FFFFFF;text-decoration:none}
+.mast-course a:hover{text-decoration:underline}
+@media (max-width:699px){
+  .mast-art img{height:auto;top:auto;aspect-ratio:900/506}
+  .masthead .mast-art img{left:auto;width:66%}
+  .mast-title{justify-content:flex-start;padding-top:20px}
+  .site-nav ul{gap:0 18px}
+  .site-nav a{letter-spacing:.06em;padding:11px 0 8px}
+  .masthead h1{max-width:6.2em}
+  .masthead.is-sub h1{max-width:none}
+  .mast-term{font-size:1.25rem}
+  .mast-course{font-size:1.25rem}
+}
+/* the four nav labels do not fit one line on a phone: two tidy columns instead of a ragged wrap */
+@media (max-width:479px){
+  /* fixed column widths, so the second column does not move when the webfont arrives */
+  .site-nav ul{display:grid;grid-template-columns:9rem 9rem;justify-content:start;gap:0 20px}
+  .site-nav a{padding:8px 0 6px}
+}
+
+/* ---------- Lockup strip (C1): the IEEE Hacettepe lockup on white, also in dark mode, with its clear space ---------- */
+.brand-strip{background:#FFFFFF;border-bottom:1px solid #D3D7E2}
+.brand-strip .wrap{padding-top:18px;padding-bottom:18px}
+.lockup{display:inline-block;line-height:0;vertical-align:top}
+.lockup img{display:block;height:48px;width:auto;max-width:none}
+@media (max-width:1023px){.lockup img{height:44px}}
+@media (max-width:639px){.brand-strip .wrap{padding-top:14px;padding-bottom:14px}.lockup img{width:100%;max-width:328px;height:auto}.lockup{display:block;max-width:328px}}
+
+/* ---------- Info table (C3) ---------- */
+dl.facts{display:grid;grid-template-columns:calc(var(--label-col) + var(--label-gap)) minmax(0,1fr);margin:0 0 8px;border-top:2px solid var(--fg)}
+dl.facts dt,dl.facts dd{margin:0;padding:10px 0;border-bottom:1px solid var(--rule)}
+dl.facts dt{color:var(--muted);font-weight:700;padding-right:var(--label-gap)}
+@media (max-width:639px){
+  dl.facts{grid-template-columns:minmax(0,1fr)}
+  dl.facts dt{border-bottom:0;padding-bottom:0}
+  dl.facts dd{padding-top:2px}
+}
+
+/* ---------- Chips: Ders and half labels, the Slaytlar button ---------- */
+.chip,.half{display:inline-block;background:var(--cyan);color:var(--cyan-ink);font:700 var(--fs-fine)/1.5 var(--font-sans);
+  padding:1px 8px;border-radius:4px;text-decoration:none;white-space:nowrap}
+a.chip:hover,a.half:hover{color:var(--cyan-ink);text-decoration:underline}
+.btn{display:inline-block;background:var(--cyan);color:var(--cyan-ink);font-weight:700;text-decoration:none;padding:6px 14px;border-radius:4px;white-space:nowrap}
+.btn:hover{color:var(--cyan-ink);text-decoration:underline}
+
+/* ---------- Announcements (C4) ---------- */
+ul.news{list-style:none;margin:0 0 16px;padding:0;border-top:1px solid var(--rule)}
+ul.news li{display:grid;grid-template-columns:var(--label-col) minmax(0,1fr);column-gap:var(--label-gap);margin:0;padding:12px 0;border-bottom:1px solid var(--rule)}
+ul.news time{color:var(--muted);font-size:var(--fs-small);font-variant-numeric:tabular-nums;padding-top:.15em;white-space:nowrap}
+ul.news p{margin:0}
+@media (max-width:639px){ul.news li{grid-template-columns:minmax(0,1fr);row-gap:2px}}
+
+/* ---------- Schedule (C5): Ders | Konular | Slaytlar | Ödev ---------- */
+.table-note{color:var(--muted);font-size:var(--fs-small);line-height:1.5}
+table.schedule{width:100%;border-collapse:collapse;margin:8px 0 16px}
+.schedule thead th{text-align:left;font-size:var(--fs-fine);font-weight:700;color:var(--muted);padding:0 12px 8px 0;border-bottom:2px solid var(--fg)}
+.schedule tbody th,.schedule tbody td{text-align:left;vertical-align:top;padding:16px 12px 16px 0;border-bottom:1px solid var(--rule);font-weight:400}
+.schedule .sch-ders{width:calc(var(--label-col) + var(--label-gap))}
+.schedule .sch-ders .chip{font-size:var(--fs-small)}
+.schedule .sch-date{display:block;margin-top:6px;color:var(--muted);font-size:var(--fs-fine);line-height:1.4}
+.schedule .sch-topics p{display:grid;grid-template-columns:3.25rem minmax(0,1fr);margin:0}
+.schedule .sch-topics p+p{margin-top:8px}
+.schedule .sch-topics .half{justify-self:start;align-self:start;margin-top:.2em}
+/* no single word ("loops") left alone on the last line of a topic line */
+.schedule .sch-topics p > span:last-child{text-wrap:pretty}
+.schedule .sch-slides{width:7.5rem}
+.schedule .sch-slides .sec-links{display:block;margin-top:6px;font-size:var(--fs-small)}
+.schedule .sch-hw{width:12rem;padding-right:0;font-size:var(--fs-small);line-height:1.5}
+.schedule .sch-hw a{white-space:nowrap}
+.schedule .hw-main{display:block;font-weight:700;font-size:var(--fs-body)}
+/* the deadline is two nowrap halves ("25 Ekim Pazar," and "23.59'a kadar"; build_pages.py), so it breaks only after
+   the comma and never leaves one word on a line */
+.schedule .hw-due{display:block;margin-top:2px;color:var(--muted);font-size:var(--fs-fine);line-height:1.4}
+.schedule tr.is-current{background:var(--tint)}
+.schedule tr.is-current > *:first-child{padding-left:12px}
+@media (max-width:767px){
+  .schedule thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  table.schedule,.schedule tbody,.schedule tr,.schedule tbody th,.schedule tbody td{display:block;width:auto}
+  .schedule tbody tr{padding:16px 0;border-bottom:1px solid var(--rule)}
+  .schedule tbody tr:first-child{border-top:2px solid var(--fg)}
+  .schedule tbody th,.schedule tbody td{border:0;padding:0}
+  .schedule .sch-ders,.schedule .sch-slides,.schedule .sch-hw{width:auto}
+  .schedule .sch-ders .sch-date{display:inline;margin:0 0 0 10px}
+  .schedule .sch-topics{margin:10px 0 12px}
+  .schedule .sch-slides{display:flex;align-items:center;gap:16px;margin-bottom:10px}
+  .schedule .sch-slides .sec-links{margin:0}
+  .schedule .sch-hw .hw-main{display:inline;margin-right:12px}
+  .schedule tr.is-current{padding-left:12px;padding-right:12px}
+  .schedule tr.is-current > *:first-child{padding-left:0}
+}
+
+/* ---------- Generic data table ---------- */
+table.data{border-collapse:collapse;margin:8px 0 16px;width:100%}
+.data th,.data td{text-align:left;vertical-align:top;padding:8px 12px 8px 0;border-bottom:1px solid var(--rule)}
+.data thead th{font-size:var(--fs-fine);color:var(--muted);font-weight:700;border-bottom:2px solid var(--fg)}
+
+/* ---------- Setup steps (Kurulum) ---------- */
+fieldset.os-filter{display:flex;flex-wrap:wrap;align-items:center;gap:0 24px;margin:0 0 16px;padding:6px 16px 8px;border:1px solid var(--rule);border-radius:4px;min-width:0}
+.os-filter legend{font-weight:700;padding:0 6px}
+.os-filter label{display:inline-flex;align-items:center;gap:8px;min-height:44px;cursor:pointer}
+.os-filter input{width:18px;height:18px;margin:0;accent-color:var(--link)}
+body:has(#os-win:checked) .only-mac{display:none}
+body:has(#os-mac:checked) .only-win{display:none}
+section.step{scroll-margin-top:16px}
+.step-n{font-variant-numeric:tabular-nums;color:var(--link)}
+ol.actions{padding-left:1.75rem}
+ol.actions > li{margin:8px 0;padding-left:4px}
+ol.actions > li::marker{font-weight:700;color:var(--fg)}
+p.check{margin-top:12px;padding:10px 14px;background:var(--tint);border-radius:4px}
+.os-split{display:grid;gap:8px 32px;margin:16px 0}
+@media (min-width:900px){.os-split{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.os-split > div{border-top:2px solid var(--fg);padding-top:8px}
+.os-split > div > :last-child{margin-bottom:0}
+.os-name{font-weight:700;margin:0 0 4px}
+h3.problem code{font-size:.92em;font-weight:600;overflow-wrap:anywhere}
+.shot-pending{display:flex;align-items:center;justify-content:center;min-height:5rem;border:2px dashed var(--stroke);border-radius:4px;color:var(--muted);font-size:var(--fs-small)}
+
+/* ---------- Code, output, keys, UI labels ---------- */
+code,kbd,pre,samp{font-family:var(--font-mono);font-variant-ligatures:none;font-feature-settings:"liga" 0,"calt" 0}
+:not(pre) > code{font-size:max(.88em,14px);line-height:1;background:var(--surface);padding:.08em .12em;border-radius:3px}
+pre{margin:16px 0;padding:14px 16px;background:var(--surface);border:1px solid var(--rule);border-radius:4px;overflow-x:auto;font-size:var(--fs-fine);line-height:1.55;tab-size:4;white-space:pre}
+/* below the full content width a long line wraps inside its box instead of hiding behind a sideways scroll; copying
+   the code still gives the original lines */
+@media (max-width:831px){pre{white-space:pre-wrap;overflow-wrap:anywhere}}
+pre code{font-size:inherit;background:none;padding:0}
+figure.code,figure.output{margin:16px 0}
+figure.code pre,figure.output pre{margin:0}
+figure.code > figcaption,figure.output > figcaption{font:700 var(--fs-fine)/1.4 var(--font-sans);color:var(--muted);margin:0 0 4px}
+figure.code > figcaption.file{font:400 var(--fs-fine)/1.4 var(--font-mono);color:var(--muted);background:var(--surface);border:1px solid var(--rule);border-bottom:0;border-radius:4px 4px 0 0;margin:0;padding:6px 16px}
+figure.code > figcaption.file + pre{border-radius:0 0 4px 4px}
+figure.output pre{background:var(--bg)}
+.typed{color:var(--ok);font-weight:600}
+.tb-last{color:var(--err);font-weight:600}
+.tok-k,.hljs-keyword,.hljs-literal{color:var(--heading);font-weight:700}
+.tok-s,.hljs-string{color:var(--ok)}
+.tok-c,.hljs-comment{color:var(--muted);font-style:normal}
+.hljs-number,.hljs-built_in,.hljs-title,.hljs-params,.hljs-subst,.hljs-meta{color:inherit;font-weight:inherit}
+kbd{font-family:var(--font-sans);font-weight:700;font-size:max(.85em,14px);line-height:1;vertical-align:baseline;padding:0 .35em;background:var(--surface);border:1px solid var(--rule);border-bottom-width:2px;border-radius:3px;white-space:nowrap}
+.ui{font-weight:700}
+
+/* ---------- Figures and doodles (C7) ---------- */
+figure{margin:24px 0}
+figure img,figure > svg{display:block;max-width:100%;height:auto}
+figure img.shot{border:1px solid var(--rule)}
+.fig-scroll{overflow-x:auto}
+.fig-scroll > svg{display:block;width:100%;height:auto}
+@media (max-width:639px){.fig-scroll > svg{min-width:600px}}
+figcaption{margin-top:8px;color:var(--muted);font-size:var(--fs-small);line-height:1.5}
+.credit{display:block;margin-top:4px;color:var(--muted);font-size:var(--fs-fine);line-height:1.45}
+.credit a{color:inherit}
+/* a Paint-style doodle with its one-line analogy; the drawing keeps a white sheet in dark mode */
+figure.doodle{display:grid;grid-template-columns:minmax(0,17rem) minmax(0,1fr);gap:8px 24px;align-items:center}
+figure.doodle img{width:100%;background:#FFFFFF;border:1px solid var(--rule);border-radius:4px}
+figure.doodle figcaption{margin:0;font-size:var(--fs-body);color:var(--fg)}
+figure.doodle figcaption b{color:var(--heading)}
+@media (max-width:599px){figure.doodle{grid-template-columns:minmax(0,1fr)}figure.doodle img{max-width:20rem}}
+
+/* ---------- Video and resource lists (C8, Ek kaynaklar) ---------- */
+.list-label{font-weight:700;margin:20px 0 6px}
+ul.videos,ul.res{list-style:none;margin:0 0 24px;padding:0;border-top:1px solid var(--rule)}
+ul.videos li,ul.res li{margin:0;padding:12px 0;border-bottom:1px solid var(--rule)}
+.v-title{font-weight:700}
+.v-meta{display:block;color:var(--muted);font-size:var(--fs-small);line-height:1.5}
+.v-meta a{color:inherit}
+ul.videos p,ul.res p{margin:2px 0 0}
+/* the start-here video: a tinted box inside the content column, as wide as the h2 rules, with its text inset 14 px;
+   the cyan rule spans the box */
+ul.videos.pick{border-top:0}
+ul.videos.pick li{background:var(--tint);margin:0;padding:12px 14px;border-top:2px solid var(--cyan)}
+ul.videos.pick .v-title{font-size:1.125rem}
+/* the per-Ders docs list uses the shared label column, so its links start where the home page's second columns do */
+ul.res.docs li{display:grid;grid-template-columns:var(--label-col) minmax(0,1fr);column-gap:var(--label-gap)}
+@media (max-width:479px){ul.res.docs li{grid-template-columns:minmax(0,1fr)}}
+
+/* ---------- Tarihçe entries (C9): the pre-v2 layout, in Computer Modern ---------- */
+.conn{display:grid;grid-template-columns:minmax(0,1fr);gap:12px 28px;padding:28px 0;border-top:1px solid var(--rule);scroll-margin-top:16px}
+.conn:last-of-type{border-bottom:1px solid var(--rule)}
+.conn-fig{margin:0}
+.conn-fig img{display:block;width:min(100%,calc(14rem * var(--r,1)));height:auto;max-height:14rem}
+.conn-fig img + img{margin-top:12px}
+.conn-fig figcaption{margin-top:8px;overflow-wrap:anywhere}
+.conn-fig .credit + .credit{margin-top:8px}
+.conn-body{font-family:var(--font-cm);font-size:1.1875rem;line-height:1.6}
+.conn-body > :last-child{margin-bottom:0}
+.conn-tags{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px;font-family:var(--font-sans)}
+.conn h3{font-family:var(--font-cm);margin:0 0 10px}
+.conn-why{margin-top:4px}
+.conn-why b{font-weight:700}
+.conn-body pre,.conn-body figure.output,.conn-body figure.code{font-size:.9375rem;line-height:1.55}
+.conn-body figure > figcaption{font-family:var(--font-sans)}
+.conn-src{color:var(--muted);font-family:var(--font-sans);font-size:var(--fs-fine);line-height:1.5}
+.conn-body code{font-size:max(.8em,14px)}
+@media (min-width:720px){.conn{grid-template-columns:11rem minmax(0,1fr)}.conn.no-fig,.conn.wide-fig{grid-template-columns:minmax(0,1fr)}}
+.conn.wide-fig .conn-fig{order:2}
+.conn.wide-fig .conn-fig img{width:min(100%,calc(18rem * var(--r,1)));max-height:18rem}
+@media (max-width:719px){.conn-fig img{width:min(100%,calc(12rem * var(--r,1)));max-height:12rem}.conn-body{font-size:1.125rem}}
+
+/* ---------- Credits list (C10, Görseller) ---------- */
+ul.credits{list-style:none;margin:0 0 16px;padding:0;border-top:1px solid var(--rule);font-size:var(--fs-small);line-height:1.5}
+ul.credits li{margin:0;padding:10px 0;border-bottom:1px solid var(--rule)}
+.cr-use{display:block;color:var(--muted);font-size:var(--fs-fine)}
+.cr-file{font-family:var(--font-mono);font-size:var(--fs-fine);color:var(--muted);overflow-wrap:anywhere}
+
+/* ---------- Ödev landing ---------- */
+.hw-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px}
+.hw-actions .btn{font-size:var(--fs-body)}
+@media (max-width:479px){.hw-actions{flex-direction:column;align-items:flex-start}}
+ol.hw-tasks{padding-left:1.75rem}
+
+/* ---------- Footer (C11): the branch navy band on light, a dark teal band on dark ---------- */
+.site-footer{margin-top:64px;padding:32px 0 40px;background:var(--footer-bg);color:#D9DCEA;font-size:var(--fs-small);line-height:1.6}
+.site-footer p{margin:0 0 8px}
+.site-footer a{color:#7FD0EE}
+.site-footer a:hover{color:#FFFFFF}
+.foot-course{font-family:var(--font-cm);font-weight:700;font-size:1.25rem;color:#FFFFFF;margin-bottom:12px!important}
+ul.foot-links{list-style:none;margin:0 0 16px;padding:0;display:flex;flex-wrap:wrap;gap:4px 28px}
+ul.foot-links li{margin:0}
+.site-footer :focus-visible{outline-color:#7FD0EE}
+
+/* ---------- Type map (Python's classified type hierarchy) ---------- */
+/* Same markup as on slides. States: .is-now (taught in this Ders) · .is-known (earlier) · .is-later (later Ders). */
+.typemap{--tm-line:var(--muted);--tm-gap:14px;--tm-drop:20px;max-width:var(--wrap);margin:24px 0;font-size:.9375rem;line-height:1.35}
+.typemap ol,.typemap ul{list-style:none;margin:0;padding:0;max-width:none}
+.typemap li{margin:0}
+.typemap p{margin:0;max-width:none}
+.tm-root{position:relative;display:table;margin:0 auto var(--tm-drop);padding:6px 14px;border:2px solid var(--fg);border-radius:6px;background:var(--bg);text-align:center;font-weight:700}
+.tm-root code{font-weight:600;background:none;padding:0}
+.tm-root::after{content:"";position:absolute;left:50%;top:100%;margin-left:-1px;height:calc(var(--tm-drop) + 2px);border-left:2px solid var(--tm-line)}
+.typemap .tm-groups{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));column-gap:var(--tm-gap);padding-top:var(--tm-drop)}
+.tm-group,.tm-sub{position:relative}
+.tm-group[data-span="2"]{grid-column:span 2}
+.tm-group::before,.tm-sub::before{content:"";position:absolute;left:50%;margin-left:-1px;top:calc(-1 * var(--tm-drop));height:var(--tm-drop);border-left:2px solid var(--tm-line)}
+.tm-group::after,.tm-sub::after{content:"";position:absolute;top:calc(-1 * var(--tm-drop));left:calc(-1 * var(--tm-gap) / 2);right:calc(-1 * var(--tm-gap) / 2);border-top:2px solid var(--tm-line)}
+.tm-group:first-child::after,.tm-sub:first-child::after{left:50%}
+.tm-group:last-child::after,.tm-sub:last-child::after{right:50%}
+.tm-group:only-child::after,.tm-sub:only-child::after{display:none}
+.tm-name{position:relative;padding:5px 6px;border:2px solid var(--fg);border-radius:6px;background:var(--bg);text-align:center;font-weight:700}
+.tm-name::after{content:"";position:absolute;left:50%;margin-left:-1px;top:100%;height:calc(var(--tm-drop) + 2px);border-left:2px solid var(--tm-line)}
+.tm-tr{display:block;font-weight:400;color:var(--muted)}
+.tm-tr-in{font-weight:400;color:var(--muted);margin-left:.3em}
+.typemap .tm-subs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--tm-gap);margin-top:var(--tm-drop);padding-top:var(--tm-drop)}
+.typemap .tm-group > .tm-types{padding-top:var(--tm-drop)}
+.tm-sub-name{color:var(--muted);font-weight:600;text-align:center;margin:0 0 6px;line-height:1.3}
+.tm-sub-name.is-hidden{visibility:hidden}
+.tm-sub:has(> .tm-sub-name.is-hidden)::before{height:calc(var(--tm-drop) + 1.3em + 6px)}
+.tm-types{display:grid;gap:6px}
+.tm-type{position:relative;padding:4px 6px;border:2px solid var(--fg);border-radius:6px;background:var(--bg);text-align:center}
+.tm-type > code{display:block;font-weight:700;font-size:1em;background:none;padding:0}
+.tm-ex{display:block;color:var(--muted)}
+.tm-ex code{font-size:1em;background:none;padding:0}
+.tm-when{display:block;color:var(--muted);font-size:.9em}
+.tm-type.is-now{background:var(--tint);border-color:var(--brand);border-width:3px;padding:3px 5px}
+.tm-type.is-now > code{color:var(--brand)}
+.tm-type.is-later{border-style:dashed;border-color:var(--stroke)}
+.tm-type.is-later > code{color:var(--muted);font-weight:600}
+.tm-group:has(.is-now) > .tm-name{border-color:var(--brand);color:var(--brand)}
+.tm-group:not(:has(.is-now,.is-known)) > .tm-name{border-style:dashed;border-color:var(--stroke);color:var(--muted)}
+.tm-legend{display:flex;flex-wrap:wrap;gap:4px 20px;margin-top:14px;color:var(--muted);font-size:.875rem}
+.tm-legend > span{display:inline-flex;align-items:center;gap:6px}
+.tm-key{display:inline-block;width:1.4em;height:.95em;border:2px solid var(--fg);border-radius:3px;background:var(--bg)}
+.tm-key.is-now{border:3px solid var(--brand);background:var(--tint)}
+.tm-key.is-later{border-style:dashed;border-color:var(--stroke)}
+@media (max-width:799px){
+  .typemap{--tm-drop:0px}
+  .tm-root{display:inline-block;margin:0 0 10px}
+  .tm-root::after,.tm-name::after,.tm-group::before,.tm-group::after,.tm-sub::before,.tm-sub::after{display:none}
+  .typemap .tm-groups{display:block;padding:0}
+  .typemap .tm-group{margin:0 0 14px;padding-left:14px;border-left:2px solid var(--rule)}
+  .tm-name{display:inline-block;text-align:left}
+  .tm-tr{display:inline;margin-left:4px}
+  .typemap .tm-subs{display:block;margin-top:0;padding-top:8px}
+  .typemap .tm-sub{margin-bottom:10px}
+  .tm-sub-name{text-align:left;margin:0 0 4px}
+  .tm-sub-name.is-hidden{display:none}
+  .typemap .tm-group > .tm-types{padding-top:8px}
+  .tm-types{display:flex;flex-wrap:wrap;gap:6px}
+  .tm-type{min-width:5.5rem}
+}
+
+
+
+/* ---------- Diagram classes: the dg v3 block from authoring/DIAGRAMS.md §5, verbatim ----------
+   Diagram files carry the same block in their own <style>; this copy lets a hand-written inline SVG use the classes. */
+svg.dg{overflow:visible}
+/* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
+.dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
+.dg .bg{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF)}
+.dg .tx,.dg .lb,.dg .ti,.dg .cd,.dg .cd24{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .tx{font-size:24px;font-weight:400}
+.dg .lb{font-size:24px;font-weight:600}
+.dg .ti{font-size:28px;font-weight:700}
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-family:"JetBrains Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-weight:500}
+.dg .cd{font-size:28px}
+.dg .cd24{font-size:24px}
+.dg .ty{font-size:24px;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .nm{font-size:28px;font-weight:600;fill:#FFFFFF;fill:var(--d-on-name,#FFFFFF)}
+.dg .src{font-size:18px;font-weight:400;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .sub{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .okt{fill:#0D6385;fill:var(--d-ok,#0D6385);font-weight:600}
+.dg .errt{fill:#C21C20;fill:var(--d-err,#C21C20);font-weight:600}
+.dg .b7{font-weight:700}
+.dg .pre{white-space:pre}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .boxm{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .boxhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#0D6385;stroke:var(--d-brand,#0D6385);stroke-width:3}
+.dg .blk{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#0D6385;stroke:var(--d-brand,#0D6385);stroke-width:2.5}
+.dg .frame{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .local{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .tmpl{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .cell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellh{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#0D6385;stroke:var(--d-brand,#0D6385);stroke-width:3}
+.dg .name{fill:#181C3E;fill:var(--d-name,#181C3E)}
+.dg .soft{fill:#F3F4F8;fill:var(--d-surface,#F3F4F8)}
+.dg .outp{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .tint{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .hl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3)}
+.dg .emph{fill:none;stroke:#0D6385;stroke:var(--d-brand,#0D6385);stroke-width:3}
+.dg .errbox{fill:#FCEDEE;fill:var(--d-err-bg,#FCEDEE);stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .errdash{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .okbox{fill:#E9F6FA;fill:var(--d-ok-bg,#E9F6FA);stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .key{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .dot{fill:#0D6385;fill:var(--d-brand,#0D6385)}
+.dg .dot0{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#0D6385;stroke:var(--d-brand,#0D6385);stroke-width:3}
+.dg .ar,.dg .ld,.dg .axis{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E)}
+.dg .ar,.dg .axis{stroke-width:2.5}
+.dg .ld{stroke-width:2}
+.dg .ar-m{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .ar-old{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .ar-ok{fill:none;stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .ar-err{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .sep{fill:none;stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .dash{fill:none;stroke:#0D6385;stroke:var(--d-brand,#0D6385);stroke-width:2;stroke-dasharray:8 6}
+.dg .ah{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .ah-m{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .ah-ok{fill:#0D6385;fill:var(--d-ok,#0D6385)}
+.dg .ah-err{fill:#C21C20;fill:var(--d-err,#C21C20)}
+.dg .co{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .co-t{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF);font-size:24px;font-weight:700;text-anchor:middle}
+.dg .sec{stroke:#0D6385;stroke:var(--d-second,#0D6385)}
+
+/* ---------- Print ---------- */
+@media print{
+  @page{size:A4;margin:16mm 14mm}
+  :root{--bg:#FFFFFF;--surface:#F3F4F8;--fg:#14172E;--muted:#50566F;--rule:#D3D7E2;--heading:#181C3E;--link:#0D6385;--link-hover:#181C3E;--tint:#E9F6FA;--ok:#0D6385;--ok-bg:#E9F6FA;--err:#C21C20;--err-bg:#FCEDEE;--stroke:#767C95;
+    --d-bg:#FFFFFF; --d-paper:#FFFFFF; --d-ink:#14172E; --d-type:#50566F; --d-muted:#767C95; --d-rule:#D3D7E2;--d-name:#181C3E; --d-on-name:#FFFFFF; --d-brand:#0D6385; --d-surface:#F3F4F8; --d-tint:#EFF0F7; --d-hl:#C8E7F3;--d-ok:#0D6385; --d-ok-bg:#E9F6FA; --d-err:#C21C20; --d-err-bg:#FCEDEE; --d-second:#0D6385; --d-bar:#767C95;}
+  body{font-size:10.5pt;line-height:1.45;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .skip,.site-nav,.mast-art,fieldset.os-filter{display:none!important}
+  .masthead,.masthead.is-sub{height:auto;background:none;color:#181C3E}
+  .masthead h1,.mast-course a{color:#181C3E}
+  .mast-title{padding:0 0 4mm}
+  .brand-strip .wrap{padding:0 0 9mm}
+  .lockup img{height:12mm;width:auto}
+  .only-win,.only-mac{display:block!important}
+  .os-split{grid-template-columns:1fr}
+  main a[href^="http"]::after{content:" (" attr(href) ")";font-size:8.5pt;color:#50566F;overflow-wrap:anywhere}
+  pre{white-space:pre-wrap;background:none;overflow:visible}
+  table.schedule tr{break-inside:avoid}
+  .table-note{break-after:avoid}
+  thead{display:table-header-group}
+  h2,h3{break-after:avoid}
+  figure{break-inside:avoid}
+  .conn{break-inside:avoid}
+  .typemap{break-inside:avoid}
+  .site-footer{background:none;color:#50566F}
+  .site-footer a,.foot-course{color:#14172E}
+}
+
+/* Ödevler: five short columns side by side, not a table (Nezih, 2026-10-13) */
+.hw-row{list-style:none;margin:8px 0 16px;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
+.hw-row li{display:flex;flex-direction:column;gap:4px;padding-top:10px;border-top:2px solid var(--rule);font-size:var(--fs-small);line-height:1.45}
+.hw-row li.is-open{border-top-color:var(--cyan)}
+.hw-row .hw-main{font-weight:700;font-size:var(--fs-body)}
+.hw-row .hw-due{color:var(--muted)}
+@media (max-width:640px){.hw-row{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:24px}}
+/* the Slaytlar link of the Program table: a plain link, not a big button (Nezih, 2026-10-13) */
+.schedule .sch-link{font-size:var(--fs-small);font-weight:700;white-space:nowrap}
+/* home page vignettes in the hero's style (Nezih, 2026-10-13: "paint çizimler", "hepsi site ile uyumlu olsun"):
+   tools/home_vignette.py builds them; transparent outside their rounded frame, so they sit on light and dark */
+.intro{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:32px;align-items:center;margin-top:8px}
+.intro .lead{margin-top:24px}
+.intro-art,.sec-art{display:block;width:100%;height:auto}
+.sec-row{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:32px;align-items:start}
+.sec-row > div > p:first-child{margin-top:0}
+@media (max-width:720px){
+  .intro,.sec-row{grid-template-columns:1fr;gap:12px}
+  .intro-art,.sec-art{max-width:260px}
+}
+/* 2026-10-13 shift audit (Nezih: "mobilde sitede çok kayma var, masaüstü de"):
+   long links, table cells and code wrap instead of widening the page at large text sizes or zoom */
+main{overflow-wrap:break-word}
+.data th,.data td{overflow-wrap:anywhere}
+/* the menu's bold capitals: a fallback with Atkinson's widths, so the menu does not move when the font arrives */
+@font-face{font-family:"Atkinson Caps Fallback";font-weight:600 900;src:local("Arial Bold"),local("Arial-BoldMT"),local("Helvetica Bold"),local("Liberation Sans Bold");size-adjust:95%;ascent-override:102%;descent-override:33.3%;line-gap-override:0%}
+.site-nav a{font-family:"Atkinson Hyperlegible Next","Atkinson Caps Fallback",var(--font-sans)}
+/* Android has no Arial: a Roboto-based fallback with Atkinson's widths */
+@font-face{font-family:"Atkinson Fallback Roboto";font-weight:100 599;src:local("Roboto"),local("Roboto-Regular"),local("Roboto Regular");size-adjust:99.4%;ascent-override:98%;descent-override:32%;line-gap-override:0%}
+@font-face{font-family:"Atkinson Fallback Roboto";font-weight:600 900;src:local("Roboto Bold"),local("Roboto-Bold");size-adjust:105.1%;ascent-override:98%;descent-override:32%;line-gap-override:0%}

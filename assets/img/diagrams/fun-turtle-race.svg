@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="dg tt-fun-turtle-race" viewBox="0 0 1152 512" width="1152" height="512" role="img" aria-labelledby="fun-turtle-race-t fun-turtle-race-d">
+  <title id="fun-turtle-race-t">Kaplumbağa yarışı: bir class, dört object</title>
+  <desc id="fun-turtle-race-d">Beyaz zemin üzerinde dört kaplumbağa soldan sağa yarışıyor, her biri kendi renginde bir iz bırakıyor: yukarıdan aşağıya kırmızı, çivit mavisi, yeşil ve turuncu. Sağda dikey siyah bir bitiş çizgisi var. Çivit mavisi kaplumbağa bitiş çizgisine ilk ulaşıyor; program Mavi kazandı yazıyor. Kaydedilen yarış random.seed(1) ile alındı; kaplumbağa şekilleri okunabilsin diye iki kat büyük çizildi.</desc>
+  <!-- source: d5_race.py run under tools/turtle_svg.py on Python 3.14.8, random.seed(1) set by the runner, turtle shapes drawn 2 times larger; colours mapped to the course palette -->
+  <defs>
+    <style>
+/* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
+.dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
+.dg .bg{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF)}
+.dg .tx,.dg .lb,.dg .ti,.dg .cd,.dg .cd24{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .tx{font-size:24px;font-weight:400}
+.dg .lb{font-size:24px;font-weight:600}
+.dg .ti{font-size:28px;font-weight:700}
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-family:"JetBrains Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-weight:500}
+.dg .cd{font-size:28px}
+.dg .cd24{font-size:24px}
+.dg .ty{font-size:24px;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .nm{font-size:28px;font-weight:600;fill:#FFFFFF;fill:var(--d-on-name,#FFFFFF)}
+.dg .src{font-size:18px;font-weight:400;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .sub{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .okt{fill:#0D6385;fill:var(--d-ok,#0D6385);font-weight:600}
+.dg .errt{fill:#C21C20;fill:var(--d-err,#C21C20);font-weight:600}
+.dg .b7{font-weight:700}
+.dg .pre{white-space:pre}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .boxm{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .boxhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .blk{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2.5}
+.dg .frame{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .local{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .tmpl{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .cell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellh{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .name{fill:#181C3E;fill:var(--d-name,#181C3E)}
+.dg .soft{fill:#F3F4F8;fill:var(--d-surface,#F3F4F8)}
+.dg .outp{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .tint{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .hl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3)}
+.dg .emph{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .errbox{fill:#FCEDEE;fill:var(--d-err-bg,#FCEDEE);stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .errdash{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .okbox{fill:#E9F6FA;fill:var(--d-ok-bg,#E9F6FA);stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .key{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .dot{fill:#3B4595;fill:var(--d-brand,#3B4595)}
+.dg .dot0{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .ar,.dg .ld,.dg .axis{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E)}
+.dg .ar,.dg .axis{stroke-width:2.5}
+.dg .ld{stroke-width:2}
+.dg .ar-m{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .ar-old{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .ar-ok{fill:none;stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .ar-err{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .sep{fill:none;stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .dash{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2;stroke-dasharray:8 6}
+.dg .ah{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .ah-m{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .ah-ok{fill:#0D6385;fill:var(--d-ok,#0D6385)}
+.dg .ah-err{fill:#C21C20;fill:var(--d-err,#C21C20)}
+.dg .co{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .co-t{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF);font-size:24px;font-weight:700;text-anchor:middle}
+.dg .sec{stroke:#3B4595;stroke:var(--d-second,#3B4595)}
+/* turtle_svg: turtle art, file-specific classes (tt-), scoped to the root class tt-FILE (FILE = the file name).
+   Fixed colours, so the picture looks like a turtle window in light and dark mode. */
+.dg.tt-fun-turtle-race .tt-bg{fill:#FFFFFF}
+.dg.tt-fun-turtle-race .tt-ln{fill:none;stroke-linecap:round;stroke-linejoin:round}
+.dg.tt-fun-turtle-race .tt-sh{stroke-width:1.5;stroke-linejoin:round}
+.dg.tt-fun-turtle-race .tt-s0{stroke:#14172E}
+.dg.tt-fun-turtle-race .tt-s1{stroke:#C21C20}
+.dg.tt-fun-turtle-race .tt-s2{stroke:#3B4595}
+.dg.tt-fun-turtle-race .tt-s3{stroke:#296A3B}
+.dg.tt-fun-turtle-race .tt-s4{stroke:#D29557}
+.dg.tt-fun-turtle-race .tt-f0{fill:#C21C20}
+.dg.tt-fun-turtle-race .tt-f1{fill:#3B4595}
+.dg.tt-fun-turtle-race .tt-f2{fill:#296A3B}
+.dg.tt-fun-turtle-race .tt-f3{fill:#D29557}
+.dg.tt-fun-turtle-race .tt-w0{stroke-width:2.5}
+    </style>
+  </defs>
+  <rect class="tt-bg" width="1152" height="512"/>
+  <polyline class="tt-ln tt-s0 tt-w0" points="896.95,28 896.95,484"/>
+  <polyline class="tt-ln tt-s1 tt-w0" points="195.42,98.15 200.68,98.15 204.18,98.15 216.46,98.15 218.22,98.15 219.97,98.15 237.51,98.15 239.26,98.15 251.54,98.15 267.32,98.15 283.11,98.15 290.12,98.15 302.4,98.15 311.17,98.15 323.45,98.15 332.22,98.15 344.49,98.15 351.51,98.15 362.03,98.15 376.06,98.15 391.85,98.15 393.6,98.15 411.14,98.15 416.4,98.15 418.15,98.15 425.17,98.15 442.71,98.15 458.49,98.15 474.28,98.15 481.29,98.15 491.82,98.15 507.6,98.15 519.88,98.15 535.66,98.15 549.69,98.15 554.95,98.15 558.46,98.15 561.97,98.15 563.72,98.15 567.23,98.15 576,98.15 584.77,98.15 593.54,98.15 607.57,98.15 619.85,98.15 628.62,98.15 635.63,98.15 642.65,98.15 644.4,98.15 656.68,98.15 670.71,98.15 682.98,98.15 684.74,98.15 686.49,98.15 695.26,98.15 712.8,98.15 728.58,98.15 746.12,98.15 761.91,98.15 772.43,98.15 784.71,98.15 788.22,98.15 802.25,98.15 814.52,98.15 821.54,98.15 832.06,98.15"/>
+  <polyline class="tt-ln tt-s2 tt-w0" points="195.42,203.38 212.95,203.38 226.98,203.38 234,203.38 246.28,203.38 260.31,203.38 263.82,203.38 265.57,203.38 272.58,203.38 279.6,203.38 286.62,203.38 300.65,203.38 316.43,203.38 319.94,203.38 335.72,203.38 353.26,203.38 370.8,203.38 383.08,203.38 398.86,203.38 414.65,203.38 426.92,203.38 440.95,203.38 458.49,203.38 463.75,203.38 470.77,203.38 483.05,203.38 493.57,203.38 511.11,203.38 516.37,203.38 528.65,203.38 546.18,203.38 558.46,203.38 568.98,203.38 586.52,203.38 604.06,203.38 619.85,203.38 635.63,203.38 639.14,203.38 647.91,203.38 665.45,203.38 668.95,203.38 684.74,203.38 698.77,203.38 702.28,203.38 712.8,203.38 716.31,203.38 733.85,203.38 735.6,203.38 740.86,203.38 756.65,203.38 763.66,203.38 781.2,203.38 789.97,203.38 798.74,203.38 807.51,203.38 816.28,203.38 818.03,203.38 832.06,203.38 833.82,203.38 837.32,203.38 854.86,203.38 867.14,203.38 868.89,203.38 877.66,203.38 888.18,203.38 900.46,203.38"/>
+  <polyline class="tt-ln tt-s3 tt-w0" points="195.42,308.62 198.92,308.62 212.95,308.62 216.46,308.62 228.74,308.62 237.51,308.62 248.03,308.62 263.82,308.62 276.09,308.62 290.12,308.62 300.65,308.62 309.42,308.62 312.92,308.62 323.45,308.62 330.46,308.62 344.49,308.62 346.25,308.62 358.52,308.62 369.05,308.62 372.55,308.62 383.08,308.62 384.83,308.62 402.37,308.62 418.15,308.62 433.94,308.62 449.72,308.62 463.75,308.62 465.51,308.62 481.29,308.62 483.05,308.62 498.83,308.62 512.86,308.62 514.62,308.62 532.15,308.62 533.91,308.62 551.45,308.62 560.22,308.62 561.97,308.62 568.98,308.62 574.25,308.62 579.51,308.62 584.77,308.62 595.29,308.62 597.05,308.62 609.32,308.62 618.09,308.62 630.37,308.62 642.65,308.62 656.68,308.62 663.69,308.62 679.48,308.62 690,308.62 695.26,308.62 698.77,308.62 704.03,308.62 709.29,308.62 726.83,308.62 732.09,308.62 744.37,308.62 751.38,308.62 758.4,308.62 767.17,308.62 777.69,308.62 779.45,308.62 796.98,308.62"/>
+  <polyline class="tt-ln tt-s4 tt-w0" points="195.42,413.85 204.18,413.85 218.22,413.85 232.25,413.85 249.78,413.85 256.8,413.85 258.55,413.85 260.31,413.85 262.06,413.85 276.09,413.85 283.11,413.85 284.86,413.85 290.12,413.85 305.91,413.85 314.68,413.85 330.46,413.85 344.49,413.85 349.75,413.85 353.26,413.85 358.52,413.85 372.55,413.85 381.32,413.85 393.6,413.85 400.62,413.85 416.4,413.85 426.92,413.85 435.69,413.85 447.97,413.85 463.75,413.85 477.78,413.85 484.8,413.85 495.32,413.85 511.11,413.85 521.63,413.85 528.65,413.85 533.91,413.85 535.66,413.85 549.69,413.85 558.46,413.85 568.98,413.85 574.25,413.85 583.02,413.85 597.05,413.85 605.82,413.85 612.83,413.85 628.62,413.85 630.37,413.85 635.63,413.85 651.42,413.85 667.2,413.85 668.95,413.85 681.23,413.85 688.25,413.85 691.75,413.85 704.03,413.85 705.78,413.85 712.8,413.85 730.34,413.85 737.35,413.85 754.89,413.85 768.92,413.85 784.71,413.85 802.25,413.85 807.51,413.85 812.77,413.85"/>
+  <polygon class="tt-sh tt-f0 tt-s1" points="888.18,98.15 881.17,91.14 867.14,94.65 856.62,84.12 863.63,73.6 860.12,66.58 849.6,77.11 835.57,73.6 821.54,80.62 811.02,70.09 804,77.11 814.52,84.12 807.51,98.15 814.52,112.18 804,119.2 811.02,126.22 821.54,115.69 835.57,122.71 849.6,119.2 860.12,129.72 863.63,122.71 856.62,112.18 867.14,101.66 881.17,105.17"/>
+  <polygon class="tt-sh tt-f1 tt-s2" points="956.58,203.38 949.57,196.37 935.54,199.88 925.02,189.35 932.03,178.83 928.52,171.82 918,182.34 903.97,178.83 889.94,185.85 879.42,175.32 872.4,182.34 882.92,189.35 875.91,203.38 882.92,217.42 872.4,224.43 879.42,231.45 889.94,220.92 903.97,227.94 918,224.43 928.52,234.95 932.03,227.94 925.02,217.42 935.54,206.89 949.57,210.4"/>
+  <polygon class="tt-sh tt-f2 tt-s3" points="853.11,308.62 846.09,301.6 832.06,305.11 821.54,294.58 828.55,284.06 825.05,277.05 814.52,287.57 800.49,284.06 786.46,291.08 775.94,280.55 768.92,287.57 779.45,294.58 772.43,308.62 779.45,322.65 768.92,329.66 775.94,336.68 786.46,326.15 800.49,333.17 814.52,329.66 825.05,340.18 828.55,333.17 821.54,322.65 832.06,312.12 846.09,315.63"/>
+  <polygon class="tt-sh tt-f3 tt-s4" points="868.89,413.85 861.88,406.83 847.85,410.34 837.32,399.82 844.34,389.29 840.83,382.28 830.31,392.8 816.28,389.29 802.25,396.31 791.72,385.78 784.71,392.8 795.23,399.82 788.22,413.85 795.23,427.88 784.71,434.89 791.72,441.91 802.25,431.38 816.28,438.4 830.31,434.89 840.83,445.42 844.34,438.4 837.32,427.88 847.85,417.35 861.88,420.86"/>
+</svg>

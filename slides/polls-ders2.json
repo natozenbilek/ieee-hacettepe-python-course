@@ -1,0 +1,6 @@
+{
+  "d2-tekrar-atama": {"options": [{"code": "9 3"}, {"code": "9.0 3"}, {"code": "9.0 3.0"}, {"code": "9 3.0"}], "answer": 3, "why": "int ile float'ın çarpımı float'tır; / da her zaman float verir."},
+  "d2-input-str": {"options": [{"code": "55\n<class 'str'>"}, {"code": "10\n<class 'int'>"}, {"code": "5 5\n<class 'str'>"}, {"code": "TypeError"}], "answer": 1, "why": "input() \"5\" str'ini verir; iki str + ile arka arkaya eklenir."},
+  "d2-metot": {"options": [{"code": "[NUR]"}, {"code": "[  nur  ]"}, {"code": "[  NUR  ]"}, {"code": "[nur]"}], "answer": 4, "why": "name.upper() yeni bir str üretti, kimse saklamadı; strip() yalnızca boşlukları siler."},
+  "d2-kiyaslama": {"options": [{"code": "True\nFalse\nFalse"}, {"code": "False\nTrue\nFalse"}, {"code": "True\nTrue\nFalse"}, {"code": "TypeError"}], "answer": 3, "why": "2.0 ile 2 aynı sayı; str, int'e hiç eşit olmaz; Hacettepe'de x yok."}
+}

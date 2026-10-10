@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="dg tt-fun-star-rosette" viewBox="0 0 560 512" width="560" height="512" role="img" aria-labelledby="fun-star-rosette-t fun-star-rosette-d">
+  <title id="fun-star-rosette-t">turtle ile 36 yıldızlık çiçek</title>
+  <desc id="fun-star-rosette-d">Lacivert zemin üzerinde 36 beş köşeli yıldızdan oluşan bir çiçek, toplam 180 çizgi. Yıldızlar sırayla camgöbeği, pembe ve hardal sarısı; her yıldızdan sonra kalem 10 derece dönüyor. Dıştaki for 36 kez, içteki for her turda 5 kez dönüyor; rengi if, elif ve else seçiyor.</desc>
+  <!-- source: d3_rosette.py run under tools/turtle_svg.py on Python 3.14.8; colours mapped to the course palette -->
+  <defs>
+    <style>
+/* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
+.dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
+.dg .bg{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF)}
+.dg .tx,.dg .lb,.dg .ti,.dg .cd,.dg .cd24{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .tx{font-size:24px;font-weight:400}
+.dg .lb{font-size:24px;font-weight:600}
+.dg .ti{font-size:28px;font-weight:700}
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-family:"JetBrains Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-weight:500}
+.dg .cd{font-size:28px}
+.dg .cd24{font-size:24px}
+.dg .ty{font-size:24px;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .nm{font-size:28px;font-weight:600;fill:#FFFFFF;fill:var(--d-on-name,#FFFFFF)}
+.dg .src{font-size:18px;font-weight:400;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .sub{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .okt{fill:#0D6385;fill:var(--d-ok,#0D6385);font-weight:600}
+.dg .errt{fill:#C21C20;fill:var(--d-err,#C21C20);font-weight:600}
+.dg .b7{font-weight:700}
+.dg .pre{white-space:pre}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .boxm{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .boxhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .blk{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2.5}
+.dg .frame{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .local{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .tmpl{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .cell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellh{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .name{fill:#181C3E;fill:var(--d-name,#181C3E)}
+.dg .soft{fill:#F3F4F8;fill:var(--d-surface,#F3F4F8)}
+.dg .outp{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .tint{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .hl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3)}
+.dg .emph{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .errbox{fill:#FCEDEE;fill:var(--d-err-bg,#FCEDEE);stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .errdash{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .okbox{fill:#E9F6FA;fill:var(--d-ok-bg,#E9F6FA);stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .key{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .dot{fill:#3B4595;fill:var(--d-brand,#3B4595)}
+.dg .dot0{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .ar,.dg .ld,.dg .axis{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E)}
+.dg .ar,.dg .axis{stroke-width:2.5}
+.dg .ld{stroke-width:2}
+.dg .ar-m{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .ar-old{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .ar-ok{fill:none;stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .ar-err{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .sep{fill:none;stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .dash{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2;stroke-dasharray:8 6}
+.dg .ah{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .ah-m{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .ah-ok{fill:#0D6385;fill:var(--d-ok,#0D6385)}
+.dg .ah-err{fill:#C21C20;fill:var(--d-err,#C21C20)}
+.dg .co{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .co-t{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF);font-size:24px;font-weight:700;text-anchor:middle}
+.dg .sec{stroke:#3B4595;stroke:var(--d-second,#3B4595)}
+/* turtle_svg: turtle art, file-specific classes (tt-), scoped to the root class tt-FILE (FILE = the file name).
+   Fixed colours, so the picture looks like a turtle window in light and dark mode. */
+.dg.tt-fun-star-rosette .tt-bg{fill:#181C3E}
+.dg.tt-fun-star-rosette .tt-ln{fill:none;stroke-linecap:round;stroke-linejoin:round}
+.dg.tt-fun-star-rosette .tt-sh{stroke-width:1.5;stroke-linejoin:round}
+.dg.tt-fun-star-rosette .tt-s0{stroke:#49B0D7}
+.dg.tt-fun-star-rosette .tt-s1{stroke:#DB87B7}
+.dg.tt-fun-star-rosette .tt-s2{stroke:#EBBD57}
+.dg.tt-fun-star-rosette .tt-w0{stroke-width:2.5}
+    </style>
+  </defs>
+  <rect class="tt-bg" width="560" height="512"/>
+  <polyline class="tt-ln tt-s0 tt-w0" points="280,256 508,256 323.54,390.02 394,173.17 464.46,390.02 280,256"/>
+  <polyline class="tt-ln tt-s1 tt-w0" points="280,256 504.54,295.59 299.61,395.54 406.65,194.23 438.38,420.01 280,256"/>
+  <polyline class="tt-ln tt-s2 tt-w0" points="280,256 494.25,333.98 275.08,396.83 415.45,217.16 407.5,445.02 280,256"/>
+  <polyline class="tt-ln tt-s0 tt-w0" points="280,256 477.45,370 250.7,393.83 420.14,241.27 372.74,464.29 280,256"/>
+  <polyline class="tt-ln tt-s1 tt-w0" points="280,256 454.66,402.56 227.21,386.65 420.57,265.83 335.16,477.23 280,256"/>
+  <polyline class="tt-ln tt-s2 tt-w0" points="280,256 426.56,430.66 205.33,375.5 416.73,290.09 295.9,483.44 280,256"/>
+  <polyline class="tt-ln tt-s0 tt-w0" points="280,256 394,453.45 185.71,360.72 408.73,313.31 256.17,482.75 280,256"/>
+  <polyline class="tt-ln tt-s1 tt-w0" points="280,256 357.98,470.25 168.96,342.75 396.82,334.8 217.15,475.17 280,256"/>
+  <polyline class="tt-ln tt-s2 tt-w0" points="280,256 319.59,480.54 155.58,322.15 381.36,353.89 180.05,460.93 280,256"/>
+  <polyline class="tt-ln tt-s0 tt-w0" points="280,256 280,484 145.98,299.54 362.83,370 145.98,440.46 280,256"/>
+  <polyline class="tt-ln tt-s1 tt-w0" points="280,256 240.41,480.54 140.46,275.61 341.77,382.65 115.99,414.38 280,256"/>
+  <polyline class="tt-ln tt-s2 tt-w0" points="280,256 202.02,470.25 139.17,251.08 318.84,391.45 90.98,383.5 280,256"/>
+  <polyline class="tt-ln tt-s0 tt-w0" points="280,256 166,453.45 142.17,226.7 294.73,396.14 71.71,348.74 280,256"/>
+  <polyline class="tt-ln tt-s1 tt-w0" points="280,256 133.44,430.66 149.35,203.21 270.17,396.57 58.77,311.16 280,256"/>
+  <polyline class="tt-ln tt-s2 tt-w0" points="280,256 105.34,402.56 160.5,181.33 245.91,392.73 52.56,271.9 280,256"/>
+  <polyline class="tt-ln tt-s0 tt-w0" points="280,256 82.55,370 175.28,161.71 222.69,384.73 53.25,232.17 280,256"/>
+  <polyline class="tt-ln tt-s1 tt-w0" points="280,256 65.75,333.98 193.25,144.96 201.2,372.82 60.83,193.15 280,256"/>
+  <polyline class="tt-ln tt-s2 tt-w0" points="280,256 55.46,295.59 213.85,131.58 182.11,357.36 75.07,156.05 280,256"/>
+  <polyline class="tt-ln tt-s0 tt-w0" points="280,256 52,256 236.46,121.98 166,338.83 95.54,121.98 280,256"/>
+  <polyline class="tt-ln tt-s1 tt-w0" points="280,256 55.46,216.41 260.39,116.46 153.35,317.77 121.62,91.99 280,256"/>
+  <polyline class="tt-ln tt-s2 tt-w0" points="280,256 65.75,178.02 284.92,115.17 144.55,294.84 152.5,66.98 280,256"/>
+  <polyline class="tt-ln tt-s0 tt-w0" points="280,256 82.55,142 309.3,118.17 139.86,270.73 187.26,47.71 280,256"/>
+  <polyline class="tt-ln tt-s1 tt-w0" points="280,256 105.34,109.44 332.79,125.35 139.43,246.17 224.84,34.77 280,256"/>
+  <polyline class="tt-ln tt-s2 tt-w0" points="280,256 133.44,81.34 354.67,136.5 143.27,221.91 264.1,28.56 280,256"/>
+  <polyline class="tt-ln tt-s0 tt-w0" points="280,256 166,58.55 374.29,151.28 151.27,198.69 303.83,29.25 280,256"/>
+  <polyline class="tt-ln tt-s1 tt-w0" points="280,256 202.02,41.75 391.04,169.25 163.18,177.2 342.85,36.83 280,256"/>
+  <polyline class="tt-ln tt-s2 tt-w0" points="280,256 240.41,31.46 404.42,189.85 178.64,158.11 379.95,51.07 280,256"/>
+  <polyline class="tt-ln tt-s0 tt-w0" points="280,256 280,28 414.02,212.46 197.17,142 414.02,71.54 280,256"/>
+  <polyline class="tt-ln tt-s1 tt-w0" points="280,256 319.59,31.46 419.54,236.39 218.23,129.35 444.01,97.62 280,256"/>
+  <polyline class="tt-ln tt-s2 tt-w0" points="280,256 357.98,41.75 420.83,260.92 241.16,120.55 469.02,128.5 280,256"/>
+  <polyline class="tt-ln tt-s0 tt-w0" points="280,256 394,58.55 417.83,285.3 265.27,115.86 488.29,163.26 280,256"/>
+  <polyline class="tt-ln tt-s1 tt-w0" points="280,256 426.56,81.34 410.65,308.79 289.83,115.43 501.23,200.84 280,256"/>
+  <polyline class="tt-ln tt-s2 tt-w0" points="280,256 454.66,109.44 399.5,330.67 314.09,119.27 507.44,240.1 280,256"/>
+  <polyline class="tt-ln tt-s0 tt-w0" points="280,256 477.45,142 384.72,350.29 337.31,127.27 506.75,279.83 280,256"/>
+  <polyline class="tt-ln tt-s1 tt-w0" points="280,256 494.25,178.02 366.75,367.04 358.8,139.18 499.17,318.85 280,256"/>
+  <polyline class="tt-ln tt-s2 tt-w0" points="280,256 504.54,216.41 346.15,380.42 377.89,154.64 484.93,355.95 280,256"/>
+</svg>

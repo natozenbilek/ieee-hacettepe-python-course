@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="dg tt-fun-square-spiral-91" viewBox="0 0 560 512" width="560" height="512" role="img" aria-labelledby="fun-square-spiral-91-t fun-square-spiral-91-d">
+  <title id="fun-square-spiral-91-t">Açı 91 derece olunca</title>
+  <desc id="fun-square-spiral-91-d">Aynı kare spiral, tek fark dönüş açısının 90 yerine 91 derece olması. Her kare bir öncekine göre 1 derece kaydığı için spiral kendi etrafında burulan bir girdaba dönüşüyor. Çizgiler sırayla camgöbeği, pembe, hardal sarısı ve beyaz, lacivert zemin üzerinde.</desc>
+  <!-- source: d4_spiral_91.py run under tools/turtle_svg.py on Python 3.14.8; colours mapped to the course palette -->
+  <defs>
+    <style>
+/* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
+.dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
+.dg .bg{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF)}
+.dg .tx,.dg .lb,.dg .ti,.dg .cd,.dg .cd24{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .tx{font-size:24px;font-weight:400}
+.dg .lb{font-size:24px;font-weight:600}
+.dg .ti{font-size:28px;font-weight:700}
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-family:"JetBrains Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-weight:500}
+.dg .cd{font-size:28px}
+.dg .cd24{font-size:24px}
+.dg .ty{font-size:24px;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .nm{font-size:28px;font-weight:600;fill:#FFFFFF;fill:var(--d-on-name,#FFFFFF)}
+.dg .src{font-size:18px;font-weight:400;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .sub{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .okt{fill:#0D6385;fill:var(--d-ok,#0D6385);font-weight:600}
+.dg .errt{fill:#C21C20;fill:var(--d-err,#C21C20);font-weight:600}
+.dg .b7{font-weight:700}
+.dg .pre{white-space:pre}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .boxm{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .boxhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .blk{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2.5}
+.dg .frame{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .local{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .tmpl{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .cell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellh{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .name{fill:#181C3E;fill:var(--d-name,#181C3E)}
+.dg .soft{fill:#F3F4F8;fill:var(--d-surface,#F3F4F8)}
+.dg .outp{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .tint{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .hl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3)}
+.dg .emph{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .errbox{fill:#FCEDEE;fill:var(--d-err-bg,#FCEDEE);stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .errdash{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .okbox{fill:#E9F6FA;fill:var(--d-ok-bg,#E9F6FA);stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .key{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .dot{fill:#3B4595;fill:var(--d-brand,#3B4595)}
+.dg .dot0{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .ar,.dg .ld,.dg .axis{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E)}
+.dg .ar,.dg .axis{stroke-width:2.5}
+.dg .ld{stroke-width:2}
+.dg .ar-m{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .ar-old{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .ar-ok{fill:none;stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .ar-err{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .sep{fill:none;stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .dash{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2;stroke-dasharray:8 6}
+.dg .ah{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .ah-m{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .ah-ok{fill:#0D6385;fill:var(--d-ok,#0D6385)}
+.dg .ah-err{fill:#C21C20;fill:var(--d-err,#C21C20)}
+.dg .co{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .co-t{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF);font-size:24px;font-weight:700;text-anchor:middle}
+.dg .sec{stroke:#3B4595;stroke:var(--d-second,#3B4595)}
+/* turtle_svg: turtle art, file-specific classes (tt-), scoped to the root class tt-FILE (FILE = the file name).
+   Fixed colours, so the picture looks like a turtle window in light and dark mode. */
+.dg.tt-fun-square-spiral-91 .tt-bg{fill:#181C3E}
+.dg.tt-fun-square-spiral-91 .tt-ln{fill:none;stroke-linecap:round;stroke-linejoin:round}
+.dg.tt-fun-square-spiral-91 .tt-sh{stroke-width:1.5;stroke-linejoin:round}
+.dg.tt-fun-square-spiral-91 .tt-s0{stroke:#49B0D7}
+.dg.tt-fun-square-spiral-91 .tt-s1{stroke:#DB87B7}
+.dg.tt-fun-square-spiral-91 .tt-s2{stroke:#EBBD57}
+.dg.tt-fun-square-spiral-91 .tt-s3{stroke:#FFFFFF}
+.dg.tt-fun-square-spiral-91 .tt-w0{stroke-width:3.0}
+    </style>
+  </defs>
+  <rect class="tt-bg" width="560" height="512"/>
+  <polyline class="tt-ln tt-s0 tt-w0" points="282.83,255.75 282.83,255.75"/>
+  <polyline class="tt-ln tt-s1 tt-w0" points="282.83,255.75 282.75,250.76"/>
+  <polyline class="tt-ln tt-s2 tt-w0" points="282.75,250.76 272.77,251.11"/>
+  <polyline class="tt-ln tt-s3 tt-w0" points="272.77,251.11 273.56,266.06"/>
+  <polyline class="tt-ln tt-s0 tt-w0" points="273.56,266.06 293.47,264.67"/>
+  <polyline class="tt-ln tt-s1 tt-w0" points="293.47,264.67 291.3,239.81"/>
+  <polyline class="tt-ln tt-s2 tt-w0" points="291.3,239.81 261.52,242.94"/>
+  <polyline class="tt-ln tt-s3 tt-w0" points="261.52,242.94 265.77,277.62"/>
+  <polyline class="tt-ln tt-s0 tt-w0" points="265.77,277.62 305.31,272.06"/>
+  <polyline class="tt-ln tt-s1 tt-w0" points="305.31,272.06 298.28,227.7"/>
+  <polyline class="tt-ln tt-s2 tt-w0" points="298.28,227.7 249.13,236.36"/>
+  <polyline class="tt-ln tt-s3 tt-w0" points="249.13,236.36 259.61,290.25"/>
+  <polyline class="tt-ln tt-s0 tt-w0" points="259.61,290.25 318.19,277.8"/>
+  <polyline class="tt-ln tt-s1 tt-w0" points="318.19,277.8 303.59,214.58"/>
+  <polyline class="tt-ln tt-s2 tt-w0" points="303.59,214.58 235.8,231.49"/>
+  <polyline class="tt-ln tt-s3 tt-w0" points="235.8,231.49 255.18,303.8"/>
+  <polyline class="tt-ln tt-s0 tt-w0" points="255.18,303.8 331.93,281.79"/>
+  <polyline class="tt-ln tt-s1 tt-w0" points="331.93,281.79 307.13,200.65"/>
+  <polyline class="tt-ln tt-s2 tt-w0" points="307.13,200.65 221.69,228.41"/>
+  <polyline class="tt-ln tt-s3 tt-w0" points="221.69,228.41 252.56,318.07"/>
+  <polyline class="tt-ln tt-s0 tt-w0" points="252.56,318.07 346.36,283.93"/>
+  <polyline class="tt-ln tt-s1 tt-w0" points="346.36,283.93 308.8,186.09"/>
+  <polyline class="tt-ln tt-s2 tt-w0" points="308.8,186.09 207,227.22"/>
+  <polyline class="tt-ln tt-s3 tt-w0" points="207,227.22 251.85,332.88"/>
+  <polyline class="tt-ln tt-s0 tt-w0" points="251.85,332.88 361.27,284.16"/>
+  <polyline class="tt-ln tt-s1 tt-w0" points="361.27,284.16 308.54,171.08"/>
+  <polyline class="tt-ln tt-s2 tt-w0" points="308.54,171.08 191.92,227.97"/>
+  <polyline class="tt-ln tt-s3 tt-w0" points="191.92,227.97 253.09,348.03"/>
+  <polyline class="tt-ln tt-s0 tt-w0" points="253.09,348.03 376.47,282.42"/>
+  <polyline class="tt-ln tt-s1 tt-w0" points="376.47,282.42 306.31,155.84"/>
+  <polyline class="tt-ln tt-s2 tt-w0" points="306.31,155.84 176.64,230.7"/>
+  <polyline class="tt-ln tt-s3 tt-w0" points="176.64,230.7 256.33,363.32"/>
+  <polyline class="tt-ln tt-s0 tt-w0" points="256.33,363.32 391.76,278.69"/>
+  <polyline class="tt-ln tt-s1 tt-w0" points="391.76,278.69 302.06,140.56"/>
+  <polyline class="tt-ln tt-s2 tt-w0" points="302.06,140.56 161.39,235.45"/>
+  <polyline class="tt-ln tt-s3 tt-w0" points="161.39,235.45 261.58,378.53"/>
+  <polyline class="tt-ln tt-s0 tt-w0" points="261.58,378.53 406.93,272.93"/>
+  <polyline class="tt-ln tt-s1 tt-w0" points="406.93,272.93 295.8,125.45"/>
+  <polyline class="tt-ln tt-s2 tt-w0" points="295.8,125.45 146.36,242.21"/>
+  <polyline class="tt-ln tt-s3 tt-w0" points="146.36,242.21 268.85,393.48"/>
+  <polyline class="tt-ln tt-s0 tt-w0" points="268.85,393.48 421.77,265.16"/>
+  <polyline class="tt-ln tt-s1 tt-w0" points="421.77,265.16 287.53,110.73"/>
+  <polyline class="tt-ln tt-s2 tt-w0" points="287.53,110.73 131.76,250.99"/>
+  <polyline class="tt-ln tt-s3 tt-w0" points="131.76,250.99 278.12,407.93"/>
+  <polyline class="tt-ln tt-s0 tt-w0" points="278.12,407.93 436.08,255.39"/>
+  <polyline class="tt-ln tt-s1 tt-w0" points="436.08,255.39 277.27,96.59"/>
+  <polyline class="tt-ln tt-s2 tt-w0" points="277.27,96.59 117.8,261.73"/>
+  <polyline class="tt-ln tt-s3 tt-w0" points="117.8,261.73 289.35,421.7"/>
+  <polyline class="tt-ln tt-s0 tt-w0" points="289.35,421.7 449.64,243.68"/>
+  <polyline class="tt-ln tt-s1 tt-w0" points="449.64,243.68 265.08,83.24"/>
+  <polyline class="tt-ln tt-s2 tt-w0" points="265.08,83.24 104.68,274.4"/>
+  <polyline class="tt-ln tt-s3 tt-w0" points="104.68,274.4 302.49,434.58"/>
+  <polyline class="tt-ln tt-s0 tt-w0" points="302.49,434.58 462.26,230.07"/>
+  <polyline class="tt-ln tt-s1 tt-w0" points="462.26,230.07 251.02,70.89"/>
+  <polyline class="tt-ln tt-s2 tt-w0" points="251.02,70.89 92.61,288.92"/>
+  <polyline class="tt-ln tt-s3 tt-w0" points="92.61,288.92 317.46,446.36"/>
+  <polyline class="tt-ln tt-s0 tt-w0" points="317.46,446.36 473.74,214.66"/>
+  <polyline class="tt-ln tt-s1 tt-w0" points="473.74,214.66 235.16,59.73"/>
+  <polyline class="tt-ln tt-s2 tt-w0" points="235.16,59.73 81.77,305.2"/>
+  <polyline class="tt-ln tt-s3 tt-w0" points="81.77,305.2 334.17,456.86"/>
+  <polyline class="tt-ln tt-s0 tt-w0" points="334.17,456.86 483.89,197.53"/>
+  <polyline class="tt-ln tt-s1 tt-w0" points="483.89,197.53 217.62,49.94"/>
+  <polyline class="tt-ln tt-s2 tt-w0" points="217.62,49.94 72.36,323.15"/>
+  <polyline class="tt-ln tt-s3 tt-w0" points="72.36,323.15 352.5,465.89"/>
+  <polyline class="tt-ln tt-s0 tt-w0" points="352.5,465.89 492.52,178.81"/>
+  <polyline class="tt-ln tt-s1 tt-w0" points="492.52,178.81 198.52,41.71"/>
+  <polyline class="tt-ln tt-s2 tt-w0" points="198.52,41.71 64.55,342.62"/>
+  <polyline class="tt-ln tt-s3 tt-w0" points="64.55,342.62 372.34,473.27"/>
+  <polyline class="tt-ln tt-s0 tt-w0" points="372.34,473.27 499.47,158.62"/>
+  <polyline class="tt-ln tt-s1 tt-w0" points="499.47,158.62 177.98,35.21"/>
+  <polyline class="tt-ln tt-s2 tt-w0" points="177.98,35.21 58.5,363.49"/>
+  <polyline class="tt-ln tt-s3 tt-w0" points="58.5,363.49 393.54,478.85"/>
+  <polyline class="tt-ln tt-s0 tt-w0" points="393.54,478.85 504.58,137.11"/>
+  <polyline class="tt-ln tt-s1 tt-w0" points="504.58,137.11 156.17,30.59"/>
+  <polyline class="tt-ln tt-s2 tt-w0" points="156.17,30.59 54.38,385.6"/>
+  <polyline class="tt-ln tt-s3 tt-w0" points="54.38,385.6 415.93,482.47"/>
+  <polyline class="tt-ln tt-s0 tt-w0" points="415.93,482.47 507.69,114.45"/>
+  <polyline class="tt-ln tt-s1 tt-w0" points="507.69,114.45 133.25,28"/>
+  <polyline class="tt-ln tt-s2 tt-w0" points="133.25,28 52.31,408.77"/>
+  <polyline class="tt-ln tt-s3 tt-w0" points="52.31,408.77 439.34,484"/>
+</svg>

@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 240" width="1152" height="240" role="img" aria-labelledby="ders1-even-odd-t ders1-even-odd-d">
+  <title id="ders1-even-odd-t">% ile çift ve tek</title>
+  <desc id="ders1-even-odd-d">İki satır. 18 % 2: 18 nokta (çivit mavisi) dokuz çifte ayrılmış, her çiftin altında bir köşeli çizgi; ok sonuca gidiyor: 0 (int, turuncu), çift. 17 % 2: 17 nokta sekiz çifte ayrılmış, bir nokta artıyor ve açık mavi, çivit mavisi çerçeveli bir şeritte; ok sonuca gidiyor: 1 (int, turuncu), tek.</desc>
+  <!-- source: print(18 % 2) -&gt; 0; print(17 % 2) -&gt; 1 (Python 3.14.8, 2026-10-10) -->
+  <defs>
+    <marker id="ders1-even-odd-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
+    <style>
+/* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
+.dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
+.dg .bg{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF)}
+.dg .tx,.dg .lb,.dg .ti,.dg .cd,.dg .cd24{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .tx{font-size:24px;font-weight:400}
+.dg .lb{font-size:24px;font-weight:600}
+.dg .ti{font-size:28px;font-weight:700}
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-family:"JetBrains Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-weight:500}
+.dg .cd{font-size:28px}
+.dg .cd24{font-size:24px}
+.dg .ty{font-size:24px;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .nm{font-size:28px;font-weight:600;fill:#FFFFFF;fill:var(--d-on-name,#FFFFFF)}
+.dg .src{font-size:18px;font-weight:400;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .sub{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .okt{fill:#0D6385;fill:var(--d-ok,#0D6385);font-weight:600}
+.dg .errt{fill:#C21C20;fill:var(--d-err,#C21C20);font-weight:600}
+.dg .b7{font-weight:700}
+.dg .pre{white-space:pre}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .boxm{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .boxhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .blk{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2.5}
+.dg .frame{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .local{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .tmpl{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .cell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellh{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .name{fill:#181C3E;fill:var(--d-name,#181C3E)}
+.dg .soft{fill:#F3F4F8;fill:var(--d-surface,#F3F4F8)}
+.dg .outp{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .tint{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .hl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3)}
+.dg .emph{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .errbox{fill:#FCEDEE;fill:var(--d-err-bg,#FCEDEE);stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .errdash{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .okbox{fill:#E9F6FA;fill:var(--d-ok-bg,#E9F6FA);stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .key{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .dot{fill:#3B4595;fill:var(--d-brand,#3B4595)}
+.dg .dot0{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .ar,.dg .ld,.dg .axis{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E)}
+.dg .ar,.dg .axis{stroke-width:2.5}
+.dg .ld{stroke-width:2}
+.dg .ar-m{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .ar-old{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .ar-ok{fill:none;stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .ar-err{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .sep{fill:none;stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .dash{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2;stroke-dasharray:8 6}
+.dg .ah{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .ah-m{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .ah-ok{fill:#0D6385;fill:var(--d-ok,#0D6385)}
+.dg .ah-err{fill:#C21C20;fill:var(--d-err,#C21C20)}
+.dg .co{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .co-t{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF);font-size:24px;font-weight:700;text-anchor:middle}
+.dg .sec{stroke:#3B4595;stroke:var(--d-second,#3B4595)}
+/* dg v4 type renkleri · authoring/DIAGRAMS.md §10'dan aynen kopyalanır (dg v3 bloğundan sonra) */
+.dg rect.t-int,.dg path.t-int,.dg circle.t-int{fill:#F2CEB3;fill:var(--t-int-bg,#F2CEB3);stroke:#854B00;stroke:var(--t-int,#854B00)}
+.dg text.t-int,.dg tspan.t-int{fill:#613109;fill:var(--t-int-tx,#613109)}
+.dg rect.t-float,.dg path.t-float,.dg circle.t-float{fill:#FFF1C6;fill:var(--t-float-bg,#FFF1C6);stroke:#9F7000;stroke:var(--t-float,#9F7000)}
+.dg text.t-float,.dg tspan.t-float{fill:#5D420E;fill:var(--t-float-tx,#5D420E)}
+.dg rect.t-bool,.dg path.t-bool,.dg circle.t-bool{fill:#C4E9E1;fill:var(--t-bool-bg,#C4E9E1);stroke:#0E7A6D;stroke:var(--t-bool,#0E7A6D)}
+.dg text.t-bool,.dg tspan.t-bool{fill:#0A473F;fill:var(--t-bool-tx,#0A473F)}
+.dg rect.t-str,.dg path.t-str,.dg circle.t-str{fill:#D9F6DD;fill:var(--t-str-bg,#D9F6DD);stroke:#296A3B;stroke:var(--t-str,#296A3B)}
+.dg text.t-str,.dg tspan.t-str{fill:#1A4B28;fill:var(--t-str-tx,#1A4B28)}
+.dg rect.t-none,.dg path.t-none,.dg circle.t-none{fill:#F6F3EF;fill:var(--t-none-bg,#F6F3EF);stroke:#534C45;stroke:var(--t-none,#534C45)}
+.dg text.t-none,.dg tspan.t-none{fill:#413C38;fill:var(--t-none-tx,#413C38)}
+.dg rect.t-list,.dg path.t-list,.dg circle.t-list{fill:#F3C8DB;fill:var(--t-list-bg,#F3C8DB);stroke:#8A2B60;stroke:var(--t-list,#8A2B60)}
+.dg text.t-list,.dg tspan.t-list{fill:#651E45;fill:var(--t-list-tx,#651E45)}
+.dg rect.t-tuple,.dg path.t-tuple,.dg circle.t-tuple{fill:#E3EAF2;fill:var(--t-tuple-bg,#E3EAF2);stroke:#4A6378;stroke:var(--t-tuple,#4A6378)}
+.dg text.t-tuple,.dg tspan.t-tuple{fill:#2C3E4F;fill:var(--t-tuple-tx,#2C3E4F)}
+.dg rect.t-dict,.dg path.t-dict,.dg circle.t-dict{fill:#DBCEC4;fill:var(--t-dict-bg,#DBCEC4);stroke:#4F2611;stroke:var(--t-dict,#4F2611)}
+.dg text.t-dict,.dg tspan.t-dict{fill:#4C2817;fill:var(--t-dict-tx,#4C2817)}
+.dg rect.t-set,.dg path.t-set,.dg circle.t-set{fill:#F2F8D6;fill:var(--t-set-bg,#F2F8D6);stroke:#747C42;stroke:var(--t-set,#747C42)}
+.dg text.t-set,.dg tspan.t-set{fill:#3F4418;fill:var(--t-set-tx,#3F4418)}
+.dg rect.boxhl,.dg path.boxhl,.dg rect.cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595)}
+/* kod PyCharm gibi: ligature yok */
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-variant-ligatures:none}
+    </style>
+  </defs>
+  <rect class="bg" width="1152" height="240"/>
+  <circle class="dot" cx="170" cy="68" r="10"/>
+  <circle class="dot" cx="196" cy="68" r="10"/>
+  <path class="ld" d="M158,84 V92 H208 V84"/>
+  <circle class="dot" cx="232" cy="68" r="10"/>
+  <circle class="dot" cx="258" cy="68" r="10"/>
+  <path class="ld" d="M220,84 V92 H270 V84"/>
+  <circle class="dot" cx="294" cy="68" r="10"/>
+  <circle class="dot" cx="320" cy="68" r="10"/>
+  <path class="ld" d="M282,84 V92 H332 V84"/>
+  <circle class="dot" cx="356" cy="68" r="10"/>
+  <circle class="dot" cx="382" cy="68" r="10"/>
+  <path class="ld" d="M344,84 V92 H394 V84"/>
+  <circle class="dot" cx="418" cy="68" r="10"/>
+  <circle class="dot" cx="444" cy="68" r="10"/>
+  <path class="ld" d="M406,84 V92 H456 V84"/>
+  <circle class="dot" cx="480" cy="68" r="10"/>
+  <circle class="dot" cx="506" cy="68" r="10"/>
+  <path class="ld" d="M468,84 V92 H518 V84"/>
+  <circle class="dot" cx="542" cy="68" r="10"/>
+  <circle class="dot" cx="568" cy="68" r="10"/>
+  <path class="ld" d="M530,84 V92 H580 V84"/>
+  <circle class="dot" cx="604" cy="68" r="10"/>
+  <circle class="dot" cx="630" cy="68" r="10"/>
+  <path class="ld" d="M592,84 V92 H642 V84"/>
+  <circle class="dot" cx="666" cy="68" r="10"/>
+  <circle class="dot" cx="692" cy="68" r="10"/>
+  <path class="ld" d="M654,84 V92 H704 V84"/>
+  <text class="cd24" x="20" y="76">18 % 2</text>
+  <path class="ar" d="M740,68 H837" marker-end="url(#ders1-even-odd-ah)"/>
+  <rect class="box t-int" x="840" y="40" width="72" height="56" rx="6"/>
+  <text class="cd mid t-int" x="876" y="78">0</text>
+  <text class="lb okt" x="930" y="76">çift</text>
+  <path class="sep" d="M2,120 H1150"/>
+  <circle class="dot" cx="170" cy="176" r="10"/>
+  <circle class="dot" cx="196" cy="176" r="10"/>
+  <path class="ld" d="M158,192 V200 H208 V192"/>
+  <circle class="dot" cx="232" cy="176" r="10"/>
+  <circle class="dot" cx="258" cy="176" r="10"/>
+  <path class="ld" d="M220,192 V200 H270 V192"/>
+  <circle class="dot" cx="294" cy="176" r="10"/>
+  <circle class="dot" cx="320" cy="176" r="10"/>
+  <path class="ld" d="M282,192 V200 H332 V192"/>
+  <circle class="dot" cx="356" cy="176" r="10"/>
+  <circle class="dot" cx="382" cy="176" r="10"/>
+  <path class="ld" d="M344,192 V200 H394 V192"/>
+  <circle class="dot" cx="418" cy="176" r="10"/>
+  <circle class="dot" cx="444" cy="176" r="10"/>
+  <path class="ld" d="M406,192 V200 H456 V192"/>
+  <circle class="dot" cx="480" cy="176" r="10"/>
+  <circle class="dot" cx="506" cy="176" r="10"/>
+  <path class="ld" d="M468,192 V200 H518 V192"/>
+  <circle class="dot" cx="542" cy="176" r="10"/>
+  <circle class="dot" cx="568" cy="176" r="10"/>
+  <path class="ld" d="M530,192 V200 H580 V192"/>
+  <circle class="dot" cx="604" cy="176" r="10"/>
+  <circle class="dot" cx="630" cy="176" r="10"/>
+  <path class="ld" d="M592,192 V200 H642 V192"/>
+  <rect class="boxhl" x="648" y="158" width="36" height="36" rx="10"/>
+  <circle class="dot" cx="666" cy="176" r="10"/>
+  <text class="cd24" x="20" y="184">17 % 2</text>
+  <path class="ar" d="M740,176 H837" marker-end="url(#ders1-even-odd-ah)"/>
+  <rect class="box t-int" x="840" y="148" width="72" height="56" rx="6"/>
+  <text class="cd mid t-int" x="876" y="186">1</text>
+  <text class="lb" x="930" y="184">tek</text>
+</svg>

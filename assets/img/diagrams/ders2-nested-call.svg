@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="dg nc" viewBox="0 0 1152 340" width="1152" height="340" role="img" aria-labelledby="ders2-nested-call-t ders2-nested-call-d" data-focus="int">
+  <title id="ders2-nested-call-t">input() ve int(): içten dışa</title>
+  <desc id="ders2-nested-call-d">İç içe çağrının içten dışa çalışması. data-focus int durumu: üstte credits = int(input("Kredi: ")) satırı ve altında köşeli ayraçlar, üç numaralı adım. 1: input("Kredi: ") kısmının üstünde, "4" verir yazısı ve "4" (str, yeşil). 2: int(...) kısmının altında 4 (int, turuncu), yanında 4 verir; bu kutu açık mavi, çivit mavisi çerçeveli bir bantta. 3: credits = kısmının altında lacivert credits isim etiketi, oku 4 (int, turuncu) kutusunu gösterir. Altta print(credits * 2) satırı ve Çıktı panelinde Kredi: 4 (4 petrol mavisi, kullanıcının yazdığı) ve 8. data-focus float durumu aynı düzende: coefficient = float(input("Katsayı: ")); 1: "2.5" (str, yeşil); 2: 2.5 (float, hardal sarısı) bantta; 3: lacivert coefficient etiketi 2.5'i gösterir; altta print(coefficient * 4), Çıktı: Katsayı: 2.5 ve 10.0.</desc>
+  <!-- source: ders2-A.md S52 and S54, stdin 4 and 2.5: credits = int(input("Kredi: ")); print(credits * 2) -&gt; 'Kredi: ' then 8; coefficient = float(input("Katsayı: ")); print(coefficient * 4) -&gt; 'Katsayı: ' then 10.0 (Python 3.14.8, 2026-10-11) -->
+  <defs>
+    <marker id="ders2-nested-call-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
+    <style>
+/* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
+.dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
+.dg .bg{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF)}
+.dg .tx,.dg .lb,.dg .ti,.dg .cd,.dg .cd24{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .tx{font-size:24px;font-weight:400}
+.dg .lb{font-size:24px;font-weight:600}
+.dg .ti{font-size:28px;font-weight:700}
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-family:"JetBrains Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-weight:500}
+.dg .cd{font-size:28px}
+.dg .cd24{font-size:24px}
+.dg .ty{font-size:24px;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .nm{font-size:28px;font-weight:600;fill:#FFFFFF;fill:var(--d-on-name,#FFFFFF)}
+.dg .src{font-size:18px;font-weight:400;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .sub{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .okt{fill:#0D6385;fill:var(--d-ok,#0D6385);font-weight:600}
+.dg .errt{fill:#C21C20;fill:var(--d-err,#C21C20);font-weight:600}
+.dg .b7{font-weight:700}
+.dg .pre{white-space:pre}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .boxm{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .boxhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .blk{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2.5}
+.dg .frame{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .local{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .tmpl{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .cell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellh{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .name{fill:#181C3E;fill:var(--d-name,#181C3E)}
+.dg .soft{fill:#F3F4F8;fill:var(--d-surface,#F3F4F8)}
+.dg .outp{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .tint{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .hl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3)}
+.dg .emph{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .errbox{fill:#FCEDEE;fill:var(--d-err-bg,#FCEDEE);stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .errdash{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .okbox{fill:#E9F6FA;fill:var(--d-ok-bg,#E9F6FA);stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .key{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .dot{fill:#3B4595;fill:var(--d-brand,#3B4595)}
+.dg .dot0{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .ar,.dg .ld,.dg .axis{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E)}
+.dg .ar,.dg .axis{stroke-width:2.5}
+.dg .ld{stroke-width:2}
+.dg .ar-m{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .ar-old{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .ar-ok{fill:none;stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .ar-err{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .sep{fill:none;stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .dash{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2;stroke-dasharray:8 6}
+.dg .ah{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .ah-m{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .ah-ok{fill:#0D6385;fill:var(--d-ok,#0D6385)}
+.dg .ah-err{fill:#C21C20;fill:var(--d-err,#C21C20)}
+.dg .co{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .co-t{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF);font-size:24px;font-weight:700;text-anchor:middle}
+.dg .sec{stroke:#3B4595;stroke:var(--d-second,#3B4595)}
+/* dg v4 type renkleri · authoring/DIAGRAMS.md §10'dan aynen kopyalanır (dg v3 bloğundan sonra) */
+.dg rect.t-int,.dg path.t-int,.dg circle.t-int{fill:#F2CEB3;fill:var(--t-int-bg,#F2CEB3);stroke:#854B00;stroke:var(--t-int,#854B00)}
+.dg text.t-int,.dg tspan.t-int{fill:#613109;fill:var(--t-int-tx,#613109)}
+.dg rect.t-float,.dg path.t-float,.dg circle.t-float{fill:#FFF1C6;fill:var(--t-float-bg,#FFF1C6);stroke:#9F7000;stroke:var(--t-float,#9F7000)}
+.dg text.t-float,.dg tspan.t-float{fill:#5D420E;fill:var(--t-float-tx,#5D420E)}
+.dg rect.t-bool,.dg path.t-bool,.dg circle.t-bool{fill:#C4E9E1;fill:var(--t-bool-bg,#C4E9E1);stroke:#0E7A6D;stroke:var(--t-bool,#0E7A6D)}
+.dg text.t-bool,.dg tspan.t-bool{fill:#0A473F;fill:var(--t-bool-tx,#0A473F)}
+.dg rect.t-str,.dg path.t-str,.dg circle.t-str{fill:#D9F6DD;fill:var(--t-str-bg,#D9F6DD);stroke:#296A3B;stroke:var(--t-str,#296A3B)}
+.dg text.t-str,.dg tspan.t-str{fill:#1A4B28;fill:var(--t-str-tx,#1A4B28)}
+.dg rect.t-none,.dg path.t-none,.dg circle.t-none{fill:#F6F3EF;fill:var(--t-none-bg,#F6F3EF);stroke:#534C45;stroke:var(--t-none,#534C45)}
+.dg text.t-none,.dg tspan.t-none{fill:#413C38;fill:var(--t-none-tx,#413C38)}
+.dg rect.t-list,.dg path.t-list,.dg circle.t-list{fill:#F3C8DB;fill:var(--t-list-bg,#F3C8DB);stroke:#8A2B60;stroke:var(--t-list,#8A2B60)}
+.dg text.t-list,.dg tspan.t-list{fill:#651E45;fill:var(--t-list-tx,#651E45)}
+.dg rect.t-tuple,.dg path.t-tuple,.dg circle.t-tuple{fill:#E3EAF2;fill:var(--t-tuple-bg,#E3EAF2);stroke:#4A6378;stroke:var(--t-tuple,#4A6378)}
+.dg text.t-tuple,.dg tspan.t-tuple{fill:#2C3E4F;fill:var(--t-tuple-tx,#2C3E4F)}
+.dg rect.t-dict,.dg path.t-dict,.dg circle.t-dict{fill:#DBCEC4;fill:var(--t-dict-bg,#DBCEC4);stroke:#4F2611;stroke:var(--t-dict,#4F2611)}
+.dg text.t-dict,.dg tspan.t-dict{fill:#4C2817;fill:var(--t-dict-tx,#4C2817)}
+.dg rect.t-set,.dg path.t-set,.dg circle.t-set{fill:#F2F8D6;fill:var(--t-set-bg,#F2F8D6);stroke:#747C42;stroke:var(--t-set,#747C42)}
+.dg text.t-set,.dg tspan.t-set{fill:#3F4418;fill:var(--t-set-tx,#3F4418)}
+.dg rect.boxhl,.dg path.boxhl,.dg rect.cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595)}
+/* ders2-nested-call: data-focus="int" (S52, credits = int(input(...))) ve "float" (S54, coefficient = float(input(...))); her durum kendi grubunu gösterir */
+.nc .nc-float{display:none}
+.nc[data-focus="float"] .nc-int{display:none}
+.nc[data-focus="float"] .nc-float{display:inline}
+    </style>
+  </defs>
+  <rect class="bg" width="1152" height="340"/>
+  <g class="nc-int">
+  <path class="ld" d="M277.2,84 V74 H542.0 V84"/>
+  <text class="cd" x="40" y="112">credits = int(input("Kredi: "))</text>
+  <path class="ld" d="M42.0,122 V132 H189.2 V122"/>
+  <path class="ld" d="M210.0,122 V132 H558.8 V122"/>
+  <circle class="co" cx="259.6" cy="36" r="18"/>
+  <text class="co-t" x="259.6" y="44">1</text>
+  <text class="lb end" x="401.6" y="44">"4" verir</text>
+  <rect class="box t-str" x="415.6" y="8" width="82" height="56" rx="6"/>
+  <text class="cd mid t-str" x="456.6" y="46">"4"</text>
+  <text class="ty t-str" x="509.6" y="44">str</text>
+  <circle class="co" cx="384.4" cy="158" r="18"/>
+  <text class="co-t" x="384.4" y="166">2</text>
+  <rect class="boxhl" x="342.4" y="184" width="84" height="68" rx="10"/>
+  <rect class="box t-int" x="348.4" y="190" width="72" height="56" rx="6"/>
+  <text class="cd mid t-int" x="384.4" y="228">4</text>
+  <text class="ty t-int" x="440.4" y="226">int</text>
+  <text class="lb" x="507.6" y="226">4 verir</text>
+  <circle class="co" cx="115.6" cy="158" r="18"/>
+  <text class="co-t" x="115.6" y="166">3</text>
+  <rect class="name" x="40" y="190" width="150" height="56" rx="6"/>
+  <text class="nm mid" x="115.0" y="228">credits</text>
+  <path class="ar" d="M190,218 H345.4" marker-end="url(#ders2-nested-call-ah)"/>
+  <text class="cd24" x="40" y="300">print(credits * 2)</text>
+  <text class="lb sub" x="560" y="300">Çıktı</text>
+  <rect class="outp" x="640" y="264" width="300" height="72" rx="4"/>
+  <text class="cd24" x="656" y="292">Kredi: <tspan class="okt">4</tspan></text>
+  <text class="cd24" x="656" y="324">8</text>
+  </g>
+  <g class="nc-float">
+  <path class="ld" d="M378.0,84 V74 H676.4 V84"/>
+  <text class="cd" x="40" y="112">coefficient = float(input("Katsayı: "))</text>
+  <path class="ld" d="M42.0,122 V132 H256.4 V122"/>
+  <path class="ld" d="M277.2,122 V132 H693.2 V122"/>
+  <circle class="co" cx="377.2" cy="36" r="18"/>
+  <text class="co-t" x="377.2" y="44">1</text>
+  <text class="lb end" x="519.2" y="44">"2.5" verir</text>
+  <rect class="box t-str" x="533.2" y="8" width="116" height="56" rx="6"/>
+  <text class="cd mid t-str" x="591.2" y="46">"2.5"</text>
+  <text class="ty t-str" x="661.2" y="44">str</text>
+  <circle class="co" cx="485.2" cy="158" r="18"/>
+  <text class="co-t" x="485.2" y="166">2</text>
+  <rect class="boxhl" x="438.2" y="184" width="94" height="68" rx="10"/>
+  <rect class="box t-float" x="444.2" y="190" width="82" height="56" rx="6"/>
+  <text class="cd mid t-float" x="485.2" y="228">2.5</text>
+  <text class="ty t-float" x="546.2" y="226">float</text>
+  <text class="lb" x="642.2" y="226">2.5 verir</text>
+  <circle class="co" cx="149.2" cy="158" r="18"/>
+  <text class="co-t" x="149.2" y="166">3</text>
+  <rect class="name" x="40" y="190" width="217" height="56" rx="6"/>
+  <text class="nm mid" x="148.5" y="228">coefficient</text>
+  <path class="ar" d="M257,218 H441.2" marker-end="url(#ders2-nested-call-ah)"/>
+  <text class="cd24" x="40" y="300">print(coefficient * 4)</text>
+  <text class="lb sub" x="560" y="300">Çıktı</text>
+  <rect class="outp" x="640" y="264" width="300" height="72" rx="4"/>
+  <text class="cd24" x="656" y="292">Katsayı: <tspan class="okt">2.5</tspan></text>
+  <text class="cd24" x="656" y="324">10.0</text>
+  </g>
+</svg>

@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kurulum · Introduction to Python · IEEE Hacettepe</title>
+<meta name="description" content="Introduction to Python için Windows ve macOS'ta Python 3.14 ve PyCharm kurulumu, JetBrains öğrenci lisansı, python-kurs projesi, kurulum testi ve sık karşılaşılan sorunlar.">
+<link rel="preload" href="assets/fonts/atkinson-hyperlegible-next-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/atkinson-hyperlegible-next-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/jetbrains-mono-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/latin-modern-roman-10-bold.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<!-- shell:header (tools/build_pages.py) -->
+<a class="skip" href="#icerik">İçeriğe geç</a>
+<header class="site-head">
+  <div class="masthead is-sub" style="--mast-sky:#2097C3">
+    <picture class="mast-art">
+      <source media="(max-width: 699px)" srcset="assets/img/site/hero-paint-900.svg">
+      <img src="assets/img/site/hero-paint-1920.svg" width="1920" height="640" alt="Elle çizilmiş bir piton yılanı, ekranında print(&quot;Merhaba&quot;) ve çıktısı yazan bir dizüstü bilgisayara sarılmış." fetchpriority="high">
+    </picture>
+    <nav class="site-nav" aria-label="Ana menü">
+      <div class="wrap">
+        <ul>
+          <li><a href="index.html" aria-label="Ana sayfa">ANA SAYFA</a></li>
+          <li><a href="kurulum.html" aria-current="page" aria-label="Kurulum">KURULUM</a></li>
+          <li><a href="kaynaklar.html" aria-label="Ek kaynaklar">EK KAYNAKLAR</a></li>
+          <li><a href="tarihce.html" aria-label="Tarihçe">TARİHÇE</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="mast-title wrap">
+      <p class="mast-course"><a href="index.html" lang="en">Introduction to Python</a></p>
+      <h1>Kurulum</h1>
+    </div>
+  </div>
+  <div class="brand-strip">
+    <div class="wrap">
+      <a class="lockup" href="index.html"><img src="assets/brand/ieee-hacettepe-lockup-renkli.png" alt="IEEE Hacettepe University Student Branch" width="413" height="48"></a>
+    </div>
+  </div>
+</header>
+<!-- /shell:header -->
+
+<main id="icerik" class="wrap">
+
+  <p class="lead">Bu beş adımın sonunda Python 3.14 ve PyCharm bilgisayarınızda kurulu ve çalışır durumda olacak.</p>
+  <p>Adımları ilk dersten önce, derse getireceğiniz dizüstü bilgisayarda yapın. 2. adımdaki öğrenci lisansının onayı <span class="nowrap">e-postayla</span> geliyor, o adıma erken başlayın.</p>
+
+  <fieldset class="os-filter">
+    <legend>İşletim sisteminiz</legend>
+    <label><input type="radio" name="os" id="os-win"> Windows</label>
+    <label><input type="radio" name="os" id="os-mac"> macOS</label>
+    <label><input type="radio" name="os" id="os-both" checked> İkisi de</label>
+  </fieldset>
+
+  <h2 id="gereksinimler">Gereksinimler</h2>
+  <table class="data">
+    <thead><tr><th scope="col"></th><th scope="col">Windows</th><th scope="col">macOS</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">İşletim sistemi</th><td>Windows 10 ya&nbsp;da&nbsp;11</td><td>macOS 15 ya&nbsp;da&nbsp;26</td></tr>
+      <tr><th scope="row">İşlemci</th><td>x64 ya&nbsp;da&nbsp;ARM64</td><td>Apple Silicon ya&nbsp;da&nbsp;Intel</td></tr>
+      <tr><th scope="row">RAM</th><td colspan="2">En az 8 GB</td></tr>
+      <tr><th scope="row">Boş disk alanı</th><td colspan="2">10 GB</td></tr>
+    </tbody>
+  </table>
+  <!-- TODO: JetBrains macOS 27'yi listeye eklediğinde tabloyu güncelleyin (2026-10-10'da sayfada 15 ve 26 yazıyordu). -->
+  <p>Değerleri JetBrains'in <a href="https://www.jetbrains.com/help/pycharm/installation-guide.html#requirements">PyCharm sistem gereksinimleri</a> sayfasından aldım. PyCharm Chromebook, iPad ve Android tabletlerde çalışmıyor. Elinizde yalnızca böyle bir cihaz varsa ilk dersten önce dersin WhatsApp grubuna yazın.</p>
+
+  <section class="step" id="adim-1">
+    <h2><span class="step-n">1.</span> Python 3.14</h2>
+    <p>Python 3.15, 9 Ekim 2026'da çıktı. Araçların yeni sürüme uyması zaman aldığı için derste 3.14 kullanacağız. Bilgisayarınızda 3.13 ya da 3.15 kuruluysa onunla da devam edebilirsiniz.</p>
+    <div class="os-split">
+      <div class="only-win">
+        <p class="os-name">Windows</p>
+        <ol class="actions">
+          <li><a href="https://www.python.org/downloads/release/python-3148/">Python 3.14.8 sürüm sayfasını</a> açın.</li>
+          <li>Sayfanın sonundaki <span class="ui" lang="en">Files</span> tablosunda <span class="ui" lang="en">Windows installer (64-bit)</span> bağlantısına tıklayın. Sayfanın üstündeki <span class="ui" lang="en">Download Python install manager</span> düğmesi başka bir araç indirir, onu kullanmayacağız.</li>
+          <li>İşlemciniz Snapdragon ise bunun yerine <span class="ui" lang="en">Windows installer (ARM64)</span> satırını seçin. İşlemcinin adı <span class="ui">Ayarlar › Sistem › Hakkında</span> ekranında yazar.</li>
+          <li>İnen <code>python-3.14.8-amd64.exe</code> ya da <code>python-3.14.8-arm64.exe</code> dosyasını çalıştırın.</li>
+          <li>İlk ekranın altındaki <span class="ui" lang="en">Add python.exe to PATH</span> kutusunu işaretleyin. Bu kutu işaretliyse <code>python</code> komutu Komut İstemi'nde de çalışır.</li>
+          <li><span class="ui" lang="en">Install Now</span>'a tıklayın. <span class="ui" lang="en">Setup was successful</span> yazısı çıkınca <span class="ui" lang="en">Close</span> ile kapatın.</li>
+          <li>Başlat menüsünde <code>cmd</code> yazıp Komut İstemi'ni açın, <code class="nowrap">python --version</code> yazıp <kbd>Enter</kbd>'a basın. <code>Python 3.14.8</code> yazmalı.</li>
+        </ol>
+      </div>
+      <div class="only-mac">
+        <p class="os-name">macOS</p>
+        <ol class="actions">
+          <li><a href="https://www.python.org/downloads/release/python-3148/">Python 3.14.8 sürüm sayfasını</a> açın.</li>
+          <li><span class="ui" lang="en">Download macOS installer</span> bağlantısına tıklayın. Aynı dosya sayfanın sonundaki <span class="ui" lang="en">Files</span> tablosunda da var.</li>
+          <li>İnen <code>python-3.14.8-macos11.pkg</code> dosyasını açıp kurulum penceresindeki adımları geçin. Mac'iniz parolanızı sorabilir.</li>
+          <li><span class="nowrap"><kbd>Cmd</kbd> + <kbd>Space</kbd></span> ile Spotlight'ı açın, <code>Terminal</code> yazıp Terminal'i açın.</li>
+          <li><code class="nowrap">python3 --version</code> yazıp <kbd>Enter</kbd>'a basın. <code>Python 3.14.8</code> yazmalı.</li>
+        </ol>
+      </div>
+    </div>
+    <p>Komutun adı Windows'ta <code>python</code>, macOS'ta <code>python3</code>. Derste kodu PyCharm'da çalıştıracağız, bu komutu yalnızca kurulumu kontrol etmek için kullandık.</p>
+  </section>
+
+  <section class="step" id="adim-2">
+    <h2><span class="step-n">2.</span> PyCharm ve öğrenci lisansı</h2>
+    <div class="os-split">
+      <div class="only-win">
+        <p class="os-name">Windows</p>
+        <ol class="actions">
+          <li><a href="https://www.jetbrains.com/pycharm/download/">PyCharm indirme sayfasından</a> Windows için <code>.exe</code> dosyasını indirin. Snapdragon işlemcili bilgisayarlarda ARM64 sürümünü seçin.</li>
+          <li>Dosyayı çalıştırıp kurulum sihirbazını <span class="ui" lang="en">Next</span> ile geçin. Seçenek kutularını işaretlemeniz gerekmiyor.</li>
+          <li>Kurulum bitince PyCharm'ı Başlat menüsünden açın.</li>
+        </ol>
+      </div>
+      <div class="only-mac">
+        <p class="os-name">macOS</p>
+        <ol class="actions">
+          <li><a href="https://www.jetbrains.com/pycharm/download/">PyCharm indirme sayfasından</a> macOS için <code>.dmg</code> dosyasını indirin. Apple Silicon ve Intel için ayrı dosyalar var. Apple menüsü › <span class="ui">Bu Mac Hakkında</span> ekranında <span class="ui">Çip</span> satırı varsa Apple Silicon, <span class="ui">İşlemci</span> satırında Intel yazıyorsa Intel sürümünü seçin.</li>
+          <li><code>.dmg</code> dosyasını açıp PyCharm'ı <span class="ui">Uygulamalar</span> klasörüne sürükleyin.</li>
+          <li>PyCharm'ı Uygulamalar klasöründen ya da Spotlight'tan açın.</li>
+        </ol>
+      </div>
+    </div>
+    <p>PyCharm ilk açılışta Pro sürümün denemesini başlatıyor, derste kullanacağımız her şey deneme bitince de ücretsiz çalışıyor.</p>
+    <h3 id="lisans">Öğrenci lisansı</h3>
+    <p>JetBrains, Hacettepe <span class="nowrap">e-posta</span> adresiyle başvuran öğrencilere ücretsiz lisans veriyor, bu lisansla Pro özellikler de açık kalıyor.</p>
+    <ol class="actions">
+      <li>JetBrains'in <a href="https://www.jetbrains.com/shop/eform/students">öğrenci lisansı başvuru formunu</a> açın.</li>
+      <li>Formu <code>@hacettepe.edu.tr</code> uzantılı <span class="nowrap">e-posta</span> adresinizle doldurup gönderin.</li>
+      <li>Bu adrese gelen JetBrains <span class="nowrap">e-postasındaki</span> bağlantıyı açın. Lisans koşullarını okuyup kabul edin, sonra bir JetBrains hesabı açın ya da hesabınız varsa ona girin.</li>
+      <li>PyCharm'da <span class="ui" lang="en">Help › Manage Subscriptions</span> penceresini açın. Windows'ta bu menü sol üstteki ana menü düğmesinin altında.</li>
+      <li>Pencerenin sol altındaki <span class="ui" lang="en">Log in</span> düğmesiyle aynı hesaba girin ve listede görünen öğrenci lisansını <span class="ui" lang="en">Activate</span> ile etkinleştirin.</li>
+    </ol>
+    <p>Onay gelene kadar sonraki adımlara geçebilirsiniz.</p>
+  </section>
+
+  <section class="step" id="adim-3">
+    <h2><span class="step-n">3.</span> <code>python-kurs</code> projesi</h2>
+    <p>Derslerde yazacağımız bütün dosyalar <code>python-kurs</code> adlı tek bir PyCharm projesinde duracak.</p>
+    <p>PyCharm kodu çalıştırmak için bilgisayardaki bir Python'u kullanır, buna <span lang="en">interpreter</span> (yorumlayıcı) diyoruz. Hangi Python'u kullanacağını projeyi açarken seçeceksiniz.</p>
+    <figure class="doodle">
+      <img src="assets/img/doodles/ders1-tercuman.svg" width="560" height="480" loading="lazy" alt="Elle çizilmiş bir basın toplantısı: teknik direktörün balonunda print(&quot;Merhaba&quot;), yanındaki tercümanın balonunda 0110 1001 yazıyor; tercümanın isim levhasında interpreter yazıyor.">
+      <figcaption>Interpreter bir tercüman gibidir, yazdığınız Python satırlarını bilgisayarın anladığı komutlara tek tek çevirir.</figcaption>
+    </figure>
+    <p>Yolunda Türkçe karakter ya da boşluk olan klasörler ve OneDrive'ın eşitlediği klasörler bazı araçlarda sorun çıkarıyor. Bu yüzden proje için şu klasörü kullanın:</p>
+    <div class="os-split">
+      <div class="only-win">
+        <p class="os-name">Windows</p>
+        <p><code>C:\python-kurs</code></p>
+        <p>Masaüstü ve Belgeler çoğu bilgisayarda OneDrive'a bağlı, Windows kullanıcı adınızda da Türkçe karakter olabilir. Bu yüzden projeyi doğrudan <code>C:\</code> altında açıyoruz.</p>
+      </div>
+      <div class="only-mac">
+        <p class="os-name">macOS</p>
+        <p><code>/Users/mehmet/python-kurs</code></p>
+        <p><code>mehmet</code> yerine kendi kullanıcı adınızı yazın, <span class="ui" lang="en">Location</span> alanında <code>/Users/</code>'tan sonra gelen kısım odur. Masaüstü ve Belgeler iCloud'a bağlı olabildiği için klasörü doğrudan ev klasörünüzde açıyoruz.</p>
+      </div>
+    </div>
+    <ol class="actions">
+      <li>PyCharm'ın karşılama ekranında <span class="ui" lang="en">New...</span> düğmesine tıklayıp açılan listeden <span class="ui" lang="en">New Project</span>'i seçin (Şekil 1). Açık bir proje varsa <span class="ui" lang="en">File › New Project</span> menüsünü kullanın.</li>
+    </ol>
+    <!-- PyCharm ekran görüntülerinin width/height değerlerini tools/build_pages.py dosyanın gerçek boyutundan yazar. -->
+    <figure class="wide">
+      <img class="shot" src="assets/img/pycharm/01-welcome-new-project.png" width="1372" height="782" loading="lazy" alt="PyCharm'ın Welcome to PyCharm ekranı; New... düğmesinin altında açılan listede New Project seçili.">
+      <figcaption>Şekil 1. PyCharm'ın karşılama ekranı ve <span class="ui" lang="en">New...</span> listesi.</figcaption>
+    </figure>
+    <ol class="actions" start="2">
+      <li>Soldaki listede <span class="ui" lang="en">Pure Python</span> seçili olsun.</li>
+      <li><span class="ui" lang="en">Location</span> alanındaki yolu silip yukarıdaki yolu yazın. Proje adı yolun son kısmından, <code>python-kurs</code> olarak gelir.</li>
+      <li><span class="ui" lang="en">Create a welcome script</span> kutusunun işaretini kaldırın.</li>
+      <li><span class="ui" lang="en">Interpreter type</span> olarak <span class="ui" lang="en">Project venv</span> seçili kalsın. PyCharm proje klasöründe <code>.venv</code> adında bir klasör açar ve proje Python'u bu klasörden kullanır.</li>
+      <li><span class="ui" lang="en">Python version</span> listesinden 3.14'ü seçin (Şekil 2).</li>
+    </ol>
+    <figure class="wide">
+      <img class="shot" src="assets/img/pycharm/02-new-project-dialog.png" width="1191" height="780" loading="lazy" alt="New Project penceresi: solda Pure Python seçili; sağda Location alanı, işaretli Create a welcome script kutusu, Interpreter type olarak Project venv ve Python version alanında Python 3.14.">
+      <figcaption>Şekil 2. <span class="ui" lang="en">New Project</span> penceresi, siz değiştirmeden önceki haliyle.</figcaption>
+    </figure>
+    <p>Listede 3.14'ün yanında <span class="ui" lang="en">download and install</span> yazıyorsa 3.14 bilgisayarınızda kurulu değil demektir. O satırı seçerseniz PyCharm Python'u python.org'dan indirip kurar (Şekil 3).</p>
+    <p class="only-mac">macOS'ta listede <code>/usr/bin/python3</code> yolundaki Python 3.9 da görünebilir, onu seçmeyin. macOS'un geliştirici araçlarıyla gelen bu eski sürümü kurulum testi kabul etmiyor.</p>
+    <figure class="wide">
+      <img class="shot" src="assets/img/pycharm/03-python-version-download.png" width="1191" height="780" loading="lazy" alt="Python version listesi açık: kurulu Python 3.14, 3.11 ve /usr/bin/python3 yolundaki Python 3.9; altlarında yanında download and install yazan 3.13.9, 3.12.10, 3.10.11 ve 3.8.10.">
+      <figcaption>Şekil 3. Açık <span class="ui" lang="en">Python version</span> listesi.</figcaption>
+    </figure>
+    <ol class="actions" start="7">
+      <li><span class="ui" lang="en">Create</span>'e tıklayın. PyCharm ilk açılışta dosyaları tarıyor, alttaki ilerleme çubuğu bitene kadar bekleyin.</li>
+    </ol>
+    <p class="check">Soldaki <span class="ui" lang="en">Project</span> penceresinde <code>python-kurs</code> klasörünü, sağ alttaki durum çubuğunda da Python 3.14'ü görmelisiniz.</p>
+  </section>
+
+  <section class="step" id="adim-4">
+    <h2><span class="step-n">4.</span> <span lang="en">Inline completion</span>'ı kapatma</h2>
+    <p>PyCharm siz yazarken bir dil modeliyle satırın devamını gri yazıyla öneriyor. Derste kodu kendimiz yazacağız, o yüzden bu öneriyi kapatın.</p>
+    <ol class="actions">
+      <li>Windows'ta <span class="nowrap"><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>S</kbd></span>, macOS'ta <span class="nowrap"><kbd>Cmd</kbd> + <kbd>,</kbd></span> ile <span class="ui" lang="en">Settings</span> penceresini açın.</li>
+      <li>Soldaki listede <span class="ui" lang="en">Editor › General › Code Completion › Inline</span> sayfasına gidin.</li>
+      <li><span class="ui" lang="en">Enable inline completion using language models</span> kutusunun işaretini kaldırıp <span class="ui" lang="en">OK</span>'e tıklayın (Şekil 4).</li>
+    </ol>
+    <figure class="wide">
+      <img class="shot" src="assets/img/pycharm/10-inline-completion-settings.png" width="770" height="155" loading="lazy" alt="Settings penceresinde Editor, General, Code Completion, Inline sayfası; Enable inline completion using language models kutusu henüz işaretli.">
+      <figcaption>Şekil 4. <span class="ui" lang="en">Settings › Editor › General › Code Completion › Inline</span> sayfası.</figcaption>
+    </figure>
+  </section>
+
+  <section class="step" id="adim-5">
+    <h2><span class="step-n">5.</span> Kurulum testi</h2>
+    <ol class="actions">
+      <li>Soldaki <span class="ui" lang="en">Project</span> penceresinde <code>python-kurs</code> klasörüne sağ tıklayıp <span class="ui" lang="en">New › Python File</span>'ı seçin (Şekil 5).</li>
+    </ol>
+    <figure class="wide">
+      <img class="shot" src="assets/img/pycharm/04-new-python-file.png" width="345" height="380" loading="lazy" alt="Project penceresinde python-kurs seçili; açılan yeni dosya listesinin en üstünde Python File seçeneği.">
+      <figcaption>Şekil 5. Yeni dosya listesinde <span class="ui" lang="en">Python File</span>.</figcaption>
+    </figure>
+    <ol class="actions" start="2">
+      <li>Ad olarak <code>kurulum_testi</code> yazıp <kbd>Enter</kbd>'a basın. PyCharm dosyayı <code>kurulum_testi.py</code> olarak açar.</li>
+      <li>Aşağıdaki kodu kopyalayıp bu dosyaya yapıştırın. Dosyayı <a href="code/kurulum_testi.py" download>kurulum_testi.py</a> bağlantısından da indirebilirsiniz.</li>
+    </ol>
+    <figure class="code">
+      <figcaption class="file">kurulum_testi.py</figcaption>
+      <pre><code><span class="tok-c"># Kurulum testi: bu dosyayı PyCharm'da çalıştırın.</span>
+<span class="tok-k">import</span> sys
+
+version = sys.version.split()[0]
+print(<span class="tok-s">"Python sürümü:"</span>, version)
+
+<span class="tok-k">if</span> sys.version_info &lt; (3, 10):
+    print(<span class="tok-s">"Bu sürüm eski."</span>)
+    print(<span class="tok-s">"Kurulum sayfasındaki Sık karşılaşılan sorunlar bölümüne bakın."</span>)
+<span class="tok-k">else</span>:
+    name = input(<span class="tok-s">"Adınızı yazıp Enter'a basın: "</span>)
+    print(<span class="tok-s">"Teşekkürler "</span> + name + <span class="tok-s">", kurulumunuz tamam."</span>)</code></pre>
+    </figure>
+    <ol class="actions" start="4">
+      <li>Pencerenin üstündeki çalıştırma listesinde <span class="ui" lang="en">Current File</span> seçili olsun, yanındaki yeşil <span class="ui" lang="en">Run</span> düğmesine tıklayın. Windows'ta <span class="nowrap"><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F10</kbd></span>, macOS'ta <span class="nowrap"><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd></span> kısayolu da aynı işi yapar.</li>
+    </ol>
+    <!-- TODO: 05-run-current-file.png ve 06-run-window-input.png eski kurulum_testi.py'yi gösteriyor. Güncel dosyayla yeniden çekilince buraya ve aşağıya geri koyun, sonraki şekilleri yeniden numaralayın. -->
+    <ol class="actions" start="5">
+      <li>Altta <span class="ui" lang="en">Run</span> penceresi açılır ve program adınızı sorar. <span class="ui" lang="en">Run</span> penceresinin içine tıklayıp adınızı yazın ve <kbd>Enter</kbd>'a basın.</li>
+    </ol>
+    <figure class="output">
+      <figcaption>Beklenen çıktı</figcaption>
+      <pre>Python sürümü: 3.14.8
+Adınızı yazıp Enter'a basın: <span class="typed">Fatih</span><span class="vh"> (sizin yazdığınız)</span>
+Teşekkürler Fatih, kurulumunuz tamam.</pre>
+    </figure>
+    <p class="check">İlk satırda projenin Python sürümü, son iki satırda da adınız görünmeli. Program <span class="ui">Bu sürüm eski</span> yazıyorsa proje eski bir Python'la açılmış demektir, <a href="#sorun-interpreter">Sık karşılaşılan sorunlar</a> bölümündeki ilk maddeye bakın.</p>
+  </section>
+
+  <h2 id="sorunlar">Sık karşılaşılan sorunlar</h2>
+
+  <h3 class="problem" id="sorun-interpreter"><code>No Python interpreter configured</code> uyarısı ya da <code>Bu sürüm eski</code> çıktısı</h3>
+  <ol class="actions">
+    <li><span class="ui" lang="en">Settings</span> penceresini açıp <span class="ui" lang="en">Python › Interpreter</span> sayfasına gidin (Şekil 6).</li>
+    <li>Listede 3.14 ile kurulmuş bir ortam varsa onu seçip <span class="ui" lang="en">OK</span>'e tıklayın.</li>
+    <li>Yoksa <span class="ui" lang="en">Add Interpreter › Add Local Interpreter</span>'ı seçin, <span class="ui" lang="en">Virtualenv</span> türünde <span class="ui" lang="en">Base Python</span> olarak 3.14'ü seçip <span class="ui" lang="en">OK</span>'e tıklayın.</li>
+  </ol>
+  <figure class="wide">
+    <img class="shot" src="assets/img/pycharm/07-interpreter-settings.png" width="1173" height="783" loading="lazy" alt="Settings penceresinde Python, Interpreter sayfası; Python Interpreter alanında Python 3.14 (python-kurs), sağında Add Interpreter bağlantısı.">
+    <figcaption>Şekil 6. <span class="ui" lang="en">Settings › Python › Interpreter</span> sayfası.</figcaption>
+  </figure>
+
+  <h3 class="problem" id="sorun-yok">3.14, <span lang="en">Python version</span> listesinde hiç görünmüyor</h3>
+  <ol class="actions">
+    <li>PyCharm'ı kapatın, 1. adımdaki kurulumu yapın ve PyCharm'ı yeniden açın.</li>
+    <li>Hala görünmüyorsa <span class="ui" lang="en">Interpreter type</span> olarak <span class="ui" lang="en">Custom environment</span>'ı seçin ve <span class="ui" lang="en">Base Python</span> listesinin yanındaki düğmeyle şu dosyayı gösterin:</li>
+  </ol>
+  <div class="os-split">
+    <div class="only-win"><p class="os-name">Windows</p><p><code class="break-anywhere">C:\Users\mehmet\AppData\Local\Programs\Python\Python314\python.exe</code></p><p>Buradaki <code>mehmet</code> sizin Windows kullanıcı adınız.</p></div>
+    <div class="only-mac"><p class="os-name">macOS</p><p><code class="break-anywhere">/Library/Frameworks/Python.framework/Versions/3.14/bin/python3</code></p></div>
+  </div>
+
+  <h3 class="problem" id="sorun-run">Run başka bir dosyayı çalıştırıyor</h3>
+  <ol class="actions">
+    <li>Pencerenin üstündeki çalıştırma listesini açıp <span class="ui" lang="en">Current File</span>'ı seçin. <span class="ui" lang="en">Run</span> o zaman editörde açık olan dosyayı çalıştırır.</li>
+  </ol>
+
+  <h3 class="problem" id="sorun-bekliyor">Run'a basınca program duruyor, sonuç gelmiyor</h3>
+  <ol class="actions">
+    <li>Program büyük ihtimalle adınızı bekliyor. Alttaki <span class="ui" lang="en">Run</span> penceresinin içine tıklayıp adınızı yazın ve <kbd>Enter</kbd>'a basın.</li>
+  </ol>
+
+  <h3 class="problem" id="sorun-editor">Yazdığınız ad kodun içine girdi</h3>
+  <ol class="actions">
+    <li>Adı editöre yazmışsınız. Windows'ta <span class="nowrap"><kbd>Ctrl</kbd> + <kbd>Z</kbd></span>, macOS'ta <span class="nowrap"><kbd>Cmd</kbd> + <kbd>Z</kbd></span> ile geri alın.</li>
+    <li>Programı yeniden çalıştırın, adı yazmadan önce <span class="ui" lang="en">Run</span> penceresinin içine tıklayın.</li>
+  </ol>
+
+  <h3 class="problem" id="sorun-tirnak"><code>SyntaxError: invalid character '“' (U+201C)</code></h3>
+  <ol class="actions">
+    <li>Kodu WhatsApp'tan ya da bir belgeden kopyaladığınızda düz tırnak <code>"</code> eğik tırnağa <code>“ ”</code> dönüşebilir. Python eğik tırnağı tanımaz.</li>
+    <li><span lang="en">Error message</span>'ın gösterdiği satırda tırnakları silip klavyeden yeniden yazın.</li>
+  </ol>
+  <figure class="output">
+    <figcaption>Çıktı</figcaption>
+    <pre>  File "…/python-kurs/deneme.py", line 1
+    print(“Selam”)
+          ^
+<span class="tb-last">SyntaxError: invalid character '“' (U+201C)</span></pre>
+  </figure>
+
+  <h3 class="problem" id="sorun-nameerror"><code>NameError: name 'prınt' is not defined. Did you mean: 'print'?</code></h3>
+  <ol class="actions">
+    <li>Türkçe klavyede <code>i</code> yerine noktasız <code>ı</code> yazılmış. <span lang="en">Error message</span>'ın son satırı hatanın adını ve açıklamasını verir.</li>
+    <li>Mesajda <code>line 1</code> ile gösterilen satırda <code>prınt</code> yerine <code>print</code> yazın.</li>
+  </ol>
+  <figure class="output">
+    <figcaption>Çıktı</figcaption>
+    <pre>Traceback (most recent call last):
+  File "…/python-kurs/deneme.py", line 1, in &lt;module&gt;
+    prınt("Selam")
+    ^^^^^
+<span class="tb-last">NameError: name 'prınt' is not defined. Did you mean: 'print'?</span></pre>
+  </figure>
+  <figure class="doodle">
+    <img src="assets/img/doodles/ders1-dolmus-sokak.svg" width="560" height="480" loading="lazy" alt="Elle çizilmiş bir yol ve üç durak: ilk durakta yerde “Çıktı: A” yazan bir kağıt, ikinci durakta prnt yazan ama sokağı olmayan bir tabela, önünde duran sarı dolmuşun şoförü “Böyle bir sokak yok.” diyor; üçüncü durak boş.">
+    <figcaption><code>NameError</code>'ı olmayan bir sokağa sapmaya çalışan dolmuşa benzetebilirsiniz. Önceki satırlar çalışır, program hatalı satırda durur ve sonrakilere hiç geçmez.</figcaption>
+  </figure>
+  <p>Şekil 7'de başka bir <code>NameError</code> var, bu kez PyCharm'ın <span class="ui" lang="en">Run</span> penceresinde. Satır <code>nmae</code> adını kullanıyor ama programda böyle bir isim yok, <code>^^^^</code> işaretleri de bu adın altında duruyor. PyCharm <span lang="en">error message</span>'ı kırmızıyla gösteriyor.</p>
+  <figure class="wide">
+    <img class="shot" src="assets/img/pycharm/09-traceback-run-window.png" width="960" height="225" loading="lazy" alt="PyCharm'ın Run penceresinde kırmızı bir hata: print(&quot;Merhaba&quot;, nmae) satırı, nmae'nin altında ^^^^ işaretleri ve NameError: name 'nmae' is not defined; altında Process finished with exit code 1.">
+    <figcaption>Şekil 7. PyCharm'ın <span class="ui" lang="en">Run</span> penceresinde bir <code>NameError</code>.</figcaption>
+  </figure>
+
+  <h3 class="problem only-win" id="sorun-store">Windows'ta <code>python</code> yazınca Microsoft Store açılıyor ya da <code>Python was not found</code> yazıyor</h3>
+  <ol class="actions only-win">
+    <li>Kurulumda <span class="ui" lang="en">Add python.exe to PATH</span> kutusu işaretlenmemiş. PyCharm Python'u kendisi bulduğu için derste bu bir sorun çıkarmaz.</li>
+    <li>Kurulumu Komut İstemi'nde <code class="nowrap">py --version</code> yazarak yine de kontrol edebilirsiniz.</li>
+    <li><code>python</code> komutunu da açmak isterseniz kurulum dosyasını yeniden çalıştırıp <span class="ui" lang="en">Modify</span>'ı seçin. <span class="ui" lang="en">Optional Features</span> sayfasını <span class="ui" lang="en">Next</span> ile geçin, <span class="ui" lang="en">Advanced Options</span> sayfasında <span class="ui" lang="en">Add Python to environment variables</span> kutusunu işaretleyip <span class="ui" lang="en">Install</span>'a tıklayın. Sonra yeni bir Komut İstemi penceresi açın.</li>
+  </ol>
+
+  <h3 class="problem only-mac" id="sorun-mac39">macOS'ta <code class="nowrap">python3 --version</code> 3.9 yazıyor ya da geliştirici araçlarını kurmak isteyen bir pencere açılıyor</h3>
+  <ol class="actions only-mac">
+    <li>Python 3.14 henüz kurulmamış ya da Terminal penceresi kurulumdan önce açılmış. Açılan pencereyi kapatın, gerekirse 1. adımdaki kurulumu yapın.</li>
+    <li>Yeni bir Terminal penceresi açıp <code class="nowrap">python3 --version</code> komutunu yeniden yazın.</li>
+  </ol>
+
+  <h3 class="problem" id="sorun-yol">Proje klasörünün yolunda Türkçe karakter var ya da klasör OneDrive'da</h3>
+  <ol class="actions">
+    <li><span class="ui" lang="en">File › New Project</span> ile projeyi 3. adımdaki yolda yeniden oluşturun.</li>
+    <li><code>kurulum_testi.py</code> dosyasını yeni klasöre taşıyın.</li>
+  </ol>
+
+  <h3 class="problem" id="sorun-dur">Program bitmiyor</h3>
+  <ol class="actions">
+    <li><span class="ui" lang="en">Run</span> penceresindeki kırmızı kare <span class="ui" lang="en">Stop</span> düğmesine tıklayın. Windows'ta <span class="nowrap"><kbd>Ctrl</kbd> + <kbd>F2</kbd></span>, macOS'ta <span class="nowrap"><kbd>Cmd</kbd> + <kbd>F2</kbd></span> kısayolu da programı durdurur.</li>
+  </ol>
+
+  <p>Burada olmayan bir sorunla karşılaşırsanız ekran görüntüsüyle birlikte dersin WhatsApp grubuna yazın.</p>
+</main>
+
+<!-- shell:footer (tools/build_pages.py) -->
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="foot-course" lang="en">Introduction to Python</p>
+    <p>IEEE Hacettepe University Student Branch, Güz 2026</p>
+    <ul class="foot-links">
+      <li><a href="https://www.ee.hacettepe.edu.tr/">Hacettepe Üniversitesi Elektrik ve Elektronik Mühendisliği Bölümü</a></li>
+      <li><a href="https://www.ieeehacettepe.com/">IEEE Hacettepe</a></li>
+    </ul>
+    <p>Python adı ve logosu Python Software Foundation'ın ticari markasıdır, bu kursun vakıfla resmi bir bağı yok.</p>
+    <p>Görsellerin kaynakları ve lisansları <a href="gorseller.html">Görseller</a> sayfasında. Sitedeki yazı tipleri Atkinson Hyperlegible Next ve JetBrains Mono (SIL Open Font License 1.1) ile Latin Modern Roman (GUST Font License).</p>
+    <p>Ödev teslim formlarının aydınlatma ve açık rıza metni <a href="kvkk.html">Kişisel verileriniz</a> sayfasında.</p>
+    <p>Son güncelleme: 17 Ekim 2026</p>
+    <!-- TODO: ders materyalinin lisansı (Nezih karar verecek) -->
+  </div>
+</footer>
+<!-- /shell:footer -->
+</body>
+</html>
