@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 382" width="1152" height="382" role="img" aria-labelledby="ders2-target-parts-t ders2-target-parts-d">
   <title id="ders2-target-parts-t">Ders 2'nin hedef programı: parçalar</title>
-  <desc id="ders2-target-parts-d">Solda gri bir kod panelinde hedef programın satırları, atlanan yerler üç noktayla: code = input(…).strip().upper(), credits = int(input(…)), score = int(input(…)); if score &gt;= 95: grade_point = 4.00, elif score &gt;= 90:, üç nokta; if grade_point &gt;= 1.75: status = "geçti", else: status = "kaldı"; iki print satırı. elif zinciri açık mavi bantta, çivit mavisi çerçeveli. Sağda dört ayraç: 2A: input() ve int(), girdiyi alır; 10. bölüm: elif zinciri, Madde 24'ün tablosu; 9. bölüm: if ve else, geçti ya da kaldı; 2A: f-string, :.2f, iki satırlık çıktı. 95 ve 90 turuncu (int), katsayılar hardal sarısı (float), "geçti" ve "kaldı" yeşil (str).</desc>
-  <!-- source: authoring/targets/target2.py (key lines; the prompts and the two f-strings are cut with …); run with ' mat123', 4, 66 -> MAT123: 66 puan, katsayı 2.50, geçti / 4 x 2.50 = 10.00 (run_targets.py, Python 3.14.8, 2026-10-13); NEW 2026-10-13 for the closing build-up S206 -->
+  <desc id="ders2-target-parts-d">Solda gri bir kod panelinde hedef programın satırları, atlanan yerler üç noktayla: code = input(…).strip().upper(), credits = int(input(…)), score = int(input(…)); if score &gt;= 95: grade_point = 4.00, elif score &gt;= 90:, üç nokta; if grade_point &gt;= 1.75: status = "geçti", else: status = "kaldı"; iki print satırı. elif zinciri açık mavi bantta, çivit mavisi çerçeveli. Sağda dört ayraç: 2A: input() ve int(), girdiyi alır; 11. bölüm: elif zinciri, Madde 24'ün tablosu; 9. bölüm: if ve else, geçti ya da kaldı; 2A: f-string, :.2f, iki satırlık çıktı. 95 ve 90 turuncu (int), katsayılar hardal sarısı (float), "geçti" ve "kaldı" yeşil (str). İlk ayracın girdi satırının yanında bugünün resmi: 6 ve 6 tuşlarından bir ok yeşil "66" kutusuna (str) gider.</desc>
+  <!-- source: authoring/targets/target2.py (key lines; the prompts and the two f-strings are cut with …); run with ' mat123', 4, 66 -> MAT123: 66 puan, katsayı 2.50, geçti / 4 x 2.50 = 10.00 (run_targets.py, Python 3.14.8, 2026-10-13); NEW 2026-10-13 for the closing build-up S206 Updated on 2026-10-23 by authoring/builder-paralel/ders2-index.py: 2B's section numbers moved up by one (new 7. Index, len() ve slicing in 2A) -->
   <defs>
     <marker id="ders2-target-parts-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
     <style>
@@ -106,11 +106,18 @@
   <path class="ld" d="M800,12 H812 V92 H800"/>
   <text class="lb" x="828" y="54">2A: input(), int()</text>
   <text class="tx sub" x="828" y="84">girdi</text>
+  <rect class="key" x="900" y="60" width="32" height="34" rx="4"/>
+  <text class="cd24 mid" x="916" y="85">6</text>
+  <rect class="key" x="936" y="60" width="32" height="34" rx="4"/>
+  <text class="cd24 mid" x="952" y="85">6</text>
+  <path class="ar" d="M972,77 H997" marker-end="url(#ders2-target-parts-ah)"/>
+  <rect class="box t-str" x="1000" y="58" width="70" height="38" rx="6"/>
+  <text class="cd24 mid t-str" x="1035" y="85">"66"</text>
   <path class="ld" d="M800,96 H812 V204 H800"/>
-  <text class="lb" x="828" y="152">10. bölüm: elif</text>
+  <text class="lb" x="828" y="152">11. bölüm: elif</text>
   <text class="tx sub" x="828" y="182">Madde 24'ün tablosu</text>
   <path class="ld" d="M800,208 H812 V316 H800"/>
-  <text class="lb" x="828" y="264">9. bölüm: if, else</text>
+  <text class="lb" x="828" y="264">10. bölüm: if, else</text>
   <text class="tx sub" x="828" y="294">geçti ya da kaldı</text>
   <path class="ld" d="M800,320 H812 V372 H800"/>
   <text class="lb" x="828" y="336">2A: f-string, :.2f</text>

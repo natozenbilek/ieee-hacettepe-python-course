@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="dg st" viewBox="0 0 1152 300" width="1152" height="300" role="img" aria-labelledby="ders2-strip-t ders2-strip-d" data-focus="strip">
   <title id="ders2-strip-t">strip(), upper() ve lower()</title>
-  <desc id="ders2-strip-d">data-focus strip durumu (S73): solda lacivert code isim etiketi, oku dokuz yeşil kutuya gidiyor (str, yeşil): iki boşluk, b, b, m, 1, 0, 1 ve bir boşluk; boşluklar kutunun ortasında çivit mavisi bir noktayla gösterilir. strip() etiketli ok aşağıdaki satıra iniyor: altı yeşil kutu, b, b, m, 1, 0, 1, kalın çivit mavisi bir çerçevenin içinde. Silinen üç boşluk eski yerlerinde kırmızı kesikli boş kutular olarak duruyor, altlarında silindi yazısı. Sağda Çıktı paneli: [  bbm101 ] ve [bbm101]. data-focus case durumu (S74): code etiketi Bbm101 değerinin altı yeşil kutusuna gidiyor (str, yeşil). upper() etiketli ok aşağıda BBM101 satırına iniyor; bu satır kalın çivit mavisi çerçeveli. lower() etiketli ok sağa ve aşağı giderek bbm101 satırına ulaşıyor. Rakamlar iki satırda da aynı kalıyor. Çıktı paneli: BBM101 ve bbm101.</desc>
-  <!-- source: ders2-A.md S73: code = "  bbm101 "; print(f"[{code}]") -> [  bbm101 ]; print(f"[{code.strip()}]") -> [bbm101]; len 9 -> 6. S74: code = "Bbm101"; code.upper() -> BBM101; code.lower() -> bbm101 (Python 3.14.8, 2026-10-11) -->
+  <desc id="ders2-strip-d">data-focus strip durumu (S73): solda lacivert code isim etiketi, oku dokuz yeşil kutuya gidiyor (str, yeşil): iki boşluk, m, a, t, 1, 0, 1 ve bir boşluk; boşluklar kutunun ortasında çivit mavisi bir noktayla gösterilir. strip() etiketli ok aşağıdaki satıra iniyor: altı yeşil kutu, m, a, t, 1, 0, 1, kalın çivit mavisi bir çerçevenin içinde. Silinen üç boşluk eski yerlerinde kırmızı kesikli boş kutular olarak duruyor, altlarında silindi yazısı. Sağda Çıktı paneli: [  mat101 ] ve [mat101]. data-focus case durumu (S74): code etiketi Mat101 değerinin altı yeşil kutusuna gidiyor (str, yeşil). upper() etiketli ok aşağıda MAT101 satırına iniyor; bu satır kalın çivit mavisi çerçeveli. lower() etiketli ok sağa ve aşağı giderek mat101 satırına ulaşıyor. Rakamlar iki satırda da aynı kalıyor. Çıktı paneli: MAT101 ve mat101.</desc>
+  <!-- source: ders2-A.md S73: code = "  mat101 "; print(f"[{code}]") -> [  mat101 ]; print(f"[{code.strip()}]") -> [mat101]; len 9 -> 6. S74: code = "Mat101"; code.upper() -> MAT101; code.lower() -> mat101 (Python 3.14.8, 2026-10-11) ; course code changed from BBM101 to MAT101 on 2026-10-21 (Nezih: "BBM101 yerine MAT101 olsun ders kodu örneği"), outputs re-run on 3.14.8 -->
   <defs>
     <marker id="ders2-strip-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
     <style>
@@ -104,9 +104,9 @@
   <rect class="cell t-str" x="588" y="34" width="56" height="56"/>
   <circle class="dot" cx="168" cy="62" r="4"/>
   <circle class="dot" cx="224" cy="62" r="4"/>
-  <text class="cd mid t-str" x="280" y="72">b</text>
-  <text class="cd mid t-str" x="336" y="72">b</text>
-  <text class="cd mid t-str" x="392" y="72">m</text>
+  <text class="cd mid t-str" x="280" y="72">m</text>
+  <text class="cd mid t-str" x="336" y="72">a</text>
+  <text class="cd mid t-str" x="392" y="72">t</text>
   <text class="cd mid t-str" x="448" y="72">1</text>
   <text class="cd mid t-str" x="504" y="72">0</text>
   <text class="cd mid t-str" x="560" y="72">1</text>
@@ -120,9 +120,9 @@
   <rect class="cell t-str" x="420" y="190" width="56" height="56"/>
   <rect class="cell t-str" x="476" y="190" width="56" height="56"/>
   <rect class="cell t-str" x="532" y="190" width="56" height="56"/>
-  <text class="cd mid t-str" x="280" y="228">b</text>
-  <text class="cd mid t-str" x="336" y="228">b</text>
-  <text class="cd mid t-str" x="392" y="228">m</text>
+  <text class="cd mid t-str" x="280" y="228">m</text>
+  <text class="cd mid t-str" x="336" y="228">a</text>
+  <text class="cd mid t-str" x="392" y="228">t</text>
   <text class="cd mid t-str" x="448" y="228">1</text>
   <text class="cd mid t-str" x="504" y="228">0</text>
   <text class="cd mid t-str" x="560" y="228">1</text>
@@ -133,8 +133,8 @@
   <text class="cd24" x="434" y="146">strip()</text>
   <text class="lb sub" x="950" y="26">Çıktı</text>
   <rect class="outp" x="950" y="34" width="198" height="84" rx="4"/>
-  <text class="cd24 pre" xml:space="preserve" x="966" y="66">[  bbm101 ]</text>
-  <text class="cd24" x="966" y="100">[bbm101]</text>
+  <text class="cd24 pre" xml:space="preserve" x="966" y="66">[  mat101 ]</text>
+  <text class="cd24" x="966" y="100">[mat101]</text>
   </g>
   <g class="st-case">
   <rect class="name" x="2" y="34" width="99" height="56" rx="6"/>
@@ -146,9 +146,9 @@
   <rect class="cell t-str" x="308" y="34" width="56" height="56"/>
   <rect class="cell t-str" x="364" y="34" width="56" height="56"/>
   <rect class="cell t-str" x="420" y="34" width="56" height="56"/>
-  <text class="cd mid t-str" x="168" y="72">B</text>
-  <text class="cd mid t-str" x="224" y="72">b</text>
-  <text class="cd mid t-str" x="280" y="72">m</text>
+  <text class="cd mid t-str" x="168" y="72">M</text>
+  <text class="cd mid t-str" x="224" y="72">a</text>
+  <text class="cd mid t-str" x="280" y="72">t</text>
   <text class="cd mid t-str" x="336" y="72">1</text>
   <text class="cd mid t-str" x="392" y="72">0</text>
   <text class="cd mid t-str" x="448" y="72">1</text>
@@ -158,9 +158,9 @@
   <rect class="cell t-str" x="308" y="190" width="56" height="56"/>
   <rect class="cell t-str" x="364" y="190" width="56" height="56"/>
   <rect class="cell t-str" x="420" y="190" width="56" height="56"/>
-  <text class="cd mid t-str" x="168" y="228">B</text>
-  <text class="cd mid t-str" x="224" y="228">B</text>
-  <text class="cd mid t-str" x="280" y="228">M</text>
+  <text class="cd mid t-str" x="168" y="228">M</text>
+  <text class="cd mid t-str" x="224" y="228">A</text>
+  <text class="cd mid t-str" x="280" y="228">T</text>
   <text class="cd mid t-str" x="336" y="228">1</text>
   <text class="cd mid t-str" x="392" y="228">0</text>
   <text class="cd mid t-str" x="448" y="228">1</text>
@@ -171,9 +171,9 @@
   <rect class="cell t-str" x="768" y="190" width="56" height="56"/>
   <rect class="cell t-str" x="824" y="190" width="56" height="56"/>
   <rect class="cell t-str" x="880" y="190" width="56" height="56"/>
-  <text class="cd mid t-str" x="628" y="228">b</text>
-  <text class="cd mid t-str" x="684" y="228">b</text>
-  <text class="cd mid t-str" x="740" y="228">m</text>
+  <text class="cd mid t-str" x="628" y="228">m</text>
+  <text class="cd mid t-str" x="684" y="228">a</text>
+  <text class="cd mid t-str" x="740" y="228">t</text>
   <text class="cd mid t-str" x="796" y="228">1</text>
   <text class="cd mid t-str" x="852" y="228">0</text>
   <text class="cd mid t-str" x="908" y="228">1</text>
@@ -183,7 +183,7 @@
   <text class="cd24 mid" x="622" y="50">lower()</text>
   <text class="lb sub" x="950" y="26">Çıktı</text>
   <rect class="outp" x="950" y="34" width="198" height="84" rx="4"/>
-  <text class="cd24" x="966" y="66">BBM101</text>
-  <text class="cd24" x="966" y="100">bbm101</text>
+  <text class="cd24" x="966" y="66">MAT101</text>
+  <text class="cd24" x="966" y="100">mat101</text>
   </g>
 </svg>

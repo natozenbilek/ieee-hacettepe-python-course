@@ -174,7 +174,6 @@
 <figcaption class="focal">Bu dersin sonunda transkriptinizi bir file'dan okuyup AGNO'yu hesaplayacaksınız.</figcaption>
 </figure>
   </div>
-  <aside class="notes"><strong>Program biter, memory boşalır; file'a yazdığınız kalır.</strong> Bugün notlar ilk kez klavyeden değil, diskteki transcript.txt'den gelecek; dersin sonunda programımız da kendi dosyasını, report.txt'yi yazacak. Bu cümleye son sayfada döneceğim.</aside>
 </section>
 
 <section class="s-code-output" data-half="5A" data-src="S3">
@@ -303,7 +302,6 @@
 <!-- /svg -->
 </figure>
   </div>
-  <aside class="notes">BBM101'i iki kez almışım, önce F3, sonra A3; yönetmeliğe göre tekrar alınan derste son not geçerli, program da A3'ü kullandı. BBM102'nin notu yok, çünkü bu dönem devam ediyor; program onu AGNO'ya katmadı. İlk satırdaki dört bölüm MAT, FIZ, BBM ve TKD; AGNO Ders 4'teki 3.08, ama bu kez veri bir dosyadan geldi.</aside>
 <!-- not spoken: Later: LATER-5.1 · "File okuma ve yazma aradan sonra; programı 5B'nin sonunda birlikte kuracağız." · kept: S149 (the live assembly; reading from section 6, writing from section 7) | Kod (şeklin içinde çizili; doğrulama için): GRADE_POINTS = {"A1": 4.00, "A2": 3.75, "A3": 3.50, "B1": 3.25, "B2": 3.00, "B3": 2.75, "C1": 2.50, "C2": 2.25, "C3": 2.00, "D": 1.75, "F1": 0.00, "F2": 0.00, "F3": 0.00, "F6": 0.00} def weighted_points(credits, grade): return credits * GRADE_POINTS[grade] def has_passed(grade): return GRADE_POINTS[grade] >= 1.75 latest_grade = {} try: with open("transcript.txt", encoding="utf-8") as f: for line in f: code, credits, grade = line.strip().split(";") if grade == "": grade = None # devam eden ders latest_grade[code] = (int(credits), grade) # son not geçerli except FileNotFoundError: print("transcript.txt bulunamadı") if len(latest_grade) == 0: print("Hesaplanacak ders yok.") else: total_points = 0 total_credits = 0 ongoing = 0 departments = set() with open("report.txt", "w", encoding="utf-8") as report: for code, course in latest_grade.items(): credits, grade = course departments.add(code[:3]) if grade is None: ongoing += 1 report.write(f"{code} {credits} devam ediyor\n") continue total_points += weighted_points(credits, grade) total_credits += credits report.write(f"{code} {credits} {grade} {has_passed(grade)}\n") gpa = total_points / total_credits report.write(f"AGNO: {gpa:.2f}\n") print(f"{len(latest_grade)} ders, {ongoing} devam ediyor, {len(departments)} bölüm, AGNO: {gpa:.2f}") with open("report.txt", encoding="utf-8") as f: for line in f: print(line.strip()) | Çıktı (Python 3.14.8; şeklin içinde): 5 ders, 1 devam ediyor, 4 bölüm, AGNO: 3.08 MAT123 4 C1 True FIZ127 3 B2 True BBM101 3 A3 True TKD103 2 A2 True BBM102 3 devam ediyor AGNO: 3.08 -->
 </section>
 
@@ -333,7 +331,6 @@ print(x + 1)
       <div class="poll-bars" hidden></div>
     </div>
   </div>
-  <aside class="notes">Ders 4'ten bir soruyla başlayalım. Telefonunuzun kamerasını QR koda tutun, A, B, C ya da D'ye dokunun; ad ya da giriş istenmiyor. İnternetiniz yoksa parmakla gösterin: A bir, B iki, C üç, D dört parmak. Şimdi yedi saniye kimse konuşmasın, herkes kendi cevabını seçsin. Dağılıma bakalım. Doğru cevap A şıkkı: 4.5. average() 3 ile 4'ün ortalamasını, 3.5'i return ediyor; x 3.5'i gösteriyor ve x + 1 4.5 oluyor. B'yi seçen / işlemini tam bölme sandı; / her zaman float verir, 7 / 2 3.5'tir. C'yi seçen return'ün değeri ekrana da yazdığını düşündü; return değeri yalnızca geri verir, ekrana yazan sondaki print. D'yi seçen bir function'ın sonucuyla hesap yapılamayacağını düşündü; dönen değer sıradan bir float ve ona 1 eklenebilir.</aside>
   <!-- authoring (not shown): Verified: `4.5` (3.14.8, 2026-10-13). -->
 </section>
 
@@ -570,7 +567,6 @@ print(x + 1)
 <figcaption class="focal">Function içindeki isim yalnızca call sürerken vardır.</figcaption>
 </figure>
   </div>
-  <aside class="notes"><strong>Function'ın içindeki isim call bitince kaybolur; dışarıya yalnızca return ettiği çıkar.</strong> Kare 2'de Python bu call için memory'de ayrı bir alan açıyor, adı frame; local orada oluşuyor. Kare 3'te call bitti, frame kapandı, local de onunla gitti; bu yüzden print(local) NameError veriyor.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): def solve(): local = 5 print("içeride", local) solve() print(local) | Çıktı (Python 3.14.8; şeklin içinde): içeride 5 Traceback (most recent call last): File "…/python-kurs/example.py", line 6, in <module> print(local) ^^^^^ NameError: name 'local' is not defined. Did you mean: 'locals'? -->
 </section>
 
@@ -663,7 +659,6 @@ print(x + 1)
       <p class="focal">Local variable sınavdaki müsvedde kağıdı gibidir: call bitince toplanır, dışarı çıkmaz.</p>
     </div>
   </div>
-  <aside class="notes">Benzetmenin bittiği yer: her sınavda size yeni bir müsvedde verilir, Python da her call'a yeni ve boş bir frame açar. Önceki call'dan hiçbir şey kalmaz; bunu birazdan göreceğiz.</aside>
 </section>
 
 <section class="s-demo" data-half="5A" data-src="S9" data-topic="Local variable ve scope">
@@ -671,7 +666,6 @@ print(x + 1)
   <div class="content l-full">
     <div class="trace" data-trace="traces/ders4-local.json" data-labels="frames objects"></div>
   </div>
-  <aside class="notes">Adım 2'de def çalıştı: Global frame'de solve ismi bir function'ı gösteriyor. Adım 3'te call başladı ve Frame'ler sütununda solve'un frame'i açıldı, henüz boş; Adım 4'te local = 5 o frame'in içinde. Adım 5'te içeride 5 yazıldı ve frame kapandı. Adım 6'da son satır kırmızı: NameError, local'in yaşadığı yer artık yok.</aside>
 <!-- not spoken: Çıktı (Python 3.14.8): içeride 5 NameError: name 'local' is not defined. Did you mean: 'locals'? -->
 </section>
 
@@ -693,7 +687,6 @@ print(local)
 <pre class="tb wrap"><span class="ol">Traceback (most recent call last):</span><span class="ol">  File "…/python-kurs/example.py", line 5, in &lt;module&gt;</span><span class="ol">    print(local)</span><span class="ol">          ^^^^^</span><span class="ol"><span class="tb-last">NameError: name 'local' is not defined. Did you mean: 'locals'?</span></span></pre>
 </figure>
   </div>
-  <aside class="notes">Error message'ı son satırından okuyun: local diye bir isim yok. Did you mean: 'locals' Python'un kendi isimlerinden birini öneriyor, burada işimize yaramaz; öneriler her zaman doğru çıkmaz. Çözüm değeri return ile dışarı vermek: solve'un son satırına return local, dışarıda result = solve().</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="5A" data-src="S11" data-topic="Local variable ve scope">
@@ -909,7 +902,6 @@ print(local)
 <figcaption class="focal">Bir ismin kullanılabildiği yere o ismin scope'u denir.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Python'da scope'u function çizer; if ve for kendi scope'larını açmaz. Java ve C'de bir block'un içinde açılan isim block bitince kaybolur, Python'da kaybolmaz.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="5A" data-src="S12" data-topic="Local variable ve scope">
@@ -1059,8 +1051,6 @@ print(local)
 <figcaption class="focal">Her call boş bir frame ile başlar; önceki call'dan hiçbir şey kalmaz.</figcaption>
 </figure>
   </div>
-  <aside class="notes">İkinci call birincinin bıraktığı 1'i görmüyor: count her call'da yeni bir frame'de 0'dan başlıyor. Bir function bir şeyi hatırlayacaksa değeri return eder, biz de onu dışarıda bir isimde tutarız.<br>
-Sınıfa: print(count_once(), count_once(), count_once()) ne yazar? (beklenen: 1 1 1; her call 0'dan başlar)</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): def count_once(): count = 0 count += 1 return count print(count_once(), count_once()) | Çıktı (Python 3.14.8; şeklin içinde): 1 1 -->
 </section>
 
@@ -1201,7 +1191,6 @@ Sınıfa: print(count_once(), count_once(), count_once()) ne yazar? (beklenen: 1
 <figcaption class="focal">Function içindeki x, dışarıdaki x'ten ayrı bir isimdir.</figcaption>
 </figure>
   </div>
-  <aside class="notes">x = 99 dışarıdaki x'i değiştirmez; call'un kendi frame'inde yeni bir x yapar ve call bitince o x gider. Kursta kuralımız: değer function'a parameter ile girer, return ile çıkar.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): x = 1 def change_x(): x = 99 print("içeride", x) change_x() print("dışarıda", x) | Çıktı (Python 3.14.8; şeklin içinde): içeride 99 dışarıda 1 -->
 </section>
 
@@ -1342,8 +1331,6 @@ Sınıfa: print(count_once(), count_once(), count_once()) ne yazar? (beklenen: 1
 <figcaption class="focal">Parameter da local'dir; değiştirmek, dışarıdaki int'i değiştirmez.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Call anında credits = n gibi bir assignment yapılıyor; ikisi aynı 3'ü gösteriyor. credits = credits + 1 yeni bir 4 yapıyor ve yalnızca credits'in okunu ona taşıyor, n 3'te kalıyor. List'te durum farklı: function'ın içinde append ederseniz dışarıdaki list de değişir, çünkü iki isim aynı list'i gösterir.<br>
-Sınıfa: add_one'ın içine n = n + 1 yazsaydık dışarıdaki n değişir miydi? (beklenen: hayır; o n de call'un kendi local'i olurdu)</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): def add_one(credits): credits = credits + 1 return credits n = 3 result = add_one(n) print(n, result) | Çıktı (Python 3.14.8; şeklin içinde): 3 4 -->
 </section>
 
@@ -1352,7 +1339,6 @@ Sınıfa: add_one'ın içine n = n + 1 yazsaydık dışarıdaki n değişir miyd
   <div class="content l-full">
     <div class="trace" data-trace="traces/ders4-add-one.json" data-step="5" data-labels="frames objects"></div>
   </div>
-  <aside class="notes">Adım 3'te n 3'ü gösteriyor. Adım 4'te call başlıyor: add_one'ın frame'inde credits de aynı 3'ü gösteriyor, iki ok aynı object'e gidiyor. Adım 5'te credits yeni bir 4'ü gösteriyor, n'nin oku yerinde. return'den sonra frame kapanıyor, result 4'ü gösteriyor ve son adımda 3 4 yazılıyor.</aside>
 <!-- not spoken: Çıktı (Python 3.14.8): 3 4 -->
 </section>
 
@@ -1367,7 +1353,6 @@ Sınıfa: add_one'ın içine n = n + 1 yazsaydık dışarıdaki n değişir miyd
       <p class="focal">Call'ların frame'leri üst üste bir stack'te durur; fikir Bauer ve Samelson'dan.</p>
     </div>
   </div>
-  <aside class="notes">Friedrich Bauer ve Klaus Samelson, en son konanın ilk alındığı bu düzen için 30 Mart 1957'de patent başvurusu yaptı; Almanca adı Keller, yani mahzen. Bauer 1988'de IEEE Computer Society'nin Computer Pioneer Award'ını tam da bunun için, bilgisayar stack'leri için aldı. Traceback'teki most recent call last bu stack'in dökümü: en son call en altta, error message'ı bu yüzden alttan okuyoruz.</aside>
 </section>
 
 <section class="s-pycharm" data-half="5A" data-src="S18" data-topic="Local variable ve scope">
@@ -1508,7 +1493,6 @@ Sınıfa: add_one'ın içine n = n + 1 yazsaydık dışarıdaki n değişir miyd
       <p class="focal">F7 (Step Into) call'un içine girer; Frames listesi açık frame'leri gösterir.</p>
     </div>
   </div>
-  <aside class="notes">F8, Step Over, call'u tek adımda geçer; F7, Step Into, call'un içine girer ve Frames listesinde weighted_points en üste çıkar. Call'un içindeyken Shift+F8, Step Out, call'un sonuna kadar çalıştırıp dışarı çıkar. Frames listesi az önceki stack'in kendisi; tuşlar Windows'ta da macOS'ta da aynı.</aside>
 </section>
 
 <section class="s-section" data-half="5A" data-src="S21" data-topic="None, print ve return" data-background-color="#181C3E">
@@ -1528,7 +1512,6 @@ Sınıfa: add_one'ın içine n = n + 1 yazsaydık dışarıdaki n değişir miyd
       <p class="focal">Haaland'ın piyasa değerini bilmiyoruz. 0 yazarsak hiç para etmiyor demiş oluruz.</p>
     </div>
   </div>
-  <aside class="notes">Sınıfa: Haaland'ın piyasa değerini bilmiyorsak bu variable'a ne yazalım? (beklenen: 0 olmaz, hiç para etmiyor demek olur ve takımın ortalamasını düşürür; bilinmediğini söyleyen bir değer lazım)</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="5A" data-src="S23" data-topic="None, print ve return">
@@ -1652,7 +1635,6 @@ Sınıfa: add_one'ın içine n = n + 1 yazsaydık dışarıdaki n değişir miyd
 <figcaption class="focal">None, bir değerin bilinmediğini gösterir; 0 değildir.</figcaption>
 </figure>
   </div>
-  <aside class="notes"><strong>None "bilmiyorum" demektir, sıfır değildir.</strong> type()'a sorunca NoneType geliyor; bu type'ın tek bir değeri var, o da None. None boş bir str de değil: None == "" False verir.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): market_value = None print(market_value, type(market_value)) | Çıktı (Python 3.14.8; şeklin içinde): None <class 'NoneType'> -->
 </section>
 
@@ -1754,7 +1736,6 @@ Sınıfa: add_one'ın içine n = n + 1 yazsaydık dışarıdaki n değişir miyd
       <p class="focal">None ertelenen maçın skoru gibidir; 0-0 ise oynanmış bir maçın skorudur.</p>
     </div>
   </div>
-  <aside class="notes">Benzetmenin bittiği yer: ertelenen maç sonra oynanır ve skoru olur; None da sonradan gerçek bir değerle değiştirilebilir, isim yeni değere geçer. None bir hata değil, geçerli bir değer; ama onunla hesap yapılırsa TypeError gelir.</aside>
 </section>
 
 <section class="s-type-map" data-half="5A" data-src="S25" data-topic="None, print ve return">
@@ -2005,7 +1986,6 @@ False</pre>
 </figure>
 <p class="focal span">None'ı is None ile kontrol ederiz.</p>
   </div>
-  <aside class="notes">Python'da tek bir None var; bir ismin onu gösterip göstermediğini bu yüzden is ile sorarız. Kuralımız: değerleri == ile, None'ı is None ile kıyaslarız.</aside>
 </section>
 
 <section class="s-code-output" data-half="5A" data-src="S27" data-topic="None, print ve return">
@@ -2156,7 +2136,6 @@ print(150 + market_value)
 </figure>
 <p class="focal">None ile hesap yapılamaz.</p>
   </div>
-  <aside class="notes">Son satırı okuyun: + işlemcisi int ile NoneType arasında desteklenmiyor; Python None'ı 0 saymaz. Bir error message'ta NoneType görürseniz bir isim beklemediğiniz bir yerde None gösteriyor demektir.</aside>
 </section>
 
 <section class="s-connection" data-half="5A" data-src="S29" data-topic="None, print ve return">
@@ -2170,7 +2149,6 @@ print(150 + market_value)
       <p class="focal">Hoare 1965'te null reference'ı ekledi; 2009'da ona "milyar dolarlık hatam" dedi.</p>
     </div>
   </div>
-  <aside class="notes">Tony Hoare 1965'te ALGOL W'yu tasarlarken dile hiçbir şeyi göstermeyen bir değer ekledi: null reference; kendi anlatımına göre gerekçesi, gerçeklemesinin çok kolay olmasıydı. 2009'da Londra'daki bir konuşmasında bu kararı milyar dolarlık hatam diye andı. Python'da yokluğu None gösteriyor; az önceki TypeError da bu yokluğun Python'daki sesi.</aside>
 </section>
 
 <section class="s-code-output" data-half="5A" data-src="S30" data-topic="None, print ve return">
@@ -2541,8 +2519,6 @@ None</pre>
 <figcaption class="focal">append() ve sort() return'süz function gibidir: list'i değiştirir, None döndürür.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Sık yapılan hata: grades = grades.sort() yazmak list'i kaybettirir, grades artık None'ı gösterir. random.shuffle() da aynısını yapar: list'i karıştırır, None döndürür.<br>
-Sınıfa: grades = grades.sort() satırından sonra print(grades) ne yazar? (beklenen: None; sıralanmış list kayboldu)</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): grades = ["C1", "B2"] result = grades.append("A2") print(grades, result) | Çıktı (Python 3.14.8; şeklin içinde): ['C1', 'B2', 'A2'] None -->
 </section>
 
@@ -2673,7 +2649,6 @@ Sınıfa: grades = grades.sort() satırından sonra print(grades) ne yazar? (bek
       <p class="focal">return'süz function, "Afiyet olsun" yazıp ürün düşürmeyen otomat gibidir: elde None kalır.</p>
     </div>
   </div>
-  <aside class="notes">Benzetmenin bittiği yer: ekrana yazılan yazı programın elinde bir değer değildir. print eden bir function'ın sonucuna 1 eklemeye çalışırsanız TypeError alırsınız; birazdan göreceğiz.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="5A" data-src="S33" data-topic="None, print ve return">
@@ -2866,7 +2841,6 @@ Sınıfa: grades = grades.sort() satırından sonra print(grades) ne yazar? (bek
 <figcaption class="focal">print değeri ekrana yazar; return programa geri verir.</figcaption>
 </figure>
   </div>
-  <aside class="notes">En sık yanlış buradan geliyor: dönen değerin kendiliğinden ekrana yazıldığını, print ile return'ün aynı şey olduğunu sanmak. Ekranda ikisi de 16 gibi görünür; fark, değeri sonra kullanmak istediğinizde ortaya çıkar.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): def print_square(x): print(x * x) def square(x): return x * x print_square(4) result = square(4) + 1 print(result) | Çıktı (Python 3.14.8; şeklin içinde): 16 17 -->
 </section>
 
@@ -3060,7 +3034,6 @@ Sınıfa: grades = grades.sort() satırından sonra print(grades) ne yazar? (bek
 <figcaption class="focal">print eden function'ın sonucu None'dır; hesap yapılamaz.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Önce 16 yazılıyor: function çalıştı ve ekrana yazdı. Kırmızı kutudaki son satır: + işlemcisi NoneType ile int arasında yok, çünkü print_square(4)'ün yerine None geçti. Çözüm, function'ın son satırını return x * x yapmak.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): def print_square(x): print(x * x) total = print_square(4) + 1 | Çıktı (Python 3.14.8; şeklin içinde): 16 Traceback (most recent call last): File "…/python-kurs/example.py", line 4, in <module> total = print_square(4) + 1 ~~~~~~~~~~~~~~~~^~~ TypeError: unsupported operand type(s) for +: 'NoneType' and 'int' -->
 </section>
 
@@ -3354,7 +3327,6 @@ print(square(4))
 <figcaption class="focal">Notu gelmemiş dersin notu None'dır; is None ile atlanır, hesaba girmez.</figcaption>
 </figure>
   </div>
-  <aside class="notes">BBM102'ye 0 ya da F3 yazsaydık AGNO haksız yere düşerdi; ertelenen maçı hükmen kaybedilmiş saymak gibi. Yeni olan yalnızca is None: for satırındaki unpacking Ders 4'ten, continue Ders 3'ten.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): courses = [("BBM101", "A3"), ("BBM102", None), ("MAT123", "C1")] for code, letter in courses: if letter is None: continue print(code, letter) | Çıktı (Python 3.14.8; şeklin içinde): BBM101 A3 MAT123 C1 -->
 </section>
 
@@ -3385,7 +3357,6 @@ None</code></li>
       <div class="poll-bars" hidden></div>
     </div>
   </div>
-  <aside class="notes">Bölümün sorusu. Telefonunuzun kamerasını QR koda tutun, A, B, C ya da D'ye dokunun; ad ya da giriş istenmiyor. Şimdi yedi saniye kimse konuşmasın, herkes kendi cevabını seçsin. Dağılıma bakalım. Doğru cevap A şıkkı: önce 16, altında None. calc 16'yı ekrana yazıyor ama bir şey return etmiyor; bu yüzden result None'ı gösteriyor ve son satır None yazıyor. B'yi seçen print ile return'ü aynı saydı. C'yi seçen call satırının ekrana bir şey yazmadığını düşündü; calc'ın içindeki print çalışıyor. D'yi seçen None'ı yazdırmanın hata olduğunu düşündü; None yazdırılabilir, yalnızca onunla hesap yapılamaz.</aside>
 <!-- not spoken: Çıktı (Python 3.14.8, slaytta gösterilmez): 16 None -->
 </section>
 
@@ -3582,7 +3553,6 @@ None</code></li>
 <figcaption class="focal">Ders 4'teki on bir dal aslında bir tablo: her harfin bir katsayısı var.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Sınıfa: coefficient() bir hesap yapıyor mu? (beklenen: hayır; yalnızca harfi katsayıyla eşleştiriyor, bu bilginin kendisi bir tablo)</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): def coefficient(letter): if letter == "A1": return 4.00 elif letter == "A2": return 3.75 elif letter == "A3": return 3.50 elif letter == "B1": return 3.25 elif letter == "B2": return 3.00 elif letter == "B3": return 2.75 elif letter == "C1": return 2.50 elif letter == "C2": return 2.25 elif letter == "C3": return 2.00 elif letter == "D": return 1.75 else: return 0.00 # F1, F2, F3, F6 -->
 </section>
 
@@ -3755,7 +3725,6 @@ None</code></li>
 <figcaption class="focal">dict, değerleri iki sütunlu bir tablo gibi çiftler halinde tutar.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Bugünün resmi bu iki sütunlu tablo: solda key, sağda value, kahverengi çerçeve. Bundan sonra her dict bu çerçeveyle çizilecek.</aside>
 </section>
 
 <section class="s-concept" data-half="5A" data-src="S43" data-topic="dict">
@@ -3869,7 +3838,6 @@ None</code></li>
       <p class="focal">dict, kantindeki fiyat panosu gibidir: ürünün adı key, fiyatı value.</p>
     </div>
   </div>
-  <aside class="notes">Benzetmenin bittiği yerler: panoda yalnızca fiyat yazar, dict'in value'su ise her şey olabilir. Usta panoyu yukarıdan aşağı okur; dict taramaz, doğrudan o satıra gider. Bir kural da hiç değişmez: bir dict'te aynı key iki kez bulunmaz.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="5A" data-src="S44" data-topic="dict">
@@ -4222,7 +4190,6 @@ None</code></li>
 <figcaption class="focal">Köşeli parantez içine key yazılır; value'su gelir.</figcaption>
 </figure>
   </div>
-  <aside class="notes"><strong>dict bir değeri sırasıyla değil, key'iyle bulur.</strong> List'teki index alışkanlığı burada işe yaramaz: grades[0] yazarsanız Python 0 diye bir key arar, bulamaz ve KeyError verir.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): grades = {"MAT123": "C1", "FIZ127": "B2"} print(grades["FIZ127"]) | Çıktı (Python 3.14.8; şeklin içinde): B2 -->
 </section>
 
@@ -4490,7 +4457,6 @@ print(swaps["Space"])
       <p class="focal">dict key'i baştan aramaz; key'den yerini hesaplar.</p>
     </div>
   </div>
-  <aside class="notes">IBM'den Hans Peter Luhn, Ocak 1953'te yazdığı bir iç notta kayıtları, anahtarlarından hesaplanan bir numaraya göre kovalara dağıtmayı önerdi; aynı dönemde IBM'de Gene Amdahl, Elaine Boehme, Nathaniel Rochester ve Arthur Samuel da aynı fikre ayrı ayrı ulaştı. Bu yönteme bugün hashing diyoruz. grades["FIZ127"] yazdığınızda Python dict'i baştan taramıyor, key'den bir sayı hesaplayıp doğrudan o yere bakıyor; bu yüzden dict büyüdükçe arama ortalamada yavaşlamıyor.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="5A" data-src="S51" data-topic="dict">
@@ -4671,7 +4637,6 @@ print(swaps["Space"])
 <figcaption class="focal">Ders 4'teki on bir dal, tek bir dict oldu.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Süslü parantez açık kaldıkça Python satırın bittiğini düşünmez, bu yüzden bir dict birkaç satıra bölünebilir. 4.00 yazdık, Python 4.0 diye saklar; değer aynı.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): GRADE_POINTS = {"A1": 4.00, "A2": 3.75, "A3": 3.50, "B1": 3.25, "B2": 3.00, "B3": 2.75, "C1": 2.50, "C2": 2.25, "C3": 2.00, "D": 1.75, "F1": 0.00, "F2": 0.00, "F3": 0.00, "F6": 0.00} print(GRADE_POINTS["B1"]) | Çıktı (Python 3.14.8; şeklin içinde): 3.25 -->
 </section>
 
@@ -4810,7 +4775,6 @@ print(GRADE_POINTS["A1"] == MAX_GPA)
 </div>
 <p class="focal span">Hiç değişmeyecek değerlerin adı, PEP 8 geleneğiyle büyük harfle yazılır.</p>
   </div>
-  <aside class="notes">Ders 1'de MAX_GPA ile başlayan gelenek: PEP 8'e göre değişen isimler küçük harf ve alt çizgiyle yazılır, latest_grade gibi; hiç değişmeyecek değerler büyük harfle. Python bunu zorlamaz, GRADE_POINTS["A1"] = 5.0 yazsanız hata vermez; ama okuyan herkes bu tabloya dokunulmayacağını anlar.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="5A" data-src="S53" data-topic="dict">
@@ -4945,7 +4909,6 @@ print(GRADE_POINTS["A1"] == MAX_GPA)
 <figcaption class="focal">in yalnızca key'lere bakar, value'lara bakmaz.</figcaption>
 </figure>
   </div>
-  <aside class="notes">in, dict'te yalnızca key sütununa bakar. B2 tabloda var ama value sütununda; in onu görmez ve False verir.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): grades = {"MAT123": "C1", "FIZ127": "B2"} print("FIZ127" in grades, "B2" in grades) | Çıktı (Python 3.14.8; şeklin içinde): True False -->
 </section>
 
@@ -5241,8 +5204,6 @@ print(grades)
 <figcaption class="focal">Var olan bir key'e atama, eski value'nun üstüne yazar.</figcaption>
 </figure>
   </div>
-  <aside class="notes">İsmi latest_grade koyduk, çünkü Hacettepe'nin kuralı da bu: tekrar alınan derste son not geçerlidir.<br>
-Sınıfa: transcript.txt'deki iki BBM101 satırı dict'te kaç satır olur? (beklenen: bir; ikinci atama birincinin üstüne yazar)</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): latest_grade = {} # 1 latest_grade["BBM101"] = "F3" # 2 print(latest_grade) latest_grade["BBM101"] = "A3" # 3 print(latest_grade) | Çıktı (Python 3.14.8; şeklin içinde): {'BBM101': 'F3'} {'BBM101': 'A3'} -->
 </section>
 
@@ -5328,7 +5289,6 @@ Sınıfa: transcript.txt'deki iki BBM101 satırı dict'te kaç satır olur? (bek
       <p class="focal">Zam gelince usta yeni satır açmaz, eski fiyatın üstüne yazar.</p>
     </div>
   </div>
-  <aside class="notes">Benzetmenin bittiği yer: panoda eski fiyat karalamanın altında hala görünür; dict'te eski value tamamen gider, geri getirmenin yolu yok.</aside>
 </section>
 
 <section class="s-demo" data-half="5A" data-src="S57" data-topic="dict">
@@ -5336,7 +5296,6 @@ Sınıfa: transcript.txt'deki iki BBM101 satırı dict'te kaç satır olur? (bek
   <div class="content l-full">
     <div class="trace" data-trace="traces/ders5-latest-grade.json" data-labels="frames objects"></div>
   </div>
-  <aside class="notes">Adım 2'de latest_grade boş bir dict'i gösteriyor. Adım 3'te BBM101 satırı F3 ile, Adım 4'te MAT123 satırı dict'in sonuna ekleniyor. Adım 5'te BBM101'e yeniden atama: satır yerinde kalıyor, yalnızca value A3 oluyor; dict satırları ilk eklendikleri sırada tutar. Son iki adımda çıktı geliyor, len 2.</aside>
 <!-- not spoken: Çıktı (Python 3.14.8): {'BBM101': 'A3', 'MAT123': 'C1'} 2 -->
 </section>
 
@@ -5497,7 +5456,6 @@ Sınıfa: transcript.txt'deki iki BBM101 satırı dict'te kaç satır olur? (bek
 <figcaption class="focal">get(), key yoksa hata vermez; verdiğimiz ikinci değeri döndürür.</figcaption>
 </figure>
   </div>
-  <aside class="notes">get() dict'e hiçbir şey eklemez; sonrasında GRADE_POINTS yine on dört satır. Bir key'in olup olmadığından emin değilsek get() kullanırız.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): print(GRADE_POINTS.get("B1", 0.0)) print(GRADE_POINTS.get("b1", 0.0)) | Çıktı (Python 3.14.8; şeklin içinde): 3.25 0.0 -->
 </section>
 
@@ -5620,7 +5578,6 @@ Sınıfa: transcript.txt'deki iki BBM101 satırı dict'te kaç satır olur? (bek
       <p class="focal">get(), annenin "ekmek yoksa simit al" demesi gibidir: aranan yoksa yedeği gelir.</p>
     </div>
   </div>
-  <aside class="notes">Benzetmenin bittiği yer: yedek yalnızca size verilir, dict'e eklenmez; bakkal da ekmek yerine simit satmaya başlamaz. Key varsa get() gerçek value'yu verir, yedeği hiç kullanmaz.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="5A" data-src="S60" data-topic="dict">
@@ -5776,7 +5733,6 @@ Sınıfa: transcript.txt'deki iki BBM101 satırı dict'te kaç satır olur? (bek
 <figcaption class="focal">Yedek değer verilmezse get() None döndürür.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Yedek verilmezse None gelir, 0 değil. Sayarken bu yüzden yedeği açıkça yazacağız: get(g, 0).</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): print(GRADE_POINTS.get("b1")) | Çıktı (Python 3.14.8; şeklin içinde): None -->
 </section>
 
@@ -5795,7 +5751,6 @@ print(grades["mat123"])
 </figure>
 <p class="focal">Olmayan bir key KeyError verir; mat123 ile MAT123 farklıdır.</p>
   </div>
-  <aside class="notes">Son satırda aranan key tırnaklarıyla yazılı: 'mat123'. Python büyük ve küçük harfi ayırır; MAT123 var, mat123 yok. Üç çözüm var: key'i doğru yazmak, emin değilsek önce in ile sormak ya da get() kullanmak, kullanıcıdan gelen kodu upper() ile büyütmek.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="5A" data-src="S62" data-topic="dict">
@@ -5949,7 +5904,6 @@ print(grades["mat123"])
 <figcaption class="focal">Key şimdilik değişmez bir değer olmalı: str, int ve tuple olur, list olmaz.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Kırmızı kutuda traceback'in son satırı, iki satıra bölünmüş: list bir dict key'i olarak kullanılamaz, çünkü unhashable. Python key'den yerini hesaplıyordu, Luhn'un fikri; key sonradan değişebilseydi yeri de değişirdi. Aynı bilgi Ders 4'teki tuple ile yazılınca key oluyor. Şimdilik böyle söylüyorum; kuralın tam halini bu yarının sonunda vereceğim.</aside>
 <!-- not spoken: Simplification: SIMP-5.1 · "Key şimdilik değişmez bir değer olmalı: str, int ve tuple olur, list olmaz." · retired: S94, spoken in its notes (S96 left on 2026-10-13, moved/ders5-removed-2026-10-13.md; LEDGER.md SIMP-5.1) · true version: key hashable olmalı; içinde list olan bir tuple da key olamaz: d = {("BBM", [1]): 3} → TypeError: cannot use 'tuple' as a dict key (unhashable type: 'list') (3.14.8, run tuple_list_key). | Kod (şeklin içinde çizili; doğrulama için): attempts = {["BBM101", 2025]: "F3"} | Çıktı (Python 3.14.8; şeklin içinde): Traceback (most recent call last): File "…/python-kurs/example.py", line 1, in <module> attempts = {["BBM101", 2025]: "F3"} ^^^^^^^^^^^^^^^^^^^^^^^^ TypeError: cannot use 'list' as a dict key (unhashable type: 'list') -->
 </section>
 
@@ -6097,7 +6051,6 @@ print(grades["mat123"])
 <figcaption class="focal">for, dict'in key'lerini eklendikleri sırayla verir.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Bir dict'te for yalnızca key'leri verir, value'lar gelmez. Key elimizdeyse value'ya köşeli parantezle ulaşırız, print(code, grades[code]); daha okunur bir yolunu birazdan göreceğiz.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): grades = {"MAT123": "C1", "FIZ127": "B2"} for code in grades: print(code) | Çıktı (Python 3.14.8; şeklin içinde): MAT123 FIZ127 -->
 </section>
 
@@ -6561,8 +6514,6 @@ print(grades["mat123"])
       <p class="focal">Sayma, sınıf başkanlığı seçimi gibidir: isim tahtada yoksa yazılır, sonra çizik atılır.</p>
     </div>
   </div>
-  <aside class="notes">Benzetmenin bittiği yer: tahta yalnızca toplamları tutar, oy pusulalarını tutmaz; dict de öyle.<br>
-Sınıfa: Bir metinde hangi kelimenin kaç kez geçtiğini sayarken key ne olur, value ne? (beklenen: key kelime, value o kelimenin sayısı)</aside>
 </section>
 
 <section class="s-code-output" data-half="5A" data-src="S71" data-topic="dict üzerinde for, items() ve sayma" data-fit="1">
@@ -6701,7 +6652,6 @@ print(counts)
 <pre><span class="ph">&lt;sayaç&gt;</span>[<span class="ph">&lt;değer&gt;</span>] = <span class="ph">&lt;sayaç&gt;</span>.get(<span class="ph">&lt;değer&gt;</span>, 0) + 1</pre>
 </figure>
   </div>
-  <aside class="notes"><strong>Her sayım aynı kalıptır: yoksa 0'dan başla, sonra bir ekle.</strong> Satırı sağdan okuyun: değer daha önce görülmediyse get() 0 verir, görüldüyse eski sayıyı; ismi tahtaya yazan soldaki assignment.</aside>
 </section>
 
 <section class="s-demo" data-half="5A" data-src="S72" data-topic="dict üzerinde for, items() ve sayma">
@@ -6709,8 +6659,6 @@ print(counts)
   <div class="content l-full">
     <div class="trace" data-trace="traces/ders5-count.json" data-labels="frames objects"></div>
   </div>
-  <aside class="notes">Adım 4'te g B2'yi gösteriyor; Adım 5'te get 0 verdi ve B2 satırı 1 ile eklendi. Adım 6 ve 7'de A1 aynı yoldan 1 ile eklendi. Adım 8'de g yine B2; Adım 9'da get 1 verdi, satır 2 oldu, yeni satır açılmadı.<br>
-Sınıfa: letters'ın sonuna bir B2 daha eklesek counts ne olur? (beklenen: {'B2': 3, 'A1': 1})</aside>
 <!-- not spoken: Çıktı (Python 3.14.8): {'B2': 2, 'A1': 1} -->
 </section>
 
@@ -6723,7 +6671,6 @@ Sınıfa: letters'ın sonuna bir B2 daha eklesek counts ne olur? (beklenen: {'B2
     </figure>
     <p class="focal">F klavyenin tuşları, Türkçede harflerin ne sıklıkla geçtiği sayılarak dizildi.</p>
   </div>
-  <aside class="notes">1950'lerde daktilo öğretmeni İhsan Sıtkı Yener'in öncülüğündeki çalışmada iki komisyon kuruldu: biri Türkçede harflerin ne sıklıkla geçtiğini ve hangilerinin art arda geldiğini, öbürü parmakların özelliklerini inceledi. Kaynaklara göre 29.934 sözcükteki harfler sayıldı ve tuşlar bu sıklığa göre dizildi; klavye 20 Ekim 1955'te onaylandı. Komisyonun elle yaptığı iş az önceki sayma kalıbı; hacettepe üniversitesi'nde e harfi beş kez geçiyor.</aside>
 <!-- not spoken: Code (checks the count the notes give; not on the slide; the str is walked by index, DECISIONS.md "Form fields, deadline, str loops"): text = "hacettepe üniversitesi" counts = {} for i in range(len(text)): counts[text[i]] = counts.get(text[i], 0) + 1 print(counts["e"]) | Output (not on the slide): 5 -->
 </section>
 
@@ -6902,7 +6849,6 @@ Sınıfa: letters'ın sonuna bir B2 daha eklesek counts ne olur? (beklenen: {'B2
 <figcaption class="focal">2002'de spam filtreleri e-postadaki kelimeleri saydı; SpamBayes bunu Python'la yaptı.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Ağustos 2002'de Paul Graham, A Plan for Spam adlı yazısında bir spam filtresinin ilk adımını anlattı: spam ve normal e-postalarda her kelimenin kaç kez geçtiğini saymak; kendi ifadesiyle elinde iki büyük hash table vardı. Aynı ay Python geliştiricilerinin e-posta listesinde başlayan SpamBayes bu fikri Python'la geliştirdi; geliştirenler arasında Zen of Python'un yazarı Tim Peters de vardı. spam kelimesinin kendisi de Monty Python'ın 1970 tarihli Spam skecinden geliyor.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): spam = ["bedava telefon kazandınız", "bedava tatil fırsatı", "hemen tıklayın bedava hediye"] normal = ["yarın lab var", "ödev pazar günü", "lab notları ekte"] spam_counts = {} for subject in spam: for word in subject.split(): spam_counts[word] = spam_counts.get(word, 0) + 1 normal_counts = {} for subject in normal: for word in subject.split(): normal_counts[word] = normal_counts.get(word, 0) + 1 for word in ["bedava", "lab", "ödev"]: print(word, spam_counts.get(word, 0), normal_counts.get(word, 0)) | Çıktı (Python 3.14.8; şeklin içinde): bedava 3 0 lab 0 2 ödev 0 1 -->
 </section>
 
@@ -7025,7 +6971,6 @@ Sınıfa: letters'ın sonuna bir B2 daha eklesek counts ne olur? (beklenen: {'B2
 <figcaption class="focal">+= yalnızca var olan bir key'de çalışır; ilk tur KeyError verir.</figcaption>
 </figure>
   </div>
-  <aside class="notes">counts[g] += 1, counts[g] = counts[g] + 1 demek; önce sağ taraf okunur ve ilk turda B2 henüz yok. Son satır hangi key'in bulunamadığını söylüyor: 'B2'. Ders 3'te toplamı döngüden önce 0 ile başlatmayı unutmak neyse bu da o.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): counts = {} for g in ["B2", "A1", "B2"]: counts[g] += 1 | Çıktı (Python 3.14.8; şeklin içinde): Traceback (most recent call last): File "…/python-kurs/example.py", line 3, in <module> counts[g] += 1 ~~~~~~^^^ KeyError: 'B2' -->
 </section>
 
@@ -7168,7 +7113,6 @@ Sınıfa: letters'ın sonuna bir B2 daha eklesek counts ne olur? (beklenen: {'B2
 <figcaption class="focal">set, her değeri bir kez tutar; sırası ve index'i yoktur.</figcaption>
 </figure>
   </div>
-  <aside class="notes"><strong>set her değeri bir kez tutar; ona yalnızca "var mı?" diye sorarız.</strong> Küçük sayılar çıktıda sıralı görünebilir, buna güvenmeyin: str'lerden oluşan bir set'in sırası çalıştırmadan çalıştırmaya değişebilir.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): print(set([1, 2, 2, 3, 3, 3])) print(len(set([1, 2, 2, 3, 3, 3]))) | Çıktı (Python 3.14.8; şeklin içinde): {1, 2, 3} 3 -->
 </section>
 
@@ -7290,8 +7234,6 @@ Sınıfa: letters'ın sonuna bir B2 daha eklesek counts ne olur? (beklenen: {'B2
       <p class="focal">set, gezdiğiniz iller haritası gibidir: Ankara'ya on kez gitseniz de bir kez boyanır.</p>
     </div>
   </div>
-  <aside class="notes">Benzetmenin bittiği yer: haritada her ilin sabit bir yeri ve plaka numarası var; set'in elemanlarının ne yeri ne numarası var.<br>
-Sınıfa: Kaç farklı bölümden ders aldığımı bulmak için list mi kullanırım, set mi? (beklenen: set; tekrar ve sıra önemli değil)</aside>
 </section>
 
 <section class="s-connection" data-half="5A" data-src="S82" data-topic="set">
@@ -7305,7 +7247,6 @@ Sınıfa: Kaç farklı bölümden ders aldığımı bulmak için list mi kullan�
       <p class="focal">Kümenin elemanları birbirinden ayrıdır; aynı eleman iki kez bulunmaz.</p>
     </div>
   </div>
-  <aside class="notes">Georg Cantor 1895'te yayımlanan makalesinde kümeyi, algımızın ya da düşüncemizin belirli ve birbirinden ayrı nesnelerinin bir bütün halinde toplanması diye tanımladı ve süslü parantezle yazdı. Birbirinden ayrı demek, bir kümede aynı öğenin iki kez yer alamaması demek; Python'un set'i de bu tanıma uyuyor.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="5A" data-src="S83" data-topic="set">
@@ -7810,7 +7751,6 @@ print(len(departments), "BBM" in departments)
 <figcaption class="focal">Bölümleri set'e eklemek, tekrarları kendiliğinden atar.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Değer zaten varsa add() set'i değiştirmez, hata da vermez; dördüncü karede BBM ikinci kez geliyor ve set aynı kalıyor. code[:3] Ders 3'teki slicing, ders kodunun ilk üç harfi. Boş set'in neden {} ile yazılmadığını bölümün sonunda göreceğiz.</aside>
 </section>
 
 <section class="s-code-output" data-half="5A" data-src="S86" data-topic="set">
@@ -7932,7 +7872,6 @@ print(len(letters), "B2" in letters)
 </div>
 <p class="focal span">set süslü parantezle de yazılır; tekrar eden değer yine bir kez sayılır.</p>
   </div>
-  <aside class="notes">İçinde key: value çiftleri varsa dict, yalnızca değerler varsa set. İkinci C1 sessizce düşüyor, hata yok.</aside>
 </section>
 
 <section class="s-concept" data-half="5A" data-src="S90" data-topic="set">
@@ -8052,7 +7991,6 @@ print(len(letters), "B2" in letters)
       <p class="focal">İki arkadaşın haritasında mine &amp; friend ortak illeri, mine | friend hepsini, mine -⁠ friend yalnız sizinkileri verir.</p>
     </div>
   </div>
-  <aside class="notes">Benzetmenin bittiği yer: kağıt haritaları birleştirmek için birini boyarsınız; set'te bu işlemler yeni bir set yapar, mine de friend de olduğu gibi kalır.</aside>
 </section>
 
 <section class="s-figure" data-half="5A" data-src="S91" data-topic="set">
@@ -8077,7 +8015,6 @@ print(front &amp; wanted)
 </figure>
     </div>
   </div>
-  <aside class="notes">Sınıfa: Hacettepe'nin sitesinde akademik takvime kaç tıkla ulaşıyorsunuz? (beklenen: cevaplar değişir; aranan şey çoğu zaman ana sayfada değil)</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="5A" data-src="S94" data-topic="set">
@@ -8194,7 +8131,6 @@ print(front &amp; wanted)
 <figcaption class="focal">set'te index yoktur; s[0] TypeError verir.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Mesaj, set object'inin köşeli parantez almadığını söylüyor; subscriptable, köşeli parantez alabilen demek. dict bölümünde şimdilik dediğim kuralın tam hali: dict'in key'i de set'in elemanı da içinde değiştirilebilen hiçbir şey taşımamalı; içinde list olan bir tuple bile key olamaz, Python yine TypeError verir.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): s = {"BBM", "MAT"} print(s[0]) | Çıktı (Python 3.14.8; şeklin içinde): Traceback (most recent call last): File "…/python-kurs/example.py", line 2, in <module> print(s[0]) ~^^^ TypeError: 'set' object is not subscriptable -->
 </section>
 
@@ -8318,7 +8254,6 @@ print(type({}), type(set()))
 </figure>
 <p class="focal span">{} boş bir dict'tir; boş set set() ile yazılır.</p>
   </div>
-  <aside class="notes">Süslü parantez önce dict'indi; set'ler aynı parantezi sonradan aldı. Bu yüzden {} boş dict olarak kaldı, boş set ise set() ile yazılıyor.</aside>
 </section>
 
 <section class="s-poll" data-half="5A" data-src="S97" data-topic="set" data-poll-id="d5-set-bos" data-answer="1">
@@ -8344,7 +8279,6 @@ print(len(s), e == set())
       <div class="poll-bars" hidden></div>
     </div>
   </div>
-  <aside class="notes">Bölümün sorusu. Telefonunuzun kamerasını QR koda tutun, A, B, C ya da D'ye dokunun; ad ya da giriş istenmiyor. Şimdi yedi saniye kimse konuşmasın, herkes kendi cevabını seçsin. Dağılıma bakalım. Doğru cevap A şıkkı: 2 False. s set'i BBM'yi bir kez tutuyor, iki elemanı var. e ise {} ile yazıldı; o boş bir dict, boş bir set değil, bu yüzden set()'e eşit değil. D'yi seçen set'in tekrar eden BBM'yi iki kez tuttuğunu düşündü; B'yi seçen buna bir de {}'in boş set olduğunu ekledi. C'yi seçen BBM'yi doğru saydı ama {}'i boş set sandı; en sık yapılan yanlış bu.</aside>
   <!-- authoring (not shown): Verified: `2 False` (3.14.8, results.json:poll_set). -->
 </section>
 
@@ -8485,7 +8419,6 @@ print(len(s), e == set())
 <figcaption class="focal">Bu yarının sonunda programınız transcript.txt'yi okuyacak ve sonucu report.txt'ye yazacak.</figcaption>
 </figure>
   </div>
-  <aside class="notes"><strong>Aradan önce veri memory'deydi; şimdi diskten gelip diske gidiyor.</strong> Ders 1'den beri parça parça kurduğumuz AGNO programı bu yarının sonunda tamamlanıyor.</aside>
 </section>
 
 <section class="s-agenda" data-half="5B" data-src="S102">
@@ -8739,7 +8672,6 @@ print(len(s), e == set())
 <!-- /svg -->
 </figure>
   </div>
-  <aside class="notes">Elimde transkriptimin basılı bir sayfası var; transcript.txt bunun diskteki hali. Okumak satırları memory'ye kopyalar; kağıt da dosya da yerinde kalır.</aside>
 </section>
 
 <section class="s-concept" data-half="5B" data-src="S105" data-topic="File okuma">
@@ -8841,7 +8773,6 @@ print(len(s), e == set())
       <p class="focal">Dosya okumak fotokopi çekmek gibidir: kopya memory'ye gelir, asıl kağıt diskte kalır.</p>
     </div>
   </div>
-  <aside class="notes">Benzetmenin bittiği yer: fotokopi sayfanın tamamını bir kerede çeker, Python ise dosyayı satır satır, her satırı bir str olarak okur. Kopyayı değiştirmek dosyayı değiştirmez; kopya program bitince gider, ancak dosyaya yazılırsa kalır.</aside>
 </section>
 
 <section class="s-figure" data-half="5B" data-src="S106" data-topic="File okuma">
@@ -8865,7 +8796,6 @@ print(len(s), e == set())
     <p class="focal">Şimdilik grades.txt, .py dosyasıyla aynı klasörde durmalı.</p>
     <ol class="steps"><li><span class="n-sq">1</span><span>python-kurs</span></li><li><span class="n-sq">2</span><span>New (+), File</span></li><li><span class="n-sq">3</span><span>grades.txt</span></li></ol>
   </div>
-  <aside class="notes">Python File değil, düz File seçilir. Her satır bir ders: kod, kredi ve harf notu, aralarında noktalı virgül; Excel'in .csv dosyaları aynı fikirle virgül kullanır. PyCharm'da oluşturulan dosya UTF-8 kaydedilir ve Windows'taki gibi grades.txt.txt olmaz. Neden şimdilik dediğimi bölümün sonunda göreceğiz.</aside>
 <!-- not spoken: Simplification: SIMP-5.2 · "Şimdilik grades.txt, .py dosyasıyla aynı klasörde durmalı." · retired: S126 (FileNotFoundError: the working directory) · true version: yalın bir dosya adı programın working directory'sinde aranır; PyCharm'da bu, Run menüsündeki Edit Configurations penceresinin Working directory alanıdır ve varsayılan olarak .py dosyasının klasörüdür. -->
 </section>
 
@@ -9003,7 +8933,6 @@ print(len(s), e == set())
 <figcaption class="focal">with open() dosyayı açar; blok bitince kendisi kapatır.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Girintili block bitince dosyayı Python kendisi kapatır; kapatmayı unutamayız. encoding="utf-8"nin ne olduğunu birazdan göreceğiz.</aside>
 </section>
 
 <section class="s-code-output" data-half="5B" data-src="S110" data-topic="File okuma">
@@ -9291,8 +9220,6 @@ with open("grades.txt", encoding="utf-8") as f:
 <figcaption class="focal">Her satırın sonunda görünmeyen bir \n karakteri vardır.</figcaption>
 </figure>
   </div>
-  <aside class="notes">On ikinci karakter görünmüyor: satır sonu, Python'da ters bölü n diye yazılır, \n; Enter'a bastığımızda yazılan bu. print de kendi satır sonunu ekliyordu, iki satır sonu bir boş satır ediyor. Ders 1'de tırnak içinde ters bölü kullanmayın demiştim; nedeni bu: ters bölü arkasındaki harfle birlikte özel bir karakter yazar.<br>
-Sınıfa: MAT123;4;C1 on bir karakter; len(line) neden 12 diyor? (beklenen: satırın sonunda görünmeyen bir karakter, \n var)</aside>
 </section>
 
 <section class="s-code-output" data-half="5B" data-src="S113" data-topic="File okuma">
@@ -9434,7 +9361,6 @@ FIZ127;3;B2</pre>
 </figure>
 <p class="focal">strip(), satırın sonundaki \n'i siler.</p>
   </div>
-  <aside class="notes">\n de bir boşluk karakteri sayılır; strip() onu da siler.</aside>
 </section>
 
 <section class="s-connection" data-half="5B" data-src="S114" data-topic="File okuma">
@@ -9452,7 +9378,6 @@ FIZ127;3;B2</pre>
 </figure>
     </div>
   </div>
-  <aside class="notes">Dosya Hanford dedektörünün 32 saniyelik kaydı: saniyede 4096 ölçüm, yaklaşık 3 MB; ilk üç satır # ile başlayan açıklamalar. Satırları grades.txt'yi okuduğumuz kodla saydım, # ile başlayanları Ders 3'ün continue'suyla atladım: 131072 satır, 4096'ya bölünce 32 saniye. İlk ölçüm 9.0673089115923377e-21 gibi çok küçük bir sayı; float() bu metni sayıya çevirir.</aside>
 <!-- not spoken: Code (the run behind the slide's output; not on the slide): name = "H-H1_GWOSC_4KHZ_R1-1126259447-32.txt" count = 0 with open(name, encoding="utf-8") as f: for line in f: if line[0] == "#": continue count = count + 1 print(count, count / 4096) -->
 </section>
 
@@ -9594,7 +9519,6 @@ FIZ127;3;B2</pre>
 <figcaption class="focal">Bir .py file'ı da metindir; program kendini okuyabilir.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Bugünün vay anı: Run'a basınca interpreter mirror.py'yi code olarak çalıştırıyor, programın içinde aynı dosya bir kez de data olarak okunuyor. Diskte ikisi aynı şey, satırlardan oluşan bir metin dosyası; farkı onu nasıl kullandığımız yaratıyor. replace("\n", "") yalnızca satır sonunu siliyor; strip() kullansaydık baştaki girinti de silinirdi.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): # mirror.py reads itself number = 0 with open("mirror.py", encoding="utf-8") as f: for line in f: number += 1 print(number, line.replace("\n", "")) | Çıktı (Python 3.14.8; şeklin içinde): 1 # mirror.py reads itself 2 number = 0 3 with open("mirror.py", encoding="utf-8") as f: 4 for line in f: 5 number += 1 6 print(number, line.replace("\n", "")) -->
 </section>
 
@@ -9772,8 +9696,6 @@ FIZ127 6 B2</pre>
 <figcaption class="focal">split(";") satırı üç parçaya böler; parçalar str'dir.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Parçalar hep str. strip()'i unutursanız son parça C1 değil, sonunda \n olan bir str olur.<br>
-Sınıfa: Son satırda int() olmasaydı, yani credits * 2 yazsaydık ne çıkardı? (beklenen: MAT123 44 C1 ve FIZ127 33 B2; str iki kez yan yana yazılır)</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="5B" data-src="S117" data-topic="File okuma">
@@ -9925,7 +9847,6 @@ Sınıfa: Son satırda int() olmasaydı, yani credits * 2 yazsaydık ne çıkard
 <figcaption class="focal">Türkçe harfler için her zaman encoding="utf-8" yazılır.</figcaption>
 </figure>
   </div>
-  <aside class="notes">UTF-8'de İngilizce harfler bir bayt, ü ve ş gibi Türkçe harfler iki bayt. Python 3.14'te encoding yazmazsanız işletim sisteminin yerel kodlaması kullanılır; Türkçe Windows'ta bu cp1254 ve UTF-8 bir dosyadaki Büşra, BÃ¼ÅŸra olarak okunur. Mac'te ve Linux'ta yerel kodlama zaten UTF-8, sorun görünmez; herkes aynı sonucu görsün diye her zaman yazıyoruz. Python 3.15'ten itibaren varsayılan UTF-8.</aside>
 </section>
 
 <section class="s-concept" data-half="5B" data-src="S118" data-topic="File okuma">
@@ -10028,7 +9949,6 @@ Sınıfa: Son satırda int() olmasaydı, yani credits * 2 yazsaydık ne çıkard
       <p class="focal">encoding, F klavye ile Q klavye gibidir: yazanla okuyan aynı düzeni kullanmalıdır.</p>
     </div>
   </div>
-  <aside class="notes">Benzetmenin bittiği yer: klavye düzeni tuşları harflere, encoding ise baytları karakterlere eşler. İki klavyede aynı yerde duran tuşlar gibi İngilizce harfler iki encoding'de de aynı kalır; yalnızca ç, ş, ğ gibi harfler bozulur.</aside>
 </section>
 
 <section class="s-code-output" data-half="5B" data-src="S119" data-topic="File okuma">
@@ -10053,7 +9973,6 @@ MelikÅŸah</pre>
 </figure>
 <p class="focal span">UTF-8 ile yazılmış bir file cp1254 ile okununca Büşra, BÃ¼ÅŸra olur.</p>
   </div>
-  <aside class="notes">names.txt'yi derse gelmeden PyCharm'da oluşturdum, iki satır: Büşra ve Melikşah. cp1254 her baytı ayrı bir karakter sanıyor; Ş içeren bir satır ise cp1254 ile okunurken UnicodeDecodeError ile duruyor. mojibake Japoncada karakterlerin bozulması demek. Sorun yalnızca yeni başlayanların değil: en çok indirilen 4000 Python paketinin 82'si, encoding belirtmedikleri için UTF-8 olmayan dil ayarlarında kurulamıyordu.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="5B" data-src="S122" data-topic="File okuma">
@@ -10218,7 +10137,6 @@ MelikÅŸah</pre>
 <figcaption class="focal">Varsayılan mod "r", yani okuma; "w" ve "a" bir sonraki bölümde.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Şimdiden söyleyeyim: w dosyayı önce boşaltır, hiçbir şey yazılmasa bile. Okumak istediğiniz transcript.txt'yi w ile açarsanız içi silinir ve Python üzerine yazılsın mı diye sormaz.</aside>
 <!-- not spoken: Later: LATER-5.2 · "\"w\" ve \"a\" modları bir sonraki bölümde." · kept: S134 ("w") and S141 ("a") -->
 </section>
 
@@ -10379,7 +10297,6 @@ MelikÅŸah</pre>
       <p class="focal">r sayfayı okur, w sayfayı yırtıp baştan yazar, a kaldığı satırdan sürer.</p>
     </div>
   </div>
-  <aside class="notes">Benzetmenin bittiği yer: w da a da dosya yoksa onu oluşturur, sanki yeni bir bloknot açar. w ile yalnızca programın kendi ürettiği dosyayı açın, report.txt gibi; transcript.txt gibi bir girdi dosyasını asla.</aside>
 </section>
 
 <section class="s-code-output" data-half="5B" data-src="S124" data-topic="File okuma">
@@ -10401,7 +10318,6 @@ print(grades)
 </figure>
 <p class="focal">Her satır dict'e bir çift olur; boş dict döngüden önce kurulur.</p>
   </div>
-  <aside class="notes">Boş dict döngüden önce kuruluyor, Ders 3'te toplamı döngüden önce 0 ile başlattığımız gibi. print döngüden sonra ve girintisiz; dict'in son halini bir kez yazıyor. Aynı kod transcript.txt ile çalışsa BBM101'in iki satırı tek çift olurdu.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="5B" data-src="S125" data-topic="File okuma">
@@ -10620,7 +10536,6 @@ with open("missing.txt", encoding="utf-8") as f:
 </figure>
 <p class="focal">Dosya yoksa ya da başka klasördeyse bu hata gelir.</p>
   </div>
-  <aside class="notes">Son satır her şeyi söylüyor: böyle bir dosya ya da klasör yok, adı da tırnak içinde. Üç olası neden var: dosya gerçekten yok; adı farklı, grades.txt.txt gibi ya da büyük harfle; ya da dosya başka bir klasörde. Şimdilik dediğim kuralın tam hali: Python yalın bir dosya adını programın working directory'sinde arar; PyCharm'da bu, Run menüsündeki Edit Configurations penceresinin Working directory alanı ve varsayılanı .py dosyanızın klasörü.</aside>
 </section>
 
 <section class="s-code-output" data-half="5B" data-src="S127" data-topic="File okuma">
@@ -11016,7 +10931,6 @@ except FileNotFoundError:
 <!-- /svg -->
 </figure>
   </div>
-  <aside class="notes"><strong>Okumak diskten memory'ye kopyalar; yazmak memory'den diske kaydeder.</strong> Program kapanınca gpa silinir, report.txt kalır. Şimdilik write()'ın sonucu memory'den dosyaya yazdığını söyleyelim; tam olarak ne zaman yazdığını bölümün sonunda göreceğiz. Ders 1'de dosyaya yazmayı Ders 5'te göreceğimizi söylemiştim; o söz bu bölümde tutuluyor.</aside>
 <!-- not spoken: Later: LATER-1.5 (ders1 S14, spoken) · "Bir şeyi kalıcı saklamayı Ders 5'te, dosyaya yazarak göreceğiz." · kept here; closed. | Simplification: SIMP-5.3 · Şimdilik write(), sonucu memory'den diskteki file'a yazar. · retired: S143 · true version: write() yazdıklarını önce memory'de biriktirir; with block'u bitip file kapanınca hepsi diske geçer. -->
 </section>
 
@@ -11125,7 +11039,6 @@ except FileNotFoundError:
       <p><code>report.txt</code>, <code>log.txt</code>, <code>history.txt</code></p>
     </div>
   </div>
-  <aside class="notes">Benzetmenin bittiği yer: memory yalnızca elektrik gidince değil, her program bitişinde boşalır. Diske yalnızca bizim write() ile yazdığımız gider.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="5B" data-src="S134" data-topic="File&#x27;a yazma">
@@ -11455,7 +11368,6 @@ except FileNotFoundError:
       <p class="focal">"w", "Üzerine yazılsın mı?" diye sormayan bir Kaydet düğmesi gibidir.</p>
     </div>
   </div>
-  <aside class="notes">Word'de Kaydet'e basınca bazen üzerine yazılsın mı diye sorar; Python sormaz. w, open() satırı çalıştığı anda dosyayı boşaltır: içinde eski yazan bir log.txt'yi w ile açıp hiçbir şey yazmadan kapatınca dosya bomboş kalır.</aside>
 </section>
 
 <section class="s-code-output" data-half="5B" data-src="S136" data-topic="File&#x27;a yazma">
@@ -11576,7 +11488,6 @@ with open("report.txt", "w", encoding="utf-8") as f:
 </figure>
 <p class="focal">write() ekrana değil, file'a yazar.</p>
   </div>
-  <aside class="notes">Run penceresinde Process finished satırından başka hiçbir şey çıkmıyor; çıktı report.txt'de. Satırın sonundaki \n, okurken strip() ile sildiğimiz satır sonu; bu kez onu biz yazıyoruz.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="5B" data-src="S137" data-topic="File&#x27;a yazma">
@@ -11725,7 +11636,6 @@ with open("codes.txt", encoding="utf-8") as f:
 <figcaption class="focal">write() satır sonu eklemez; iki yazı yan yana birleşir.</figcaption>
 </figure>
   </div>
-  <aside class="notes">print her seferinde kendi satır sonunu ekler; write eklemez, ne verirseniz yalnızca onu yazar. Yeni bir dosya adı kullandık, codes.txt: elle oluşturduğunuz grades.txt w ile açılırsa içi silinir.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="5B" data-src="S138" data-topic="File&#x27;a yazma">
@@ -11875,7 +11785,6 @@ FIZ127</pre>
 <figcaption class="focal">Her satırın sonuna \n'i kendimiz yazarız.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Sınıfa: \n'i yalnızca ikinci write'a koysaydık okuma loop'u ne yazardı? (beklenen: MAT123FIZ127; ilk iki yazı yine birleşir)</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="5B" data-src="S139" data-topic="File&#x27;a yazma">
@@ -12175,8 +12084,6 @@ with open("log.txt", encoding="utf-8") as f:
 <figcaption class="focal">"w" ile iki kez çalışan program da tek satır bırakır.</figcaption>
 </figure>
   </div>
-  <aside class="notes">İkinci çalıştırma dosyayı önce boşalttı, sonra yine spam yazdı. spam ve eggs Python belgelerindeki örnek isimler: Python'un adının geldiği Monty Python'ın bir skecinde menüdeki her yemekte spam vardı.<br>
-Sınıfa: Bu programı üç kez çalıştırsak log.txt'de kaç satır olur? (beklenen: bir; w her seferinde önce boşaltır)</aside>
 <!-- not spoken: Çıktı (Python 3.14.8; şeklin Çıktı panelinde): spam -->
 </section>
 
@@ -12504,7 +12411,6 @@ with open("log.txt", encoding="utf-8") as f:
 <figcaption class="focal">"a" ile iki kez çalışan program iki satır bırakır.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Her satırı \n ile bitirmek burada da şart; yoksa iki çalıştırmanın yazısı birbirine yapışır: spamspam.</aside>
 <!-- not spoken: Çıktı (Python 3.14.8; şeklin Çıktı panelinde): spam spam -->
 </section>
 
@@ -12515,7 +12421,6 @@ with open("log.txt", encoding="utf-8") as f:
     <p class="focal">Yazılan file, .py dosyasıyla aynı klasörde görünür.</p>
     <ol class="steps"><li><span class="n-sq">1</span><span>python-kurs</span></li><li><span class="n-sq">2</span><span>log.txt</span></li><li><span class="n-sq">3</span><span>Reload All from Disk</span></li></ol>
   </div>
-  <aside class="notes">PyCharm yeni dosyayı bazen hemen göstermez; o zaman File menüsünden Reload All from Disk. Bölümün başında şimdilik dediğimin tam hali: write() yazdıklarını önce memory'de biriktirir, with block'u bitip dosya kapanınca hepsi diske geçer; bu yüzden dosyayı block bittikten sonra okuyoruz.</aside>
 </section>
 
 <section class="s-error" data-half="5B" data-src="S144" data-topic="File&#x27;a yazma">
@@ -12650,7 +12555,6 @@ with open("log.txt", encoding="utf-8") as f:
 <figcaption class="focal">write() yalnızca str alır; sayıyı f-string ile yazın.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Son satırı okuyun: write()'ın argument'ı str olmalı, int değil; print(12) çalışıyordu, f.write(12) çalışmıyor. Çözüm Ders 2'den, f-string: f"Kredi: {credits}\n". Hata with block'unun içinde çıktı ama open() satırı çoktan çalışmıştı; w dosyayı boşalttı ve report.txt boş kaldı.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): credits = 12 with open("report.txt", "w", encoding="utf-8") as f: f.write(credits) | Çıktı (Python 3.14.8; şeklin içinde): Traceback (most recent call last): File "…/python-kurs/example.py", line 3, in <module> f.write(credits) ~~~~~~~^^^^^^^^^ TypeError: write() argument must be str, not int -->
 </section>
 
@@ -12666,7 +12570,6 @@ with open("log.txt", encoding="utf-8") as f:
       <p><code>open("log.txt", "a", encoding="utf-8")</code></p>
     </div>
   </div>
-  <aside class="notes">Ritchie ve Thompson'ın 1974 tarihli makalesine göre Unix bir dosyaya hiçbir yapı dayatmaz: metin dosyası, satırları satır sonu karakteriyle ayrılmış bir karakter akışıdır, bugün \n dediğimiz karakterle. C'nin fopen()'ı dosyayı r, w ya da a ile açar: w dosyayı sıfır uzunluğa indirir ya da yoksa oluşturur, a yazılanları sonuna ekler; Python'un open()'ı bu harfleri oradan aldı. Fotoğraftaki makine Viyana Teknik Müzesi'ndeki bir PDP-11/40; 1974 makalesindeki Unix bu modelde çalışıyordu, ama müzedeki makine o sistemin kendisi değil.</aside>
 </section>
 
 <section class="s-poll" data-half="5B" data-src="S146" data-topic="File&#x27;a yazma" data-poll-id="d5-yazma" data-answer="3">
@@ -12696,7 +12599,6 @@ iki
       <div class="poll-bars" hidden></div>
     </div>
   </div>
-  <aside class="notes">Bölümün sorusu. Telefonunuzun kamerasını QR koda tutun, A, B, C ya da D'ye dokunun; ad ya da giriş istenmiyor. Şimdi yedi saniye kimse konuşmasın, herkes kendi cevabını seçsin. Dağılıma bakalım. Doğru cevap C şıkkı: yalnızca iki. Ekrana yalnızca print yazar; iki write test.txt'ye gider. A'yı seçen write'ın da ekrana yazdığını düşündü. B'yi seçen write'ı print gibi gördü ve her birinin ayrı satıra yazdığını düşündü. D'yi seçen with block'unun içinde print'in çalışmadığını düşündü; çalışır. test.txt'de ise birüç var, tek satır, çünkü bir'in sonunda \n yok.</aside>
 <!-- not spoken: Çıktı (Python 3.14.8, slaytta gösterilmez): iki -->
 </section>
 
@@ -12952,7 +12854,6 @@ iki
 <!-- /svg -->
 </figure>
   </div>
-  <aside class="notes">Program önce GRADE_POINTS'i ve iki function'ı kuruyor, sonra transcript.txt'yi bir try'ın içinde satır satır okuyup latest_grade'e koyuyor; notu boş olan satırın notu None oluyor, BBM101'in ikinci satırı birincinin üstüne yazıyor. Ardından report.txt'yi w ile açıp items() ile her dersi dolaşıyor: code[:3] set'e giriyor, notu None olan ders devam ediyor diye yazılıp continue ile atlanıyor, kalanların puanı ve kredisi toplanıyor. En son AGNO hesaplanıp dosyaya ve ekrana yazılıyor, report.txt de geri okunuyor.</aside>
 <!-- not spoken: Later: LATER-5.1 · "File okuma ve yazma aradan sonra; programı 5B'nin sonunda birlikte kuracağız." · kept here (reading from section 6, writing from section 7, the live assembly on this slide); closed. | Çıktı (Python 3.14.8; şeklin içinde): 5 ders, 1 devam ediyor, 4 bölüm, AGNO: 3.08 MAT123 4 C1 True FIZ127 3 B2 True BBM101 3 A3 True TKD103 2 A2 True BBM102 3 devam ediyor AGNO: 3.08 | Code (word for word the Code field of S3; not typeset on this slide): GRADE_POINTS = {"A1": 4.00, "A2": 3.75, "A3": 3.50, "B1": 3.25, "B2": 3.00, "B3": 2.75, "C1": 2.50, "C2": 2.25, "C3": 2.00, "D": 1.75, "F1": 0.00, "F2": 0.00, "F3": 0.00, "F6": 0.00} def weighted_points(credits, grade): return credits * GRADE_POINTS[grade] def has_passed(grade): return GRADE_POINTS[grade] >= 1.75 latest_grade = {} try: with open("transcript.txt", encoding="utf-8") as f: for line in f: code, credits, grade = line.strip().split(";") if grade == "": grade = None # devam eden ders latest_grade[code] = (int(credits), grade) # son not geçerli except FileNotFoundError: print("transcript.txt bulunamadı") if len(latest_grade) == 0: print("Hesaplanacak ders yok.") else: total_points = 0 total_credits = 0 ongoing = 0 departments = set() with open("report.txt", "w", encoding="utf-8") as report: for code, course in latest_grade.items(): credits, grade = course departments.add(code[:3]) if grade is None: ongoing += 1 report.write(f"{code} {credits} devam ediyor\n") continue total_points += weighted_points(credits, grade) total_credits += credits report.write(f"{code} {credits} {grade} {has_passed(grade)}\n") gpa = total_points / total_credits report.write(f"AGNO: {gpa:.2f}\n") print(f"{len(latest_grade)} ders, {ongoing} devam ediyor, {len(departments)} bölüm, AGNO: {gpa:.2f}") with open("report.txt", encoding="utf-8") as f: for line in f: print(line.strip()) -->
 </section>
 
@@ -13133,7 +13034,6 @@ iki
 <!-- /svg -->
 </figure>
   </div>
-  <aside class="notes">Sınıfa: Bu programın hangi satırları Ders 1'deki bilgiyle de yazılabilirdi? (beklenen: gpa = total_points / total_credits gibi aritmetik satırlar)</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="5B" data-src="S151" data-topic="Hedef program">
@@ -13496,8 +13396,6 @@ iki
 <figcaption class="focal">Yapay zeka bir kapı, ama tek kapı değil.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Yapay zeka kapısının ilk adımı DeepLearning.AI'ın AI Python for Beginners dersi: bu kursta gördüklerimizin üstüne Python'dan bir yapay zeka modelini çağırmayı ekliyor, kayıt ücretsiz. Altı kapının da ilk adımı Ek kaynaklar sayfasında.<br>
-Sınıfa: Bu kapılardan hangisini açmak isterdiniz, neden? (beklenen: her cevap olur)</aside>
 </section>
 
 <section class="s-code-output" data-half="5B" data-src="S157" data-topic="Python&#x27;dan ilerisi">
@@ -13529,7 +13427,6 @@ plt.savefig("grades.png", dpi=200,
 <p>Python for Everybody (Ek kaynaklar)</p>
 </div>
   </div>
-  <aside class="notes">matplotlib Python'la birlikte gelmiyor, ayrıca kurulur; kod bu yüzden bir önizleme, plt ile başlayan satırlar yeni. Program ekrana hiçbir şey yazmıyor; çıktısı grades.png dosyası, report.txt gibi diske yazılıyor. Python for Everybody, Charles Severance'ın ücretsiz kitabı; alt başlığı Exploring Data in Python 3.</aside>
 </section>
 
 <section class="s-connection" data-half="5B" data-src="S158" data-topic="Python&#x27;dan ilerisi">
@@ -13544,7 +13441,6 @@ plt.savefig("grades.png", dpi=200,
       <p><code>pip install matplotlib</code></p>
     </div>
   </div>
-  <aside class="notes">PyPI, yani Python Package Index, Python için yazılmış paketlerin toplandığı resmi depo; pip install paketleri buradan indirir. 2002'de PEP 301 ile kuruldu ve uzun yıllar Cheese Shop takma adıyla anıldı; LWN'in aktardığına göre bu adı Barry Warsaw koydu. Cheese Shop, Monty Python's Flying Circus'ın 1972'de yayımlanan bir skeci: John Cleese'in oynadığı müşteri, Michael Palin'in dükkanında saydığı her peyniri ister ama dükkanda hiç peynir yoktur; fotoğrafta Palin en solda, Cleese en sağda. Adın, deponun ilk yıllarda boş olmasından geldiğini söyleyen bir kaynak yok.</aside>
 </section>
 
 <section class="s-code-output" data-half="5B" data-src="S159" data-topic="Python&#x27;dan ilerisi">
@@ -13764,7 +13660,6 @@ print(len(latest_grade), "file yazıldı")
       <p>Form: <a href="https://forms.gle/GoDQP1oTpEdeC2RD6">forms.gle/GoDQP1oTpEdeC2RD6</a></p>
     </div>
   </div>
-  <aside class="notes">Ödev 5 tek bir odev5.py dosyası; GitHub'daki ödev reposunda, turtle komutları da reponun README'sinde. Beş görev var: dersi bul, kelime sayma, alfabenin harfleri, not dökümü dosyası ve kahve falı; isteyene bir de fal.txt'yi okuyup kaç fala ve kaç farklı kişiye bakıldığını bir set ile sayan Meraklısına görevi. Formda isminizi yazıp dosyayı Ödev dosyası alanına yüklüyorsunuz ve onay kutusunu işaretliyorsunuz; Açıklama isteğe bağlı. Son gün 22 Kasım Pazar, 23.59; Ödev 5'ten sonra ders yok, final sınavıyla ilgili ayrıntılar daha sonra paylaşılacak.</aside>
 </section>
 
 <section class="s-videos" data-half="5B" data-src="S163">
@@ -13781,7 +13676,6 @@ print(len(latest_grade), "file yazıldı")
   <div class="content l-table is-short ab-short ab-4">
     <ol class="steps"><li><span class="n-sq">1</span><span>Problemi adım adım koda çevirmek</span></li><li><span class="n-sq">2</span><span>Error message okuyup düzeltmek</span></li><li><span class="n-sq">3</span><span>dict ve set ile bulmak ve saymak</span></li><li><span class="n-sq">4</span><span>Dosyadan okuyup dosyaya yazmak</span></li></ol>
   </div>
-  <aside class="notes">Dersin başındaki cümleyle bitireyim: <strong>Program biter, memory boşalır; file'a yazdığınız kalır.</strong> Bu beş haftada yazdığınız kodlar da python-kurs klasörünüzde duruyor. Kapanmadan falınıza baktım: önünüzde uzun bir yol ve bol Python var. Sizinle bu beş haftayı geçirmek çok keyifliydi; yolunuz açık olsun.</aside>
 </section>
 
 <section class="s-section" data-half="5B" data-src="S302" data-topic="Çalışma soruları" data-background-color="#181C3E">

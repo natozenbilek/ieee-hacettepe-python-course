@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 260" width="1152" height="260" role="img" aria-labelledby="ders2-method-anatomy-t ders2-method-anatomy-d">
   <title id="ders2-method-anatomy-t">Method çağrısının parçaları</title>
-  <desc id="ders2-method-anatomy-d">Gri kod panelinde "bbm101".upper() ifadesi; "bbm101" str (yeşil). Numaralı işaretler: 1 "bbm101", değer; 2 nokta; 3 upper, method'un adı; 4 parantezler. Sağa giden ok, çivit mavisi çerçeveli açık mavi bir bandın içindeki yeni "BBM101" değerine (str, yeşil) varır; yanında yeni str yazar, altında type etiketi str. En altta Çıktı panelinde BBM101. "bbm101" (str, yeşil), nokta, upper ve parantezler; ok yeni "BBM101" değerine (str, yeşil) gidiyor.</desc>
-  <!-- source: ders2-A.md S72: print("bbm101".upper()) -> BBM101; repr -> 'BBM101' (Python 3.14.8, 2026-10-11) -->
+  <desc id="ders2-method-anatomy-d">Gri kod panelinde "mat101".upper() ifadesi; "mat101" str (yeşil). Numaralı işaretler: 1 "mat101", değer; 2 nokta; 3 upper, method'un adı; 4 parantezler. Sağa giden ok, çivit mavisi çerçeveli açık mavi bir bandın içindeki yeni "MAT101" değerine (str, yeşil) varır; yanında yeni str yazar, altında type etiketi str. En altta Çıktı panelinde MAT101. "mat101" (str, yeşil), nokta, upper ve parantezler; ok yeni "MAT101" değerine (str, yeşil) gidiyor.</desc>
+  <!-- source: ders2-A.md S72: print("mat101".upper()) -> MAT101; repr -> 'MAT101' (Python 3.14.8, 2026-10-11) ; course code changed from BBM101 to MAT101 on 2026-10-21 (Nezih: "BBM101 yerine MAT101 olsun ders kodu örneği"), outputs re-run on 3.14.8 -->
   <defs>
     <marker id="ders2-method-anatomy-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
     <style>
@@ -87,7 +87,7 @@
   </defs>
   <rect class="bg" width="1152" height="260"/>
   <rect class="soft" x="180" y="46" width="308.8" height="56" rx="4"/>
-  <text class="cd" x="200" y="84"><tspan class="t-str">"bbm101"</tspan>.upper()</text>
+  <text class="cd" x="200" y="84"><tspan class="t-str">"mat101"</tspan>.upper()</text>
   <circle class="co" cx="267.2" cy="20" r="18"/>
   <text class="co-t" x="267.2" y="28">1</text>
   <text class="lb end" x="241.2" y="28">değer</text>
@@ -105,10 +105,10 @@
   <path class="ar" d="M488.8,74 H691" marker-end="url(#ders2-method-anatomy-ah)"/>
   <rect class="boxhl" x="694" y="40" width="178" height="68" rx="10"/>
   <rect class="box t-str" x="700" y="46" width="166" height="56" rx="6"/>
-  <text class="cd mid t-str" x="783" y="84">"BBM101"</text>
+  <text class="cd mid t-str" x="783" y="84">"MAT101"</text>
   <text class="ty mid t-str" x="783" y="138">str</text>
   <text class="lb" x="892" y="82">yeni str</text>
   <text class="lb sub end" x="684" y="240">Çıktı</text>
   <rect class="outp" x="700" y="200" width="166" height="56" rx="4"/>
-  <text class="cd mid" x="783" y="238">BBM101</text>
+  <text class="cd mid" x="783" y="238">MAT101</text>
 </svg>

@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 260" width="1152" height="260" role="img" aria-labelledby="ders2-in-str-t ders2-in-str-d">
-  <title id="ders2-in-str-t">in: "BBM" ve "bbm", "BBM101" içinde</title>
-  <desc id="ders2-in-str-d">BBM101'in altı harfi (str, yeşil); BBM ilk üç harfte geçer, True; bbm geçmez, False (bool, deniz yeşili). İki satırda da BBM101'in altı harfi yan yana yeşil kutularda: B, B, M, 1, 0, 1. Birinci satırın solunda "BBM" in; ilk üç kutu B, B, M kalın çivit mavisi çerçeveyle vurgulu, üstlerinde bir köşeli çizgi ve "burada geçiyor"; sağda bir ok ve True. İkinci satırın solunda "bbm" in; hiçbir kutu vurgulu değil, altında "küçük harfle hiçbir yerde yok"; sağda bir ok ve False.</desc>
-  <!-- source: ders2-B.md S16; print("BBM" in "BBM101", "bbm" in "BBM101") -> True False (Python 3.14.8, 2026-10-11) -->
+  <title id="ders2-in-str-t">in: "MAT" ve "mat", "MAT101" içinde</title>
+  <desc id="ders2-in-str-d">MAT101'in altı harfi (str, yeşil); MAT ilk üç harfte geçer, True; mat geçmez, False (bool, deniz yeşili). İki satırda da MAT101'in altı harfi yan yana yeşil kutularda: M, A, T, 1, 0, 1. Birinci satırın solunda "MAT" in; ilk üç kutu M, A, T kalın çivit mavisi çerçeveyle vurgulu, üstlerinde bir köşeli çizgi ve "burada geçiyor"; sağda bir ok ve True. İkinci satırın solunda "mat" in; hiçbir kutu vurgulu değil, altında "küçük harfle hiçbir yerde yok"; sağda bir ok ve False.</desc>
+  <!-- source: ders2-B.md S16; print("MAT" in "MAT101", "mat" in "MAT101") -> True False (Python 3.14.8, 2026-10-11) ; course code changed from BBM101 to MAT101 on 2026-10-21 (Nezih: "BBM101 yerine MAT101 olsun ders kodu örneği"), outputs re-run on 3.14.8 -->
   <defs>
     <marker id="ders2-in-str-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
     <style>
@@ -94,13 +94,13 @@
   <rect class="cell t-str" x="564" y="44" width="88" height="64"/>
   <rect class="cell t-str" x="652" y="44" width="88" height="64"/>
   <rect class="cell t-str" x="740" y="44" width="88" height="64"/>
-  <text class="cd mid t-str" x="344" y="86">B</text>
-  <text class="cd mid t-str" x="432" y="86">B</text>
-  <text class="cd mid t-str" x="520" y="86">M</text>
+  <text class="cd mid t-str" x="344" y="86">M</text>
+  <text class="cd mid t-str" x="432" y="86">A</text>
+  <text class="cd mid t-str" x="520" y="86">T</text>
   <text class="cd mid t-str" x="608" y="86">1</text>
   <text class="cd mid t-str" x="696" y="86">0</text>
   <text class="cd mid t-str" x="784" y="86">1</text>
-  <text class="cd end" x="280" y="86"><tspan class="t-str">"BBM"</tspan> in</text>
+  <text class="cd end" x="280" y="86"><tspan class="t-str">"MAT"</tspan> in</text>
   <path class="ar" d="M842,76 H937" marker-end="url(#ders2-in-str-ah)"/>
   <rect class="box t-bool" x="940" y="48" width="116" height="56" rx="6"/>
   <text class="cd mid t-bool" x="998" y="86">True</text>
@@ -111,13 +111,13 @@
   <rect class="cell t-str" x="564" y="150" width="88" height="64"/>
   <rect class="cell t-str" x="652" y="150" width="88" height="64"/>
   <rect class="cell t-str" x="740" y="150" width="88" height="64"/>
-  <text class="cd mid t-str" x="344" y="192">B</text>
-  <text class="cd mid t-str" x="432" y="192">B</text>
-  <text class="cd mid t-str" x="520" y="192">M</text>
+  <text class="cd mid t-str" x="344" y="192">M</text>
+  <text class="cd mid t-str" x="432" y="192">A</text>
+  <text class="cd mid t-str" x="520" y="192">T</text>
   <text class="cd mid t-str" x="608" y="192">1</text>
   <text class="cd mid t-str" x="696" y="192">0</text>
   <text class="cd mid t-str" x="784" y="192">1</text>
-  <text class="cd end" x="280" y="192"><tspan class="t-str">"bbm"</tspan> in</text>
+  <text class="cd end" x="280" y="192"><tspan class="t-str">"mat"</tspan> in</text>
   <path class="ar" d="M842,182 H937" marker-end="url(#ders2-in-str-ah)"/>
   <rect class="box t-bool" x="940" y="154" width="116" height="56" rx="6"/>
   <text class="cd mid t-bool" x="998" y="192">False</text>

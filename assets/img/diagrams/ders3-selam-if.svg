@@ -1,11 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 368 300" width="368" height="300" role="img" aria-labelledby="ders3-selam-if-t ders3-selam-if-d">
   <title id="ders3-selam-if-t">if ve Selam: boş cevap</title>
-  <desc id="ders3-selam-if-d">Boş cevap için izlenen küçük akış şeması: name = "" kutusu ("" yeşil, str), name == "" karar baklavası. Petrol mavisi True oku name = "millet" kutusuna gider; kutu açık mavi, çivit mavisi çerçeveli, "millet" yeşil (str). Oradan print(f"Selam {name}") kutusuna. Gri False oku baklavanın sağından aşağı inip doğrudan print kutusuna girer (boş cevapta kullanılmadı).</desc>
-  <!-- source: selam: name = "" -&gt; Selam millet; with Mehmet -&gt; Selam Mehmet (Python 3.14.8, 2026-10-11) -->
+  <desc id="ders3-selam-if-d">Boş cevap için izlenen küçük akış şeması: name = "" kutusu ("" yeşil, str), name == "" karar baklavası. Petrol mavisi True oku baklavanın sağından çıkıp aşağıdaki name = "millet" kutusuna iner; kutu açık mavi, çivit mavisi çerçeveli, "millet" yeşil (str). Oradan print(f"Selam {name}") kutusuna. Gri False oku baklavanın altından doğrudan print kutusuna iner (boş cevapta kullanılmadı).</desc>
+  <!-- source: selam: name = "" -&gt; Selam millet; with Mehmet -&gt; Selam Mehmet (Python 3.14.8, 2026-10-22). True right, False down (2026-10-22, last small fixes) -->
   <defs>
     <marker id="ders3-selam-if-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
     <marker id="ders3-selam-if-ahm" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-m" d="M0,0 L12,6 L0,12 z"/></marker>
     <marker id="ders3-selam-if-ahok" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-ok" d="M0,0 L12,6 L0,12 z"/></marker>
+    <marker id="ders3-selam-if-aherr" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-err" d="M0,0 L12,6 L0,12 z"/></marker>
     <style>
 /* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
 .dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
@@ -85,23 +86,21 @@
 .dg rect.t-set,.dg path.t-set,.dg circle.t-set{fill:#F2F8D6;fill:var(--t-set-bg,#F2F8D6);stroke:#747C42;stroke:var(--t-set,#747C42)}
 .dg text.t-set,.dg tspan.t-set{fill:#3F4418;fill:var(--t-set-tx,#3F4418)}
 .dg rect.boxhl,.dg path.boxhl,.dg rect.cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595)}
-/* kod PyCharm gibi: ligature yok */
-.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-variant-ligatures:none}
     </style>
   </defs>
   <rect class="bg" width="368" height="300"/>
-  <rect class="box" x="64" y="4" width="160" height="48" rx="6"/>
-  <text class="cd24 mid" x="144" y="36">name = <tspan class="t-str">""</tspan></text>
-  <path class="ar" d="M144,52 V68" marker-end="url(#ders3-selam-if-ah)"/>
-  <polygon class="tint" points="26,114 144,71 262,114 144,157"/>
-  <text class="cd24 mid" x="144" y="122">name == ""</text>
-  <path class="ar-ok" d="M144,157 V176" marker-end="url(#ders3-selam-if-ahok)"/>
-  <text class="lb okt end" x="128" y="171">True</text>
-  <rect class="boxhl" x="26" y="179" width="236" height="48" rx="6"/>
-  <text class="cd24 mid" x="144" y="211">name = <tspan class="t-str">"millet"</tspan></text>
-  <path class="ar" d="M144,227 V244" marker-end="url(#ders3-selam-if-ah)"/>
-  <rect class="box" x="12" y="247" width="344" height="48" rx="6"/>
-  <text class="cd24 mid" x="184" y="279">print(f"Selam {name}")</text>
-  <path class="ar-m" d="M262,114 H338 V244" marker-end="url(#ders3-selam-if-ahm)"/>
-  <text class="lb sub end" x="330" y="200">False</text>
+  <rect class="box" x="32" y="2" width="160" height="48" rx="6"/>
+  <path class="ar" d="M112,50 V63" marker-end="url(#ders3-selam-if-ah)"/>
+  <polygon class="tint" points="2,108 112,66 222,108 112,150"/>
+  <path class="ar-ok" d="M222,108 H247 V169" marker-end="url(#ders3-selam-if-ahok)"/>
+  <rect class="boxhl" x="128" y="172" width="238" height="46" rx="6"/>
+  <path class="ar" d="M247,218 V247" marker-end="url(#ders3-selam-if-ah)"/>
+  <path class="ar-m" d="M112,150 V247" marker-end="url(#ders3-selam-if-ahm)"/>
+  <rect class="box" x="8" y="250" width="350" height="48" rx="6"/>
+  <text class="cd24 mid" x="112" y="34">name = <tspan class="t-str">""</tspan></text>
+  <text class="cd24 mid" x="112" y="116">name == ""</text>
+  <text class="lb okt" x="259" y="150">True</text>
+  <text class="cd24 mid" x="247" y="203">name = <tspan class="t-str">"millet"</tspan></text>
+  <text class="lb sub end" x="100" y="214">False</text>
+  <text class="cd24 mid" x="183" y="282">print(f"Selam {name}")</text>
 </svg>

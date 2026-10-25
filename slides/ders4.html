@@ -185,7 +185,6 @@
 <figcaption class="focal">Bu dersin sonunda bütün transkripti tek bir isimde tutup AGNO'yu hesaplayacaksınız.</figcaption>
 </figure>
   </div>
-  <aside class="notes"><strong>Bugün beş dersin hepsini tek bir isimde tutacağız.</strong> Ders 3'te dersleri for'un turlarında tek tek sorduk; tur bitince kod ve kredi kayboluyor, elimizde yalnızca toplamlar kalıyordu. Resimde tek isim, transcript, ve ondan çıkan tek ok var. Bugünün ana cümlesi: <strong>isim bir value'yu gösterir; bir satır ya value'yu değiştirir ya da ismin okunu taşır.</strong></aside>
 </section>
 
 <section class="s-code-output" data-half="4A" data-src="S3">
@@ -209,7 +208,6 @@ print(f"AGNO: {gpa(transcript):.2f}")
 </code></pre>
 </figure>
   </div>
-  <aside class="notes">Köşeli parantezin içindeki her satır bir ders: kod, kredi ve harf notu. Programın çalışmasını bir önceki sayfada gördük; kredi için üç yazılınca durmadı, yeniden sordu. gpa ve ask_int'i aradan sonra öğrenip programı parça parça kuracağız. Katsayılar Hacettepe yönetmeliğindeki tablodan, krediler örnek.</aside>
 <!-- not spoken: Later: LATER-4.5 (spoken) · gpa'yı, coefficient'ı ve ask_int'i aradan sonra öğrenip programı parça parça kuracağız. · kept: Ders 4, S177 (the parts of target4.py, read on the slide; no live coding since 2026-10-14, DECISIONS.md "Delivery and notes") | Output (not typeset on this slide; the run is drawn in ders4-promise.svg on S2): 4 ders, AGNO: 3.08 Yeni dersin kodu: bbm102 Kredi: üç Tam sayı girin. Kredi: 3 Harf notu: b1 5 ders, son ders BBM102 AGNO: 3.12 -->
 </section>
 
@@ -235,7 +233,6 @@ print(code[:3], code[-3:], code[1])
       <div class="poll-bars" hidden></div>
     </div>
   </div>
-  <aside class="notes">Telefonunuzun kamerasını QR koda tutun, A, B, C ya da D'ye dokunun; ad ya da giriş istenmiyor. İnternetiniz yoksa parmakla gösterin: A bir, B iki, C üç, D dört parmak. Şimdi yedi saniye kimse konuşmasın, herkes kendi cevabını seçsin. Dağılıma bakalım. Doğru cevap B şıkkı: FIZ, 127 ve I. [:3] ilk üç karakteri, [-3:] son üç karakteri alır; code[1] ise ikinci karakter, çünkü index 0'dan başlar. A şıkkı bitişin de dahil olduğunu düşünüyor; [:3] index 3'te durur, 1 dışarıda kalır. C şıkkı [-3:]'ün iki karakter aldığını düşünüyor; oysa sondan üçüncü karakterden başlayıp sona kadar gider. D şıkkı index'in 1'den başladığını düşünüyor; code[1] F değil, I.</aside>
   <!-- authoring (not shown): Verified: output `FIZ 127 I` (3.14.8, key `reentry`). -->
 </section>
 
@@ -250,7 +247,6 @@ print(code[:3], code[-3:], code[1])
       <li><span class="a-title"><span class="a-n">5.</span> Object, mutable, immutable ve aliasing</span><span class="r-ref">b = a, copy(), ==, is</span></li>
     </ol>
   </div>
-  <aside class="notes">Bugünün öne çıkan fikri 5. bölümde: b = a bir kopya değildir, aynı list'e ikinci bir isimdir.</aside>
 </section>
 
 <section class="s-section" data-half="4A" data-src="S6" data-topic="List" data-background-color="#181C3E">
@@ -405,7 +401,6 @@ print(grades)
 <!-- /svg -->
 </figure>
   </div>
-  <aside class="notes">print() list'i tek tırnakla yazar; bu Python'un tercihi, biz çift tırnak yazmaya devam ediyoruz. Value'ları şimdilik hücrelerin içine çiziyoruz; gerçek resmi 5. bölümde göreceğiz.</aside>
 <!-- not spoken: Simplification: SIMP-4.1 · "Şimdilik list'in item'larını şekillerde hücrelerin içine yazıyoruz." (the figure's bottom line says it as "Şimdilik değerleri hücrelerin içine yazıyoruz.") · retired: S75 · true version: list'in her hücresi bir reference'tır ve item'ı ayrı bir object olarak gösterir. -->
 </section>
 
@@ -547,7 +542,6 @@ print(type(grades), len(grades))
 </figure>
 <p class="focal span">List'teki her değer bir item'dır; list bir collection'dır.</p>
   </div>
-  <aside class="notes">Collection'ın karşılığı torba, Kaldıroğlu'nun kelimesi: torbaya istediğiniz kadar şey koyarsınız, elinizde yine tek bir torba olur. Benzetmenin bittiği yer: torbanın içi karışır, list'te sıra korunur; C1 hep birinci, A2 hep üçüncü kalır.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="4A" data-src="S9" data-topic="List">
@@ -716,7 +710,6 @@ print(type(grades), len(grades))
       <p class="focal">McCarthy'nin LISP'inde (LISt Processor) verinin temel biçimi list'ti.</p>
     </div>
   </div>
-  <aside class="notes">McCarthy'nin anlattığına göre list işleyen bir dil fikri 1956 yazında Dartmouth'taki yapay zeka çalışmasında doğdu. LISP'in uygulanmasına 1958 sonbaharında MIT'de başlandı, dil 1960'ta tanıtıldı. Python'un list'i LISP'ten gelmiyor; adları aynı, yapıları farklı: Python'da hücreler yan yana durur, bu yüzden grades[2]'yi okumak grades[0] kadar hızlıdır.</aside>
 </section>
 
 <section class="s-type-map" data-half="4A" data-src="S11" data-topic="List">
@@ -931,7 +924,6 @@ print(len(grades))
 </figure>
 <p class="focal span">List'te de index 0'dan başlar; -1 son item'dır.</p>
   </div>
-  <aside class="notes">Ders 3'te str için öğrendiğimiz index kuralı list'te de aynen geçerli; orada list'te de aynı kural var demiştim. Tek fark: str'nin hücresinde bir karakter, list'in hücresinde bütün bir value var; grades[0] C değil, C1.</aside>
 <!-- not spoken: Later: closes LATER-3.B2 from Ders 3 ("list'lerde de aynı index kuralı ve aynı IndexError var"); the IndexError half closes at S21. -->
 </section>
 
@@ -1102,8 +1094,6 @@ print(grades[1:], "B2" in grades)
 </figure>
 <p class="focal span">Slicing ve in, str'deki gibi çalışır.</p>
   </div>
-  <aside class="notes">str'de in bir parça arıyordu, "B" in "B2" True'ydu; list'te in bütün bir item arar.<br>
-Sınıfa: "B" in grades ne verir? (beklenen: False; B diye bir item yok)</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="4A" data-src="S15" data-topic="List">
@@ -1247,7 +1237,6 @@ C#</pre>
 </figure>
 <p class="focal span">IEEE Spectrum 2025 sıralaması bir list olsaydı, Python index 0'da dururdu.</p>
   </div>
-  <aside class="notes">Spectrum, IEEE Hacettepe'nin de bağlı olduğu IEEE'nin dergisi; sıralama 23 Eylül 2025'te yayımlandı. İnsanlar Python'a birinci der, Python sıfırıncı der. Köşeli parantez kapanmadıkça Python satırın bittiğini düşünmez; uzun list'leri böyle alt alta yazarız.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="4A" data-src="S16" data-topic="List">
@@ -1394,7 +1383,6 @@ print(["spam"] * 3)
 </figure>
 <p class="focal span">+ iki list'i arka arkaya ekler; * tekrarlar.</p>
   </div>
-  <aside class="notes">İkisi de yeni bir list yapar, eski list'ler değişmez: a = [1, 2] iken b = a + [3] yazınca a hala [1, 2]. spam, Monty Python'un en ünlü skeçlerinden birinden; Python'un belgeleri örneklerde onlara gönderme yapmayı teşvik eder.</aside>
 </section>
 
 <section class="s-figure" data-half="4A" data-src="S17" data-topic="List">
@@ -1415,7 +1403,6 @@ ballon_dor = [2009, 2010, 2011,
 </figure>
     </div>
   </div>
-  <aside class="notes">Fotoğraf, France Football gazetecileri 2019 ödülünü Messi'ye Barcelona'da getirdiğinde çekilmiş; resmi tören 2 Aralık 2019'da Paris'teydi. Sekiz Ballon d'Or bir rekor, en yakını beş ödülle Cristiano Ronaldo. Yıllar int, tırnak yok; isimde kesme işareti olamayacağı için adı ballon_dor.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="4A" data-src="S18" data-topic="List">
@@ -1607,7 +1594,6 @@ print(len("2009"))
 <!-- /svg -->
 </figure>
   </div>
-  <aside class="notes">len("2009") 4 veriyor, çünkü str'de karakter sayılır. List'teki 2009 ise tek bir item; dört rakamı ayrı sayılmaz.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="4A" data-src="S19" data-topic="List">
@@ -1799,8 +1785,6 @@ print(ballon_dor[7])
 <!-- /svg -->
 </figure>
   </div>
-  <aside class="notes">Sık yapılan yanlış, item sayısıyla son index'i karıştırmak: sekiz item var, son index 7.<br>
-Sınıfa: ballon_dor[8] ne verir? (beklenen: hata, IndexError; son index 7)</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="4A" data-src="S20" data-topic="List" data-fit="1">
@@ -1992,7 +1976,6 @@ print(ballon_dor[0:3])
 <!-- /svg -->
 </figure>
   </div>
-  <aside class="notes">Bitiş dahil değil; Ders 3'teki code[0:3] ve range ile aynı kural. [0:3] yazarsanız 2012 dışarıda kalır; kaç item geldiğini bitiş eksi başlangıç söyler.</aside>
 </section>
 
 <section class="s-error" data-half="4A" data-src="S21" data-topic="List">
@@ -2120,7 +2103,6 @@ print(ballon_dor[0:3])
 <figcaption class="focal">Son index len(grades) - 1, yani 2'dir.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Son satır: list index out of range, index aralığın dışında. Ders 3'teki str hatasının aynısı, yalnızca string yerine list yazıyor. Messi sorusunun cevabı da bu: ballon_dor[8] aynı hatayı verir.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): grades = ["C1", "B2", "A2"] print(grades[3]) | Çıktı (Python 3.14.8; şeklin içinde): Traceback (most recent call last): File "…/python-kurs/example.py", line 2, in <module> print(grades[3]) ~~~~~~^^^ IndexError: list index out of range -->
 </section>
 
@@ -2155,7 +2137,6 @@ A2</pre>
 </figure>
 <p class="focal span">for, list'in item'larını sırayla tek tek verir.</p>
   </div>
-  <aside class="notes">Ders 3'te for'un şimdilik range üzerinde dolaştığını söylemiştim; tam hali şu: for, dolaşılabilen her şeyin item'larını sırayla verir. Burada index yok, kaçıncı turda olduğumuzu bilmemiz gerekmiyor.</aside>
 <!-- not spoken: Later: closes SIMP-3.1 from Ders 3 ("şimdilik sıramız range"): for, list'i de dolaşır; tam hali, for dolaşılabilen her şeyin item'larını sırayla alır (range, list, tuple; Ders 5'te dict, set ve dosya satırları). -->
 </section>
 
@@ -2164,7 +2145,6 @@ A2</pre>
   <div class="content l-full">
     <div class="trace" data-trace="traces/ders4-for-list.json" data-labels="names values"></div>
   </div>
-  <aside class="notes">Nokta tuşuyla bir adım ileri, virgülle bir adım geri. İlk satırdan sonra İsimler sütununda grades bir list'i gösteriyor; for satırında letter önce C1'i gösteriyor ve C1 yazılıyor, sonra ok B2'ye, sonra A2'ye geçiyor. List hiç değişmedi, yalnızca letter'ın oku taşındı. Oynatıcı letter'ın gösterdiği C1'i ayrı bir kutuda çiziyor; aslında list'teki C1 ile aynı value, bunu 5. bölümde göreceğiz.</aside>
 <!-- not spoken: Çıktı (Python 3.14.8): C1 B2 A2 -->
 </section>
 
@@ -2314,8 +2294,6 @@ print(total)
 </div>
 <p class="focal span">Ders 3'teki accumulator, list üzerinde de aynı çalışır.</p>
   </div>
-  <aside class="notes">Tipik hata Ders 3'ten tanıdık: total = 0'ı loop'un içine koymak; o zaman total her turda sıfırlanır.<br>
-Sınıfa: total = 0 loop'un içinde olsaydı ne yazardı? (beklenen: 90; elimizde yalnızca son puan kalır)</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="4A" data-src="S28" data-topic="List üzerinde for ve split()">
@@ -2678,7 +2656,6 @@ print("MAT123 4 C1".split())
 <!-- /svg -->
 </figure>
   </div>
-  <aside class="notes">split() asıl str'yi değiştirmez; yeni bir list verir. Ders 5'te dosyadan okunan her satırı split() ile parçalarına ayıracağız.</aside>
 <!-- not spoken: Later: LATER-4.1 · "split() Ders 5'te dosyadan okunan satırları parçalayacak." · kept: Ders 5, file okuma -->
 </section>
 
@@ -3004,8 +2981,6 @@ print("MAT123;4;C1".split(";"))
       <p class="focal">split(), kağıt şeridini boşluklardan kesen makas gibidir; her parça yine str'dir.</p>
     </div>
   </div>
-  <aside class="notes">Makastan çıkan her parça hala kağıt: '4' de bir str. Benzetmenin bittiği yer: makas kağıdı gerçekten böler, split() ise asıl str'ye dokunmaz, yeni bir list verir.<br>
-Sınıfa: '4' * 2 ne verir? (beklenen: '44'; parça hala str, sayı için int() gerekir)</aside>
 </section>
 
 <section class="s-connection" data-half="4A" data-src="S32" data-topic="List üzerinde for ve split()">
@@ -3031,7 +3006,6 @@ print(words[1], len(words))
 </figure>
     </div>
   </div>
-  <aside class="notes">Roberto Busa, Thomas Aquinas'ın eserlerindeki her kelimenin nerede geçtiğini gösteren bir dizini 1946'da planladı ve 1949'da IBM'den Paul Tasman'la delikli kart makineleriyle çalışmaya başladı. İlk engel, metnin önce kelimelerine ayrılması gerekmesiydi. Dizin 1974 ile 1980 arasında 56 cilt, yaklaşık 70.000 sayfa olarak basıldı. Slayttaki cümle Aquinas'tan değil, Yuhanna İncili'nin Latince ilk cümlesi.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="4A" data-src="S33" data-topic="List üzerinde for ve split()" data-fit="1">
@@ -3179,7 +3153,6 @@ MAT</pre>
 <!-- /svg -->
 </figure>
   </div>
-  <aside class="notes">Son satır iki adımı art arda yapıyor: önce parts[0] MAT123'ü veriyor, sonra [:3] onun ilk üç karakterini alıyor. Ders 5'te dosyadan okuduğumuz her sayı için bu type conversion gerekecek.</aside>
 </section>
 
 <section class="s-error" data-half="4A" data-src="S34" data-topic="List üzerinde for ve split()">
@@ -3307,7 +3280,6 @@ MAT</pre>
 <figcaption class="focal">Bir str'ye int eklenemez; toplamadan önce int() ile çevirmek gerekir.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Son satır: bir str'ye ancak str eklenebilir; ^ işareti + işaretinin altında. Düzeltmesi int(parts[1]) + 1, sonuç 5. Hata vermeyen hali daha sinsiydi: '4' * 2, yani 44.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): parts = "MAT123 4 C1".split() print(parts[1] + 1) | Çıktı (Python 3.14.8; şeklin içinde): Traceback (most recent call last): File "…/python-kurs/example.py", line 2, in <module> print(parts[1] + 1) ~~~~~~~~~^~~ TypeError: can only concatenate str (not "int") to str -->
 </section>
 
@@ -3454,7 +3426,6 @@ print(grades)
 </figure>
 <p class="focal span">List mutable'dır: bir item'a yeni değer atanabilir.</p>
   </div>
-  <aside class="notes">Ders 3'te bunun adını koymuştuk: item assignment; orada list'te yapılabildiğini söylemiştim. Değişen list'in kendisi, grades'in oku yerinde duruyor.</aside>
 <!-- not spoken: Later: closes LATER-3.B3 from Ders 3 ("list'te bir elemana yeni değer atanabilir"). -->
 </section>
 
@@ -3579,7 +3550,6 @@ print(grades)
       <p class="focal">List kurşun kalemle yazılmış gibidir, silip düzeltilir; str ise tükenmez kalemle yazılmıştır.</p>
     </div>
   </div>
-  <aside class="notes">Benzetmenin bittiği yer: tükenmezle yazılanı karalayabilirsiniz, immutable bir value'ya ise hiç dokunulamaz. upper() ya da x + 1 gibi değişmiş görünen her şey aslında yeni bir kağıttır ve isim yeni kağıda geçer. Değiştirilebilirlik type'a aittir, isme değil.</aside>
 </section>
 
 <section class="s-connection" data-half="4A" data-src="S41" data-topic="List&#x27;i değiştirmek">
@@ -3606,7 +3576,6 @@ print(is_prime[4], is_prime[7])
 </figure>
     </div>
   </div>
-  <aside class="notes">Eratosthenes'in eleği MÖ 3. yüzyıldan; onu anlatan bilinen en eski metin Gerasalı Nikomakhos'un Aritmetiğe Giriş'i. Samuel Horsley 1772'de yöntemi yeniden kurdu ve 3'ten 157'ye kadar tek sayıların tablosunu bastı; tabloda liste yeniden yazılmıyor, katların üstü yerinde çiziliyor. Slayttaki kod yalnızca 2'nin katlarını çiziyor; elek 158'e kadar tam çalıştırılınca tablodaki üstü çizili 42 sayının aynısını buluyor, ilki 9, sonuncusu 155.</aside>
 </section>
 
 <section class="s-code-output" data-half="4A" data-src="S42" data-topic="List&#x27;i değiştirmek">
@@ -3886,7 +3855,6 @@ print(len(ballon_dor), ballon_dor[-1])
 </figure>
     </div>
   </div>
-  <aside class="notes">Sekizinci ödül 30 Ekim 2023'te geldi; list o akşama kadar yedi item'dı. append() var olan list'i büyütür; list uzasa da -1 hep son item'dır.</aside>
 </section>
 
 <section class="s-code-output" data-half="4A" data-src="S44" data-topic="List&#x27;i değiştirmek">
@@ -4382,8 +4350,6 @@ print(grades)
 </figure>
 <p class="focal span">remove("B2"), değeri "B2" olan ilk item'ı siler.</p>
   </div>
-  <aside class="notes">remove() index'le değil value'yla çalışır ve yalnızca ilk eşleşeni siler.<br>
-Sınıfa: ["B2", "C1", "B2"] list'inde remove("B2") sonrası ne kalır? (beklenen: ['C1', 'B2']; yalnızca ilk B2 gider)</aside>
 </section>
 
 <section class="s-code-output" data-half="4A" data-src="S46" data-topic="List&#x27;i değiştirmek">
@@ -4631,7 +4597,6 @@ print(grades, last)
 </figure>
 <p class="focal span">pop() son item'ı çıkarır ve onu geri verir.</p>
   </div>
-  <aside class="notes">pop() iki iş yapar: list'i kısaltır ve çıkardığı item'ı geri verir; bu yüzden sonucunu last'a atayabiliyoruz. Öteki dört method geriye böyle bir value vermez.</aside>
 </section>
 
 <section class="s-code-output" data-half="4A" data-src="S47" data-topic="List&#x27;i değiştirmek">
@@ -5027,8 +4992,6 @@ print(grades)
 <figcaption class="focal">sort() harfleri Unicode numarasına göre dizer; Ç ve İ, Z'den sonra gelir.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Python str'leri karakter karakter, her karakterin Unicode numarasına göre kıyaslar: Z 90, Ç 199, İ 304. Bu yüzden Çorum ve İzmir Zonguldak'tan sonra geliyor; Ders 2'deki "i".upper()'ın aynı ailesi. Python'un belgeleri alfabe sırası için locale module'ünü önerir; bu kursta ona girmiyoruz.<br>
-Sınıfa: Zehra, Eren ve İrem sıralanınca ne çıkar? (beklenen: Eren, Zehra, İrem; İ, Z'den sonra gelir)</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): cities = ["Çorum", "Ankara", "Zonguldak", "İzmir", "Bursa"] cities.sort() print(cities) | Çıktı (Python 3.14.8; şeklin içinde): ['Ankara', 'Bursa', 'Zonguldak', 'Çorum', 'İzmir'] -->
 </section>
 
@@ -5164,7 +5127,6 @@ Sınıfa: Zehra, Eren ve İrem sıralanınca ne çıkar? (beklenen: Eren, Zehra,
 <figcaption class="focal">append, insert, remove ve sort aynı list'i değiştirir, yeni bir list vermez.</figcaption>
 </figure>
   </div>
-  <aside class="notes">code.upper() yeni bir BBM101 yaptı ama onu gösteren isim yok; code hala bbm101. sort() ise yeni bir list vermez, aynı list'i yerinde sıralar; append, insert ve remove da öyle. Bir method ya bilgi verir, ya upper() gibi yeni bir value döndürür, ya da append() gibi list'in kendisini değiştirir; pop() son ikisini birden yapar.</aside>
 <!-- not spoken: Later: LATER-4.3 (spoken only) · "Bir method ya bilgi verir, ya yeni bir değer döndürür, ya da object'i değiştirir; pop() ikisini birden yapar." · kept here (said once on this slide; the class section that was to keep it is gone). The None half (LATER-4.2, "None'ın ne olduğunu aradan sonra açacağız") moved with the None section to Ders 5A; the notes rewrite drops it here. | Kod (şeklin içinde çizili; doğrulama için): code = "bbm101" code.upper() grades = ["C1", "A2", "B1"] grades.sort() print(code, grades) | Çıktı (Python 3.14.8; şeklin içinde): bbm101 ['A2', 'B1', 'C1'] -->
 </section>
 
@@ -5271,7 +5233,6 @@ Sınıfa: Zehra, Eren ve İrem sıralanınca ne çıkar? (beklenen: Eren, Zehra,
       <p class="focal">Odanızı toplamak size yeni bir oda vermez; sort() da aynı list'i düzenler.</p>
     </div>
   </div>
-  <aside class="notes">Benzetmenin bittiği yer: str method'ları tam tersine yeni bir str verir, ikisini karıştırmayın. sort()'un sonucunu bir isme atamayın; grades = grades.sort() yazarsanız sıralı list'i kaybedersiniz, nedenini Ders 5'te göreceğiz.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="4A" data-src="S53" data-topic="List&#x27;i değiştirmek">
@@ -5562,7 +5523,6 @@ Sınıfa: Zehra, Eren ve İrem sıralanınca ne çıkar? (beklenen: Eren, Zehra,
 <figcaption class="focal">remove() list'te olmayan bir item'ı silemez.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Son satır: x list'te yok. Ders 2'deki int("abc") gibi ValueError: type doğru, value uygun değil. Silmeden önce if "A1" in grades: ile bakarsanız hata gelmez; aradan sonra ikinci yolu, try ve except'i göreceğiz.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): grades = ["C1", "A2"] grades.remove("A1") | Çıktı (Python 3.14.8; şeklin içinde): Traceback (most recent call last): File "…/python-kurs/example.py", line 2, in <module> grades.remove("A1") ~~~~~~~~~~~~~^^^^^^ ValueError: list.remove(x): x not in list -->
 </section>
 
@@ -5718,7 +5678,6 @@ print(type(course))
 </figure>
 <p class="focal span">Tuple, değiştirilemeyen bir kayıttır; parantezle yazılır.</p>
   </div>
-  <aside class="notes">Tuple alan adı tutmaz; code, credits ve letter etiketleri yalnızca bizim için, anlamı sıra taşır. Tek item'lık tuple'da virgül şart: ("MAT123",) bir tuple, virgülsüz hali parantez içinde duran bir str.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="4A" data-src="S60" data-topic="Tuple ve unpacking">
@@ -6001,7 +5960,6 @@ print(course[1] * 2)
 <figcaption class="focal">Çoğalıp değişen benzer item'lar için list; alanları sabit tek kayıt için tuple.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Sınıfa: Bir öğrencinin harf notları için list mi, tuple mı? Transkriptin bir satırı için? (beklenen: notlar list, çünkü çoğalır ve değişir; ders satırı tuple, alanları sabit)</aside>
 </section>
 
 <section class="s-figure" data-half="4A" data-src="S62" data-topic="Tuple ve unpacking">
@@ -6024,7 +5982,6 @@ print(type([1, 2]), type((1, 2)))
 </figure>
     </div>
   </div>
-  <aside class="notes">Munroe parantez çeşitlerine uydurma anlamlar vermiş: köşeli parantez daha güvenli, süslü parantez pahalı. Python'da her birinin tek ve kesin bir anlamı var; esprinin tersine, Python'da güvenli olan değişmeyen tuple. Süslü parantez Ders 5'te gelecek.</aside>
 </section>
 
 <section class="s-table" data-half="4A" data-src="S63" data-topic="Tuple ve unpacking">
@@ -6386,7 +6343,6 @@ print(x, y, (3, 4) == (4, 3))
 </figure>
     </div>
   </div>
-  <aside class="notes">Bu bağlantı matematikten. Descartes 1637'de Leiden'de yayımlanan La Géométrie'de bir noktayı iki uzunlukla belirledi ve onlara y ve x adını verdi; noktayı bugünkü gibi bir (x, y) çifti olarak yazmadı. Hangi konumun ne anlama geldiği bir anlaşma: (3, 4) ile (4, 3) farklı noktalardır, == False verir.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="4A" data-src="S66" data-topic="Tuple ve unpacking">
@@ -6598,7 +6554,6 @@ print(x, y, (3, 4) == (4, 3))
 <figcaption class="focal">Transkript, tuple'lardan oluşan bir list; for satırı her tuple'ı açar.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Her turda for satırı bir tuple'ı üç isme açıyor; tablodaki her satır bir tur, total 4'ten 7'ye çıkıyor. code ve letter kullanılmasa da isim alıyor, çünkü her satırda üç item var. Hedef programdaki gpa aynı loop'u kullanıyor.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): transcript = [("MAT123", 4, "C1"), ("FIZ127", 3, "B2")] total = 0 for code, credits, letter in transcript: total += credits print(total) | Çıktı (Python 3.14.8; şeklin içinde): 7 -->
 </section>
 
@@ -6725,7 +6680,6 @@ print(x, y, (3, 4) == (4, 3))
 <figcaption class="focal">Tuple'ın bir item'ına yeni değer atanamaz.</figcaption>
 </figure>
   </div>
-  <aside class="notes">str'deki hatanın aynısı: tuple item assignment'a izin vermez. Notu değişen bir ders için yeni bir tuple yazarız, course = ("MAT123", 4, "B1"); ismin oku yeni tuple'a gider.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): course = ("MAT123", 4, "C1") course[2] = "B1" | Çıktı (Python 3.14.8; şeklin içinde): Traceback (most recent call last): File "…/python-kurs/example.py", line 2, in <module> course[2] = "B1" ~~~~~~^^^ TypeError: 'tuple' object does not support item assignment -->
 </section>
 
@@ -6825,7 +6779,6 @@ print(x, y, (3, 4) == (4, 3))
       <p class="focal">Tuple otobüs bileti gibidir: alanlar basılıdır, değişiklik için yeni bilet kesilir.</p>
     </div>
   </div>
-  <aside class="notes">Benzetmenin bittiği yer: biletteki bir yanlışı gişedeki görevli düzeltebilir, tuple'ı ise hiç kimse düzeltemez; yalnızca yenisi yapılır ve isim yeni tuple'a geçer.</aside>
 </section>
 
 <section class="s-error" data-half="4A" data-src="S69" data-topic="Tuple ve unpacking">
@@ -6949,8 +6902,6 @@ print(x, y, (3, 4) == (4, 3))
 <figcaption class="focal">İsim sayısı item sayısına eşit olmalı.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Son satır: açılacak çok fazla value var, 2 bekleniyordu, 3 geldi. Bu bölümün tipik hatası kaydın bir alanını unutmak; ihtiyacınız olmasa da her alana bir isim verin.<br>
-Sınıfa: İki item'lık bir tuple'ı üç isme açarsak ne olur? (beklenen: yine ValueError; bu kez yeterince value yok)</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): course = ("MAT123", 4, "C1") code, credits = course | Çıktı (Python 3.14.8; şeklin içinde): Traceback (most recent call last): File "…/python-kurs/example.py", line 2, in <module> code, credits = course ^^^^^^^^^^^^^ ValueError: too many values to unpack (expected 2, got 3) -->
 </section>
 
@@ -7169,7 +7120,6 @@ Sınıfa: İki item'lık bir tuple'ı üç isme açarsak ne olur? (beklenen: yin
 <figcaption class="focal">Satırı backup'a ekledik; transcript da üç satır oldu.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Yedeğe ekledik, asıl list de büyüdü. Cevabı bu bölümde adım adım kuracağız; şekilde backup'ın oku bilerek yok.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): transcript = [("MAT123", 4, "C1"), ("FIZ127", 3, "B2")] backup = transcript backup.append(("BBM101", 3, "A3")) print(len(transcript)) | Çıktı (Python 3.14.8; şeklin içinde): 3 -->
 </section>
 
@@ -7335,7 +7285,6 @@ print(type(x), type(grades))
 </figure>
 <p class="focal">Python'da her değer bir object'tir; her object'in bir type'ı vardır.</p>
   </div>
-  <aside class="notes">Şekildeki çerçeve Ders 1'deki bilgisayar resminin Data bölmesi: isimler de object'ler de memory'de duruyor. Solda isimler, sağda object'ler; trace oynatıcısındaki iki sütunla aynı.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="4A" data-src="S75" data-topic="Object, mutable, immutable ve aliasing">
@@ -7487,7 +7436,6 @@ print(type(x), type(grades))
 <figcaption class="focal">İsim object'i içinde tutmaz, onu gösterir; bu oka reference denir.</figcaption>
 </figure>
   </div>
-  <aside class="notes">1. bölümde value'ları şimdilik hücrelerin içine yazdığımızı söylemiştim; gerçek resim bu, list'in her hücresi de ayrı bir object'i gösterir. Bundan sonra kısalık için yine hücrelere yazacağız, ama aklınızda bu oklu resim olsun.</aside>
 <!-- not spoken: Simplification: SIMP-4.1 retired here · the slide shows each list cell as an arrow to its own object · true version: list'in her hücresi bir reference'tır; şekillerde değerleri hücrelere yazmak bundan sonra açıkça söylenen bir kısaltmadır. -->
 </section>
 
@@ -7650,7 +7598,6 @@ print(type(x), type(grades))
 <figcaption class="focal">x = x + 1 yeni bir int yapar; y eski 5'i göstermeye devam eder.</figcaption>
 </figure>
   </div>
-  <aside class="notes">İkinci karede y = x yeni bir 5 yapmıyor, y de aynı 5'i gösteriyor. Üçüncü karede x + 1 yeni bir object yapıyor, 6, ve x'in oku oraya taşınıyor. 5 değişmedi, değişemez de: int immutable; burada değişen şey bir ok.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): x = 5 # 1 y = x # 2 x = x + 1 # 3 print(x, y) | Çıktı (Python 3.14.8; şeklin içinde): 6 5 -->
 </section>
 
@@ -7840,7 +7787,6 @@ print(type(x), type(grades))
 <figcaption class="focal">İki isim aynı list'i gösterirse, birinden yapılan değişiklik ötekinden de görünür.</figcaption>
 </figure>
   </div>
-  <aside class="notes">b = a yeni bir list yapmaz; iki isim, tek object, buna aliasing denir. Üçüncü karede b üzerinden ekledik, a da gördü; dördüncüde a üzerinden ekledik, b de gördü. Önceki sayfada ok taşındı, burada object değişti. <strong>İsim bir object'i gösterir; bir satır ya object'i değiştirir ya da ismin okunu taşır.</strong></aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): a = [4, 3] # 1 b = a # 2 b.append(2) # 3 print(a) a.append(1) # 4 print(b) | Çıktı (Python 3.14.8; şeklin içinde): [4, 3, 2] [4, 3, 2, 1] -->
 </section>
 
@@ -7969,7 +7915,6 @@ print(type(x), type(grades))
       <p class="focal">Aliasing, aynı oyuncuya iki bant takmaktır: b'nin oyuncusuna ne olursa a'nınkine de olur.</p>
     </div>
   </div>
-  <aside class="notes">Dersin sembolü bu resim: iki isim, tek list. Ders 1'deki bantlarda oyuncu değişmiyordu, çünkü int değişmez; list ise değişir ve tahtaya yazılan 9'u iki bant da görür. Benzetmenin bittiği yer: Python'da asıl isim ile yedek isim yoktur, a ile b eşit iki isimdir; b = [1] gibi yeni bir assignment yalnızca b'nin bandını başka bir oyuncuya taşır.</aside>
 </section>
 
 <section class="s-demo" data-half="4A" data-src="S80" data-topic="Object, mutable, immutable ve aliasing">
@@ -7977,7 +7922,6 @@ print(type(x), type(grades))
   <div class="content l-full">
     <div class="trace" data-trace="traces/ders4-backup.json" data-labels="names objects"></div>
   </div>
-  <aside class="notes">Bölümün başındaki problemin cevabı. İlk adımda transcript bir list'i gösteriyor, list'in iki hücresinden iki tuple'a ok gidiyor. backup = transcript satırından sonra İsimler sütununda backup'ın oku aynı list'e gidiyor, yeni bir list yok. append bu tek list'e üçüncü tuple'ı ekliyor ve print 3 yazıyor; yedek sandığımız şey aynı list'e ikinci bir isimdi.</aside>
 <!-- not spoken: Çıktı (Python 3.14.8): 3 -->
 </section>
 
@@ -8189,7 +8133,6 @@ print(type(x), type(grades))
 <figcaption class="focal">Loop'taki isme yeni değer atamak list'i değiştirmez.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Çok sık düşülen bir tuzak: x = x * 10 yeni bir int yapar ve yalnızca x'in okunu taşır; list'in hücreleri hala 1, 2 ve 3'ü gösterir. On katını istiyorsak yeni bir list kurarız: tens = [] ve loop'ta tens.append(x * 10).</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): nums = [1, 2, 3] for x in nums: x = x * 10 print(nums) | Çıktı (Python 3.14.8; şeklin içinde): [1, 2, 3] -->
 </section>
 
@@ -8321,8 +8264,6 @@ print(type(x), type(grades))
 <figcaption class="focal">copy() yeni ve ayrı bir list yapar; birindeki değişiklik ötekine geçmez.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Bant benzetmesiyle copy() ikinci bir bant değil, tahtası aynı yazılmış ikinci bir oyuncu.<br>
-Sınıfa: Bölümün başındaki programda neyi değiştirseydik transcript iki satırda kalırdı? (beklenen: backup = transcript.copy())</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): a = [4, 3] c = a.copy() c.append(9) print(a, c) | Çıktı (Python 3.14.8; şeklin içinde): [4, 3] [4, 3, 9] -->
 </section>
 
@@ -8490,7 +8431,6 @@ Sınıfa: Bölümün başındaki programda neyi değiştirseydik transcript iki 
 <figcaption class="focal">== değerleri kıyaslar: equality (eşitlik). is, aynı object mi diye sorar: identity (kimlik).</figcaption>
 </figure>
   </div>
-  <aside class="notes">Sınıfa: a = [4, 3] ve b = [4, 3] yazarsak a == b ve a is b ne verir? (beklenen: True ve False; içerik aynı ama iki ayrı list)</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): a = [4, 3] b = a c = a.copy() print(a == b, a is b) print(a == c, a is c) | Çıktı (Python 3.14.8; şeklin içinde): True True True False -->
 </section>
 
@@ -8534,7 +8474,6 @@ Sınıfa: Bölümün başındaki programda neyi değiştirseydik transcript iki 
       <figcaption class="tm-legend" id="tm-cap-4a-s86"><span><span class="tm-key is-now" aria-hidden="true"></span>bu derste</span><span><span class="tm-key" aria-hidden="true"></span>daha önce</span><span><span class="tm-key is-later" aria-hidden="true"></span>sonraki derslerde</span></figcaption>
     </figure>
   </div>
-  <aside class="notes">Sequences'in altındaki iki etiket ilk kez görünüyor: immutable str, range ve tuple; mutable list. Aliasing'in sürprizi yalnızca mutable object'lerde görünür; immutable bir object hiç değişmediği için iki isim onu paylaşsa da bir şey sızmaz. Ders 2'de str değişmez demiştim; tam hali şu: değişmeyen value'nun kendisi, isim ise atamayla başka bir value'yu gösterebilir.</aside>
 <!-- not spoken: Simplification: retires SIMP-2.A2 from Ders 2 ("str değişmez") · true version, said here: değişmez olan değerdir; isim, atamayla başka bir değeri gösterebilir; list gibi değiştirilebilir type'lar da vardır. -->
 </section>
 
@@ -8562,7 +8501,6 @@ print(a, a is b)
 </figure>
     </div>
   </div>
-  <aside class="notes">Barbara Liskov 1970'lerde MIT'de CLU dilini tasarlayan ekibi yönetti ve 2008'de Turing Ödülü'nü aldı. Ekibin Ekim 1979 tarihli CLU kılavuzu açıkça yazar: x := y atamasında object kopyalanmaz, x ile y aynı object'i paylaşır; := CLU'nun atama işareti. Liskov 1992'de dilin tarihini yazarken ekler: object immutable ise paylaşım fark edilmez, mutable ise bir isimden yapılan değişiklik ötekinden görünür. Python'da = aynı şeyi yapıyor; bu bölümün bütün resmi bu iki cümlede.</aside>
   <!-- authoring (not shown): Verified: NEW 2026-10-15, the section 5 story the review asked for (one story per section). Sources, both read: (1) B. Liskov, R. Atkinson, T. Bloom, E. Moss, C. Schaffert, R. Scheifler, A. Snyder, CLU Reference Manual, MIT LCS TR-225, October 1979, §3.2 "Assignment and Invocation": x := y "causes x to denote the object denoted by y. The object is not copied; after the assignment is performed, the object will be shared by x and y", and arguments are passed "by sharing"; (2) B. Liskov, A History of CLU, MIT LCS, April 1992 (HOPL-II, ACM SIGPLAN Notices 28(3), 1993), §3: "CLU assignment causes sharing: after executing x := y, variables x and y both refer to the same object. If this object is immutable, programs cannot detect the sharing, but they can if the shared object is mutable". The decision to base CLU on a garbage-collected heap was made in fall 1973 (same text). Turing Award 2008: connections.json W3A-8. Code run on 3.14.8: [4, 3, 2] True. Python is not said to come from CLU. -->
 </section>
 
@@ -8591,7 +8529,6 @@ print(a == c, a is b)
       <div class="poll-bars" hidden></div>
     </div>
   </div>
-  <aside class="notes">Telefonunuzun kamerasını QR koda tutun, A, B, C ya da D'ye dokunun; ad ya da giriş istenmiyor. Şimdi yedi saniye kimse konuşmasın, herkes kendi cevabını seçsin. Dağılıma bakalım. Doğru cevap B şıkkı: False ve True. b = a yeni bir list yapmadı, b ile a aynı list. b.append(3) o list'i değiştirdi; a artık [1, 2, 3], c ise hala [1, 2]. Bu yüzden a == c False, a is b True. C şıkkı b = a'yı kopya sanıyor: o zaman a değişmez, c'ye eşit kalırdı ve a is b False olurdu. A şıkkı a ile b'nin aynı list olduğunu biliyor ama append'in a'yı da değiştirdiğini görmüyor. D şıkkı a'nın değiştiğini görüyor ama is'in iki ayrı isim için hep False verdiğini düşünüyor.</aside>
   <!-- authoring (not shown): Verified: output `False True` (3.14.8, key `poll5`). -->
 </section>
 
@@ -8754,7 +8691,6 @@ print(a == c, a is b)
 <figcaption class="focal">Bu yarının sonunda 4A'nın başında çalışan AGNO programını kendiniz yazabileceksiniz.</figcaption>
 </figure>
   </div>
-  <aside class="notes"><strong>İlk yarıda veriyi tuttuk; bu yarıda programı hatalı girdiye dayanıklı yapacağız ve kendi function'larımıza böleceğiz.</strong> Tablonun son satırındaki BBM102 klavyeden geldi; kredi için üç yazılınca program durmadı, yeniden sordu. Bunun için dört şey gerekiyor: try ve except, import, kendi function'ımız ve return.</aside>
 </section>
 
 <section class="s-agenda" data-half="4B" data-src="S94">
@@ -8879,7 +8815,6 @@ print(credits * 2)
 <figcaption class="focal">Kullanıcı dört yazınca program durur; ikinci satır hiç çalışmaz.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Sayı yerine dört yazılınca program duruyor, ikinci satır hiç çalışmıyor. Önce son satırı okuyun: hatanın adı orada, ValueError. Ders 2'deki Ariane 5'te de tutmayan bir type conversion roketin yazılımını durdurmuştu.</aside>
 <!-- not spoken: Çıktı (Python 3.14.8; şeklin Çıktı panelinde): Kredi: dört Traceback (most recent call last): File "…/python-kurs/example.py", line 1, in <module> credits = int(input("Kredi: ")) ValueError: invalid literal for int() with base 10: 'dört' -->
 </section>
 
@@ -8894,7 +8829,6 @@ print(credits * 2)
       <p class="focal">Test mühendisleri programları böyle girdilerle dener.</p>
     </div>
   </div>
-  <aside class="notes">Test mühendislerinin bayramı her eksi 1 yılda bir, Ocak'ın 0'ında, saat 25:71'de: bir programı bozmak için denenen türden girdiler. Bizim programımız da böyle bir girdiyle çöktü, sayı beklerken dört geldi.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="4B" data-src="S98" data-topic="try, except ve exception">
@@ -8990,7 +8924,6 @@ print(credits * 2)
 <figcaption class="focal">Program çalışırken ortaya çıkan hataya exception denir.</figcaption>
 </figure>
   </div>
-  <aside class="notes">SyntaxError, Python dosyayı çalıştırmadan önce okurken bulunur; hiçbir satır çalışmaz ve try onu kurtaramaz. Exception ise program o satıra gelince çıkar.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="4B" data-src="S99" data-topic="try, except ve exception">
@@ -9273,7 +9206,6 @@ Program devam ediyor</pre>
 <figcaption class="focal">Hata çıkınca try'ın kalanı atlanır; akış except'e geçer.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Kredi alındı yazılmadı: exception çıkınca try'ın kalanı atlanır, akış except'e geçer ve sonra try'dan sonraki satırla devam eder. Akış hatalı satıra bir daha dönmez. <strong>try hatayı düzeltmez; hata çıkınca ne yapılacağını söyler.</strong></aside>
 </section>
 
 <section class="s-concept-diagram" data-half="4B" data-src="S103" data-topic="try, except ve exception">
@@ -9431,7 +9363,6 @@ Program devam ediyor</pre>
 <figcaption class="focal">Yalnızca girdi değişti: 4 yazılınca except hiç çalışmaz.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Sınıfa: Kredi için 3,5 yazılırsa hangi satırlar çalışır? (beklenen: 1, 2, 4, 5 ve 6; int() 3,5'i de çeviremez)</aside>
 </section>
 
 <section class="s-demo" data-half="4B" data-src="S104" data-topic="try, except ve exception">
@@ -9439,7 +9370,6 @@ Program devam ediyor</pre>
   <div class="content l-full">
     <div class="trace" data-trace="traces/ders3-try-skip.json" data-labels="names objects"></div>
   </div>
-  <aside class="notes">Nokta tuşuyla ilerliyorum. 2. satırda dört okunuyor ve ValueError çıkıyor; satır kırmızı ve credits diye bir isim hiç oluşmadı. Bir sonraki adımda akış except satırına atlıyor, 3. satır hiç vurgulanmıyor. Tam sayı girin yazılıyor ve program son satırla devam ediyor.</aside>
 <!-- not spoken: Çıktı (Python 3.14.8): Kredi: dört Tam sayı girin. Program devam ediyor -->
 </section>
 
@@ -9579,7 +9509,6 @@ Program devam ediyor</pre>
 <figcaption class="focal">Step Over ile hata satırından except satırına atlandığı görülür.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Ders 3'teki debugger'da aynı an: mavi üçgen 2. satırda, ValueError çıkmak üzere. F8 ile Step Over yapınca sıradaki satır 3 değil, kesikli işaretli except satırı. Atama hiç yapılmadığı için credits diye bir isim oluşmaz.</aside>
 </section>
 
 <section class="s-code-output" data-half="4B" data-src="S107" data-topic="try, except ve exception">
@@ -9606,7 +9535,6 @@ Böyle bir indis yok.</pre>
 </figure>
 <p class="focal span">if önce bakar, try önce dener; ikisi aynı satırı yazar.</p>
   </div>
-  <aside class="notes">Python'un belgeleri bu iki tarza ad verir: LBYL, look before you leap, önce if ile bakar; EAFP, easier to ask for forgiveness than permission, önce dener, olmazsa except ile yakalar. LBYL önce if ile bakıyor, 6 &lt; 6 False; EAFP doğrudan code[6]'yı deniyor ve IndexError'ı yakalıyor. except'in yanına hangi exception bekleniyorsa onun adı yazılır. int(input()) için önceden bakmak zor; orada try kullanıyoruz.</aside>
 </section>
 
 <section class="s-code-output" data-half="4B" data-src="S108" data-topic="try, except ve exception">
@@ -9769,7 +9697,6 @@ Kredi: 4</pre>
 <figcaption class="focal">int() başarılı olursa break; ValueError çıkarsa mesaj ve yeniden soru.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Geri dönen ok hatalı satıra değil, while True'nun başına gidiyor. Kaç kez yanlış yazılırsa o kadar tur döner: dört, 3,5 ve 4 yazılırsa iki kez Tam sayı girin çıkar; 3,5'i de int() çeviremez.</aside>
 </section>
 
 <section class="s-pycharm" data-half="4B" data-src="S111" data-topic="try, except ve exception">
@@ -9779,7 +9706,6 @@ Kredi: 4</pre>
     <p class="focal">Traceback alttan yukarı okunur; mavi bağlantı hatalı satıra götürür.</p>
     <ol class="steps"><li><span class="n-sq">1</span><span>exception'ın adı</span></li><li><span class="n-sq">2</span><span>mavi bağlantı</span></li></ol>
   </div>
-  <aside class="notes">Ders 1'de traceback'i son satırdan okumayı öğrenmiştik. Son satır exception'ın adını söyler; except'e yazacağımız ad o. Mavi dosya ve satır bağlantısına tıklayınca PyCharm hatalı satıra götürür.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="4B" data-src="S112" data-topic="try, except ve exception">
@@ -9908,8 +9834,6 @@ Kredi: 4</pre>
 <figcaption class="focal">except'ten sonra exception'ın adı her zaman yazılır.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Adı yazılmayan except her exception'ı yakalar, yazım hatalarını da: soldaki kod kullanıcıya hiçbir şey sormadan Tam sayı girin diyor ve inptu hatası kayboluyor. Sağda except ValueError, NameError'ı yakalamıyor ve traceback hatayı hemen gösteriyor.<br>
-Sınıfa: Soldaki program neden hiç soru sormadı? (beklenen: inptu bir NameError verdi ve adsız except onu da yakaladı)</aside>
 </section>
 
 <section class="s-figure" data-half="4B" data-src="S113" data-topic="try, except ve exception">
@@ -10042,7 +9966,6 @@ Sınıfa: Soldaki program neden hiç soru sormadı? (beklenen: inptu bir NameErr
       <p class="focal">Adı yazılmayan except, her tıkırtıya "kedidir" diyen bekçi gibidir: asıl sorunu kaçırır.</p>
     </div>
   </div>
-  <aside class="notes">Benzetmenin bittiği yer: gerçek bekçi kapıyı sonunda fark edebilir; adsız except ise yazım hataları dahil her exception'ı sessizce yutar. Python'un kendi ilkeleri de aynısını söyler: Errors should never pass silently. Unless explicitly silenced. except ValueError bilerek susturmaktır.</aside>
 </section>
 
 <section class="s-poll" data-half="4B" data-src="S114" data-topic="try, except ve exception" data-poll-id="d4-try-abc" data-answer="1">
@@ -10071,7 +9994,6 @@ B</code></li>
       <div class="poll-bars" hidden></div>
     </div>
   </div>
-  <aside class="notes">Telefonunuzun kamerasını QR koda tutun, A, B, C ya da D'ye dokunun; ad ya da giriş istenmiyor. Şimdi yedi saniye kimse konuşmasın, herkes kendi cevabını seçsin. Dağılıma bakalım. Doğru cevap A şıkkı: yalnızca B. int("3.5") hata veriyor, print("A") atlanıyor ve except çalışıyor. B şıkkı int("3.5")'in çalıştığını düşünüyor; Ders 2'den biliyoruz, int() noktalı bir yazıyı çeviremez. C şıkkı hatalı satırdan sonraki satırların yine çalıştığını düşünüyor; oysa try'ın kalanı atlanır. D şıkkı programın ValueError ile durduğunu düşünüyor; except'i gözden kaçırıyor.</aside>
   <!-- authoring (not shown): Verified: output `B` (3.14.8, 2026-10-13). Shortened on 2026-10-13 so that the poll fits the slide (it overflowed by 5 px, tools/audit_slides.py): the last line print("C") and its option lines went; the old poll is in moved/ders4-removed-2026-10-13.md. Wrong options keep their meaning: 2 thinks int("3.5") works, 3 thinks the rest of try still runs, 4 thinks the program stops. -->
 <!-- not spoken: Çıktı (Python 3.14.8, slaytta gösterilmez): B -->
 </section>
@@ -10220,7 +10142,6 @@ B</code></li>
 <figcaption class="focal">Module, başkasının yazıp denediği kodu tutan bir .py dosyasıdır.</figcaption>
 </figure>
   </div>
-  <aside class="notes">math aslında C diliyle yazılmış ve Python'un içine gömülü, ayrı bir math.py dosyası yok; resimdeki dosya, başkasının yazdığı kodun resmi. Birazdan göreceğimiz random, this ve antigravity ise gerçekten birer .py dosyası.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="4B" data-src="S119" data-topic="import ve module">
@@ -10522,7 +10443,6 @@ B</code></li>
 <figcaption class="focal">Python'un anlayışı batteries included: math ve random gibi yaklaşık 200 module kurulumla gelir.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Batteries included, yani piller kutunun içinde; söz Python'un kendi belgelerinde geçer. Python 3.14 yaklaşık 200 module'le geliyor; bugün dördünü açacağız: math, random, this ve antigravity.</aside>
 </section>
 
 <section class="s-code-output" data-half="4B" data-src="S121" data-topic="import ve module">
@@ -10673,8 +10593,6 @@ print(math.pi)
 </figure>
 <p class="focal span">import math, math module'ünü programa getirir.</p>
   </div>
-  <aside class="notes">import satırı genelde dosyanın en üstüne yazılır. import de bir isim yapar: math ismi module object'ini gösterir.<br>
-Sınıfa: math.pi'deki nokta ne anlatıyor? (beklenen: math module'ünün içindeki pi ismi)</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="4B" data-src="S122" data-topic="import ve module">
@@ -10805,7 +10723,6 @@ Sınıfa: math.pi'deki nokta ne anlatıyor? (beklenen: math module'ünün içind
 <figcaption class="focal">math.sqrt(16), print() gibi parantezle çalışır ve 4.0 değerini verir.</figcaption>
 </figure>
   </div>
-  <aside class="notes">16 bir int ama sonuç 4.0: karekök her zaman float verir. Argument kelimesini Ders 1'de print() için görmüştük; sqrt gibi parantezle çalışan bu isimlerin adını 8. bölümde koyacağız.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): import math print(math.sqrt(16)) | Çıktı (Python 3.14.8; şeklin içinde): 4.0 -->
 </section>
 
@@ -10823,7 +10740,6 @@ print(math.sqrt(16))
 <pre class="tb wrap"><span class="ol">Traceback (most recent call last):</span><span class="ol">  File "…/python-kurs/example.py", line 1, in &lt;module&gt;</span><span class="ol">    print(math.sqrt(16))</span><span class="ol">          ^^^^</span><span class="ol"><span class="tb-last">NameError: name 'math' is not defined. Did you forget to import 'math'?</span></span></pre>
 </figure>
   </div>
-  <aside class="notes">Son satır: NameError, math diye bir isim yok; Python 3.14 bir de math'i import etmeyi mi unuttunuz diye soruyor. Çözüm, dosyanın en üstüne import math yazmak.</aside>
 </section>
 
 <section class="s-figure" data-half="4B" data-src="S125" data-topic="import ve module">
@@ -10837,7 +10753,6 @@ print(math.sqrt(16))
       <p class="focal">Bir kez atılıp koda yazılan zar artık rastgele değildir.</p>
     </div>
   </div>
-  <aside class="notes">Kod her seferinde 4 veriyor; yorumda sayının adil bir zar atışıyla seçildiği yazıyor. Zar bir kez atılmış ve sonuç koda gömülmüş, artık rastgele değil. Çizginin gizli yazısındaki şaka: standart, IEEE onaylı rastgele sayı 4'müş.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="4B" data-src="S126" data-topic="import ve module">
@@ -10998,7 +10913,6 @@ print(math.sqrt(16))
 <figcaption class="focal">random.randint(1, 6) iki ucu da verebilir; range(1, 6) ise 6'yı vermez.</figcaption>
 </figure>
   </div>
-  <aside class="notes">randint'te iki uç da dahil, range ise bitişi vermez. Ekranda belli bir sayı yerine True var, çünkü sonuç her çalıştırmada değişir.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): import random die = random.randint(1, 6) print(die >= 1 and die <= 6) | Çıktı (Python 3.14.8; şeklin içinde): True -->
 </section>
 
@@ -11121,7 +11035,6 @@ print(math.sqrt(16))
       <p class="focal">random.randint(1, 6) tavla zarı gibidir: 6 da gelir, yoksa düşeş hiç olmazdı.</p>
     </div>
   </div>
-  <aside class="notes">Benzetmenin bittiği yer: gerçek zar fiziğe bağlı, random ise sayıları bir formülle üretir.</aside>
 </section>
 
 <section class="s-code-output" data-half="4B" data-src="S129" data-topic="import ve module" data-fit="1">
@@ -11269,7 +11182,6 @@ print(len(str(ways)), "basamak")
 <!-- /svg -->
 </figure>
   </div>
-  <aside class="notes">İlk kart için 52 seçenek, ikincisi için 51, sonra 50; hepsi çarpılınca 52 faktöriyel. Slayttaki 68 basamak sayısı, str() ve len() ile saydık; resimdeki de sayının kendisi.</aside>
 </section>
 
 <section class="s-code-output" data-half="4B" data-src="S130" data-topic="import ve module">
@@ -11290,7 +11202,6 @@ print(math.factorial(52) // shuffles)
 </figure>
 <p class="focal">Herkes evrenin başından beri saniyede bir deste karıştırsaydı, 52 faktöriyele yine yaklaşamazdı.</p>
   </div>
-  <aside class="notes">Hesap bilerek cömert: dünyadaki 8 milyar kişi evrenin 13,8 milyar yıllık ömrü boyunca saniyede bir deste karıştırsaydı ilk satırdaki 28 basamaklı sayı kadar deste ederdi. İkinci satır, 52 faktöriyelin bunun kaç katı olduğu: 41 basamaklı bir sayı. İyi karıştırılmış bir destenin sırası büyük olasılıkla tarihte hiç oluşmamıştır.</aside>
 </section>
 
 <section class="s-figure" data-half="4B" data-src="S131" data-topic="import ve module">
@@ -11304,7 +11215,6 @@ print(math.factorial(52) // shuffles)
       <p class="focal">Mars helikopteri Ingenuity'de kullanılan açık kaynak projeler arasında Python, NumPy ve Matplotlib vardı.</p>
     </div>
   </div>
-  <aside class="notes">19 Nisan 2021'de Ingenuity Mars'ta uçtu; Mars'ta uçan ilk helikopter oldu. GitHub, Ingenuity'de kullanılan açık kaynak projelerin listesini yayımladı: listede Python 3.9.2, NumPy, Matplotlib ve SciPy var. Uçuş yazılımı başka bir çerçeveyle yazıldı ve liste hangi parçanın nerede kullanıldığını söylemiyor; bu yüzden Python Mars'ta uçtu demiyoruz.</aside>
 </section>
 
 <section class="s-error" data-half="4B" data-src="S132" data-topic="import ve module">
@@ -11322,7 +11232,6 @@ import numpy
 </figure>
 <p class="focal">Kurulu olmayan bir module import edilemez.</p>
   </div>
-  <aside class="notes">math geldi, ikinci satır durdu: ModuleNotFoundError, numpy adında bir module bulunamadı. numpy standard library'de değil, ayrıca kurulur; bu kursta kurmuyoruz, bilgisayarınızda kuruluysa bu hata çıkmaz.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="4B" data-src="S133" data-topic="import ve module">
@@ -11443,7 +11352,6 @@ import numpy
 <figcaption class="focal">import this, Tim Peters'ın Python için yazdığı 19 ilkeyi, Zen of Python'u yazdırır.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Bekçi resminde bu çıktının iki satırını okumuştuk. Tim Peters, Guido'nun ilkelerini 20 kısa söze dökmüş ama yalnızca 19'unu yazmış; import this, 10. International Python Conference'ın tişört sloganı yarışmasında seçildi ve this.py 8 Şubat 2002'de Python'a eklendi. Bugünün satırı Readability counts: isimlere iyi ad vermek tam bu cümlenin işi.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): import this | Çıktı (Python 3.14.8; şeklin içinde): The Zen of Python, by Tim Peters Beautiful is better than ugly. Explicit is better than implicit. Simple is better than complex. Complex is better than complicated. Flat is better than nested. Sparse is better than dense. Readability counts. Special cases aren't special enough to break the rules. Although practicality beats purity. Errors should never pass silently. Unless explicitly silenced. In the face of ambiguity, refuse the temptation to guess. There should be one- - and preferably only one - -obvious way to do it. Although that way may not be obvious at first unless you're Dutch. Now is better than never. Although never is often better than *right* now. If the implementation is hard to explain, it's a bad idea. If the implementation is easy to explain, it may be a good idea. Namespaces are one honking great idea - - let's do more of those! -->
 </section>
 
@@ -11463,7 +11371,6 @@ import antigravity
 </figure>
     </div>
   </div>
-  <aside class="notes">Munroe çizgiyi 5 Aralık 2007'de yayımladı; Python geliştiricisi Skip Montanaro module'ü 15 Ekim 2008'de, açıklamasına yalnızca easter egg yazarak Python'a ekledi. antigravity.py standard library'de sıradan bir dosya; içindeki bir satır, import edildiği anda tarayıcıda bu çizgiyi açar ve Run penceresi boş kalır.</aside>
 </section>
 
 <section class="s-connection" data-half="4B" data-src="S135" data-topic="import ve module">
@@ -11477,7 +11384,6 @@ import antigravity
       <p class="focal">EDSAC'ın programcıları denenmiş kod parçalarını kağıt şeritlerde bir library'de topladı.</p>
     </div>
   </div>
-  <aside class="notes">EDSAC ilk programını 6 Mayıs 1949'da Cambridge'de çalıştırdı. Wilkes'in ekibi sık kullanılan hesapları subroutine'ler halinde kağıt şeritlere geçirip bir library'de topladı; programcı katalogdan seçtiği parçanın şeridini kendi şeridine kopyalardı. Wilkes, Wheeler ve Gill'in 1951'de çıkan kitabı bu library'yi anlatır; Cambridge onu programlama üzerine yayımlanan ilk kitap olarak anar.</aside>
 </section>
 
 <section class="s-error" data-half="4B" data-src="S137" data-topic="import ve module">
@@ -11610,8 +11516,6 @@ import antigravity
 <figcaption class="focal">Module adını taşıyan dosya önce import edilir.</figcaption>
 </figure>
   </div>
-  <aside class="notes">import random önce programın kendi klasörüne bakar, sizin random.py'nizi bulur ve onu getirir; onda randint yok. AttributeError, bu module'de böyle bir isim yok demek; Python 3.14 dosyanın adını değiştirmeyi de öneriyor.<br>
-Sınıfa: Zar denemelerinizin dosyasına hangi adı vermezsiniz? (beklenen: random.py; dice_test.py gibi bir ad seçilir)</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): import random print(random.randint(1, 6)) | Çıktı (Python 3.14.8; şeklin içinde): Traceback (most recent call last): File "…/python-kurs/example.py", line 2, in <module> print(random.randint(1, 6)) ^^^^^^^^^^^^^^ AttributeError: module 'random' has no attribute 'randint' (consider renaming '…/python-kurs/random.py' since it has the same name as the standard library module named 'random' and prevents importing that standard library module) -->
 </section>
 
@@ -11751,7 +11655,6 @@ Sınıfa: Zar denemelerinizin dosyasına hangi adı vermezsiniz? (beklenen: rand
 <figcaption class="focal">Function, isim verilmiş ve çağrılınca çalışan bir kod block'udur.</figcaption>
 </figure>
   </div>
-  <aside class="notes">def, define yani tanımla. Bu iki satır çalışınca ekranda hiçbir şey çıkmaz; nedenini birkaç sayfa sonra göreceğiz. print(), input(), len() ve math.sqrt() da birer function'dı; adını şimdi koyuyoruz.</aside>
 <!-- not spoken: Genel biçim (şeklin içinde çizili): def <isim>(): <gövde> | Kod (şeklin içinde çizili; doğrulama için): def draw_line(): print("-" * 20) -->
 </section>
 
@@ -11997,7 +11900,6 @@ Sınıfa: Zar denemelerinizin dosyasına hangi adı vermezsiniz? (beklenen: rand
       <p class="focal">Kantinde "bir tost" demek yeter; tostun nasıl yapıldığını her seferinde anlatmazsınız.</p>
     </div>
   </div>
-  <aside class="notes">Tekrarlanan kod, her siparişte tarifi baştan anlatmak gibi; def tarif kartını duvara asar, call siparişi verir. Benzetmenin bittiği yer: usta tarifi zaten bilir, Python'da function'ı önce def ile sizin yazmanız gerekir; usta eksik siparişi sorar, Python sormaz, programı durdurur.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="4B" data-src="S144" data-topic="def, call ve parameter">
@@ -12170,7 +12072,6 @@ Sınıfa: Zar denemelerinizin dosyasına hangi adı vermezsiniz? (beklenen: rand
 <figcaption class="focal">Call, function'ın gövdesini çalıştırır; sonra akış call'dan sonraki satıra döner.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Okları sırayla: bir, önce yazılır; iki, call gövdeye atlar; üç, içeride yazılır; dört, gövde bitince akış call satırına döner; beş, sonra yazılır. def satırları en üstte ama ilk çalışan print("önce").</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): def show_inside(): print("içeride") print("önce") show_inside() print("sonra") | Çıktı (Python 3.14.8; şeklin içinde): önce içeride sonra -->
 </section>
 
@@ -12179,7 +12080,6 @@ Sınıfa: Zar denemelerinizin dosyasına hangi adı vermezsiniz? (beklenen: rand
   <div class="content l-full">
     <div class="trace" data-trace="traces/ders4-call-order.json" data-labels="frames objects"></div>
   </div>
-  <aside class="notes">Nokta tuşuyla ilerliyorum. 1. satırdan sonra Global frame'de show_inside ismi bir function object'ini gösteriyor; gövde çalışmadı. 5. satırda call yapılıyor ve show_inside için yeni bir kutu açılıyor: call'un kendi alanı, adı frame; ayrıntısı Ders 5'te. Gövde bitince frame kapanıyor ve akış 5. satıra dönüyor.</aside>
 <!-- not spoken: Çıktı (Python 3.14.8): önce içeride sonra -->
 </section>
 
@@ -12353,7 +12253,6 @@ Sınıfa: Zar denemelerinizin dosyasına hangi adı vermezsiniz? (beklenen: rand
 <figcaption class="focal">def yalnızca tanımlar; call yoksa gövde hiç çalışmaz.</figcaption>
 </figure>
   </div>
-  <aside class="notes"><strong>def yalnızca tanımlar; gövdeyi call çalıştırır.</strong> Tarif kartını duvara asmak tost yapmaz; bu bölümün ilk yanılgısı, def yazınca function'ın çalıştığını sanmak.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): def show_inside(): print("içeride") print("dışarıda") | Çıktı (Python 3.14.8; şeklin içinde): dışarıda -->
 </section>
 
@@ -12481,7 +12380,6 @@ Sınıfa: Zar denemelerinizin dosyasına hangi adı vermezsiniz? (beklenen: rand
 <figcaption class="focal">Parameter, call anında argument'ın atandığı isimdir: name = "Yusuf".</figcaption>
 </figure>
   </div>
-  <aside class="notes">Parameter parantezin içindeki isim, call'da yazdığımız value argument. Call anında Python name = "Yusuf" assignment'ını yapar, sonra gövdeyi çalıştırır; parameter da bir isim ve call onun okunu argument'a bağlar.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): def say_hello(name): print(f"Selam {name}") say_hello("millet") say_hello("Yusuf") | Çıktı (Python 3.14.8; şeklin içinde): Selam millet Selam Yusuf -->
 </section>
 
@@ -12637,8 +12535,6 @@ Sınıfa: Zar denemelerinizin dosyasına hangi adı vermezsiniz? (beklenen: rand
 <figcaption class="focal">Argument'lar parameter'lara sırayla atanır.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Eşleştirme isme göre değil sıraya göre: birinci argument code'a, ikincisi credits'e. Call'daki ismin parameter'la aynı olması gerekmez; course, code parameter'ına bağlanır.<br>
-Sınıfa: print_credits("FIZ127", 3) ne yazar? (beklenen: FIZ127: 3 kredi)</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): def print_credits(code, credits): print(f"{code}: {credits} kredi") course = "MAT123" print_credits(course, 4) | Çıktı (Python 3.14.8; şeklin içinde): MAT123: 4 kredi -->
 </section>
 
@@ -12794,7 +12690,6 @@ Sınıfa: print_credits("FIZ127", 3) ne yazar? (beklenen: FIZ127: 3 kredi)</asid
 <figcaption class="focal">Sıra karışırsa Python hata vermez; yanlış satırı yazar.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Python bunu hata saymıyor, çünkü f-string her value'yu yazabilir. Böyle bir yanlışı ancak çıktıyı okuyan biri yakalar.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): def print_credits(code, credits): print(f"{code}: {credits} kredi") course = "MAT123" print_credits(4, course) | Çıktı (Python 3.14.8; şeklin içinde): 4: MAT123 kredi -->
 </section>
 
@@ -12915,7 +12810,6 @@ Sınıfa: print_credits("FIZ127", 3) ne yazar? (beklenen: FIZ127: 3 kredi)</asid
       <p class="focal">Argument'lar optik form gibi sırayla okunur; kaydırırsanız her cevap yanlış soruya gider.</p>
     </div>
   </div>
-  <aside class="notes">Benzetmenin bittiği yer: optik formda kaydırma sessizce yanlış sonuç verir, Python'da da sıra karışınca hata gelmez; ama argument sayısı tutmazsa Python durur.</aside>
 </section>
 
 <section class="s-figure" data-half="4B" data-src="S151" data-topic="def, call ve parameter">
@@ -12929,7 +12823,6 @@ Sınıfa: print_credits("FIZ127", 3) ne yazar? (beklenen: FIZ127: 3 kredi)</asid
       <p class="focal">Parameter, function'ın yalnızca gerçekten değişen kısmı için yazılır.</p>
     </div>
   </div>
-  <aside class="notes">Masadakilerden biri yalnızca tuzu istiyor, öteki her türlü sosu uzatan bir sistem kuruyor ve yirmi dakika geçiyor. pass_salt() yerine pass_item(item) yazmak parameter'la genelleştirmek; ama abartırsak tuz hiç gelmez.</aside>
 </section>
 
 <section class="s-connection" data-half="4B" data-src="S152" data-topic="def, call ve parameter">
@@ -12943,7 +12836,6 @@ Sınıfa: print_credits("FIZ127", 3) ne yazar? (beklenen: FIZ127: 3 kredi)</asid
       <p class="focal">Matematikteki f(x) yazımı Euler'den gelir; def square(x): aynı biçimdedir.</p>
     </div>
   </div>
-  <aside class="notes">Bu bir benzetme; Python bu yazımı Euler'den almadı. Euler 1734'te bir makalede f(x/a + c) yazdı ve bunu x/a + c'nin herhangi bir fonksiyonu diye tanımladı; kelimenin kendisi daha eski, Leibniz 1673'te kullanmıştı. Benzetmenin bittiği yer: matematikte f(4) her zaman bir değerdir; Python'da gövdeden değerin nasıl geri geldiğini sonraki bölümde göreceğiz.</aside>
 </section>
 
 <section class="s-figure" data-half="4B" data-src="S154" data-topic="def, call ve parameter">
@@ -13055,7 +12947,6 @@ turtle.done()
 </figure>
     </div>
   </div>
-  <aside class="notes">polygon'a 3 verince üçgen, 4 verince kare, 6 verince altıgen; 6'yı 5 yaparsanız beşgen. turtle Python'la gelen bir module, adını Logo dilindeki çizim kaplumbağasından alır; Logo 1967'de Feurzeig ve Papert'in çalışmasıyla doğdu.</aside>
 </section>
 
 <section class="s-figure" data-half="4B" data-src="S155" data-topic="def, call ve parameter">
@@ -13196,7 +13087,6 @@ for i in range(36):
 </figure>
     </div>
   </div>
-  <aside class="notes">36 call, her birinden sonra 10 derece dönüş: 36 çarpı 10, tam 360. Renk list'ten % ile seçiliyor; i % 6 hep 0 ile 5 arasında kalır.</aside>
 </section>
 
 <section class="s-error" data-half="4B" data-src="S156" data-topic="def, call ve parameter">
@@ -13369,8 +13259,6 @@ for i in range(36):
 <figcaption class="focal">Her parameter'a bir argument gerekir; yoksa TypeError.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Son satır: say_hello() çağrısında zorunlu bir argument eksik ve adı name; Python ne eksik olduğunu adıyla söylüyor.<br>
-Sınıfa: say_hello("Raşit", "Emre") ne olur? (beklenen: yine TypeError; function bir argument alıyor, iki verildi)</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): def say_hello(name): print(f"Selam {name}") say_hello() | Çıktı (Python 3.14.8; şeklin içinde): Traceback (most recent call last): File "…/python-kurs/example.py", line 4, in <module> say_hello() ~~~~~~~~~^^ TypeError: say_hello() missing 1 required positional argument: 'name' -->
 </section>
 
@@ -13544,7 +13432,6 @@ Sınıfa: say_hello("Raşit", "Emre") ne olur? (beklenen: yine TypeError; functi
 <figcaption class="focal">Önce def, sonra call: Python yukarıdan aşağı okur.</figcaption>
 </figure>
   </div>
-  <aside class="notes">1. satır çalışırken def henüz çalışmadı, yani say_hello diye bir isim yok: NameError. def de bir statement; çalışınca ismi oluşturur. Bu yüzden def'ler dosyanın üstünde, call'lar altında durur.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): say_hello("Yusuf") def say_hello(name): print(f"Selam {name}") | Çıktı (Python 3.14.8; şeklin içinde): Traceback (most recent call last): File "…/python-kurs/example.py", line 1, in <module> say_hello("Yusuf") ^^^^^^^^^ NameError: name 'say_hello' is not defined -->
 </section>
 
@@ -13718,7 +13605,6 @@ Sınıfa: say_hello("Raşit", "Emre") ne olur? (beklenen: yine TypeError; functi
 <figcaption class="focal">pass hiçbir şey yapmaz; boş bir gövdenin yerini tutar.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Gövdesiz bir function yazılamaz: def satırının altına hiçbir şey yazmazsanız IndentationError gelir, çünkü Python indentation'lı bir block bekliyor. pass hiçbir şey yapmaz; function'ın adını şimdi koyup içini sonra yazmak için.</aside>
 <!-- not spoken: Later: LATER-4.B1 withdrawn 2026-10-13 (class and object left the course, DECISIONS.md "Topic cut, score 8 and above"); the sentence still in the notes goes in the notes rewrite. | Kod (şeklin içinde çizili; doğrulama için): def check_grades(): pass check_grades() print("bitti") | Çıktı (Python 3.14.8; şeklin içinde): bitti -->
 </section>
 
@@ -13864,7 +13750,6 @@ Sınıfa: say_hello("Raşit", "Emre") ne olur? (beklenen: yine TypeError; functi
 <figcaption class="focal">return, bir değeri call'un yapıldığı yere geri gönderir.</figcaption>
 </figure>
   </div>
-  <aside class="notes">return bir keyword; arkasındaki expression'ın value'sunu call'un yapıldığı yere geri gönderir. 4 kredilik bir C1, 2.5 katsayıyla 10.0. Ders 3'te break'i anlatırken akışı değiştiren bir statement daha olduğunu söylemiştim; o return.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): def weighted_points(credits, grade_point): return credits * grade_point points = weighted_points(4, 2.5) print(points) | Çıktı (Python 3.14.8; şeklin içinde): 10.0 -->
 </section>
 
@@ -14013,7 +13898,6 @@ Sınıfa: say_hello("Raşit", "Emre") ne olur? (beklenen: yine TypeError; functi
 <figcaption class="focal">Call, döndürdüğü değerle yer değiştirir.</figcaption>
 </figure>
   </div>
-  <aside class="notes"><strong>Call bitince yerine dönen değer geçer.</strong> Satır, sanki baştan points = 10.0 yazılmış gibi devam eder; bu yüzden bir call, bir value'nun durabileceği her yerde durabilir: assignment'ın sağında, bir expression'ın içinde, bir if'in şartında.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): points = weighted_points(4, 2.5) -->
 </section>
 
@@ -14148,7 +14032,6 @@ Sınıfa: say_hello("Raşit", "Emre") ne olur? (beklenen: yine TypeError; functi
       <p class="focal">Return value, otomatın tepsiye düşürdüğü ürün gibidir: call'un yerini o alır.</p>
     </div>
   </div>
-  <aside class="notes">Benzetmenin bittiği yer: otomattan düşen ürün bir kez yenir, dönen value ise istediğiniz kadar kullanılır.</aside>
 </section>
 
 <section class="s-code-output" data-half="4B" data-src="S165" data-topic="Return value">
@@ -14460,8 +14343,6 @@ if has_passed(2.5):
 <!-- /svg -->
 </figure>
   </div>
-  <aside class="notes">Hacettepe yönetmeliğinin 24. maddesine göre A1'den D'ye kadar notlar geçer ve D'nin katsayısı 1.75. if has_passed(2.5): satırı call bitince if True: oluyor.<br>
-Sınıfa: has_passed(1.5) ne döndürür? (beklenen: False)</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="4B" data-src="S167" data-topic="Return value">
@@ -14629,8 +14510,6 @@ Sınıfa: has_passed(1.5) ne döndürür? (beklenen: False)</aside>
 <figcaption class="focal">return, loop'un içinde de function'ı o anda bitirir.</figcaption>
 </figure>
   </div>
-  <aside class="notes">return yalnızca loop'u değil bütün function'ı bitirir: 65'i bulunca function dönüyor, 80'e hiç bakılmıyor. Hiçbir puan 50'ye ulaşmazsa loop biter ve son satırdaki return 0 çalışır.<br>
-Sınıfa: first_passing([80, 30]) ne döndürür? (beklenen: 80; ilk turda return)</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): def first_passing(scores): for score in scores: if score >= 50: return score return 0 scores = [30, 65, 80] print(first_passing(scores)) print(first_passing([30, 40])) | Çıktı (Python 3.14.8; şeklin içinde): 65 0 -->
 </section>
 
@@ -14639,7 +14518,6 @@ Sınıfa: first_passing([80, 30]) ne döndürür? (beklenen: 80; ilk turda retur
   <div class="content l-full">
     <div class="trace" data-trace="traces/ders4-first-passing.json" data-step="9" data-labels="frames objects"></div>
   </div>
-  <aside class="notes">Nokta tuşuyla ilerliyorum. 8. satırda call yapılıyor ve first_passing'in frame'i açılıyor; içindeki scores parameter'ı dışarıdaki aynı list'i gösteriyor, çünkü parameter da bir assignment. score önce 30, şart False; sonra 65, şart True ve return 65. Frame kapanıyor, 65 yazılıyor; 80'e hiç gelinmedi.</aside>
 <!-- not spoken: Çıktı (Python 3.14.8): 65 -->
 </section>
 
@@ -14669,7 +14547,6 @@ Kredi: <span class="chg">3</span>
 </figure>
 <p class="focal span">Sayı gelince return hem loop'u hem function'ı bitirir.</p>
   </div>
-  <aside class="notes">Yeniden sorma loop'unun function'a girmiş hali; tek fark, break yerine return. İstemi parameter olarak aldığı için aynı function kredi de sorar, puan da; hedef programdaki ask_int bu.</aside>
   <!-- authoring (not shown): Verified: NEW 2026-10-13. Run on /opt/homebrew/bin/python3.14 (3.14.8) with stdin üç, 3; the typed answers are echoed as the Run window shows them: Kredi: üç / Tam sayı girin. / Kredi: 3 / 6. The function is ask_int() of authoring/targets/target4.py: the retry loop of section 6 (S108) inside a def, with return in place of break. Everything it uses is taught by now: def and parameter (section 8), return in a loop (S167), while True, try, except ValueError (section 6). | Body instruction: the typed answers (`üç`, `3`) in `span.chg`, as the Run window shows typed text. -->
 </section>
 
@@ -14684,7 +14561,6 @@ Kredi: <span class="chg">3</span>
       <p class="focal">EDSAC'ta call'dan geri dönmenin yolunu David Wheeler buldu; Python bunu kendisi yapar.</p>
     </div>
   </div>
-  <aside class="notes">EDSAC'ta subroutine'e atlamak kolaydı ama call'un yapıldığı yere dönmeyi sağlayan bir donanım yoktu. Wheeler'ın çözümünde çağıran program kendi adresini bir yazmaca koyup atlıyor, subroutine bu adresten dönüş noktasını hesaplayıp kendi son komutuna yazıyordu. Wheeler yöntemi 1952'de bir ACM toplantısında anlattı. Fotoğrafta ön sırada, sağdan ikinci gözlüklü olan Wheeler.</aside>
 </section>
 
 <section class="s-error" data-half="4B" data-src="S170" data-topic="Return value">
@@ -14701,7 +14577,6 @@ return 5
 </figure>
 <p class="focal">return yalnızca bir function'ın gövdesinde yazılabilir.</p>
   </div>
-  <aside class="notes">SyntaxError olduğu için dosya hiç çalışmaz; Ders 1'den biliyoruz, SyntaxError çalışmadan önce gelir. Genelde indentation kayınca olur: return satırı def'in block'undan dışarı taşar.</aside>
 </section>
 
 <section class="s-poll" data-half="4B" data-src="S171" data-topic="Return value" data-poll-id="d4-return-son" data-answer="3">
@@ -14731,7 +14606,6 @@ A</code></li>
       <div class="poll-bars" hidden></div>
     </div>
   </div>
-  <aside class="notes">Telefonunuzun kamerasını QR koda tutun, A, B, C ya da D'ye dokunun; ad ya da giriş istenmiyor. Şimdi yedi saniye kimse konuşmasın, herkes kendi cevabını seçsin. Dağılıma bakalım. Doğru cevap C şıkkı: yalnızca 1. return 1 function'ı o anda bitiriyor ve print("A") hiç çalışmıyor. PyCharm da return'den sonraki satırı soluk gösterir, çünkü oraya hiçbir zaman ulaşılmaz. A ve B şıkları return'den sonraki satırın da çalıştığını düşünüyor; B onu 1'den önce, A ise sonra yazıyor. D şıkkı yalnızca gövdedeki print'in çalıştığını, dönen değerin yazılmadığını düşünüyor.</aside>
   <!-- authoring (not shown): Verified: output `1` (3.14.8). Options changed 2026-10-13: the fourth option was `None` (None is Ders 5A); `A` is the "only the body's print runs" mistake. -->
 <!-- not spoken: Çıktı (Python 3.14.8, slaytta gösterilmez): 1 -->
 </section>
@@ -14867,7 +14741,6 @@ A</code></li>
 <!-- /svg -->
 </figure>
   </div>
-  <aside class="notes">Hedef programın parçaları: coefficient Ders 2'deki elif zinciri, bu kez her dalda bir return; gpa tuple'lı bir for, iki accumulator ve sonda return; ask_int az önce gördüğümüz function. Dersin başında çalışan program buydu; artık her satırını okuyabiliyorsunuz.</aside>
   <!-- authoring (not shown): Verified: NEW 2026-10-13. authoring/targets/run_targets.py on Python 3.14.8 (answers bbm102, üç, 3, b1) prints the eight lines above; check_taught.py (rewritten 2026-10-14) gives 0 problems; its only non-OK lines are the calls to the program's own functions (gpa, coefficient, ask_int), and Return maps to section 9, S162. Weighted points 46.75, credits 15, 46.75 / 15 = 3.1166..., printed 3.12. -->
 <!-- not spoken: Later: closes LATER-4.5 from S3: gpa, coefficient and ask_int, the parts S3 left for after the break, are written here live, and the whole of target4.py runs. | Code (assembled live; word for word authoring/targets/target4.py; not typeset on this slide): def coefficient(letter): if letter == "A1": return 4.00 elif letter == "A2": return 3.75 elif letter == "A3": return 3.50 elif letter == "B1": return 3.25 elif letter == "B2": return 3.00 elif letter == "B3": return 2.75 elif letter == "C1": return 2.50 elif letter == "C2": return 2.25 elif letter == "C3": return 2.00 elif letter == "D": return 1.75 else: return 0.00 # F1, F2, F3, F6 def gpa(transcript): total_points = 0 total_credits = 0 for code, credits, letter in transcript: total_points += credits * coefficient(letter) total_credits += credits return total_points / total_credits def ask_int(prompt): while True: try: number = int(input(prompt)) return number except ValueError: print("Tam sayı girin.") transcript = [ ("MAT123", 4, "C1"), ("FIZ127", 3, "B2"), ("TKD103", 2, "A2"), ("BBM101", 3, "A3"), ] print(f"{len(transcript)} ders, AGNO: {gpa(transcript):.2f}") code = input("Yeni dersin kodu: ").strip().upper() credits = ask_int("Kredi: ") letter = input("Harf notu: ").strip().upper() transcript.append((code, credits, letter)) print(f"{len(transcript)} ders, son ders {transcript[-1][0]}") print(f"AGNO: {gpa(transcript):.2f}") | Output (not typeset on this slide; the same run is drawn in ders4-promise.svg on S2 and ders4-b-promise.svg on S92): 4 ders, AGNO: 3.08 Yeni dersin kodu: bbm102 Kredi: üç Tam sayı girin. Kredi: 3 Harf notu: b1 5 ders, son ders BBM102 AGNO: 3.12 -->
 </section>
@@ -14999,7 +14872,6 @@ A</code></li>
       <p>Form: <a href="https://forms.gle/eMHjvPfSRP9cp1JH7">forms.gle/eMHjvPfSRP9cp1JH7</a></p>
     </div>
   </div>
-  <aside class="notes">Ödev 4 yine tek bir dosya, odev4.py; GitHub'daki reposunda bu haftanın konu özeti de var. Altı görev bugünün sırasını izliyor; sonuncusu Sezar şifresi, en sonda dosyadaki gizli mesajı çözüyorsunuz. Son gün 15 Kasım Pazar, saat 23.59. Formda İsim alanına isminizi yazıp odev4.py'yi Ödev dosyası alanına yükleyin ve onay kutusunu işaretleyin; Açıklama isteğe bağlı.</aside>
   <!-- authoring (not shown): Verified: 2026-10-14. site/code/odev4.py (six tasks and Meraklısına) and authoring/assignments/solutions/odev4_solution.py; the solution's run on Python 3.14.8 (answers seksen, 120, 80, echoed as in the Run window) matches every Beklenen çıktı block character for character; check_taught.py on both: 0 problems. The card is site/odevler/odev4-kart.pdf (authoring/assignments/cards/odev4.tex). -->
 </section>
 
@@ -15016,7 +14888,6 @@ A</code></li>
   <div class="content l-table is-short">
     <ol class="steps"><li><span class="n-sq">1</span><span>Birçok değeri tek bir list'te tutup değiştirmek</span></li><li><span class="n-sq">2</span><span>Bir kaydı tuple ile tutup unpacking ile açmak</span></li><li><span class="n-sq">3</span><span>İki ismin aynı list'i gösterdiğini fark etmek</span></li><li><span class="n-sq">4</span><span>Hatalı girişi try/except ile yakalamak</span></li><li><span class="n-sq">5</span><span>Hazır module'leri import edip kullanmak</span></li><li><span class="n-sq">6</span><span>Kendi function'ınızı yazıp değer return etmek</span></li></ol>
   </div>
-  <aside class="notes">Bugün transkripti tek bir list'te tuttunuz, her satırı bir tuple oldu, kredi için üç yazılınca programınız çökmedi ve gpa ile ask_int birer value return etti. Ana cümlemiz: isim bir object'i gösterir; bir satır ya object'i değiştirir ya da ismin okunu taşır. <strong>b = a bir kopya değildir, aynı list'e ikinci bir isimdir.</strong> Messi bir Ballon d'Or daha alırsa ne yazacağınızı biliyorsunuz: append. Ders 5'te dict, set ve dosyalar var; salı görüşürüz.</aside>
 </section>
 
 <section class="s-section" data-half="4B" data-src="S189" data-topic="Çalışma soruları" data-background-color="#181C3E">

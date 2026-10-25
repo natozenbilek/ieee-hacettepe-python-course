@@ -1,8 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 400" width="1152" height="400" role="img" aria-labelledby="ders3-ifelse-blocks-t ders3-ifelse-blocks-d">
-  <title id="ders3-ifelse-blocks-t">if ve else block'ları</title>
-  <desc id="ders3-ifelse-blocks-d">Solda yedi satırlık kod: grade_point = 3.0, if grade_point &gt;= 1.75:, girintili print("geçti") ve print("tebrikler"), else:, girintili print("kaldı"), girintisiz print("dönem bitti"); 3.0 ve 1.75 hardal sarısı (float), metinler yeşil (str). Girintili satırların solunda PyCharm'daki gibi ince gri girinti çizgileri. Sağda köşeli ayraçlar: 3. ve 4. satır if block'u, 6. satır else block'u. 7. satırın sol kenarında kısa çivit mavisi bir çizgi; yanındaki etiket açık mavi, çivit mavisi çerçeveli kutuda: block'ların dışında: her zaman çalışır. En sağda Çıktı: geçti, tebrikler, dönem bitti.</desc>
-  <!-- source: blocks: grade_point = 3.0 -&gt; geçti / tebrikler / dönem bitti (Python 3.14.8, 2026-10-10) -->
+<svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 470" width="1152" height="470" role="img" aria-labelledby="ders3-ifelse-blocks-t ders3-ifelse-blocks-d">
+  <title id="ders3-ifelse-blocks-t">if ve else block'ları, adım adım</title>
+  <desc id="ders3-ifelse-blocks-d">Solda yedi satırlık kod: grade_point = 3.0, if grade_point &gt;= 1.75:, girintili print("geçti") ve print("tebrikler"), else:, girintili print("kaldı"), girintisiz print("dönem bitti"); 3.0 ve 1.75 hardal sarısı (float), metinler yeşil (str). Girintili satırların solunda PyCharm'daki gibi ince gri girinti çizgileri. Sağda soru: Indentation nerede başlar, nerede biter? Tıklamalarla: if satırının sonundaki iki nokta çivit mavisi halkayla işaretlenir, 3. ve 4. satırlara if block'u ayracı ve iki noktadan sonra başlar yazısı gelir; else satırının iki noktası işaretlenir, 6. satıra else block'u ayracı gelir; 7. satırın sol kenarında çivit mavisi bir çizgi ve açık mavi kutuda sol kenara döndü: her zaman çalışır; sonra Çıktı: geçti, tebrikler, dönem bitti; en son alt satır: Sol kenara dönen satır her zaman çalışır.</desc>
+  <!-- source: grade_point = 3.0 -&gt; geçti / tebrikler / dönem bitti (Python 3.14.8, 2026-10-21). Build steps: start code and question; 0 if block; 1 else block; 2 the line outside the blocks; 3 output; 4 focal line -->
   <defs>
+    <marker id="ders3-ifelse-blocks-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
+    <marker id="ders3-ifelse-blocks-ahm" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-m" d="M0,0 L12,6 L0,12 z"/></marker>
+    <marker id="ders3-ifelse-blocks-ahok" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-ok" d="M0,0 L12,6 L0,12 z"/></marker>
+    <marker id="ders3-ifelse-blocks-aherr" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-err" d="M0,0 L12,6 L0,12 z"/></marker>
     <style>
 /* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
 .dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
@@ -82,11 +86,13 @@
 .dg rect.t-set,.dg path.t-set,.dg circle.t-set{fill:#F2F8D6;fill:var(--t-set-bg,#F2F8D6);stroke:#747C42;stroke:var(--t-set,#747C42)}
 .dg text.t-set,.dg tspan.t-set{fill:#3F4418;fill:var(--t-set-tx,#3F4418)}
 .dg rect.boxhl,.dg path.boxhl,.dg rect.cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595)}
-/* ders3-ifelse-blocks: PyCharm'daki ince girinti çizgisi, gri */
 .dg .ib-g{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg text.fcl{font-size:40px;font-weight:600}
+.dg text.fq{font-size:28px;font-weight:400}
+.dg tspan.fcm{font-family:"JetBrains Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-weight:500;font-size:36px}
     </style>
   </defs>
-  <rect class="bg" width="1152" height="400"/>
+  <rect class="bg" width="1152" height="470"/>
   <rect class="soft" x="2" y="4" width="448" height="349.42" rx="4"/>
   <text class="cd" x="44" y="44.72">grade_point = <tspan class="t-float">3.0</tspan></text>
   <text class="cd" x="44" y="92.72">if grade_point &gt;= <tspan class="t-float">1.75</tspan>:</text>
@@ -97,18 +103,34 @@
   <text class="cd" x="44" y="332.72">print(<tspan class="t-str">"dönem bitti"</tspan>)</text>
   <path class="ib-g" d="M52.4,112.72 V200.72"/>
   <path class="ib-g" d="M52.4,256.72 V296.72"/>
-  <path class="emph" d="M22,306.72 V340.72"/>
-  <path class="ld" d="M454,114.72 H464 V196.72 H454"/>
-  <text class="lb" x="480" y="163.72">if block'u</text>
-  <path class="ld" d="M454,258.72 H464 V292.72 H454"/>
-  <text class="lb" x="480" y="283.72">else block'u</text>
-  <path class="ld" d="M454,306.72 H464 V340.72 H454"/>
-  <rect class="boxhl" x="476" y="297.72" width="248" height="80" rx="6"/>
-  <text class="lb" x="492" y="331.72">block'ların dışında:</text>
-  <text class="lb" x="492" y="363.72">her zaman çalışır</text>
-  <rect class="outp" x="800" y="4" width="248" height="349.42" rx="4"/>
-  <text class="lb sub" x="816" y="36">Çıktı</text>
-  <text class="cd" x="816" y="90">geçti</text>
-  <text class="cd" x="816" y="130">tebrikler</text>
-  <text class="cd" x="816" y="170">dönem bitti</text>
+  <text class="lb" x="480" y="40">Indentation nerede başlar,</text>
+  <text class="lb" x="480" y="72">nerede biter?</text>
+  <g class="fragment" data-fragment-index="0">
+    <ellipse class="emph" cx="422" cy="85" rx="10" ry="16"/>
+    <path class="ld" d="M454,114.72 H464 V196.72 H454"/>
+    <text class="lb" x="480" y="150">if block'u</text>
+    <text class="tx sub" x="480" y="180">iki noktadan sonra başlar</text>
+  </g>
+  <g class="fragment" data-fragment-index="1">
+    <ellipse class="emph" cx="119.6" cy="229" rx="10" ry="16"/>
+    <path class="ld" d="M454,258.72 H464 V292.72 H454"/>
+    <text class="lb" x="480" y="283.72">else block'u</text>
+  </g>
+  <g class="fragment" data-fragment-index="2">
+    <path class="emph" d="M22,306.72 V340.72"/>
+    <path class="ld" d="M454,306.72 H464 V340.72 H454"/>
+    <rect class="boxhl" x="476" y="297.72" width="248" height="80" rx="6"/>
+    <text class="lb" x="492" y="331.72">sol kenara döndü:</text>
+    <text class="lb" x="492" y="363.72">her zaman çalışır</text>
+  </g>
+  <g class="fragment" data-fragment-index="3">
+    <rect class="outp" x="800" y="4" width="248" height="349.42" rx="4"/>
+    <text class="lb sub" x="816" y="36">Çıktı</text>
+    <text class="cd" x="816" y="90">geçti</text>
+    <text class="cd" x="816" y="130">tebrikler</text>
+    <text class="cd" x="816" y="170">dönem bitti</text>
+  </g>
+  <g class="fragment" data-fragment-index="4">
+    <text class="tx fcl" x="2" y="446">Sol kenara dönen satır her zaman çalışır.</text>
+  </g>
 </svg>

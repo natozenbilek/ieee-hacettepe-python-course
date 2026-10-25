@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 300" width="1152" height="300" role="img" aria-labelledby="ders2-str-uses-t ders2-str-uses-d">
+<svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 330" width="1152" height="330" role="img" aria-labelledby="ders2-str-uses-t ders2-str-uses-d">
   <title id="ders2-str-uses-t">Programdaki metinler str'dir</title>
-  <desc id="ders2-str-uses-d">Üç sütun. Ad: "Mehmet" (str, yeşil), klavyeden gelir. Ders kodu: "MAT123" (str, yeşil), transkriptten gelir. Mesaj: "AGNO: " (str, yeşil), programın kendisinden gelir. Mehmet, MAT123 ve AGNO: değerleri; üçü de str, yeşil.</desc>
-  <!-- source: ders2-A.md S9; type("Mehmet"), type("MAT123"), type("AGNO: ") -> <class 'str'> x3 (Python 3.14.8, 2026-10-11). The spec's example name is replaced by Mehmet (DECISIONS.md, Example names). -->
+  <desc id="ders2-str-uses-d">Üç sütun. Ad: "Mehmet" (str, yeşil), klavyeden gelir. Ders kodu: "MAT123" (str, yeşil), transkriptten gelir. Mesaj: "AGNO: " (str, yeşil), programın kendisinden gelir. Mehmet, MAT123 ve AGNO: değerleri; üçü de str, yeşil. Altta ince bir çizgiden sonra soru: Öğrenci numaranız rakamlardan oluşuyor: int mi, str mi? Bir tıklamayla cevap çıkar: yeşil kutuda "12345678", str, hesap yapılmaz.</desc>
+  <!-- source: ders2-A.md S9; type("Mehmet"), type("MAT123"), type("AGNO: ") -> <class 'str'> x3 (Python 3.14.8, 2026-10-11). The spec's example name is replaced by Mehmet (DECISIONS.md, Example names). ; the student number is made up for the slide (12345678), never a real one -->
   <defs>
     <style>
 /* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
@@ -84,9 +84,9 @@
 .dg rect.boxhl,.dg path.boxhl,.dg rect.cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595)}
     </style>
   </defs>
-  <rect class="bg" width="1152" height="300"/>
-  <path class="sep" d="M384,16 V284"/>
-  <path class="sep" d="M768,16 V284"/>
+  <rect class="bg" width="1152" height="330"/>
+  <path class="sep" d="M384,16 V240"/>
+  <path class="sep" d="M768,16 V240"/>
   <text class="lb sub mid" x="192" y="48">ad</text>
   <rect class="box t-str" x="42" y="78" width="300" height="56" rx="6"/>
   <text class="cd mid t-str pre" xml:space="preserve" x="192" y="116">"Mehmet"</text>
@@ -102,4 +102,12 @@
   <text class="cd mid t-str pre" xml:space="preserve" x="960" y="116">"AGNO: "</text>
   <text class="ty mid t-str" x="960" y="164">str</text>
   <text class="tx sub mid" x="960" y="226">programın kendisinden</text>
+  <path class="sep" d="M2,252 H1150"/>
+  <text class="lb" x="2" y="300">Öğrenci numaranız rakamlardan oluşuyor: int mi, str mi?</text>
+  <g class="fragment" data-fragment-index="0">
+    <rect class="box t-str" x="668" y="270" width="200" height="48" rx="6"/>
+    <text class="cd mid t-str" x="768" y="304">"12345678"</text>
+    <text class="ty t-str" x="884" y="302">str</text>
+    <text class="tx sub" x="940" y="302">hesap yapılmaz</text>
+  </g>
 </svg>

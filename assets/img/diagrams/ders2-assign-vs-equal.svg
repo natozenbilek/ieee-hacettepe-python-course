@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 300" width="1152" height="300" role="img" aria-labelledby="ders2-assign-vs-equal-t ders2-assign-vs-equal-d">
+<svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 276" width="1152" height="276" role="img" aria-labelledby="ders2-assign-vs-equal-t ders2-assign-vs-equal-d">
   <title id="ders2-assign-vs-equal-t">= ve ==</title>
-  <desc id="ders2-assign-vs-equal-d">Solda = başlığı ve assignment etiketi: credits = 4; lacivert isim etiketi credits, 4'ü gösterir (int, turuncu); altında isme value bağlar, çıktı vermez. Sağda == başlığı ve comparison operator etiketi: credits == 4; eşit mi? kutusundan çıkan ok True'yu gösterir (bool, deniz yeşili). Altta print(5 == 5.0, 5 = 5) satırında tek = kırmızı kesik çizgili bir halkayla işaretli; altında kırmızı hata satırı: SyntaxError: expression cannot contain assignment, perhaps you meant "=="?</desc>
-  <!-- source: ders2-B.md S14; credits = 4; print(credits == 4) -> True; print(5 == 5.0, 5 = 5) alone -> SyntaxError: expression cannot contain assignment, perhaps you meant "=="? (Python 3.14.8, 2026-10-11) -->
+  <desc id="ders2-assign-vs-equal-d">Solda = başlığı ve assignment etiketi: credits = 4; lacivert isim etiketi credits, 4'ü gösterir (int, turuncu); altında isme value bağlar, çıktı vermez. Sağda == başlığı ve comparison operator etiketi: credits == 4; eşit mi? kutusundan çıkan ok True'yu gösterir (bool, deniz yeşili). Bir tıklamayla altta soru satırı çıkar: x 5 iken x == x + 1. Bir tıklamayla daha cevap: False (bool, deniz yeşili); 5 ile 6 eşit değil; x = x + 1 ise x'i 6 yapar.</desc>
+  <!-- source: ders2-B.md S14; credits = 4; print(credits == 4) -> True; (Python 3.14.8, 2026-10-11) ; x = 5; print(x == x + 1) -&gt; False on 3.14.8, 2026-10-21 ; the SyntaxError row left on 2026-10-22 (Ders 1 S188 shows it); the question row is build step 0, its answer step 1 -->
   <defs>
     <marker id="ders2-assign-vs-equal-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
     <style>
@@ -87,7 +87,7 @@
 .dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-variant-ligatures:none;font-feature-settings:"liga" 0,"calt" 0}
     </style>
   </defs>
-  <rect class="bg" width="1152" height="300"/>
+  <rect class="bg" width="1152" height="276"/>
   <text class="ti" x="2" y="30">=</text>
   <text class="tx sub" x="30" y="30">assignment</text>
   <text class="cd" x="2" y="74">credits = <tspan class="t-int">4</tspan></text>
@@ -108,10 +108,17 @@
   <rect class="box t-bool" x="840" y="94" width="100" height="56" rx="6"/>
   <text class="cd mid t-bool" x="890" y="132">True</text>
   <text class="ty t-bool" x="956" y="132">bool</text>
-  <path class="sep" d="M2,210 H1150"/>
-  <text class="cd24" x="2" y="248">print(5 == 5.0, 5</text>
-  <text class="cd24" x="261.2" y="248">=</text>
-  <text class="cd24" x="290" y="248">5)</text>
-  <ellipse class="errdash" cx="268.4" cy="240" rx="18" ry="19"/>
-  <text class="cd24 errt" x="2" y="288">SyntaxError: expression cannot contain assignment, perhaps you meant "=="?</text>
+  <g class="fragment" data-fragment-index="0">
+    <path class="sep" d="M2,210 H1150"/>
+    <text class="lb" x="2" y="254">x 5 iken</text>
+    <text class="cd24" x="110" y="254">x == x + 1</text>
+  </g>
+  <g class="fragment" data-fragment-index="1">
+    <path class="ar" d="M268,246 H317" marker-end="url(#ders2-assign-vs-equal-ah)"/>
+    <rect class="box t-bool" x="320" y="224" width="100" height="44" rx="6"/>
+    <text class="cd mid t-bool" x="370" y="256">False</text>
+    <text class="tx" x="440" y="254">5 ile 6 eşit değil; </text>
+    <text class="cd24" x="628" y="254">x = x + 1</text>
+    <text class="tx" x="770" y="254">ise x'i 6 yapar</text>
+  </g>
 </svg>

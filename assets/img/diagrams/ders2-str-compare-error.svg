@@ -1,9 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 300" width="1152" height="300" role="img" aria-labelledby="ders2-str-compare-error-t ders2-str-compare-error-d">
-  <title id="ders2-str-compare-error-t">Kıyaslama ve TypeError: "85" &gt; 50</title>
-  <desc id="ders2-str-compare-error-d">"85" (str, yeşil) ile 50 (int, turuncu) kıyaslanamaz, kırmızı TypeError; int("85") ile 85 (int) 50'den büyük, True (bool, deniz yeşili). Solda kırmızı başlık Geçersiz: score = "85" ve print(score &gt; 50); altında "85" (str) ve 50 (int) kutuları, aradaki &gt; işaretinin üstünde kırmızı çarpı; en altta kırmızı: TypeError: '&gt;' not supported between instances of 'str' and 'int'. Sağda petrol mavisi başlık Geçerli: score = int("85") ve print(score &gt; 50); 85 (int) &gt; 50 (int), bir ok ve True; True açık mavi zeminli çivit mavisi çerçeve içinde. Altta: == hata vermez; &lt; ve &gt; str ile sayıyı kıyaslamaz.</desc>
-  <!-- source: ders2-B.md S19; score = "85"; print(score > 50) -> TypeError: '>' not supported between instances of 'str' and 'int'; score = int("85"); print(score > 50) -> True (Python 3.14.8, 2026-10-11) -->
+  <title id="ders2-str-compare-error-t">Kıyaslama ve TypeError: klavyeden gelen "85" &gt; 50</title>
+  <desc id="ders2-str-compare-error-d">İki sütun. Solda kırmızı başlık Geçersiz: score = input("Puan: ") ve print(score &gt; 50); altında 8 ve 5 tuşlarından bir ok yeşil "85" kutusuna (str) gider, "85" ile 50 (int, turuncu) arasındaki &gt; işaretinin üstünde kırmızı çarpı; en altta kırmızı: TypeError: '&gt;' not supported between instances of 'str' and 'int'. Sağda petrol mavisi başlık Geçerli: score = int(input("Puan: ")) ve print(score &gt; 50); 8 ve 5 tuşlarından çıkan ok açık mavi zeminli çivit mavisi çerçeveli int() kutusundan geçip 85 (int) kutusuna gider; 85 &gt; 50, bir ok ve True (bool, deniz yeşili). Altta: == hata vermez; &lt; ve &gt; str ile sayıyı kıyaslamaz.</desc>
+  <!-- source: score = input("Puan: ") with 85 typed; print(score &gt; 50) -&gt; TypeError: '&gt;' not supported between instances of 'str' and 'int'; score = int(input("Puan: ")) with 85 -&gt; True (Python 3.14.8, 2026-10-22) -->
   <defs>
     <marker id="ders2-str-compare-error-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
+    <marker id="ders2-str-compare-error-ahm" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-m" d="M0,0 L12,6 L0,12 z"/></marker>
+    <marker id="ders2-str-compare-error-ahok" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-ok" d="M0,0 L12,6 L0,12 z"/></marker>
+    <marker id="ders2-str-compare-error-aherr" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-err" d="M0,0 L12,6 L0,12 z"/></marker>
     <style>
 /* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
 .dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
@@ -83,40 +86,50 @@
 .dg rect.t-set,.dg path.t-set,.dg circle.t-set{fill:#F2F8D6;fill:var(--t-set-bg,#F2F8D6);stroke:#747C42;stroke:var(--t-set,#747C42)}
 .dg text.t-set,.dg tspan.t-set{fill:#3F4418;fill:var(--t-set-tx,#3F4418)}
 .dg rect.boxhl,.dg path.boxhl,.dg rect.cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595)}
-/* code shows the characters students type: no programming ligatures, every sign stays its typed characters */
-.dg .cd,.dg .cd24,.dg .nm,.dg .ty{font-variant-ligatures:none;font-feature-settings:"liga" 0,"calt" 0}
     </style>
   </defs>
   <rect class="bg" width="1152" height="300"/>
   <path class="sep" d="M576,10 V262"/>
   <text class="lb errt" x="20" y="30">Geçersiz</text>
-  <text class="cd24" x="20" y="66">score = <tspan class="t-str">"85"</tspan></text>
+  <text class="cd24" x="20" y="66">score = input(<tspan class="t-str">"Puan: "</tspan>)</text>
   <text class="cd24" x="20" y="98">print(score &gt; <tspan class="t-int">50</tspan>)</text>
-  <rect class="box t-str" x="20" y="116" width="100" height="56" rx="6"/>
-  <text class="cd mid t-str" x="70" y="154">"85"</text>
-  <text class="ty mid t-str" x="70" y="202">str</text>
-  <text class="cd mid" x="160" y="154">&gt;</text>
-  <rect class="box t-int" x="200" y="116" width="72" height="56" rx="6"/>
-  <text class="cd mid t-int" x="236" y="154">50</text>
-  <text class="ty mid t-int" x="236" y="202">int</text>
-  <path class="ar-err no-check" d="M140,124 L180,164"/>
-  <path class="ar-err no-check" d="M140,164 L180,124"/>
+  <rect class="key" x="20" y="122" width="42" height="44" rx="4"/>
+  <text class="cd24 mid" x="41" y="152">8</text>
+  <rect class="key" x="68" y="122" width="42" height="44" rx="4"/>
+  <text class="cd24 mid" x="89" y="152">5</text>
+  <path class="ar" d="M114,144 H149" marker-end="url(#ders2-str-compare-error-ah)"/>
+  <rect class="box t-str" x="152" y="116" width="100" height="56" rx="6"/>
+  <text class="cd mid t-str" x="202" y="154">"85"</text>
+  <text class="ty mid t-str" x="202" y="202">str</text>
+  <text class="cd mid" x="292" y="154">&gt;</text>
+  <rect class="box t-int" x="332" y="116" width="72" height="56" rx="6"/>
+  <text class="cd mid t-int" x="368" y="154">50</text>
+  <text class="ty mid t-int" x="368" y="202">int</text>
+  <path class="ar-err no-check" d="M272,124 L312,164"/>
+  <path class="ar-err no-check" d="M272,164 L312,124"/>
   <text class="cd24 errt" x="20" y="230">TypeError: '&gt;' not supported</text>
   <text class="cd24 errt" x="20" y="260">between instances of 'str' and 'int'</text>
   <text class="lb okt" x="596" y="30">Geçerli</text>
-  <text class="cd24" x="596" y="66">score = int(<tspan class="t-str">"85"</tspan>)</text>
+  <text class="cd24" x="596" y="66">score = int(input(<tspan class="t-str">"Puan: "</tspan>))</text>
   <text class="cd24" x="596" y="98">print(score &gt; <tspan class="t-int">50</tspan>)</text>
-  <rect class="box t-int" x="596" y="116" width="72" height="56" rx="6"/>
-  <text class="cd mid t-int" x="632" y="154">85</text>
-  <text class="ty mid t-int" x="632" y="202">int</text>
-  <text class="cd mid" x="704" y="154">&gt;</text>
-  <rect class="box t-int" x="740" y="116" width="72" height="56" rx="6"/>
-  <text class="cd mid t-int" x="776" y="154">50</text>
-  <text class="ty mid t-int" x="776" y="202">int</text>
-  <rect class="boxhl" x="884" y="110" width="122" height="68" rx="10"/>
-  <path class="ar" d="M824,144 H887" marker-end="url(#ders2-str-compare-error-ah)"/>
-  <rect class="box t-bool" x="890" y="116" width="110" height="56" rx="6"/>
-  <text class="cd mid t-bool" x="945" y="154">True</text>
-  <text class="ty mid t-bool" x="945" y="210">bool</text>
+  <rect class="key" x="596" y="122" width="42" height="44" rx="4"/>
+  <text class="cd24 mid" x="617" y="152">8</text>
+  <rect class="key" x="644" y="122" width="42" height="44" rx="4"/>
+  <text class="cd24 mid" x="665" y="152">5</text>
+  <path class="ar" d="M690,144 H711" marker-end="url(#ders2-str-compare-error-ah)"/>
+  <rect class="boxhl" x="714" y="124" width="84" height="40" rx="4"/>
+  <text class="cd24 mid" x="756" y="151">int()</text>
+  <path class="ar" d="M798,144 H823" marker-end="url(#ders2-str-compare-error-ah)"/>
+  <rect class="box t-int" x="826" y="116" width="72" height="56" rx="6"/>
+  <text class="cd mid t-int" x="862" y="154">85</text>
+  <text class="ty mid t-int" x="862" y="202">int</text>
+  <text class="cd mid" x="930" y="154">&gt;</text>
+  <rect class="box t-int" x="962" y="116" width="72" height="56" rx="6"/>
+  <text class="cd mid t-int" x="998" y="154">50</text>
+  <text class="ty mid t-int" x="998" y="202">int</text>
+  <path class="ar" d="M1036,144 H1061" marker-end="url(#ders2-str-compare-error-ah)"/>
+  <rect class="box t-bool" x="1064" y="116" width="84" height="56" rx="6"/>
+  <text class="cd mid t-bool" x="1106" y="154">True</text>
+  <text class="ty mid t-bool" x="1106" y="202">bool</text>
   <text class="tx mid" x="576" y="290">== hata vermez; &lt; ve &gt; str ile sayıyı kıyaslamaz.</text>
 </svg>

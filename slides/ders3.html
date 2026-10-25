@@ -148,7 +148,6 @@
 <figcaption class="focal">Bu dersin sonunda istediğiniz kadar dersi soran, geçtiklerinizi sayan ve AGNO'yu bulan programı yazabileceksiniz.</figcaption>
 </figure>
   </div>
-  <aside class="notes"><strong>Bugünün ana cümlesi: kuralı bir kez yazın; tekrarı for, seçimi if yapsın.</strong> Ders 2'nin programı tek bir dersi soruyordu; bugün aynı soruları istediğiniz kadar ders için soracak, geçtiklerinizi sayacak ve AGNO'yu yazacak.</aside>
 </section>
 
 <section class="s-code-output" data-half="3A" data-src="S3">
@@ -169,7 +168,6 @@ Geçilen ders: 2/2
 AGNO: 2.71</pre>
 </figure>
   </div>
-  <aside class="notes">Ders kodunu bilerek başında bir boşlukla ve küçük harfle yazıyorum; program onu MAT 123 diye düzeltiyor. 66 yönetmeliğin 24. maddesindeki tabloda C1, 77 B2; kredileri ben örnek olarak koydum.</aside>
   <!-- authoring (not shown): Body instruction: the typed answers (`2`, ` mat123`, `4`, `66`, `fiz127`, `3`, `77`) in `span.chg`, as the Run window shows typed text. -->
 </section>
 
@@ -341,7 +339,6 @@ False</code></li>
       <div class="poll-bars" hidden></div>
     </div>
   </div>
-  <aside class="notes">Önce Ders 2'den bir soru: bu kod ne yazdırır? Telefonunuzun kamerasını QR koda tutun, A, B, C ya da D'ye dokunun; ad ya da giriş istenmiyor. İnternetiniz yoksa parmakla gösterin: A bir, B iki, C üç, D dört parmak. Şimdi yedi saniye kimse konuşmasın, herkes kendi cevabını seçsin. Dağılıma bakalım. Doğru cevap B şıkkı: kaldı ve True. 50 &gt; 50 False, bu yüzden else çalışıyor; 50 &gt;= 50 ise True, çünkü &gt;= eşitliği de kabul ediyor. A &gt; işaretinin 50'yi de kapsadığını sandı. C &gt;= işaretinin de eşitliği kabul etmediğini sandı. D iki işareti birbirine karıştırdı.</aside>
   <!-- authoring (not shown): Verified: output `kaldı` / `True` (3.14.8, 2026-10-13; rewritten for DECISIONS.md "if before while": Ders 2B only, comparison, if and else). -->
 </section>
 
@@ -536,7 +533,6 @@ False</code></li>
 <figcaption class="focal">Üç yapının sonuncusu tekrarlama: bir şart True olduğu sürece aynı satırlar yeniden çalışır.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Ders 2'de tekrarlamayı Ders 3'te while ile kuracağımızı söylemiştim; söz burada tutuluyor. Barcelona'nın orta sahası: Busquets art arda çalıştırma, Iniesta karar, Xavi'nin aynı kısa pası tekrar tekrar vermesi tekrarlama. Benzetmenin bittiği yer: Xavi pası istediği an keser, loop ise ancak şart False olunca biter.</aside>
 <!-- not spoken: Later: LATER-2.22 (opened at ders2 S152, "Tekrarlama yapısını Ders 3'te while ile kuracağız.") is kept here. -->
 </section>
 
@@ -679,7 +675,6 @@ False</code></li>
 <figcaption class="focal">while, devam şartı True olduğu sürece block'u tekrar çalıştırır.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Geri dönen ok loop'un kendisi. <strong>Loop her turun başında sorar; cevap True ise bir tur daha döner.</strong> Bu şarta devam şartı diyoruz, çünkü True olduğu sürece loop devam ediyor; False olunca program loop'tan sonraki satırdan sürer.</aside>
 <!-- not spoken: Genel biçim (şeklin içinde çizili): while <devam şartı>: <tekrarlanan satırlar> | Kod (şeklin içinde çizili; doğrulama için): i = 3 while i > 0: print(i) i = i - 1 print("Bitti") | Çıktı (Python 3.14.8; şeklin içinde): 3 2 1 Bitti -->
 </section>
 
@@ -815,7 +810,6 @@ False</code></li>
 <figcaption class="focal">Aynı satırı kopyalamak yerine bir loop yazılır.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Spam, Monty Python'ın bir skecinden geliyor: menüdeki neredeyse her yemekte spam olan bir kafe. Python örneklerinde isim olarak bu yüzden spam ve eggs geçer.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): i = 0 while i < 4: print("Spam") i = i + 1 | Çıktı (Python 3.14.8; şeklin içinde): Spam Spam Spam Spam -->
 </section>
 
@@ -915,7 +909,6 @@ False</code></li>
       <p class="focal">Çaycı, kaşık bardağın üstüne konana kadar çay getirir; while da şart True oldukça döner.</p>
     </div>
   </div>
-  <aside class="notes">Benzetmenin bittiği yer: çaycı istediği an durabilir, Python ise şartı yalnızca her turun başında sorar; başlamış bir tur yarıda kesilmez. Resimdeki kod gerçek Python: spoon_on_glass bir bool, başındaki not da Ders 2'deki not.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="3A" data-src="S59" data-topic="while loop">
@@ -1076,7 +1069,6 @@ False</code></li>
 <figcaption class="focal">Aynı gövde: if bir kez çalışır, while condition False olana kadar.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Sık yapılan yanlış, if'in gövdesinin de while gibi başa döndüğünü sanmak. Dönmüyor: if bir kez sorar, geri dönen ok yalnızca while'da var.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): x = 3 if x > 0: print(x) x = x - 1 | Çıktı (Python 3.14.8; şeklin içinde): 3 -->
 </section>
 
@@ -1205,7 +1197,6 @@ False</code></li>
       <p class="focal">Yağmur yağıyorsa şemsiye bir kez alınır; yağmur yağdıkça silecek tekrar tekrar çalışır.</p>
     </div>
   </div>
-  <aside class="notes">Benzetmenin bittiği yer: yağmur kendiliğinden durur. Python'da while'ın şartını gövdedeki bir satır değiştirmeli; değiştirmezse loop hiç bitmez.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="3A" data-src="S307" data-topic="while loop">
@@ -1635,7 +1626,6 @@ duş</pre>
       <p class="focal">Duş satırı içeri kayarsa her turdan sonra duş alınır; Python hata vermez.</p>
     </div>
   </div>
-  <aside class="notes">Python bir satırın block'un içinde mi dışında mı olduğuna anlamına bakarak değil, yalnızca indentation'a bakarak karar verir. Duş satırı içeri kayarsa hiçbir error message çıkmaz; beden hocası bu yanlışı hemen fark eder, Python etmez. IndentationError yalnızca indentation hiç olmadığında ya da beklenmeyen bir yerde olduğunda çıkar.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="3A" data-src="S310" data-topic="while loop">
@@ -1768,7 +1758,6 @@ duş</pre>
 <figcaption class="focal">Bir while üç parçayla çalışır: başlangıç, devam şartı ve güncelleme.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Sınıfa: Güncelleme satırı olmasaydı ne olurdu? (beklenen: i hep 3 kalır, i &gt; 0 hep True olur, loop bitmez)</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): i = 3 while i > 0: print(i) i = i - 1 print("Bitti") | Çıktı (Python 3.14.8; şeklin içinde): 3 2 1 Bitti -->
 </section>
 
@@ -1777,7 +1766,6 @@ duş</pre>
   <div class="content l-full">
     <div class="trace" data-trace="traces/ders2-while-countdown.json" data-labels="names values"></div>
   </div>
-  <aside class="notes">İlk satırda i 3'ü gösteriyor; 3 &gt; 0 True, gövdeye giriliyor, 3 yazılıyor ve i'nin oku 2'ye taşınıyor. Akış yeniden şarta dönüyor; aynı şey 2 ve 1 için oluyor. i 0 olunca şart son kez soruluyor, 0 &gt; 0 False, loop bitiyor ve Bitti yazılıyor.</aside>
 <!-- not spoken: Çıktı (Python 3.14.8): 3 2 1 Bitti -->
 </section>
 
@@ -1935,7 +1923,6 @@ duş</pre>
 <figcaption class="focal">Şart dört kez sorulur; dördüncüsünde False olur ve loop biter.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Şart dört kez soruluyor, block ise üç kez çalışıyor; dördüncü soruda i 0 ve loop bitiyor. Loop bittiğinde i 0'ı gösteriyor.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="3A" data-src="S313" data-topic="while loop">
@@ -2076,7 +2063,6 @@ print(f"Saniyede {rate:.2f}")
 </figure>
     </div>
   </div>
-  <aside class="notes">Brin ve Page'in 1998'de WWW7 konferansında yayımladıkları makaleye göre URL sunucusu da sayfaları indiren crawler'lar da Python ile yazılmıştı; genellikle 3 crawler çalışıyor, her biri aynı anda yaklaşık 300 bağlantı açık tutuyordu. 26 milyon sayfa yaklaşık 9 günde indi, son 11 milyonu 63 saatte: saniyede 48,5 sayfa. Google'ın çoğu hız için C ve C++ ile yazılmıştı; Python sayfaları toplayan kısımdı.</aside>
 </section>
 
 <section class="s-problem" data-half="3A" data-src="S315" data-topic="while loop">
@@ -2215,8 +2201,6 @@ print(f"Saniyede {rate:.2f}")
 </figure>
     <p>Loop'un ortasından çıkmayı aradan sonra göreceğiz.</p>
   </div>
-  <aside class="notes">Sınıfa: Bu loop neden bitmiyor? (beklenen: güncelleme yok; i hep 3, i &gt; 0 hep True)<br>
-Python hata vermiyor, çünkü yazdığımızı yapıyor; programı Run penceresindeki kırmızı kare, Stop durdurur. Buna infinite loop, Türkçesiyle sonsuz döngü diyoruz.</aside>
 <!-- not spoken: Later: LATER-3.A1 · "Loop'un ortasından çıkmayı aradan sonra göreceğiz." (was LATER-2.21 at ders2 S169 before the swap) · kept: Ders 3, 6. while True ve break (S114) | Kod (şeklin içinde çizili; doğrulama için): i = 3 while i > 0: print(i) | Çıktı (Python 3.14.8; şeklin içinde): 3 3 3 -->
 </section>
 
@@ -2231,7 +2215,6 @@ Python hata vermiyor, çünkü yazdığımızı yapıyor; programı Run penceres
       <p class="focal">Çizgideki loop'un hiçbir okundan dışarı çıkılmıyor.</p>
     </div>
   </div>
-  <aside class="notes">Karikatürde Cueball haber sitesini açıyor, okuyor, sıkılıyor, telefonuna bakıyor ve yine ekrana dönüyor; okların hiçbirinden dışarı çıkılmıyor. Devam şartı hiç False olmayan bir while da böyle döner durur.</aside>
 </section>
 
 <section class="s-figure" data-half="3A" data-src="S317" data-topic="while loop">
@@ -2374,7 +2357,6 @@ while i &lt; 4:
       <div class="poll-bars" hidden></div>
     </div>
   </div>
-  <aside class="notes">Bölümün sorusu: bu kod ne yazdırır? Telefonunuzun kamerasını QR koda tutun, A, B, C ya da D'ye dokunun; ad ya da giriş istenmiyor. Şimdi yedi saniye kimse konuşmasın, herkes kendi cevabını seçsin. Dağılıma bakalım. Doğru cevap C şıkkı: 2, 3, 4. Gövdede önce i büyüyor, sonra yazılıyor; i 3 iken şart True, tur başlıyor, i 4 oluyor ve tur yarıda kesilmeden 4'ü de yazıyor. Şart ancak ondan sonra soruluyor: 4 &lt; 4 False. A print'in güncellemeden önce olduğunu sandı. B i 4 olunca loop'un o anda bittiğini sandı. D başlangıçtaki 1'in de yazılacağını sandı.</aside>
   <!-- authoring (not shown): Verified: output `2` / `3` / `4` (3.14.8). -->
 </section>
 
@@ -2556,7 +2538,6 @@ while i &lt; 4:
 <figcaption class="focal">Counter her turda bir artar ve turları sayar.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Benzetmenin bittiği yer: çetelede çizgiler ayrı ayrı durur, count ise tek bir sayı tutar. Loop bittiğinde i -2'yi gösteriyor; son turda 1'den 3 çıkınca -2 oldu, şart ancak ondan sonra soruldu.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): count = 0 i = 10 while i > 0: count = count + 1 i = i - 3 print(count, i) | Çıktı (Python 3.14.8; şeklin içinde): 4 -2 -->
 </section>
 
@@ -2683,7 +2664,6 @@ while i &lt; 4:
 <figcaption class="focal">x += 1, x = x + 1'in kısa yazılışıdır.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Accumulator'ı önce uzun haliyle göreceğiz, sonra += ile yazacağız. Bir de -= var: x 10 iken x -= 3 yazınca x 7 olur.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): x = 5 x += 1 print(x) total = 0 total += 2.5 print(total) | Çıktı (Python 3.14.8; şeklin içinde): 6 2.5 -->
 </section>
 
@@ -2709,7 +2689,6 @@ print(sheep)
 </figure>
     </div>
   </div>
-  <aside class="notes">Cueball koyun sayıyor; 32.767'ye gelince sayı birden eksi 32.768'e dönüyor. Bazı dillerde tam sayılar sabit büyüklükte bir kutuda tutulur ve kutu dolunca sayı başa sarar; Python'un int'inin böyle bir sınırı yok; Ders 1'de 2 ** 1000'i rahatça hesaplamıştık.</aside>
 </section>
 
 <section class="s-error" data-half="3A" data-src="S11" data-topic="Counter, accumulator ve +=">
@@ -2841,7 +2820,6 @@ print(sheep)
 <figcaption class="focal">Python'da ++ yoktur; += 1 yazılır.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Java, C ya da JavaScript'te x++ x'i bir artırır; Python'da böyle bir operator yok. Python satırı söz dizimi hatası olarak görüyor ve dosyanın hiçbir satırını çalıştırmıyor.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): x = 5 x++ | Çıktı (Python 3.14.8; şeklin içinde): File "…/python-kurs/lesson3.py", line 2 x++ ^ SyntaxError: invalid syntax -->
 </section>
 
@@ -3008,7 +2986,6 @@ print(sheep)
 <figcaption class="focal">Accumulator, loop boyunca bir toplamı biriktiren variable'dır.</figcaption>
 </figure>
   </div>
-  <aside class="notes"><strong>Accumulator loop'tan önce sıfırlanır, içinde büyür, loop'tan sonra okunur.</strong> Türkçe bir karşılık vermiyoruz. Tablodaki 'total (önce)' sütunu her turun başındaki value.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): total = 0 i = 1 while i <= 5: total = total + i i = i + 1 print(total) | Çıktı (Python 3.14.8; şeklin içinde): 15 -->
 </section>
 
@@ -3167,7 +3144,6 @@ print(sheep)
       <p class="focal">Accumulator kasadaki toplam gibidir: önce 0, her ürünle büyür, sonda fişe yazılır.</p>
     </div>
   </div>
-  <aside class="notes">Benzetmenin bittiği yer: kasa kendiliğinden sıfırdan başlar, Python'da total = 0'ı loop'tan önce biz yazarız. Ekran içinde sayı duran bir kutu gibi görünüyor; total ise bir isim ve her turda yeni bir int'i gösteriyor.</aside>
 </section>
 
 <section class="s-demo" data-half="3A" data-src="S14" data-topic="Counter, accumulator ve +=">
@@ -3175,7 +3151,6 @@ print(sheep)
   <div class="content l-full">
     <div class="trace" data-trace="traces/ders2-accumulator.json" data-labels="names values"></div>
   </div>
-  <aside class="notes">İlk iki turu yavaş gidiyorum: total 0, i 1; 1 &lt;= 5 True, total 1 oluyor, sonra i 2. Bundan sonra her tur aynı üç adım: şart, total büyür, i büyür. i 6 olunca şart False ve 15 yazılıyor. Bazı adımlarda total ile i'nin okları aynı value'yu gösteriyor; sonuca bir etkisi yok.</aside>
 <!-- not spoken: Çıktı (Python 3.14.8): 15 -->
 </section>
 
@@ -3191,7 +3166,6 @@ print(sheep)
       <p>Soldan üçüncü panelin etiketinde Accumulator yazıyor.</p>
     </div>
   </div>
-  <aside class="notes">Şubat 1946'da tanıtılan ENIAC'ta toplama ve çıkarmayı yapan ana birimler 20 accumulator'dı; her biri on basamaklı tek bir sayı tutar, gönderilen sayı içindekine eklenir, sonuç yine orada kalırdı. Fotoğraf Pennsylvania Üniversitesi'nin Moore School binasında sergilenen dört ENIAC panelini ve bir function table'ı gösteriyor.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="3A" data-src="S16" data-topic="Counter, accumulator ve +=">
@@ -3530,8 +3504,6 @@ print(sheep)
 <figcaption class="focal">total = 0 loop'un içindeyse her turda sıfırlanır.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Bu bölümün tipik hatası error message vermiyor: total = 0 block'un içindeyse her turun başında sıfırlanıyor, sonunda yalnızca son i, 5 kalıyor.<br>
-Sınıfa: total = 0 doğru yerde ama print(total) block'un içinde olsaydı ne yazardı? (beklenen: her turda bir ara toplam: 1, 3, 6, 10, 15)</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): i = 1 while i <= 5: total = 0 total = total + i i = i + 1 print(total) | Çıktı (Python 3.14.8; şeklin içinde): 5 | Çıktı (Python 3.14.8; şeklin içinde): 15 -->
 </section>
 
@@ -3837,8 +3809,6 @@ print(f"{km:.2f} km")
 </figure>
 <p class="focal span">0,1 mm'lik kağıt her katlamada iki kat kalınlaşır; Ay ortalama 384.400 km uzakta.</p>
   </div>
-  <aside class="notes">Ay'a ortalama uzaklık 384.400 kilometre; kodda milimetre olarak duruyor. Birkaç tahmin alayım, sonra çalıştıralım.<br>
-Sınıfa: Kağıt kaç katlamada Ay'a ulaşır? (beklenen: tahminler; cevap 42)</aside>
 </section>
 
 <section class="s-code-output" data-half="3A" data-src="S21" data-topic="Counter, accumulator ve +=">
@@ -3985,7 +3955,6 @@ print(f"{km:.2f} km")
 </div>
 <p class="focal span">0,1 mm'lik kağıt 42 katlamada Ay'a ulaşır.</p>
   </div>
-  <aside class="notes">Yalnızca 42 katlama; bu yarının sürprizi bu. Kağıt 1 milimetre olsaydı 39 katlama yeterdi. Gerçekte kağıt bu kadar katlanamıyor: Britney Gallivan 2002'de çok uzun, ince bir kağıdı 12 kez ikiye katlayarak rekor kırdı. Ödev 3'te aynı soruyu Everest için soracağım.</aside>
 </section>
 
 <section class="s-pycharm" data-half="3A" data-src="S22" data-topic="Counter, accumulator ve +=">
@@ -3994,7 +3963,6 @@ print(f"{km:.2f} km")
     <img class="shot" src="../assets/img/pycharm/08-debugger-variables-ders3-crop.png" width="1136" height="552" style="width:880px" alt="PyCharm ekran görüntüsü, Debugger&#x27;da accumulator">
     <p class="focal">Debugger programı adım adım yürütür ve value'ları gösterir.</p>
   </div>
-  <aside class="notes">Breakpoint, 4. satırın numarasının yanına tıklayınca çıkan kırmızı nokta. Program Run ile değil, Debug ile çalışıyor ve o satırda duruyor; Resume'a her basış bir tur ilerletiyor. İki basıştan sonra üçüncü turdayız: i 3, total 3, yani 1 + 2; Variables paneli accumulator tablosunun canlı hali.</aside>
 </section>
 
 <section class="s-section" data-half="3A" data-src="S26" data-topic="for loop" data-background-color="#181C3E">
@@ -4146,7 +4114,6 @@ print(f"{km:.2f} km")
 <figcaption class="focal">for, bir sıranın elemanlarını sırayla tek tek alır. Şimdilik sıramız range.</figcaption>
 </figure>
   </div>
-  <aside class="notes">for satırındaki in, Ders 2'deki in değil: orada 'içinde var mı?' diye soruyordu, burada 'sırayla al' diyor; aynı kelimenin ikinci işi. while'daki i += 1 burada yok, sıradakini for kendisi alıyor. Şimdilik sıramız range; Ders 4'te list'in elemanlarını da böyle dolaşacağız.</aside>
 <!-- not spoken: Simplification: SIMP-3.1 · "Şimdilik sıramız range." · retired: ders4 S25 (for over a list; str üzerinde for was cut from the course on 2026-10-12) · true version: for, dolaşılabilen her şeyin (iterable) elemanlarını sırayla alır: range, str, list, tuple, dict, set, dosya satırları. | Genel biçim (şeklin içinde çizili): for <isim> in <sıra>: <gövde> | Kod (şeklin içinde çizili; doğrulama için): for i in range(4): print("Ders", i) -->
 </section>
 
@@ -4310,7 +4277,6 @@ Ders 3</pre>
   <div class="content l-full">
     <div class="trace" data-trace="traces/ders3-for.json" data-labels="names values"></div>
   </div>
-  <aside class="notes">for satırı i'yi 0'a bağlıyor, gövde Ders 0 yazıyor, akış yeniden for satırına dönüyor ve i artık 1'i gösteriyor. i'yi biz değiştirmedik; sıradaki sayıyı for kendisi bağladı. Loop bitince i son value'su olan 3'ü gösteriyor.</aside>
 <!-- not spoken: Çıktı (Python 3.14.8): Ders 0 Ders 1 Ders 2 Ders 3 -->
 </section>
 
@@ -4490,8 +4456,6 @@ Spam</pre>
 <figcaption class="focal">for i'yi kendisi ilerletir; i += 1 yazılmaz.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Sık yapılan yanlış, for'da da i += 1 yazmak gerektiğini sanmak. Gerek yok: for her turun başında i'yi sıradaki sayıya yeniden bağlıyor, sizin eklediğiniz bir sonraki turda kayboluyor.<br>
-Sınıfa: Bu loop'ta i'yi kim artırıyor? (beklenen: for kendisi; her turun başında i'yi range'in sıradaki sayısına bağlar)</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): total = 0 for i in range(6): total += i print(total) | Çıktı (Python 3.14.8; şeklin içinde): 15 -->
 </section>
 
@@ -4635,7 +4599,6 @@ Sınıfa: Bu loop'ta i'yi kim artırıyor? (beklenen: for kendisi; her turun ba�
 <figcaption class="focal">Kaç tur döneceği belliyse for, belli değilse while.</figcaption>
 </figure>
   </div>
-  <aside class="notes"><strong>Kaç tur döneceği belliyse for, belli değilse while.</strong> Her for bir while ile yazılabilir; tersi her zaman o kadar kolay değil.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): i = 0 while i < 3: print(i) i += 1 for i in range(3): print(i) | Çıktı (Python 3.14.8; şeklin içinde): 0 1 2 0 1 2 -->
 </section>
 
@@ -4784,7 +4747,6 @@ Sınıfa: Bu loop'ta i'yi kim artırıyor? (beklenen: for kendisi; her turun ba�
       <p class="focal">Sezonun 8 bölümünü izlemek bir for, uyku bastırana kadar izlemek bir while.</p>
     </div>
   </div>
-  <aside class="notes">Benzetmenin bittiği yer: bu bir yasak değil, bir seçim kuralı. while da sayabilir, 2. bölümde saydık; for da erken bitebilir, aradan sonra break ile göreceğiz.</aside>
 </section>
 
 <section class="s-demo" data-half="3A" data-src="S64" data-topic="for loop">
@@ -4792,7 +4754,6 @@ Sınıfa: Bu loop'ta i'yi kim artırıyor? (beklenen: for kendisi; her turun ba�
   <div class="content l-full">
     <div class="trace" data-trace="traces/ders3-for-if.json" data-labels="names values"></div>
   </div>
-  <aside class="notes">Ders 1'deki % operator'ı: i % 2, i'nin 2'ye bölümünden kalan; 0 ise sayı çift. i 0 iken şart True, 0 çift; i 1 iken False, else çalışıyor, 1 tek. 3. satır ile 5. satır aynı turda asla birlikte çalışmıyor: kural bir kez yazıldı, karar dört kez verildi.</aside>
 <!-- not spoken: Çıktı (Python 3.14.8): 0 çift 1 tek 2 çift 3 tek -->
 </section>
 
@@ -4975,7 +4936,6 @@ Sınıfa: Bu loop'ta i'yi kim artırıyor? (beklenen: for kendisi; her turun ba�
 <figcaption class="focal">Condition'ı sağlayan her sayıda counter bir artar.</figcaption>
 </figure>
   </div>
-  <aside class="notes">0 da 3'ün katı: 0 % 3 == 0 True, bu yüzden 0'dan 29'a on kat var, 0, 3, 6 diye 27'ye kadar. Hedef programdaki passed += 1 de bu kalıp: katsayı 1.75 ya da üstündeyse geçilen ders sayısı bir artıyor.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): count = 0 for n in range(30): if n % 3 == 0: count += 1 print(count) | Çıktı (Python 3.14.8; şeklin içinde): 10 -->
 </section>
 
@@ -4991,7 +4951,6 @@ Sınıfa: Bu loop'ta i'yi kim artırıyor? (beklenen: for kendisi; her turun ba�
       <p>1890 ABD nüfus sayımı</p>
     </div>
   </div>
-  <aside class="notes">1890 ABD nüfus sayımında her kişinin bilgisi bir delikli karta işlendi. Herman Hollerith'in makinesinde kartın üstüne inen metal iğneler deliklerden geçip devreyi tamamlıyor, devresi tamamlanan özelliğin sayaç kadranı bir artıyordu; az önceki if ile saymanın aynısı. Nüfus Sayım Bürosu'na göre sayım planlanandan aylar önce ve bütçenin çok altında bitti. Hollerith'in 1896'da kurduğu şirket 1911'de bir birleşmeye katıldı, o şirket de 1924'te IBM adını aldı.</aside>
 </section>
 
 <section class="s-code-output" data-half="3A" data-src="S67" data-topic="for loop">
@@ -5021,7 +4980,6 @@ Toplam: 329161</pre>
 </figure>
     </div>
   </div>
-  <aside class="notes">Ders 1'deki Monza turunu hatırlayın: Verstappen'in rekor turu, 78792 milisaniye. Bu dört value'yu ben seçtim, yarış temposuna benzesin diye; gerçek bir yarışın verisi değil. Fotoğraf Monza 2025'ten, rekorun atıldığı günkü üçüncü antrenmandan; rekor turun kendisi değil.</aside>
 </section>
 
 <section class="s-demo" data-half="3A" data-src="S68" data-topic="for loop">
@@ -5029,8 +4987,6 @@ Toplam: 329161</pre>
   <div class="content l-full">
     <div class="trace" data-trace="traces/ders3-f1-best.json" data-labels="names values"></div>
   </div>
-  <aside class="notes">best ilk value olarak 999999 alıyor: her gerçek turdan büyük, bu yüzden ilk tur onu mutlaka geçiyor. 82431 &lt; 999999 True, best 82431; 81976 &lt; 82431 True, best 81976; sonraki iki turda False, best değişmiyor. Sonuç 81976, yani 1 dakika 21,976 saniye; Python'un max() ve min()'i de var, arkalarındaki fikir bu loop.<br>
-Sınıfa: En yavaş turu bulmak için neyi değiştiririz? (beklenen: &lt; yerine &gt;, başlangıç 0; sonuç 82650)</aside>
 <!-- not spoken: Çıktı (Python 3.14.8): Tur (ms): 82431 Tur (ms): 81976 Tur (ms): 82104 Tur (ms): 82650 En hızlı tur: 81976 -->
 </section>
 
@@ -5235,7 +5191,6 @@ Sınıfa: En yavaş turu bulmak için neyi değiştiririz? (beklenen: &lt; yerin
 <figcaption class="focal">best 0'dan başlarsa hiçbir tur ondan kısa olmaz; Python hata vermez, sonuç yanlış çıkar.</figcaption>
 </figure>
   </div>
-  <aside class="notes">En küçüğü ararken sıfırdan başlamak doğal geliyor, ama 82431 &lt; 0 False ve hiçbir tur best'i geçemiyor; program gönül rahatlığıyla 0 yazıyor. Error message yok, sonuç yanlış; böyle bir yanlışı ancak çıktıyı okuyarak yakalarsınız. En küçüğü ararken başlangıç her gerçek value'dan büyük, en büyüğü ararken küçük olmalı.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): best = 0 for i in range(4): lap = int(input("Tur (ms): ")) if lap < best: best = lap print("En hızlı tur:", best) | Çıktı (Python 3.14.8; şeklin içinde): Tur (ms): 82431 Tur (ms): 81976 Tur (ms): 82104 Tur (ms): 82650 En hızlı tur: 0 -->
 </section>
 
@@ -5268,7 +5223,6 @@ En hızlı tur: 81976</pre>
 </figure>
 <p class="focal span">Tek loop toplamı da en hızlı turu da bulur.</p>
   </div>
-  <aside class="notes">Loop'tan sonra Ders 1'in // ve %'si geri geliyor: 329161 milisaniyede 5 tam dakika var; total % 60000 // 1000 soldan sağa hesaplanıyor, artan 29161'den 29 tam saniye çıkıyor; kalan 161 milisaniyeyi bilerek yazmıyoruz. Veri analizinin ilk soruları da bunlar: toplam ne, en hızlı tur hangisi?</aside>
 <!-- not spoken: Later: LATER-3.F1 · "Ders 5'in sonunda F1'in kendi verisini yükleyen bir kod göreceğiz." · withdrawn 2026-10-13: Ders 5's "F1 ve Python" (S156) left the finale with DECISIONS.md "Two more concept trims" (verbatim in moved/ders5-removed-2026-10-13.md); S70's notes no longer promise it -->
 </section>
 
@@ -5386,7 +5340,6 @@ En hızlı tur: 81976</pre>
 <figcaption class="focal">for'a dolaşacağı bir sıra gerekir; 3 tek bir sayıdır.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Ders 1'deki gibi son satırdan okuyalım: 'int' object is not iterable. Python'a 3'ün elemanlarını sırayla al dedik; tek bir sayının elemanı yok, üç kez dönmek için sıramız range(3). Sırayla dolaşılabilen şeylere İngilizcede iterable deniyor; kursta terim olarak kullanmıyoruz, mesajda görünce 'sırayla alınabilen' diye okuyun.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): for i in 3: print(i) | Çıktı (Python 3.14.8; şeklin içinde): Traceback (most recent call last): File "…/python-kurs/lesson3.py", line 1, in <module> for i in 3: ^ TypeError: 'int' object is not iterable -->
 </section>
 
@@ -5532,7 +5485,6 @@ En hızlı tur: 81976</pre>
 <figcaption class="focal">range, başla'dan bitiş'e kadar tam sayılar üretir; bitiş dahil değildir.</figcaption>
 </figure>
   </div>
-  <aside class="notes"><strong>range'de başla dahil, bitiş dahil değil.</strong> range(1, 6) bu yüzden tam 6 - 1, yani 5 sayı veriyor. Bitiş kelimesini yalnızca range için kullanıyoruz; while'da devam şartı vardı.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): for i in range(1, 6): print(i) | Çıktı (Python 3.14.8; şeklin içinde): 1 2 3 4 5 -->
 </section>
 
@@ -5695,7 +5647,6 @@ En hızlı tur: 81976</pre>
 <figcaption class="focal">Dönemin 14 haftası: range(1, 15). Bitiş, son haftanın bir fazlasıdır.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Sınıfa: 1'den 100'e kadar saymak için range'e ne yazarız? (beklenen: range(1, 101); bitiş son sayının bir fazlası)</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): count = 0 for week in range(1, 15): count += 1 print(count) | Çıktı (Python 3.14.8; şeklin içinde): 14 -->
 </section>
 
@@ -5992,7 +5943,6 @@ En hızlı tur: 81976</pre>
 <figcaption class="focal">Tek sayı verilirse başla 0'dır: range(5), 0'dan 4'e.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Sık yapılan yanlış, range(5)'in 1'den başladığını sanmak: başla yazılmazsa 0'dır. for'un ilk örneğinde çıktının Ders 0 ile başlamasının nedeni buydu.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): for i in range(5): print(i) | Çıktı (Python 3.14.8; şeklin içinde): 0 1 2 3 4 -->
 </section>
 
@@ -6294,7 +6244,6 @@ En hızlı tur: 81976</pre>
 <figcaption class="focal">Negatif adım geriye sayar; bitiş yine dahil değil.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Sınıfa: 10'dan 1'e geri saymak için ne yazarız? (beklenen: range(10, 0, -1))</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): for i in range(10, 0, -3): print(i) | Çıktı (Python 3.14.8; şeklin içinde): 10 7 4 1 -->
 </section>
 
@@ -6311,7 +6260,6 @@ En hızlı tur: 81976</pre>
       <p><code>for i in range(10, -1, -1):</code></p>
     </div>
   </div>
-  <aside class="notes">ETH Zürich'te Z4 ile çalışan Heinz Rutishauser, 1949-1951 arasında yürütüp 1952'de yayımladığı çalışmada basit bir cebirsel dil tanımladı; Knuth ve Trabb Pardo'ya göre bu dilde sırayla çalışmayı bozan tek yapı for'du. Onların 1976'daki örneğinde loop 'Für i = 10(-1)0' ile başlıyor; orada 0 dahil, Python'da bitiş dahil olmadığı için -1 yazıyoruz. Rutishauser sonra ALGOL 60 raporunun yazarları arasında yer aldı; ALGOL 60'ta aynı yapı for kelimesiyle yazılır.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="3A" data-src="S48" data-topic="range()">
@@ -6456,7 +6404,6 @@ En hızlı tur: 81976</pre>
 <figcaption class="focal">100 metrelik çite 10 metrede bir direk dikilirse 10 değil, 11 direk gerekir.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Akla gelen cevap 10, doğrusu 11, çünkü iki uç da sayılıyor. Jargon File bu hataya fencepost error der ve tam bu bilmeceyle anlatır; orada birim fit, metreyi biz uyarladık. Vitruvius, De Architectura'nın 3. kitabında tapınağın yan cephesindeki sütun sayısını ön cephedekinin iki katı alanların bir sütun aralığı fazla yaptığını yazar. range(0, 100, 10) yazsaydık sayaç 10 derdi, son direk eksik kalırdı.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): count = 0 for post in range(0, 101, 10): count += 1 print(count) | Çıktı (Python 3.14.8; şeklin içinde): 11 -->
 </section>
 
@@ -6507,7 +6454,6 @@ print(type(range(3)))
     </div>
     <p class="focal">range da bir type'tır; str gibi sequence (dizi) ailesindedir.</p>
   </div>
-  <aside class="notes">Dersin başındaki sequence satırların art arda çalışmasıydı; buradaki sequence, elemanları sırayla duran type'lar. range, str ile aynı ailede; int, float, bool ve str'den sonra beşinci type.</aside>
   <!-- authoring (not shown): Body instruction: the code and its output sit side by side in one row under the map, at the 26 px code size. -->
 </section>
 
@@ -6647,7 +6593,6 @@ print(type(range(3)))
 <figcaption class="focal">Adım yazılmazsa +1'dir; 10'dan 0'a artarak varılmaz.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Python hata vermiyor, çünkü boş bir sıra da geçerli bir sıra: gövde bir kez bile çalışmıyor, yalnızca bitti yazılıyor. Düzeltmesi negatif adım: range(10, 0, -1). Error message olmayan hatalar en zorları; çıktıyı her zaman beklediğinizle karşılaştırın.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): for i in range(10, 0): print(i) print("bitti") | Çıktı (Python 3.14.8; şeklin içinde): bitti -->
 </section>
 
@@ -6775,7 +6720,6 @@ print(type(range(3)))
 <figcaption class="focal">Bu yarının sonunda ders kodunu ikiye bölüp hedef programı tamamlayabileceksiniz.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Aradan önceki program ders kodunu MAT123 diye bitişik yazıyordu; bu yarının sonunda MAT 123 diye ayıracak. <strong>Her break ve continue'dan sonra tek bir soru soracağız: akış nereden devam eder?</strong></aside>
 </section>
 
 <section class="s-agenda" data-half="3B" data-src="S90">
@@ -6933,8 +6877,6 @@ print(type(range(3)))
 <figcaption class="focal">İç loop, dış loop'un her turunda baştan sona çalışır.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Sık yapılan yanlış, iç loop'un toplamda bir kez çalıştığını sanmak: dış loop'un her turunda baştan sona yeniden çalışıyor ve j yeniden 0'dan başlıyor. Turlar çarpılıyor: 2 dış tur çarpı 2 iç tur, 4 print.<br>
-Sınıfa: Dış loop 3, iç loop 4 tur dönerse print kaç kez çalışır? (beklenen: 12)</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): for i in range(1, 3): for j in range(2): print(i, j) | Çıktı (Python 3.14.8; şeklin içinde): 1 0 1 1 2 0 2 1 -->
 </section>
 
@@ -7114,7 +7056,6 @@ for floor in range(1, 3):
       </div>
     </div>
   </div>
-  <aside class="notes">Benzetmenin bittiği yer: bu apartmanda her katta aynı sayıda kapı var; Python'da iç loop'un tur sayısı dıştaki variable'a bağlı olabilir, birazdan göreceğiz. Kapıcı bir katı atlayabilir, iç loop ise her dış turda baştan sona çalışır.</aside>
 </section>
 
 <section class="s-demo" data-half="3B" data-src="S94" data-topic="Nested loops">
@@ -7122,7 +7063,6 @@ for floor in range(1, 3):
   <div class="content l-full">
     <div class="trace" data-trace="traces/ders3-nested.json" data-labels="names values"></div>
   </div>
-  <aside class="notes">i 1'i gösteriyor; iç loop j'yi önce 0'a, sonra 1'e bağlıyor: 1 0 ve 1 1. İç loop bitince akış dış for satırına dönüyor ve i 2'yi gösteriyor; bu anda j'nin oku hala eski 1'de. Bir sonraki adımda iç for satırı j'yi yeniden 0'a bağlıyor; j'yi sıfırlayan iç for satırı, biz yazmıyoruz.</aside>
 <!-- not spoken: Çıktı (Python 3.14.8): 1 0 1 1 2 0 2 1 -->
 </section>
 
@@ -7150,7 +7090,6 @@ print(count)
 </figure>
     </div>
   </div>
-  <aside class="notes">Karikatürdeki çarpım tablosu bilerek yanlış, ama Randall Munroe'ya doğru gibi gelen sayılarla doldurulmuş. Gerçek tabloyu iç içe iki for hatasız kurar: 10 satır çarpı 10 sütun, iç gövde 100 kez.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="3B" data-src="S97" data-topic="Nested loops">
@@ -7284,7 +7223,6 @@ print(count)
 <figcaption class="focal">row boş str'den başlar; her turda bir * eklenir.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Bu, accumulator'ın str hali. Kutular her seferinde yeni bir str: str immutable olduğu için her += yeni bir str yapıyor ve row onu gösteriyor.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): row = "" for j in range(3): row += "*" print(row) | Çıktı (Python 3.14.8; şeklin içinde): *** -->
 </section>
 
@@ -7430,8 +7368,6 @@ print(count)
 <figcaption class="focal">Tek değişiklik: dış loop eklendi; row her satırın başında boşalır.</figcaption>
 </figure>
   </div>
-  <aside class="notes">row = "" dış loop'un içinde, böylece her satıra boş başlıyoruz; print(row) iç loop bittikten sonra, dış loop'un indentation'ında.<br>
-Sınıfa: row = "" dış loop'un dışında olsaydı ne yazardı? (beklenen: satırlar birbirine eklenip uzardı: ***, ******, *********)</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): n = 3 for i in range(1, n + 1): row = "" for j in range(3): row += "*" print(row) | Çıktı (Python 3.14.8; şeklin içinde): *** *** *** -->
 </section>
 
@@ -7573,7 +7509,6 @@ Sınıfa: row = "" dış loop'un dışında olsaydı ne yazardı? (beklenen: sat
 <figcaption class="focal">Tek değişiklik: range(3) yerine range(i); i. satırda i yıldız.</figcaption>
 </figure>
   </div>
-  <aside class="notes">İç loop'un tur sayısı artık dış loop'un i'sine bağlı: birinci satırda bir tur, ikincide iki, üçüncüde üç. "*" * 3 de üç yıldız verir, Ders 2'nin * operator'ı; ama burada amaç satırı loop ile kurmak, Ödev 3'teki sayı üçgeni de bunu istiyor.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): n = 3 for i in range(1, n + 1): row = "" for j in range(i): row += "*" print(row) | Çıktı (Python 3.14.8; şeklin içinde): * ** *** -->
 </section>
 
@@ -7588,7 +7523,6 @@ Sınıfa: row = "" dış loop'un dışında olsaydı ne yazardı? (beklenen: sat
       <p class="focal">Lovelace tekrarlanan bir grubun tekrarına "a cycle of cycles" dedi.</p>
     </div>
   </div>
-  <aside class="notes">Ada Lovelace 1843'te Analitik Makine üzerine notlarının Note E'sinde tekrarlanan bir işlem grubuna cycle dedi ve tekrarlanan grupların da tekrarlanabileceğini yazdı: 'a cycle of a cycle, or a cycle of cycles'. Note G'deki Bernoulli hesabında 13. ile 23. işlemler her yeni Bernoulli sayısı için yeniden kullanılıyor. İç loop'un tur sayısının dış loop ilerledikçe değiştiği duruma 'varying cycle' dedi; az önceki range(i) bunun karşılığı.</aside>
 </section>
 
 <section class="s-code-output" data-half="3B" data-src="S101" data-topic="Nested loops" data-fit="1">
@@ -7625,7 +7559,6 @@ for y in range(-5, 6):
        #########       </pre>
 </figure>
   </div>
-  <aside class="notes">Bu yarının sürprizi. Kodda yeni bir şey yok: range eksi bir sayıdan da başlayabiliyor, iç içe for, += ile satır, if, else ve Ders 2'nin and'i. Her nokta için merkeze uzaklığın karesi hesaplanıyor; 12 ile 30 arasındaysa #, değilse boşluk. x'i 2'ye bölüyoruz, çünkü bir karakter eninin yaklaşık iki katı yüksekliğinde.</aside>
   <!-- authoring (not shown): Body instruction: every output line has 23 characters; the trailing spaces are part of the output and are kept on the slide (`pre`). -->
 </section>
 
@@ -7640,7 +7573,6 @@ for y in range(-5, 6):
       <p class="focal">M87'deki kara deliğin görüntüsünü kuran yazılımlarda Python ve NumPy vardı.</p>
     </div>
   </div>
-  <aside class="notes">Event Horizon Telescope işbirliği 10 Nisan 2019'da M87 galaksisinin merkezindeki kara deliğin ilk görüntüsünü yayımladı; veriler 2017'de sekiz radyo teleskopla, Dünya büyüklüğünde tek bir teleskop gibi çalışılarak toplandı. Görüntüyü kuran yazılımlardan eht-imaging bir Python library'si; NumPy'ı anlatan 2020 tarihli Nature makalesine göre veri her adımda NumPy ile tutuldu, son görüntüyü Matplotlib çizdi. EHT ekipleri pikselleri iç içe for ile gezmedi, NumPy dizileriyle hesapladı; bu library'ler Python'la birlikte gelmiyor.</aside>
 </section>
 
 <section class="s-error" data-half="3B" data-src="S104" data-topic="Nested loops">
@@ -7773,7 +7705,6 @@ for y in range(-5, 6):
 <figcaption class="focal">print(row) bir indentation içeride: hata yok, çıktı yanlış.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Tek fark son satırın indentation'ı: print(row) iç loop'un içine kaydı ve row her yıldızdan sonra yazılıyor. Python itiraz etmiyor, dediğimizi yaptı. Çıktı beklediğinizden farklıysa önce indentation'a bakın.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): n = 3 for i in range(1, n + 1): row = "" for j in range(i): row += "*" print(row) | Çıktı (Python 3.14.8; şeklin içinde): * * ** * ** *** -->
 </section>
 
@@ -7872,7 +7803,6 @@ for side in range(5):
 </figure>
     </div>
   </div>
-  <aside class="notes">pen bir kalem: forward ileri gidiyor, right sağa dönüyor; programın başındaki birkaç satırı Ders 4'te göreceğiz. 5 kere 144, 720 derece: kalem iki tam tur atıp başladığı yere dönüyor. turtle'ın adı 1967'de Logo dilinin çizim kaplumbağasından geliyor.</aside>
 </section>
 
 <section class="s-figure" data-half="3B" data-src="S108" data-topic="Nested loops">
@@ -8158,7 +8088,6 @@ for i in range(36):
 </figure>
     <p>Akış, loop'tan sonraki ilk satırdan devam eder.</p>
   </div>
-  <aside class="notes">break'i if'siz yazarsanız loop daha ilk turda biter. Gri ok continue, onu birazdan göreceğiz; bu iki ok bu yarının simgesi. Akışı değiştiren bir statement daha var, return; onu Ders 4'te göreceğiz.</aside>
 <!-- not spoken: Later: LATER-3.B1 · Akışı değiştiren bir statement daha var: return, Ders 4'te. · kept: Ders 4, function ve return value bölümü -->
 </section>
 
@@ -8274,8 +8203,6 @@ for i in range(36):
       <p class="focal">break, dolmuşta "İnecek var" demek gibidir: kalan duraklar sizin için biter.</p>
     </div>
   </div>
-  <aside class="notes">Benzetmenin bittiği yer: dolmuş sizsiz yoluna devam eder, break ise loop'un kendisini bitirir. İç içe loop'ta break yalnızca içinde bulunduğu loop'u bitirir; bunu birazdan göreceğiz.<br>
-Sınıfa: break'ten sonra o turun kalan satırları çalışır mı? (beklenen: hayır; akış hemen loop'tan sonraki satıra geçer)</aside>
 </section>
 
 <section class="s-demo" data-half="3B" data-src="S113" data-topic="while True ve break">
@@ -8283,7 +8210,6 @@ Sınıfa: break'ten sonra o turun kalan satırları çalışır mı? (beklenen: 
   <div class="content l-full">
     <div class="trace" data-trace="traces/ders3-break-for.json" data-labels="names values"></div>
   </div>
-  <aside class="notes">i 1 ve 2 yazılıyor; i 2 iken şart True, break çalışıyor. Akış hemen son satıra atlıyor ve bitti yazılıyor; i hala 2'yi gösteriyor, range'in 3, 4 ve 5'i hiç gelmedi.</aside>
 <!-- not spoken: Çıktı (Python 3.14.8): 1 2 bitti -->
 </section>
 
@@ -8427,7 +8353,6 @@ Sınıfa: break'ten sonra o turun kalan satırları çalışır mı? (beklenen: 
 <figcaption class="focal">while True'nun devam şartı hiç False olmaz; tek çıkışı break'tir.</figcaption>
 </figure>
   </div>
-  <aside class="notes">1. bölümde loop'un ortasından çıkmayı aradan sonra göreceğimizi söylemiştim; işte burada. while True'nun şartı her zaman True, loop kendiliğinden bitemez; çıkışı biz koyuyoruz, bir if ve break. Bu kod 1, 2 ve döngüden sonra yazıyor.</aside>
 <!-- not spoken: Genel biçim (şeklin içinde çizili): while True: <satırlar> if <şart>: break -->
 </section>
 
@@ -8442,7 +8367,6 @@ Sınıfa: break'ten sonra o turun kalan satırları çalışır mı? (beklenen: 
       <p class="focal">Bu akış şemasının çıkışı yok.</p>
     </div>
   </div>
-  <aside class="notes">Akış şemasının tek sorusu var ve tek çıkışı Yes; ok hep aynı kutuya dönüyor. xkcd'de resmin üstüne gelince çıkan yazı çıkış yolunu söylüyor: kutudan End'e bir No oku çizmek. Python'da o ok break.</aside>
 </section>
 
 <section class="s-figure" data-half="3B" data-src="S116" data-topic="while True ve break">
@@ -8456,7 +8380,6 @@ Sınıfa: break'ten sonra o turun kalan satırları çalışır mı? (beklenen: 
       <p class="focal">break'siz while True, Sisifos'un kayası gibidir; break, onun hiç sahip olmadığı çıkıştır.</p>
     </div>
   </div>
-  <aside class="notes">Homeros'un Odysseia'sının 11. kitabında Sisifos kocaman bir kayayı tepeye iter; kaya her seferinde aşağı yuvarlanır ve iş baştan başlar. Benzetmenin bittiği yer: kaya hep aynı yere döner, loop'un her turunda ise value'lar değişebilir; yalnızca şart hep True kalır. Tablo Tiziano'nun, 1548-49; Prado Müzesi'nde.</aside>
 </section>
 
 <section class="s-demo" data-half="3B" data-src="S117" data-topic="while True ve break">
@@ -8464,7 +8387,6 @@ Sınıfa: break'ten sonra o turun kalan satırları çalışır mı? (beklenen: 
   <div class="content l-full">
     <div class="trace" data-trace="traces/ders3-while-true.json" data-labels="names values"></div>
   </div>
-  <aside class="notes">while True satırı her seferinde True veriyor. counter 1 oluyor ve yazılıyor, counter == 2 False, akış başa dönüyor; counter 2 oluyor, yazılıyor, şart True ve break çalışıyor. Akış son satıra iniyor: döngüden sonra.</aside>
 <!-- not spoken: Çıktı (Python 3.14.8): 1 2 döngüden sonra -->
 </section>
 
@@ -8606,7 +8528,6 @@ Toplam: 12</pre>
 </figure>
 </div>
   </div>
-  <aside class="notes">0 toplama eklenmiyor, çünkü break toplama satırından önce çalışıyor.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="3B" data-src="S120" data-topic="while True ve break">
@@ -8755,7 +8676,6 @@ Toplam: 12</pre>
 <figcaption class="focal">0 gelince break çalışır; 0 toplama eklenmez.</figcaption>
 </figure>
   </div>
-  <aside class="notes">5 ve 7 için şart False, toplam önce 5, sonra 12. 0 gelince şart True, break çalışıyor ve total += number satırına hiç gelinmiyor.</aside>
 </section>
 
 <section class="s-figure" data-half="3B" data-src="S121" data-topic="while True ve break">
@@ -8852,8 +8772,6 @@ Toplam: 12</pre>
       <p class="focal">Sentinel, kasa bandındaki ayırıcı çubuk gibidir: ürün değil, "bu müşteri bitti" işaretidir.</p>
     </div>
   </div>
-  <aside class="notes">Benzetmenin bittiği yer: kasadaki çubuk ürünlerden farklı bir şey, Python'da ise sentinel verilerle aynı type'tan bir value. Bu yüzden gerçek veri olamayacak bir value seçilir.<br>
-Sınıfa: Puan girilen bir programda 0 neden kötü bir sentinel olur? (beklenen: 0 gerçek bir puan olabilir; -1 gibi puan olamayacak bir value seçilir)</aside>
 </section>
 
 <section class="s-connection" data-half="3B" data-src="S122" data-topic="while True ve break">
@@ -8868,7 +8786,6 @@ Sınıfa: Puan girilen bir programda 0 neden kötü bir sentinel olur? (beklenen
       <p>while True ve break bu yapıdır.</p>
     </div>
   </div>
-  <aside class="notes">Donald Knuth 1974'te ACM Computing Surveys'de yayımlanan 'Structured Programming with go to Statements' makalesinde çıkış şartı gövdenin ortasında olan loop'ları tartıştı; Dijkstra böyle loop'lara 'n buçuk kez çalışan loop' demişti. Knuth, Ole-Johan Dahl'ın önerisini bu soruna ilk gerçek çözüm saydı. Böyle bir çıkış olmadan input() satırı iki kez yazılır: bir kez loop'tan önce, bir kez gövdenin sonunda. Fotoğraf Knuth'u 1965'te gösteriyor.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="3B" data-src="S123" data-topic="while True ve break">
@@ -9000,7 +8917,6 @@ Sınıfa: Puan girilen bir programda 0 neden kötü bir sentinel olur? (beklenen
 <figcaption class="focal">break yalnızca içinde bulunduğu loop'u bitirir; dış loop devam eder.</figcaption>
 </figure>
   </div>
-  <aside class="notes">break bütün loop'lardan birden çıkmaz: yalnızca iç loop bitiyor, dış loop i 2 ile devam ediyor ve iç loop baştan başlıyor. Bu yüzden her satırda yalnızca j 1 yazılıyor.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): for i in range(1, 3): for j in range(1, 4): if j == 2: break print(i, j) | Çıktı (Python 3.14.8; şeklin içinde): 1 1 2 1 -->
 </section>
 
@@ -9019,7 +8935,6 @@ break
 </figure>
 <p class="focal">Loop'un dışındaki break, dosyanın hiçbir satırını çalıştırmaz.</p>
   </div>
-  <aside class="notes">Python bunu dosyayı çalıştırmadan önce, söz dizimini denetlerken buluyor; SyntaxError varsa hiçbir satır çalışmaz, 1. satırdaki print(1) bile. Son satır: 'break' outside loop, yani loop'un dışında break. Dolmuşta değilken 'İnecek var' demek gibi.</aside>
 </section>
 
 <section class="s-poll" data-half="3B" data-src="S125" data-topic="while True ve break" data-poll-id="d3-break-son" data-answer="3">
@@ -9056,7 +8971,6 @@ son 2</code></li>
       <div class="poll-bars" hidden></div>
     </div>
   </div>
-  <aside class="notes">Bölümün sorusu: bu kod ne yazdırır? Telefonunuzun kamerasını QR koda tutun, A, B, C ya da D'ye dokunun; ad ya da giriş istenmiyor. Şimdi yedi saniye kimse konuşmasın, herkes kendi cevabını seçsin. Dağılıma bakalım. Doğru cevap C şıkkı: 1, 2 ve son 3. i 3 olunca break print'ten önce çalışıyor, 3 yazılmıyor; akış loop'tan sonra devam ediyor ve i 3'te kalmış. A break'ten sonraki print'in yine çalıştığını sandı. B loop'un sonuna kadar gittiğini sandı. D i'nin son yazılan value'da kaldığını sandı.</aside>
 <!-- not spoken: Çıktı (Python 3.14.8, slaytta gösterilmez): 1 2 son 3 -->
 </section>
 
@@ -9198,7 +9112,6 @@ son 2</code></li>
 </figure>
     <p>Akış loop'un başına döner; loop sonraki adımla devam eder.</p>
   </div>
-  <aside class="notes">Kaldıroğlu bir loop'un tek bir turuna adım der; burada adım bir tur demek, range'in üçüncü sayısı değil. continue o adımın geri kalanını atlar: for sıradaki value'yu alır, while şartı yeniden sorar; loop bitmez.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="3B" data-src="S129" data-topic="continue">
@@ -9335,8 +9248,6 @@ son 2</code></li>
 <figcaption class="focal">Çift sayılarda continue çalışır; o adımda print atlanır.</figcaption>
 </figure>
   </div>
-  <aside class="notes">range(1, 6) beş sayı veriyor, yani beş adım. 2 ve 4'te şart True, continue çalışıyor ve o adımda print atlanıyor; loop 3 ile ve 5 ile devam ediyor.<br>
-Sınıfa: continue yerine break yazsak ne yazar? (beklenen: yalnızca 1; 2'de loop tamamen biter)</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): for i in range(1, 6): if i % 2 == 0: continue print(i) | Çıktı (Python 3.14.8; şeklin içinde): 1 3 5 -->
 </section>
 
@@ -9481,7 +9392,6 @@ Sınıfa: continue yerine break yazsak ne yazar? (beklenen: yalnızca 1; 2'de lo
 <figcaption class="focal">Tek fark: break loop'u bitirir, continue yalnızca adımı.</figcaption>
 </figure>
   </div>
-  <aside class="notes"><strong>break loop'u bitirir, continue yalnızca o adımı.</strong> İkisini karıştırınca tek soruyu sorun: akış nereden devam eder? break'te loop'tan sonra, continue'da loop'un başında.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): for i in range(1, 6): if i % 2 == 0: break print(i) | Çıktı (Python 3.14.8; şeklin içinde): 1 -->
 </section>
 
@@ -9588,7 +9498,6 @@ Sınıfa: continue yerine break yazsak ne yazar? (beklenen: yalnızca 1; 2'de lo
       <p class="focal">Şarkıyı geçmek continue, müziği kapatmak break gibidir: ilkinde liste sürer, ikincisinde biter.</p>
     </div>
   </div>
-  <aside class="notes">Benzetmenin bittiği yer: müzik çalarda şarkıyı istediğiniz an geçersiniz, continue ise gövdede yazılı bir satır ve çoğu zaman bir if'in içinde. while içinde continue güncelleme satırından önce gelirse sayaç yerinde sayar; bunu iki sayfa sonra göreceğiz.</aside>
 </section>
 
 <section class="s-demo" data-half="3B" data-src="S132" data-topic="continue">
@@ -9596,7 +9505,6 @@ Sınıfa: continue yerine break yazsak ne yazar? (beklenen: yalnızca 1; 2'de lo
   <div class="content l-full">
     <div class="trace" data-trace="traces/ders3-continue-skip.json" data-labels="names values"></div>
   </div>
-  <aside class="notes">İlk puan 70, total 70. İkinci puan -5: şart True, continue çalışıyor, total += score bu adımda atlanıyor ve akış for satırına dönüyor. Üçüncü puan 90, total 160; negatif puan toplama girmedi ama loop bitmedi.</aside>
 <!-- not spoken: Çıktı (Python 3.14.8): Puan: 70 Puan: -5 Puan: 90 Toplam: 160 -->
 </section>
 
@@ -9742,8 +9650,6 @@ Sınıfa: continue yerine break yazsak ne yazar? (beklenen: yalnızca 1; 2'de lo
 <figcaption class="focal">Güncelleme continue'dan sonra kalırsa while loop'u hiç bitmez.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Sınıfa: Program 0'ı yazdıktan sonra neden durmuyor? (beklenen: i 1 olunca continue, i += 1'i atlıyor; i hep 1, şart hep True)<br>
-Program yine Stop ile duruyor. Düzeltmesi güncellemeyi continue'dan önceye almak: i += 1 gövdenin başına, şart i == 2 olunca program 1 ve 3 yazar. for'da bu sorun yok, sıradaki value'yu for kendisi alıyor.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): i = 0 while i < 3: if i == 1: continue print(i) i += 1 | Çıktı (Python 3.14.8; şeklin içinde): 0 -->
 </section>
 
@@ -9794,7 +9700,6 @@ Program yine Stop ile duruyor. Düzeltmesi güncellemeyi continue'dan önceye al
     </figure>
     <p class="focal">str de range gibi bir sequence'tir; karakterleri sırayla durur.</p>
   </div>
-  <aside class="notes">Ders 1'de str'nin içindeki karakterleri Ders 3'te açacağımızı söylemiştim; söz bu bölümde tutuluyor. Ders 4'te bu gruba iki type daha eklenecek: tuple ve list.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="3B" data-src="S138" data-topic="Index ve len()">
@@ -10008,7 +9913,6 @@ Program yine Stop ile duruyor. Düzeltmesi güncellemeyi continue'dan önceye al
 <figcaption class="focal">Index, bir karakterin sıra numarasıdır; 0'dan başlar.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Ders 2'de karakterlerin sıra numaralarını Ders 3'te göreceğimizi söylemiştim; işte index. Kaldıroğlu bunu otel koridorundaki oda numaralarına benzetir: numarayı bilirseniz doğrudan o odaya gidersiniz. Benzetmenin bittiği yer: str'de odaların içi değiştirilemiyor; birazdan göreceğiz.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="3B" data-src="S139" data-topic="Index ve len()">
@@ -10218,7 +10122,6 @@ Program yine Stop ile duruyor. Düzeltmesi güncellemeyi continue'dan önceye al
 <figcaption class="focal">Köşeli parantezdeki index, o sıradaki karakteri verir.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Çıktıda tırnak yok, çünkü print metni tırnaksız yazar; şekildeki tırnaklar her sonucun bir str olduğunu söylüyor. Python'da ayrı bir karakter type'ı yok: type(code[0]) &lt;class 'str'&gt; verir.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): code = "BBM101" print(code[0], code[2], code[5]) | Çıktı (Python 3.14.8; şeklin içinde): B M 1 -->
 </section>
 
@@ -10341,7 +10244,6 @@ Program yine Stop ile duruyor. Düzeltmesi güncellemeyi continue'dan önceye al
       <p class="focal">Asansörde zemin kat 0'dır; ders kodunun ilk karakteri de <code>code[0]</code>'dır.</p>
     </div>
   </div>
-  <aside class="notes">Kat numarası katta oturanı değil yeri gösterir; index de karakterin kendisini değil, yerini. Benzetmenin bittiği yer: binada -1 bodrum kat, Python'da code[-1] ise en sondaki karakter; negatif index'i anlatırken binayı kullanmayacağız.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="3B" data-src="S141" data-topic="Index ve len()">
@@ -10762,8 +10664,6 @@ Program yine Stop ile duruyor. Düzeltmesi güncellemeyi continue'dan önceye al
 <figcaption class="focal">Son karakterin index'i len - 1'dir.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Önce içteki len(code) hesaplanıyor, sonra 1 çıkarılıyor, sonra index okunuyor; Ders 2'deki içten dışa kuralı.<br>
-Sınıfa: "Hacettepe"nin son karakterinin index'i kaç? (beklenen: 8; uzunluk 9)</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): code = "BBM101" print(len(code) - 1, code[len(code) - 1]) | Çıktı (Python 3.14.8; şeklin içinde): 5 1 -->
 </section>
 
@@ -10882,7 +10782,6 @@ Sınıfa: "Hacettepe"nin son karakterinin index'i kaç? (beklenen: 8; uzunluk 9)
 <figcaption class="focal">Türkçede köke ekler art arda gelir; len() bu uzun sözcüğün harflerini sayar.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Türkçe sondan eklemeli bir dil; köke ekler art arda gelince dil bilgisine uygun çok uzun sözcükler kurulabiliyor. Bu 70 harflik sözcük en çok anılan örneklerden biri; sözlükte yok, bir rekor da sayılmıyor, o yüzden 'bir sözcük' diyorum.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): word = "Muvaffakiyetsizleştiricileştiriveremeyebileceklerimizdenmişsinizcesine" print(len(word)) | Çıktı (Python 3.14.8; şeklin içinde): 70 -->
 </section>
 
@@ -11093,7 +10992,6 @@ Sınıfa: "Hacettepe"nin son karakterinin index'i kaç? (beklenen: 8; uzunluk 9)
 <figcaption class="focal">Negatif index sondan sayar; -1 son karakterdir.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Sondan sayarken 0 yok, -1'den başlıyor, çünkü -0 ile 0 aynı sayı. -1 her zaman son karakter; uzunluğu bilmeye gerek yok.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): code = "BBM101" print(code[-1], code[-2], code[-6]) | Çıktı (Python 3.14.8; şeklin içinde): 1 0 B -->
 </section>
 
@@ -11112,7 +11010,6 @@ print(code[6])
 </figure>
 <p class="focal">Son index'ten sonra karakter yoktur.</p>
   </div>
-  <aside class="notes">Sık yapılan hata uzunluğu index sanmak: BBM101'in uzunluğu 6 ama son index 5. Son satır: string index out of range, index aralığın dışında; çizgiler ve şapkalar hatalı kısmı gösteriyor. Ders 4'te list'lerde de aynı kural ve aynı hata olacak.</aside>
 <!-- not spoken: Later: LATER-3.B2 · list'lerde de aynı index kuralı ve aynı IndexError var. · kept: Ders 4, list bölümü -->
 </section>
 
@@ -11128,7 +11025,6 @@ print(code[6])
       <p>Python her index'i denetler.</p>
     </div>
   </div>
-  <aside class="notes">2 Kasım 1988 akşamı internete salınan Morris solucanı, yayılma yollarından birinde fingerd sunucusuna 536 baytlık bir istek gönderdi. Sunucu isteği C'deki gets() ile 512 baytlık bir alana okuyordu ve gets() alanın sonunu denetlemiyordu; fazladan gelen 24 bayt belleğin komşu bölümüne yazıldı ve solucanın kodu çalıştı. Yalnızca 4.3BSD çalıştıran VAX makineleri etkilendi; disket Boston'daki bilim müzesinde sergileniyor. Python'da code[6] IndexError verir: program durur ama başka bir yere sessizce yazmaz.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="3B" data-src="S147" data-topic="Index ve len()">
@@ -11255,7 +11151,6 @@ print(code[6])
 <figcaption class="focal">str immutable'dır; bir karakterine yeni value atanamaz.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Ders 2'de str'ye immutable demiştik, upper() yeni bir str yapıyordu; şimdi bunu doğrudan görüyoruz. Bir karakterin yerine yeni bir value atamaya item assignment deniyor, str buna izin vermiyor. BBM'yi CBM yapmak için yeni bir str kurmak gerekiyor; yolunu slicing bölümünde göreceğiz.</aside>
 <!-- not spoken: Later: LATER-3.B3 · list'te bir elemana yeni değer atanabilir. · kept: Ders 4, mutable ve immutable bölümü | Kod (şeklin içinde çizili; doğrulama için): code = "BBM101" code[0] = "C" | Çıktı (Python 3.14.8; şeklin içinde): TypeError: 'str' object does not support item assignment -->
 </section>
 
@@ -11458,7 +11353,6 @@ print(code[6])
 <figcaption class="focal">Slicing, iki sınır arasındaki karakterleri yeni bir str olarak verir.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Bu resimde numaralar hücrelerin değil, aralarındaki sınırların üstünde. [0:3], 0 ile 3 numaralı sınırlar arasında kalan üç karakter: BBM. Slicing'i böyle okumak işinizi çok kolaylaştırır.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): code = "BBM101" print(code[0:3]) | Çıktı (Python 3.14.8; şeklin içinde): BBM -->
 </section>
 
@@ -11651,7 +11545,6 @@ print(code[6])
 <figcaption class="focal">Bitiş dahil değildir, range'de olduğu gibi.</figcaption>
 </figure>
   </div>
-  <aside class="notes">İki parça 3 numaralı sınırda tam buluşuyor: hiçbir karakter kaybolmuyor, hiçbiri iki kez sayılmıyor. Parçanın uzunluğu bitiş eksi başla: 3 - 0 = 3.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): code = "BBM101" print(code[0:3], code[3:6]) | Çıktı (Python 3.14.8; şeklin içinde): BBM 101 -->
 </section>
 
@@ -11777,7 +11670,6 @@ print(code[6])
       <p class="focal">Slicing, tablet çikolatayı çizgisinden kırmak gibidir: <code>code[0:3]</code> size, <code>code[3:6]</code> arkadaşınıza; hiçbir kare kaybolmaz.</p>
     </div>
   </div>
-  <aside class="notes">Bugün yanımda gerçek bir tablet çikolata var; 3 numaralı çizgiden kırıyorum. Benzetmenin bittiği yer: çikolata kırılınca tablet bölünüyor, slicing ise yeni bir str üretiyor ve code hiç değişmiyor; code[0:3] + code[3:6] == code True verir.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="3B" data-src="S154" data-topic="Slicing">
@@ -11969,7 +11861,6 @@ print(code[6])
 <figcaption class="focal">Başla yazılmazsa baştan, bitiş yazılmazsa sona kadar alınır.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Sınıfa: code = "FIZ127" için bölüm kodunu ve ders numarasını nasıl alırız? (beklenen: code[:3] ve code[3:])</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): code = "BBM101" print(code[:3], code[3:], code[:]) | Çıktı (Python 3.14.8; şeklin içinde): BBM 101 BBM101 -->
 </section>
 
@@ -12431,7 +12322,6 @@ mesaj</pre>
 <figcaption class="focal">Slicing yeni bir str yapar; code değişmez.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Saklamak isterseniz bir isme atarsınız: dept = code[:3]; code hala BBM101. Index bölümündeki söz burada: CBM101 için "C" + code[1:] yazarız, code yine BBM101.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): code = "BBM101" dept = code[:3] print(dept, code) | Çıktı (Python 3.14.8; şeklin içinde): BBM BBM101 -->
 </section>
 
@@ -12568,7 +12458,6 @@ mesaj</pre>
 <figcaption class="focal">İnsan insülininin öncül zinciri 110 harflik bir str'dir; slicing onun iki parçasını keser.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Nobel komitesinin 2024 basın bülteni proteinleri amino asitlerin uzun zincirleri olarak anlatıyor; her amino asit tek bir harfle yazıldığı için bir protein bilgisayarda bir str. UniProt'ta insan insülininin öncülü 110 harflik bir str; 25. ile 54. harfler B zinciri, son 21 harf A zinciri. Index 0'dan başladığı ve bitiş dahil olmadığı için 25. harf index 24'te: insulin[24:54].</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): # Human insulin precursor, one letter per amino acid (UniProt P01308) insulin = "MALWMRLLPLLALLALWGPDPAAAFVNQHLCGSHLVEALYLVCGERGFFYTPKTRREAEDLQVGQVELGGGPGAGSLQPLALEGSLQKRGIVEQCCTSICSLYQLENYCN" print(len(insulin)) print(insulin[24:54]) print(insulin[89:]) | Çıktı (Python 3.14.8; şeklin içinde): 110 FVNQHLCGSHLVEALYLVCGERGFFYTPKT GIVEQCCTSICSLYQLENYCN -->
 </section>
 
@@ -12595,7 +12484,6 @@ print(s[2:13], len(s[2:13]))
 </figure>
     </div>
   </div>
-  <aside class="notes">Edsger W. Dijkstra 11 Ağustos 1982 tarihli EWD831 notunda 2'den 12'ye kadar sayıları yazmanın dört yolunu karşılaştırdı ve alt sınırın dahil, üst sınırın hariç olduğu biçimi seçti; bu biçimde sınırların farkı uzunluğa eşit. Guido van Rossum 2013'te yazdığı bir notta Python'da 0'dan başlama kararında slicing gösteriminin etkili olduğunu anlattı; o yazıda Dijkstra'yı anmıyor, yani ikisi aynı sonuca ayrı ayrı varmış.</aside>
 </section>
 
 <section class="s-concept-diagram" data-half="3B" data-src="S163" data-topic="Slicing">
@@ -12805,7 +12693,6 @@ print(s[2:13], len(s[2:13]))
 <figcaption class="focal">Sınırı aşan slice hata vermez; sınırı aşan index verir.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Slice'ın bitişi uzunluğu aşınca Python sessizce sonda duruyor; tek bir index aşınca IndexError veriyor. Bu yüzden code[:3] kısa bir kodda bile hata vermez.</aside>
 <!-- not spoken: Kod (şeklin içinde çizili; doğrulama için): code = "BBM101" print(code[0:100], len(code[4:100])) | Çıktı (Python 3.14.8; şeklin içinde): BBM101 2 -->
 </section>
 
@@ -12841,7 +12728,6 @@ epettecaH</code></li>
       <div class="poll-bars" hidden></div>
     </div>
   </div>
-  <aside class="notes">Bölümün sorusu: bu kod ne yazdırır? Telefonunuzun kamerasını QR koda tutun, A, B, C ya da D'ye dokunun; ad ya da giriş istenmiyor. Şimdi yedi saniye kimse konuşmasın, herkes kendi cevabını seçsin. Dağılıma bakalım. Doğru cevap B şıkkı: Hace, ttepe ve epettecaH. [0:4] dört karakter alıyor, [4:] 4 numaralı sınırdan sona gidiyor, -1 adımı str'yi ters çeviriyor. A bitişi dahil saydı. C -1 adımını görmedi. D 0'dan 4'e üç karakter saydı.</aside>
 <!-- not spoken: Çıktı (Python 3.14.8, slaytta gösterilmez): Hace ttepe epettecaH -->
 </section>
 
@@ -12981,7 +12867,6 @@ epettecaH</code></li>
 <figcaption class="focal">İki parça birleşir: 3A'nın ders loop'u ve slicing.</figcaption>
 </figure>
   </div>
-  <aside class="notes">Dersin başında code[:3]'ün aradan sonra geleceğini söylemiştim; değişen tek satır print: code yerine code[:3], bir boşluk ve code[3:]. Çıktı en başta gördüğümüzün aynısı: MAT 123, FIZ 127, geçilen ders 2/2, AGNO 2.71. <strong>Bugünün ana cümlesi: kuralı bir kez yazın; tekrarı for, seçimi if yapsın.</strong></aside>
 <!-- not spoken: Çıktı (Python 3.14.8; şeklin içinde): Kaç ders? 2 1. dersin kodu: mat123 Kredi: 4 Puan (0-100): 66 MAT 123: 66 puan, katsayı 2.50 2. dersin kodu: fiz127 Kredi: 3 Puan (0-100): 77 FIZ 127: 77 puan, katsayı 3.00 Geçilen ders: 2/2 AGNO: 2.71 -->
 </section>
 
@@ -12991,7 +12876,6 @@ epettecaH</code></li>
     <dl class="rows"><dt>Son gün</dt><dd>8 Kasım Pazar, 23.59</dd><dt>Form</dt><dd><a href="https://forms.gle/2Ei4AbGpuuJNtN5w7">https://forms.gle/2Ei4AbGpuuJNtN5w7</a></dd><dt>Repo</dt><dd>GitHub'da folding-to-everest-python-hw; README'de bugünün konu özeti</dd></dl>
     <p class="focal">Ödev 3, odev3.py dosyasıdır: TODO'ları doldurup aynı dosyayı formdan yüklersiniz.</p>
   </div>
-  <aside class="notes">odev3.py, sitedeki Ödev 3 bağlantısının açtığı GitHub reposunda, bugünün konu özetiyle birlikte; her görevde TODO'nun yerine kod yazılır, çıktı görevin Beklenen çıktı'sıyla karşılaştırılır. Formda isminizi yazıp dosyayı Ödev dosyası alanına yüklüyorsunuz ve onay kutusunu işaretliyorsunuz; Açıklama isteğe bağlı. Görev 2'de kağıdı bu kez Everest'e katlayacak, görev 5'te bir gizli mesajı slicing ile çözüp kendiniz kuracaksınız.</aside>
 </section>
 
 <section class="s-videos" data-half="3B" data-src="S167">
@@ -13008,7 +12892,6 @@ epettecaH</code></li>
   <div class="content l-table is-short ab-short ab-4">
     <ol class="steps"><li><span class="n-sq">1</span><span>while ile bir şart True oldukça tekrar etmek</span></li><li><span class="n-sq">2</span><span>for ile saymak ve toplamak</span></li><li><span class="n-sq">3</span><span>İç içe loop kurmak, break ile çıkmak</span></li><li><span class="n-sq">4</span><span>str'yi index ve slicing ile bölmek</span></li></ol>
   </div>
-  <aside class="notes">Bugün while ile tekrar ettirdiniz, kağıdı 42 katlamada Ay'a ulaştırdınız; for ile dört F1 turunu topladınız, iç içe loop'la yıldız üçgenini çizdiniz ve ders kodunu slicing ile MAT 123 diye böldünüz. <strong>Loop her turun başında sorar; cevap True ise bir tur daha döner.</strong> <strong>Bugün bilgisayara ilk kez bıkmadan tekrar eden işler yaptırdınız.</strong> Sizinle bu dersi işlemek çok keyifliydi; Ödev 3'ün son günü 8 Kasım Pazar, 23.59. Salı görüşürüz.</aside>
 </section>
 
 <section class="s-section" data-half="3B" data-src="S322" data-topic="Çalışma soruları" data-background-color="#181C3E">

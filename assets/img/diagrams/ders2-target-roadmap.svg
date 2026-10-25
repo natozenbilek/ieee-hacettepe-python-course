@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 420" width="1152" height="420" role="img" aria-labelledby="ders2-target-roadmap-t ders2-target-roadmap-d">
   <title id="ders2-target-roadmap-t">Hedef programın parçaları</title>
-  <desc id="ders2-target-roadmap-d">Solda PyCharm Run penceresi, beş satır: Ders kodu:  mat123 / Kredi: 4 / Puan (0-100): 66 / MAT123: 66 puan, katsayı 2.50, geçti / 4 x 2.50 = 10.00; kullanıcının yazdığı kısımlar petrol mavisi. Sağda yukarıdan aşağı etiketler, her biri düz bir çizgiyle çıktıdaki yerine bağlı. Bu yarının etiketleri çivit mavisi düz çerçeveli: 3. input() ilk satırdaki Ders kodu: sorusuna, 4. int() Kredi: 4 satırına, 6. strip(), upper() MAT123'ün üstündeki ayraca, 5. f-string, :.2f son satırdaki 10.00'ın altındaki ayraca. Aradan sonraki etiketler gri kesik çerçeveli: 10. elif katsayı 2.50'nin üstündeki ayraca, 9. if ve else geçti kelimesinin altındaki ayraca. En altta örnek: düz çerçeve bugün, kesik çerçeve aradan sonra.</desc>
-  <!-- source: authoring/targets/target2.py run by authoring/targets/run_targets.py with ' mat123', 4, 66 (Python 3.14.8, 2026-10-13); the five lines are that run verbatim; line pitch 60 so that the leaders run in the gaps between lines -->
+  <desc id="ders2-target-roadmap-d">Solda PyCharm Run penceresi, beş satır: Ders kodu:  mat123 / Kredi: 4 / Puan (0-100): 66 / MAT123: 66 puan, katsayı 2.50, geçti / 4 x 2.50 = 10.00; kullanıcının yazdığı kısımlar petrol mavisi. Sağda yukarıdan aşağı etiketler, her biri düz bir çizgiyle çıktıdaki yerine bağlı. Bu yarının etiketleri çivit mavisi düz çerçeveli: 3. input() ilk satırdaki Ders kodu: sorusuna, 4. int() Kredi: 4 satırına, 6. strip(), upper() MAT123'ün üstündeki ayraca, 5. f-string, :.2f son satırdaki 10.00'ın altındaki ayraca. Aradan sonraki etiketler gri kesik çerçeveli: 11. elif katsayı 2.50'nin üstündeki ayraca, 10. if ve else geçti kelimesinin altındaki ayraca. En altta örnek: düz çerçeve 2A, kesik çerçeve 2B.</desc>
+  <!-- source: authoring/targets/target2.py run by authoring/targets/run_targets.py with ' mat123', 4, 66 (Python 3.14.8, 2026-10-13); the five lines are that run verbatim; line pitch 60 so that the leaders run in the gaps between lines Updated on 2026-10-23 by authoring/builder-paralel/ders2-index.py: 2B's section numbers moved up by one (new 7. Index, len() ve slicing in 2A) -->
   <defs>
     <style>
 /* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
@@ -62,7 +62,7 @@
 .dg .co{fill:#14172E;fill:var(--d-ink,#14172E)}
 .dg .co-t{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF);font-size:24px;font-weight:700;text-anchor:middle}
 .dg .sec{stroke:#3B4595;stroke:var(--d-second,#3B4595)}
-/* ders2-target-roadmap: kesik çizgili etiket (aradan sonra, 2B) */
+/* ders2-target-roadmap: kesik çizgili etiket (2B, 2B) */
 .dg .rm-d{stroke-dasharray:8 6}
     </style>
   </defs>
@@ -87,17 +87,17 @@
   <path class="ld" d="M461.6,238 V230"/>
   <path class="ld" d="M404.0,238 V230 H624 L700,181"/>
   <rect class="boxm rm-d" x="700" y="160" width="420" height="42" rx="4"/>
-  <text class="lb sub" x="716" y="189">10. elif</text>
+  <text class="lb sub" x="716" y="189">11. elif</text>
   <path class="ld" d="M562.4,270 V278"/>
   <path class="ld" d="M490.4,270 V278 H624 L700,233"/>
   <rect class="boxm rm-d" x="700" y="212" width="420" height="42" rx="4"/>
-  <text class="lb sub" x="716" y="241">9. if ve else</text>
+  <text class="lb sub" x="716" y="241">10. if ve else</text>
   <path class="ld" d="M274.4,328 V344"/>
   <path class="ld" d="M202.4,328 V344 H624 L700,285"/>
   <rect class="emph" x="700" y="264" width="420" height="42" rx="4"/>
   <text class="lb" x="716" y="293">5. f-string, :.2f</text>
   <rect class="emph" x="700" y="364" width="110" height="42" rx="4"/>
-  <text class="tx sub mid" x="755" y="393">bugün</text>
+  <text class="tx sub mid" x="755" y="393">2A</text>
   <rect class="boxm rm-d" x="840" y="364" width="190" height="42" rx="4"/>
-  <text class="tx sub mid" x="935" y="393">aradan sonra</text>
+  <text class="tx sub mid" x="935" y="393">2B</text>
 </svg>

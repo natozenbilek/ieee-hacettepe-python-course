@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 300" width="1152" height="300" role="img" aria-labelledby="ders2-input-flow-t ders2-input-flow-d">
+<svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 256" width="1152" height="256" role="img" aria-labelledby="ders2-input-flow-t ders2-input-flow-d">
   <title id="ders2-input-flow-t">input() klavyeden değer alır</title>
-  <desc id="ders2-input-flow-d">Soldan sağa: klavye bloğunda m, i, l, l, e, t tuşları ve altında Enter tuşu. Klavyeden bir ok input("Kime selam? ") yazan kutuya gider. Oradan Enter'dan sonra yazan bir ok "millet" değerine gider: millet (str, yeşil), çivit mavisi çerçeveli açık mavi şeritte, altında str etiketi. En sağda lacivert name ismi, ondan "millet" değerine bir ok. Altta Run penceresi: Kime selam? satırında yazılan millet petrol mavisi, sonraki satır Selam millet. Özet: klavyeden millet yazılıyor; input() "millet" değerini (str, yeşil) veriyor; name ismi ona ok ile bağlı.</desc>
-  <!-- source: ders2-A.md S28 and S31; name = input("Kime selam? "); print("Selam " + name); stdin millet -> "Kime selam? millet", "Selam millet"; type str. Python 3.14.8, 2026-10-11. The process box is 328 wide, not 300: the 21-character prompt line is 302 px at 24 px. -->
+  <desc id="ders2-input-flow-d">Soldan sağa: klavye bloğunda m, i, l, l, e, t tuşları ve altında Enter tuşu. Klavyeden bir ok input("Kime selam? ") yazan kutuya gider. Oradan Enter'dan sonra yazan bir ok "millet" değerine gider: millet (str, yeşil), çivit mavisi çerçeveli açık mavi şeritte, altında str etiketi. En sağda lacivert name ismi, ondan "millet" değerine bir ok. Altta Run penceresi: Kime selam? satırında yazılan millet petrol mavisi. Özet: klavyeden millet yazılıyor; input() "millet" değerini (str, yeşil) veriyor; name ismi ona ok ile bağlı.</desc>
+  <!-- source: ders2-A.md S28 and S31; name = input("Kime selam? "); print("Selam " + name); stdin millet -> "Kime selam? millet", "Selam millet"; type str. Python 3.14.8, 2026-10-11. Fix pass of 2026-10-23: the Run window shows only the input() line (the print line "Selam millet" is not on S45's code; S48 runs both lines), so the panel is 56 high and the drawing 256. The process box is 328 wide, not 300: the 21-character prompt line is 302 px at 24 px. -->
   <defs>
     <marker id="ders2-input-flow-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
     <style>
@@ -85,7 +85,7 @@
 .dg rect.boxhl,.dg path.boxhl,.dg rect.cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595)}
     </style>
   </defs>
-  <rect class="bg" width="1152" height="300"/>
+  <rect class="bg" width="1152" height="256"/>
   <rect class="blk" x="2" y="20" width="310" height="150" rx="6"/>
   <text class="ti mid" x="157" y="56">klavye</text>
   <rect class="key" x="16" y="70" width="42" height="44" rx="4"/>
@@ -115,8 +115,7 @@
   <rect class="name" x="1046" y="67" width="100" height="56" rx="6"/>
   <text class="nm mid" x="1096" y="105">name</text>
   <path class="ar" d="M1046,95 H949" marker-end="url(#ders2-input-flow-ah)"/>
-  <rect class="outp" x="2" y="192" width="1148" height="96" rx="4"/>
+  <rect class="outp" x="2" y="192" width="1148" height="56" rx="4"/>
   <text class="lb sub" x="18" y="228">Run penceresi</text>
   <text class="cd24 pre" x="220" y="228" xml:space="preserve">Kime selam? <tspan class="okt">millet</tspan></text>
-  <text class="cd24" x="220" y="268">Selam millet</text>
 </svg>

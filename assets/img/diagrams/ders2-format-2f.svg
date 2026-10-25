@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="dg ff" viewBox="0 0 1152 360" width="1152" height="360" role="img" aria-labelledby="ders2-format-2f-t ders2-format-2f-d" data-focus="format">
   <title id="ders2-format-2f-t">{:.2f} ile iki basamak</title>
-  <desc id="ders2-format-2f-d">data-focus format durumu: solda gri kod panelinde gpa = 26.5 / 9 ve print(f"AGNO: {gpa:.2f}"), altında Çıktı: AGNO: 2.94. Sağda bir satır: 2.9444444444444446 (float, hardal sarısı) kutusu, okla :.2f kutusuna, oradan okla 2.94 çıktısına gider. 1 numaralı işaret .2 üzerinde: 2 basamak; 2 numaralı işaret f üzerinde: noktalı sayı olarak. 2.94 çıktısı çivit mavisi çerçeveli açık mavi bir bantta. data-focus same durumu: kod paneli dört satır olur: gpa = 26.5 / 9, print(f"{gpa:.2f}"), print(gpa), print(f"{10.0:.2f}"); Çıktı: 2.94, 2.9444444444444446, 10.00. İlk satırın altında iki satır daha görünür. İkinci satır: aynı 2.9444444444444446 (float, hardal sarısı) kutusu biçim kutusu olmadan düz bir okla 2.9444444444444446 çıktısına gider, altında değer değişmedi yazar; bant bu float kutusuna geçer. Üçüncü satır: 10.0 (float, hardal sarısı) kutusu :.2f kutusundan geçip 10.00 olur, altında basamak sayısı sabit yazar.</desc>
+  <desc id="ders2-format-2f-d">data-focus format durumu: solda gri kod panelinde gpa = 26.5 / 9 ve print(f"AGNO: {gpa:.2f}"), altında Çıktı: AGNO: 2.94. Sağda bir satır: 2.9444444444444446 (float, hardal sarısı) kutusu, okla :.2f kutusuna, oradan okla 2.94 çıktısına gider. 1 numaralı işaret .2 üzerinde: 2 basamak; 2 numaralı işaret f üzerinde: noktalı sayı olarak. 2.94 çıktısı çivit mavisi çerçeveli açık mavi bir bantta. Sağda altta soru: Bu satırda iki f var: ikisi aynı şey mi? Bir tıklamayla koddaki ilk f çivit mavisi bir halkayla işaretlenir ve iki satır çıkar: f"..." tırnaktan önceki f: f-string başlar; :.2f buradaki f: noktalı sayı olarak yaz. data-focus same durumu: kod paneli dört satır olur: gpa = 26.5 / 9, print(f"{gpa:.2f}"), print(gpa), print(f"{10.0:.2f}"); Çıktı: 2.94, 2.9444444444444446, 10.00. İlk satırın altında iki satır daha görünür. İkinci satır: aynı 2.9444444444444446 (float, hardal sarısı) kutusu biçim kutusu olmadan düz bir okla 2.9444444444444446 çıktısına gider, altında değer değişmedi yazar; bant bu float kutusuna geçer. Üçüncü satır: 10.0 (float, hardal sarısı) kutusu :.2f kutusundan geçip 10.00 olur, altında basamak sayısı sabit yazar.</desc>
   <!-- source: ders2-A.md S65 and S66: gpa = 26.5 / 9; print(f"AGNO: {gpa:.2f}") -> AGNO: 2.94; print(f"{gpa:.2f}") -> 2.94; print(gpa) -> 2.9444444444444446; print(f"{10.0:.2f}") -> 10.00 (Python 3.14.8, 2026-10-11). States by data-focus on the root: format, same. The code panel is 388 wide, not 320: print(f"AGNO: {gpa:.2f}") is 25 characters, 360 px at 24 px. -->
   <defs>
     <marker id="ders2-format-2f-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
@@ -145,5 +145,15 @@
   <rect class="outp" x="914" y="256" width="116" height="56" rx="4"/>
   <text class="cd mid" x="972" y="294">10.00</text>
   <text class="lb sub mid" x="972" y="342">basamak sayısı sabit</text>
+  </g>
+  <g class="ff-f">
+  <text class="lb" x="404" y="196">Bu satırda iki f var: ikisi aynı şey mi?</text>
+  <g class="fragment" data-fragment-index="0">
+    <ellipse class="emph" cx="107.6" cy="78" rx="10" ry="16"/>
+    <text class="cd24" x="404" y="252"><tspan class="t-str">f"</tspan>...<tspan class="t-str">"</tspan></text>
+    <text class="tx" x="520" y="252">tırnaktan önceki f: f-string başlar</text>
+    <text class="cd24" x="404" y="296">:.2f</text>
+    <text class="tx" x="520" y="296">buradaki f: noktalı sayı olarak yaz</text>
+  </g>
   </g>
 </svg>

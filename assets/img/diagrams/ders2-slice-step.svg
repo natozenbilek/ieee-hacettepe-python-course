@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="dg slt" viewBox="0 0 1152 460" width="1152" height="460" role="img" aria-labelledby="ders2-slice-step-t ders2-slice-step-d">
+  <title id="ders2-slice-step-t">Slicing ve adım: code[::2] ve code[::-1]</title>
+  <desc id="ders2-slice-step-d">Solda Genel biçim: &lt;str&gt;[&lt;başla&gt;:&lt;bitiş&gt;:&lt;adım&gt;]. Yanında kod: code = "MAT101". Lacivert code isim etiketi altı yeşil hücreyi gösteriyor (str): M, A, T, 1, 0, 1; üstlerinde 0'dan 5'e index'ler. Birinci tıklama: 0, 2 ve 4 numaralı hücreler çivit mavisi çerçeveli, altlarında birer atlayan oklar; altta code[::2] oku "MT0" kutusuna (str, yeşil). İkinci tıklama: çerçeveler ve atlayan oklar kalkar, son hücre çivit mavisi çerçeveli; hücrelerin altında sondan başa beş kısa ok, her biri bir önceki hücreye: 5'ten 4'e, 4'ten 3'e, 3'ten 2'ye, 2'den 1'e, 1'den 0'a; altta code[::-1] oku "101TAM" kutusuna (str, yeşil), kutu açık mavi, çivit mavisi çerçeveli bir bantta; en altta: Adım eksiyse boş başla sondan, boş bitiş baştan demektir.</desc>
+  <!-- source: ders2.md S366. code = "MAT101"; code[::2], code[::-1] -&gt; MT0 101TAM. Build steps: 0 the step 2; 1 the step -1, one jump per cell from the last (fix pass 2026-10-24) (Python 3.14.8, 2026-10-23). Built by authoring/builder-paralel/ders2-index.py. -->
+  <defs>
+    <marker id="ders2-slice-step-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
+    <marker id="ders2-slice-step-ahm" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-m" d="M0,0 L12,6 L0,12 z"/></marker>
+    <marker id="ders2-slice-step-ahok" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-ok" d="M0,0 L12,6 L0,12 z"/></marker>
+    <marker id="ders2-slice-step-aherr" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-err" d="M0,0 L12,6 L0,12 z"/></marker>
+    <style>
+/* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
+.dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
+.dg .bg{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF)}
+.dg .tx,.dg .lb,.dg .ti,.dg .cd,.dg .cd24{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .tx{font-size:24px;font-weight:400}
+.dg .lb{font-size:24px;font-weight:600}
+.dg .ti{font-size:28px;font-weight:700}
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-family:"JetBrains Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-weight:500}
+.dg .cd{font-size:28px}
+.dg .cd24{font-size:24px}
+.dg .ty{font-size:24px;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .nm{font-size:28px;font-weight:600;fill:#FFFFFF;fill:var(--d-on-name,#FFFFFF)}
+.dg .src{font-size:18px;font-weight:400;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .sub{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .okt{fill:#0D6385;fill:var(--d-ok,#0D6385);font-weight:600}
+.dg .errt{fill:#C21C20;fill:var(--d-err,#C21C20);font-weight:600}
+.dg .b7{font-weight:700}
+.dg .pre{white-space:pre}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .boxm{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .boxhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .blk{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2.5}
+.dg .frame{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .local{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .tmpl{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .cell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellh{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .name{fill:#181C3E;fill:var(--d-name,#181C3E)}
+.dg .soft{fill:#F3F4F8;fill:var(--d-surface,#F3F4F8)}
+.dg .outp{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .tint{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .hl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3)}
+.dg .emph{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .errbox{fill:#FCEDEE;fill:var(--d-err-bg,#FCEDEE);stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .errdash{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .okbox{fill:#E9F6FA;fill:var(--d-ok-bg,#E9F6FA);stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .key{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .dot{fill:#3B4595;fill:var(--d-brand,#3B4595)}
+.dg .dot0{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .ar,.dg .ld,.dg .axis{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E)}
+.dg .ar,.dg .axis{stroke-width:2.5}
+.dg .ld{stroke-width:2}
+.dg .ar-m{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .ar-old{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .ar-ok{fill:none;stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .ar-err{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .sep{fill:none;stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .dash{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2;stroke-dasharray:8 6}
+.dg .ah{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .ah-m{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .ah-ok{fill:#0D6385;fill:var(--d-ok,#0D6385)}
+.dg .ah-err{fill:#C21C20;fill:var(--d-err,#C21C20)}
+.dg .co{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .co-t{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF);font-size:24px;font-weight:700;text-anchor:middle}
+.dg .sec{stroke:#3B4595;stroke:var(--d-second,#3B4595)}
+/* dg v4 type renkleri · authoring/DIAGRAMS.md §10'dan aynen kopyalanır (dg v3 bloğundan sonra) */
+.dg rect.t-int,.dg path.t-int,.dg circle.t-int{fill:#F2CEB3;fill:var(--t-int-bg,#F2CEB3);stroke:#854B00;stroke:var(--t-int,#854B00)}
+.dg text.t-int,.dg tspan.t-int{fill:#613109;fill:var(--t-int-tx,#613109)}
+.dg rect.t-float,.dg path.t-float,.dg circle.t-float{fill:#FFF1C6;fill:var(--t-float-bg,#FFF1C6);stroke:#9F7000;stroke:var(--t-float,#9F7000)}
+.dg text.t-float,.dg tspan.t-float{fill:#5D420E;fill:var(--t-float-tx,#5D420E)}
+.dg rect.t-bool,.dg path.t-bool,.dg circle.t-bool{fill:#C4E9E1;fill:var(--t-bool-bg,#C4E9E1);stroke:#0E7A6D;stroke:var(--t-bool,#0E7A6D)}
+.dg text.t-bool,.dg tspan.t-bool{fill:#0A473F;fill:var(--t-bool-tx,#0A473F)}
+.dg rect.t-str,.dg path.t-str,.dg circle.t-str{fill:#D9F6DD;fill:var(--t-str-bg,#D9F6DD);stroke:#296A3B;stroke:var(--t-str,#296A3B)}
+.dg text.t-str,.dg tspan.t-str{fill:#1A4B28;fill:var(--t-str-tx,#1A4B28)}
+.dg rect.t-none,.dg path.t-none,.dg circle.t-none{fill:#F6F3EF;fill:var(--t-none-bg,#F6F3EF);stroke:#534C45;stroke:var(--t-none,#534C45)}
+.dg text.t-none,.dg tspan.t-none{fill:#413C38;fill:var(--t-none-tx,#413C38)}
+.dg rect.t-list,.dg path.t-list,.dg circle.t-list{fill:#F3C8DB;fill:var(--t-list-bg,#F3C8DB);stroke:#8A2B60;stroke:var(--t-list,#8A2B60)}
+.dg text.t-list,.dg tspan.t-list{fill:#651E45;fill:var(--t-list-tx,#651E45)}
+.dg rect.t-tuple,.dg path.t-tuple,.dg circle.t-tuple{fill:#E3EAF2;fill:var(--t-tuple-bg,#E3EAF2);stroke:#4A6378;stroke:var(--t-tuple,#4A6378)}
+.dg text.t-tuple,.dg tspan.t-tuple{fill:#2C3E4F;fill:var(--t-tuple-tx,#2C3E4F)}
+.dg rect.t-dict,.dg path.t-dict,.dg circle.t-dict{fill:#DBCEC4;fill:var(--t-dict-bg,#DBCEC4);stroke:#4F2611;stroke:var(--t-dict,#4F2611)}
+.dg text.t-dict,.dg tspan.t-dict{fill:#4C2817;fill:var(--t-dict-tx,#4C2817)}
+.dg rect.t-set,.dg path.t-set,.dg circle.t-set{fill:#F2F8D6;fill:var(--t-set-bg,#F2F8D6);stroke:#747C42;stroke:var(--t-set,#747C42)}
+.dg text.t-set,.dg tspan.t-set{fill:#3F4418;fill:var(--t-set-tx,#3F4418)}
+.dg rect.boxhl,.dg path.boxhl,.dg rect.cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595)}
+.dg text.fcl{font-size:40px;font-weight:600}
+.dg text.fq{font-size:28px;font-weight:400}
+svg.slt:has(g.fragment.visible.slt-k1) .slt-o0{visibility:hidden}
+    </style>
+  </defs>
+  <rect class="bg" width="1152" height="460"/>
+  <rect class="soft" x="2" y="36" width="520" height="64" rx="4"/>
+  <rect class="soft" x="570" y="36" width="300" height="64" rx="4"/>
+  <rect class="name" x="0" y="154" width="112" height="56" rx="6"/>
+  <path class="ar" d="M112,182 H207" marker-end="url(#ders2-slice-step-ah)"/>
+  <rect class="cell t-str" x="210" y="150" width="88" height="64" rx="0"/>
+  <rect class="cell t-str" x="298" y="150" width="88" height="64" rx="0"/>
+  <rect class="cell t-str" x="386" y="150" width="88" height="64" rx="0"/>
+  <rect class="cell t-str" x="474" y="150" width="88" height="64" rx="0"/>
+  <rect class="cell t-str" x="562" y="150" width="88" height="64" rx="0"/>
+  <rect class="cell t-str" x="650" y="150" width="88" height="64" rx="0"/>
+  <text class="lb" x="2" y="24">Genel biçim</text>
+  <text class="cd" x="22" y="78"><tspan class="sub">&lt;str&gt;</tspan>[<tspan class="sub">&lt;başla&gt;</tspan>:<tspan class="sub">&lt;bitiş&gt;</tspan>:<tspan class="sub">&lt;adım&gt;</tspan>]</text>
+  <text class="cd" x="586" y="78">code = <tspan class="t-str">"MAT101"</tspan></text>
+  <text class="nm mid" x="56" y="192">code</text>
+  <text class="cd mid t-str" x="254" y="194">M</text>
+  <text class="cd mid t-str" x="342" y="194">A</text>
+  <text class="cd mid t-str" x="430" y="194">T</text>
+  <text class="cd mid t-str" x="518" y="194">1</text>
+  <text class="cd mid t-str" x="606" y="194">0</text>
+  <text class="cd mid t-str" x="694" y="194">1</text>
+  <text class="lb sub end" x="180" y="132">index</text>
+  <text class="cd24 mid" x="254" y="132">0</text>
+  <text class="cd24 mid" x="342" y="132">1</text>
+  <text class="cd24 mid" x="430" y="132">2</text>
+  <text class="cd24 mid" x="518" y="132">3</text>
+  <text class="cd24 mid" x="606" y="132">4</text>
+  <text class="cd24 mid" x="694" y="132">5</text>
+  <text class="ty t-str" x="752" y="190">str</text>
+  <g class="fragment slt-k0" data-fragment-index="0">
+    <rect class="emph slt-o0" x="210" y="150" width="88" height="64" rx="0"/>
+    <rect class="emph slt-o0" x="386" y="150" width="88" height="64" rx="0"/>
+    <rect class="emph slt-o0" x="562" y="150" width="88" height="64" rx="0"/>
+    <path class="ar slt-o0" d="M254,216 V236 H424 V217" marker-end="url(#ders2-slice-step-ah)"/>
+    <path class="ar slt-o0" d="M436,216 V236 H600 V217" marker-end="url(#ders2-slice-step-ah)"/>
+    <path class="ar" d="M350,290 H407" marker-end="url(#ders2-slice-step-ah)"/>
+    <rect class="box t-str" x="410" y="262" width="100" height="56" rx="6"/>
+    <text class="cd mid t-str" x="460" y="300">"MT0"</text>
+    <text class="ty t-str" x="526" y="296">str</text>
+    <text class="cd24" x="210" y="298">code[::<tspan class="t-int">2</tspan>]</text>
+  </g>
+  <g class="fragment slt-k1" data-fragment-index="1">
+    <rect class="emph" x="650" y="150" width="88" height="64" rx="0"/>
+    <path class="ar" d="M694,216 V236 H612 V217" marker-end="url(#ders2-slice-step-ah)"/>
+    <path class="ar" d="M600,216 V236 H524 V217" marker-end="url(#ders2-slice-step-ah)"/>
+    <path class="ar" d="M512,216 V236 H436 V217" marker-end="url(#ders2-slice-step-ah)"/>
+    <path class="ar" d="M424,216 V236 H348 V217" marker-end="url(#ders2-slice-step-ah)"/>
+    <path class="ar" d="M336,216 V236 H260 V217" marker-end="url(#ders2-slice-step-ah)"/>
+    <rect class="boxhl" x="418" y="336" width="172" height="68" rx="10"/>
+    <path class="ar" d="M364,370 H421" marker-end="url(#ders2-slice-step-ah)"/>
+    <rect class="box t-str" x="424" y="342" width="160" height="56" rx="6"/>
+    <text class="cd mid t-str" x="504" y="380">"101TAM"</text>
+    <text class="ty t-str" x="600" y="376">str</text>
+    <text class="cd24" x="210" y="378">code[::<tspan class="t-int">-1</tspan>]</text>
+    <text class="tx fq" x="2" y="446">Adım eksiyse boş başla sondan, boş bitiş baştan demektir.</text>
+  </g>
+</svg>

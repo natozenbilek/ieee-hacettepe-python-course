@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 470" width="1152" height="470" role="img" aria-labelledby="ders2-method-chain-t ders2-method-chain-d">
   <title id="ders2-method-chain-t">Method'ları art arda çağırmak</title>
-  <desc id="ders2-method-chain-d">Solda altı satırlık kod: code = "  bbm101 ", clean = code.strip(), print(f"[{clean}]"), clean = clean.upper(), print(f"[{clean}]"), print(f"[{code.strip().upper()}]"). Altında Çıktı paneli: [bbm101], [BBM101], [BBM101]. Sağda yukarıdan aşağı: lacivert code isim etiketi "  bbm101 " değerine gidiyor (str, yeşil; baştaki iki boşluk ve sondaki bir boşluk çivit mavisi noktalarla gösterilir). strip() etiketli ok yeni "bbm101" değerine iniyor (str, yeşil), yanında yeni str yazısı; lacivert clean etiketi önce ona gidiyordu; bu ok artık gri ve kesikli, çünkü clean = clean.upper() satırından sonra clean etiketinin oku "BBM101" değerine gidiyor. upper() etiketli ok yeni "BBM101" değerine iniyor (str, yeşil), yanında yeni str; bu kutu açık mavi, çivit mavisi çerçeveli bir bandın içinde. İki okun yanında kesikli bir ayraç var, üstünde code.strip().upper() yazıyor: tek satır aynı iki adımı soldan sağa yapar.</desc>
-  <!-- source: ders2-A.md S87: the six lines print [bbm101], [BBM101], [BBM101] (Python 3.14.8, 2026-10-11) -->
+  <desc id="ders2-method-chain-d">Solda altı satırlık kod: code = "  mat101 ", clean = code.strip(), print(f"[{clean}]"), clean = clean.upper(), print(f"[{clean}]"), print(f"[{code.strip().upper()}]"). Altında Çıktı paneli: [mat101], [MAT101], [MAT101]. Sağda yukarıdan aşağı: lacivert code isim etiketi "  mat101 " değerine gidiyor (str, yeşil; baştaki iki boşluk ve sondaki bir boşluk çivit mavisi noktalarla gösterilir). strip() etiketli ok yeni "mat101" değerine iniyor (str, yeşil), yanında yeni str yazısı; lacivert clean etiketi önce ona gidiyordu; bu ok artık gri ve kesikli, çünkü clean = clean.upper() satırından sonra clean etiketinin oku "MAT101" değerine gidiyor. upper() etiketli ok yeni "MAT101" değerine iniyor (str, yeşil), yanında yeni str; bu kutu açık mavi, çivit mavisi çerçeveli bir bandın içinde. İki okun yanında kesikli bir ayraç var, üstünde code.strip().upper() yazıyor: tek satır aynı iki adımı soldan sağa yapar.</desc>
+  <!-- source: ders2-A.md S87: the six lines print [mat101], [MAT101], [MAT101] (Python 3.14.8, 2026-10-11) ; course code changed from BBM101 to MAT101 on 2026-10-21 (Nezih: "BBM101 yerine MAT101 olsun ders kodu örneği"), outputs re-run on 3.14.8 -->
   <defs>
     <marker id="ders2-method-chain-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
     <marker id="ders2-method-chain-ahm" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-m" d="M0,0 L12,6 L0,12 z"/></marker>
@@ -90,7 +90,7 @@
   </defs>
   <rect class="bg" width="1152" height="470"/>
   <rect class="soft" x="2" y="2" width="520" height="300" rx="4"/>
-  <text class="cd24 pre" xml:space="preserve" x="18" y="44">code = "  bbm101 "</text>
+  <text class="cd24 pre" xml:space="preserve" x="18" y="44">code = "  mat101 "</text>
   <text class="cd24" x="18" y="90">clean = code.strip()</text>
   <text class="cd24" x="18" y="136">print(f"[{clean}]")</text>
   <text class="cd24" x="18" y="182">clean = clean.upper()</text>
@@ -98,16 +98,16 @@
   <text class="cd24" x="18" y="274">print(f"[{code.strip().upper()}]")</text>
   <text class="lb sub" x="2" y="330">Çıktı</text>
   <rect class="outp" x="2" y="338" width="520" height="130" rx="4"/>
-  <text class="cd24" x="18" y="374">[bbm101]</text>
-  <text class="cd24" x="18" y="412">[BBM101]</text>
-  <text class="cd24" x="18" y="450">[BBM101]</text>
+  <text class="cd24" x="18" y="374">[mat101]</text>
+  <text class="cd24" x="18" y="412">[MAT101]</text>
+  <text class="cd24" x="18" y="450">[MAT101]</text>
   <rect class="boxhl" x="711" y="306" width="178" height="68" rx="10"/>
   <rect class="name" x="560" y="52" width="99" height="56" rx="6"/>
   <text class="nm mid" x="609.5" y="90">code</text>
   <path class="ar" d="M659,80 H689" marker-end="url(#ders2-method-chain-ah)"/>
   <rect class="box t-str" x="692" y="52" width="217" height="56" rx="6"/>
   <text class="cd t-str" x="708" y="90">"</text>
-  <text class="cd t-str" x="758.4" y="90">bbm101</text>
+  <text class="cd t-str" x="758.4" y="90">mat101</text>
   <text class="cd t-str" x="876" y="90">"</text>
   <circle class="dot" cx="733.2" cy="80" r="4"/>
   <circle class="dot" cx="750" cy="80" r="4"/>
@@ -119,12 +119,12 @@
   <path class="ar-old" d="M676,190 H714" marker-end="url(#ders2-method-chain-ahm)"/>
   <path class="ar" d="M618,218 V340 H714" marker-end="url(#ders2-method-chain-ah)"/>
   <rect class="box t-str" x="717" y="162" width="166" height="56" rx="6"/>
-  <text class="cd mid t-str" x="800" y="200">"bbm101"</text>
+  <text class="cd mid t-str" x="800" y="200">"mat101"</text>
   <text class="lb sub" x="897" y="198">yeni str</text>
   <path class="ar" d="M800,218 V309" marker-end="url(#ders2-method-chain-ah)"/>
   <text class="cd24" x="814" y="270">upper()</text>
   <rect class="box t-str" x="717" y="312" width="166" height="56" rx="6"/>
-  <text class="cd mid t-str" x="800" y="350">"BBM101"</text>
+  <text class="cd mid t-str" x="800" y="350">"MAT101"</text>
   <text class="lb sub" x="903" y="348">yeni str</text>
   <path class="ld mc-br" d="M1016,80 H1040 V340 H1016 M1040,80 V44"/>
   <text class="cd24 end" x="1148" y="30">code.strip().upper()</text>

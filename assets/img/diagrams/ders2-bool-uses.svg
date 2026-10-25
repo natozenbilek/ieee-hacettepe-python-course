@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 300" width="1152" height="300" role="img" aria-labelledby="ders2-bool-uses-t ders2-bool-uses-d">
   <title id="ders2-bool-uses-t">bool ve hedef program</title>
-  <desc id="ders2-bool-uses-d">Solda Bu bölümde başlığı altında iki satırlık kod: grade_point = 2.50 ve print(grade_point &gt;= 1.75); 2.50 ve 1.75 float, hardal sarısı. grade_point &gt;= 1.75 kısmı açık mavi bantta, çivit mavisi çerçeveli. Ok aşağıda çıktıya iner: True. Sağda 9. bölümde başlığı altında soluk ve kesik çizgili bir kutuda hedef programın iki satırı: if grade_point &gt;= 1.75: ve içeride status = "geçti"; altında: True ise geçti.</desc>
-  <!-- source: ders2.md S123 (right panel: two lines of authoring/targets/target2.py, if grade_point >= 1.75: / status = "geçti"); grade_point = 2.50; print(grade_point >= 1.75) -> True (Python 3.14.8, 2026-10-13) -->
+  <desc id="ders2-bool-uses-d">Solda Bu bölümde başlığı altında iki satırlık kod: grade_point = 2.50 ve print(grade_point &gt;= 1.75); 2.50 ve 1.75 float, hardal sarısı. grade_point &gt;= 1.75 kısmı açık mavi bantta, çivit mavisi çerçeveli. Ok aşağıda çıktıya iner: True. Sağda 10. bölümde başlığı altında soluk ve kesik çizgili bir kutuda hedef programın iki satırı: if grade_point &gt;= 1.75: ve içeride status = "geçti"; altında: True ise geçti.</desc>
+  <!-- source: ders2.md S123 (right panel: two lines of authoring/targets/target2.py, if grade_point >= 1.75: / status = "geçti"); grade_point = 2.50; print(grade_point >= 1.75) -> True (Python 3.14.8, 2026-10-13) Updated on 2026-10-23 by authoring/builder-paralel/ders2-index.py: 2B's section numbers moved up by one (new 7. Index, len() ve slicing in 2A) -->
   <defs>
     <marker id="ders2-bool-uses-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
     <style>
@@ -102,7 +102,7 @@
   <rect class="outp" x="120" y="216" width="300" height="56" rx="4"/>
   <text class="cd24" x="136" y="252">True</text>
   <path class="sep" d="M757,8 V292"/>
-  <text class="lb sub" x="772" y="28">9. bölümde</text>
+  <text class="lb sub" x="772" y="28">10. bölümde</text>
   <rect class="boxm bu-later" x="772" y="44" width="376" height="110" rx="4"/>
   <text class="cd24 sub" x="786" y="84">if grade_point &gt;= 1.75:</text>
   <text class="cd24 sub pre" xml:space="preserve" x="786" y="132">    status = "geçti"</text>
