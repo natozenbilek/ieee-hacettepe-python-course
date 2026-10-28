@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="dg su" viewBox="0 0 1152 340" width="1152" height="340" role="img" aria-labelledby="ders2-string-unchanged-t ders2-string-unchanged-d" data-focus="one">
   <title id="ders2-string-unchanged-t">str değişmez: upper() yeni bir str üretir</title>
-  <desc id="ders2-string-unchanged-d">data-focus one durumu (S83), 1. panel: kod code = "bbm101", code.upper(), print(code). Lacivert code isim etiketinin oku "bbm101" değerine gidiyor (str, yeşil); altında str, değişmez yazıyor. Altında soluk, gri çerçeveli yeni bir "BBM101" kutusu var; ona hiçbir ok gitmiyor, yanında kimse saklamadı yazısı. Çıktı: bbm101. data-focus both durumu (S84): sağda 2. panel de görünür. Kod code = "bbm101", code = code.upper(), print(code). Değerler aynı yerlerde; code etiketinin oku artık "BBM101" değerine gidiyor (str, yeşil), bu kutu açık mavi, çivit mavisi çerçeveli bir bandın içinde. "bbm101" değerine giden eski ok gri ve kesikli. Çıktı: BBM101.</desc>
-  <!-- source: ders2-A.md S83: code = "bbm101"; code.upper(); print(code) -> bbm101. S84: code = code.upper(); print(code) -> BBM101 (Python 3.14.8, 2026-10-11) -->
+  <desc id="ders2-string-unchanged-d">data-focus one durumu (S83), 1. panel: kod code = "mat101", code.upper(), print(code). Lacivert code isim etiketinin oku "mat101" değerine gidiyor (str, yeşil); altında str, değişmez yazıyor. Altında soluk, gri çerçeveli yeni bir "MAT101" kutusu var; ona hiçbir ok gitmiyor, yanında kimse saklamadı yazısı. Çıktı: mat101. data-focus both durumu (S84): sağda 2. panel de görünür. Kod code = "mat101", code = code.upper(), print(code). Değerler aynı yerlerde; code etiketinin oku artık "MAT101" değerine gidiyor (str, yeşil), bu kutu açık mavi, çivit mavisi çerçeveli bir bandın içinde. "mat101" değerine giden eski ok gri ve kesikli. Çıktı: MAT101.</desc>
+  <!-- source: ders2-A.md S83: code = "mat101"; code.upper(); print(code) -> mat101. S84: code = code.upper(); print(code) -> MAT101 (Python 3.14.8, 2026-10-11) ; course code changed from BBM101 to MAT101 on 2026-10-21 (Nezih: "BBM101 yerine MAT101 olsun ders kodu örneği"), outputs re-run on 3.14.8 -->
   <defs>
     <marker id="ders2-string-unchanged-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
     <marker id="ders2-string-unchanged-ahm" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-m" d="M0,0 L12,6 L0,12 z"/></marker>
@@ -93,43 +93,43 @@
   <g class="su-p1">
     <circle class="co" cx="22" cy="24" r="18"/>
     <text class="co-t" x="22" y="32">1</text>
-    <text class="cd24" x="56" y="32">code = "bbm101"</text>
+    <text class="cd24" x="56" y="32">code = "mat101"</text>
     <text class="cd24" x="56" y="64">code.upper()</text>
     <text class="cd24" x="56" y="96">print(code)</text>
     <rect class="name" x="56" y="116" width="99" height="56" rx="6"/>
     <text class="nm mid" x="105.5" y="154">code</text>
     <rect class="box t-str" x="250" y="116" width="166" height="56" rx="6"/>
-    <text class="cd mid t-str" x="333" y="154">"bbm101"</text>
+    <text class="cd mid t-str" x="333" y="154">"mat101"</text>
     <text class="ty mid t-str" x="333" y="202">str, değişmez</text>
     <path class="ar" d="M156,144 H247" marker-end="url(#ders2-string-unchanged-ah)"/>
     <g opacity="0.5">
     <rect class="boxm" x="250" y="222" width="166" height="56" rx="6"/>
-    <text class="cd mid t-str" x="333" y="260">"BBM101"</text>
+    <text class="cd mid t-str" x="333" y="260">"MAT101"</text>
     </g>
     <text class="lb sub end" x="236" y="258">kimse saklamadı</text>
     <rect class="outp" x="56" y="294" width="488" height="44" rx="4"/>
     <text class="lb sub" x="72" y="324">Çıktı</text>
-    <text class="cd24" x="160" y="324">bbm101</text>
+    <text class="cd24" x="160" y="324">mat101</text>
   </g>
   <g class="su-p2">
     <path class="sep" d="M576,4 V336"/>
     <circle class="co" cx="614" cy="24" r="18"/>
     <text class="co-t" x="614" y="32">2</text>
-    <text class="cd24" x="648" y="32">code = "bbm101"</text>
+    <text class="cd24" x="648" y="32">code = "mat101"</text>
     <text class="cd24" x="648" y="64">code = code.upper()</text>
     <text class="cd24" x="648" y="96">print(code)</text>
     <rect class="boxhl" x="836" y="216" width="178" height="68" rx="10"/>
     <rect class="name" x="648" y="116" width="99" height="56" rx="6"/>
     <text class="nm mid" x="697.5" y="154">code</text>
     <rect class="box t-str" x="842" y="116" width="166" height="56" rx="6"/>
-    <text class="cd mid t-str" x="925" y="154">"bbm101"</text>
+    <text class="cd mid t-str" x="925" y="154">"mat101"</text>
     <text class="ty mid t-str" x="925" y="202">str, değişmez</text>
     <rect class="box t-str" x="842" y="222" width="166" height="56" rx="6"/>
-    <text class="cd mid t-str" x="925" y="260">"BBM101"</text>
+    <text class="cd mid t-str" x="925" y="260">"MAT101"</text>
     <path class="ar-old" d="M748,138 H839" marker-end="url(#ders2-string-unchanged-ahm)"/>
     <path class="ar" d="M748,162 L839.8,247.9" marker-end="url(#ders2-string-unchanged-ah)"/>
     <rect class="outp" x="648" y="294" width="488" height="44" rx="4"/>
     <text class="lb sub" x="664" y="324">Çıktı</text>
-    <text class="cd24" x="752" y="324">BBM101</text>
+    <text class="cd24" x="752" y="324">MAT101</text>
   </g>
 </svg>

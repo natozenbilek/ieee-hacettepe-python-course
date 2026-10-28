@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 300" width="1152" height="300" role="img" aria-labelledby="ders2-leap-years-t ders2-leap-years-d">
+<svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 352" width="1152" height="352" role="img" aria-labelledby="ders2-leap-years-t ders2-leap-years-d">
   <title id="ders2-leap-years-t">Artık yıl kuralı dört yılda</title>
-  <desc id="ders2-leap-years-d">Tablo: year, div4, div100, div400 ve artık yıl mı? sütunları. 2000: True, True, True, sonuç True. 1900: True, True, False, sonuç False; bu satır açık mavi ve çivit mavisi çerçeveyle vurgulu, sağında kırmızı ile Excel: True yazıyor, çünkü Excel 1900'ü artık yıl sayar. 2024: True, False, False, sonuç True. 2026: False, False, False, sonuç False. Yıllar int (turuncu), div sütunları bool (deniz yeşili); sonuç True petrol mavisi kutuda, False gri. Altta kural satırı: print((div4 and not div100) or div400).</desc>
-  <!-- source: ders2-B.md S34-S35; div4 = year % 4 == 0, div100 = year % 100 == 0, div400 = year % 400 == 0, print((div4 and not div100) or div400): 2000 -> True, 1900 -> False, 2024 -> True, 2026 -> False (Python 3.14.8, 2026-10-11) -->
+  <desc id="ders2-leap-years-d">Tablo: year, div4, div100, div400 ve artık yıl mı? sütunları. 2000: True, True, True, sonuç True. 1900: True, True, False, sonuç False; bu satır açık mavi ve çivit mavisi çerçeveyle vurgulu, sağında kırmızı ile Excel: True yazıyor, çünkü Excel 1900'ü artık yıl sayar. 2024: True, False, False, sonuç True. 2026: False, False, False, sonuç False. Yıllar int (turuncu), div sütunları bool (deniz yeşili); sonuç True petrol mavisi kutuda, False gri. Altta kural satırı: print((div4 and not div100) or div400). En altta beşinci satır 2100; hücreleri boş, bir tıklamayla dolar: True, True, False ve artık yıl mı sütununda False.</desc>
+  <!-- source: ders2-B.md S34-S35; div4 = year % 4 == 0, div100 = year % 100 == 0, div400 = year % 400 == 0, print((div4 and not div100) or div400): 2000 -> True, 1900 -> False, 2024 -> True, 2026 -> False (Python 3.14.8, 2026-10-11) ; year 2100 gives True True False and False on 3.14.8, 2026-10-21 -->
   <defs>
     <marker id="ders2-leap-years-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
     <style>
@@ -87,7 +87,7 @@
 .dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-variant-ligatures:none}
     </style>
   </defs>
-  <rect class="bg" width="1152" height="300"/>
+  <rect class="bg" width="1152" height="352"/>
   <rect class="cellh" x="2" y="2" width="170" height="56"/>
   <text class="cd24 mid b7" x="87" y="38">year</text>
   <rect class="cellh" x="172" y="2" width="180" height="56"/>
@@ -130,6 +130,18 @@
   <text class="cd mid t-bool" x="442" y="250">False</text>
   <text class="cd mid t-bool" x="622" y="250">False</text>
   <text class="cd mid sub" x="822" y="250">False</text>
+  <rect class="cell" x="2" y="266" width="170" height="52"/>
+  <rect class="cell" x="172" y="266" width="180" height="52"/>
+  <rect class="cell" x="352" y="266" width="180" height="52"/>
+  <rect class="cell" x="532" y="266" width="180" height="52"/>
+  <rect class="cell" x="712" y="266" width="220" height="52"/>
+  <text class="cd mid t-int" x="87" y="302">2100</text>
+  <g class="fragment" data-fragment-index="0">
+    <text class="cd mid t-bool" x="262" y="302">True</text>
+    <text class="cd mid t-bool" x="442" y="302">True</text>
+    <text class="cd mid t-bool" x="622" y="302">False</text>
+    <text class="cd mid sub" x="822" y="302">False</text>
+  </g>
   <rect class="cellhl" x="2" y="110" width="930" height="52"/>
   <path class="ld" d="M172,111.5 V160.5"/>
   <path class="ld" d="M352,111.5 V160.5"/>
@@ -141,5 +153,5 @@
   <text class="cd mid t-bool" x="622" y="146">False</text>
   <text class="cd mid sub" x="822" y="146">False</text>
   <text class="tx sub" x="954" y="144">Excel: <tspan class="cd24 errt">True</tspan></text>
-  <text class="cd24" x="2" y="294">print((div4 and not div100) or div400)</text>
+  <text class="cd24" x="2" y="346">print((div4 and not div100) or div400)</text>
 </svg>

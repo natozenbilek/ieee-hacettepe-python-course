@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 310" width="1152" height="310" role="img" aria-labelledby="ders3-while-true-flow-t ders3-while-true-flow-d">
   <title id="ders3-while-true-flow-t">while True akış şeması</title>
-  <desc id="ders3-while-true-flow-d">while True akış şeması. Başla, ardından counter = 0 kutusu (0 int, turuncu), sonra True yazan karar baklavası. Bu baklavanın tek çıkışı var: aşağı inen petrol mavisi True oku; yanında False çıkışı yok yazıyor. Gövde: counter += 1, print(counter), sonra counter == 2 karar baklavası. Bu baklavanın kırmızı False oku yukarı çıkıp True baklavasının tepesine döner. Petrol mavisi True oku break kutusuna iner; break kutusu açık mavi, çivit mavisi çerçeveli. Loop kısmı kesik çizgili bir çerçeve içinde; break kutusundan çıkan ok sağa, çerçevenin dışına, print("döngüden sonra") kutusuna ve oradan Bitir'e gider. Solda Genel biçim: while True:, girintili &lt;satırlar&gt;, girintili if &lt;şart&gt;: ve iki kez girintili break. Tek çıkış, counter == 2 True olunca break kutusundan geçer.</desc>
+  <desc id="ders3-while-true-flow-d">while True akış şeması. Başla, ardından counter = 0 kutusu (0 int, turuncu), sonra True yazan karar baklavası. Bu baklavanın tek çıkışı var: aşağı inen petrol mavisi True oku; yanında False çıkışı yok yazıyor. Gövde: counter += 1, print(counter), sonra counter == 2 karar baklavası. Bu baklavanın kırmızı False oku yukarı çıkıp True baklavasının tepesine döner. Petrol mavisi True oku break kutusuna iner; break kutusu açık mavi, çivit mavisi çerçeveli. Loop kısmı kesik çizgili bir çerçeve içinde; break kutusundan çıkan ok sağa, çerçevenin dışına, print("döngüden sonra") kutusuna ve oradan Bitir'e gider. Solda Genel biçim: while True:, girintili &lt;block&gt;, girintili if &lt;şart&gt;: ve iki kez girintili break. Tek çıkış, counter == 2 True olunca break kutusundan geçer.</desc>
+  <!-- ders3 fix pass: edited in place by authoring/builder-paralel/ders3-duzelt.py from ders3-while-true-flow.svg (frozen copy in authoring/backups/ders3-duzelt-2026-10-24/src/), Python 3.14.8, 2026-10-24. The general form says &lt;block&gt; (DECISIONS.md, Ders 2: one name for one idea in general forms). -->
   <!-- source: ders3-B.md S8/S10 run while_true: counter = 0; while True: counter += 1; print(counter); if counter == 2: break; print("döngüden sonra") -> 1 / 2 / döngüden sonra (Python 3.14.8, 2026-10-11); 2026-10-14: the general form replaces the output panel at the left, so the slide holds the figure and its focal line -->
   <defs>
     <marker id="ders3-while-true-flow-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
@@ -125,7 +126,7 @@
   <text class="lb" x="2" y="132">Genel biçim</text>
   <rect class="soft" x="2" y="144" width="300" height="150" rx="4"/>
   <text class="cd24" x="18" y="175.76">while True:</text>
-  <text class="cd24 pre" x="18" y="209.76" xml:space="preserve">    &lt;satırlar&gt;</text>
+  <text class="cd24 pre" x="18" y="209.76" xml:space="preserve">    &lt;block&gt;</text>
   <text class="cd24 pre" x="18" y="243.76" xml:space="preserve">    if &lt;şart&gt;:</text>
   <text class="cd24 pre" x="18" y="277.76" xml:space="preserve">        break</text>
 </svg>

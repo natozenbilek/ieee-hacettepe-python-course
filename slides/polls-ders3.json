@@ -1,6 +1,23 @@
 {
+  "d3-karsilastirma": {"options": [{"code": "True\nTrue"}, {"code": "True\nFalse"}, {"code": "False\nFalse"}, {"text": "Hata verir"}], "answer": 2, "why": "66 bir int, \"66\" bir str; farklı type'lar eşit sayılmaz, hata da vermez."},
   "d3-ders2-tekrar": {"options": [{"code": "geçti\nTrue"}, {"code": "kaldı\nTrue"}, {"code": "kaldı\nFalse"}, {"code": "geçti\nFalse"}], "answer": 2, "why": "50 > 50 False olduğu için else çalışır; 50 >= 50 ise True'dur."},
+  "d3-and-or-not": {"options": [{"code": "True\nFalse\nFalse"}, {"code": "True\nTrue\nFalse"}, {"code": "False\nFalse\nTrue"}, {"code": "True\nFalse\nTrue"}], "answer": 1, "why": "and: ikisi de True; or: en az biri True; not: tersi."},
+  "d3-elif-sira": {"options": [{"code": "geçti"}, {"code": "A3 ve üstü"}, {"code": "geçti\nA3 ve üstü"}, {"text": "Hiçbir şey yazmaz"}], "answer": 1, "why": "İlk True olan şartın block'u çalışır: 90 >= 50 True, gerisine bakılmaz."},
+  "d3-if-blok": {"options": [{"text": "Hiçbir şey yazmaz"}, {"code": "bitti"}, {"code": "tebrikler\nbitti"}, {"code": "geçti\ntebrikler\nbitti"}], "answer": 2, "why": "İki print de if'in block'unda; girintisiz print her zaman çalışır."},
+  "d3-girinti": {"options": [{"code": "tur\nson"}, {"code": "tur\ntur\nson"}, {"code": "tur\nson\ntur\nson"}, {"code": "tur\ntur\nson\nson"}], "answer": 2, "why": "print(\"tur\") block'un içinde, her turda çalışır; print(\"son\") block'un dışında, bir kez çalışır."},
   "d3-while": {"options": [{"code": "1\n2\n3"}, {"code": "2\n3"}, {"code": "2\n3\n4"}, {"code": "1\n2\n3\n4"}], "answer": 3, "why": "Şart yalnızca turun başında sorulur; i'yi 4 yapan tur da print'e kadar gider."},
+  "d3-while-bosluk": {"options": [{"code": "i = 1"}, {"code": "i += 1"}, {"code": "total += 1"}, {"code": "break"}], "answer": 2, "why": "i artmazsa şart hep True kalır; i += 1 ile üç tur: 1 + 2 + 3 = 6."},
+  "d3-total-sifir": {"options": [{"code": "6"}, {"code": "3"}, {"code": "0"}, {"text": "Hata verir"}], "answer": 2, "why": "total = 0 loop'un içinde: her turda sıfırlanır, yalnızca son i kalır."},
+  "d3-iz-tablosu": {"options": [{"code": "9"}, {"code": "12"}, {"code": "8"}, {"code": "10"}], "answer": 2, "why": "Her turda total'e i * 2 eklenir: 6 + 3 * 2 = 12."},
+  "d3-arasonra-tek": {"options": [{"code": "15"}, {"code": "9"}, {"code": "6"}, {"code": "1\n4\n9"}], "answer": 2, "why": "Yalnızca tek sayılar (1, 3, 5) toplanır; print loop'tan sonra bir kez çalışır."},
+  "d3-for-toplam": {"options": [{"code": "10"}, {"code": "6"}, {"code": "4"}, {"text": "Hata verir"}], "answer": 2, "why": "range(4) 0, 1, 2 ve 3'ü verir: 0 + 1 + 2 + 3 = 6."},
+  "d3-range-bosluk": {"options": [{"code": "1, 7, 2"}, {"code": "1, 8, 2"}, {"code": "0, 8, 2"}, {"code": "1, 8"}], "answer": 2, "why": "Bitiş dahil değil: 8'de durur. Adım 2 ile 1, 3, 5, 7."},
+  "d3-range-bos": {"options": [{"text": "Geriye sayar, sonra bitti"}, {"text": "Yalnızca bitti"}, {"text": "Hata verir"}, {"text": "Hiçbir şey"}], "answer": 2, "why": "Range boş: block hiç çalışmaz."},
+  "d3-fstring-for": {"options": [{"code": "Hacettepe: 1"}, {"code": "HACETTEPE: 0"}, {"code": "hacettepe: 1"}, {"code": "HACETTEPE: 1"}], "answer": 4, "why": "lower() ve upper() yeni bir str verir, word değişmez; tek h var."},
+  "d3-ic-ice": {"options": [{"code": "1 0\n1 1\n1 2\n2 0\n2 1\n2 2"}, {"code": "1 0\n2 0\n1 1\n2 1\n1 2\n2 2"}, {"code": "1 0\n1 1\n1 2"}, {"code": "1 1\n1 2\n1 3\n2 1\n2 2\n2 3"}], "answer": 1, "why": "İç loop her dış turda baştan çalışır: i = 1 için j 0, 1, 2; sonra i = 2 için yine."},
+  "d3-ic-ice-say": {"options": [{"code": "5"}, {"code": "6"}, {"code": "3"}, {"code": "2"}], "answer": 2, "why": "Dış loop 3 tur döner, her turda iç loop 2 tur: 3 × 2 = 6."},
   "d3-break-son": {"options": [{"code": "1\n2\n3\nson 3"}, {"code": "1\n2\nson 9"}, {"code": "1\n2\nson 3"}, {"code": "1\n2\nson 2"}], "answer": 3, "why": "i 3 olunca break print'ten önce çalışır; akış loop'tan sonra devam eder, i 3'te kalır."},
-  "d3-slice-hacettepe": {"options": [{"code": "Hacet\ntepe\nepettecaH"}, {"code": "Hace\nttepe\nepettecaH"}, {"code": "Hace\nttepe\nHacettepe"}, {"code": "Hac\nettepe\nepettecaH"}], "answer": 2, "why": "Bitiş 4 dahil değildir, [4:] sona kadar gider, -1 adımı ters çevirir."}
+  "d3-continue-atla": {"options": [{"code": "0\n1\n2\n3\n4"}, {"code": "0\n1\n3\n4"}, {"code": "0\n1"}, {"code": "2"}], "answer": 2, "why": "continue yalnızca i 2 olan adımı bitirir; loop 3 ve 4 ile sürer."},
+  "d3-try-abc": {"options": [{"code": "B"}, {"code": "A"}, {"code": "A\nB"}, {"text": "ValueError ile durur"}], "answer": 1, "why": "int(\"3.5\") hata verir; print(\"A\") atlanır, except çalışır."},
+  "d3-assert-dur": {"options": [{"code": "A\nB"}, {"text": "A, sonra AssertionError"}, {"text": "A, AssertionError, B"}, {"text": "Yalnızca AssertionError"}], "answer": 2, "why": "120 <= 100 False: AssertionError çıkar, program durur."}
 }

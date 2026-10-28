@@ -1,11 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 460" width="1152" height="460" role="img" aria-labelledby="ders3-elif-runs-t ders3-elif-runs-d">
-  <title id="ders3-elif-runs-t">elif: 92, 77 ve 40 ile üç çalışma</title>
-  <desc id="ders3-elif-runs-d">Aynı elif zinciri üç satırda, her satırda başka bir score. Her satırda score &gt;= 85 baklavası, False ile score &gt;= 50 baklavası, False ile else kutusu; her birinin altında True ile çalışan kutu: print("A3 ve üstü"), print("geçti"), print("kaldı"). score = 92 (turuncu, int): ilk True oku petrol mavisi, print("A3 ve üstü") açık mavi ve çivit mavisi çerçeveli; geri kalan baklava ve kutular gri; Çıktı: A3 ve üstü; not: gerisi atlandı. score = 77: ilk False oku koyu, ikinci True oku petrol mavisi, print("geçti") vurgulu; else satırı gri; Çıktı: geçti; not: else atlandı. score = 40: iki False oku koyu, else kutusundan print("kaldı") vurgulu; Çıktı: kaldı. Her satırda tek bir dal çalışır.</desc>
-  <!-- source: elif_92 -&gt; A3 ve üstü; elif_77 -&gt; geçti; elif_40 -&gt; kaldı (S55 code) (Python 3.14.8, 2026-10-10) -->
+  <title id="ders3-elif-runs-t">elif: 92, 77 ve 40 ile üç çalışma, birer tıklamayla</title>
+  <desc id="ders3-elif-runs-d">Solda elif zinciri bir kez: score &gt;= 85 baklavası, True oku sağa print("A3 ve üstü") kutusuna, False oku aşağı score &gt;= 50 baklavasına; onun True oku sağa print("geçti") kutusuna, False oku aşağı else kutusuna; else'ten sağa print("kaldı"). True okları petrol mavisi, False okları kırmızı. Sağda üç sütun başlığı: score = 92, score = 77, score = 40 (sayılar turuncu, int); en altta Çıktı satırı. Her tıklamada bir sütun dolar, her satır zincirin o satırının hizasında. score = 92: 92 &gt;= 85 ve bir okla True (bool, deniz yeşili), açık mavi bantta; ikinci satırda sınanmadı, else satırında atlandı; Çıktı: A3 ve üstü. score = 77: 77 &gt;= 85 ve False; 77 &gt;= 50 ve True, açık mavi bantta; else satırında atlandı; Çıktı: geçti. score = 40: 40 &gt;= 85 ve False; 40 &gt;= 50 ve False; else satırında açık mavi bantta çalışır; Çıktı: kaldı. Her sütunda tek bir satırın block'u çalışır.</desc>
+  <!-- source: elif_92 -&gt; A3 ve üstü; elif_77 -&gt; geçti; elif_40 -&gt; kaldı (S197 code); 92 &gt;= 85 True; 77 &gt;= 85 False, 77 &gt;= 50 True; 40 &gt;= 85 False, 40 &gt;= 50 False (Python 3.14.8, 2026-10-22). True right, False down (2026-10-22, last small fixes). Build steps: start chain and heads; 0 score 92; 1 score 77; 2 score 40 -->
   <defs>
     <marker id="ders3-elif-runs-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
     <marker id="ders3-elif-runs-ahm" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-m" d="M0,0 L12,6 L0,12 z"/></marker>
     <marker id="ders3-elif-runs-ahok" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-ok" d="M0,0 L12,6 L0,12 z"/></marker>
+    <marker id="ders3-elif-runs-aherr" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-err" d="M0,0 L12,6 L0,12 z"/></marker>
     <style>
 /* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
 .dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
@@ -88,80 +89,71 @@
     </style>
   </defs>
   <rect class="bg" width="1152" height="460"/>
-  <path class="sep" d="M2,154 H1150"/>
-  <path class="sep" d="M2,306 H1150"/>
-  <text class="cd" x="2" y="36">score = <tspan class="t-int">92</tspan></text>
-  <rect class="outp" x="2" y="50" width="190" height="51.52" rx="4"/>
-  <text class="cd24" x="18" y="83.76">A3 ve üstü</text>
-  <text class="tx sub" x="2" y="134">gerisi atlandı</text>
-  <polygon class="tint" points="255,40 380,4 505,40 380,76"/>
-  <text class="cd24 mid" x="380" y="48">score &gt;= 85</text>
-  <polygon class="boxm" points="565,40 690,4 815,40 690,76"/>
-  <text class="cd24 mid sub" x="690" y="48">score &gt;= 50</text>
-  <rect class="boxm" x="950" y="18" width="100" height="44" rx="6"/>
-  <text class="cd24 mid sub" x="1000" y="48">else</text>
-  <path class="ar-m" d="M505,40 H562" marker-end="url(#ders3-elif-runs-ahm)"/>
-  <text class="lb sub mid" x="534" y="26">False</text>
-  <path class="ar-m" d="M815,40 H947" marker-end="url(#ders3-elif-runs-ahm)"/>
-  <text class="lb sub mid" x="881" y="26">False</text>
-  <path class="ar-ok" d="M380,76 V103" marker-end="url(#ders3-elif-runs-ahok)"/>
-  <text class="lb okt" x="392" y="96">True</text>
-  <rect class="boxhl" x="230" y="106" width="300" height="44" rx="6"/>
-  <text class="cd24 mid" x="380" y="136">print("A3 ve üstü")</text>
-  <path class="ar-m" d="M690,76 V103" marker-end="url(#ders3-elif-runs-ahm)"/>
-  <text class="lb sub" x="702" y="96">True</text>
-  <rect class="boxm" x="575" y="106" width="230" height="44" rx="6"/>
-  <text class="cd24 mid sub" x="690" y="136">print("geçti")</text>
-  <path class="ar-m" d="M1000,62 V103" marker-end="url(#ders3-elif-runs-ahm)"/>
-  <rect class="boxm" x="885" y="106" width="230" height="44" rx="6"/>
-  <text class="cd24 mid sub" x="1000" y="136">print("kaldı")</text>
-  <text class="cd" x="2" y="188">score = <tspan class="t-int">77</tspan></text>
-  <rect class="outp" x="2" y="202" width="190" height="51.52" rx="4"/>
-  <text class="cd24" x="18" y="235.76">geçti</text>
-  <text class="tx sub" x="2" y="286">else atlandı</text>
-  <polygon class="tint" points="255,192 380,156 505,192 380,228"/>
-  <text class="cd24 mid" x="380" y="200">score &gt;= 85</text>
-  <polygon class="tint" points="565,192 690,156 815,192 690,228"/>
-  <text class="cd24 mid" x="690" y="200">score &gt;= 50</text>
-  <rect class="boxm" x="950" y="170" width="100" height="44" rx="6"/>
-  <text class="cd24 mid sub" x="1000" y="200">else</text>
-  <path class="ar" d="M505,192 H562" marker-end="url(#ders3-elif-runs-ah)"/>
-  <text class="lb errt mid" x="534" y="178">False</text>
-  <path class="ar-m" d="M815,192 H947" marker-end="url(#ders3-elif-runs-ahm)"/>
-  <text class="lb sub mid" x="881" y="178">False</text>
-  <path class="ar-m" d="M380,228 V255" marker-end="url(#ders3-elif-runs-ahm)"/>
-  <text class="lb sub" x="392" y="248">True</text>
-  <rect class="boxm" x="230" y="258" width="300" height="44" rx="6"/>
-  <text class="cd24 mid sub" x="380" y="288">print("A3 ve üstü")</text>
-  <path class="ar-ok" d="M690,228 V255" marker-end="url(#ders3-elif-runs-ahok)"/>
-  <text class="lb okt" x="702" y="248">True</text>
-  <rect class="boxhl" x="575" y="258" width="230" height="44" rx="6"/>
-  <text class="cd24 mid" x="690" y="288">print("geçti")</text>
-  <path class="ar-m" d="M1000,214 V255" marker-end="url(#ders3-elif-runs-ahm)"/>
-  <rect class="boxm" x="885" y="258" width="230" height="44" rx="6"/>
-  <text class="cd24 mid sub" x="1000" y="288">print("kaldı")</text>
-  <text class="cd" x="2" y="340">score = <tspan class="t-int">40</tspan></text>
-  <rect class="outp" x="2" y="354" width="190" height="51.52" rx="4"/>
-  <text class="cd24" x="18" y="387.76">kaldı</text>
-  <polygon class="tint" points="255,344 380,308 505,344 380,380"/>
-  <text class="cd24 mid" x="380" y="352">score &gt;= 85</text>
-  <polygon class="tint" points="565,344 690,308 815,344 690,380"/>
-  <text class="cd24 mid" x="690" y="352">score &gt;= 50</text>
-  <rect class="box" x="950" y="322" width="100" height="44" rx="6"/>
-  <text class="cd24 mid" x="1000" y="352">else</text>
-  <path class="ar" d="M505,344 H562" marker-end="url(#ders3-elif-runs-ah)"/>
-  <text class="lb errt mid" x="534" y="330">False</text>
-  <path class="ar" d="M815,344 H947" marker-end="url(#ders3-elif-runs-ah)"/>
-  <text class="lb errt mid" x="881" y="330">False</text>
-  <path class="ar-m" d="M380,380 V407" marker-end="url(#ders3-elif-runs-ahm)"/>
-  <text class="lb sub" x="392" y="400">True</text>
-  <rect class="boxm" x="230" y="410" width="300" height="44" rx="6"/>
-  <text class="cd24 mid sub" x="380" y="440">print("A3 ve üstü")</text>
-  <path class="ar-m" d="M690,380 V407" marker-end="url(#ders3-elif-runs-ahm)"/>
-  <text class="lb sub" x="702" y="400">True</text>
-  <rect class="boxm" x="575" y="410" width="230" height="44" rx="6"/>
-  <text class="cd24 mid sub" x="690" y="440">print("geçti")</text>
-  <path class="ar" d="M1000,366 V407" marker-end="url(#ders3-elif-runs-ah)"/>
-  <rect class="boxhl" x="885" y="410" width="230" height="44" rx="6"/>
-  <text class="cd24 mid" x="1000" y="440">print("kaldı")</text>
+  <polygon class="tint" points="2,110 117,70 232,110 117,150"/>
+  <path class="ar-ok" d="M232,110 H287" marker-end="url(#ders3-elif-runs-ahok)"/>
+  <rect class="box" x="290" y="87" width="300" height="46" rx="6"/>
+  <path class="ar-err" d="M117,150 V197" marker-end="url(#ders3-elif-runs-aherr)"/>
+  <polygon class="tint" points="2,240 117,200 232,240 117,280"/>
+  <path class="ar-ok" d="M232,240 H287" marker-end="url(#ders3-elif-runs-ahok)"/>
+  <rect class="box" x="290" y="217" width="300" height="46" rx="6"/>
+  <path class="ar-err" d="M117,280 V327" marker-end="url(#ders3-elif-runs-aherr)"/>
+  <rect class="box" x="57" y="330" width="120" height="48" rx="6"/>
+  <path class="ar" d="M177,354 H287" marker-end="url(#ders3-elif-runs-ah)"/>
+  <rect class="box" x="290" y="331" width="300" height="46" rx="6"/>
+  <text class="cd24 mid" x="117" y="118">score &gt;= 85</text>
+  <text class="lb okt mid" x="260" y="100">True</text>
+  <text class="cd24 mid" x="440" y="118">print("A3 ve üstü")</text>
+  <text class="lb errt" x="129" y="182">False</text>
+  <text class="cd24 mid" x="117" y="248">score &gt;= 50</text>
+  <text class="lb okt mid" x="260" y="230">True</text>
+  <text class="cd24 mid" x="440" y="248">print("geçti")</text>
+  <text class="lb errt" x="129" y="312">False</text>
+  <text class="cd24 mid" x="117" y="362">else</text>
+  <text class="cd24 mid" x="440" y="362">print("kaldı")</text>
+  <path class="sep" d="M610,8 V452"/>
+  <path class="sep" d="M790,8 V452"/>
+  <path class="sep" d="M970,8 V452"/>
+  <text class="cd mid" x="700" y="40">score = <tspan class="t-int">92</tspan></text>
+  <text class="cd mid" x="880" y="40">score = <tspan class="t-int">77</tspan></text>
+  <text class="cd mid" x="1060" y="40">score = <tspan class="t-int">40</tspan></text>
+  <text class="lb sub end" x="590" y="437">Çıktı</text>
+  <g class="fragment" data-fragment-index="0">
+    <rect class="hl" x="614" y="72" width="172" height="90" rx="6"/>
+    <text class="cd24 mid" x="700" y="96"><tspan class="t-int">92</tspan> &gt;= <tspan class="t-int">85</tspan></text>
+    <path class="ar" d="M700,104 V118" marker-end="url(#ders3-elif-runs-ah)"/>
+    <rect class="box t-bool" x="658.0" y="121" width="84" height="34" rx="6"/>
+    <text class="cd24 mid t-bool" x="700" y="146">True</text>
+    <text class="tx sub mid" x="700" y="248">sınanmadı</text>
+    <text class="tx sub mid" x="700" y="362">atlandı</text>
+    <rect class="outp" x="616" y="404" width="168" height="50" rx="4"/>
+    <text class="cd24 mid" x="700" y="437">A3 ve üstü</text>
+  </g>
+  <g class="fragment" data-fragment-index="1">
+    <rect class="hl" x="794" y="202" width="172" height="90" rx="6"/>
+    <text class="cd24 mid" x="880" y="96"><tspan class="t-int">77</tspan> &gt;= <tspan class="t-int">85</tspan></text>
+    <path class="ar" d="M880,104 V118" marker-end="url(#ders3-elif-runs-ah)"/>
+    <rect class="box t-bool" x="832.0" y="121" width="96" height="34" rx="6"/>
+    <text class="cd24 mid t-bool" x="880" y="146">False</text>
+    <text class="cd24 mid" x="880" y="226"><tspan class="t-int">77</tspan> &gt;= <tspan class="t-int">50</tspan></text>
+    <path class="ar" d="M880,234 V248" marker-end="url(#ders3-elif-runs-ah)"/>
+    <rect class="box t-bool" x="838.0" y="251" width="84" height="34" rx="6"/>
+    <text class="cd24 mid t-bool" x="880" y="276">True</text>
+    <text class="tx sub mid" x="880" y="362">atlandı</text>
+    <rect class="outp" x="796" y="404" width="168" height="50" rx="4"/>
+    <text class="cd24 mid" x="880" y="437">geçti</text>
+  </g>
+  <g class="fragment" data-fragment-index="2">
+    <rect class="hl" x="974" y="326" width="172" height="56" rx="6"/>
+    <text class="cd24 mid" x="1060" y="96"><tspan class="t-int">40</tspan> &gt;= <tspan class="t-int">85</tspan></text>
+    <path class="ar" d="M1060,104 V118" marker-end="url(#ders3-elif-runs-ah)"/>
+    <rect class="box t-bool" x="1012.0" y="121" width="96" height="34" rx="6"/>
+    <text class="cd24 mid t-bool" x="1060" y="146">False</text>
+    <text class="cd24 mid" x="1060" y="226"><tspan class="t-int">40</tspan> &gt;= <tspan class="t-int">50</tspan></text>
+    <path class="ar" d="M1060,234 V248" marker-end="url(#ders3-elif-runs-ah)"/>
+    <rect class="box t-bool" x="1012.0" y="251" width="96" height="34" rx="6"/>
+    <text class="cd24 mid t-bool" x="1060" y="276">False</text>
+    <text class="tx mid" x="1060" y="362">çalışır</text>
+    <rect class="outp" x="976" y="404" width="168" height="50" rx="4"/>
+    <text class="cd24 mid" x="1060" y="437">kaldı</text>
+  </g>
 </svg>

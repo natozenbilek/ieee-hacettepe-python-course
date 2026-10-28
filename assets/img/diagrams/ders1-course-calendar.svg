@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 512" width="1152" height="512" role="img" aria-labelledby="ders1-course-calendar-t ders1-course-calendar-d">
   <title id="ders1-course-calendar-t">Ders programı: beş Salı ve beş Ödev</title>
-  <desc id="ders1-course-calendar-d">Beş sütunlu ders programı, soldan sağa. İlk sütunun üstünde Salı, 18.00, D4. Ders 1, 20 Ekim (bugün, açık mavi ve çivit mavisi çerçeveyle vurgulu): bilgisayar, print(), error messages, int (turuncu), float (hardal sarısı), variable; Ödev 1, 25 Ekim Pazar 23.59. Ders 2, 27 Ekim: str (yeşil), input(), f-string, bool (deniz yeşili), if / elif; Ödev 2, 1 Kasım Pazar 23.59. Ders 3, 3 Kasım: while, for, range, slicing, break; Ödev 3, 8 Kasım Pazar 23.59. Ders 4, 10 Kasım: list (vişneçürüğü), tuple (mavi gri), import, def, try / except; Ödev 4, 15 Kasım Pazar 23.59. Ders 5, 17 Kasım: dict (kahverengi), set (zeytin yeşili), file, None (bej); Ödev 5, 22 Kasım Pazar 23.59. Alt satır: Her Ödev, dersten sonraki Pazar 23.59'a kadar teslim edilir.</desc>
-  <!-- source: DECISIONS.md Dates and assignment submission, Hero and meeting time confirmed (18.00, D4); authoring/data/forms.json; topics from ders1-A.md S38 -->
+  <desc id="ders1-course-calendar-d">Beş sütunlu ders programı, soldan sağa. İlk sütunun üstünde Salı, 18.00, D4. Ders 1, 20 Ekim (bugün, açık mavi ve çivit mavisi çerçeveyle vurgulu): bilgisayar, print(), error messages, int (turuncu), float (hardal sarısı), variable; Ödev 1, 25 Ekim Pazar 23.59. Ders 2, 27 Ekim: str (yeşil), input(), f-string, index, slicing, bool (deniz yeşili), if / elif; Ödev 2, 1 Kasım Pazar 23.59. Ders 3, 3 Kasım: while, for, break, continue, try / except, assert; Ödev 3, 8 Kasım Pazar 23.59. Ders 4, 10 Kasım: import, def, return, scope, None (bej), class; Ödev 4, 15 Kasım Pazar 23.59. Ders 5, 17 Kasım: list (vişneçürüğü), tuple (mavi gri), aliasing, dict (kahverengi), set (zeytin yeşili), file; Ödev 5, 22 Kasım Pazar 23.59. Alt satır: Her Ödev, dersten sonraki Pazar 23.59'a kadar teslim edilir.</desc>
+  <!-- source: DECISIONS.md Dates and assignment submission, Hero and meeting time confirmed (18.00, D4); authoring/data/forms.json; topics from ders1-A.md S38 Chips of Ders 2-5 updated on 2026-10-28 by authoring/builder-paralel/takvim-2026-10-28.py: the plan of that day (Ders 3 loops, Ders 4 list, tuple, dict, set and file, Ders 5 import, functions, try / except and class) Chips of Ders 3-5 updated on 2026-10-28 evening by authoring/builder-paralel/takvim-2026-10-28-aksam.py: the plan of that evening (Ders 3 loops, try / except and assert; Ders 4 import, functions, scope, None and class; Ders 5 list, tuple, aliasing, dict, set and file) -->
   <defs>
 
     <style>
@@ -110,15 +110,17 @@
   <text class="ti mid" x="344" y="70">Ders 2</text>
   <text class="lb mid" x="344" y="102">27 Ekim</text>
   <rect class="box t-str" x="247" y="126" width="194" height="36" rx="4"/>
-  <text class="cd24 mid t-str" x="344" y="152">str</text>
+  <text class="cd24 t-str mid" x="344" y="152">str</text>
   <rect class="box" x="247" y="168" width="194" height="36" rx="4"/>
   <text class="cd24 mid" x="344" y="194">input()</text>
   <rect class="box" x="247" y="210" width="194" height="36" rx="4"/>
   <text class="tx mid" x="344" y="236">f-string</text>
-  <rect class="box t-bool" x="247" y="252" width="194" height="36" rx="4"/>
-  <text class="cd24 mid t-bool" x="344" y="278">bool</text>
-  <rect class="box" x="247" y="294" width="194" height="36" rx="4"/>
-  <text class="cd24 mid" x="344" y="320">if / elif</text>
+  <rect class="box" x="247" y="252" width="194" height="36" rx="4"/>
+  <text class="tx mid" x="344" y="278">index, slicing</text>
+  <rect class="box t-bool" x="247" y="294" width="194" height="36" rx="4"/>
+  <text class="cd24 t-bool mid" x="344" y="320">bool</text>
+  <rect class="box" x="247" y="336" width="194" height="36" rx="4"/>
+  <text class="cd24 mid" x="344" y="362">if / elif</text>
   <path class="sep" d="M237,384 H451"/>
   <text class="lb" x="241" y="410">Ödev 2</text>
   <text class="tx" x="241" y="438">1 Kasım Pazar</text>
@@ -131,11 +133,13 @@
   <rect class="box" x="479" y="168" width="194" height="36" rx="4"/>
   <text class="cd24 mid" x="576" y="194">for</text>
   <rect class="box" x="479" y="210" width="194" height="36" rx="4"/>
-  <text class="cd24 mid" x="576" y="236">range</text>
+  <text class="cd24 mid" x="576" y="236">break</text>
   <rect class="box" x="479" y="252" width="194" height="36" rx="4"/>
-  <text class="tx mid" x="576" y="278">slicing</text>
+  <text class="cd24 mid" x="576" y="278">continue</text>
   <rect class="box" x="479" y="294" width="194" height="36" rx="4"/>
-  <text class="cd24 mid" x="576" y="320">break</text>
+  <text class="cd24 mid" x="576" y="320">try / except</text>
+  <rect class="box" x="479" y="336" width="194" height="36" rx="4"/>
+  <text class="cd24 mid" x="576" y="362">assert</text>
   <path class="sep" d="M469,384 H683"/>
   <text class="lb" x="473" y="410">Ödev 3</text>
   <text class="tx" x="473" y="438">8 Kasım Pazar</text>
@@ -143,16 +147,18 @@
   <rect class="box" x="701" y="38" width="214" height="76" rx="6"/>
   <text class="ti mid" x="808" y="70">Ders 4</text>
   <text class="lb mid" x="808" y="102">10 Kasım</text>
-  <rect class="box t-list" x="711" y="126" width="194" height="36" rx="4"/>
-  <text class="cd24 mid t-list" x="808" y="152">list</text>
-  <rect class="box t-tuple" x="711" y="168" width="194" height="36" rx="4"/>
-  <text class="cd24 mid t-tuple" x="808" y="194">tuple</text>
+  <rect class="box" x="711" y="126" width="194" height="36" rx="4"/>
+  <text class="cd24 mid" x="808" y="152">import</text>
+  <rect class="box" x="711" y="168" width="194" height="36" rx="4"/>
+  <text class="cd24 mid" x="808" y="194">def</text>
   <rect class="box" x="711" y="210" width="194" height="36" rx="4"/>
-  <text class="cd24 mid" x="808" y="236">import</text>
+  <text class="cd24 mid" x="808" y="236">return</text>
   <rect class="box" x="711" y="252" width="194" height="36" rx="4"/>
-  <text class="cd24 mid" x="808" y="278">def</text>
-  <rect class="box" x="711" y="294" width="194" height="36" rx="4"/>
-  <text class="cd24 mid" x="808" y="320">try / except</text>
+  <text class="tx mid" x="808" y="278">scope</text>
+  <rect class="box t-none" x="711" y="294" width="194" height="36" rx="4"/>
+  <text class="cd24 t-none mid" x="808" y="320">None</text>
+  <rect class="box" x="711" y="336" width="194" height="36" rx="4"/>
+  <text class="cd24 mid" x="808" y="362">class</text>
   <path class="sep" d="M701,384 H915"/>
   <text class="lb" x="705" y="410">Ödev 4</text>
   <text class="tx" x="705" y="438">15 Kasım Pazar</text>
@@ -160,14 +166,18 @@
   <rect class="box" x="933" y="38" width="214" height="76" rx="6"/>
   <text class="ti mid" x="1040" y="70">Ders 5</text>
   <text class="lb mid" x="1040" y="102">17 Kasım</text>
-  <rect class="box t-dict" x="943" y="126" width="194" height="36" rx="4"/>
-  <text class="cd24 mid t-dict" x="1040" y="152">dict</text>
-  <rect class="box t-set" x="943" y="168" width="194" height="36" rx="4"/>
-  <text class="cd24 mid t-set" x="1040" y="194">set</text>
+  <rect class="box t-list" x="943" y="126" width="194" height="36" rx="4"/>
+  <text class="cd24 t-list mid" x="1040" y="152">list</text>
+  <rect class="box t-tuple" x="943" y="168" width="194" height="36" rx="4"/>
+  <text class="cd24 t-tuple mid" x="1040" y="194">tuple</text>
   <rect class="box" x="943" y="210" width="194" height="36" rx="4"/>
-  <text class="tx mid" x="1040" y="236">file</text>
-  <rect class="box t-none" x="943" y="252" width="194" height="36" rx="4"/>
-  <text class="cd24 mid t-none" x="1040" y="278">None</text>
+  <text class="tx mid" x="1040" y="236">aliasing</text>
+  <rect class="box t-dict" x="943" y="252" width="194" height="36" rx="4"/>
+  <text class="cd24 t-dict mid" x="1040" y="278">dict</text>
+  <rect class="box t-set" x="943" y="294" width="194" height="36" rx="4"/>
+  <text class="cd24 t-set mid" x="1040" y="320">set</text>
+  <rect class="box" x="943" y="336" width="194" height="36" rx="4"/>
+  <text class="tx mid" x="1040" y="362">file</text>
   <path class="sep" d="M933,384 H1147"/>
   <text class="lb" x="937" y="410">Ödev 5</text>
   <text class="tx" x="937" y="438">22 Kasım Pazar</text>

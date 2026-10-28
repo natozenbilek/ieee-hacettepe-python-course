@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 360" width="1152" height="360" role="img" aria-labelledby="ders4-library-shelf-t ders4-library-shelf-d" data-state="shelf">
   <title id="ders4-library-shelf-t">Standard library rafı</title>
-  <desc id="ders4-library-shelf-d">Durum shelf: Python'la gelen standard library rafı; rafın başlığı açık mavi, çivit mavisi çerçeveli bantla vurgulu. Rafta module kutuları: math, random, this, antigravity; turtle, statistics, datetime, string; sys, os, json ve üç nokta; altında ve yaklaşık 180 module daha. Sağda kesik çizgili ayrı bir raf, Ayrıca kurulan: numpy ve matplotlib gri kutularda, pip ile kurulur. Durum today: Aynı raf; bugün kullanacağımız ilk sıra, math, random, this ve antigravity, açık mavi ve çivit mavisi çerçeveli bantla vurgulu.</desc>
+  <desc id="ders4-library-shelf-d">Durum shelf: Python'la gelen standard library rafı; rafın başlığı açık mavi, çivit mavisi çerçeveli bantla vurgulu. Rafta module kutuları: math, random, this, antigravity; turtle, statistics, datetime, string; sys, os, json ve üç nokta; altında ve yaklaşık 180 module daha. Sağda kesik çizgili ayrı bir raf, Ayrıca kurulan: numpy ve matplotlib gri kutularda, pip ile kurulur. Durum today: Aynı raf; bugün kullanacağımız math, random ve this, açık mavi ve çivit mavisi çerçeveli bantla vurgulu.</desc>
   <!-- source: S6/S7; instructor run s6_stdlib: len(sys.stdlib_module_names) 297, without leading underscore 194; all 11 drawn names are in it (Python 3.14.8, 2026-10-10) -->
   <defs>
     <style>
@@ -95,7 +95,7 @@
   </defs>
   <rect class="bg" width="1152" height="360"/>
   <g class="ls-on-today">
-  <rect class="boxhl" x="10" y="58" width="768" height="68" rx="10"/>
+  <rect class="boxhl" x="10" y="58" width="576" height="68" rx="10"/>
   </g>
   <rect class="frame" x="2" y="2" width="788" height="350"/>
   <g class="ls-on-shelf">

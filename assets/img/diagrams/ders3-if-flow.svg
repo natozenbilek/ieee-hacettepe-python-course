@@ -1,11 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 400" width="1152" height="400" role="img" aria-labelledby="ders3-if-flow-t ders3-if-flow-d">
-  <title id="ders3-if-flow-t">if: grade_point = 2.5 için akış</title>
-  <desc id="ders3-if-flow-d">Solda Genel biçim: if &lt;şart&gt;: ve girintili &lt;gövde&gt;. Altında Örnek: grade_point = 2.5, if grade_point &gt;= 1.75:, print("geçti"), print("bitti"); 2.5 ve 1.75 hardal sarısı (float), "geçti" ve "bitti" yeşil (str). En altta Çıktı: geçti, bitti. Sağda grade_point = 2.5 için izlenen akış şeması: Başla, grade_point = 2.5 kutusu (2.5 hardal sarısı), grade_point &gt;= 1.75 karar baklavası. Petrol mavisi True oku print("geçti") kutusuna gider; bu kutu açık mavi, çivit mavisi çerçeveli. Oradan print("bitti") kutusuna, sonra Bitir. Gri False oku print("geçti") kutusunun yanından geçip doğrudan print("bitti") kutusuna gider; iki yol bu kutudan önce birleşir. Hiçbir yerde başa dönen ok yok. Alt satır: grade_point = 2.5 için çalışan yol koyu, çalışmayan yol gri.</desc>
-  <!-- source: grade_point = 2.5; if grade_point &gt;= 1.75: print("geçti"); print("bitti") -&gt; geçti / bitti (Python 3.14.8, 2026-10-10) -->
+<svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 440" width="1152" height="440" role="img" aria-labelledby="ders3-if-flow-t ders3-if-flow-d">
+  <title id="ders3-if-flow-t">if: grade_point = 2.5 için akış, adım adım</title>
+  <desc id="ders3-if-flow-d">Solda Örnek: grade_point = 2.5, if grade_point &gt;= 1.75:, dört boşluk içeride print("geçti"), print("bitti"); 2.5 ve 1.75 hardal sarısı (float), metinler yeşil (str). Sağda akış şeması; başta gri, Başla ve grade_point = 2.5 kutusu koyu. Bir tıklamayla grade_point &gt;= 1.75 karar baklavası koyulaşır ve altında 2.5 &gt;= 1.75 ve bir okla True (bool, deniz yeşili) yazar. Sonra petrol mavisi True oku, True etiketi petrol mavisine döner ve print("geçti") kutusu açık mavi, çivit mavisi çerçeveli olur. Sonra block'tan sonraki satır: print("bitti") ve Bitir. Gri False oku baklavanın altından print("bitti") kutusuna gider, etiketi gri kalır, kullanılmaz.</desc>
+  <!-- source: grade_point = 2.5; if grade_point &gt;= 1.75: print("geçti"); print("bitti") -&gt; geçti / bitti; 2.5 &gt;= 1.75 is True (Python 3.14.8, 2026-10-22). Build steps: start example, skeleton and start; 0 condition and its value; 1 True branch; 2 the line after the block and Bitir -->
   <defs>
     <marker id="ders3-if-flow-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
     <marker id="ders3-if-flow-ahm" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-m" d="M0,0 L12,6 L0,12 z"/></marker>
     <marker id="ders3-if-flow-ahok" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-ok" d="M0,0 L12,6 L0,12 z"/></marker>
+    <marker id="ders3-if-flow-aherr" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-err" d="M0,0 L12,6 L0,12 z"/></marker>
     <style>
 /* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
 .dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
@@ -85,42 +86,55 @@
 .dg rect.t-set,.dg path.t-set,.dg circle.t-set{fill:#F2F8D6;fill:var(--t-set-bg,#F2F8D6);stroke:#747C42;stroke:var(--t-set,#747C42)}
 .dg text.t-set,.dg tspan.t-set{fill:#3F4418;fill:var(--t-set-tx,#3F4418)}
 .dg rect.boxhl,.dg path.boxhl,.dg rect.cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595)}
+.dg g.fragment.visible.ifw-k1 ~ .ifw-ok1{fill:#0D6385;fill:var(--d-ok,#0D6385)}
     </style>
   </defs>
-  <rect class="bg" width="1152" height="400"/>
-  <text class="lb" x="2" y="22">Genel biçim</text>
-  <rect class="soft" x="2" y="30" width="380" height="89.52" rx="4"/>
-  <text class="cd24" x="18" y="67.76">if &lt;şart&gt;:</text>
-  <text class="cd24 pre" x="18" y="99.76" xml:space="preserve">    &lt;gövde&gt;</text>
-  <text class="lb" x="2" y="146">Örnek</text>
-  <rect class="soft" x="2" y="156" width="380" height="147.52" rx="4"/>
-  <text class="cd24" x="18" y="193.76">grade_point = <tspan class="t-float">2.5</tspan></text>
-  <text class="cd24" x="18" y="223.76">if grade_point &gt;= <tspan class="t-float">1.75</tspan>:</text>
-  <text class="cd24 pre" x="18" y="253.76" xml:space="preserve">    print(<tspan class="t-str">"geçti"</tspan>)</text>
-  <text class="cd24" x="18" y="283.76">print(<tspan class="t-str">"bitti"</tspan>)</text>
-  <rect class="outp" x="2" y="316" width="150" height="79.52" rx="4"/>
-  <text class="cd24" x="18" y="349.76">geçti</text>
-  <text class="cd24" x="18" y="377.76">bitti</text>
-  <text class="lb sub" x="166" y="356">Çıktı</text>
+  <rect class="bg" width="1152" height="440"/>
+  <text class="lb" x="2" y="22">Örnek</text>
+  <rect class="soft" x="2" y="30" width="380" height="150" rx="4"/>
+  <text class="cd24" x="18" y="66">grade_point = <tspan class="t-float">2.5</tspan></text>
+  <text class="cd24" x="18" y="96">if grade_point &gt;= <tspan class="t-float">1.75</tspan>:</text>
+  <text class="cd24 pre" x="18" y="126" xml:space="preserve">    print(<tspan class="t-str">"geçti"</tspan>)</text>
+  <text class="cd24" x="18" y="156">print(<tspan class="t-str">"bitti"</tspan>)</text>
+  <rect class="boxm" x="400" y="4" width="100" height="52" rx="26"/>
+  <path class="ar-m" d="M500,30 H537" marker-end="url(#ders3-if-flow-ahm)"/>
+  <rect class="boxm" x="540" y="4" width="280" height="52" rx="6"/>
+  <path class="ar-m" d="M680,56 V79" marker-end="url(#ders3-if-flow-ahm)"/>
+  <polygon class="boxm" points="490,140 680,82 870,140 680,198"/>
+  <path class="ar-m" d="M870,140 H917" marker-end="url(#ders3-if-flow-ahm)"/>
+  <rect class="boxm" x="920" y="114" width="226" height="52" rx="6"/>
+  <path class="ar-m" d="M1033,166 V307" marker-end="url(#ders3-if-flow-ahm)"/>
+  <rect class="boxm" x="920" y="310" width="226" height="52" rx="6"/>
+  <path class="ar-m" d="M680,198 V336 H917" marker-end="url(#ders3-if-flow-ahm)"/>
+  <path class="ar-m" d="M1033,362 V383" marker-end="url(#ders3-if-flow-ahm)"/>
+  <rect class="boxm" x="973" y="386" width="120" height="48" rx="24"/>
   <rect class="box" x="400" y="4" width="100" height="52" rx="26"/>
+  <path class="ar" d="M500,30 H537" marker-end="url(#ders3-if-flow-ah)"/>
+  <rect class="box" x="540" y="4" width="280" height="52" rx="6"/>
+  <g class="fragment ifw-k0" data-fragment-index="0">
+    <path class="ar" d="M680,56 V79" marker-end="url(#ders3-if-flow-ah)"/>
+    <polygon class="tint" points="490,140 680,82 870,140 680,198"/>
+    <text class="cd24" x="700" y="232"><tspan class="t-float">2.5</tspan> &gt;= <tspan class="t-float">1.75</tspan></text>
+    <path class="ar" d="M866,224 H891" marker-end="url(#ders3-if-flow-ah)"/>
+    <rect class="box t-bool" x="894" y="204" width="84" height="38" rx="6"/>
+    <text class="cd24 mid t-bool" x="936.0" y="232">True</text>
+  </g>
+  <g class="fragment ifw-k1" data-fragment-index="1">
+    <path class="ar-ok" d="M870,140 H917" marker-end="url(#ders3-if-flow-ahok)"/>
+    <rect class="boxhl" x="920" y="114" width="226" height="52" rx="6"/>
+  </g>
+  <g class="fragment ifw-k2" data-fragment-index="2">
+    <path class="ar" d="M1033,166 V307" marker-end="url(#ders3-if-flow-ah)"/>
+    <rect class="box" x="920" y="310" width="226" height="52" rx="6"/>
+    <path class="ar" d="M1033,362 V383" marker-end="url(#ders3-if-flow-ah)"/>
+    <rect class="box" x="973" y="386" width="120" height="48" rx="24"/>
+  </g>
   <text class="lb mid" x="450" y="38">Başla</text>
-  <path class="ar" d="M500,30 H517" marker-end="url(#ders3-if-flow-ah)"/>
-  <rect class="box" x="520" y="4" width="280" height="52" rx="6"/>
-  <text class="cd24 mid" x="660" y="38">grade_point = <tspan class="t-float">2.5</tspan></text>
-  <path class="ar" d="M660,56 V79" marker-end="url(#ders3-if-flow-ah)"/>
-  <polygon class="tint" points="460,140 660,82 860,140 660,198"/>
-  <text class="cd24 mid" x="660" y="148">grade_point &gt;= 1.75</text>
-  <path class="ar-ok" d="M860,140 H917" marker-end="url(#ders3-if-flow-ahok)"/>
-  <text class="lb okt mid" x="888" y="128">True</text>
-  <rect class="boxhl" x="920" y="114" width="226" height="52" rx="6"/>
+  <text class="cd24 mid" x="680" y="38">grade_point = <tspan class="t-float">2.5</tspan></text>
+  <text class="cd24 mid" x="680" y="148">grade_point &gt;= <tspan class="t-float">1.75</tspan></text>
+  <text class="lb sub mid ifw-ok1" x="891" y="123">True</text>
   <text class="cd24 mid" x="1033" y="148">print("geçti")</text>
-  <path class="ar" d="M1033,166 V233" marker-end="url(#ders3-if-flow-ah)"/>
-  <rect class="box" x="920" y="236" width="226" height="52" rx="6"/>
-  <text class="cd24 mid" x="1033" y="270">print("bitti")</text>
-  <path class="ar-m" d="M660,198 V262 H917" marker-end="url(#ders3-if-flow-ahm)"/>
-  <text class="lb sub" x="672" y="232">False</text>
-  <path class="ar" d="M1033,288 V309" marker-end="url(#ders3-if-flow-ah)"/>
-  <rect class="box" x="973" y="312" width="120" height="48" rx="24"/>
-  <text class="lb mid" x="1033" y="344">Bitir</text>
-  <text class="tx sub" x="420" y="392">grade_point = 2.5 için çalışan yol koyu, çalışmayan yol gri.</text>
+  <text class="cd24 mid" x="1033" y="344">print("bitti")</text>
+  <text class="lb sub end" x="668" y="300">False</text>
+  <text class="lb mid" x="1033" y="418">Bitir</text>
 </svg>

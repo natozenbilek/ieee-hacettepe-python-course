@@ -582,6 +582,35 @@ svg.dg{overflow:visible}
 @media (max-width:640px){.hw-row{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:24px}}
 /* the Slaytlar link of the Program table: a plain link, not a big button (Nezih, 2026-10-13) */
 .schedule .sch-link{font-size:var(--fs-small);font-weight:700;white-space:nowrap}
+/* Program notes (Nezih, 2026-10-29): Ders 3-5 get a hand-written word ("döngüler", "function'lar", "veri yapıları";
+   tools/build_pages.py SCHEDULE_NOTES) in Patrick Hand, a handwriting font (SIL OFL 1.1, OFL-patrick-hand.txt; Nezih:
+   "keşke font da ona göre olsaydı"). On a wide screen the drawing with its shaky arrow (tools/home_program_notes.py,
+   shown 200 x 88) sits in the empty margin beside the table, centred on its row: Ders 3 and 5 on the right, placed
+   from the Slaytlar cell, Ders 4 on the left, placed from the Ders cell (Nezih: "birini sola alsan daha iyi değil
+   mi?"). The page is centred, so both margins are the same width. The drawings are out of the flow, so no row grows
+   and nothing covers a column. Below 1270 px a margin is too narrow (about 210 px are needed), so the drawings are
+   hidden and the same word shows as a small hand label: under the Slaytlar link in the table, on its own line at the
+   bottom of the row on a phone. */
+@font-face{font-family:"Patrick Hand";font-style:normal;font-weight:400;font-display:swap;
+  src:url(../fonts/patrick-hand-regular.woff) format("woff")}
+.schedule .sch-note{display:block}
+.schedule .sch-note-art{display:none}
+.schedule .sch-note-label{display:block;width:max-content;max-width:100%;margin-top:6px;
+  font:400 1.25rem/1.2 "Patrick Hand",var(--font-sans);color:var(--fg);transform:rotate(-2deg);transform-origin:left center}
+@media (max-width:767px){
+  .schedule .sch-slides{flex-wrap:wrap;row-gap:4px}
+  .schedule .sch-note{flex-basis:100%}
+  .schedule .sch-note-label{margin-top:0}
+  .schedule .sch-slides .meta:has(+ .sch-note){margin-bottom:0}
+}
+@media screen and (min-width:1270px){
+  .schedule .sch-ders,.schedule .sch-slides{position:relative}
+  .schedule .sch-note-art{display:block;position:absolute;top:calc(50% - 44px);width:200px;height:88px;
+    max-width:none;pointer-events:none}
+  .schedule .sch-note-art.is-right{left:calc(100% + 8px)}
+  .schedule .sch-note-art.is-left{right:calc(100% + 8px)}
+  .schedule .sch-note-label{display:none}
+}
 /* home page vignettes in the hero's style (Nezih, 2026-10-13: "paint çizimler", "hepsi site ile uyumlu olsun"):
    tools/home_vignette.py builds them; transparent outside their rounded frame, so they sit on light and dark */
 .intro{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:32px;align-items:center;margin-top:8px}

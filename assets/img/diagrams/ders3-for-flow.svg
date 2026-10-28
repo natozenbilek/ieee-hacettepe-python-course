@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 428" width="1152" height="428" role="img" aria-labelledby="ders3-for-flow-t ders3-for-flow-d">
   <title id="ders3-for-flow-t">for loop'un akış şeması</title>
-  <desc id="ders3-for-flow-d">Solda Genel biçim: for &lt;isim&gt; in &lt;sıra&gt;: ve girintili &lt;gövde&gt;. Altında Örnek: for i in range(4): ve print("Ders", i); 4 turuncu (int), "Ders" yeşil (str). En altta Çıktı: Ders 0, Ders 1, Ders 2, Ders 3. Sağda genel akış şeması: Başla, sonra karar baklavası sırada eleman var mı?. Baklavanın altında range(4) şeridi: 0, 1, 2, 3 (int, turuncu). Petrol mavisi evet oku sağdaki i = sıradaki kutusuna gider; bu kutu açık mavi, çivit mavisi çerçeve: sıradaki elemanı for kendisi bağlar. Oradan print("Ders", i) kutusuna, sonra sonraki eleman yazan dönüş okuyla yeniden baklavanın üstüne. Dönüş okunun yanında i += 1 yok yazıyor. Kırmızı hayır oku aşağıdaki Bitir'e gider.</desc>
+  <desc id="ders3-for-flow-d">Solda Genel biçim: for &lt;isim&gt; in &lt;sıra&gt;: ve girintili &lt;block&gt;. Altında Örnek: for i in range(4): ve print("Ders", i); 4 turuncu (int), "Ders" yeşil (str). En altta Çıktı: Ders 0, Ders 1, Ders 2, Ders 3. Sağda genel akış şeması: Başla, sonra karar baklavası sırada eleman var mı?. Baklavanın altında range(4) şeridi: 0, 1, 2, 3 (int, turuncu). Petrol mavisi evet oku sağdaki i = sıradaki kutusuna gider; bu kutu açık mavi, çivit mavisi çerçeve: sıradaki elemanı for kendisi bağlar. Oradan print("Ders", i) kutusuna, sonra sonraki eleman yazan dönüş okuyla yeniden baklavanın üstüne. Dönüş okunun yanında i += 1 yok yazıyor. Kırmızı hayır oku aşağıdaki Bitir'e gider.</desc>
+  <!-- ders3 body pass: relabelled by authoring/builder-paralel/ders3-govde.py (Python 3.14.8, 2026-10-24): the general form says &lt;block&gt; (DECISIONS.md, Ders 2: one name for one idea, never the Turkish word on a slide). -->
   <!-- source: for i in range(4): print("Ders", i) -&gt; Ders 0 / Ders 1 / Ders 2 / Ders 3 (Python 3.14.8, 2026-10-10); 2026-10-14: left panels 4 px shorter each (440 to 428 high) so the focal line fits under the figure -->
   <defs>
     <marker id="ders3-for-flow-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
@@ -91,7 +92,7 @@
   <text class="lb" x="2" y="24">Genel biçim</text>
   <rect class="soft" x="2" y="36" width="400" height="87.52" rx="4"/>
   <text class="cd24" x="18" y="71.76">for &lt;isim&gt; in &lt;sıra&gt;:</text>
-  <text class="cd24 pre" x="18" y="105.76" xml:space="preserve">    &lt;gövde&gt;</text>
+  <text class="cd24 pre" x="18" y="105.76" xml:space="preserve">    &lt;block&gt;</text>
   <text class="lb" x="2" y="154">Örnek</text>
   <rect class="soft" x="2" y="166" width="400" height="87.52" rx="4"/>
   <text class="cd24" x="18" y="201.76">for i in range(<tspan class="t-int">4</tspan>):</text>

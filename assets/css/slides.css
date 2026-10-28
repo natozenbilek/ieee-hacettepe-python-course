@@ -44,6 +44,7 @@
   --s-rule:#C9CDDA;
   --s-navy:#181C3E;      /* branch navy: titles, title-band rule, section slide, 16.5:1 */
   --s-brand:#3B4595;     /* branch indigo: keywords, numerals, links, outlines, 8.5:1 */
+  --s-fn:#6B3FA0;       /* built-in functions in code (print, range, input), 6.8:1 on surface */
   --s-cyan:#49B0D7;      /* branch cyan: progress bar only, never text */
   --s-tint:#EFF0F7;      /* indigo 8% */
   --s-hl:#C8E7F3;        /* cyan 30%: "what changed", 13.6:1 under text */
@@ -177,10 +178,20 @@ html.reveal-print .reveal .slides > section,html.reveal-print .reveal .slides > 
 .reveal .hljs-ln{border-collapse:collapse;width:100%}
 .reveal .hljs-ln td{padding:0;border:0;font-size:inherit!important;line-height:inherit}
 .reveal .hljs-ln-numbers{width:1%;white-space:nowrap;color:var(--s-lineno)!important;opacity:1;padding-right:24px!important;text-align:right;vertical-align:top;user-select:none;font-weight:400}
-.reveal .hljs-keyword,.reveal .hljs-literal{color:var(--s-brand);font-weight:700}
-.reveal .hljs-string{color:var(--s-ok)}
+/* literals in their dg v4 type colours, as in the drawings (Nezih, 2026-10-28: "kodların renklendirmeleri daha iyi yapılabilir"): int orange, float mustard, str green, True / False teal, None grey; is-float and is-none are set by the deck's init script */
+.reveal .hljs-keyword{color:var(--s-brand);font-weight:700}
+.reveal .hljs-literal{color:var(--t-bool,#0E7A6D);font-weight:700}
+.reveal .hljs-literal.is-none{color:var(--t-none,#534C45)}
+.reveal .hljs-string{color:var(--t-str,#296A3B)}
+.reveal .hljs-number{color:var(--t-int,#854B00)}
+.reveal .hljs-number.is-float{color:var(--t-float,#9F7000)}
+/* built-in functions in their own colour; inside an f-string the {…} part is code again, so it is ink, not
+   string green (f-string was the hardest topic of Ders 2's feedback); escapes such as \n stand out */
+.reveal .hljs-built_in{color:var(--s-fn)}
+.reveal .hljs-string .hljs-subst{color:var(--s-fg)}
+.reveal .hljs-string .hljs-char{color:var(--s-brand);font-weight:700}
 .reveal .hljs-comment{color:var(--s-lineno);font-style:normal}
-.reveal .hljs-number,.reveal .hljs-built_in,.reveal .hljs-title,.reveal .hljs-params,.reveal .hljs-subst,.reveal .hljs-meta,.reveal .hljs-variable,.reveal .hljs-operator,.reveal .hljs-punctuation{color:inherit;font-weight:inherit;font-style:normal}
+.reveal .hljs-title,.reveal .hljs-params,.reveal .hljs-subst,.reveal .hljs-meta,.reveal .hljs-variable,.reveal .hljs-operator,.reveal .hljs-punctuation{color:inherit;font-weight:inherit;font-style:normal}
 /* a stepped or marked line (data-line-numbers="|1|2" or "2"): the line in focus gets the highlight band; the
    other lines turn grey by colour, not by opacity, so they keep 6.0:1 */
 .reveal .hljs.has-highlights tr:not(.highlight-line){opacity:1}

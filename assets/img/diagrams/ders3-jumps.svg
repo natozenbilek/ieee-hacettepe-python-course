@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 320" width="1152" height="320" role="img" aria-labelledby="ders3-jumps-t ders3-jumps-d" data-state="break">
   <title id="ders3-jumps-t">break ve continue: akış nereden devam eder</title>
-  <desc id="ders3-jumps-d">İki durumlu şekil. Gri zeminli kod paneli: for i in range(1, 6):, girintili &lt;satır 1&gt;, if &lt;şart&gt;:, daha girintili break (durum break) ya da continue (durum continue), girintili &lt;satır 2&gt;; panelin altında, ince bir çizginin ardından &lt;loop'tan sonraki satır&gt;. Köşeli parantezli yer tutucular gri. Durum break: break satırı açık mavi bantla vurgulu; break satırından çıkan siyah ok sağa, aşağı ve sola dönerek loop'un altındaki satıra giriyor, yanında loop biter yazıyor. continue oku ve bu adım biter yazısı gri. Sağ altta: break: loop'tan sonraki satıra. Durum continue: continue satırı vurgulu; continue satırından çıkan siyah ok sağa, yukarı ve sola dönerek loop'un başlık satırına giriyor, yanında bu adım biter yazıyor; break oku ve loop biter yazısı gri. Sağ altta: continue: loop'un başına. &lt;satır 2&gt; iki durumda da gri, o adımda çalışmıyor.</desc>
+  <desc id="ders3-jumps-d">İki durumlu şekil. Gri zeminli kod paneli: for i in range(1, 6):, girintili &lt;satır 1&gt;, if &lt;şart&gt;:, daha girintili break (durum break) ya da continue (durum continue), girintili &lt;satır 2&gt;; panelin altında, ince bir çizginin ardından &lt;loop'tan sonraki satır&gt;. Köşeli parantezli yer tutucular gri. Durum break: break satırı açık mavi bantla vurgulu; break satırından çıkan siyah ok sağa, aşağı ve sola dönerek loop'un altındaki satıra giriyor, yanında loop biter yazıyor; continue'nun oku bu durumda yok. Sağ altta: break: loop'tan sonraki satıra. Durum continue: continue satırı vurgulu; continue satırından çıkan siyah ok sağa, yukarı ve sola dönerek loop'un başlık satırına giriyor, yanında bu adım biter yazıyor; break oku ve loop biter yazısı gri. Sağ altta: continue: loop'un başına. &lt;satır 2&gt; iki durumda da gri, o adımda çalışmıyor.</desc>
+  <!-- ders3 fix pass: edited in place by authoring/builder-paralel/ders3-duzelt.py from ders3-jumps.svg (frozen copy in authoring/backups/ders3-duzelt-2026-10-24/src/), Python 3.14.8, 2026-10-24. State break no longer draws the grey continue arrow and its label "bu adım biter": continue is taught in section 11 (S128, state continue, which keeps both arrows). -->
   <!-- source: ders3-B.md S5 (state break) and S21 (state continue); general form, no run. Root data-state="break" | "continue"; a deck copy changes only this attribute. -->
   <defs>
     <marker id="ders3-jumps-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
@@ -104,10 +105,8 @@
   <path class="sep" d="M40,262 H620"/>
   <text class="cd24 sub" x="60" y="300">&lt;loop'tan sonraki satır&gt;</text>
   <g class="jp-b">
-    <path class="ar-m" d="M262,162 H760 V36 H374" marker-end="url(#ders3-jumps-ahm)"/>
     <path class="ar" d="M262,174 H680 V292 H418" marker-end="url(#ders3-jumps-ah)"/>
     <text class="lb" x="692" y="240">loop biter</text>
-    <text class="tx sub" x="772" y="108">bu adım biter</text>
     <text class="tx" x="880" y="268"><tspan class="cd24">break</tspan>:</text>
     <text class="tx" x="880" y="300">loop'tan sonraki satıra</text>
   </g>

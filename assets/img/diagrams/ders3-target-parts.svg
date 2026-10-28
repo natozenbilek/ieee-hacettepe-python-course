@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 480" width="1152" height="480" role="img" aria-labelledby="ders3-target-parts-t ders3-target-parts-d">
   <title id="ders3-target-parts-t">Ders 3'ün hedef programı: bugünkü parçalar</title>
-  <desc id="ders3-target-parts-d">Solda gri bir kod paneli, sağ üstünde Önizleme yazıyor; hedef programın önemli satırları, atlanan yerlerde üç nokta. for i in range(n): satırı açık mavi bantta, çivit mavisi çerçeveli; yanındaki etiket 3. ve 4. bölüm. if score &gt;= 95:, grade_point = 4.00, elif score &gt;= 90: ve else: satırları gri, etiketleri Ders 2. if grade_point &gt;= 1.75: ve passed += 1 satırlarının etiketi 2. bölüm. print(f"{code[:3]} …") satırı kesikli gri çerçevede, etiketi aradan sonra. total_points += credits * grade_point, üç nokta ve print(f"AGNO: …") satırlarının etiketi de 2. bölüm. Ders 2'den bilinen öteki satırlar, n = int(input("Kaç ders? ")) ve code = input(…).strip().upper(), de gri yazılmış, etiketleri Ders 2. 1 turuncu (int), 1.75 hardal sarısı (float).</desc>
-  <!-- source: authoring/targets/target3.py (redrawn 2026-10-13; labels for DECISIONS.md "if before while": 3A is while, counter and accumulator, for, range, and the if/elif table is Ders 2); run with 2, ' mat123', 4, 66, fiz127, 3, 77 gives the S3 Run window (Python 3.14.8, run_targets.py) -->
+  <desc id="ders3-target-parts-d">Solda gri bir kod paneli, sağ üstünde Önizleme yazıyor; hedef programın önemli satırları, atlanan yerlerde üç nokta. for i in range(n): satırı açık mavi bantta, çivit mavisi çerçeveli; yanındaki etiket 4. ve 5. bölüm. if score &gt;= 95:, grade_point = 4.00, elif score &gt;= 90: ve else: satırlarının etiketi 1. bölüm; 95 ve 90 turuncu (int), 4.00 hardal sarısı (float). if grade_point &gt;= 1.75: ve passed += 1 satırlarının etiketi 3. bölüm. print(f"{code[:3]} …") satırı da gri, etiketi Ders 2: slicing Ders 2'de. total_points += credits * grade_point, üç nokta ve print(f"AGNO: …") satırlarının etiketi de 3. bölüm. Ders 2'den bilinen öteki satırlar, n = int(input("Kaç ders? ")) ve code = input(…).strip().upper(), de gri yazılmış, etiketleri Ders 2. 1 turuncu (int), 1.75 hardal sarısı (float).</desc>
+  <!-- source: authoring/targets/target3.py (redrawn 2026-10-13; labels for DECISIONS.md "if before while": 3A is while, counter and accumulator, for, range, and the if/elif table is Ders 2); run with 2, ' mat123', 4, 66, fiz127, 3, 77 gives the S3 Run window (Python 3.14.8, run_targets.py) Relabelled on 2026-10-24 by authoring/builder-paralel/ders3-list.py: code[:3] is Ders 2 (slicing moved there), so its line is grey with the label Ders 2, as the other Ders 2 lines. Section numbers updated on 2026-10-28 by authoring/builder-paralel/ders3-karar.py: 1. Karar kısmı opens Ders 3. -->
   <defs>
     <style>
 /* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
@@ -82,8 +82,6 @@
 .dg rect.t-set,.dg path.t-set,.dg circle.t-set{fill:#F2F8D6;fill:var(--t-set-bg,#F2F8D6);stroke:#747C42;stroke:var(--t-set,#747C42)}
 .dg text.t-set,.dg tspan.t-set{fill:#3F4418;fill:var(--t-set-tx,#3F4418)}
 .dg rect.boxhl,.dg path.boxhl,.dg rect.cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595)}
-/* ders3-target-parts: aradan sonraki satırların kesikli gri çerçevesi */
-.dg rect.lt-dash{fill:none;stroke-dasharray:8 6}
 /* kod PyCharm gibi: ligature yok */
 .dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-variant-ligatures:none;font-feature-settings:"liga" 0,"calt" 0}
     </style>
@@ -92,34 +90,33 @@
   <rect class="soft" x="2" y="4" width="700" height="472" rx="4"/>
   <text class="lb sub end" x="686" y="36">Önizleme</text>
   <rect class="boxhl" x="10" y="100" width="290" height="29" rx="4"/>
-  <rect class="boxm lt-dash" x="10" y="352.5" width="396" height="28.5" rx="4"/>
   <text class="cd24 sub" x="18" y="66">n = int(input("Kaç ders? "))</text>
   <text class="cd24 sub" x="18" y="94">…</text>
   <text class="cd24" x="18" y="122">for i in range(n):</text>
   <text class="cd24 sub pre" x="18" y="150" xml:space="preserve">    code = input(…).strip().upper()</text>
   <text class="cd24 sub pre" x="18" y="178" xml:space="preserve">    …</text>
-  <text class="cd24 sub pre" x="18" y="206" xml:space="preserve">    if score &gt;= 95:</text>
-  <text class="cd24 sub pre" x="18" y="234" xml:space="preserve">        grade_point = 4.00</text>
-  <text class="cd24 sub pre" x="18" y="262" xml:space="preserve">    elif score &gt;= 90: …</text>
-  <text class="cd24 sub pre" x="18" y="290" xml:space="preserve">    else: …</text>
+  <text class="cd24 pre" x="18" y="206" xml:space="preserve">    if score &gt;= <tspan class="t-int">95</tspan>:</text>
+  <text class="cd24 pre" x="18" y="234" xml:space="preserve">        grade_point = <tspan class="t-float">4.00</tspan></text>
+  <text class="cd24 pre" x="18" y="262" xml:space="preserve">    elif score &gt;= <tspan class="t-int">90</tspan>: …</text>
+  <text class="cd24 pre" x="18" y="290" xml:space="preserve">    else: …</text>
   <text class="cd24 pre" x="18" y="318" xml:space="preserve">    if grade_point &gt;= <tspan class="t-float">1.75</tspan>:</text>
   <text class="cd24 pre" x="18" y="346" xml:space="preserve">        passed += <tspan class="t-int">1</tspan></text>
-  <text class="cd24 pre" x="18" y="374" xml:space="preserve">    print(f"{code[:3]} …")</text>
+  <text class="cd24 sub pre" x="18" y="374" xml:space="preserve">    print(f"{code[:3]} …")</text>
   <text class="cd24 pre" x="18" y="402" xml:space="preserve">    total_points += credits * grade_point</text>
   <text class="cd24 sub" x="18" y="430">…</text>
   <text class="cd24" x="18" y="458">print(f"AGNO: …")</text>
   <path class="ld" d="M730,46 H740 V100 H730"/>
   <text class="tx sub" x="756" y="81">Ders 2</text>
   <path class="ld" d="M730,102 H740 V128 H730"/>
-  <text class="lb" x="756" y="123">3. ve 4. bölüm</text>
+  <text class="lb" x="756" y="123">4. ve 5. bölüm</text>
   <path class="ld" d="M730,130 H740 V184 H730"/>
   <text class="tx sub" x="756" y="165">Ders 2</text>
   <path class="ld" d="M730,186 H740 V296 H730"/>
-  <text class="tx sub" x="756" y="249">Ders 2</text>
+  <text class="lb" x="756" y="249">1. bölüm</text>
   <path class="ld" d="M730,298 H740 V352 H730"/>
-  <text class="lb" x="756" y="333">2. bölüm</text>
+  <text class="lb" x="756" y="333">3. bölüm</text>
   <path class="ld" d="M730,354 H740 V380 H730"/>
-  <text class="lb sub" x="756" y="375">aradan sonra</text>
+  <text class="tx sub" x="756" y="375">Ders 2</text>
   <path class="ld" d="M730,382 H740 V464 H730"/>
-  <text class="lb" x="756" y="431">2. bölüm</text>
+  <text class="lb" x="756" y="431">3. bölüm</text>
 </svg>

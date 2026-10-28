@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ödev 3 · Introduction to Python · IEEE Hacettepe</title>
+<meta name="description" content="Introduction to Python, Ödev 3: GitHub reposu, görevler, 8 Kasım Pazar 23.59 son teslim ve teslim formu.">
+<link rel="preload" href="../assets/fonts/atkinson-hyperlegible-next-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/atkinson-hyperlegible-next-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/jetbrains-mono-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/latin-modern-roman-10-bold.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+<!-- shell:header (tools/build_pages.py) -->
+<a class="skip" href="#icerik">İçeriğe geç</a>
+<header class="site-head">
+  <div class="masthead is-sub" style="--mast-sky:#2097C3">
+    <picture class="mast-art">
+      <source media="(max-width: 699px)" srcset="../assets/img/site/hero-paint-900.svg">
+      <img src="../assets/img/site/hero-paint-1920.svg" width="1920" height="640" alt="Elle çizilmiş bir piton yılanı, ekranında print(&quot;Merhaba&quot;) ve çıktısı yazan bir dizüstü bilgisayara sarılmış." fetchpriority="high">
+    </picture>
+    <nav class="site-nav" aria-label="Ana menü">
+      <div class="wrap">
+        <ul>
+          <li><a href="../index.html" aria-label="Ana sayfa">ANA SAYFA</a></li>
+          <li><a href="../kurulum.html" aria-label="Kurulum">KURULUM</a></li>
+          <li><a href="../kaynaklar.html" aria-label="Ek kaynaklar">EK KAYNAKLAR</a></li>
+          <li><a href="../tarihce.html" aria-label="Tarihçe">TARİHÇE</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="mast-title wrap">
+      <p class="mast-course"><a href="../index.html" lang="en">Introduction to Python</a></p>
+      <h1>Ödev 3</h1>
+    </div>
+  </div>
+  <div class="brand-strip">
+    <div class="wrap">
+      <a class="lockup" href="../index.html"><img src="../assets/brand/ieee-hacettepe-lockup-renkli.png" alt="IEEE Hacettepe University Student Branch" width="413" height="48"></a>
+    </div>
+  </div>
+</header>
+<!-- /shell:header -->
+
+<main id="icerik" class="wrap">
+
+  <p class="lead">Bu ödevin sonunda <code>if</code>, <code>elif</code> ve <code>else</code> ile karar veren, <code>while</code> ve <code>for</code> ile sayan, bir <code>str</code>'yi harf harf dolaşan, iç içe loop'larla satır satır şekil kuran ve <code>break</code> ile loop'tan çıkan programlar&nbsp;yazabileceksiniz.</p>
+
+  <dl class="facts">
+    <dt>Repo</dt><dd><a class="btn" href="https://github.com/natozenbilek/folding-to-everest-python-hw">Ödev 3 reposunu aç</a> <code>odev3.py</code>, bu haftanın konu özeti ve <code>kontrol.py</code>; yeşil Code düğmesi, Download&nbsp;ZIP</dd>
+    <dt>Son teslim</dt><dd><time datetime="2026-11-08T23:59">8 Kasım 2026 Pazar, 23.59'a&nbsp;kadar</time></dd>
+    <dt>Teslim</dt><dd><a href="https://forms.gle/2Ei4AbGpuuJNtN5w7">Ödev 3 teslim formu</a></dd>
+  </dl>
+
+  <h2 id="gorevler">Görevler</h2>
+  <ol class="hw-tasks">
+    <li><strong>Hacettepe FizzBuzz.</strong> <code>for</code> ve <code>range()</code> ile 1'den 15'e kadar her sayı için 3'ün katına <code>Hacet</code>, 5'in katına <code>tepe</code>, ikisinin de katına <code>Hacettepe</code> yazdıracaksınız; <code>if</code>, <code>elif</code> ve <code>else</code> ile, şartların sırasına dikkat&nbsp;ederek.</li>
+    <li><strong>Kağıdı Everest'e katlamak.</strong> 0,1&nbsp;mm'lik bir kağıdı kalınlığı Everest'i geçene kadar <code>while</code> ile katlayacak, katlamaları sayacak ve kalınlığı metre olarak&nbsp;yazdıracaksınız.</li>
+    <li><strong>Gizli mesaj.</strong> Harflerin arasına saklanmış rakamları <code>for</code> ve <code>continue</code> ile atlayıp mesajı çözecek, atlanan rakamları da&nbsp;sayacaksınız.</li>
+    <li><strong>Sayı üçgeni.</strong> İç içe iki loop ile 1, 12, 123, 1234 ve 12345 satırlarını&nbsp;kuracaksınız.</li>
+    <li><strong>Sayı tahmin oyunu.</strong> <code>while True</code> ile tahmin isteyecek, ipucu verecek, doğru tahminde <code>break</code> ile çıkıp kaç denemede bilindiğini&nbsp;yazdıracaksınız.</li>
+  </ol>
+  <p>Zorunlu olmayan bir Meraklısına görevi de var: 2026'nın basamaklarını <code>while</code> ile sayıp toplamak ve sayıyı ters&nbsp;çevirmek.</p>
+
+  <p>Görevlerin ayrıntısı ve beklenen çıktılar dosyanın içinde. TODO satırlarını doldurduktan sonra formda <span class="ui">İsim</span> alanına isminizi yazın, dosyayı <span class="ui">Ödev dosyası</span> alanına yükleyin ve <span class="ui">Kişisel verileriniz</span> sorusundaki onay kutusunu işaretleyin. Eklemek istediğiniz bir şey varsa isteğe bağlı <span class="ui">Açıklama</span> alanına&nbsp;yazabilirsiniz.</p>
+
+</main>
+
+<!-- shell:footer (tools/build_pages.py) -->
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="foot-course" lang="en">Introduction to Python</p>
+    <p>IEEE Hacettepe University Student Branch, Güz 2026</p>
+    <ul class="foot-links">
+      <li><a href="https://www.ee.hacettepe.edu.tr/">Hacettepe Üniversitesi Elektrik ve Elektronik Mühendisliği Bölümü</a></li>
+      <li><a href="https://www.ieeehacettepe.com/">IEEE Hacettepe</a></li>
+    </ul>
+    <p>Python adı ve logosu Python Software Foundation'ın ticari markasıdır, bu kursun vakıfla resmi bir bağı yok.</p>
+    <p>Görsellerin kaynakları ve lisansları <a href="../gorseller.html">Görseller</a> sayfasında. Sitedeki yazı tipleri Atkinson Hyperlegible Next ve JetBrains Mono (SIL Open Font License 1.1) ile Latin Modern Roman (GUST Font License).</p>
+    <p>Ödev teslim formlarının aydınlatma ve açık rıza metni <a href="../kvkk.html">Kişisel verileriniz</a> sayfasında.</p>
+    <p>Son güncelleme: 28 Ekim 2026</p>
+    <!-- TODO: ders materyalinin lisansı (Nezih karar verecek) -->
+  </div>
+</footer>
+<!-- /shell:footer -->
+</body>
+</html>

@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="dg ec" viewBox="0 0 1152 428" width="1152" height="428" role="img" aria-labelledby="ders2-explicit-convert-t ders2-explicit-convert-d" data-focus="rows">
+<svg xmlns="http://www.w3.org/2000/svg" class="dg ec" viewBox="0 0 1152 392" width="1152" height="392" role="img" aria-labelledby="ders2-explicit-convert-t ders2-explicit-convert-d" data-focus="rows">
   <title id="ders2-explicit-convert-t">int(), float() ve str() ile çevirim</title>
-  <desc id="ders2-explicit-convert-d">Açıkça type conversion, üç satır, her satırda değer, function kutusu ve sonuç oklarla bağlı, type etiketi kutunun sağında. Satır 1: "4" (str, yeşil), int() kutusu, 4 (int, turuncu). Satır 2: "3.25" (str, yeşil), float() kutusu, 3.25 (float, hardal sarısı). Satır 3: 4 (int, turuncu), str() kutusu, "4" (str, yeşil). data-focus rows durumunda altta print(int("4"), float("3.25"), str(4)) ve print(type(int("4")), type(float("3.25")), type(str(4))) satırları, Çıktı panelinde 4 3.25 4 ve &lt;class 'int'&gt; &lt;class 'float'&gt; &lt;class 'str'&gt;. data-focus line durumunda üç satır gri ve soluk; altta print(int("4") + 1, float("3.25"), str(4) + "4") satırı, Çıktı panelinde 5 3.25 44; 44 açık mavi, çivit mavisi çerçeveli bir bantta ve yanında str + str yazar.</desc>
+  <desc id="ders2-explicit-convert-d">Açıkça type conversion, üç satır, her satırda değer, function kutusu ve sonuç oklarla bağlı, type etiketi kutunun sağında. Satır 1: "4" (str, yeşil), int() kutusu, 4 (int, turuncu). Satır 2: "3.25" (str, yeşil), float() kutusu, 3.25 (float, hardal sarısı). Satır 3: 4 (int, turuncu), str() kutusu, "4" (str, yeşil). data-focus rows durumunda altta print(int("4"), float("3.25"), str(4)) satırı, Çıktı panelinde 4 3.25 4. data-focus line durumunda üç satır gri ve soluk; altta print(int("4") + 1, float("3.25"), str(4) + "4") satırı, Çıktı panelinde 5 3.25 44; 44 açık mavi, çivit mavisi çerçeveli bir bantta ve yanında str + str yazar.</desc>
   <!-- source: ders2-A.md S43, S44: print(int("4"), float("3.25"), str(4)) -&gt; 4 3.25 4; types -&gt; &lt;class 'int'&gt; &lt;class 'float'&gt; &lt;class 'str'&gt;; print(int("4") + 1, float("3.25"), str(4) + "4") -&gt; 5 3.25 44 (Python 3.14.8, 2026-10-11) -->
   <defs>
     <marker id="ders2-explicit-convert-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
@@ -84,7 +84,7 @@
 .dg rect.t-set,.dg path.t-set,.dg circle.t-set{fill:#F2F8D6;fill:var(--t-set-bg,#F2F8D6);stroke:#747C42;stroke:var(--t-set,#747C42)}
 .dg text.t-set,.dg tspan.t-set{fill:#3F4418;fill:var(--t-set-tx,#3F4418)}
 .dg rect.boxhl,.dg path.boxhl,.dg rect.cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595)}
-/* ders2-explicit-convert: data-focus="rows" (S43: üç satır, altta S43'ün iki kod satırı ve çıktısı, bant yok) ve "line" (S44: satırlar soluk, altta tek print satırı, çıktıda 44 bantta) */
+/* ders2-explicit-convert: data-focus="rows" (S60: üç satır, altta tek kod satırı ve çıktısı, bant yok) ve "line" (S44: satırlar soluk, altta tek print satırı, çıktıda 44 bantta) */
 .ec .ec-line{display:none}
 .ec[data-focus="line"] .ec-rows{display:none}
 .ec[data-focus="line"] .ec-line{display:inline}
@@ -95,7 +95,7 @@
 .ec[data-focus="line"] .ec-r path{stroke:#767C95;stroke:var(--d-muted,#767C95);marker-end:url(#ders2-explicit-convert-ahm)}
     </style>
   </defs>
-  <rect class="bg" width="1152" height="428"/>
+  <rect class="bg" width="1152" height="392"/>
   <g class="ec-r">
   <rect class="box t-str" x="200" y="20" width="132" height="56" rx="6"/>
   <text class="cd mid t-str" x="266" y="58">"4"</text>
@@ -130,11 +130,9 @@
   </g>
   <g class="ec-rows">
   <text class="cd24" x="200" y="276">print(int("4"), float("3.25"), str(4))</text>
-  <text class="cd24" x="200" y="310">print(type(int("4")), type(float("3.25")), type(str(4)))</text>
-  <text class="lb sub" x="200" y="350">Çıktı</text>
-  <rect class="outp" x="198" y="360" width="660" height="66" rx="4"/>
-  <text class="cd24" x="214" y="386">4 3.25 4</text>
-  <text class="cd24" x="214" y="416">&lt;class 'int'&gt; &lt;class 'float'&gt; &lt;class 'str'&gt;</text>
+  <text class="lb sub" x="200" y="316">Çıktı</text>
+  <rect class="outp" x="198" y="326" width="200" height="56" rx="4"/>
+  <text class="cd24" x="214" y="362">4 3.25 4</text>
   </g>
   <g class="ec-line">
   <text class="cd24" x="200" y="276">print(int("4") + 1, float("3.25"), str(4) + "4")</text>

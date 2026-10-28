@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 380" width="1152" height="380" role="img" aria-labelledby="ders2-while-flow-t ders2-while-flow-d">
   <title id="ders2-while-flow-t">while loop akış şeması</title>
-  <desc id="ders2-while-flow-d">Akış şeması: Başla, i = 3 kutusu (3 int, turuncu), i &gt; 0 karar baklavası. Petrol mavisi True oku print(i) ve i = i - 1 satırlarını tutan kutuya iner; bu kutudan çıkan ok sola, yukarı ve sağa dönerek baklavanın sol köşesine geri girer. Geri dönen ok açık mavi ve çivit mavisi çerçeveli bantla vurgulu, yanında her turun başında yeniden sorulur yazıyor. Kırmızı False oku sağ köşeden print("Bitti") kutusuna gider ("Bitti" str, yeşil), sonra Bitir. Sağ üstte Genel biçim: while &lt;devam şartı&gt;: ve dört boşluk içeride &lt;tekrarlanan satırlar&gt;. Altında çıktı paneli: 3, 2, 1, Bitti.</desc>
+  <desc id="ders2-while-flow-d">Akış şeması: Başla, i = 3 kutusu (3 int, turuncu), i &gt; 0 karar baklavası. Petrol mavisi True oku print(i) ve i = i - 1 satırlarını tutan kutuya iner; bu kutudan çıkan ok sola, yukarı ve sağa dönerek baklavanın sol köşesine geri girer. Geri dönen ok açık mavi ve çivit mavisi çerçeveli bantla vurgulu, yanında her turun başında yeniden sorulur yazıyor. Kırmızı False oku sağ köşeden print("Bitti") kutusuna gider ("Bitti" str, yeşil), sonra Bitir. Sağ üstte Genel biçim: while &lt;devam şartı&gt;: ve dört boşluk içeride &lt;block&gt;. Altında çıktı paneli: 3, 2, 1, Bitti.</desc>
+  <!-- ders3 fix pass: edited in place by authoring/builder-paralel/ders3-duzelt.py from ders2-while-flow.svg (frozen copy in authoring/backups/ders3-duzelt-2026-10-24/src/), Python 3.14.8, 2026-10-24. The general form says &lt;block&gt; (DECISIONS.md, Ders 2: one name for one idea in general forms). -->
   <!-- source: ders2-B.md S44; i = 3; while i > 0: print(i); i = i - 1; print("Bitti") -> 3 / 2 / 1 / Bitti (Python 3.14.8, 2026-10-11) -->
   <defs>
     <marker id="ders2-while-flow-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
@@ -120,7 +121,7 @@
   <text class="lb" x="742" y="24">Genel biçim</text>
   <rect class="soft" x="742" y="36" width="406" height="84" rx="4"/>
   <text class="cd24" x="758" y="67.76">while &lt;devam şartı&gt;:</text>
-  <text class="cd24 pre" x="758" y="101.76" xml:space="preserve">    &lt;tekrarlanan satırlar&gt;</text>
+  <text class="cd24 pre" x="758" y="101.76" xml:space="preserve">    &lt;block&gt;</text>
   <text class="lb sub" x="860" y="158">Çıktı</text>
   <rect class="outp" x="860" y="170" width="200" height="184" rx="4"/>
   <text class="cd" x="880" y="210">3</text>

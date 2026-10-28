@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 424" width="1152" height="424" role="img" aria-labelledby="ders3-target-assembly-t ders3-target-assembly-d">
   <title id="ders3-target-assembly-t">Ders 3'ün hedef programı: iki parça</title>
-  <desc id="ders3-target-assembly-d">Üstte iki kod parçası yan yana. 3A: ders loop'u: for i in range(n):, ..., if score &gt;= 95:, .... 9. bölüm: slicing: code = &quot;MAT123&quot; (yeşil str), code[:3] oku 'MAT', code[3:] oku '123' (ikisi de yeşil str kutusunda). İki parçadan inen oklar hedef programın Çıktı paneline gidiyor. Çıktı iki sütunda: Kaç ders? 2, 1. dersin kodu:  mat123, Kredi: 4, Puan (0-100): 66, MAT 123: 66 puan, katsayı 2.50, 2. dersin kodu: fiz127; Kredi: 3, Puan (0-100): 77, FIZ 127: 77 puan, katsayı 3.00, Geçilen ders: 2/2, AGNO: 2.71. MAT 123 ve FIZ 127 satırları açık mavi vurgulu ve çizgilerle slicing parçasına bağlı.</desc>
-  <!-- source: authoring/targets/target3.py (redrawn 2026-10-13, no retry: try/except is Ders 4); stdin 2, " mat123", 4, 66, fiz127, 3, 77 -> the eleven lines shown, AGNO: 2.71 (run_targets.py, Python 3.14.8); "MAT123"[:3] == 'MAT', "MAT123"[3:] == '123' -->
+  <desc id="ders3-target-assembly-d">Üstte iki kod parçası yan yana. 3A: ders loop'u: for i in range(n):, ..., if score &gt;= 95:, .... Ders 2: slicing: code = &quot;MAT123&quot; (yeşil str), code[:3] oku 'MAT', code[3:] oku '123' (ikisi de yeşil str kutusunda). İki parçadan inen oklar hedef programın Çıktı paneline gidiyor. Çıktı iki sütunda: Kaç ders? 2, 1. dersin kodu:  mat123, Kredi: 4, Puan (0-100): 66, MAT 123: 66 puan, katsayı 2.50, 2. dersin kodu: fiz127; Kredi: 3, Puan (0-100): 77, FIZ 127: 77 puan, katsayı 3.00, Geçilen ders: 2/2, AGNO: 2.71. MAT 123 ve FIZ 127 satırları açık mavi vurgulu ve çizgilerle slicing parçasına bağlı.</desc>
+  <!-- source: authoring/targets/target3.py (redrawn 2026-10-13, no retry: try/except is Ders 4); stdin 2, " mat123", 4, 66, fiz127, 3, 77 -> the eleven lines shown, AGNO: 2.71 (run_targets.py, Python 3.14.8); "MAT123"[:3] == 'MAT', "MAT123"[3:] == '123' Relabelled on 2026-10-24 by authoring/builder-paralel/ders3-list.py: the slicing panel is Ders 2's, since slicing moved there. -->
   <defs>
     <marker id="ders3-target-assembly-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
     <style>
@@ -95,7 +95,7 @@
 <text class="cd24" x="71.6" y="120">if score &gt;= 95:</text>
 <text class="cd24" x="71.6" y="150">...</text>
 <rect class="soft" x="587" y="0" width="565" height="180" rx="4"/>
-<text class="lb" x="601" y="28">9. bölüm: slicing</text>
+<text class="lb" x="601" y="28">Ders 2: slicing</text>
 <text class="cd24" x="601" y="66">code = <tspan class="t-str">"MAT123"</tspan></text>
 <text class="cd24" x="601" y="108">code[:3]</text>
 <path class="ar" d="M733,100 H790" marker-end="url(#ders3-target-assembly-ah)"/>
