@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 340" width="1152" height="340" role="img" aria-labelledby="ders4-call-flow-t ders4-call-flow-d" data-state="call">
   <title id="ders4-call-flow-t">Call: akış gövdeye gider ve geri döner</title>
-  <desc id="ders4-call-flow-d">Durum call: Solda numaralı kod: 1 def show_inside():, 2 indentation'lı print("içeride"), 3 boş, 4 print("önce"), 5 show_inside(), 6 print("sonra"). def satırları kesik çerçeve içinde, altında tanım, şimdi çalışmaz. Numaralı adımlar: 1 önce yazılır; 2 show_inside() call'u gövdeye atlar, bu ok açık mavi, çivit mavisi çerçeveli bantla vurgulu; 3 içeride yazılır; 4 petrol mavisi ok akışı call satırına geri döndürür, geri döner; 5 sonra yazılır. Sağda Çıktı: önce (1), içeride (3), sonra (5). Durum nocall: Kod dört satır: def show_inside():, indentation'lı print("içeride") gri ve yanında çağrılmadı, boş satır, print("dışarıda"). def block'u açık mavi, çivit mavisi çerçeveli bantla vurgulu; call yok. 1 dışarıda yazılır. Çıktı yalnızca dışarıda.</desc>
+  <desc id="ders4-call-flow-d">Durum call: Solda numaralı kod: 1 def show_inside():, 2 indentation'lı print("içeride"), 3 boş, 4 print("önce"), 5 show_inside(), 6 print("sonra"). def satırları kesik çerçeve içinde, altında tanım, şimdi çalışmaz. Numaralı adımlar: 1 önce yazılır; 2 show_inside() call'u gövdeye atlar, bu ok açık mavi, çivit mavisi çerçeveli bantla vurgulu; 3 içeride yazılır; 4 petrol mavisi ok akışı call satırına geri döndürür, geri döner; 5 sonra yazılır. Sağda Çıktı: önce (1), içeride (3), sonra (5). Durum nocall: Kod dört satır: def show_inside():, indentation'lı print("içeride") gri ve yanında call yok, boş satır, print("dışarıda"). def block'u açık mavi, çivit mavisi çerçeveli bantla vurgulu; call yok. 1 dışarıda yazılır. Çıktı yalnızca dışarıda.</desc>
   <!-- source: S30 run s7_call: önce / içeride / sonra; S32 run s7_defonly: dışarıda (Python 3.14.8, 2026-10-10) -->
   <defs>
     <marker id="ders4-call-flow-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
@@ -115,7 +115,7 @@
   </g>
   <g class="cf-on-nocall">
   <text class="cd24 sub pre" x="96" y="100" xml:space="preserve">    print("içeride")</text>
-  <text class="lb sub" x="414" y="100">çağrılmadı</text>
+  <text class="lb sub" x="414" y="100">call yok</text>
   </g>
   <text class="lb sub" x="410" y="50">tanım, şimdi çalışmaz</text>
   <g class="cf-on-call">

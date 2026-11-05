@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 1152 420" width="1152" height="420" role="img" aria-labelledby="ders4-return-flow-t ders4-return-flow-d">
   <title id="ders4-return-flow-t">return değeri call'un yerine taşır</title>
-  <desc id="ders4-return-flow-d">Solda kod: def weighted_points(credits, grade_point):, indentation'lı return credits * grade_point, boş satır, points = weighted_points(4, 2.5), print(points); 4 int (turuncu), 2.5 float (hardal sarısı). Sağda weighted_points call'unun frame'i: lacivert credits etiketi 4'ü (int, turuncu), grade_point etiketi 2.5'i (float, hardal sarısı) gösteriyor; altta return credits * grade_point. Frame'den çıkan petrol mavisi return oku 10.0 değerine (float, hardal sarısı) gidiyor; 10.0 açık mavi, çivit mavisi çerçeveli bantla vurgulu ve oradan bir ok call satırındaki weighted_points(4, 2.5) ifadesine çıkıyor. points etiketi aynı 10.0'ı gösteriyor. Çıktı: 10.0.</desc>
+  <desc id="ders4-return-flow-d">Solda kod: def weighted_points(credits, gp):, indentation'lı return credits * gp, boş satır, points = weighted_points(4, 2.5), print(points); 4 int (turuncu), 2.5 float (hardal sarısı). Sağda weighted_points call'unun frame'i: lacivert credits etiketi 4'ü (int, turuncu), gp etiketi 2.5'i (float, hardal sarısı) gösteriyor; altta return credits * gp. Frame'den çıkan petrol mavisi return oku 10.0 değerine (float, hardal sarısı) gidiyor; 10.0 açık mavi, çivit mavisi çerçeveli bantla vurgulu ve oradan bir ok call satırındaki weighted_points(4, 2.5) ifadesine çıkıyor. points etiketi aynı 10.0'ı gösteriyor. Çıktı: 10.0.</desc>
   <!-- source: S48; run s8_return: 10.0 (type float) (Python 3.14.8, 2026-10-10) -->
   <defs>
     <marker id="ders4-return-flow-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
@@ -90,8 +90,8 @@
   </defs>
   <rect class="bg" width="1152" height="420"/>
   <rect class="soft" x="2" y="10" width="638" height="186" rx="4"/>
-  <text class="cd24" x="18" y="44">def weighted_points(credits, grade_point):</text>
-  <text class="cd24 pre" x="18" y="78" xml:space="preserve">    return credits * grade_point</text>
+  <text class="cd24" x="18" y="44">def weighted_points(credits, gp):</text>
+  <text class="cd24 pre" x="18" y="78" xml:space="preserve">    return credits * gp</text>
   <text class="cd24" x="18" y="146">points = weighted_points(<tspan class="t-int">4</tspan>, <tspan class="t-float">2.5</tspan>)</text>
   <text class="cd24" x="18" y="180">print(points)</text>
   <rect class="local" x="660" y="10" width="488" height="252"/>
@@ -103,14 +103,14 @@
   <rect class="box t-int" x="930" y="70" width="72" height="56" rx="6"/>
   <text class="cd mid t-int" x="966" y="108">4</text>
   <text class="ty t-int" x="1016" y="106">int</text>
-  <rect class="name" x="676" y="140" width="217" height="56" rx="6"/>
-  <text class="nm mid" x="784.5" y="178">grade_point</text>
-  <path class="ar" d="M893,168.0 H927" marker-end="url(#ders4-return-flow-ah)"/>
+  <rect class="name" x="676" y="140" width="72" height="56" rx="6"/>
+  <text class="nm mid" x="712" y="178">gp</text>
+  <path class="ar" d="M748,168.0 H927" marker-end="url(#ders4-return-flow-ah)"/>
   <rect class="box t-float" x="930" y="140" width="82" height="56" rx="6"/>
   <text class="cd mid t-float" x="971" y="178">2.5</text>
   <text class="ty t-float" x="1026" y="176">float</text>
   <path class="sep" d="M660,210 H1148"/>
-  <text class="cd24" x="676" y="244">return credits * grade_point</text>
+  <text class="cd24" x="676" y="244">return credits * gp</text>
   <path class="ar-ok" d="M760,262 V318 H463" marker-end="url(#ders4-return-flow-ahok)"/>
   <text class="lb okt mid" x="612" y="306">return</text>
   <rect class="boxhl" x="354" y="284" width="111" height="68" rx="10"/>

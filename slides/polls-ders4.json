@@ -1,6 +1,21 @@
 {
-  "d4-giris-dilim": {"options": [{"code": "FIZ1 127 I"}, {"code": "FIZ 127 I"}, {"code": "FIZ 27 I"}, {"code": "FIZ 127 F"}], "answer": 2, "why": "[:3] ilk üç, [-3:] son üç karakter; code[1] ikinci karakter."},
-  "d4-alias-is": {"options": [{"code": "True True"}, {"code": "False True"}, {"code": "True False"}, {"code": "False False"}], "answer": 2, "why": "b ile a aynı list'tir; c ayrı bir list ve değeri artık farklı."},
-  "d4-try-abc": {"options": [{"code": "B"}, {"code": "A"}, {"code": "A\nB"}, {"text": "ValueError"}], "answer": 1, "why": "int(\"3.5\") hata verir; print(\"A\") atlanır, except çalışır."},
-  "d4-return-son": {"options": [{"code": "1\nA"}, {"code": "A\n1"}, {"code": "1"}, {"code": "A"}], "answer": 3, "why": "return 1 function'ı bitirir; print(\"A\") hiç çalışmaz."}
+  "d4-giris-toplam": {"options": [{"code": "6"}, {"code": "3"}, {"code": "1\n3\n6"}, {"code": "10"}], "answer": 1, "why": "t, 1 + 2 + 3'ü toplar; print loop'tan sonra, bir kez çalışır."},
+  "d4-giris-sifirlama": {"options": [{"code": "6"}, {"code": "3"}, {"code": "0"}, {"text": "Hata verir"}], "answer": 2, "why": "total = 0 loop'un içinde: her tur sıfırlanır, yalnız son turun 3'ü kalır."},
+  "d4-giris-ic-ice": {"options": [{"code": "5"}, {"code": "3"}, {"code": "6"}, {"code": "2"}], "answer": 3, "why": "Dıştaki loop 3 tur döner, her turunda içteki 2 tur: 3 × 2 = 6."},
+  "d4-giris-break-continue": {"options": [{"code": "1\n2"}, {"code": "1\n2\n4"}, {"code": "1\n2\n4\n5"}, {"code": "1\n2\n3\n4"}], "answer": 2, "why": "continue yalnız 3'ün turunu atlar; break 5'te loop'u bitirir."},
+  "d4-giris-try": {"options": [{"code": "a\nb\nc"}, {"code": "b"}, {"code": "a\nc"}, {"code": "b\nc"}], "answer": 4, "why": "Hata çıkınca try'ın kalanı atlanır, except çalışır, program devam eder."},
+  "d4-giris-assert": {"options": [{"code": "geçti"}, {"text": "AssertionError ile durur"}, {"code": "False\ngeçti"}, {"text": "Hiçbir şey yazmaz"}], "answer": 2, "why": "Şart False: assert programı durdurur."},
+  "d4-import-sqrt": {"options": [{"code": "5.0"}, {"code": "5"}, {"code": "17.0"}, {"text": "NameError"}], "answer": 1, "why": "sqrt bir float verir: 4.0 + 1, 5.0 olur."},
+  "d4-def-sira": {"options": [{"code": "başla\nMAT123 4"}, {"code": "MAT123 4\nbaşla"}, {"code": "başla"}, {"code": "code credits\nbaşla"}], "answer": 1, "why": "def yalnızca tanımlar; gövdeyi call'lar çalıştırır."},
+  "d4-ic-ice-call": {"options": [{"code": "11 22"}, {"code": "12 24"}, {"code": "10 20"}, {"text": "Hata verir"}], "answer": 1, "why": "Önce içteki: twice(5) 10, plus_one(10) 11; twice(11) 22."},
+  "d4-return-son": {"options": [{"code": "1\nA"}, {"code": "A\n1"}, {"code": "1"}, {"code": "A"}], "answer": 3, "why": "return 1 function'ı bitirir; print(\"A\") hiç çalışmaz."},
+  "d4-print-return": {"options": [{"code": "16\nNone"}, {"code": "16\n16"}, {"code": "None"}, {"text": "Hata verir"}], "answer": 1, "why": "calc 16'yı yazdırır ama bir şey döndürmez; result None'ı gösterir."},
+  "d4-notebook-sira": {"options": [{"code": "5"}, {"code": "10"}, {"code": "20"}, {"text": "Hata verir"}], "answer": 3, "why": "Notebook, cell'leri çalıştırıldıkları sırayla hatırlar; orta cell iki kez çalıştı, x 20 oldu."},
+  "d4-ara-return": {"options": [{"code": "16\nNone"}, {"code": "16"}, {"code": "None"}, {"text": "Hata verir"}], "answer": 2, "why": "calc 16'yı return eder; ekrana yalnızca son satırdaki print yazar."},
+  "d4-scope-x": {"options": [{"code": "6 6"}, {"code": "5 5"}, {"code": "NameError"}, {"code": "5 6"}], "answer": 4, "why": "Parameter x, call'un içinde ayrı bir isimdir; dönen 6 y'ye bağlanır."},
+  "d4-class": {"options": [{"code": "False True"}, {"code": "True True"}, {"code": "False False"}, {"code": "TypeError"}], "answer": 1, "why": "İki çağrı iki ayrı object yapar; ikisinin type'ı da Course'tur."},
+  "d4-init": {"options": [{"code": "3 3"}, {"code": "4 4"}, {"code": "TypeError"}, {"code": "4 3"}], "answer": 4, "why": "Her object kendi credits'ini tutar; self'i çağıran yazmaz, Python verir."},
+  "d4-deposit-none": {"options": [{"code": "100 100"}, {"code": "None 0"}, {"code": "None 100"}, {"text": "Hata verir"}], "answer": 3, "why": "deposit object'i değiştirir ama return etmez: call'un yeri None, money 100."},
+  "d4-method": {"options": [{"code": "5.5"}, {"code": "TypeError"}, {"code": "7.5"}, {"code": "None"}], "answer": 3, "why": "Python self'e yeni object'i verir, gp 2.5 olur; 3 * 2.5 = 7.5."},
+  "d4-yazma": {"options": [{"code": "birikiüç"}, {"code": "bir\niki\nüç"}, {"code": "iki"}, {"text": "Hiçbir şey"}], "answer": 3, "why": "Ekrana yalnızca print yazar; iki write test.txt'ye gider."}
 }

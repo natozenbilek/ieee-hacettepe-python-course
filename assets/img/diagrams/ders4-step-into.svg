@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 560 480" width="560" height="480" role="img" aria-labelledby="ders4-step-into-t ders4-step-into-d">
   <title id="ders4-step-into-t">PyCharm Debug: Step Into ve Frames</title>
-  <desc id="ders4-step-into-d">PyCharm Debug penceresinin çizimi. Üstte üç tuş: F8 Step Over, F7 Step Into (açık mavi, çivit mavisi çerçeveyle vurgulu), Shift+F8 Step Out. Frames listesinde seçili satır weighted_points, altında &lt;module&gt;. Variables bölümünde lacivert etiketler: credits 4'ü (int, turuncu), grade_point 2.5'i (float, hardal sarısı), points 10.0'ı (float, hardal sarısı) gösteriyor. Altta: en üstteki frame, şu an çalışan call.</desc>
-  <!-- source: S71; run s9_stepinto: inside weighted_points after points = credits * grade_point, locals credits 4, grade_point 2.5, points 10.0; prints 10.0 (Python 3.14.8, 2026-10-10) -->
+  <desc id="ders4-step-into-d">PyCharm Debug penceresinin çizimi. Üstte üç tuş: F8 Step Over, F7 Step Into (açık mavi, çivit mavisi çerçeveyle vurgulu), Shift+F8 Step Out. Frames listesinde seçili satır weighted_points, altında &lt;module&gt;. Variables bölümünde lacivert etiketler: credits 4'ü (int, turuncu), gp 2.5'i (float, hardal sarısı) gösteriyor. Altta: en üstteki frame, şu an çalışan call.</desc>
+  <!-- source: S71; run s9_stepinto: inside weighted_points after points = credits * gp, locals credits 4, gp 2.5 (2026-11-04: the points row left, S162 returns credits * gp); prints 10.0 (Python 3.14.8, 2026-10-10) -->
   <defs>
     <marker id="ders4-step-into-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
     <style>
@@ -104,24 +104,18 @@
   <text class="cd24 b7" x="18" y="160">weighted_points</text>
   <text class="cd24" x="18" y="200">&lt;module&gt;</text>
   <text class="lb" x="2" y="248">Variables</text>
-  <rect class="outp" x="2" y="258" width="556" height="180" rx="4"/>
+  <rect class="outp" x="2" y="258" width="556" height="124" rx="4"/>
   <rect class="name" x="16" y="268" width="150" height="50" rx="6"/>
   <text class="nm mid" x="91" y="303">credits</text>
   <path class="ar" d="M166,293.0 H257" marker-end="url(#ders4-step-into-ah)"/>
   <rect class="box t-int" x="260" y="268" width="72" height="50" rx="6"/>
   <text class="cd mid t-int" x="296" y="303">4</text>
   <text class="ty t-int" x="346" y="301">int</text>
-  <rect class="name" x="16" y="324" width="217" height="50" rx="6"/>
-  <text class="nm mid" x="124.5" y="359">grade_point</text>
-  <path class="ar" d="M233,349.0 H257" marker-end="url(#ders4-step-into-ah)"/>
+  <rect class="name" x="16" y="324" width="72" height="50" rx="6"/>
+  <text class="nm mid" x="52" y="359">gp</text>
+  <path class="ar" d="M88,349.0 H257" marker-end="url(#ders4-step-into-ah)"/>
   <rect class="box t-float" x="260" y="324" width="82" height="50" rx="6"/>
   <text class="cd mid t-float" x="301" y="359">2.5</text>
   <text class="ty t-float" x="356" y="357">float</text>
-  <rect class="name" x="16" y="380" width="133" height="50" rx="6"/>
-  <text class="nm mid" x="82.5" y="415">points</text>
-  <path class="ar" d="M149,405.0 H257" marker-end="url(#ders4-step-into-ah)"/>
-  <rect class="box t-float" x="260" y="380" width="99" height="50" rx="6"/>
-  <text class="cd mid t-float" x="309.5" y="415">10.0</text>
-  <text class="ty t-float" x="373" y="413">float</text>
-  <text class="tx sub" x="2" y="470">en üstteki frame, şu an çalışan call</text>
+  <text class="tx sub" x="2" y="414">en üstteki frame, şu an çalışan call</text>
 </svg>
