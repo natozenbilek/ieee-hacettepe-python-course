@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ödev 4 · Introduction to Python · IEEE Hacettepe</title>
+<meta name="description" content="Introduction to Python, Ödev 4: GitHub reposu, görevler, 15 Kasım Pazar 23.59 son teslim ve teslim formu.">
+<link rel="preload" href="../assets/fonts/atkinson-hyperlegible-next-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/atkinson-hyperlegible-next-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/jetbrains-mono-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/latin-modern-roman-10-bold.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+<!-- shell:header (tools/build_pages.py) -->
+<a class="skip" href="#icerik">İçeriğe geç</a>
+<header class="site-head">
+  <div class="masthead is-sub" style="--mast-sky:#2097C3">
+    <picture class="mast-art">
+      <source media="(max-width: 699px)" srcset="../assets/img/site/hero-paint-900.svg">
+      <img src="../assets/img/site/hero-paint-1920.svg" width="1920" height="640" alt="Elle çizilmiş bir piton yılanı, ekranında print(&quot;Merhaba&quot;) ve çıktısı yazan bir dizüstü bilgisayara sarılmış." fetchpriority="high">
+    </picture>
+    <nav class="site-nav" aria-label="Ana menü">
+      <div class="wrap">
+        <ul>
+          <li><a href="../index.html" aria-label="Ana sayfa">ANA SAYFA</a></li>
+          <li><a href="../kurulum.html" aria-label="Kurulum">KURULUM</a></li>
+          <li><a href="../kaynaklar.html" aria-label="Ek kaynaklar">EK KAYNAKLAR</a></li>
+          <li><a href="../tarihce.html" aria-label="Tarihçe">TARİHÇE</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="mast-title wrap">
+      <p class="mast-course"><a href="../index.html" lang="en">Introduction to Python</a></p>
+      <h1>Ödev 4</h1>
+    </div>
+  </div>
+  <div class="brand-strip">
+    <div class="wrap">
+      <a class="lockup" href="../index.html"><img src="../assets/brand/ieee-hacettepe-lockup-renkli.png" alt="IEEE Hacettepe University Student Branch" width="413" height="48"></a>
+    </div>
+  </div>
+</header>
+<!-- /shell:header -->
+
+<main id="icerik" class="wrap">
+
+  <p class="lead">Bu ödevin sonunda kendi <span lang="en">function</span>'larınızı yazıp onlardan değer alan, <code>print</code> ile <code>return</code>'ü ayıran, hatalı girdide yeniden soran ve kendi <code>class</code>'ını yazan programlar&nbsp;yazabileceksiniz.</p>
+
+  <dl class="facts">
+    <dt>Repo</dt><dd><a class="btn" href="https://github.com/natozenbilek/football-tournament-python-hw">Ödev 4 reposunu aç</a> <code>odev4.py</code>, bu haftanın konu özeti ve <code>kontrol.py</code>; yeşil Code düğmesi, Download&nbsp;ZIP</dd>
+    <dt>Son teslim</dt><dd><time datetime="2026-11-15T23:59">15 Kasım 2026 Pazar, 23.59'a&nbsp;kadar</time></dd>
+    <dt>Teslim</dt><dd><a href="https://forms.gle/eMHjvPfSRP9cp1JH7">Ödev 4 teslim formu</a></dd>
+  </dl>
+
+  <h2 id="gorevler">Görevler</h2>
+  <ol class="hw-tasks">
+    <li><strong>Puan.</strong> Galibiyet ve beraberlik sayısından takımın puanını <code>return</code> eden <code>points(wins, draws)</code> <span lang="en">function</span>'ını&nbsp;yazacaksınız.</li>
+    <li><strong>Maçın sonucu.</strong> İki takımın golünden maçın sonucunu döndüren <code>result(home, away)</code>'u <code>if</code>, <code>elif</code> ve <code>else</code> ile, her dalda bir <code>return</code> ile&nbsp;yazacaksınız.</li>
+    <li><strong>Bozuk iki function.</strong> Hata vermeden yanlış sonuç veren iki <span lang="en">function</span>'ı düzeltecek, her birinin neden bozuk olduğunu tek cümleyle&nbsp;yazacaksınız.</li>
+    <li><strong>Skoru sormak.</strong> Doğru aralıkta bir tam sayı gelene kadar soran <code>ask_score(prompt, low, high)</code>'u <code>while True</code>, <code>try</code> ve <code>except</code> ile&nbsp;yazacaksınız.</li>
+    <li><strong>Oyuncu.</strong> Adı, forma numarasını ve golünü tutan, <code>score_goal()</code> ve <code>summary()</code> <span lang="en">method</span>'ları olan bir <code>Player</code> <code>class</code>'ı&nbsp;yazacaksınız.</li>
+  </ol>
+  <p>Zorunlu olmayan bir Meraklısına görevi de var: <code>import random</code> ile, eşitlik bozulana kadar süren bir penaltı&nbsp;atışları.</p>
+
+  <p>Görevlerin ayrıntısı ve beklenen çıktılar dosyanın içinde. TODO satırlarını doldurduktan sonra formda <span class="ui">İsim</span> alanına isminizi yazın, dosyayı <span class="ui">Ödev dosyası</span> alanına yükleyin ve <span class="ui">Kişisel verileriniz</span> sorusundaki onay kutusunu işaretleyin. Eklemek istediğiniz bir şey varsa isteğe bağlı <span class="ui">Açıklama</span> alanına&nbsp;yazabilirsiniz.</p>
+
+</main>
+
+<!-- shell:footer (tools/build_pages.py) -->
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="foot-course" lang="en">Introduction to Python</p>
+    <p>IEEE Hacettepe University Student Branch, Güz 2026</p>
+    <ul class="foot-links">
+      <li><a href="https://www.ee.hacettepe.edu.tr/">Hacettepe Üniversitesi Elektrik ve Elektronik Mühendisliği Bölümü</a></li>
+      <li><a href="https://www.ieeehacettepe.com/">IEEE Hacettepe</a></li>
+    </ul>
+    <p>Python adı ve logosu Python Software Foundation'ın ticari markasıdır, bu kursun vakıfla resmi bir bağı yok.</p>
+    <p>Görsellerin kaynakları ve lisansları <a href="../gorseller.html">Görseller</a> sayfasında. Sitedeki yazı tipleri Atkinson Hyperlegible Next, JetBrains Mono ve Patrick Hand (SIL Open Font License 1.1) ile Latin Modern Roman (GUST Font License).</p>
+    <p>Ödev teslim formlarının aydınlatma ve açık rıza metni <a href="../kvkk.html">Kişisel verileriniz</a> sayfasında.</p>
+    <p>Son güncelleme: 6 Kasım 2026</p>
+    <!-- TODO: ders materyalinin lisansı (Nezih karar verecek) -->
+  </div>
+</footer>
+<!-- /shell:footer -->
+</body>
+</html>
