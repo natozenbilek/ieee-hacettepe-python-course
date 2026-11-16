@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="dg t5po" viewBox="0 0 1152 450" width="1152" height="450" role="img" aria-labelledby="ders5-points-overwrite-t ders5-points-overwrite-d">
+  <title id="ders5-points-overwrite-t">Aynı key'e ikinci atama</title>
+  <desc id="ders5-points-overwrite-d">Kod: points = {} (# 1), points["ARG"] = 3 (# 2), print(points), points["ARG"] = 6 (# 3), print(points); çıktı {'ARG': 3}. Kare 1: points boş bir dict'i gösteriyor. Kare 2: ARG satırı 3 ile, açık mavi. Altta soru: Aynı key'e ikinci atamadan sonra dict'te kaç satır olur? Tıklayınca: çıktının ikinci satırı {'ARG': 6}; kare 3'te aynı satır 6 olmuş, ikinci satır yok; Bir: var olan bir key'e atama, eski value'nun üstüne yazar. İkinci tıklamada: 5B'nin başındaki BBM101 de böyle; ikinci not birincinin üstüne yazıldı.</desc>
+  <!-- built by authoring/builder-paralel/ders5-2026-11-12-iyilestirme.py (Python 3.14.8, 2026-11-12). source: figs_b.points_overwrite() of the theme pass and a second build step -->
+  <defs>
+    <marker id="ders5-points-overwrite-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
+    <marker id="ders5-points-overwrite-ahm" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-m" d="M0,0 L12,6 L0,12 z"/></marker>
+    <marker id="ders5-points-overwrite-ahok" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-ok" d="M0,0 L12,6 L0,12 z"/></marker>
+    <marker id="ders5-points-overwrite-aherr" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-err" d="M0,0 L12,6 L0,12 z"/></marker>
+    <style>
+/* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
+.dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
+.dg .bg{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF)}
+.dg .tx,.dg .lb,.dg .ti,.dg .cd,.dg .cd24{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .tx{font-size:24px;font-weight:400}
+.dg .lb{font-size:24px;font-weight:600}
+.dg .ti{font-size:28px;font-weight:700}
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-family:"JetBrains Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-weight:500}
+.dg .cd{font-size:28px}
+.dg .cd24{font-size:24px}
+.dg .ty{font-size:24px;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .nm{font-size:28px;font-weight:600;fill:#FFFFFF;fill:var(--d-on-name,#FFFFFF)}
+.dg .src{font-size:18px;font-weight:400;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .sub{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .okt{fill:#0D6385;fill:var(--d-ok,#0D6385);font-weight:600}
+.dg .errt{fill:#C21C20;fill:var(--d-err,#C21C20);font-weight:600}
+.dg .b7{font-weight:700}
+.dg .pre{white-space:pre}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .boxm{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .boxhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .blk{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2.5}
+.dg .frame{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .local{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .tmpl{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .cell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellh{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .name{fill:#181C3E;fill:var(--d-name,#181C3E)}
+.dg .soft{fill:#F3F4F8;fill:var(--d-surface,#F3F4F8)}
+.dg .outp{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .tint{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .hl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3)}
+.dg .emph{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .errbox{fill:#FCEDEE;fill:var(--d-err-bg,#FCEDEE);stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .errdash{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .okbox{fill:#E9F6FA;fill:var(--d-ok-bg,#E9F6FA);stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .key{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .dot{fill:#3B4595;fill:var(--d-brand,#3B4595)}
+.dg .dot0{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .ar,.dg .ld,.dg .axis{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E)}
+.dg .ar,.dg .axis{stroke-width:2.5}
+.dg .ld{stroke-width:2}
+.dg .ar-m{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .ar-old{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .ar-ok{fill:none;stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .ar-err{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .sep{fill:none;stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .dash{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2;stroke-dasharray:8 6}
+.dg .ah{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .ah-m{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .ah-ok{fill:#0D6385;fill:var(--d-ok,#0D6385)}
+.dg .ah-err{fill:#C21C20;fill:var(--d-err,#C21C20)}
+.dg .co{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .co-t{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF);font-size:24px;font-weight:700;text-anchor:middle}
+.dg .sec{stroke:#3B4595;stroke:var(--d-second,#3B4595)}
+/* dg v4 type renkleri · authoring/DIAGRAMS.md §10'dan aynen kopyalanır (dg v3 bloğundan sonra) */
+.dg rect.t-int,.dg path.t-int,.dg circle.t-int{fill:#F2CEB3;fill:var(--t-int-bg,#F2CEB3);stroke:#854B00;stroke:var(--t-int,#854B00)}
+.dg text.t-int,.dg tspan.t-int{fill:#613109;fill:var(--t-int-tx,#613109)}
+.dg rect.t-float,.dg path.t-float,.dg circle.t-float{fill:#FFF1C6;fill:var(--t-float-bg,#FFF1C6);stroke:#9F7000;stroke:var(--t-float,#9F7000)}
+.dg text.t-float,.dg tspan.t-float{fill:#5D420E;fill:var(--t-float-tx,#5D420E)}
+.dg rect.t-bool,.dg path.t-bool,.dg circle.t-bool{fill:#C4E9E1;fill:var(--t-bool-bg,#C4E9E1);stroke:#0E7A6D;stroke:var(--t-bool,#0E7A6D)}
+.dg text.t-bool,.dg tspan.t-bool{fill:#0A473F;fill:var(--t-bool-tx,#0A473F)}
+.dg rect.t-str,.dg path.t-str,.dg circle.t-str{fill:#D9F6DD;fill:var(--t-str-bg,#D9F6DD);stroke:#296A3B;stroke:var(--t-str,#296A3B)}
+.dg text.t-str,.dg tspan.t-str{fill:#1A4B28;fill:var(--t-str-tx,#1A4B28)}
+.dg rect.t-none,.dg path.t-none,.dg circle.t-none{fill:#F6F3EF;fill:var(--t-none-bg,#F6F3EF);stroke:#534C45;stroke:var(--t-none,#534C45)}
+.dg text.t-none,.dg tspan.t-none{fill:#413C38;fill:var(--t-none-tx,#413C38)}
+.dg rect.t-list,.dg path.t-list,.dg circle.t-list{fill:#F3C8DB;fill:var(--t-list-bg,#F3C8DB);stroke:#8A2B60;stroke:var(--t-list,#8A2B60)}
+.dg text.t-list,.dg tspan.t-list{fill:#651E45;fill:var(--t-list-tx,#651E45)}
+.dg rect.t-tuple,.dg path.t-tuple,.dg circle.t-tuple{fill:#E3EAF2;fill:var(--t-tuple-bg,#E3EAF2);stroke:#4A6378;stroke:var(--t-tuple,#4A6378)}
+.dg text.t-tuple,.dg tspan.t-tuple{fill:#2C3E4F;fill:var(--t-tuple-tx,#2C3E4F)}
+.dg rect.t-dict,.dg path.t-dict,.dg circle.t-dict{fill:#DBCEC4;fill:var(--t-dict-bg,#DBCEC4);stroke:#4F2611;stroke:var(--t-dict,#4F2611)}
+.dg text.t-dict,.dg tspan.t-dict{fill:#4C2817;fill:var(--t-dict-tx,#4C2817)}
+.dg rect.t-set,.dg path.t-set,.dg circle.t-set{fill:#F2F8D6;fill:var(--t-set-bg,#F2F8D6);stroke:#747C42;stroke:var(--t-set,#747C42)}
+.dg text.t-set,.dg tspan.t-set{fill:#3F4418;fill:var(--t-set-tx,#3F4418)}
+.dg rect.boxhl,.dg path.boxhl,.dg rect.cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595)}
+/* kod PyCharm gibi: JetBrains Mono ligature'ları kapalı (>= iki karakter kalır) */
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-variant-ligatures:none;font-feature-settings:"liga" 0,"calt" 0}
+.dg text.fq{font-size:28px;font-weight:400}
+/* kod PyCharm gibi: ligature yok */
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-variant-ligatures:none}
+    </style>
+  </defs>
+  <rect class="bg" width="1152" height="450"/>
+<rect class="soft" x="2" y="2" width="700" height="168" rx="4"/>
+<text class="cd24 pre" x="16" y="32" xml:space="preserve">points = {}                    # <tspan class="t-int">1</tspan></text>
+<text class="cd24 pre" x="16" y="62" xml:space="preserve">points[<tspan class="t-str">"ARG"</tspan>] = <tspan class="t-int">3</tspan>              # <tspan class="t-int">2</tspan></text>
+<text class="cd24" x="16" y="92">print(points)</text>
+<text class="cd24 pre" x="16" y="122" xml:space="preserve">points[<tspan class="t-str">"ARG"</tspan>] = <tspan class="t-int">6</tspan>              # <tspan class="t-int">3</tspan></text>
+<text class="cd24" x="16" y="152">print(points)</text>
+<text class="lb sub" x="730" y="30">Çıktı</text>
+<rect class="outp" x="730" y="40" width="300" height="84" rx="4"/>
+<text class="cd24" x="744" y="70">{'ARG': 3}</text>
+<circle class="co" cx="20" cy="196" r="16"/>
+<text class="co-t" x="20" y="204">1</text>
+<rect class="name" x="122" y="176" width="114" height="40" rx="6"/>
+<text class="nm mid" style="font-size:24px" x="179" y="205">points</text>
+<path class="ar" d="M179,216 V243" marker-end="url(#ders5-points-overwrite-ah)"/>
+<rect class="box t-dict" x="42" y="246" width="280" height="50" rx="6"/>
+<path class="sep" d="M372,170 V310"/>
+<circle class="co" cx="408" cy="196" r="16"/>
+<text class="co-t" x="408" y="204">2</text>
+<rect class="name" x="510" y="176" width="114" height="40" rx="6"/>
+<text class="nm mid" style="font-size:24px" x="567" y="205">points</text>
+<path class="ar" d="M567,216 V243" marker-end="url(#ders5-points-overwrite-ah)"/>
+<rect class="boxhl" x="424" y="240" width="292" height="62" rx="10"/>
+<rect class="box t-dict" x="430" y="246" width="280" height="50" rx="6"/>
+<rect class="cell t-str" x="440" y="256" width="170" height="30"/>
+<rect class="cell t-int" x="610" y="256" width="90" height="30"/>
+<text class="cd24 mid t-str" x="525" y="279">"ARG"</text>
+<text class="cd24 mid t-int" x="655" y="279">3</text>
+<path class="sep" d="M760,170 V310"/>
+<g class="fragment t5po-k0" data-fragment-index="0">
+<text class="cd24" x="744" y="106">{'ARG': 6}</text>
+<circle class="co" cx="796" cy="196" r="16"/>
+<text class="co-t" x="796" y="204">3</text>
+<rect class="name" x="898" y="176" width="114" height="40" rx="6"/>
+<text class="nm mid" style="font-size:24px" x="955" y="205">points</text>
+<path class="ar" d="M955,216 V243" marker-end="url(#ders5-points-overwrite-ah)"/>
+<rect class="boxhl" x="812" y="240" width="292" height="62" rx="10"/>
+<rect class="box t-dict" x="818" y="246" width="280" height="50" rx="6"/>
+<rect class="cell t-str" x="828" y="256" width="170" height="30"/>
+<rect class="cell t-int" x="998" y="256" width="90" height="30"/>
+<text class="cd24 mid t-str" x="913" y="279">"ARG"</text>
+<text class="cd24 mid t-int" x="1043" y="279">6</text>
+<text class="tx sub" x="818" y="326">ikinci satır yok</text>
+</g>
+<text class="tx" x="0" y="350">Aynı key'e ikinci atamadan sonra dict'te kaç satır olur?</text>
+<g class="fragment t5po-k0" data-fragment-index="0">
+<text class="tx" x="0" y="388"><tspan class="b7">Bir:</tspan> var olan bir key'e atama, eski value'nun üstüne yazar.</text>
+</g>
+<g class="fragment t5po-k1" data-fragment-index="1">
+<text class="tx" x="0" y="436">5B'nin başındaki BBM101 de böyle: ikinci not birincinin üstüne yazıldı.</text>
+</g>
+</svg>

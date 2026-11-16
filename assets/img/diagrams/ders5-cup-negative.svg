@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="dg t5cn" viewBox="0 0 1152 170" width="1152" height="170" role="img" aria-labelledby="ders5-cup-negative-t ders5-cup-negative-d">
+  <title id="ders5-cup-negative-t">cup ve negative: 255 - değer</title>
+  <desc id="ders5-cup-negative-d">Solda cup (beyaz zemin, kahverengi fincan) ve 255 - değer oku; sağda soru: Beyaz zemin negatifte ne renk olur? Birinci tıklamada negative (siyah zemin, açık mavi fincan, koyu gri buhar) ve (255, 255, 255) → (0, 0, 0): siyah. İkinci tıklamada kahve: (111, 78, 55) → (144, 177, 200).</desc>
+  <!-- built by authoring/builder-paralel/ders5-2026-11-12-iyilestirme.py (Python 3.14.8, 2026-11-12). source: negative[0][0] -> (0, 0, 0); negative[3][7] -> (144, 177, 200). -->
+  <defs>
+    <marker id="ders5-cup-negative-ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah" d="M0,0 L12,6 L0,12 z"/></marker>
+    <marker id="ders5-cup-negative-ahm" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-m" d="M0,0 L12,6 L0,12 z"/></marker>
+    <marker id="ders5-cup-negative-ahok" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-ok" d="M0,0 L12,6 L0,12 z"/></marker>
+    <marker id="ders5-cup-negative-aherr" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="ah-err" d="M0,0 L12,6 L0,12 z"/></marker>
+    <style>
+/* dg v3 · IEEE Hacettepe Python diyagram stili · authoring/DIAGRAMS.md'den aynen kopyalanır */
+.dg{font-family:"Atkinson Hyperlegible Next","Segoe UI",Arial,sans-serif}
+.dg .bg{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF)}
+.dg .tx,.dg .lb,.dg .ti,.dg .cd,.dg .cd24{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .tx{font-size:24px;font-weight:400}
+.dg .lb{font-size:24px;font-weight:600}
+.dg .ti{font-size:28px;font-weight:700}
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-family:"JetBrains Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;font-weight:500}
+.dg .cd{font-size:28px}
+.dg .cd24{font-size:24px}
+.dg .ty{font-size:24px;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .nm{font-size:28px;font-weight:600;fill:#FFFFFF;fill:var(--d-on-name,#FFFFFF)}
+.dg .src{font-size:18px;font-weight:400;fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .sub{fill:#50566F;fill:var(--d-type,#50566F)}
+.dg .okt{fill:#0D6385;fill:var(--d-ok,#0D6385);font-weight:600}
+.dg .errt{fill:#C21C20;fill:var(--d-err,#C21C20);font-weight:600}
+.dg .b7{font-weight:700}
+.dg .pre{white-space:pre}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .box{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .boxm{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .boxhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .blk{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2.5}
+.dg .frame{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .local{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .tmpl{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .cell{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellh{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2}
+.dg .cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .name{fill:#181C3E;fill:var(--d-name,#181C3E)}
+.dg .soft{fill:#F3F4F8;fill:var(--d-surface,#F3F4F8)}
+.dg .outp{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .tint{fill:#EFF0F7;fill:var(--d-tint,#EFF0F7);stroke:#14172E;stroke:var(--d-ink,#14172E);stroke-width:2.5}
+.dg .hl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3)}
+.dg .emph{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .errbox{fill:#FCEDEE;fill:var(--d-err-bg,#FCEDEE);stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .errdash{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .okbox{fill:#E9F6FA;fill:var(--d-ok-bg,#E9F6FA);stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .key{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2}
+.dg .dot{fill:#3B4595;fill:var(--d-brand,#3B4595)}
+.dg .dot0{fill:#FFFFFF;fill:var(--d-paper,#FFFFFF);stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:3}
+.dg .ar,.dg .ld,.dg .axis{fill:none;stroke:#14172E;stroke:var(--d-ink,#14172E)}
+.dg .ar,.dg .axis{stroke-width:2.5}
+.dg .ld{stroke-width:2}
+.dg .ar-m{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5}
+.dg .ar-old{fill:none;stroke:#767C95;stroke:var(--d-muted,#767C95);stroke-width:2.5;stroke-dasharray:8 6}
+.dg .ar-ok{fill:none;stroke:#0D6385;stroke:var(--d-ok,#0D6385);stroke-width:2.5}
+.dg .ar-err{fill:none;stroke:#C21C20;stroke:var(--d-err,#C21C20);stroke-width:2.5}
+.dg .sep{fill:none;stroke:#D3D7E2;stroke:var(--d-rule,#D3D7E2);stroke-width:2}
+.dg .dash{fill:none;stroke:#3B4595;stroke:var(--d-brand,#3B4595);stroke-width:2;stroke-dasharray:8 6}
+.dg .ah{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .ah-m{fill:#767C95;fill:var(--d-muted,#767C95)}
+.dg .ah-ok{fill:#0D6385;fill:var(--d-ok,#0D6385)}
+.dg .ah-err{fill:#C21C20;fill:var(--d-err,#C21C20)}
+.dg .co{fill:#14172E;fill:var(--d-ink,#14172E)}
+.dg .co-t{fill:#FFFFFF;fill:var(--d-bg,#FFFFFF);font-size:24px;font-weight:700;text-anchor:middle}
+.dg .sec{stroke:#3B4595;stroke:var(--d-second,#3B4595)}
+/* dg v4 type renkleri · authoring/DIAGRAMS.md §10'dan aynen kopyalanır (dg v3 bloğundan sonra) */
+.dg rect.t-int,.dg path.t-int,.dg circle.t-int{fill:#F2CEB3;fill:var(--t-int-bg,#F2CEB3);stroke:#854B00;stroke:var(--t-int,#854B00)}
+.dg text.t-int,.dg tspan.t-int{fill:#613109;fill:var(--t-int-tx,#613109)}
+.dg rect.t-float,.dg path.t-float,.dg circle.t-float{fill:#FFF1C6;fill:var(--t-float-bg,#FFF1C6);stroke:#9F7000;stroke:var(--t-float,#9F7000)}
+.dg text.t-float,.dg tspan.t-float{fill:#5D420E;fill:var(--t-float-tx,#5D420E)}
+.dg rect.t-bool,.dg path.t-bool,.dg circle.t-bool{fill:#C4E9E1;fill:var(--t-bool-bg,#C4E9E1);stroke:#0E7A6D;stroke:var(--t-bool,#0E7A6D)}
+.dg text.t-bool,.dg tspan.t-bool{fill:#0A473F;fill:var(--t-bool-tx,#0A473F)}
+.dg rect.t-str,.dg path.t-str,.dg circle.t-str{fill:#D9F6DD;fill:var(--t-str-bg,#D9F6DD);stroke:#296A3B;stroke:var(--t-str,#296A3B)}
+.dg text.t-str,.dg tspan.t-str{fill:#1A4B28;fill:var(--t-str-tx,#1A4B28)}
+.dg rect.t-none,.dg path.t-none,.dg circle.t-none{fill:#F6F3EF;fill:var(--t-none-bg,#F6F3EF);stroke:#534C45;stroke:var(--t-none,#534C45)}
+.dg text.t-none,.dg tspan.t-none{fill:#413C38;fill:var(--t-none-tx,#413C38)}
+.dg rect.t-list,.dg path.t-list,.dg circle.t-list{fill:#F3C8DB;fill:var(--t-list-bg,#F3C8DB);stroke:#8A2B60;stroke:var(--t-list,#8A2B60)}
+.dg text.t-list,.dg tspan.t-list{fill:#651E45;fill:var(--t-list-tx,#651E45)}
+.dg rect.t-tuple,.dg path.t-tuple,.dg circle.t-tuple{fill:#E3EAF2;fill:var(--t-tuple-bg,#E3EAF2);stroke:#4A6378;stroke:var(--t-tuple,#4A6378)}
+.dg text.t-tuple,.dg tspan.t-tuple{fill:#2C3E4F;fill:var(--t-tuple-tx,#2C3E4F)}
+.dg rect.t-dict,.dg path.t-dict,.dg circle.t-dict{fill:#DBCEC4;fill:var(--t-dict-bg,#DBCEC4);stroke:#4F2611;stroke:var(--t-dict,#4F2611)}
+.dg text.t-dict,.dg tspan.t-dict{fill:#4C2817;fill:var(--t-dict-tx,#4C2817)}
+.dg rect.t-set,.dg path.t-set,.dg circle.t-set{fill:#F2F8D6;fill:var(--t-set-bg,#F2F8D6);stroke:#747C42;stroke:var(--t-set,#747C42)}
+.dg text.t-set,.dg tspan.t-set{fill:#3F4418;fill:var(--t-set-tx,#3F4418)}
+.dg rect.boxhl,.dg path.boxhl,.dg rect.cellhl{fill:#C8E7F3;fill:var(--d-hl,#C8E7F3);stroke:#3B4595;stroke:var(--d-brand,#3B4595)}
+/* kod PyCharm gibi: JetBrains Mono ligature'ları kapalı (>= iki karakter kalır) */
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-variant-ligatures:none;font-feature-settings:"liga" 0,"calt" 0}
+.dg text.fq{font-size:28px;font-weight:400}
+/* kod PyCharm gibi: ligature yok */
+.dg .cd,.dg .cd24,.dg .ty,.dg .nm{font-variant-ligatures:none}
+    </style>
+  </defs>
+  <rect class="bg" width="1152" height="170"/>
+<text class="cd24 mid" x="74" y="22">cup</text>
+<rect x="2" y="36" width="18" height="18" fill="rgb(255,255,255)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="20" y="36" width="18" height="18" fill="rgb(200,200,200)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="38" y="36" width="18" height="18" fill="rgb(255,255,255)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="56" y="36" width="18" height="18" fill="rgb(200,200,200)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="74" y="36" width="18" height="18" fill="rgb(255,255,255)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="92" y="36" width="18" height="18" fill="rgb(255,255,255)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="110" y="36" width="18" height="18" fill="rgb(255,255,255)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="128" y="36" width="18" height="18" fill="rgb(255,255,255)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="2" y="54" width="18" height="18" fill="rgb(111,78,55)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="20" y="54" width="18" height="18" fill="rgb(111,78,55)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="38" y="54" width="18" height="18" fill="rgb(111,78,55)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="56" y="54" width="18" height="18" fill="rgb(111,78,55)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="74" y="54" width="18" height="18" fill="rgb(111,78,55)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="92" y="54" width="18" height="18" fill="rgb(111,78,55)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="110" y="54" width="18" height="18" fill="rgb(255,255,255)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="128" y="54" width="18" height="18" fill="rgb(255,255,255)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="2" y="72" width="18" height="18" fill="rgb(111,78,55)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="20" y="72" width="18" height="18" fill="rgb(111,78,55)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="38" y="72" width="18" height="18" fill="rgb(111,78,55)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="56" y="72" width="18" height="18" fill="rgb(111,78,55)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="74" y="72" width="18" height="18" fill="rgb(111,78,55)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="92" y="72" width="18" height="18" fill="rgb(111,78,55)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="110" y="72" width="18" height="18" fill="rgb(111,78,55)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="128" y="72" width="18" height="18" fill="rgb(111,78,55)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="2" y="90" width="18" height="18" fill="rgb(111,78,55)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="20" y="90" width="18" height="18" fill="rgb(111,78,55)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="38" y="90" width="18" height="18" fill="rgb(111,78,55)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="56" y="90" width="18" height="18" fill="rgb(111,78,55)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="74" y="90" width="18" height="18" fill="rgb(111,78,55)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="92" y="90" width="18" height="18" fill="rgb(111,78,55)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="110" y="90" width="18" height="18" fill="rgb(255,255,255)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="128" y="90" width="18" height="18" fill="rgb(111,78,55)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="2" y="108" width="18" height="18" fill="rgb(111,78,55)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="20" y="108" width="18" height="18" fill="rgb(111,78,55)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="38" y="108" width="18" height="18" fill="rgb(111,78,55)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="56" y="108" width="18" height="18" fill="rgb(111,78,55)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="74" y="108" width="18" height="18" fill="rgb(111,78,55)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="92" y="108" width="18" height="18" fill="rgb(111,78,55)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="110" y="108" width="18" height="18" fill="rgb(111,78,55)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="128" y="108" width="18" height="18" fill="rgb(111,78,55)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="2" y="126" width="18" height="18" fill="rgb(255,255,255)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="20" y="126" width="18" height="18" fill="rgb(111,78,55)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="38" y="126" width="18" height="18" fill="rgb(111,78,55)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="56" y="126" width="18" height="18" fill="rgb(111,78,55)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="74" y="126" width="18" height="18" fill="rgb(111,78,55)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="92" y="126" width="18" height="18" fill="rgb(255,255,255)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="110" y="126" width="18" height="18" fill="rgb(255,255,255)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="128" y="126" width="18" height="18" fill="rgb(255,255,255)" stroke="#D3D7E2" stroke-width="1"/>
+<rect class="frame" x="2" y="36" width="144" height="108"/>
+<path class="ar" d="M166,90 H310" marker-end="url(#ders5-cup-negative-ah)"/>
+<text class="cd24 mid" x="238" y="76">255 - değer</text>
+<text class="tx fq" x="560" y="52">Beyaz zemin negatifte ne renk olur?</text>
+<g class="fragment t5cn-k0" data-fragment-index="0">
+<text class="cd24 mid" x="402" y="22">negative</text>
+<rect x="330" y="36" width="18" height="18" fill="rgb(0,0,0)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="348" y="36" width="18" height="18" fill="rgb(55,55,55)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="366" y="36" width="18" height="18" fill="rgb(0,0,0)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="384" y="36" width="18" height="18" fill="rgb(55,55,55)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="402" y="36" width="18" height="18" fill="rgb(0,0,0)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="420" y="36" width="18" height="18" fill="rgb(0,0,0)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="438" y="36" width="18" height="18" fill="rgb(0,0,0)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="456" y="36" width="18" height="18" fill="rgb(0,0,0)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="330" y="54" width="18" height="18" fill="rgb(144,177,200)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="348" y="54" width="18" height="18" fill="rgb(144,177,200)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="366" y="54" width="18" height="18" fill="rgb(144,177,200)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="384" y="54" width="18" height="18" fill="rgb(144,177,200)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="402" y="54" width="18" height="18" fill="rgb(144,177,200)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="420" y="54" width="18" height="18" fill="rgb(144,177,200)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="438" y="54" width="18" height="18" fill="rgb(0,0,0)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="456" y="54" width="18" height="18" fill="rgb(0,0,0)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="330" y="72" width="18" height="18" fill="rgb(144,177,200)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="348" y="72" width="18" height="18" fill="rgb(144,177,200)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="366" y="72" width="18" height="18" fill="rgb(144,177,200)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="384" y="72" width="18" height="18" fill="rgb(144,177,200)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="402" y="72" width="18" height="18" fill="rgb(144,177,200)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="420" y="72" width="18" height="18" fill="rgb(144,177,200)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="438" y="72" width="18" height="18" fill="rgb(144,177,200)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="456" y="72" width="18" height="18" fill="rgb(144,177,200)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="330" y="90" width="18" height="18" fill="rgb(144,177,200)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="348" y="90" width="18" height="18" fill="rgb(144,177,200)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="366" y="90" width="18" height="18" fill="rgb(144,177,200)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="384" y="90" width="18" height="18" fill="rgb(144,177,200)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="402" y="90" width="18" height="18" fill="rgb(144,177,200)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="420" y="90" width="18" height="18" fill="rgb(144,177,200)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="438" y="90" width="18" height="18" fill="rgb(0,0,0)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="456" y="90" width="18" height="18" fill="rgb(144,177,200)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="330" y="108" width="18" height="18" fill="rgb(144,177,200)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="348" y="108" width="18" height="18" fill="rgb(144,177,200)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="366" y="108" width="18" height="18" fill="rgb(144,177,200)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="384" y="108" width="18" height="18" fill="rgb(144,177,200)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="402" y="108" width="18" height="18" fill="rgb(144,177,200)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="420" y="108" width="18" height="18" fill="rgb(144,177,200)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="438" y="108" width="18" height="18" fill="rgb(144,177,200)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="456" y="108" width="18" height="18" fill="rgb(144,177,200)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="330" y="126" width="18" height="18" fill="rgb(0,0,0)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="348" y="126" width="18" height="18" fill="rgb(144,177,200)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="366" y="126" width="18" height="18" fill="rgb(144,177,200)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="384" y="126" width="18" height="18" fill="rgb(144,177,200)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="402" y="126" width="18" height="18" fill="rgb(144,177,200)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="420" y="126" width="18" height="18" fill="rgb(0,0,0)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="438" y="126" width="18" height="18" fill="rgb(0,0,0)" stroke="#D3D7E2" stroke-width="1"/>
+<rect x="456" y="126" width="18" height="18" fill="rgb(0,0,0)" stroke="#D3D7E2" stroke-width="1"/>
+<rect class="frame" x="330" y="36" width="144" height="108"/>
+<text class="cd24" x="560" y="104" xml:space="preserve">(<tspan class="t-int">255</tspan>, <tspan class="t-int">255</tspan>, <tspan class="t-int">255</tspan>) → (<tspan class="t-int">0</tspan>, <tspan class="t-int">0</tspan>, <tspan class="t-int">0</tspan>)</text>
+<text class="tx" x="954.8" y="104">siyah</text>
+</g>
+<g class="fragment t5cn-k1" data-fragment-index="1">
+<text class="tx" x="560" y="150">kahve</text>
+<text class="cd24" x="650" y="150" xml:space="preserve">(<tspan class="t-int">111</tspan>, <tspan class="t-int">78</tspan>, <tspan class="t-int">55</tspan>) → (<tspan class="t-int">144</tspan>, <tspan class="t-int">177</tspan>, <tspan class="t-int">200</tspan>)</text>
+</g>
+</svg>

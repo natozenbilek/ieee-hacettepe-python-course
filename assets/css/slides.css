@@ -496,3 +496,5 @@ html.reveal-print .reveal pre code.hljs.fragment:not(:first-child){display:none}
 .reveal .s-poll[data-answer="2"]{--c-right:var(--opt2)}
 .reveal .s-poll[data-answer="3"]{--c-right:var(--opt3)}
 .reveal .s-poll[data-answer="4"]{--c-right:var(--opt4)}
+/* class polls without QR (Ders 4-5, 2026-11-06): beside a figure the reason is label size, so it stays smaller than the figure text */
+.reveal .s-poll .col:has(> figure.fig) > .poll-why.fragment{font-size:var(--fs-label)}
